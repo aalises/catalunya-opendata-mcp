@@ -129,12 +129,7 @@ export async function fetchSocrataJson(
   }
 }
 
-function logSocrataFetchFailure(
-  logger: Logger,
-  url: URL,
-  startedAt: number,
-  error: unknown,
-): void {
+function logSocrataFetchFailure(logger: Logger, url: URL, startedAt: number, error: unknown): void {
   const isSocrata = error instanceof SocrataError;
 
   logger.warn("upstream_request", {
