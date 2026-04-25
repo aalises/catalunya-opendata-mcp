@@ -1,68 +1,97 @@
-# catalunya-opendata-mcp
+# Catalunya Open Data MCP
 
-MCP server for Catalonia open data.
+A read-only Model Context Protocol server for discovering, describing, and querying public datasets from Catalunya.
 
-This repository is a runnable stdio MCP server for discovering, describing, and querying Catalunya open data. The larger architecture lives in [`specs.md`](./specs.md).
+The server currently focuses on the Generalitat de Catalunya open data portal powered by Socrata. It exposes a small, reliable workflow: search the catalog, inspect a dataset schema, query rows with SODA clauses, and keep enough provenance to cite the source cleanly.
 
-The first release milestone is published in the [GitHub releases](https://github.com/aalises/catalunya-opendata-mcp/releases).
+## Why This Exists
+
+Open data portals are rich, but they are not always pleasant to explore from a chat interface. This server gives MCP clients a structured way to answer questions such as:
+
+- "Find datasets about housing starts and completions."
+- "Which fields can I query in this dataset?"
+- "Show the latest rows for Girona, using valid API field names."
+- "Create a citation for the dataset and include the source URL."
+
+Every data-returning tool includes provenance, response caps, and structured errors so the model can recover from bad filters instead of guessing.
 
 ## Requirements
 
 - Node.js 22.12 or newer
 - npm 10 or newer
 
-## Setup
+## Install
 
 ```bash
 npm install
-```
-
-Optional runtime settings are listed in `.env.example`. The server reads environment variables from the shell or MCP client config; it does not auto-load `.env` files. Supported keys:
-
-- `NODE_ENV`
-- `LOG_LEVEL`
-- `CATALUNYA_MCP_TRANSPORT`
-- `CATALUNYA_MCP_MAX_RESULTS`
-- `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`
-- `CATALUNYA_MCP_RESPONSE_MAX_BYTES`
-- `SOCRATA_APP_TOKEN`
-
-## Run in development
-
-```bash
-npm run dev
-```
-
-The development command uses `tsx watch`, so saving TypeScript files restarts the stdio server.
-
-## Build and run
-
-```bash
 npm run build
-npm start
 ```
 
-## Test and inspect
+This is a local stdio MCP server. In normal use, your MCP client starts `dist/index.js` and communicates with it over stdin/stdout.
 
-```bash
-npm run typecheck
-npm test
-npm run smoke
-npm run inspect
+## Connect an MCP Client
+
+After building, add a stdio server entry like this to your MCP client configuration:
+
+```json
+{
+  "mcpServers": {
+    "catalunya-opendata": {
+      "command": "node",
+      "args": ["/absolute/path/to/catalunya-opendata-mcp/dist/index.js"]
+    }
+  }
+}
 ```
 
-`npm run smoke` builds the server and calls its `ping` tool over stdio. `npm run inspect` opens the MCP Inspector against the built server.
+For active development, point the client at the TypeScript watcher instead:
 
-## Socrata quick path
+```json
+{
+  "mcpServers": {
+    "catalunya-opendata": {
+      "command": "npm",
+      "args": ["run", "dev"],
+      "cwd": "/absolute/path/to/catalunya-opendata-mcp"
+    }
+  }
+}
+```
 
-The Socrata adapter supports a complete search -> describe -> query workflow
-against the Generalitat Catalunya open data portal. The examples below use
-`j8h8-vxug`, a live housing dataset from the canary run.
+The built `node dist/index.js` path is the most predictable setup for day-to-day use. The watcher is useful while changing the server.
+
+## MCP Surface
+
+### Tools
+
+| Tool | Purpose |
+| --- | --- |
+| `ping` | Check that the server is running. |
+| `socrata_search_datasets` | Search the Catalunya Socrata catalog and return dataset IDs, titles, web URLs, API endpoints, update times, and provenance. |
+| `socrata_describe_dataset` | Fetch dataset metadata, license or terms, timestamps, attribution, and queryable column `field_name` values. |
+| `socrata_query_dataset` | Query dataset rows with raw SODA clause values: `select`, `where`, `group`, `order`, `limit`, and `offset`. |
+
+### Prompts
+
+| Prompt | Purpose |
+| --- | --- |
+| `socrata_query_workflow` | Guides a search -> describe -> query flow and reminds clients to use returned `field_name` values. |
+| `socrata_citation` | Builds a concise citation from described dataset metadata or the metadata resource. |
+
+### Resources
+
+| Resource | Purpose |
+| --- | --- |
+| `catalunya-opendata://about` | Short server metadata. |
+| `socrata://datasets/{source_id}/metadata` | Dataset schema and provenance metadata, matching `socrata_describe_dataset.data`. |
+
+## Socrata Workflow
+
+Use the tools in this order when answering data questions.
 
 ### 1. Search
 
-Use `socrata_search_datasets` to discover datasets by text. Each result includes
-a `source_id`, `web_url`, and SODA `api_endpoint`.
+Call `socrata_search_datasets` with the user's topic:
 
 ```json
 {
@@ -71,11 +100,11 @@ a `source_id`, `web_url`, and SODA `api_endpoint`.
 }
 ```
 
+Each result includes a `source_id`, `web_url`, `api_endpoint`, update timestamp, and provenance. Keep the `source_id` for the next step.
+
 ### 2. Describe
 
-Use `socrata_describe_dataset` to fetch schema, attribution, license or terms,
-update timestamps, web/API URLs, and queryable columns. Query clauses should use
-the returned `field_name` values, not display names.
+Call `socrata_describe_dataset` before writing filters or selecting columns:
 
 ```json
 {
@@ -83,64 +112,23 @@ the returned `field_name` values, not display names.
 }
 ```
 
-### 3. Attach Metadata
+Use the returned `columns[].field_name` values in SODA clauses. Do not use display names, translated labels, or column names with spaces unless they are returned as `field_name`.
 
-Use `socrata://datasets/{source_id}/metadata` when an MCP client can attach
-resources as context. The resource body is the same inner metadata shape as
-`socrata_describe_dataset.data`, without the tool-call envelope.
+### 3. Query
 
-```text
-socrata://datasets/j8h8-vxug/metadata
-```
-
-Example metadata excerpt:
-
-```json
-{
-  "source_id": "j8h8-vxug",
-  "title": "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
-  "columns": [
-    {
-      "display_name": "Municipi",
-      "field_name": "municipi",
-      "datatype": "text"
-    }
-  ],
-  "provenance": {
-    "source_url": "https://analisi.transparenciacatalunya.cat/d/j8h8-vxug",
-    "last_updated": "2025-11-10T09:43:54.000Z",
-    "license_or_terms": "See Terms of Use"
-  }
-}
-```
-
-### 4. Query
-
-Use `socrata_query_dataset` to fetch rows. Pass raw SODA clause values only;
-never pass URL fragments such as `?$where=...`.
-
-Selected fields:
-
-```json
-{
-  "source_id": "j8h8-vxug",
-  "select": "municipi, comarca_2023, any",
-  "limit": 10
-}
-```
-
-Filtered query:
+Pass clause values only. Do not include URL fragments such as `?$where=`.
 
 ```json
 {
   "source_id": "j8h8-vxug",
   "select": "municipi, comarca_2023, any",
   "where": "municipi = 'Girona'",
+  "order": "municipi, any",
   "limit": 10
 }
 ```
 
-Stable pagination:
+For stable pagination, always include `order` when using `offset`:
 
 ```json
 {
@@ -152,7 +140,7 @@ Stable pagination:
 }
 ```
 
-Aggregate query:
+For aggregate queries, combine aggregate functions in `select` with `group`:
 
 ```json
 {
@@ -164,115 +152,84 @@ Aggregate query:
 }
 ```
 
-When using `offset`, supply `order` so repeated calls are stable. Aggregate
-queries combine aggregate functions in `select` with `group`.
+### 4. Attach Metadata
 
-### 5. Recover From Query Errors
-
-If Socrata rejects a query, the tool returns a structured error with the
-upstream response body included when available.
-
-Do this:
-
-```json
-{
-  "source_id": "j8h8-vxug",
-  "where": "municipi = 'Girona'"
-}
-```
-
-Not this:
-
-```json
-{
-  "source_id": "j8h8-vxug",
-  "where": "?$where=municipi = 'Girona'"
-}
-```
-
-For example, querying `j8h8-vxug` with an invalid field produced this real
-MCP error shape. The long SQL excerpt inside `error.message` is abridged here:
-
-```json
-{
-  "data": null,
-  "provenance": {
-    "source": "socrata",
-    "source_url": "https://analisi.transparenciacatalunya.cat/resource/j8h8-vxug.json?%24where=definitely_not_a_field+%3D+%27x%27&%24limit=2&%24offset=0",
-    "id": "analisi.transparenciacatalunya.cat:dataset_query",
-    "last_updated": null,
-    "license_or_terms": null,
-    "language": "ca"
-  },
-  "error": {
-    "source": "socrata",
-    "code": "http_error",
-    "message": "Socrata request failed with HTTP 400 Bad Request. Response body: {\"message\":\"Query coordinator error: query.soql.no-such-column; No such column: definitely_not_a_field; position: ... [abridged]\",\"errorCode\":\"query.soql.no-such-column\",\"data\":{\"column\":\"definitely_not_a_field\", ...}}",
-    "retryable": false,
-    "status": 400
-  }
-}
-```
-
-Use the `error.message` signals, especially `query.soql.no-such-column` and `No such column: definitely_not_a_field`, to return to `socrata_describe_dataset` and correct the clause with a valid `field_name`.
-
-### 6. Cite
-
-Use the `socrata_citation` prompt with either `socrata_describe_dataset` output
-or the metadata resource. A concise citation can use `title`, `attribution`,
-`source_domain`, `web_url` or `provenance.source_url`, `rows_updated_at` or
-`view_last_modified`, and `license_or_terms`.
+When your MCP client supports resources, attach the dataset metadata directly:
 
 ```text
-Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat.
-Departament de Territori, Habitatge i Transició Ecològica. Source:
-analisi.transparenciacatalunya.cat. Last updated: 2025-11-10T09:43:54.000Z.
-License/terms: See Terms of Use.
+socrata://datasets/j8h8-vxug/metadata
 ```
 
-## Lint and format
+The resource body is the dataset metadata object itself, without the tool-call envelope. It is useful context for follow-up queries and citations.
 
-```bash
-npm run lint
-npm run format
-```
+### 5. Cite
 
-## Claude Desktop config
+Use `socrata_citation` with `socrata_describe_dataset` output or the metadata resource. A concise citation should include the dataset title, attribution, source domain or URL, last updated timestamp, and license or terms when available.
 
-After building, add a stdio server entry like this:
+## Query Safety
+
+The server is deliberately defensive:
+
+- It is read-only.
+- It validates Socrata source IDs before calling upstream APIs.
+- It caps returned rows with `CATALUNYA_MCP_MAX_RESULTS`.
+- It caps response size with `CATALUNYA_MCP_RESPONSE_MAX_BYTES`.
+- It applies request timeouts with `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`.
+- It preserves upstream error details when they help the model fix a query.
+
+If Socrata rejects a query, inspect `error.message`. For example, `query.soql.no-such-column` means the query used an invalid field. Return to `socrata_describe_dataset`, choose a valid `field_name`, and retry with a corrected clause.
+
+## Configuration
+
+The server reads configuration from environment variables supplied by the shell or MCP client. It does not auto-load `.env` files; `.env.example` is provided as a copyable reference.
+
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `NODE_ENV` | `development` | One of `development`, `test`, or `production`. |
+| `LOG_LEVEL` | `info` | One of `trace`, `debug`, `info`, `warn`, `error`, or `silent`. Logs go to stderr so stdio transport remains clean. |
+| `CATALUNYA_MCP_TRANSPORT` | `stdio` | Only `stdio` is supported in the current implementation. |
+| `CATALUNYA_MCP_MAX_RESULTS` | `100` | Maximum rows/results per tool call. Hard limit: `1000`. |
+| `CATALUNYA_MCP_REQUEST_TIMEOUT_MS` | `30000` | Upstream request timeout. Allowed range: `100` to `120000`. |
+| `CATALUNYA_MCP_RESPONSE_MAX_BYTES` | `262144` | Maximum upstream response body size. Allowed range: `65536` to `1048576`. |
+| `SOCRATA_APP_TOKEN` | unset | Optional Socrata app token for better rate-limit stability. |
+
+Example client configuration with environment overrides:
 
 ```json
 {
   "mcpServers": {
-    "catalunya-opendata-mcp": {
+    "catalunya-opendata": {
       "command": "node",
-      "args": ["/absolute/path/to/catalunya-opendata-mcp/dist/index.js"]
+      "args": ["/absolute/path/to/catalunya-opendata-mcp/dist/index.js"],
+      "env": {
+        "LOG_LEVEL": "warn",
+        "CATALUNYA_MCP_MAX_RESULTS": "250",
+        "SOCRATA_APP_TOKEN": "your-token"
+      }
     }
   }
 }
 ```
 
-For local development with `tsx`:
+## Development
 
-```json
-{
-  "mcpServers": {
-    "catalunya-opendata-mcp": {
-      "command": "npm",
-      "args": ["run", "dev"],
-      "cwd": "/absolute/path/to/catalunya-opendata-mcp"
-    }
-  }
-}
-```
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Starts the stdio server with `tsx watch`. |
+| `npm run build` | Compiles TypeScript to `dist/`. |
+| `npm start` | Runs the built server. |
+| `npm run typecheck` | Type-checks source and tests. |
+| `npm test` | Runs the Vitest suite. |
+| `npm run smoke` | Builds the server and calls `ping` over stdio. |
+| `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
+| `npm run lint` | Runs Biome checks. |
+| `npm run format` | Formats the repository with Biome. |
+| `npm run check` | Runs typecheck, lint, tests, and smoke. |
 
-## Current MCP surface
+## Project Notes
 
-- Tool: `ping`
-- Tool: `socrata_search_datasets`
-- Tool: `socrata_describe_dataset`
-- Tool: `socrata_query_dataset`
-- Prompt: `socrata_citation`
-- Prompt: `socrata_query_workflow`
-- Resource: `catalunya-opendata://about`
-- Resource template: `socrata://datasets/{source_id}/metadata`
+The current implementation is intentionally small: one transport, one source adapter, and a polished Socrata workflow. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE).

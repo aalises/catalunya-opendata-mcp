@@ -1,7 +1,32 @@
 {
   "name": "catalunya-opendata-mcp",
   "version": "0.1.0",
-  "description": "A barebones MCP server for exploring Catalonia open data.",
+  "description": "Read-only MCP server for searching, describing, and querying Catalunya open data (Socrata).",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "catalunya",
+    "catalonia",
+    "open-data",
+    "opendata",
+    "dades-obertes",
+    "generalitat-de-catalunya",
+    "socrata",
+    "soda",
+    "claude",
+    "anthropic",
+    "llm-tools",
+    "typescript"
+  ],
+  "homepage": "https://github.com/aalises/catalunya-opendata-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalises/catalunya-opendata-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aalises/catalunya-opendata-mcp/issues"
+  },
+  "author": "Albert Alises",
   "type": "module",
   "private": true,
   "bin": {
