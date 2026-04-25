@@ -2,6 +2,9 @@ import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mc
 import { z } from "zod";
 
 import type { AppConfig } from "../config.js";
+import { createLogger } from "../logger.js";
+import { packageVersion } from "../package-info.js";
+import { createJsonTextContent } from "../sources/common/caps.js";
 import {
   createSocrataSearchProvenance,
   searchSocrataDatasets,
@@ -14,13 +17,15 @@ import {
 import { createSocrataQueryProvenance, querySocrataDataset } from "../sources/socrata/query.js";
 
 export const serverName = "catalunya-opendata-mcp";
-export const serverVersion = "0.1.0";
+export const serverVersion = packageVersion;
 
 export function createPingMessage(name?: string): string {
   return `Hola${name ? `, ${name}` : ""}. ${serverName} is running.`;
 }
 
 export function createMcpServer(config: AppConfig): McpServer {
+  const logger = createLogger(config);
+  const socrataLogger = logger.child({ source: "socrata" });
   const server = new McpServer({
     name: serverName,
     version: serverVersion,
@@ -103,16 +108,12 @@ export function createMcpServer(config: AppConfig): McpServer {
     async (input, extra) => {
       try {
         const structuredContent = await searchSocrataDatasets(input, config, {
+          logger: socrataLogger.child({ op: "catalog_search" }),
           signal: extra.signal,
         });
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as unknown as Record<string, unknown>,
         };
       } catch (error) {
@@ -123,12 +124,7 @@ export function createMcpServer(config: AppConfig): McpServer {
         };
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as Record<string, unknown>,
           isError: true,
         };
@@ -148,16 +144,12 @@ export function createMcpServer(config: AppConfig): McpServer {
     async (input, extra) => {
       try {
         const structuredContent = await describeSocrataDataset(input, config, {
+          logger: socrataLogger.child({ op: "dataset_describe" }),
           signal: extra.signal,
         });
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as unknown as Record<string, unknown>,
         };
       } catch (error) {
@@ -168,12 +160,7 @@ export function createMcpServer(config: AppConfig): McpServer {
         };
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as Record<string, unknown>,
           isError: true,
         };
@@ -201,16 +188,12 @@ export function createMcpServer(config: AppConfig): McpServer {
     async (input, extra) => {
       try {
         const structuredContent = await querySocrataDataset(input, config, {
+          logger: socrataLogger.child({ op: "dataset_query" }),
           signal: extra.signal,
         });
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as unknown as Record<string, unknown>,
         };
       } catch (error) {
@@ -221,12 +204,7 @@ export function createMcpServer(config: AppConfig): McpServer {
         };
 
         return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify(structuredContent),
-            },
-          ],
+          content: createJsonTextContent(structuredContent),
           structuredContent: structuredContent as Record<string, unknown>,
           isError: true,
         };
@@ -311,6 +289,7 @@ export function createMcpServer(config: AppConfig): McpServer {
     async (uri, variables, extra) => {
       const sourceId = getSocrataMetadataSourceId(variables.source_id);
       const result = await describeSocrataDataset({ source_id: sourceId }, config, {
+        logger: socrataLogger.child({ op: "dataset_metadata_resource" }),
         signal: extra.signal,
       });
 
