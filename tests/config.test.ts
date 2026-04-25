@@ -10,17 +10,19 @@ describe("loadConfig", () => {
       transport: "stdio",
       maxResults: 100,
       requestTimeoutMs: 30_000,
+      responseMaxBytes: 262_144,
       socrataAppToken: undefined,
     });
   });
 
-  it("coerces numeric limits and trims optional secrets", () => {
+  it("coerces numeric caps and trims optional secrets", () => {
     expect(
       loadConfig({
         NODE_ENV: "test",
         LOG_LEVEL: "debug",
         CATALUNYA_MCP_MAX_RESULTS: "250",
         CATALUNYA_MCP_REQUEST_TIMEOUT_MS: "5000",
+        CATALUNYA_MCP_RESPONSE_MAX_BYTES: "65536",
         SOCRATA_APP_TOKEN: " token ",
       }),
     ).toEqual({
@@ -29,6 +31,7 @@ describe("loadConfig", () => {
       transport: "stdio",
       maxResults: 250,
       requestTimeoutMs: 5_000,
+      responseMaxBytes: 65_536,
       socrataAppToken: "token",
     });
   });
@@ -40,6 +43,12 @@ describe("loadConfig", () => {
   it("throws a readable error for invalid values", () => {
     expect(() => loadConfig({ CATALUNYA_MCP_MAX_RESULTS: "0" })).toThrow(
       /Invalid configuration: CATALUNYA_MCP_MAX_RESULTS/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_RESPONSE_MAX_BYTES: "1024" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_RESPONSE_MAX_BYTES/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_RESPONSE_MAX_BYTES: "32768" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_RESPONSE_MAX_BYTES/,
     );
   });
 });

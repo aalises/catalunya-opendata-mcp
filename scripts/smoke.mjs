@@ -21,6 +21,12 @@ try {
   if (!tools.tools.some((tool) => tool.name === "socrata_search_datasets")) {
     throw new Error("Expected socrata_search_datasets tool to be registered.");
   }
+  if (!tools.tools.some((tool) => tool.name === "socrata_describe_dataset")) {
+    throw new Error("Expected socrata_describe_dataset tool to be registered.");
+  }
+  if (!tools.tools.some((tool) => tool.name === "socrata_query_dataset")) {
+    throw new Error("Expected socrata_query_dataset tool to be registered.");
+  }
 
   const result = await client.callTool({
     name: "ping",

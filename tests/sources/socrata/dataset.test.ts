@@ -13,6 +13,7 @@ const baseConfig: AppConfig = {
   transport: "stdio",
   maxResults: 100,
   requestTimeoutMs: 5_000,
+  responseMaxBytes: 262_144,
   socrataAppToken: undefined,
 };
 

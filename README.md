@@ -1,8 +1,8 @@
 # catalunya-opendata-mcp
 
-Barebones MCP server scaffold for Catalonia open data.
+MCP server for Catalonia open data.
 
-This repository starts intentionally small: one runnable stdio MCP server with a `ping` tool and an `about` resource. The larger architecture lives in [`specs.md`](./specs.md).
+This repository is a runnable stdio MCP server for discovering, describing, and querying Catalunya open data. The larger architecture lives in [`specs.md`](./specs.md).
 
 ## Requirements
 
@@ -22,6 +22,7 @@ Optional runtime settings are listed in `.env.example`. The server reads environ
 - `CATALUNYA_MCP_TRANSPORT`
 - `CATALUNYA_MCP_MAX_RESULTS`
 - `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`
+- `CATALUNYA_MCP_RESPONSE_MAX_BYTES`
 - `SOCRATA_APP_TOKEN`
 
 ## Run in development
@@ -56,7 +57,21 @@ Use `socrata_search_datasets` to discover Catalunya open data datasets by text. 
 
 Use `socrata_describe_dataset` with a `source_id` such as `v8i4-fa4q` to fetch the dataset schema from Socrata view metadata. The describe result includes dataset attribution, license or terms, update timestamps, the web/API URLs, and queryable columns with both display names and SODA API `field_name` values.
 
-When query tooling is added, use the returned `field_name` values to build SODA `$select`, `$where`, and `$order` filters against the dataset `api_endpoint`.
+Use `socrata_query_dataset` to fetch rows from the dataset's SODA API. Call `socrata_describe_dataset` first and build raw SODA clause values with the returned `field_name` values, not display names.
+
+Example query arguments:
+
+```json
+{
+  "source_id": "v8i4-fa4q",
+  "select": "municipi, comarca",
+  "where": "comarca = 'Gironès'",
+  "order": "municipi",
+  "limit": 10
+}
+```
+
+When using `offset` for pagination, supply `order` so repeated calls are stable. Aggregate queries can combine `select` aggregate functions with `group`, for example `select: "comarca, count(*)"` and `group: "comarca"`.
 
 ## Lint and format
 
@@ -99,4 +114,5 @@ For local development with `tsx`:
 - Tool: `ping`
 - Tool: `socrata_search_datasets`
 - Tool: `socrata_describe_dataset`
+- Tool: `socrata_query_dataset`
 - Resource: `catalunya-opendata://about`

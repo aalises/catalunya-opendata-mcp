@@ -10,8 +10,8 @@ import { isSocrataError } from "../sources/socrata/client.js";
 import {
   createSocrataDescribeProvenance,
   describeSocrataDataset,
-  SOCRATA_SOURCE_ID_PATTERN,
 } from "../sources/socrata/dataset.js";
+import { createSocrataQueryProvenance, querySocrataDataset } from "../sources/socrata/query.js";
 
 export const serverName = "catalunya-opendata-mcp";
 export const serverVersion = "0.1.0";
@@ -39,11 +39,25 @@ export function createMcpServer(config: AppConfig): McpServer {
     offset: z.number().int().min(0).default(0).describe("Zero-based result offset for pagination."),
   };
   const socrataDescribeInputSchema = {
-    source_id: z
+    source_id: z.string().describe("Socrata dataset identifier, such as v8i4-fa4q."),
+  };
+  const socrataQueryInputSchema = {
+    source_id: z.string().describe("Socrata dataset identifier, such as v8i4-fa4q."),
+    select: z
       .string()
-      .trim()
-      .regex(SOCRATA_SOURCE_ID_PATTERN)
-      .describe("Socrata dataset identifier, such as v8i4-fa4q."),
+      .optional()
+      .describe("Raw SODA $select clause value using field_name values from describe."),
+    where: z
+      .string()
+      .optional()
+      .describe("Raw SODA $where clause value using field_name values from describe."),
+    group: z.string().optional().describe("Raw SODA $group clause value for aggregate queries."),
+    order: z
+      .string()
+      .optional()
+      .describe("Raw SODA $order clause value. Supply this when using offset."),
+    limit: z.number().optional().describe(`Rows to return. Server maximum: ${config.maxResults}.`),
+    offset: z.number().optional().describe("Zero-based row offset for pagination."),
   };
 
   server.registerTool(
@@ -167,6 +181,57 @@ export function createMcpServer(config: AppConfig): McpServer {
     },
   );
 
+  server.registerTool(
+    "socrata_query_dataset",
+    {
+      title: "socrata.query_dataset",
+      description: [
+        "Query rows from a Catalunya open data Socrata dataset.",
+        "Always call socrata_describe_dataset first and use returned field_name values, not display_name values.",
+        "Pass clause values only, for example where: \"municipi = 'Girona'\"; never pass ?$where=... URL fragments.",
+        "Supply order whenever using offset for stable pagination; without it, repeated calls may return duplicate or missing rows.",
+        "Prefer narrowing filters or reducing $select over raising limit. Server caps row count and response bytes; truncation is signaled explicitly.",
+        "Aggregate queries combine select with aggregate functions and group.",
+      ].join(" "),
+      inputSchema: socrataQueryInputSchema,
+      outputSchema: socrataQueryDatasetOutputSchema,
+    },
+    async (input, extra) => {
+      try {
+        const structuredContent = await querySocrataDataset(input, config, {
+          signal: extra.signal,
+        });
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          structuredContent: structuredContent as unknown as Record<string, unknown>,
+        };
+      } catch (error) {
+        const structuredContent = {
+          data: null,
+          provenance: createSocrataQueryProvenance(input, config),
+          error: toSocrataToolError(error, "Unexpected Socrata query failure."),
+        };
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          structuredContent: structuredContent as Record<string, unknown>,
+          isError: true,
+        };
+      }
+    },
+  );
+
   server.registerResource(
     "about",
     "catalunya-opendata://about",
@@ -183,9 +248,9 @@ export function createMcpServer(config: AppConfig): McpServer {
           text: [
             "# Catalunya Open Data MCP",
             "",
-            "Barebones MCP server scaffold for Catalonia open data.",
+            "MCP server for discovering, describing, and querying Catalunya open data.",
             "",
-            "Next steps will add source adapters for Socrata, IDESCAT, Barcelona Open Data, and geospatial services.",
+            "Current Socrata support covers catalog search, dataset metadata, and row queries. Next steps will add source adapters for IDESCAT, Barcelona Open Data, and geospatial services.",
           ].join("\n"),
         },
       ],
@@ -272,6 +337,31 @@ const socrataDescribeDatasetOutputSchema = z.object({
       columns: z.array(socrataDatasetColumnOutputSchema),
       suggested_next_action: z.string(),
       provenance: socrataDatasetProvenanceOutputSchema,
+    })
+    .nullable(),
+  provenance: socrataOperationProvenanceOutputSchema,
+  error: socrataToolErrorOutputSchema.optional(),
+});
+
+const socrataQueryDatasetOutputSchema = z.object({
+  data: z
+    .object({
+      source_id: z.string(),
+      source_domain: z.string(),
+      api_endpoint: z.string().url(),
+      request_url: z.string().url(),
+      logical_request_url: z.string().url(),
+      select: z.string().optional(),
+      where: z.string().optional(),
+      group: z.string().optional(),
+      order: z.string().optional(),
+      limit: z.number().int().min(1),
+      offset: z.number().int().min(0),
+      row_count: z.number().int().nonnegative(),
+      truncated: z.boolean(),
+      truncation_reason: z.enum(["row_cap", "byte_cap"]).optional(),
+      truncation_hint: z.string().optional(),
+      rows: z.array(z.record(z.unknown())),
     })
     .nullable(),
   provenance: socrataOperationProvenanceOutputSchema,

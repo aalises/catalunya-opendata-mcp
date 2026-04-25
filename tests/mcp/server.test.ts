@@ -11,6 +11,7 @@ const testConfig: AppConfig = {
   transport: "stdio",
   maxResults: 10,
   requestTimeoutMs: 5_000,
+  responseMaxBytes: 262_144,
   socrataAppToken: undefined,
 };
 
@@ -36,6 +37,15 @@ describe("createMcpServer", () => {
       const tools = await client.listTools();
       expect(tools.tools.map((tool) => tool.name)).toContain("socrata_search_datasets");
       expect(tools.tools.map((tool) => tool.name)).toContain("socrata_describe_dataset");
+      expect(tools.tools.map((tool) => tool.name)).toContain("socrata_query_dataset");
+
+      const queryTool = tools.tools.find((tool) => tool.name === "socrata_query_dataset");
+      expect(queryTool?.description).toContain("socrata_describe_dataset");
+      expect(queryTool?.description).toContain("field_name");
+      expect(queryTool?.description).toContain("?$where=");
+      expect(queryTool?.description).toContain("offset");
+      expect(queryTool?.description).toContain("narrowing filters");
+      expect(queryTool?.description).toContain("Aggregate queries");
     } finally {
       await close();
     }
@@ -202,6 +212,14 @@ describe("createMcpServer", () => {
         const toolResult = result as ToolCallResult;
 
         expect(toolResult.isError).toBe(true);
+        expect(toolResult.structuredContent).toMatchObject({
+          data: null,
+          error: {
+            source: "socrata",
+            code: "invalid_input",
+            retryable: false,
+          },
+        });
       }
       expect(fetchMock).not.toHaveBeenCalled();
     } finally {
@@ -240,6 +258,219 @@ describe("createMcpServer", () => {
           code: "http_error",
           retryable: false,
           status: 404,
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured Socrata query output and compact JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify([{ municipi: "Girona" }, { municipi: "Salt" }]), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "socrata_query_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+          select: "municipi",
+          where: "comarca = 'Gironès'",
+          order: "municipi",
+          limit: 1,
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBeUndefined();
+      expect(toolResult.structuredContent).toMatchObject({
+        data: {
+          source_id: "v8i4-fa4q",
+          select: "municipi",
+          where: "comarca = 'Gironès'",
+          order: "municipi",
+          limit: 1,
+          offset: 0,
+          row_count: 1,
+          truncated: true,
+          truncation_reason: "row_cap",
+          rows: [{ municipi: "Girona" }],
+        },
+        provenance: {
+          source: "socrata",
+          id: "analisi.transparenciacatalunya.cat:dataset_query",
+        },
+      });
+      const data = (toolResult.structuredContent?.data ?? {}) as Record<string, unknown>;
+      expect(new URL(data.request_url as string).searchParams.get("$limit")).toBe("2");
+      expect(new URL(data.logical_request_url as string).searchParams.get("$limit")).toBe("1");
+      expect(toolResult.content[0]).toMatchObject({
+        type: "text",
+        text: JSON.stringify(toolResult.structuredContent),
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured Socrata query input errors from the adapter", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer({
+      ...testConfig,
+      maxResults: 2,
+    });
+
+    try {
+      for (const args of [
+        { source_id: "abc" },
+        { source_id: "v8i4-fa4q", limit: 3 },
+        { source_id: "v8i4-fa4q", limit: 1.5 },
+        { source_id: "v8i4-fa4q", limit: 0 },
+        { source_id: "v8i4-fa4q", limit: 1e21 },
+        { source_id: "v8i4-fa4q", offset: -1 },
+        { source_id: "v8i4-fa4q", offset: 1e21 },
+      ]) {
+        const result = await client.callTool({
+          name: "socrata_query_dataset",
+          arguments: args,
+        });
+        const toolResult = result as ToolCallResult;
+
+        expect(toolResult.isError).toBe(true);
+        expect(toolResult.structuredContent).toMatchObject({
+          data: null,
+          error: {
+            source: "socrata",
+            code: "invalid_input",
+            retryable: false,
+          },
+        });
+      }
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns Socrata query HTTP error bodies so callers can self-correct", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ message: "No such column: municipi_nom" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 400,
+        statusText: "Bad Request",
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "socrata_query_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+          select: "municipi_nom",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "socrata",
+          code: "http_error",
+          message: expect.stringContaining(
+            'Response body: {"message":"No such column: municipi_nom"}',
+          ),
+          retryable: false,
+          status: 400,
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("supports the full mocked Socrata search to describe to query workflow", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            resultSetSize: 1,
+            results: [
+              {
+                resource: {
+                  id: "v8i4-fa4q",
+                  name: "Habitatge public",
+                  description: "Dataset about housing.",
+                  updatedAt: "2026-03-18T10:27:52.000Z",
+                },
+                metadata: {
+                  domain: "analisi.transparenciacatalunya.cat",
+                  license: "See Terms of Use",
+                },
+                permalink: "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
+              },
+            ],
+          }),
+          {
+            headers: { "Content-Type": "application/json" },
+            status: 200,
+          },
+        ),
+      )
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify(viewMetadata()), {
+          headers: { "Content-Type": "application/json" },
+          status: 200,
+        }),
+      )
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify([{ comarca: "Gironès", total: "2" }]), {
+          headers: { "Content-Type": "application/json" },
+          status: 200,
+        }),
+      );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const search = (await client.callTool({
+        name: "socrata_search_datasets",
+        arguments: {
+          query: "habitatge",
+          limit: 1,
+        },
+      })) as ToolCallResult;
+      expect(search.isError).toBeUndefined();
+
+      const describe = (await client.callTool({
+        name: "socrata_describe_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+        },
+      })) as ToolCallResult;
+      expect(describe.isError).toBeUndefined();
+
+      const query = (await client.callTool({
+        name: "socrata_query_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+          select: "comarca, count(*) as total",
+          group: "comarca",
+          limit: 10,
+        },
+      })) as ToolCallResult;
+      expect(query.isError).toBeUndefined();
+      expect(query.structuredContent).toMatchObject({
+        data: {
+          group: "comarca",
+          rows: [{ comarca: "Gironès", total: "2" }],
         },
       });
     } finally {

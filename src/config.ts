@@ -31,6 +31,12 @@ const envSchema = z
       emptyStringAsUndefined,
       z.coerce.number().int().min(100).max(120_000).default(30_000),
     ),
+    // Floor of 65 KiB absorbs the worst-case empty-rows envelope: four 4 KiB clauses plus
+    // request_url, logical_request_url, and provenance.source_url at the 8 KiB URL cap.
+    CATALUNYA_MCP_RESPONSE_MAX_BYTES: z.preprocess(
+      emptyStringAsUndefined,
+      z.coerce.number().int().min(65_536).max(1_048_576).default(262_144),
+    ),
     SOCRATA_APP_TOKEN: optionalSecretSchema,
   })
   .transform((env) => ({
@@ -39,6 +45,7 @@ const envSchema = z
     transport: env.CATALUNYA_MCP_TRANSPORT,
     maxResults: env.CATALUNYA_MCP_MAX_RESULTS,
     requestTimeoutMs: env.CATALUNYA_MCP_REQUEST_TIMEOUT_MS,
+    responseMaxBytes: env.CATALUNYA_MCP_RESPONSE_MAX_BYTES,
     socrataAppToken: env.SOCRATA_APP_TOKEN,
   }));
 

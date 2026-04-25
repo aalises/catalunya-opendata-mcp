@@ -5,11 +5,11 @@ import type { SocrataDatasetProvenance, SocrataOperationProvenance } from "./cat
 import {
   type FetchSocrataJsonOptions,
   fetchSocrataJson,
+  normalizeSourceId,
   SOCRATA_CATALOG_DOMAIN,
+  SOCRATA_SOURCE_ID_PATTERN,
   SocrataError,
 } from "./client.js";
-
-export const SOCRATA_SOURCE_ID_PATTERN = /^[a-z0-9]{4}-[a-z0-9]{4}$/;
 
 const socrataViewResponseSchema = z
   .object({
@@ -139,18 +139,8 @@ export function buildSocrataViewUrl(sourceId: string): URL {
 }
 
 function normalizeInput(input: SocrataDescribeDatasetInput): SocrataDescribeDatasetInput {
-  const sourceId = input.source_id.trim();
-
-  if (!SOCRATA_SOURCE_ID_PATTERN.test(sourceId)) {
-    const display = JSON.stringify(input.source_id.slice(0, 64));
-    throw new SocrataError(
-      "invalid_input",
-      `source_id ${display} is not a Socrata four-by-four identifier (expected ${SOCRATA_SOURCE_ID_PATTERN}).`,
-    );
-  }
-
   return {
-    source_id: sourceId,
+    source_id: normalizeSourceId(input.source_id),
   };
 }
 
