@@ -1,68 +1,41 @@
 #!/usr/bin/env node
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { z } from "zod";
 
-const server = new McpServer({
-  name: "catalunya-opendata-mcp",
-  version: "0.1.0"
+import { createMcpServer, serverName } from "./mcp/server.js";
+
+const server = createMcpServer();
+const transport = new StdioServerTransport();
+
+let isShuttingDown = false;
+
+async function shutdown(signal: NodeJS.Signals): Promise<void> {
+  if (isShuttingDown) {
+    return;
+  }
+
+  isShuttingDown = true;
+
+  try {
+    await server.close();
+  } catch (error) {
+    console.error(`${serverName} failed to close after ${signal}.`, error);
+    process.exitCode = 1;
+  } finally {
+    process.exit(process.exitCode ?? 0);
+  }
+}
+
+process.once("SIGINT", () => {
+  void shutdown("SIGINT");
 });
 
-server.registerTool(
-  "ping",
-  {
-    title: "Ping",
-    description: "Check that the Catalunya Open Data MCP server is running.",
-    inputSchema: {
-      name: z.string().optional().describe("Optional name to include in the response.")
-    },
-    outputSchema: {
-      message: z.string(),
-      server: z.string()
-    }
-  },
-  async ({ name }) => {
-    const message = `Hola${name ? `, ${name}` : ""}. catalunya-opendata-mcp is running.`;
+process.once("SIGTERM", () => {
+  void shutdown("SIGTERM");
+});
 
-    return {
-      content: [
-        {
-          type: "text",
-          text: message
-        }
-      ],
-      structuredContent: {
-        message,
-        server: "catalunya-opendata-mcp"
-      }
-    };
-  }
-);
-
-server.registerResource(
-  "about",
-  "catalunya-opendata://about",
-  {
-    title: "About Catalunya Open Data MCP",
-    description: "Basic metadata for this MCP server.",
-    mimeType: "text/markdown"
-  },
-  async (uri) => ({
-    contents: [
-      {
-        uri: uri.href,
-        mimeType: "text/markdown",
-        text: [
-          "# Catalunya Open Data MCP",
-          "",
-          "Barebones MCP server scaffold for Catalonia open data.",
-          "",
-          "Next steps will add source adapters for Socrata, IDESCAT, Barcelona Open Data, and geospatial services."
-        ].join("\n")
-      }
-    ]
-  })
-);
-
-const transport = new StdioServerTransport();
-await server.connect(transport);
+try {
+  await server.connect(transport);
+} catch (error) {
+  console.error(`${serverName} failed to start.`, error);
+  process.exit(1);
+}
