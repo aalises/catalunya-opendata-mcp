@@ -15,6 +15,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
+    "postbuild": "chmod +x dist/index.js",
     "start": "node dist/index.js",
     "smoke": "npm run build && node scripts/smoke.mjs",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
