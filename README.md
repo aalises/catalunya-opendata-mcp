@@ -61,6 +61,44 @@ Use `socrata://datasets/{source_id}/metadata` when an MCP client can attach reso
 
 Use `socrata_query_dataset` to fetch rows from the dataset's SODA API. Call `socrata_describe_dataset` first and build raw SODA clause values with the returned `field_name` values, not display names.
 
+Metadata resource to query workflow:
+
+```text
+socrata://datasets/j8h8-vxug/metadata
+```
+
+The attached resource body includes dataset-level provenance and queryable fields:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "title": "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
+  "columns": [
+    {
+      "display_name": "Municipi",
+      "field_name": "municipi",
+      "datatype": "text"
+    }
+  ],
+  "provenance": {
+    "source_url": "https://analisi.transparenciacatalunya.cat/d/j8h8-vxug",
+    "last_updated": "2025-11-10T09:43:54.000Z",
+    "license_or_terms": "See Terms of Use"
+  }
+}
+```
+
+Then query with the same `source_id` and the resource's `field_name` values:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "select": "municipi, comarca_2023, any",
+  "where": "municipi = 'Girona'",
+  "limit": 10
+}
+```
+
 Selected fields:
 
 ```json
