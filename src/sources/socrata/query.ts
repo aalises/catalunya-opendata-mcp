@@ -7,6 +7,7 @@ import {
   fetchSocrataJson,
   normalizeSourceId,
   SOCRATA_CATALOG_DOMAIN,
+  SOCRATA_SUCCESS_BODY_MAX_BYTES,
   SocrataError,
 } from "./client.js";
 
@@ -82,7 +83,10 @@ export async function querySocrataDataset(
   });
   validateUrlByteLength(requestUrl);
 
-  const rawRows = await fetchSocrataJson(requestUrl, config, options);
+  const rawRows = await fetchSocrataJson(requestUrl, config, {
+    ...options,
+    successBodyMaxBytes: Math.max(config.responseMaxBytes, SOCRATA_SUCCESS_BODY_MAX_BYTES),
+  });
   const parsed = socrataQueryRowsResponseSchema.safeParse(rawRows);
 
   if (!parsed.success) {

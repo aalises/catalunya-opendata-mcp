@@ -21,6 +21,56 @@ describe("fetchSocrataJson", () => {
     vi.restoreAllMocks();
   });
 
+  it("parses successful response bodies under the configured byte cap", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ ok: true }), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+
+    await expect(fetchSocrataJson(new URL("https://example.test"), baseConfig)).resolves.toEqual({
+      ok: true,
+    });
+  });
+
+  it("rejects successful response bodies above the configured byte cap before JSON parse", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ value: "x".repeat(80) }), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+
+    await expect(
+      fetchSocrataJson(new URL("https://example.test"), {
+        ...baseConfig,
+        responseMaxBytes: 20,
+      }),
+    ).rejects.toMatchObject({
+      code: "invalid_response",
+      message: "Socrata response body exceeded maximum size of 20 bytes.",
+      retryable: false,
+    });
+  });
+
+  it("still reports invalid JSON under the configured byte cap", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response("not json", {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+
+    await expect(
+      fetchSocrataJson(new URL("https://example.test"), baseConfig),
+    ).rejects.toMatchObject({
+      code: "invalid_response",
+      message: "Socrata returned invalid JSON.",
+      retryable: false,
+    });
+  });
+
   it("appends a collapsed bounded body excerpt to HTTP errors", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response('{\n  "message": "bad where"\n}', {

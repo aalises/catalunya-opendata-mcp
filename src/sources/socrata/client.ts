@@ -6,6 +6,7 @@ export const SOCRATA_CATALOG_DOMAIN = "analisi.transparenciacatalunya.cat";
 export const SOCRATA_ERROR_BODY_MAX_BYTES = 4_096;
 export const SOCRATA_ERROR_BODY_MAX_CHARS = 2_000;
 export const SOCRATA_SOURCE_ID_PATTERN = /^[a-z0-9]{4}-[a-z0-9]{4}$/;
+export const SOCRATA_SUCCESS_BODY_MAX_BYTES = 1_048_576;
 export const SOCRATA_USER_AGENT = "catalunya-opendata-mcp/0.1.0";
 
 export type SocrataErrorCode =
@@ -45,6 +46,7 @@ export interface FetchSocrataCatalogParams {
 
 export interface FetchSocrataJsonOptions {
   signal?: AbortSignal;
+  successBodyMaxBytes?: number;
 }
 
 export function isSocrataError(error: unknown): error is SocrataError {
@@ -87,8 +89,13 @@ export async function fetchSocrataJson(
     throw await createHttpError(response, config);
   }
 
+  const bodyText = await readSuccessBodyText(
+    response,
+    options.successBodyMaxBytes ?? config.responseMaxBytes,
+  );
+
   try {
-    return await response.json();
+    return JSON.parse(bodyText);
   } catch (error) {
     throw new SocrataError("invalid_response", "Socrata returned invalid JSON.", {
       cause: error,
@@ -136,6 +143,74 @@ async function createHttpError(response: Response, config: AppConfig): Promise<S
       status: response.status,
     },
   );
+}
+
+async function readSuccessBodyText(response: Response, maxBytes: number): Promise<string> {
+  const bodyBytes = await readSuccessBodyBytes(response, maxBytes);
+
+  return new TextDecoder().decode(bodyBytes);
+}
+
+async function readSuccessBodyBytes(response: Response, maxBytes: number): Promise<Uint8Array> {
+  if (!response.body) {
+    return new Uint8Array();
+  }
+
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  const maxBufferedBytes = maxBytes + 1;
+  let byteLength = 0;
+
+  try {
+    while (byteLength <= maxBytes) {
+      const { done, value } = await reader.read();
+
+      if (done) {
+        break;
+      }
+
+      if (!value) {
+        continue;
+      }
+
+      const remainingBytes = maxBufferedBytes - byteLength;
+
+      if (value.byteLength > remainingBytes) {
+        chunks.push(value.slice(0, remainingBytes));
+        byteLength += remainingBytes;
+        break;
+      }
+
+      chunks.push(value);
+      byteLength += value.byteLength;
+    }
+
+    if (byteLength > maxBytes) {
+      await reader.cancel().catch(() => undefined);
+      throw new SocrataError(
+        "invalid_response",
+        `Socrata response body exceeded maximum size of ${maxBytes} bytes.`,
+      );
+    }
+
+    const bodyBytes = new Uint8Array(byteLength);
+    let offset = 0;
+
+    for (const chunk of chunks) {
+      bodyBytes.set(chunk, offset);
+      offset += chunk.byteLength;
+    }
+
+    return bodyBytes;
+  } catch (error) {
+    if (isSocrataError(error)) {
+      throw error;
+    }
+
+    throw new SocrataError("invalid_response", "Socrata response body could not be read.", {
+      cause: error,
+    });
+  }
 }
 
 async function readErrorBodyExcerpt(response: Response, config: AppConfig): Promise<string | null> {
