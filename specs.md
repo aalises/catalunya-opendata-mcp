@@ -6,8 +6,6 @@ An MCP server exposing Catalan open data from three sources:
 - **IDESCAT** — Institut d'Estadística de Catalunya, via the **Taules v2** API
 - **Open Data BCN** (CKAN) — `opendata-ajuntament.barcelona.cat`
 
-Adding BCN (CKAN) to v1 — it's what powers the flagship `arbrat viari` tree demo, and three Catalan sources is a stronger product pitch than two.
-
 ## Scope decisions
 
 - **Runtime**: TypeScript + production `@modelcontextprotocol/sdk` v1.x, pinned to a patched release range. Track SDK v2, but do not build on it until it is stable. Installable via `npx`.

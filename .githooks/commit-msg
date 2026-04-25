@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+commit_msg_file="$1"
+first_line="$(sed -n '1p' "$commit_msg_file")"
+
+# Skip merges, reverts, and rebase-fixup family — git generates these and they break the pattern.
+case "$first_line" in
+  Merge*|Revert*|"fixup! "*|"squash! "*|"amend! "*) exit 0 ;;
+esac
+
+# Empty messages will already be rejected by git itself.
+if [[ -z "$first_line" ]]; then
+  exit 0
+fi
+
+# Conventional Commits: <type>(optional-scope)?!?: <subject>
+pattern='^(feat|fix|chore|docs|test|ci|refactor|build|perf|style|revert)(\([a-z0-9_,/-]+\))?!?: .+'
+
+if [[ ! "$first_line" =~ $pattern ]]; then
+  {
+    echo "commit-msg: subject is not a Conventional Commit."
+    echo "  got:      $first_line"
+    echo "  expected: <type>(optional-scope)?: <subject>"
+    echo "  types:    feat, fix, chore, docs, test, ci, refactor, build, perf, style, revert"
+  } >&2
+  exit 1
+fi
