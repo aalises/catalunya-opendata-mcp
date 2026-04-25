@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
+import { type AppConfig, loadConfig } from "./config.js";
 import { createMcpServer, serverName } from "./mcp/server.js";
 
+const config = loadConfig();
 const server = createMcpServer();
-const transport = new StdioServerTransport();
+const transport = createTransport(config.transport);
 
 let isShuttingDown = false;
 
@@ -38,4 +40,11 @@ try {
 } catch (error) {
   console.error(`${serverName} failed to start.`, error);
   process.exit(1);
+}
+
+function createTransport(transport: AppConfig["transport"]): StdioServerTransport {
+  switch (transport) {
+    case "stdio":
+      return new StdioServerTransport();
+  }
 }

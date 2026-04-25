@@ -15,6 +15,15 @@ This repository starts intentionally small: one runnable stdio MCP server with a
 npm install
 ```
 
+Optional runtime settings are listed in `.env.example`. The server reads environment variables from the shell or MCP client config; it does not auto-load `.env` files. Supported keys:
+
+- `NODE_ENV`
+- `LOG_LEVEL`
+- `CATALUNYA_MCP_TRANSPORT`
+- `CATALUNYA_MCP_MAX_RESULTS`
+- `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`
+- `SOCRATA_APP_TOKEN`
+
 ## Run in development
 
 ```bash
