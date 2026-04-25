@@ -1,6 +1,12 @@
 import { z } from "zod";
 
 import type { AppConfig } from "../../config.js";
+import {
+  getJsonToolResultByteLength,
+  getUrlByteLength,
+  getUtf8ByteLength,
+} from "../common/caps.js";
+import { formatZodError } from "../common/zod.js";
 import type { SocrataOperationProvenance } from "./catalog.js";
 import {
   type FetchSocrataJsonOptions,
@@ -203,7 +209,7 @@ function normalizeClause(
     return {};
   }
 
-  const byteLength = Buffer.byteLength(trimmedValue, "utf8");
+  const byteLength = getUtf8ByteLength(trimmedValue);
 
   if (byteLength > SOCRATA_QUERY_CLAUSE_MAX_BYTES) {
     throw new SocrataError(
@@ -248,7 +254,7 @@ function normalizeOffset(offset: number | undefined): number {
 }
 
 function validateUrlByteLength(url: URL): void {
-  const byteLength = Buffer.byteLength(url.toString(), "utf8");
+  const byteLength = getUrlByteLength(url);
 
   if (byteLength > SOCRATA_QUERY_URL_MAX_BYTES) {
     throw new SocrataError(
@@ -327,7 +333,7 @@ function capResponseData(
 ): SocrataQueryDatasetData {
   let cappedData = data;
 
-  while (getEnvelopeByteLength(cappedData, provenance) > responseMaxBytes) {
+  while (getMcpEnvelopeByteLength(cappedData, provenance) > responseMaxBytes) {
     if (cappedData.rows.length === 0) {
       throw new SocrataError(
         "invalid_response",
@@ -349,19 +355,14 @@ function capResponseData(
   return cappedData;
 }
 
-function getEnvelopeByteLength(
+function getMcpEnvelopeByteLength(
   data: SocrataQueryDatasetData,
   provenance: SocrataOperationProvenance,
 ): number {
-  return Buffer.byteLength(JSON.stringify({ data, provenance }), "utf8");
+  // Match the actual MCP tool result shape: structuredContent plus JSON text fallback.
+  return getJsonToolResultByteLength({ data, provenance });
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
-}
-
-function formatZodError(error: z.ZodError): string {
-  return error.issues
-    .map((issue) => `${issue.path.join(".") || "response"}: ${issue.message}`)
-    .join("; ");
 }

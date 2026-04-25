@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import type { AppConfig } from "../../../src/config.js";
+import { getJsonToolResultByteLength } from "../../../src/sources/common/caps.js";
 import { SOCRATA_CATALOG_DOMAIN, SOCRATA_USER_AGENT } from "../../../src/sources/socrata/client.js";
 import {
   createSocrataQueryProvenance,
@@ -161,7 +162,7 @@ describe("querySocrataDataset", () => {
     expect(result.data.truncation_reason).toBe("byte_cap");
     expect(result.data.truncation_hint).toBe("narrow filters or reduce $select");
     expect(result.data.row_count).toBe(result.data.rows.length);
-    expect(Buffer.byteLength(JSON.stringify(result), "utf8")).toBeLessThanOrEqual(1_800);
+    expect(getJsonToolResultByteLength(result)).toBeLessThanOrEqual(1_800);
   });
 
   it("prefers byte_cap over row_cap when both truncations apply", async () => {

@@ -1,4 +1,7 @@
 import type { AppConfig } from "../../config.js";
+import { createLogger, type Logger } from "../../logger.js";
+import { packageVersion } from "../../package-info.js";
+import { SourceError, type SourceErrorCode } from "../common/errors.js";
 
 // Use Socrata's EU federation catalog with a hard domain filter so search stays Catalonia-scoped.
 export const SOCRATA_CATALOG_BASE_URL = "https://api.eu.socrata.com/api/catalog/v1";
@@ -7,20 +10,14 @@ export const SOCRATA_ERROR_BODY_MAX_BYTES = 4_096;
 export const SOCRATA_ERROR_BODY_MAX_CHARS = 2_000;
 export const SOCRATA_SOURCE_ID_PATTERN = /^[a-z0-9]{4}-[a-z0-9]{4}$/;
 export const SOCRATA_SUCCESS_BODY_MAX_BYTES = 1_048_576;
-export const SOCRATA_USER_AGENT = "catalunya-opendata-mcp/0.1.0";
+export const SOCRATA_USER_AGENT = `catalunya-opendata-mcp/${packageVersion}`;
 
-export type SocrataErrorCode =
-  | "http_error"
-  | "invalid_input"
-  | "invalid_response"
-  | "network_error"
-  | "timeout";
+export type SocrataErrorCode = Extract<
+  SourceErrorCode,
+  "http_error" | "invalid_input" | "invalid_response" | "network_error" | "timeout"
+>;
 
-export class SocrataError extends Error {
-  readonly code: SocrataErrorCode;
-  readonly retryable: boolean;
-  readonly status?: number;
-
+export class SocrataError extends SourceError<"socrata"> {
   constructor(
     code: SocrataErrorCode,
     message: string,
@@ -30,11 +27,8 @@ export class SocrataError extends Error {
       status?: number;
     } = {},
   ) {
-    super(message, { cause: options.cause });
+    super("socrata", code, message, options);
     this.name = "SocrataError";
-    this.code = code;
-    this.retryable = options.retryable ?? false;
-    this.status = options.status;
   }
 }
 
@@ -45,6 +39,7 @@ export interface FetchSocrataCatalogParams {
 }
 
 export interface FetchSocrataJsonOptions {
+  logger?: Logger;
   signal?: AbortSignal;
   successBodyMaxBytes?: number;
 }
@@ -83,24 +78,77 @@ export async function fetchSocrataJson(
   config: AppConfig,
   options: FetchSocrataJsonOptions = {},
 ): Promise<unknown> {
-  const response = await fetchSocrataUrl(url, config, options);
+  const logger = options.logger ?? createLogger(config).child({ source: "socrata" });
+  const startedAt = performance.now();
+  let response: Response;
+
+  try {
+    response = await fetchSocrataUrl(url, config, options);
+  } catch (error) {
+    logSocrataFetchFailure(logger, url, startedAt, error);
+    throw error;
+  }
 
   if (!response.ok) {
-    throw await createHttpError(response, config);
+    const error = await createHttpError(response, config);
+    logger.warn("upstream_request", {
+      url: url.toString(),
+      status: response.status,
+      durationMs: getDurationMs(startedAt),
+      code: error.code,
+      retryable: error.retryable,
+    });
+    throw error;
   }
 
   const bodyText = await readSuccessBodyText(
     response,
     options.successBodyMaxBytes ?? config.responseMaxBytes,
-  );
+  ).catch((error: unknown) => {
+    logSocrataFetchFailure(logger, url, startedAt, error);
+    throw error;
+  });
 
   try {
-    return JSON.parse(bodyText);
+    const parsed = JSON.parse(bodyText);
+
+    logger.debug("upstream_request", {
+      url: url.toString(),
+      status: response.status,
+      durationMs: getDurationMs(startedAt),
+      retryable: false,
+    });
+
+    return parsed;
   } catch (error) {
-    throw new SocrataError("invalid_response", "Socrata returned invalid JSON.", {
+    const socrataError = new SocrataError("invalid_response", "Socrata returned invalid JSON.", {
       cause: error,
     });
+    logSocrataFetchFailure(logger, url, startedAt, socrataError);
+    throw socrataError;
   }
+}
+
+function logSocrataFetchFailure(
+  logger: Logger,
+  url: URL,
+  startedAt: number,
+  error: unknown,
+): void {
+  const isSocrata = error instanceof SocrataError;
+
+  logger.warn("upstream_request", {
+    url: url.toString(),
+    status: isSocrata ? error.status : undefined,
+    durationMs: getDurationMs(startedAt),
+    code: isSocrata ? error.code : "unknown",
+    retryable: isSocrata ? error.retryable : undefined,
+    error,
+  });
+}
+
+function getDurationMs(startedAt: number): number {
+  return Math.round(performance.now() - startedAt);
 }
 
 async function fetchSocrataUrl(

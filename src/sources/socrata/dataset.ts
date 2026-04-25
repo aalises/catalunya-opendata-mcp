@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import type { AppConfig } from "../../config.js";
+import { formatZodError } from "../common/zod.js";
 import type { SocrataDatasetProvenance, SocrataOperationProvenance } from "./catalog.js";
 import {
   type FetchSocrataJsonOptions,
@@ -243,10 +244,4 @@ function toIsoTimestamp(timestamp: number | null | undefined): string | null {
 function normalizeNullableString(value: string | null | undefined): string | null {
   const normalized = value?.trim();
   return normalized ? normalized : null;
-}
-
-function formatZodError(error: z.ZodError): string {
-  return error.issues
-    .map((issue) => `${issue.path.join(".") || "response"}: ${issue.message}`)
-    .join("; ");
 }

@@ -71,6 +71,35 @@ describe("fetchSocrataJson", () => {
     });
   });
 
+  it("logs upstream request metadata when logging is enabled", async () => {
+    const consoleError = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ ok: true }), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+
+    await fetchSocrataJson(new URL("https://example.test"), {
+      ...baseConfig,
+      logLevel: "debug",
+    });
+
+    expect(consoleError).toHaveBeenCalledTimes(1);
+
+    const record = JSON.parse(String(consoleError.mock.calls[0][0]));
+
+    expect(record).toMatchObject({
+      level: "debug",
+      message: "upstream_request",
+      source: "socrata",
+      url: "https://example.test/",
+      status: 200,
+      retryable: false,
+    });
+    expect(record.durationMs).toEqual(expect.any(Number));
+  });
+
   it("appends a collapsed bounded body excerpt to HTTP errors", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response('{\n  "message": "bad where"\n}', {

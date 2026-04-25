@@ -1,8 +1,11 @@
 import { z } from "zod";
 
 import type { AppConfig } from "../../config.js";
+import type { SourceDatasetProvenance, SourceOperationProvenance } from "../common/provenance.js";
+import { formatZodError } from "../common/zod.js";
 import {
   buildSocrataCatalogUrl,
+  type FetchSocrataJsonOptions,
   fetchSocrataJson,
   SOCRATA_CATALOG_DOMAIN,
   SocrataError,
@@ -42,26 +45,10 @@ export interface SocrataSearchDatasetsInput {
   offset: number;
 }
 
-export interface SocrataSearchDatasetsOptions {
-  signal?: AbortSignal;
-}
+export type SocrataSearchDatasetsOptions = FetchSocrataJsonOptions;
 
-interface SocrataProvenanceBase {
-  source: "socrata";
-  source_url: string;
-  id: string;
-  language: "ca";
-}
-
-export interface SocrataOperationProvenance extends SocrataProvenanceBase {
-  last_updated: null;
-  license_or_terms: null;
-}
-
-export interface SocrataDatasetProvenance extends SocrataProvenanceBase {
-  last_updated: string | null;
-  license_or_terms: string | null;
-}
+export type SocrataOperationProvenance = SourceOperationProvenance<"socrata">;
+export type SocrataDatasetProvenance = SourceDatasetProvenance<"socrata">;
 
 export interface SocrataDatasetCard {
   title: string;
@@ -165,10 +152,4 @@ function toDatasetCard(
       language: "ca",
     },
   };
-}
-
-function formatZodError(error: z.ZodError): string {
-  return error.issues
-    .map((issue) => `${issue.path.join(".") || "response"}: ${issue.message}`)
-    .join("; ");
 }
