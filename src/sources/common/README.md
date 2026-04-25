@@ -1,5 +1,5 @@
-# Common Source Contracts
+# Common Source Primitives
 
-This directory is reserved for cross-source primitives used by Socrata, IDESCAT, Barcelona Open Data, geospatial services, and future adapters.
+This directory contains cross-source primitives used by Socrata, IDESCAT, Barcelona Open Data, geospatial services, and future adapters.
 
-Keep this layer boring and explicit: shared interfaces, normalized errors, pagination, provenance, caps, and test fixtures.
+Keep this layer boring and explicit: normalized errors, provenance, caps/sizing helpers, Zod formatting, pagination, and fixture-test support. Source-specific query mechanics still belong in each adapter.
