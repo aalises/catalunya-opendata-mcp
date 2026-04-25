@@ -5,19 +5,20 @@ export const SOCRATA_CATALOG_BASE_URL = "https://api.eu.socrata.com/api/catalog/
 export const SOCRATA_CATALOG_DOMAIN = "analisi.transparenciacatalunya.cat";
 export const SOCRATA_USER_AGENT = "catalunya-opendata-mcp/0.1.0";
 
-export type SocrataCatalogErrorCode =
+export type SocrataErrorCode =
   | "http_error"
+  | "invalid_input"
   | "invalid_response"
   | "network_error"
   | "timeout";
 
-export class SocrataCatalogError extends Error {
-  readonly code: SocrataCatalogErrorCode;
+export class SocrataError extends Error {
+  readonly code: SocrataErrorCode;
   readonly retryable: boolean;
   readonly status?: number;
 
   constructor(
-    code: SocrataCatalogErrorCode,
+    code: SocrataErrorCode,
     message: string,
     options: {
       cause?: unknown;
@@ -26,7 +27,7 @@ export class SocrataCatalogError extends Error {
     } = {},
   ) {
     super(message, { cause: options.cause });
-    this.name = "SocrataCatalogError";
+    this.name = "SocrataError";
     this.code = code;
     this.retryable = options.retryable ?? false;
     this.status = options.status;
@@ -39,12 +40,12 @@ export interface FetchSocrataCatalogParams {
   offset: number;
 }
 
-export interface FetchSocrataCatalogOptions {
+export interface FetchSocrataJsonOptions {
   signal?: AbortSignal;
 }
 
-export function isSocrataCatalogError(error: unknown): error is SocrataCatalogError {
-  return error instanceof SocrataCatalogError;
+export function isSocrataError(error: unknown): error is SocrataError {
+  return error instanceof SocrataError;
 }
 
 export function buildSocrataCatalogUrl(params: FetchSocrataCatalogParams): URL {
@@ -58,12 +59,12 @@ export function buildSocrataCatalogUrl(params: FetchSocrataCatalogParams): URL {
   return url;
 }
 
-export async function fetchSocrataCatalog(
+export async function fetchSocrataJson(
   url: URL,
   config: AppConfig,
-  options: FetchSocrataCatalogOptions = {},
+  options: FetchSocrataJsonOptions = {},
 ): Promise<unknown> {
-  const response = await fetchCatalogUrl(url, config, options);
+  const response = await fetchSocrataUrl(url, config, options);
 
   if (!response.ok) {
     throw await createHttpError(response);
@@ -72,16 +73,16 @@ export async function fetchSocrataCatalog(
   try {
     return await response.json();
   } catch (error) {
-    throw new SocrataCatalogError("invalid_response", "Socrata catalog returned invalid JSON.", {
+    throw new SocrataError("invalid_response", "Socrata returned invalid JSON.", {
       cause: error,
     });
   }
 }
 
-async function fetchCatalogUrl(
+async function fetchSocrataUrl(
   url: URL,
   config: AppConfig,
-  options: FetchSocrataCatalogOptions,
+  options: FetchSocrataJsonOptions,
 ): Promise<Response> {
   try {
     return await fetch(url, {
@@ -106,10 +107,10 @@ function buildHeaders(config: AppConfig): Record<string, string> {
   return headers;
 }
 
-async function createHttpError(response: Response): Promise<SocrataCatalogError> {
-  return new SocrataCatalogError(
+async function createHttpError(response: Response): Promise<SocrataError> {
+  return new SocrataError(
     "http_error",
-    `Socrata catalog request failed with HTTP ${response.status} ${response.statusText}.`,
+    `Socrata request failed with HTTP ${response.status} ${response.statusText}.`,
     {
       retryable: response.status === 429 || response.status >= 500,
       status: response.status,
@@ -127,17 +128,17 @@ function createRequestSignal(timeoutMs: number, signal?: AbortSignal): AbortSign
   return AbortSignal.any([signal, timeoutSignal]);
 }
 
-function toFetchError(error: unknown): SocrataCatalogError {
+function toFetchError(error: unknown): SocrataError {
   const name = getErrorName(error);
 
   if (name === "TimeoutError" || name === "AbortError") {
-    return new SocrataCatalogError("timeout", "Socrata catalog request timed out.", {
+    return new SocrataError("timeout", "Socrata request timed out.", {
       cause: error,
       retryable: true,
     });
   }
 
-  return new SocrataCatalogError("network_error", "Socrata catalog request failed.", {
+  return new SocrataError("network_error", "Socrata request failed.", {
     cause: error,
     retryable: true,
   });

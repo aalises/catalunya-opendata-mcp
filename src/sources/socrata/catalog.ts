@@ -3,9 +3,9 @@ import { z } from "zod";
 import type { AppConfig } from "../../config.js";
 import {
   buildSocrataCatalogUrl,
-  fetchSocrataCatalog,
+  fetchSocrataJson,
   SOCRATA_CATALOG_DOMAIN,
-  SocrataCatalogError,
+  SocrataError,
 } from "./client.js";
 
 const socrataCatalogResponseSchema = z
@@ -59,7 +59,7 @@ export interface SocrataOperationProvenance extends SocrataProvenanceBase {
 }
 
 export interface SocrataDatasetProvenance extends SocrataProvenanceBase {
-  last_updated: string;
+  last_updated: string | null;
   license_or_terms: string | null;
 }
 
@@ -94,11 +94,11 @@ export async function searchSocrataDatasets(
 ): Promise<SocrataSearchDatasetsResult> {
   const normalizedInput = normalizeInput(input);
   const catalogUrl = buildSocrataCatalogUrl(normalizedInput);
-  const rawCatalog = await fetchSocrataCatalog(catalogUrl, config, options);
+  const rawCatalog = await fetchSocrataJson(catalogUrl, config, options);
   const parsed = socrataCatalogResponseSchema.safeParse(rawCatalog);
 
   if (!parsed.success) {
-    throw new SocrataCatalogError(
+    throw new SocrataError(
       "invalid_response",
       `Invalid Socrata catalog response: ${formatZodError(parsed.error)}`,
       {

@@ -50,6 +50,14 @@ npm run inspect
 
 `npm run smoke` builds the server and calls its `ping` tool over stdio. `npm run inspect` opens the MCP Inspector against the built server.
 
+## Socrata workflow
+
+Use `socrata_search_datasets` to discover Catalunya open data datasets by text. Each result includes a `source_id`, `web_url`, and synthesized SODA `api_endpoint`.
+
+Use `socrata_describe_dataset` with a `source_id` such as `v8i4-fa4q` to fetch the dataset schema from Socrata view metadata. The describe result includes dataset attribution, license or terms, update timestamps, the web/API URLs, and queryable columns with both display names and SODA API `field_name` values.
+
+When query tooling is added, use the returned `field_name` values to build SODA `$select`, `$where`, and `$order` filters against the dataset `api_endpoint`.
+
 ## Lint and format
 
 ```bash
@@ -90,4 +98,5 @@ For local development with `tsx`:
 
 - Tool: `ping`
 - Tool: `socrata_search_datasets`
+- Tool: `socrata_describe_dataset`
 - Resource: `catalunya-opendata://about`

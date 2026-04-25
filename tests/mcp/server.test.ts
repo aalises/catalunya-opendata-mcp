@@ -29,12 +29,13 @@ describe("createMcpServer", () => {
     vi.restoreAllMocks();
   });
 
-  it("registers the Socrata search tool", async () => {
+  it("registers the Socrata tools", async () => {
     const { client, close } = await connectInMemoryServer();
 
     try {
       const tools = await client.listTools();
       expect(tools.tools.map((tool) => tool.name)).toContain("socrata_search_datasets");
+      expect(tools.tools.map((tool) => tool.name)).toContain("socrata_describe_dataset");
     } finally {
       await close();
     }
@@ -133,6 +134,118 @@ describe("createMcpServer", () => {
       await close();
     }
   });
+
+  it("returns structured Socrata describe output and compact JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify(viewMetadata()), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "socrata_describe_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBeUndefined();
+      expect(toolResult.structuredContent).toMatchObject({
+        data: {
+          title: "Habitatges amb protecció oficial",
+          source_id: "v8i4-fa4q",
+          license_or_terms: "See Terms of Use",
+          columns: [
+            {
+              display_name: "Municipi",
+              field_name: "municipi",
+              datatype: "text",
+            },
+          ],
+          provenance: {
+            source: "socrata",
+            id: "v8i4-fa4q",
+          },
+        },
+        provenance: {
+          source: "socrata",
+          id: "analisi.transparenciacatalunya.cat:dataset_describe",
+        },
+      });
+      expect(toolResult.content[0]).toMatchObject({
+        type: "text",
+        text: JSON.stringify(toolResult.structuredContent),
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("rejects malformed Socrata source IDs with a tool error", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      for (const sourceId of ["abc", "v8i4_fa4q", "V8I4-FA4Q", "../v8i4-fa4q"]) {
+        const result = await client.callTool({
+          name: "socrata_describe_dataset",
+          arguments: {
+            source_id: sourceId,
+          },
+        });
+        const toolResult = result as ToolCallResult;
+
+        expect(toolResult.isError).toBe(true);
+      }
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured Socrata describe errors", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ error: "not found" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 404,
+        statusText: "Not Found",
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "socrata_describe_dataset",
+        arguments: {
+          source_id: "v8i4-fa4q",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        provenance: {
+          source: "socrata",
+          id: "analisi.transparenciacatalunya.cat:dataset_describe",
+        },
+        error: {
+          source: "socrata",
+          code: "http_error",
+          retryable: false,
+          status: 404,
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
 });
 
 async function connectInMemoryServer(config: AppConfig = testConfig) {
@@ -162,4 +275,29 @@ interface ToolCallResult {
   }>;
   structuredContent?: Record<string, unknown>;
   isError?: boolean;
+}
+
+function viewMetadata() {
+  return {
+    id: "v8i4-fa4q",
+    name: "Habitatges amb protecció oficial",
+    attribution: "Departament de Territori",
+    attributionLink: "https://example.test/terms",
+    category: "Habitatge",
+    createdAt: 1_700_000_000,
+    description: "Dataset about housing.",
+    license: { name: "See Terms of Use" },
+    licenseId: "SEE_TERMS_OF_USE",
+    publicationDate: 1_700_000_100,
+    rowsUpdatedAt: 1_700_000_300,
+    viewLastModified: 1_700_000_200,
+    columns: [
+      {
+        name: "Municipi",
+        dataTypeName: "text",
+        description: "Nom del municipi",
+        fieldName: "municipi",
+      },
+    ],
+  };
 }

@@ -6,7 +6,12 @@ import {
   createSocrataSearchProvenance,
   searchSocrataDatasets,
 } from "../sources/socrata/catalog.js";
-import { isSocrataCatalogError } from "../sources/socrata/client.js";
+import { isSocrataError } from "../sources/socrata/client.js";
+import {
+  createSocrataDescribeProvenance,
+  describeSocrataDataset,
+  SOCRATA_SOURCE_ID_PATTERN,
+} from "../sources/socrata/dataset.js";
 
 export const serverName = "catalunya-opendata-mcp";
 export const serverVersion = "0.1.0";
@@ -32,6 +37,13 @@ export function createMcpServer(config: AppConfig): McpServer {
       .default(socrataSearchDefaultLimit)
       .describe(`Maximum number of datasets to return. Server maximum: ${config.maxResults}.`),
     offset: z.number().int().min(0).default(0).describe("Zero-based result offset for pagination."),
+  };
+  const socrataDescribeInputSchema = {
+    source_id: z
+      .string()
+      .trim()
+      .regex(SOCRATA_SOURCE_ID_PATTERN)
+      .describe("Socrata dataset identifier, such as v8i4-fa4q."),
   };
 
   server.registerTool(
@@ -110,6 +122,51 @@ export function createMcpServer(config: AppConfig): McpServer {
     },
   );
 
+  server.registerTool(
+    "socrata_describe_dataset",
+    {
+      title: "socrata.describe_dataset",
+      description:
+        "Describe a Catalunya open data Socrata dataset, including queryable API field names.",
+      inputSchema: socrataDescribeInputSchema,
+      outputSchema: socrataDescribeDatasetOutputSchema,
+    },
+    async (input, extra) => {
+      try {
+        const structuredContent = await describeSocrataDataset(input, config, {
+          signal: extra.signal,
+        });
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          structuredContent: structuredContent as unknown as Record<string, unknown>,
+        };
+      } catch (error) {
+        const structuredContent = {
+          data: null,
+          provenance: createSocrataDescribeProvenance(input),
+          error: toSocrataToolError(error, "Unexpected Socrata describe failure."),
+        };
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          structuredContent: structuredContent as Record<string, unknown>,
+          isError: true,
+        };
+      }
+    },
+  );
+
   server.registerResource(
     "about",
     "catalunya-opendata://about",
@@ -151,8 +208,16 @@ const socrataOperationProvenanceOutputSchema = socrataProvenanceBaseOutputSchema
 });
 
 const socrataDatasetProvenanceOutputSchema = socrataProvenanceBaseOutputSchema.extend({
-  last_updated: z.string(),
+  last_updated: z.string().nullable(),
   license_or_terms: z.string().nullable(),
+});
+
+const socrataToolErrorOutputSchema = z.object({
+  source: z.literal("socrata"),
+  code: z.string(),
+  message: z.string(),
+  retryable: z.boolean(),
+  status: z.number().int().optional(),
 });
 
 const socrataDatasetCardOutputSchema = z.object({
@@ -177,21 +242,47 @@ const socrataSearchDatasetsOutputSchema = z.object({
     })
     .nullable(),
   provenance: socrataOperationProvenanceOutputSchema,
-  error: z
+  error: socrataToolErrorOutputSchema.optional(),
+});
+
+const socrataDatasetColumnOutputSchema = z.object({
+  display_name: z.string(),
+  field_name: z.string(),
+  datatype: z.string(),
+  description: z.string().nullable(),
+});
+
+const socrataDescribeDatasetOutputSchema = z.object({
+  data: z
     .object({
-      source: z.literal("socrata"),
-      code: z.string(),
-      message: z.string(),
-      retryable: z.boolean(),
-      status: z.number().int().optional(),
+      title: z.string(),
+      description: z.string().nullable(),
+      attribution: z.string().nullable(),
+      attribution_link: z.string().nullable(),
+      license_or_terms: z.string().nullable(),
+      category: z.string().nullable(),
+      source_id: z.string(),
+      source_domain: z.string(),
+      api_endpoint: z.string().url(),
+      web_url: z.string().url(),
+      created_at: z.string().nullable(),
+      published_at: z.string().nullable(),
+      rows_updated_at: z.string().nullable(),
+      view_last_modified: z.string().nullable(),
+      columns: z.array(socrataDatasetColumnOutputSchema),
+      suggested_next_action: z.string(),
+      provenance: socrataDatasetProvenanceOutputSchema,
     })
-    .optional(),
+    .nullable(),
+  provenance: socrataOperationProvenanceOutputSchema,
+  error: socrataToolErrorOutputSchema.optional(),
 });
 
 function toSocrataToolError(
   error: unknown,
-): z.infer<typeof socrataSearchDatasetsOutputSchema>["error"] {
-  if (isSocrataCatalogError(error)) {
+  fallbackMessage = "Unexpected Socrata search failure.",
+): z.infer<typeof socrataToolErrorOutputSchema> {
+  if (isSocrataError(error)) {
     return {
       source: "socrata",
       code: error.code,
@@ -204,7 +295,7 @@ function toSocrataToolError(
   return {
     source: "socrata",
     code: "unexpected_error",
-    message: error instanceof Error ? error.message : "Unexpected Socrata search failure.",
+    message: error instanceof Error ? error.message : fallbackMessage,
     retryable: false,
   };
 }
