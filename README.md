@@ -4,6 +4,8 @@ MCP server for Catalonia open data.
 
 This repository is a runnable stdio MCP server for discovering, describing, and querying Catalunya open data. The larger architecture lives in [`specs.md`](./specs.md).
 
+The first release milestone is published in the [GitHub releases](https://github.com/aalises/catalunya-opendata-mcp/releases).
+
 ## Requirements
 
 - Node.js 22.12 or newer
@@ -51,23 +53,47 @@ npm run inspect
 
 `npm run smoke` builds the server and calls its `ping` tool over stdio. `npm run inspect` opens the MCP Inspector against the built server.
 
-## Socrata workflow
+## Socrata quick path
 
-Use `socrata_search_datasets` to discover Catalunya open data datasets by text. Each result includes a `source_id`, `web_url`, and synthesized SODA `api_endpoint`.
+The Socrata adapter supports a complete search -> describe -> query workflow
+against the Generalitat Catalunya open data portal. The examples below use
+`j8h8-vxug`, a live housing dataset from the canary run.
 
-Use `socrata_describe_dataset` with a `source_id` such as `v8i4-fa4q` to fetch the dataset schema from Socrata view metadata. The describe result includes dataset attribution, license or terms, update timestamps, the web/API URLs, and queryable columns with both display names and SODA API `field_name` values.
+### 1. Search
 
-Use `socrata://datasets/{source_id}/metadata` when an MCP client can attach resources as context. It serializes the same inner metadata shape as `socrata_describe_dataset.data` without the tool-call envelope. The `socrata_citation` prompt provides a fill-in citation template for that metadata.
+Use `socrata_search_datasets` to discover datasets by text. Each result includes
+a `source_id`, `web_url`, and SODA `api_endpoint`.
 
-Use `socrata_query_dataset` to fetch rows from the dataset's SODA API. Call `socrata_describe_dataset` first and build raw SODA clause values with the returned `field_name` values, not display names.
+```json
+{
+  "query": "Habitatges iniciats acabats",
+  "limit": 10
+}
+```
 
-Metadata resource to query workflow:
+### 2. Describe
+
+Use `socrata_describe_dataset` to fetch schema, attribution, license or terms,
+update timestamps, web/API URLs, and queryable columns. Query clauses should use
+the returned `field_name` values, not display names.
+
+```json
+{
+  "source_id": "j8h8-vxug"
+}
+```
+
+### 3. Attach Metadata
+
+Use `socrata://datasets/{source_id}/metadata` when an MCP client can attach
+resources as context. The resource body is the same inner metadata shape as
+`socrata_describe_dataset.data`, without the tool-call envelope.
 
 ```text
 socrata://datasets/j8h8-vxug/metadata
 ```
 
-The attached resource body includes dataset-level provenance and queryable fields:
+Example metadata excerpt:
 
 ```json
 {
@@ -88,16 +114,10 @@ The attached resource body includes dataset-level provenance and queryable field
 }
 ```
 
-Then query with the same `source_id` and the resource's `field_name` values:
+### 4. Query
 
-```json
-{
-  "source_id": "j8h8-vxug",
-  "select": "municipi, comarca_2023, any",
-  "where": "municipi = 'Girona'",
-  "limit": 10
-}
-```
+Use `socrata_query_dataset` to fetch rows. Pass raw SODA clause values only;
+never pass URL fragments such as `?$where=...`.
 
 Selected fields:
 
@@ -114,8 +134,8 @@ Filtered query:
 ```json
 {
   "source_id": "j8h8-vxug",
-  "select": "municipi, comarca",
-  "where": "comarca = 'Gironès'",
+  "select": "municipi, comarca_2023, any",
+  "where": "municipi = 'Girona'",
   "limit": 10
 }
 ```
@@ -144,7 +164,15 @@ Aggregate query:
 }
 ```
 
-Pass clause values only. Do this:
+When using `offset`, supply `order` so repeated calls are stable. Aggregate
+queries combine aggregate functions in `select` with `group`.
+
+### 5. Recover From Query Errors
+
+If Socrata rejects a query, the tool returns a structured error with the
+upstream response body included when available.
+
+Do this:
 
 ```json
 {
@@ -162,9 +190,8 @@ Not this:
 }
 ```
 
-When using `offset` for pagination, supply `order` so repeated calls are stable. Aggregate queries combine aggregate functions in `select` with `group`.
-
-If Socrata rejects a query, the tool returns a structured error with the upstream response body included when available. For example, querying `j8h8-vxug` with `where: "definitely_not_a_field = 'x'"` produced this real response shape. The long SQL excerpt inside `error.message` is abridged here:
+For example, querying `j8h8-vxug` with an invalid field produced this real
+MCP error shape. The long SQL excerpt inside `error.message` is abridged here:
 
 ```json
 {
@@ -188,6 +215,20 @@ If Socrata rejects a query, the tool returns a structured error with the upstrea
 ```
 
 Use the `error.message` signals, especially `query.soql.no-such-column` and `No such column: definitely_not_a_field`, to return to `socrata_describe_dataset` and correct the clause with a valid `field_name`.
+
+### 6. Cite
+
+Use the `socrata_citation` prompt with either `socrata_describe_dataset` output
+or the metadata resource. A concise citation can use `title`, `attribution`,
+`source_domain`, `web_url` or `provenance.source_url`, `rows_updated_at` or
+`view_last_modified`, and `license_or_terms`.
+
+```text
+Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat.
+Departament de Territori, Habitatge i Transició Ecològica. Source:
+analisi.transparenciacatalunya.cat. Last updated: 2025-11-10T09:43:54.000Z.
+License/terms: See Terms of Use.
+```
 
 ## Lint and format
 
