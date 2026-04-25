@@ -89,4 +89,5 @@ For local development with `tsx`:
 ## Current MCP surface
 
 - Tool: `ping`
+- Tool: `socrata_search_datasets`
 - Resource: `catalunya-opendata://about`

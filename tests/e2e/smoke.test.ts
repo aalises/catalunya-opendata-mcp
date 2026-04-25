@@ -25,6 +25,7 @@ describe("stdio MCP server", () => {
 
     const tools = await client.listTools();
     expect(tools.tools.map((tool) => tool.name)).toContain("ping");
+    expect(tools.tools.map((tool) => tool.name)).toContain("socrata_search_datasets");
 
     const result = await client.callTool({
       name: "ping",

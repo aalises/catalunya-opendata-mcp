@@ -18,6 +18,9 @@ try {
   if (!tools.tools.some((tool) => tool.name === "ping")) {
     throw new Error("Expected ping tool to be registered.");
   }
+  if (!tools.tools.some((tool) => tool.name === "socrata_search_datasets")) {
+    throw new Error("Expected socrata_search_datasets tool to be registered.");
+  }
 
   const result = await client.callTool({
     name: "ping",

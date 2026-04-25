@@ -5,7 +5,7 @@ import { type AppConfig, loadConfig } from "./config.js";
 import { createMcpServer, serverName } from "./mcp/server.js";
 
 const config = loadConfig();
-const server = createMcpServer();
+const server = createMcpServer(config);
 const transport = createTransport(config.transport);
 
 let isShuttingDown = false;
