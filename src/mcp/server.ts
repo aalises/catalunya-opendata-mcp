@@ -11,7 +11,7 @@ export function createPingMessage(name?: string): string {
 export function createMcpServer(): McpServer {
   const server = new McpServer({
     name: serverName,
-    version: serverVersion
+    version: serverVersion,
   });
 
   server.registerTool(
@@ -20,12 +20,12 @@ export function createMcpServer(): McpServer {
       title: "Ping",
       description: "Check that the Catalunya Open Data MCP server is running.",
       inputSchema: {
-        name: z.string().optional().describe("Optional name to include in the response.")
+        name: z.string().optional().describe("Optional name to include in the response."),
       },
       outputSchema: {
         message: z.string(),
-        server: z.string()
-      }
+        server: z.string(),
+      },
     },
     async ({ name }) => {
       const message = createPingMessage(name);
@@ -34,15 +34,15 @@ export function createMcpServer(): McpServer {
         content: [
           {
             type: "text",
-            text: message
-          }
+            text: message,
+          },
         ],
         structuredContent: {
           message,
-          server: serverName
-        }
+          server: serverName,
+        },
       };
-    }
+    },
   );
 
   server.registerResource(
@@ -51,7 +51,7 @@ export function createMcpServer(): McpServer {
     {
       title: "About Catalunya Open Data MCP",
       description: "Basic metadata for this MCP server.",
-      mimeType: "text/markdown"
+      mimeType: "text/markdown",
     },
     async (uri) => ({
       contents: [
@@ -63,11 +63,11 @@ export function createMcpServer(): McpServer {
             "",
             "Barebones MCP server scaffold for Catalonia open data.",
             "",
-            "Next steps will add source adapters for Socrata, IDESCAT, Barcelona Open Data, and geospatial services."
-          ].join("\n")
-        }
-      ]
-    })
+            "Next steps will add source adapters for Socrata, IDESCAT, Barcelona Open Data, and geospatial services.",
+          ].join("\n"),
+        },
+      ],
+    }),
   );
 
   return server;

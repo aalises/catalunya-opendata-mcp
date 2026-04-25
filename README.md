@@ -21,11 +21,31 @@ npm install
 npm run dev
 ```
 
+The development command uses `tsx watch`, so saving TypeScript files restarts the stdio server.
+
 ## Build and run
 
 ```bash
 npm run build
 npm start
+```
+
+## Test and inspect
+
+```bash
+npm run typecheck
+npm test
+npm run smoke
+npm run inspect
+```
+
+`npm run smoke` builds the server and calls its `ping` tool over stdio. `npm run inspect` opens the MCP Inspector against the built server.
+
+## Lint and format
+
+```bash
+npm run lint
+npm run format
 ```
 
 ## Claude Desktop config

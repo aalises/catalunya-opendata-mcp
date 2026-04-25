@@ -13,12 +13,12 @@ describe("stdio MCP server", () => {
   it("registers and calls the ping tool", async () => {
     const transport = new StdioClientTransport({
       command: process.execPath,
-      args: ["--import", "tsx", "src/index.ts"]
+      args: ["--import", "tsx", "src/index.ts"],
     });
 
     client = new Client({
       name: "catalunya-opendata-mcp-vitest",
-      version: "0.1.0"
+      version: "0.1.0",
     });
 
     await client.connect(transport);
@@ -29,13 +29,13 @@ describe("stdio MCP server", () => {
     const result = await client.callTool({
       name: "ping",
       arguments: {
-        name: "Albert"
-      }
+        name: "Albert",
+      },
     });
 
     expect(result.structuredContent).toEqual({
       message: "Hola, Albert. catalunya-opendata-mcp is running.",
-      server: "catalunya-opendata-mcp"
+      server: "catalunya-opendata-mcp",
     });
   });
 });

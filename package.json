@@ -17,8 +17,13 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "smoke": "npm run build && node scripts/smoke.mjs",
+    "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "check": "npm run typecheck && npm run lint && npm test && npm run smoke",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json",
     "clean": "rm -rf dist"
   },
@@ -27,6 +32,8 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.13",
+    "@modelcontextprotocol/inspector": "^0.21.2",
     "@types/node": "^22.15.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
