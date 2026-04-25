@@ -57,6 +57,8 @@ Use `socrata_search_datasets` to discover Catalunya open data datasets by text. 
 
 Use `socrata_describe_dataset` with a `source_id` such as `v8i4-fa4q` to fetch the dataset schema from Socrata view metadata. The describe result includes dataset attribution, license or terms, update timestamps, the web/API URLs, and queryable columns with both display names and SODA API `field_name` values.
 
+Use `socrata://datasets/{source_id}/metadata` when an MCP client can attach resources as context. It serializes the same inner metadata shape as `socrata_describe_dataset.data` without the tool-call envelope. The `socrata_citation` prompt provides a fill-in citation template for that metadata.
+
 Use `socrata_query_dataset` to fetch rows from the dataset's SODA API. Call `socrata_describe_dataset` first and build raw SODA clause values with the returned `field_name` values, not display names.
 
 Selected fields:
@@ -191,5 +193,7 @@ For local development with `tsx`:
 - Tool: `socrata_search_datasets`
 - Tool: `socrata_describe_dataset`
 - Tool: `socrata_query_dataset`
+- Prompt: `socrata_citation`
 - Prompt: `socrata_query_workflow`
 - Resource: `catalunya-opendata://about`
+- Resource template: `socrata://datasets/{source_id}/metadata`

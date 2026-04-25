@@ -72,6 +72,125 @@ describe("createMcpServer", () => {
     }
   });
 
+  it("registers the Socrata citation prompt", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const prompts = await client.listPrompts();
+      expect(prompts.prompts.map((prompt) => prompt.name)).toContain("socrata_citation");
+
+      const prompt = await client.getPrompt({
+        name: "socrata_citation",
+      });
+      const textMessages = prompt.messages
+        .map((message) => message.content)
+        .filter((content) => content.type === "text");
+
+      expect(textMessages.length).toBeGreaterThan(0);
+      expect(textMessages.some((content) => content.text.trim().length > 0)).toBe(true);
+    } finally {
+      await close();
+    }
+  });
+
+  it("registers the Socrata metadata resource template", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const templates = await client.listResourceTemplates();
+      expect(templates.resourceTemplates).toContainEqual(
+        expect.objectContaining({
+          name: "socrata_dataset_metadata",
+          uriTemplate: "socrata://datasets/{source_id}/metadata",
+          mimeType: "application/json",
+        }),
+      );
+    } finally {
+      await close();
+    }
+  });
+
+  it("reads Socrata metadata resources as dataset metadata JSON", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify(viewMetadata()), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.readResource({
+        uri: "socrata://datasets/v8i4-fa4q/metadata",
+      });
+      const content = result.contents[0];
+
+      expect(content).toMatchObject({
+        uri: "socrata://datasets/v8i4-fa4q/metadata",
+        mimeType: "application/json",
+      });
+      expect("text" in content).toBe(true);
+
+      const metadata = JSON.parse("text" in content ? content.text : "{}");
+
+      expect(metadata).toMatchObject({
+        source_id: "v8i4-fa4q",
+        columns: [
+          {
+            field_name: "municipi",
+          },
+        ],
+        provenance: {
+          source: "socrata",
+          id: "v8i4-fa4q",
+        },
+      });
+      expect(metadata.data).toBeUndefined();
+      expect(metadata.error).toBeUndefined();
+    } finally {
+      await close();
+    }
+  });
+
+  it("rejects malformed Socrata metadata resource source IDs without fetching", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      await expect(
+        client.readResource({
+          uri: "socrata://datasets/not-a-real-id/metadata",
+        }),
+      ).rejects.toThrow("source_id");
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("surfaces Socrata metadata resource upstream errors as JSON-RPC errors", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ error: "not found" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 404,
+        statusText: "Not Found",
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      await expect(
+        client.readResource({
+          uri: "socrata://datasets/v8i4-fa4q/metadata",
+        }),
+      ).rejects.toThrow("HTTP 404");
+    } finally {
+      await close();
+    }
+  });
+
   it("returns structured Socrata search output and compact JSON text fallback", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response(

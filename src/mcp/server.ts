@@ -1,4 +1,4 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
 import type { AppConfig } from "../config.js";
@@ -6,7 +6,7 @@ import {
   createSocrataSearchProvenance,
   searchSocrataDatasets,
 } from "../sources/socrata/catalog.js";
-import { isSocrataError } from "../sources/socrata/client.js";
+import { isSocrataError, normalizeSourceId, SocrataError } from "../sources/socrata/client.js";
 import {
   createSocrataDescribeProvenance,
   describeSocrataDataset,
@@ -271,6 +271,62 @@ export function createMcpServer(config: AppConfig): McpServer {
     }),
   );
 
+  server.registerPrompt(
+    "socrata_citation",
+    {
+      title: "socrata.citation",
+      description: "Template for citing a Catalunya Socrata dataset from described metadata.",
+    },
+    () => ({
+      description: "Fill-in citation template for Socrata dataset metadata.",
+      messages: [
+        {
+          role: "user",
+          content: {
+            type: "text",
+            text: [
+              "Create a concise citation for a Catalunya Socrata dataset using `socrata_describe_dataset` output or the `socrata://datasets/{source_id}/metadata` resource.",
+              "",
+              "Fill this template from the metadata:",
+              "",
+              "`{title}`. `{attribution}`. Source: `{source_domain}`. URL: `{web_url}` or `{provenance.source_url}`. Last updated: `{rows_updated_at}` or `{view_last_modified}`. License/terms: `{license_or_terms}`. Attribution link: `{attribution_link}`.",
+              "",
+              "Leave unavailable fields out instead of inventing values.",
+            ].join("\n"),
+          },
+        },
+      ],
+    }),
+  );
+
+  server.registerResource(
+    "socrata_dataset_metadata",
+    new ResourceTemplate("socrata://datasets/{source_id}/metadata", { list: undefined }),
+    {
+      title: "Socrata Dataset Metadata",
+      description:
+        "Dataset schema and provenance metadata returned by socrata_describe_dataset.data.",
+      mimeType: "application/json",
+    },
+    async (uri, variables, extra) => {
+      const sourceId = getSocrataMetadataSourceId(variables.source_id);
+      const result = await describeSocrataDataset({ source_id: sourceId }, config, {
+        signal: extra.signal,
+      });
+
+      // Resources expose the metadata artifact itself, not the tool-call envelope.
+      return {
+        contents: [
+          {
+            uri: uri.href,
+            mimeType: "application/json",
+            text: JSON.stringify(result.data),
+          },
+        ],
+      };
+    },
+  );
+
   server.registerResource(
     "about",
     "catalunya-opendata://about",
@@ -297,6 +353,21 @@ export function createMcpServer(config: AppConfig): McpServer {
   );
 
   return server;
+}
+
+function getSocrataMetadataSourceId(sourceId: string | string[] | undefined): string {
+  if (sourceId === undefined) {
+    throw new SocrataError("invalid_input", "Missing source_id in Socrata metadata resource URI.");
+  }
+
+  if (Array.isArray(sourceId)) {
+    throw new SocrataError(
+      "invalid_input",
+      "Socrata metadata resource URI must include exactly one source_id.",
+    );
+  }
+
+  return normalizeSourceId(sourceId);
 }
 
 const socrataProvenanceBaseOutputSchema = z.object({
