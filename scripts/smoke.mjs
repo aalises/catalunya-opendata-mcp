@@ -1,5 +1,8 @@
+import { readFileSync } from "node:fs";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+
+const packageJson = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -8,7 +11,7 @@ const transport = new StdioClientTransport({
 
 const client = new Client({
   name: "catalunya-opendata-mcp-smoke-test",
-  version: "0.1.0",
+  version: packageJson.version,
 });
 
 try {

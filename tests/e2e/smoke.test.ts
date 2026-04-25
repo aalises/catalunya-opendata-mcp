@@ -2,6 +2,8 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 import { afterEach, describe, expect, it } from "vitest";
 
+import { packageVersion } from "../../src/package-info.js";
+
 let client: Client | undefined;
 
 describe("stdio MCP server", () => {
@@ -18,7 +20,7 @@ describe("stdio MCP server", () => {
 
     client = new Client({
       name: "catalunya-opendata-mcp-vitest",
-      version: "0.1.0",
+      version: packageVersion,
     });
 
     await client.connect(transport);

@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 
 import type { AppConfig } from "../../src/config.js";
 import { createMcpServer, createPingMessage, serverName } from "../../src/mcp/server.js";
+import { packageVersion } from "../../src/package-info.js";
 
 const testConfig: AppConfig = {
   nodeEnv: "test",
@@ -624,7 +625,7 @@ async function connectInMemoryServer(config: AppConfig = testConfig) {
   const server = createMcpServer(config);
   const client = new Client({
     name: "catalunya-opendata-mcp-vitest",
-    version: "0.1.0",
+    version: packageVersion,
   });
 
   await server.connect(serverTransport);
