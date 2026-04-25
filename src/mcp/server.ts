@@ -185,6 +185,8 @@ export function createMcpServer(config: AppConfig): McpServer {
     "socrata_query_dataset",
     {
       title: "socrata.query_dataset",
+      // Keep this concise agent-facing guidance aligned with the longer
+      // human-facing socrata_query_workflow prompt below.
       description: [
         "Query rows from a Catalunya open data Socrata dataset.",
         "Always call socrata_describe_dataset first and use returned field_name values, not display_name values.",
@@ -230,6 +232,43 @@ export function createMcpServer(config: AppConfig): McpServer {
         };
       }
     },
+  );
+
+  server.registerPrompt(
+    "socrata_query_workflow",
+    {
+      title: "socrata.query_workflow",
+      description:
+        "Guide a user through finding, describing, and querying a Catalunya Socrata dataset.",
+    },
+    () => ({
+      description: "Socrata search, describe, and query workflow guidance.",
+      messages: [
+        {
+          role: "user",
+          content: {
+            type: "text",
+            // Keep this human-facing prompt aligned with the concise
+            // socrata_query_dataset tool description above.
+            text: [
+              "Use this workflow when helping someone query Catalunya open data from Socrata.",
+              "",
+              "1. Discover the dataset with `socrata_search_datasets`. Choose the result whose title and description best match the user's request, then keep its `source_id`.",
+              "",
+              "2. Inspect the schema with `socrata_describe_dataset`. Use the returned `field_name` values in query clauses. Do not use display names, translated labels, or names with spaces/accents unless they are explicitly returned as `field_name`.",
+              "",
+              "3. Query rows with `socrata_query_dataset`. Pass raw clause values only, not URL fragments. For example, use `where: \"municipi = 'Girona'\"`, not `where: \"?$where=municipi = 'Girona'\"`.",
+              "",
+              "4. For pagination, include `order` whenever using `offset`. Without a stable order, repeated pages may contain duplicate or missing rows.",
+              "",
+              '5. For aggregate queries, combine aggregate functions in `select` with `group`, such as `select: "comarca, count(*) as total"` and `group: "comarca"`. Do not mix ungrouped row-level fields into aggregate queries.',
+              "",
+              "6. If Socrata returns a 400, read the surfaced `error.message`. It includes the upstream error body when available, such as `query.soql.no-such-column` and the missing column name. Use that feedback with the described schema to correct the query.",
+            ].join("\n"),
+          },
+        },
+      ],
+    }),
   );
 
   server.registerResource(

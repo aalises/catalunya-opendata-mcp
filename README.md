@@ -59,19 +59,95 @@ Use `socrata_describe_dataset` with a `source_id` such as `v8i4-fa4q` to fetch t
 
 Use `socrata_query_dataset` to fetch rows from the dataset's SODA API. Call `socrata_describe_dataset` first and build raw SODA clause values with the returned `field_name` values, not display names.
 
-Example query arguments:
+Selected fields:
 
 ```json
 {
-  "source_id": "v8i4-fa4q",
-  "select": "municipi, comarca",
-  "where": "comarca = 'Gironès'",
-  "order": "municipi",
+  "source_id": "j8h8-vxug",
+  "select": "municipi, comarca_2023, any",
   "limit": 10
 }
 ```
 
-When using `offset` for pagination, supply `order` so repeated calls are stable. Aggregate queries can combine `select` aggregate functions with `group`, for example `select: "comarca, count(*)"` and `group: "comarca"`.
+Filtered query:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "select": "municipi, comarca",
+  "where": "comarca = 'Gironès'",
+  "limit": 10
+}
+```
+
+Stable pagination:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "select": "municipi, comarca_2023, any",
+  "order": "municipi, any",
+  "limit": 25,
+  "offset": 50
+}
+```
+
+Aggregate query:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "select": "comarca_2023, count(*) as total",
+  "group": "comarca_2023",
+  "order": "total desc",
+  "limit": 10
+}
+```
+
+Pass clause values only. Do this:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "where": "municipi = 'Girona'"
+}
+```
+
+Not this:
+
+```json
+{
+  "source_id": "j8h8-vxug",
+  "where": "?$where=municipi = 'Girona'"
+}
+```
+
+When using `offset` for pagination, supply `order` so repeated calls are stable. Aggregate queries combine aggregate functions in `select` with `group`.
+
+If Socrata rejects a query, the tool returns a structured error with the upstream response body included when available. For example, querying `j8h8-vxug` with `where: "definitely_not_a_field = 'x'"` produced this real response shape. The long SQL excerpt inside `error.message` is abridged here:
+
+```json
+{
+  "data": null,
+  "provenance": {
+    "source": "socrata",
+    "source_url": "https://analisi.transparenciacatalunya.cat/resource/j8h8-vxug.json?%24where=definitely_not_a_field+%3D+%27x%27&%24limit=2&%24offset=0",
+    "id": "analisi.transparenciacatalunya.cat:dataset_query",
+    "last_updated": null,
+    "license_or_terms": null,
+    "language": "ca"
+  },
+  "error": {
+    "source": "socrata",
+    "code": "http_error",
+    "message": "Socrata request failed with HTTP 400 Bad Request. Response body: {\"message\":\"Query coordinator error: query.soql.no-such-column; No such column: definitely_not_a_field; position: ... [abridged]\",\"errorCode\":\"query.soql.no-such-column\",\"data\":{\"column\":\"definitely_not_a_field\", ...}}",
+    "retryable": false,
+    "status": 400
+  }
+}
+```
+
+Use the `error.message` signals, especially `query.soql.no-such-column` and `No such column: definitely_not_a_field`, to return to `socrata_describe_dataset` and correct the clause with a valid `field_name`.
 
 ## Lint and format
 
@@ -115,4 +191,5 @@ For local development with `tsx`:
 - Tool: `socrata_search_datasets`
 - Tool: `socrata_describe_dataset`
 - Tool: `socrata_query_dataset`
+- Prompt: `socrata_query_workflow`
 - Resource: `catalunya-opendata://about`

@@ -51,6 +51,27 @@ describe("createMcpServer", () => {
     }
   });
 
+  it("registers the Socrata query workflow prompt", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const prompts = await client.listPrompts();
+      expect(prompts.prompts.map((prompt) => prompt.name)).toContain("socrata_query_workflow");
+
+      const prompt = await client.getPrompt({
+        name: "socrata_query_workflow",
+      });
+      const textMessages = prompt.messages
+        .map((message) => message.content)
+        .filter((content) => content.type === "text");
+
+      expect(textMessages.length).toBeGreaterThan(0);
+      expect(textMessages.some((content) => content.text.trim().length > 0)).toBe(true);
+    } finally {
+      await close();
+    }
+  });
+
   it("returns structured Socrata search output and compact JSON text fallback", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       new Response(
