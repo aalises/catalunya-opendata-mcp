@@ -6,7 +6,7 @@ This repository starts intentionally small: one runnable stdio MCP server with a
 
 ## Requirements
 
-- Node.js 20.10 or newer
+- Node.js 22.12 or newer
 - npm 10 or newer
 
 ## Setup
