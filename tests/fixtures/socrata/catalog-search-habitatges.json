@@ -1,0 +1,18 @@
+{
+  "resultSetSize": 1,
+  "results": [
+    {
+      "resource": {
+        "id": "j8h8-vxug",
+        "name": "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
+        "description": "Habitatges iniciats i acabats per municipi, comarca i trimestre.",
+        "updatedAt": "2025-11-10T09:43:54.000Z"
+      },
+      "metadata": {
+        "domain": "analisi.transparenciacatalunya.cat",
+        "license": "See Terms of Use"
+      },
+      "permalink": "https://analisi.transparenciacatalunya.cat/d/j8h8-vxug"
+    }
+  ]
+}

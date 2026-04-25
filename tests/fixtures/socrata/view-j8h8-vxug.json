@@ -1,0 +1,54 @@
+{
+  "id": "j8h8-vxug",
+  "name": "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
+  "attribution": "Departament de Territori, Habitatge i Transició Ecològica",
+  "attributionLink": "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+  "category": "Habitatge",
+  "createdAt": 1549451620,
+  "description": "Habitatges iniciats i acabats per municipi, comarca i trimestre.",
+  "license": {
+    "name": "See Terms of Use"
+  },
+  "licenseId": "SEE_TERMS_OF_USE",
+  "publicationDate": 1549451620,
+  "rowsUpdatedAt": 1762767834,
+  "viewLastModified": 1762767825,
+  "columns": [
+    {
+      "name": "Codi IDESCAT",
+      "dataTypeName": "text",
+      "description": "Codi territorial IDESCAT",
+      "fieldName": "codi_idescat"
+    },
+    {
+      "name": "Codi INE",
+      "dataTypeName": "text",
+      "description": "Codi territorial INE",
+      "fieldName": "codi_ine"
+    },
+    {
+      "name": "Municipi",
+      "dataTypeName": "text",
+      "description": "Nom del municipi",
+      "fieldName": "municipi"
+    },
+    {
+      "name": "Codi Comarca 2023",
+      "dataTypeName": "text",
+      "description": "Codi de comarca vigent el 2023",
+      "fieldName": "codi_comarca_2023"
+    },
+    {
+      "name": "Comarca 2023",
+      "dataTypeName": "text",
+      "description": "Nom de comarca vigent el 2023",
+      "fieldName": "comarca_2023"
+    },
+    {
+      "name": "Any",
+      "dataTypeName": "number",
+      "description": "Any de referència",
+      "fieldName": "any"
+    }
+  ]
+}
