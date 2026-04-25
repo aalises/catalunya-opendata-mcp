@@ -1,0 +1,64 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "timezone": "Europe/Madrid",
+  "enabledManagers": ["github-actions", "npm", "nvm"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 4am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Keep MCP SDK updates visible.",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@modelcontextprotocol/sdk"],
+      "groupName": "MCP SDK"
+    },
+    {
+      "description": "Group TypeScript, test, lint, and local MCP development tooling.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchPackageNames": [
+        "@biomejs/**",
+        "@modelcontextprotocol/inspector",
+        "@types/**",
+        "@vitest/**",
+        "tsx",
+        "typescript",
+        "vite",
+        "vitest"
+      ],
+      "groupName": "TypeScript and MCP dev tooling",
+      "groupSlug": "typescript-mcp-dev-tooling"
+    },
+    {
+      "description": "Group GitHub Actions updates.",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "groupSlug": "github-actions"
+    },
+    {
+      "description": "Group Node.js runtime metadata updates.",
+      "matchManagers": ["npm", "nvm"],
+      "matchPackageNames": ["node"],
+      "groupName": "Node.js runtime",
+      "groupSlug": "node-runtime"
+    },
+    {
+      "description": "Automerge patch updates for development dependencies after CI passes.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ]
+}

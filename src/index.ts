@@ -46,5 +46,9 @@ function createTransport(transport: AppConfig["transport"]): StdioServerTranspor
   switch (transport) {
     case "stdio":
       return new StdioServerTransport();
+    default: {
+      const _exhaustive: never = transport;
+      throw new Error(`Unsupported transport: ${String(_exhaustive)}`);
+    }
   }
 }
