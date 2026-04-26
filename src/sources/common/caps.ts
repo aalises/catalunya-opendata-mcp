@@ -1,3 +1,5 @@
+import { toJsonSafeValue } from "./json-safe.js";
+
 export interface JsonToolResultSizingOptions {
   isError?: boolean;
 }
@@ -18,10 +20,12 @@ export function createJsonTextContent(structuredContent: unknown): Array<{
   type: "text";
   text: string;
 }> {
+  const safeStructuredContent = toJsonSafeValue(structuredContent) ?? null;
+
   return [
     {
       type: "text",
-      text: JSON.stringify(structuredContent),
+      text: JSON.stringify(safeStructuredContent),
     },
   ];
 }
@@ -30,9 +34,11 @@ export function getJsonToolResultByteLength(
   structuredContent: unknown,
   options: JsonToolResultSizingOptions = {},
 ): number {
+  const safeStructuredContent = toJsonSafeValue(structuredContent) ?? null;
+
   return getJsonByteLength({
-    content: createJsonTextContent(structuredContent),
-    structuredContent,
+    content: createJsonTextContent(safeStructuredContent),
+    structuredContent: safeStructuredContent,
     ...(options.isError ? { isError: true } : {}),
   });
 }
