@@ -1,9 +1,11 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import {
   normalizeSearchTerm,
   rankIdescatSearchResults,
+  searchIdescatTables,
 } from "../../../src/sources/idescat/search.js";
+import { generatedAt as caGeneratedAt } from "../../../src/sources/idescat/search-index/ca.js";
 import type { IdescatSearchIndexEntry } from "../../../src/sources/idescat/search-index/types.js";
 
 const entries: IdescatSearchIndexEntry[] = [
@@ -31,7 +33,22 @@ const entries: IdescatSearchIndexEntry[] = [
   },
 ];
 
+const config = {
+  nodeEnv: "test",
+  logLevel: "silent",
+  transport: "stdio",
+  maxResults: 10,
+  requestTimeoutMs: 5_000,
+  responseMaxBytes: 262_144,
+  idescatUpstreamReadBytes: 8_388_608,
+  socrataAppToken: undefined,
+} as const;
+
 describe("rankIdescatSearchResults", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it("normalizes accents and requires all query tokens", () => {
     expect(normalizeSearchTerm(" Població   COMARCÀ ")).toBe("poblacio comarca");
 
@@ -45,5 +62,37 @@ describe("rankIdescatSearchResults", () => {
     const results = rankIdescatSearchResults(entries, "atur");
 
     expect(results[0]?.entry.table_id).toBe("2");
+  });
+
+  it("logs a non-blocking stale-index warning", async () => {
+    vi.spyOn(Date, "now").mockReturnValue(Date.parse("2028-04-27T00:00:00.000Z"));
+    const warn = vi.fn();
+
+    const result = await searchIdescatTables(
+      {
+        query: "poblacio",
+        lang: "ca",
+      },
+      config,
+      {
+        logger: {
+          child: () => {
+            throw new Error("child should not be called");
+          },
+          trace: vi.fn(),
+          debug: vi.fn(),
+          info: vi.fn(),
+          warn,
+          error: vi.fn(),
+        },
+      },
+    );
+
+    expect(result.data.results.length).toBeGreaterThan(0);
+    expect(warn).toHaveBeenCalledWith("index_stale", {
+      source: "idescat",
+      generatedAt: caGeneratedAt,
+      lang: "ca",
+    });
   });
 });

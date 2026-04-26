@@ -35,6 +35,11 @@ export interface BuildIdescatDataRequestInput extends Required<IdescatPathTuple>
   last?: number;
 }
 
+interface NormalizedFilterResult {
+  filters: NormalizedIdescatFilters;
+  totalBytes: number;
+}
+
 export interface BuiltIdescatDataRequest {
   filters?: NormalizedIdescatFilters;
   last?: number;
@@ -68,7 +73,8 @@ export function buildIdescatDataRequest(
   input: BuildIdescatDataRequestInput,
 ): BuiltIdescatDataRequest {
   const last = normalizeLast(input.last);
-  const filters = normalizeFilters(input.filters);
+  const normalizedFilters = normalizeFilters(input.filters);
+  const filters = normalizedFilters.filters;
   const logicalRequestUrl = buildIdescatUrl({ ...input, data: true });
   const bodyParams = new URLSearchParams();
 
@@ -82,9 +88,10 @@ export function buildIdescatDataRequest(
     logicalRequestUrl.searchParams.set("_LAST_", String(last));
   }
 
-  validateUrlLength(logicalRequestUrl);
-
   if (getUrlByteLength(logicalRequestUrl) <= IDESCAT_POST_THRESHOLD_BYTES) {
+    validateFilterTotalLength(normalizedFilters.totalBytes);
+    validateUrlLength(logicalRequestUrl);
+
     return {
       filters: emptyRecordAsUndefined(filters),
       last,
@@ -104,7 +111,12 @@ export function buildIdescatDataRequest(
   }
 
   const requestBodyParams = Object.fromEntries(bodyParams.entries());
+  // Validate POST body before filter_total/url so post_body_bytes is reachable —
+  // an earlier revision deliberately put it last to keep the cap unreachable; do
+  // not flip the order back without re-reading the cap-error tests.
   validatePostBodyLength(bodyParams);
+  validateFilterTotalLength(normalizedFilters.totalBytes);
+  validateUrlLength(logicalRequestUrl);
 
   return {
     filters: emptyRecordAsUndefined(filters),
@@ -186,9 +198,12 @@ function normalizeLast(last: number | undefined): number | undefined {
   return last;
 }
 
-function normalizeFilters(filters: Record<string, unknown> | undefined): NormalizedIdescatFilters {
+function normalizeFilters(filters: Record<string, unknown> | undefined): NormalizedFilterResult {
   if (filters === undefined) {
-    return {};
+    return {
+      filters: {},
+      totalBytes: 0,
+    };
   }
 
   if (!isPlainRecord(filters)) {
@@ -228,11 +243,10 @@ function normalizeFilters(filters: Record<string, unknown> | undefined): Normali
     normalized[key] = Array.isArray(value) ? normalizedValues : (normalizedValues[0] ?? "");
   }
 
-  if (totalBytes > IDESCAT_FILTER_TOTAL_MAX_BYTES) {
-    throwFilterCapError("filter_total_bytes", totalBytes, IDESCAT_FILTER_TOTAL_MAX_BYTES);
-  }
-
-  return normalized;
+  return {
+    filters: normalized,
+    totalBytes,
+  };
 }
 
 function validateFilterKey(key: string): void {
@@ -277,6 +291,12 @@ function validateUrlLength(url: URL): void {
 
   if (byteLength > IDESCAT_LOGICAL_URL_MAX_BYTES) {
     throwFilterCapError("logical_url_bytes", byteLength, IDESCAT_LOGICAL_URL_MAX_BYTES);
+  }
+}
+
+function validateFilterTotalLength(byteLength: number): void {
+  if (byteLength > IDESCAT_FILTER_TOTAL_MAX_BYTES) {
+    throwFilterCapError("filter_total_bytes", byteLength, IDESCAT_FILTER_TOTAL_MAX_BYTES);
   }
 }
 
