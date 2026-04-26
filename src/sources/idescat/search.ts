@@ -4,21 +4,6 @@ import type { SourceOperationProvenance } from "../common/provenance.js";
 import { IdescatError, type IdescatLanguage } from "./client.js";
 import { createIdescatOperationProvenance } from "./metadata.js";
 import { normalizeLimit } from "./request.js";
-import caEntries, {
-  generatedAt as caGeneratedAt,
-  indexVersion as caIndexVersion,
-  sourceCollectionUrls as caSourceCollectionUrls,
-} from "./search-index/ca.js";
-import enEntries, {
-  generatedAt as enGeneratedAt,
-  indexVersion as enIndexVersion,
-  sourceCollectionUrls as enSourceCollectionUrls,
-} from "./search-index/en.js";
-import esEntries, {
-  generatedAt as esGeneratedAt,
-  indexVersion as esIndexVersion,
-  sourceCollectionUrls as esSourceCollectionUrls,
-} from "./search-index/es.js";
 import type { IdescatSearchIndexEntry } from "./search-index/types.js";
 
 export interface IdescatSearchTablesInput {
@@ -56,11 +41,18 @@ interface LoadedIndex {
   sourceCollectionUrls: string[];
 }
 
-export function searchIdescatTables(
+interface SearchIndexModule {
+  default: IdescatSearchIndexEntry[];
+  generatedAt: string;
+  indexVersion: string;
+  sourceCollectionUrls: string[];
+}
+
+export async function searchIdescatTables(
   input: IdescatSearchTablesInput,
   config: AppConfig,
   options: { logger?: Logger } = {},
-): IdescatSearchTablesResult {
+): Promise<IdescatSearchTablesResult> {
   const requestedLang = input.lang ?? "ca";
   const limit = normalizeLimit(input.limit, config.maxResults, 10);
   const query = input.query.trim();
@@ -69,7 +61,7 @@ export function searchIdescatTables(
     throw new IdescatError("invalid_input", "query must not be empty.");
   }
 
-  const index = selectIndex(requestedLang);
+  const index = await selectIndex(requestedLang);
   const logger = options.logger ?? createLogger(config).child({ source: "idescat" });
   maybeWarnStaleIndex(index, logger);
 
@@ -157,8 +149,8 @@ export function normalizeSearchTerm(value: string): string {
     .trim();
 }
 
-function selectIndex(lang: IdescatLanguage): LoadedIndex {
-  const index = loadIndex(lang);
+async function selectIndex(lang: IdescatLanguage): Promise<LoadedIndex> {
+  const index = await loadIndex(lang);
 
   if (index.entries.length > 0 || lang === "ca") {
     return index;
@@ -167,32 +159,26 @@ function selectIndex(lang: IdescatLanguage): LoadedIndex {
   return loadIndex("ca");
 }
 
-function loadIndex(lang: IdescatLanguage): LoadedIndex {
+async function loadIndex(lang: IdescatLanguage): Promise<LoadedIndex> {
+  const module = await loadIndexModule(lang);
+
+  return {
+    entries: module.default,
+    generatedAt: module.generatedAt,
+    indexVersion: module.indexVersion,
+    lang,
+    sourceCollectionUrls: module.sourceCollectionUrls,
+  };
+}
+
+async function loadIndexModule(lang: IdescatLanguage): Promise<SearchIndexModule> {
   switch (lang) {
     case "ca":
-      return {
-        entries: caEntries,
-        generatedAt: caGeneratedAt,
-        indexVersion: caIndexVersion,
-        lang,
-        sourceCollectionUrls: caSourceCollectionUrls,
-      };
+      return import("./search-index/ca.js");
     case "en":
-      return {
-        entries: enEntries,
-        generatedAt: enGeneratedAt,
-        indexVersion: enIndexVersion,
-        lang,
-        sourceCollectionUrls: enSourceCollectionUrls,
-      };
+      return import("./search-index/en.js");
     case "es":
-      return {
-        entries: esEntries,
-        generatedAt: esGeneratedAt,
-        indexVersion: esIndexVersion,
-        lang,
-        sourceCollectionUrls: esSourceCollectionUrls,
-      };
+      return import("./search-index/es.js");
   }
 }
 
