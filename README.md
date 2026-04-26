@@ -259,12 +259,20 @@ Example client configuration with environment overrides:
 | `npm run typecheck` | Type-checks source and tests. |
 | `npm test` | Runs the Vitest suite. |
 | `npm run smoke` | Builds the server and calls `ping` over stdio. |
+| `npm run canary:socrata` | Builds the server and runs the live Socrata search -> describe -> query canary. |
+| `npm run canary:idescat` | Builds the server and runs the live IDESCAT search -> geos -> metadata -> data canary. |
 | `npm run package:size` | Checks packed/unpacked package size and total generated IDESCAT index size. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
 | `npm run refresh:idescat` | Crawl IDESCAT Tables v2 and regenerate the committed search index. |
 | `npm run lint` | Runs Biome checks. |
 | `npm run format` | Formats the repository with Biome. |
-| `npm run check` | Runs typecheck, lint, tests, and smoke. |
+| `npm run check` | Runs typecheck, lint, tests, smoke, and package size checks. |
+
+## Release Checklist
+
+Before opening or merging routine changes, run `npm run check`. This stays local and does not include live upstream canaries.
+
+For release readiness or adapter changes, optionally run `npm run canary:socrata` and `npm run canary:idescat`. These commands exercise the public MCP surface against live Generalitat/IDESCAT services, so they are intentionally manual and may fail when an upstream service is unavailable.
 
 ## Project Notes
 
