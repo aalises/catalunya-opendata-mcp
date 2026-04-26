@@ -13,6 +13,7 @@ const testConfig: AppConfig = {
   maxResults: 10,
   requestTimeoutMs: 5_000,
   responseMaxBytes: 262_144,
+  idescatUpstreamReadBytes: 8_388_608,
   socrataAppToken: undefined,
 };
 
