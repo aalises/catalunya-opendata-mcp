@@ -98,7 +98,7 @@ describe("createMcpServer", () => {
       const result = await client.callTool({
         name: "idescat_search_tables",
         arguments: {
-          query: "poblacio edat",
+          query: "poblacio 1 gener sexe edat 2014",
           limit: 1,
         },
       });
@@ -107,7 +107,7 @@ describe("createMcpServer", () => {
       expect(toolResult.isError).toBeUndefined();
       expect(toolResult.structuredContent).toMatchObject({
         data: {
-          query: "poblacio edat",
+          query: "poblacio 1 gener sexe edat 2014",
           lang: "ca",
           requested_lang: "ca",
           limit: 1,

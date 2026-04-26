@@ -1,0 +1,128 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "eep",
+    "node_id": "13825",
+    "table_id": "15351",
+    "label": "Population aged 15 or over. By level of education attained and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By level of education attained and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/13825/15351?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "13827",
+    "table_id": "15353",
+    "label": "Population aged 15 or over. By level of education attained, five year age group and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By level of education attained, five year age group and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/13827/15353?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14492",
+    "table_id": "15356",
+    "label": "Population aged 15 or over. By level of education attained and nationality",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By level of education attained and nationality"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14492/15356?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14493",
+    "table_id": "15357",
+    "label": "Population aged 15 or over. By level of education attained, nationality and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By level of education attained, nationality and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14493/15357?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14494",
+    "table_id": "15332",
+    "label": "Population aged 15 or over. By extended levels of education attained and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By extended levels of education attained and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14494/15332?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14496",
+    "table_id": "15359",
+    "label": "Population aged 15 or over. By extended levels of education attained, five year age group and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By extended levels of education attained, five year age group and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14496/15359?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14500",
+    "table_id": "15363",
+    "label": "Population aged 15 or over. By extended levels of education attained, nationality and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 15 or over. By extended levels of education attained, nationality and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14500/15363?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "14791",
+    "table_id": "15681",
+    "label": "Population from 25 to 64 years. By level of education attained and sex",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population from 25 to 64 years. By level of education attained and sex"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/14791/15681?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "16209",
+    "table_id": "19482",
+    "label": "Population aged 25-64 with only primary or lower education",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Total Population aged 25-64 with only primary or lower education"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/16209/19482?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "16210",
+    "table_id": "19483",
+    "label": "Population aged 25-64 with at least second stage of secondary education",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 25-64 with at least second stage of secondary education"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/16210/19483?lang=en"
+  },
+  {
+    "statistics_id": "eep",
+    "node_id": "16211",
+    "table_id": "19484",
+    "label": "Population aged 25-64 with higher education",
+    "ancestor_labels": {
+      "statistic": "Educational Attainment Statistics",
+      "node": "Population aged 25-64 with higher education"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eep/16211/19484?lang=en"
+  }
+];
+
+export default entries;

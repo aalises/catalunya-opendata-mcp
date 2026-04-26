@@ -1,0 +1,535 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "comest",
+    "node_id": "18130",
+    "table_id": "9",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18130/9?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18131",
+    "table_id": "14",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18131/14?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18132",
+    "table_id": "5",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18132/5?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18133",
+    "table_id": "10",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18133/10?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18134",
+    "table_id": "8",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18134/8?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18135",
+    "table_id": "13",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups de 1r i 2n nivell (destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups de 1r i 2n nivell (destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18135/13?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18136",
+    "table_id": "4",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i capítols (Nomenclatura combinada - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i capítols (Nomenclatura combinada - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18136/4?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18137",
+    "table_id": "2",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18137/2?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18176",
+    "table_id": "19",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18176/19?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18177",
+    "table_id": "17",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18177/17?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18178",
+    "table_id": "15",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18178/15?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18179",
+    "table_id": "12",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18179/12?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18182",
+    "table_id": "20",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18182/20?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18183",
+    "table_id": "11",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 1r i 2n nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18183/11?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18184",
+    "table_id": "16",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i capítols (Nomenclatura combinada (NC) - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18184/16?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "18185",
+    "table_id": "18",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i seccions (CUCI-Rev.4 - 1 dígit)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/18185/18?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "20613",
+    "table_id": "1",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i partides (Nomenclatura combinada - 4 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i partides (Nomenclatura combinada - 4 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/20613/1?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22063",
+    "table_id": "30",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22063/30?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22064",
+    "table_id": "29",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22064/29?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22065",
+    "table_id": "33",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i partides (Nomenclatura combinada (NC) - 4 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22065/33?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22066",
+    "table_id": "28",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i subpartides (Nomenclatura combinada - 6 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i subpartides (Nomenclatura combinada - 6 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22066/28?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22067",
+    "table_id": "31",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22067/31?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22068",
+    "table_id": "27",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22068/27?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22069",
+    "table_id": "34",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i subpartides (Nomenclatura combinada (NC) - 6 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22069/34?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22070",
+    "table_id": "24",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i posicions (Nomenclatura combinada - 8 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i posicions (Nomenclatura combinada - 8 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22070/24?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22071",
+    "table_id": "32",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22071/32?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22072",
+    "table_id": "23",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22072/23?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22073",
+    "table_id": "35",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i posicions (Nomenclatura combinada (NC) - 8 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22073/35?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22074",
+    "table_id": "36",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22074/36?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22075",
+    "table_id": "38",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22075/38?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22076",
+    "table_id": "40",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22076/40?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22077",
+    "table_id": "42",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions (CUCI-Rev.4 - 2 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22077/42?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22078",
+    "table_id": "37",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22078/37?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22079",
+    "table_id": "39",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22079/39?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22080",
+    "table_id": "41",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22080/41?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22082",
+    "table_id": "43",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups (CUCI-Rev.4 - 3 dígits)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22082/43?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22083",
+    "table_id": "44",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups de 3r nivell (destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups de 3r nivell (destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22083/44?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22084",
+    "table_id": "45",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22084/45?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22085",
+    "table_id": "46",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22085/46?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22086",
+    "table_id": "47",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups de 3r nivell (Destinació econòmica dels béns)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22086/47?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22088",
+    "table_id": "48",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22088/48?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22089",
+    "table_id": "50",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22089/50?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22090",
+    "table_id": "52",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22090/52?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22091",
+    "table_id": "54",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i divisions d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22091/54?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22092",
+    "table_id": "49",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22092/49?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22093",
+    "table_id": "51",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22093/51?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22094",
+    "table_id": "53",
+    "label": "Exportacions i importacions. Per països, mitjà de transport i grups d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per països, mitjà de transport i grups d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22094/53?lang=ca"
+  },
+  {
+    "statistics_id": "comest",
+    "node_id": "22095",
+    "table_id": "55",
+    "label": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups d'activitat econòmica (CCAE-2009)",
+    "ancestor_labels": {
+      "statistic": "Comerç amb l'estranger",
+      "node": "Exportacions i importacions. Per continents i àrees geogràfiques, mitjà de transport i grups d'activitat econòmica (CCAE-2009)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/comest/22095/55?lang=ca"
+  }
+];
+
+export default entries;

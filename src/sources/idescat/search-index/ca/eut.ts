@@ -1,0 +1,5837 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "eut",
+    "node_id": "1002",
+    "table_id": "25919",
+    "label": "Població que ha participat en activitats de voluntariat en el darrer mes. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1002/25919?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1002",
+    "table_id": "5114",
+    "label": "Població que ha participat en activitats de voluntariat en el darrer mes. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1002/5114?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1002",
+    "table_id": "941",
+    "label": "Participació en activitats de voluntariat el mes anterior. Per sexe (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1002/941?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1004",
+    "table_id": "942",
+    "label": "Participació en activitats socials el mes anterior. Per àmbit territorial",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per àmbit territorial"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1004/942?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1005",
+    "table_id": "943",
+    "label": "Participació en activitats socials el mes anterior. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1005/943?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1006",
+    "table_id": "944",
+    "label": "Participació en activitats socials el mes anterior. Per sexe i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1006/944?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1007",
+    "table_id": "945",
+    "label": "Participació en activitats socials el mes anterior. Per nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1007/945?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1009",
+    "table_id": "947",
+    "label": "Participació en activitats socials el mes anterior. Per la relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1009/947?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1010",
+    "table_id": "948",
+    "label": "Participació en activitats socials el mes anterior. Per estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats socials el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1010/948?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1012",
+    "table_id": "949",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per àmbit territorial",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per àmbit territorial"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1012/949?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1013",
+    "table_id": "950",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1013/950?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1014",
+    "table_id": "951",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per sexe i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1014/951?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1015",
+    "table_id": "952",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1015/952?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1017",
+    "table_id": "954",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per la relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1017/954?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1018",
+    "table_id": "955",
+    "label": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1018/955?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1020",
+    "table_id": "956",
+    "label": "Població que va participar en activitats esportives en el mes anterior. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats esportives en el mes anterior. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1020/956?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1021",
+    "table_id": "957",
+    "label": "Població que va participar en activitats esportives en el mes anterior. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats esportives en el mes anterior. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1021/957?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1022",
+    "table_id": "958",
+    "label": "Població que va participar en activitats esportives en el mes anterior. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats esportives en el mes anterior. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1022/958?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1023",
+    "table_id": "959",
+    "label": "Població que va participar en activitats esportives en el mes anterior. Per nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats esportives en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1023/959?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "1024",
+    "table_id": "960",
+    "label": "Població que va participar en activitats esportives en el mes anterior. Per la relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va participar en activitats esportives en el mes anterior. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/1024/960?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21621",
+    "table_id": "25433",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21621/25433?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21622",
+    "table_id": "25441",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21622/25441?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21623",
+    "table_id": "25442",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21623/25442?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21671",
+    "table_id": "25519",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21671/25519?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21672",
+    "table_id": "25533",
+    "label": "Participació i durada mitjana de les activitats diàries. Per nivell d'estrés",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21672/25533?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21673",
+    "table_id": "25534",
+    "label": "Participació i durada mitjana de les activitats diàries. Per grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21673/25534?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21682",
+    "table_id": "25551",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21682/25551?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21683",
+    "table_id": "25552",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21683/25552?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21684",
+    "table_id": "25553",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat civil",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21684/25553?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21685",
+    "table_id": "25554",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21685/25554?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21686",
+    "table_id": "25555",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21686/25555?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21687",
+    "table_id": "26337",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i situació professional",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21687/26337?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21688",
+    "table_id": "25557",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i tipus de jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21688/25557?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21689",
+    "table_id": "25558",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i distribució de la jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21689/25558?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21690",
+    "table_id": "26327",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21690/26327?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21691",
+    "table_id": "26057",
+    "label": "Durada mitjana diària de treball remunerat de la població ocupada. Per sexe i trimestre",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21691/26057?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21692",
+    "table_id": "25560",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21692/25560?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21693",
+    "table_id": "25561",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21693/25561?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21694",
+    "table_id": "25562",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21694/25562?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21695",
+    "table_id": "25563",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21695/25563?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21696",
+    "table_id": "25564",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21696/25564?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21697",
+    "table_id": "25565",
+    "label": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21697/25565?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21698",
+    "table_id": "26249",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21698/26249?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21699",
+    "table_id": "26259",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21699/26259?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21706",
+    "table_id": "26260",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21706/26260?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21709",
+    "table_id": "26298",
+    "label": "Participació i durada mitjana de les activitats socials",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21709/26298?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21710",
+    "table_id": "26297",
+    "label": "Participació i durada mitjana de les activitats socials. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21710/26297?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21711",
+    "table_id": "26299",
+    "label": "Participació i durada mitjana de les activitats socials. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21711/26299?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21712",
+    "table_id": "26300",
+    "label": "Participació i durada mitjana de les activitats socials. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21712/26300?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21713",
+    "table_id": "26301",
+    "label": "Participació i durada mitjana de les activitats socials. Per nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21713/26301?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21714",
+    "table_id": "26302",
+    "label": "Participació i durada mitjana de les activitats socials. Per estat civil",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21714/26302?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21715",
+    "table_id": "26303",
+    "label": "Participació i durada mitjana de les activitats socials. Per relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21715/26303?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21716",
+    "table_id": "26304",
+    "label": "Participació i durada mitjana de les activitats socials. Per composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21716/26304?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21717",
+    "table_id": "26310",
+    "label": "Participació i durada mitjana de les activitats socials. Per fills menors a la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21717/26310?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21719",
+    "table_id": "26306",
+    "label": "Participació i durada mitjana de les activitats socials. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21719/26306?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21720",
+    "table_id": "26307",
+    "label": "Participació i durada mitjana de les activitats socials. Per nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21720/26307?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21721",
+    "table_id": "26308",
+    "label": "Participació i durada mitjana de les activitats socials. Per grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21721/26308?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21722",
+    "table_id": "26309",
+    "label": "Participació i durada mitjana de les activitats socials. Per estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21722/26309?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21724",
+    "table_id": "25904",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21724/25904?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21725",
+    "table_id": "25905",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21725/25905?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21726",
+    "table_id": "25906",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21726/25906?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21727",
+    "table_id": "25907",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21727/25907?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21728",
+    "table_id": "25908",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estudis assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estudis assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21728/25908?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21729",
+    "table_id": "25909",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat civil",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21729/25909?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21730",
+    "table_id": "25910",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i la relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21730/25910?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21731",
+    "table_id": "25911",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus i composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21731/25911?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21732",
+    "table_id": "25912",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i segons si hi ha fills menors a la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i segons si hi ha fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21732/25912?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21734",
+    "table_id": "25914",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21734/25914?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21735",
+    "table_id": "25915",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21735/25915?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21736",
+    "table_id": "25916",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21736/25916?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21737",
+    "table_id": "25917",
+    "label": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21737/25917?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21738",
+    "table_id": "25929",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21738/25929?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21739",
+    "table_id": "25930",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21739/25930?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21740",
+    "table_id": "25931",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21740/25931?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21741",
+    "table_id": "25940",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21741/25940?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21742",
+    "table_id": "25941",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21742/25941?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21743",
+    "table_id": "26265",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21743/26265?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21744",
+    "table_id": "26266",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21744/26266?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21745",
+    "table_id": "25955",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21745/25955?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21746",
+    "table_id": "25971",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21746/25971?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21747",
+    "table_id": "25972",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21747/25972?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21748",
+    "table_id": "25973",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21748/25973?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21752",
+    "table_id": "26150",
+    "label": "Planificació de les principals tasques de la llar. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21752/26150?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21753",
+    "table_id": "26151",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21753/26151?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21754",
+    "table_id": "26152",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21754/26152?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21755",
+    "table_id": "26154",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i situació de convivència",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i situació de convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21755/26154?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21756",
+    "table_id": "26155",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21756/26155?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21757",
+    "table_id": "26156",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21757/26156?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21758",
+    "table_id": "26157",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21758/26157?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21759",
+    "table_id": "26158",
+    "label": "Planificació de les principals tasques de la llar. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de les principals tasques de la llar. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21759/26158?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21760",
+    "table_id": "25985",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21760/25985?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21761",
+    "table_id": "25989",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21761/25989?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21762",
+    "table_id": "25991",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants a les llars amb menors de 10 anys. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21762/25991?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21763",
+    "table_id": "25993",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i convivència",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21763/25993?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21764",
+    "table_id": "25995",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i la relació amb l'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21764/25995?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21765",
+    "table_id": "25997",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i tipus llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21765/25997?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21766",
+    "table_id": "25999",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21766/25999?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21767",
+    "table_id": "26001",
+    "label": "Persona responsable de planificar diferents tasques relacionades amb la cura dels infants per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21767/26001?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21769",
+    "table_id": "26211",
+    "label": "Temps mitjà destinat a internet i dispositius electrònics. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Temps mitjà destinat a internet i dispositius electrònics. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21769/26211?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21770",
+    "table_id": "26212",
+    "label": "Temps mitjà destinat a internet i dispositius electrònics. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Temps mitjà destinat a internet i dispositius electrònics. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21770/26212?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21771",
+    "table_id": "26213",
+    "label": "Temps mitjà destinat a internet i dispositius electrònics. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Temps mitjà destinat a internet i dispositius electrònics. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21771/26213?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21773",
+    "table_id": "26214",
+    "label": "Temps mitjà destinat a internet i dispositius electrònics. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Temps mitjà destinat a internet i dispositius electrònics. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21773/26214?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21775",
+    "table_id": "26216",
+    "label": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21775/26216?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21776",
+    "table_id": "26217",
+    "label": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21776/26217?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21777",
+    "table_id": "26218",
+    "label": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21777/26218?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21779",
+    "table_id": "26219",
+    "label": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21779/26219?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21781",
+    "table_id": "26221",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21781/26221?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21782",
+    "table_id": "26222",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21782/26222?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21783",
+    "table_id": "26223",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21783/26223?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21784",
+    "table_id": "26224",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21784/26224?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21785",
+    "table_id": "26225",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21785/26225?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21786",
+    "table_id": "26226",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21786/26226?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21787",
+    "table_id": "26228",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21787/26228?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21788",
+    "table_id": "26229",
+    "label": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21788/26229?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21829",
+    "table_id": "26066",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per dia laborable i cap de setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per dia laborable i cap de setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21829/26066?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21830",
+    "table_id": "26067",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per trimestre de realització de l'enquesta",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21830/26067?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21831",
+    "table_id": "26068",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per càrregues familiars a la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21831/26068?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21832",
+    "table_id": "26063",
+    "label": "Participació i durada mitjana de les activitats diàries. Per dia laborable i cap de setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per dia laborable i cap de setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21832/26063?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21833",
+    "table_id": "26054",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21833/26054?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21859",
+    "table_id": "26058",
+    "label": "Durada mitjana diària de treball remunerat de la població ocupada. Per sexe i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana diària de treball remunerat de la població ocupada. Per sexe i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21859/26058?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21861",
+    "table_id": "26168",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21861/26168?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21862",
+    "table_id": "26169",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21862/26169?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21863",
+    "table_id": "26170",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21863/26170?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21864",
+    "table_id": "26171",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21864/26171?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21865",
+    "table_id": "26173",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21865/26173?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21866",
+    "table_id": "26174",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21866/26174?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21867",
+    "table_id": "26331",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i sector d'activitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i sector d'activitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21867/26331?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21868",
+    "table_id": "26176",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i distribució de la jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21868/26176?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21869",
+    "table_id": "26180",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21869/26180?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21870",
+    "table_id": "26182",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21870/26182?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21871",
+    "table_id": "26184",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21871/26184?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21872",
+    "table_id": "26332",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i sector d'activitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i sector d'activitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21872/26332?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21873",
+    "table_id": "26191",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i distribució de la jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21873/26191?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21874",
+    "table_id": "26215",
+    "label": "Temps mitjà destinat a internet i dispositius electrònics. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Temps mitjà destinat a internet i dispositius electrònics. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21874/26215?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21875",
+    "table_id": "26220",
+    "label": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21875/26220?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21876",
+    "table_id": "26248",
+    "label": "Població que va ajudar a altres llars en el mes anterior. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21876/26248?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21877",
+    "table_id": "26333",
+    "label": "Població que va ajudar a altres llars en el mes anterior. Per sector d'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21877/26333?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21878",
+    "table_id": "26233",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21878/26233?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21879",
+    "table_id": "26235",
+    "label": "Participació en activitats de voluntariat en el darrer mes. Per composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21879/26235?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21881",
+    "table_id": "26334",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per sector d'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21881/26334?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21882",
+    "table_id": "26238",
+    "label": "Participació en activitats de voluntariat en el darrer mes. Per tipus de jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21882/26238?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21883",
+    "table_id": "26059",
+    "label": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21883/26059?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21884",
+    "table_id": "26060",
+    "label": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21884/26060?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21885",
+    "table_id": "26090",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21885/26090?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21886",
+    "table_id": "26091",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21886/26091?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21887",
+    "table_id": "26093",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21887/26093?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21888",
+    "table_id": "26094",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21888/26094?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21889",
+    "table_id": "26329",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i sector d'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21889/26329?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21890",
+    "table_id": "26096",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i distribució de la jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21890/26096?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21891",
+    "table_id": "26193",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21891/26193?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21892",
+    "table_id": "26194",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21892/26194?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21893",
+    "table_id": "26195",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21893/26195?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21894",
+    "table_id": "26330",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i sector d'activitat econòmica",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21894/26330?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21895",
+    "table_id": "26197",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i distribució de la jornada",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21895/26197?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21896",
+    "table_id": "26198",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21896/26198?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21897",
+    "table_id": "26199",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21897/26199?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21898",
+    "table_id": "26153",
+    "label": "Persona responsable de planificar les principals tasques de la llar. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Persona responsable de planificar les principals tasques de la llar. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21898/26153?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21900",
+    "table_id": "26311",
+    "label": "Participació i durada mitjana de les activitats socials. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21900/26311?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21901",
+    "table_id": "26312",
+    "label": "Participació i durada mitjana de les activitats socials. Per trimestre de realització de l'enquesta",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21901/26312?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21902",
+    "table_id": "26313",
+    "label": "Participació i durada mitjana de les activitats socials. Per grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21902/26313?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21903",
+    "table_id": "26314",
+    "label": "Participació i durada mitjana de les activitats socials. Per ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats socials. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21903/26314?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21904",
+    "table_id": "26205",
+    "label": "Participació i durada mitjana de les activitats esportives. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21904/26205?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21905",
+    "table_id": "26207",
+    "label": "Participació i durada mitjana de les activitats esportives. Per trimestre de realització de l'enquesta",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21905/26207?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21906",
+    "table_id": "26208",
+    "label": "Participació i durada mitjana de les activitats esportives. Per grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21906/26208?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21907",
+    "table_id": "26209",
+    "label": "Participació i durada mitjana de les activitats esportives. Per ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats esportives. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21907/26209?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21923",
+    "table_id": "26092",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21923/26092?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "21980",
+    "table_id": "26122",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/21980/26122?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22004",
+    "table_id": "26315",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22004/26315?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22005",
+    "table_id": "26316",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22005/26316?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22006",
+    "table_id": "26318",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22006/26318?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22007",
+    "table_id": "26319",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22007/26319?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22008",
+    "table_id": "26320",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22008/26320?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22009",
+    "table_id": "26321",
+    "label": "Distribució temporal de les activitats socials en un dia mitjà. Per grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats socials en un dia mitjà. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22009/26321?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22011",
+    "table_id": "26277",
+    "label": "Distribució temporal de les activitats esportives en un dia mitjà",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22011/26277?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22012",
+    "table_id": "26278",
+    "label": "Distribució temporal de les activitats esportives en un dia mitjà. Per dia de la setmana",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22012/26278?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22013",
+    "table_id": "26279",
+    "label": "Distribució temporal de les activitats esportives en un dia mitjà. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22013/26279?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22014",
+    "table_id": "26280",
+    "label": "Distribució temporal de les activitats esportives en un dia mitjà. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22014/26280?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22015",
+    "table_id": "26281",
+    "label": "Distribució temporal de les activitats esportives en un dia mitjà. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22015/26281?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22016",
+    "table_id": "26282",
+    "label": "Distribución temporal de las actividades deportivas en un día medio. Por grado de urbanización",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22016/26282?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22019",
+    "table_id": "26268",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau d'urbanització",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau d'urbanització"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22019/26268?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22020",
+    "table_id": "26269",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell d'estrès",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell d'estrès"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22020/26269?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22021",
+    "table_id": "26270",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau de limitació",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau de limitació"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22021/26270?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22024",
+    "table_id": "26342",
+    "label": "Població que va ajudar a altres llars en el mes anterior. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22024/26342?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22025",
+    "table_id": "26343",
+    "label": "Població que va ajudar a altres llars en el mes anterior. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22025/26343?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22027",
+    "table_id": "26349",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i àmbits territorials",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i àmbits territorials"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22027/26349?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22028",
+    "table_id": "26350",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per edat en grans grups i àmbit territorial",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per edat en grans grups i àmbit territorial"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22028/26350?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22029",
+    "table_id": "26351",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sexe i àmbit territorial",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sexe i àmbit territorial"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22029/26351?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22030",
+    "table_id": "26348",
+    "label": "Participació i durada mitjana de les activitats diàries. Per edat en grans grups i àmbit territorial",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per edat en grans grups i àmbit territorial"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22030/26348?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22031",
+    "table_id": "26352",
+    "label": "Durada mitjana de treball remunerat de la població ocupada. Per sexe i àmbits territorials",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana de treball remunerat de la població ocupada. Per sexe i àmbits territorials"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22031/26352?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22032",
+    "table_id": "26354",
+    "label": "Durada mitjana de treball remunerat de la població ocupada. Per edat en grans grups i àmbits territorials",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana de treball remunerat de la població ocupada. Per edat en grans grups i àmbits territorials"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22032/26354?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22033",
+    "table_id": "26356",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per àmbit Metropolità desagregat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per àmbit Metropolità desagregat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22033/26356?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "22036",
+    "table_id": "26355",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per ingressos mensuals a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/22036/26355?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "4870",
+    "table_id": "26323",
+    "label": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/4870/26323?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "4870",
+    "table_id": "5152",
+    "label": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/4870/5152?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "4870",
+    "table_id": "5158",
+    "label": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/4870/5158?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5116",
+    "table_id": "25431",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5116/25431?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5116",
+    "table_id": "5048",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5116/5048?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5117",
+    "table_id": "25432",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5117/25432?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5117",
+    "table_id": "5049",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5117/5049?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5119",
+    "table_id": "25520",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5119/25520?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5119",
+    "table_id": "5053",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5119/5053?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5122",
+    "table_id": "26064",
+    "label": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5122/26064?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5122",
+    "table_id": "5064",
+    "label": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5122/5064?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5123",
+    "table_id": "26053",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5123/26053?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5123",
+    "table_id": "5067",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5123/5067?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5126",
+    "table_id": "25548",
+    "label": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de contracte (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de contracte"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5126/25548?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5126",
+    "table_id": "5073",
+    "label": "Població ocupada per compte d'altri que està realitzant treball remunerat a l'inici de cada hora. Per tipus de contracte (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de contracte"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5126/5073?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5130",
+    "table_id": "26244",
+    "label": "Llars que han rebut ajuda en el mes anterior. Per composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5130/26244?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5130",
+    "table_id": "5081",
+    "label": "Llars que han rebut ajuda en el darrer mes. Per composició de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5130/5081?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5131",
+    "table_id": "5084",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5131/5084?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5132",
+    "table_id": "5085",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5132/5085?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5133",
+    "table_id": "5086",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat civil",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5133/5086?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5134",
+    "table_id": "5087",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat de salut",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5134/5087?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5135",
+    "table_id": "5088",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5135/5088?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5136",
+    "table_id": "5089",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5136/5089?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5136",
+    "table_id": "5130",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5136/5130?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5137",
+    "table_id": "5090",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5137/5090?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5137",
+    "table_id": "5131",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5137/5131?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5138",
+    "table_id": "5091",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5138/5091?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5138",
+    "table_id": "5132",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5138/5132?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5139",
+    "table_id": "5092",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5139/5092?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5139",
+    "table_id": "5133",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5139/5133?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5140",
+    "table_id": "5093",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i trimestre de realització de l'enquesta",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5140/5093?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5141",
+    "table_id": "5094",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5141/5094?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5142",
+    "table_id": "5095",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i composició de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5142/5095?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5143",
+    "table_id": "5096",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5143/5096?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5144",
+    "table_id": "5097",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5144/5097?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5146",
+    "table_id": "26250",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5146/26250?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5146",
+    "table_id": "5101",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5146/5101?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5147",
+    "table_id": "26251",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5147/26251?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5147",
+    "table_id": "5102",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5147/5102?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5148",
+    "table_id": "26252",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per estat de salut (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5148/26252?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5148",
+    "table_id": "5103",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per estat de salut (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5148/5103?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5149",
+    "table_id": "26253",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per la relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5149/26253?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5149",
+    "table_id": "5104",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5149/5104?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5150",
+    "table_id": "26344",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5150/26344?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5150",
+    "table_id": "5105",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5150/5105?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5151",
+    "table_id": "26263",
+    "label": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5151/26263?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5151",
+    "table_id": "5106",
+    "label": "Població ocupada per compte d'altri que ha ajudat altres llars en el darrer mes. Per tipus de jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5151/5106?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5152",
+    "table_id": "26264",
+    "label": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per distribució de la jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5152/26264?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5152",
+    "table_id": "5107",
+    "label": "Població ocupada per compte d'altri que ha ajudat altres llars en el darrer mes. Per distribució de la jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5152/5107?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5153",
+    "table_id": "26262",
+    "label": "Població ocupada que va ajudar altres llars en el mes anterior. Per situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que va ajudar altres llars en el mes anterior. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5153/26262?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5153",
+    "table_id": "5108",
+    "label": "Població ocupada que ha ajudat altres llars en el darrer mes. Per situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que va ajudar altres llars en el mes anterior. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5153/5108?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5154",
+    "table_id": "26254",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per trimestre de realització de l'enquesta (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5154/26254?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5154",
+    "table_id": "5109",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per trimestre de realització de l'enquesta (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5154/5109?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5155",
+    "table_id": "26255",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per grandària de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5155/26255?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5155",
+    "table_id": "5110",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per grandària de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5155/5110?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5156",
+    "table_id": "26256",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5156/26256?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5156",
+    "table_id": "5111",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per composició de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5156/5111?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5157",
+    "table_id": "26267",
+    "label": "Població que va ajudar a altres llars en el mes anterior. Per càrregues familiars a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5157/26267?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5157",
+    "table_id": "5112",
+    "label": "Població que ha ajudat a altres llars en el darrer mes. Per càrregues familiars a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar a altres llars en el mes anterior. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5157/5112?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5158",
+    "table_id": "26257",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per ingressos mensuals de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5158/26257?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5158",
+    "table_id": "5113",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per ingressos mensuals de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5158/5113?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5159",
+    "table_id": "25920",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5159/25920?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5159",
+    "table_id": "5115",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5159/5115?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5160",
+    "table_id": "26341",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5160/26341?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5160",
+    "table_id": "5123",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5160/5123?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5161",
+    "table_id": "25924",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5161/25924?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5161",
+    "table_id": "5124",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5161/5124?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5162",
+    "table_id": "26234",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5162/26234?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5162",
+    "table_id": "5125",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5162/5125?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5163",
+    "table_id": "25928",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5163/25928?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5163",
+    "table_id": "5126",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5163/5126?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5164",
+    "table_id": "25923",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5164/25923?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5164",
+    "table_id": "5127",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5164/5127?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5165",
+    "table_id": "5118",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5165/5118?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5166",
+    "table_id": "26240",
+    "label": "Participació en activitats de voluntariat en el darrer mes. Per nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5166/26240?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5166",
+    "table_id": "5119",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5166/5119?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5167",
+    "table_id": "25922",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5167/25922?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5167",
+    "table_id": "5120",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5167/5120?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5168",
+    "table_id": "25925",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5168/25925?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5168",
+    "table_id": "5121",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5168/5121?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5169",
+    "table_id": "25926",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5169/25926?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5169",
+    "table_id": "5122",
+    "label": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5169/5122?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5193",
+    "table_id": "25502",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5193/25502?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5193",
+    "table_id": "25522",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5193/25522?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5219",
+    "table_id": "25518",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5219/25518?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "5219",
+    "table_id": "5194",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/5219/5194?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6288",
+    "table_id": "25566",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6288/25566?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6288",
+    "table_id": "6278",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6288/6278?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6289",
+    "table_id": "25571",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6289/25571?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6289",
+    "table_id": "6279",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6289/6279?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6290",
+    "table_id": "25567",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6290/25567?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6290",
+    "table_id": "6280",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6290/6280?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6291",
+    "table_id": "25568",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6291/25568?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6291",
+    "table_id": "6281",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6291/6281?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6292",
+    "table_id": "25572",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6292/25572?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6292",
+    "table_id": "6282",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6292/6282?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6293",
+    "table_id": "25574",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6293/25574?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6293",
+    "table_id": "6283",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i tipus de llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6293/6283?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6294",
+    "table_id": "26172",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i fills menors a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6294/26172?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6294",
+    "table_id": "6289",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat. Per sexe i fills menors a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6294/6289?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6295",
+    "table_id": "25570",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i convivència (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6295/25570?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6295",
+    "table_id": "6285",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat per sexe i convivència. Població de 18 anys o més (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6295/6285?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6296",
+    "table_id": "25569",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6296/25569?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6296",
+    "table_id": "6286",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat per sexe i tipus de jornada laboral. Població ocupada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6296/6286?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6297",
+    "table_id": "26177",
+    "label": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6297/26177?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6297",
+    "table_id": "6287",
+    "label": "Temps mitjà diari de treball remunerat i no remunerat per sexe i situació professional. Població ocupada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6297/6287?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6298",
+    "table_id": "25575",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6298/25575?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6298",
+    "table_id": "25584",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6298/25584?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6299",
+    "table_id": "25576",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6299/25576?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6299",
+    "table_id": "26179",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6299/26179?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6300",
+    "table_id": "25577",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6300/25577?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6300",
+    "table_id": "25585",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6300/25585?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6301",
+    "table_id": "25578",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6301/25578?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6301",
+    "table_id": "25586",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6301/25586?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6302",
+    "table_id": "25579",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6302/25579?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6302",
+    "table_id": "26181",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6302/26181?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6303",
+    "table_id": "25580",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6303/25580?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6303",
+    "table_id": "26183",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6303/26183?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6304",
+    "table_id": "26186",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6304/26186?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6304",
+    "table_id": "6295",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6304/6295?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6305",
+    "table_id": "25581",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i convivència (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6305/25581?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6305",
+    "table_id": "25587",
+    "label": "Participació i durada mitjana de les activitats de treball remunerat i no remunerat. Per sexe i convivència (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6305/25587?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6306",
+    "table_id": "25582",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada laboral (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6306/25582?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6306",
+    "table_id": "26190",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6306/26190?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6307",
+    "table_id": "25583",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6307/25583?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6307",
+    "table_id": "26340",
+    "label": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6307/26340?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6308",
+    "table_id": "26204",
+    "label": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6308/26204?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6308",
+    "table_id": "6299",
+    "label": "Població que realitza treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6308/6299?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6309",
+    "table_id": "26206",
+    "label": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6309/26206?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6309",
+    "table_id": "6300",
+    "label": "Població que realitza treball remunerat i no remunerat a l'inici de cada hora. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6309/6300?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6310",
+    "table_id": "25932",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6310/25932?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6310",
+    "table_id": "6301",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6310/6301?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6311",
+    "table_id": "25933",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6311/25933?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6311",
+    "table_id": "6302",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6311/6302?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6312",
+    "table_id": "25934",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6312/25934?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6312",
+    "table_id": "6303",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6312/6303?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6313",
+    "table_id": "6304",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6313/6304?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6314",
+    "table_id": "25935",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6314/25935?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6314",
+    "table_id": "6305",
+    "label": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6314/6305?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6315",
+    "table_id": "25936",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6315/25936?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6315",
+    "table_id": "6306",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6315/6306?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6316",
+    "table_id": "25937",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6316/25937?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6316",
+    "table_id": "6307",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6316/6307?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6317",
+    "table_id": "25938",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6317/25938?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6317",
+    "table_id": "6308",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6317/6308?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6318",
+    "table_id": "6309",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6318/6309?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6319",
+    "table_id": "25939",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6319/25939?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6319",
+    "table_id": "6310",
+    "label": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6319/6310?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6320",
+    "table_id": "25951",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6320/25951?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6320",
+    "table_id": "6311",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6320/6311?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6321",
+    "table_id": "25944",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6321/25944?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6321",
+    "table_id": "6312",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6321/6312?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6322",
+    "table_id": "25945",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6322/25945?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6322",
+    "table_id": "6313",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6322/6313?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6323",
+    "table_id": "25947",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6323/25947?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6323",
+    "table_id": "6314",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6323/6314?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6324",
+    "table_id": "25946",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6324/25946?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6324",
+    "table_id": "6315",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6324/6315?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6325",
+    "table_id": "25952",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6325/25952?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6325",
+    "table_id": "6316",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6325/6316?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6326",
+    "table_id": "25953",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6326/25953?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6326",
+    "table_id": "6317",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6326/6317?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6327",
+    "table_id": "25948",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6327/25948?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6327",
+    "table_id": "6318",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6327/6318?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6328",
+    "table_id": "25949",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6328/25949?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6328",
+    "table_id": "6319",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6328/6319?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6329",
+    "table_id": "25950",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6329/25950?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6329",
+    "table_id": "6320",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6329/6320?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6330",
+    "table_id": "25954",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6330/25954?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6330",
+    "table_id": "6321",
+    "label": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6330/6321?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6331",
+    "table_id": "25960",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6331/25960?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6331",
+    "table_id": "6322",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6331/6322?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6332",
+    "table_id": "25961",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6332/25961?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6332",
+    "table_id": "6323",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat, segons sexe i dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6332/6323?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6333",
+    "table_id": "25962",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6333/25962?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6333",
+    "table_id": "6324",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i grup d'edat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6333/6324?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6334",
+    "table_id": "25963",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6334/25963?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6334",
+    "table_id": "6325",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i nivell d'estudis (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6334/6325?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6335",
+    "table_id": "25964",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6335/25964?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6335",
+    "table_id": "6326",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6335/6326?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6336",
+    "table_id": "25965",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6336/25965?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6336",
+    "table_id": "6327",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i relació amb l'activitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6336/6327?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6337",
+    "table_id": "25966",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6337/25966?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6337",
+    "table_id": "6328",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i tipus de llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6337/6328?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6338",
+    "table_id": "25967",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i fills menors a la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6338/25967?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6338",
+    "table_id": "6329",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat, segons sexe i fills menors a la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i fills menors a la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6338/6329?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6339",
+    "table_id": "25968",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació de convivència (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació de convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6339/25968?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6339",
+    "table_id": "6330",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i convivència. Població de 18 anys i més (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació de convivència"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6339/6330?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6340",
+    "table_id": "25969",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6340/25969?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6340",
+    "table_id": "6331",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i jornada. Població ocupada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6340/6331?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6341",
+    "table_id": "26339",
+    "label": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6341/26339?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6341",
+    "table_id": "6332",
+    "label": "Participació i durada mitjana de les activitats de la llar família per tipus i quotidianitat segons sexe i situació professional. Població ocupada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6341/6332?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6342",
+    "table_id": "25956",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6342/25956?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6342",
+    "table_id": "6333",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6342/6333?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6343",
+    "table_id": "25959",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6343/25959?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6343",
+    "table_id": "6334",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6343/6334?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6344",
+    "table_id": "25957",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6344/25957?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6344",
+    "table_id": "6335",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6344/6335?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6345",
+    "table_id": "25958",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6345/25958?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6345",
+    "table_id": "6336",
+    "label": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6345/6336?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6346",
+    "table_id": "26097",
+    "label": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6346/26097?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "6346",
+    "table_id": "6337",
+    "label": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/6346/6337?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "933",
+    "table_id": "25429",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/933/25429?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "933",
+    "table_id": "4760",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/933/4760?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "933",
+    "table_id": "889",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/933/889?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "934",
+    "table_id": "25430",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/934/25430?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "934",
+    "table_id": "4913",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/934/4913?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "934",
+    "table_id": "890",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/934/890?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "935",
+    "table_id": "25443",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/935/25443?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "935",
+    "table_id": "4737",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/935/4737?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "935",
+    "table_id": "891",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/935/891?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "936",
+    "table_id": "4914",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/936/4914?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "936",
+    "table_id": "892",
+    "label": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/936/892?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "938",
+    "table_id": "25434",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/938/25434?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "938",
+    "table_id": "4738",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/938/4738?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "938",
+    "table_id": "893",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/938/893?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "939",
+    "table_id": "25435",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/939/25435?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "939",
+    "table_id": "4758",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/939/4758?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "939",
+    "table_id": "4759",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/939/4759?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "940",
+    "table_id": "25436",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/940/25436?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "940",
+    "table_id": "4915",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/940/4915?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "940",
+    "table_id": "895",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/940/895?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "941",
+    "table_id": "25437",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/941/25437?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "941",
+    "table_id": "4740",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/941/4740?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "941",
+    "table_id": "896",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/941/896?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "942",
+    "table_id": "25438",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/942/25438?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "942",
+    "table_id": "4916",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/942/4916?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "942",
+    "table_id": "897",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/942/897?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "943",
+    "table_id": "25439",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/943/25439?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "943",
+    "table_id": "4917",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/943/4917?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "943",
+    "table_id": "898",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/943/898?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "944",
+    "table_id": "25446",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per tipus de llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/944/25446?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "944",
+    "table_id": "4741",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per tipus de llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/944/4741?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "944",
+    "table_id": "899",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per tipus de llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/944/899?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "945",
+    "table_id": "25440",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/945/25440?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "945",
+    "table_id": "5050",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/945/5050?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "945",
+    "table_id": "900",
+    "label": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/945/900?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "948",
+    "table_id": "25516",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/948/25516?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "948",
+    "table_id": "4761",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/948/4761?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "948",
+    "table_id": "901",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/948/901?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "949",
+    "table_id": "25517",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/949/25517?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "949",
+    "table_id": "4919",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/949/4919?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "949",
+    "table_id": "902",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per sexe (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/949/902?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "950",
+    "table_id": "25515",
+    "label": "Participació i durada mitjana de les activitats diàries detallades (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/950/25515?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "950",
+    "table_id": "4742",
+    "label": "Participació i durada mitjana de les activitats diàries detallades (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/950/4742?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "950",
+    "table_id": "903",
+    "label": "Participació i durada mitjana de les activitats diàries detallades (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/950/903?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "951",
+    "table_id": "5052",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/951/5052?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "951",
+    "table_id": "904",
+    "label": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/951/904?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "960",
+    "table_id": "25468",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups (2003–2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/960/25468?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "960",
+    "table_id": "25521",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/960/25521?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "961",
+    "table_id": "25523",
+    "label": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/961/25523?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "961",
+    "table_id": "4744",
+    "label": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/961/4744?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "961",
+    "table_id": "906",
+    "label": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/961/906?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "962",
+    "table_id": "25524",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat civil (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/962/25524?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "962",
+    "table_id": "5054",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat civil (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/962/5054?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "962",
+    "table_id": "907",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat civil (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/962/907?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "963",
+    "table_id": "25525",
+    "label": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/963/25525?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "963",
+    "table_id": "4756",
+    "label": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/963/4756?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "963",
+    "table_id": "4757",
+    "label": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/963/4757?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "964",
+    "table_id": "25526",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat de salut (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/964/25526?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "964",
+    "table_id": "5055",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat de salut (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/964/5055?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "964",
+    "table_id": "909",
+    "label": "Participació i durada mitjana de les activitats diàries. Per estat de salut (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/964/909?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "965",
+    "table_id": "910",
+    "label": "Participació i durada mitjana de les activitats diàries. Per nacionalitat",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per nacionalitat"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/965/910?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "966",
+    "table_id": "25527",
+    "label": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/966/25527?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "966",
+    "table_id": "5056",
+    "label": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada dels treballadors per compte d'altri (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/966/5056?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "966",
+    "table_id": "911",
+    "label": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada dels treballadors per compte d'altri (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/966/911?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "967",
+    "table_id": "25528",
+    "label": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/967/25528?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "967",
+    "table_id": "5057",
+    "label": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada dels treballadors per compte d'altri (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/967/5057?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "967",
+    "table_id": "912",
+    "label": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada dels treballadors per compte d'altri (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/967/912?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "968",
+    "table_id": "26336",
+    "label": "Participació i durada mitjana de les activitats diàries. Per situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/968/26336?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "968",
+    "table_id": "5059",
+    "label": "Participació i durada mitjana de les activitats diàries. Per situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/968/5059?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "968",
+    "table_id": "913",
+    "label": "Participació i durada mitjana de les activitats diàries. Per situació professional (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/968/913?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "969",
+    "table_id": "26326",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/969/26326?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "969",
+    "table_id": "5060",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sectors d'activitat econòmica de la població ocupada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/969/5060?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "969",
+    "table_id": "914",
+    "label": "Participació i durada mitjana de les activitats diàries. Per sectors d'activitat econòmica de la població ocupada (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/969/914?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "970",
+    "table_id": "26061",
+    "label": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/970/26061?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "970",
+    "table_id": "5061",
+    "label": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/970/5061?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "970",
+    "table_id": "915",
+    "label": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/970/915?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "971",
+    "table_id": "25531",
+    "label": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/971/25531?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "971",
+    "table_id": "5062",
+    "label": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/971/5062?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "971",
+    "table_id": "916",
+    "label": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/971/916?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "972",
+    "table_id": "25535",
+    "label": "Participació i durada mitjana de les activitats diàries. Per composició de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/972/25535?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "972",
+    "table_id": "4747",
+    "label": "Participació i durada mitjana de les activitats diàries. Per composició de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/972/4747?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "972",
+    "table_id": "917",
+    "label": "Participació i durada mitjana de les activitats diàries. Per composició de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/972/917?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "973",
+    "table_id": "25532",
+    "label": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/973/25532?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "973",
+    "table_id": "5063",
+    "label": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/973/5063?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "973",
+    "table_id": "918",
+    "label": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/973/918?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "975",
+    "table_id": "920",
+    "label": "Participació i durada mitjana de les activitats diàries. Per règim de tinença de l'habitatge",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Participació i durada mitjana de les activitats diàries. Per règim de tinença de l'habitatge"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/975/920?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "977",
+    "table_id": "26050",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/977/26050?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "977",
+    "table_id": "5148",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/977/5148?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "977",
+    "table_id": "5154",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/977/5154?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "978",
+    "table_id": "26049",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/978/26049?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "978",
+    "table_id": "5128",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/978/5128?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "978",
+    "table_id": "5159",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/978/5159?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "979",
+    "table_id": "26051",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/979/26051?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "979",
+    "table_id": "5150",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/979/5150?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "979",
+    "table_id": "5155",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/979/5155?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "980",
+    "table_id": "26317",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/980/26317?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "980",
+    "table_id": "5151",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/980/5151?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "980",
+    "table_id": "5156",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/980/5156?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "981",
+    "table_id": "26322",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/981/26322?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "981",
+    "table_id": "5153",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/981/5153?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "981",
+    "table_id": "5157",
+    "label": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/981/5157?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "983",
+    "table_id": "25544",
+    "label": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/983/25544?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "983",
+    "table_id": "5068",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/983/5068?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "983",
+    "table_id": "926",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per sexe (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/983/926?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "984",
+    "table_id": "25545",
+    "label": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/984/25545?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "984",
+    "table_id": "5069",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/984/5069?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "984",
+    "table_id": "927",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per edat en grans grups (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/984/927?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "985",
+    "table_id": "25546",
+    "label": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/985/25546?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "985",
+    "table_id": "5070",
+    "label": "Població ocupada per compte d'altri que està realitzant treball remunerat a l'inici de cada hora. Per tipus de jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/985/5070?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "985",
+    "table_id": "928",
+    "label": "Població ocupada per compte d'altri que està realitzant treball remunerat a l'inici de cada hora. Per tipus de jornada (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/985/928?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "986",
+    "table_id": "25547",
+    "label": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/986/25547?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "986",
+    "table_id": "5071",
+    "label": "Població ocupada per compte d'altri que està realitzant treball remunerat a l'inici de cada hora. Per distribució de la jornada (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/986/5071?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "986",
+    "table_id": "929",
+    "label": "Població ocupada per compte d'altri que està realitzant treball remunerat a l'inici de cada hora. Per distribució de la jornada (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/986/929?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "987",
+    "table_id": "26338",
+    "label": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/987/26338?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "987",
+    "table_id": "5074",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per situació professional (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/987/5074?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "987",
+    "table_id": "930",
+    "label": "Població ocupada que està realitzant treball remunerat l'inici de cada hora. Per situació professional (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/987/930?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "988",
+    "table_id": "26328",
+    "label": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/988/26328?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "988",
+    "table_id": "5075",
+    "label": "Població ocupada que està realitzant treball remunerat a l'inici de cada hora. Per sector d'activitat econòmica (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/988/5075?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "988",
+    "table_id": "931",
+    "label": "Població ocupada que està realitzant treball remunerat l'inici de cada hora. Per sector d'activitat econòmica (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/988/931?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "989",
+    "table_id": "5083",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/989/5083?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "989",
+    "table_id": "5129",
+    "label": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/989/5129?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "993",
+    "table_id": "26242",
+    "label": "Llars que han rebut ajuda en el mes anterior (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/993/26242?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "993",
+    "table_id": "5078",
+    "label": "Llars que han rebut ajuda en el darrer mes (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/993/5078?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "993",
+    "table_id": "934",
+    "label": "Llars que han rebut ajuda en el darrer mes (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/993/934?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "994",
+    "table_id": "26243",
+    "label": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/994/26243?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "994",
+    "table_id": "5080",
+    "label": "Llars que han rebut ajuda en el darrer mes. Per grandària de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/994/5080?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "994",
+    "table_id": "935",
+    "label": "Llars que han rebut ajuda en el darrer mes. Per grandària de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/994/935?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "995",
+    "table_id": "26245",
+    "label": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/995/26245?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "995",
+    "table_id": "5082",
+    "label": "Llars que han rebut ajuda en el darrer mes. Per ingressos mensuals de la llar (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/995/5082?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "995",
+    "table_id": "936",
+    "label": "Llars que han rebut ajuda en el darrer mes. Per ingressos mensuals de la llar (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/995/936?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "997",
+    "table_id": "26246",
+    "label": "Població que va ajudar altres llars en el mes anterior (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/997/26246?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "997",
+    "table_id": "5177",
+    "label": "Població que ha ajudat altres llars en el darrer mes (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/997/5177?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "997",
+    "table_id": "937",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per àmbit territorial (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/997/937?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "998",
+    "table_id": "26247",
+    "label": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups (2024)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/998/26247?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "998",
+    "table_id": "5099",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per sexe i edat en grans grups (2011)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/998/5099?lang=ca"
+  },
+  {
+    "statistics_id": "eut",
+    "node_id": "998",
+    "table_id": "938",
+    "label": "Població que ha ajudat altres llars en el darrer mes. Per sexe i edat en grans grups (2003)",
+    "ancestor_labels": {
+      "statistic": "Enquesta de l'ús del temps",
+      "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/eut/998/938?lang=ca"
+  }
+];
+
+export default entries;

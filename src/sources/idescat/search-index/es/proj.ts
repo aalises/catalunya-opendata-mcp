@@ -1,0 +1,491 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "proj",
+    "node_id": "14549",
+    "table_id": "15404",
+    "label": "Población proyectada a 1 de enero por escenario (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por escenario (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14549/15404?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14555",
+    "table_id": "15423",
+    "label": "Tasa de dependencia de las personas mayores proyectada por escenario (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Tasa de dependencia de las personas mayores proyectada por escenario (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14555/15423?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14556",
+    "table_id": "15405",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario bajo (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario bajo (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14556/15405?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14557",
+    "table_id": "15409",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario medio (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario medio (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14557/15409?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14558",
+    "table_id": "15413",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario alto (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario alto (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14558/15413?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14559",
+    "table_id": "15406",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario bajo (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario bajo (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14559/15406?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14560",
+    "table_id": "15410",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario medio (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario medio (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14560/15410?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14561",
+    "table_id": "15414",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario alto (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario alto (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14561/15414?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14562",
+    "table_id": "15407",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario bajo (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario bajo (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14562/15407?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14563",
+    "table_id": "15411",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario medio (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario medio (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14563/15411?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14564",
+    "table_id": "15415",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario alto (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario alto (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14564/15415?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14565",
+    "table_id": "15408",
+    "label": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario bajo (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario bajo (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14565/15408?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14566",
+    "table_id": "15412",
+    "label": "Población proyectada a 1 de enero por sexo y edad grandes grupos de edad. Escenario medio (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario medio (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14566/15412?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14567",
+    "table_id": "15416",
+    "label": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario alto (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario alto (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14567/15416?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14568",
+    "table_id": "15417",
+    "label": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario bajo",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario bajo"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14568/15417?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14569",
+    "table_id": "15418",
+    "label": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario medio",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario medio"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14569/15418?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14570",
+    "table_id": "15419",
+    "label": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario alto",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico proyectado (base 2021). Escenario alto"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14570/15419?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14571",
+    "table_id": "15420",
+    "label": "Fecundidad proyectada por escenario (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Fecundidad proyectada por escenario (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14571/15420?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14572",
+    "table_id": "15421",
+    "label": "Esperanza de vida proyectada por escenario (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Esperanza de vida proyectada por escenario (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14572/15421?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "14573",
+    "table_id": "15422",
+    "label": "Migración proyectada por escenario (base 2021)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Migración proyectada por escenario (base 2021)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/14573/15422?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20944",
+    "table_id": "24796",
+    "label": "Población proyectada por escenario (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada por escenario (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20944/24796?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20950",
+    "table_id": "24816",
+    "label": "Tasa de dependencia de las personas mayores proyectada por escenario (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Tasa de dependencia de las personas mayores proyectada por escenario (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20950/24816?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20951",
+    "table_id": "24797",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20951/24797?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20952",
+    "table_id": "24831",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20952/24831?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20953",
+    "table_id": "24798",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20953/24798?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20954",
+    "table_id": "24799",
+    "label": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20954/24799?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20955",
+    "table_id": "24800",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20955/24800?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20956",
+    "table_id": "24829",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20956/24829?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20957",
+    "table_id": "24801",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20957/24801?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20958",
+    "table_id": "24802",
+    "label": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20958/24802?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20959",
+    "table_id": "24803",
+    "label": "Población proyectada a 1 de enero por sexo. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20959/24803?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20960",
+    "table_id": "24830",
+    "label": "Población proyectada a 1 de enero por sexo y edad. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20960/24830?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20961",
+    "table_id": "24804",
+    "label": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y edad quinquenal. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20961/24804?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20962",
+    "table_id": "24805",
+    "label": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada a 1 de enero por sexo y grandes grupos de edad. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20962/24805?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20963",
+    "table_id": "24810",
+    "label": "Componentes del crecimiento demográfico anual proyectado. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico anual proyectado. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20963/24810?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20964",
+    "table_id": "24811",
+    "label": "Componentes del crecimiento demográfico anual proyectado. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico anual proyectado. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20964/24811?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20965",
+    "table_id": "24812",
+    "label": "Componentes del crecimiento demográfico anual proyectado. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico anual proyectado. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20965/24812?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20966",
+    "table_id": "24813",
+    "label": "Indicador coyuntural de fecundidad proyectado. Por escenario (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Indicador coyuntural de fecundidad proyectado. Por escenario (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20966/24813?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20967",
+    "table_id": "24814",
+    "label": "Esperanza de vida proyectada por sexo y escenario (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Esperanza de vida proyectada por sexo y escenario (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20967/24814?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "20968",
+    "table_id": "24832",
+    "label": "Migración proyectada por escenario (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Migración proyectada por escenario (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/20968/24832?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "21504",
+    "table_id": "25366",
+    "label": "Componentes del crecimiento demográfico quinquenal proyectado. Escenario medio (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico quinquenal proyectado. Escenario medio (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/21504/25366?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "21505",
+    "table_id": "25367",
+    "label": "Componentes del crecimiento demográfico quinquenal proyectado. Escenario alto (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico quinquenal proyectado. Escenario alto (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/21505/25367?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "21506",
+    "table_id": "25368",
+    "label": "Componentes del crecimiento demográfico anual proyectado. Escenario bajo (base 2024)",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Componentes del crecimiento demográfico anual proyectado. Escenario bajo (base 2024)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/21506/25368?lang=es"
+  },
+  {
+    "statistics_id": "proj",
+    "node_id": "21507",
+    "table_id": "25369",
+    "label": "Población proyectada. Por escenario y grado de urbanización",
+    "ancestor_labels": {
+      "statistic": "Proyecciones de población",
+      "node": "Población proyectada. Por escenario y grado de urbanización"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/proj/21507/25369?lang=es"
+  }
+];
+
+export default entries;

@@ -1,0 +1,2537 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "afi",
+    "node_id": "10599",
+    "table_id": "11105",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10599/11105?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10600",
+    "table_id": "11106",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10600/11106?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10601",
+    "table_id": "11107",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10601/11107?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10602",
+    "table_id": "11111",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i règim de cotització (Règim general i RETA). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i règim de cotització (Règim general i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10602/11111?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10602",
+    "table_id": "26444",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i règim de cotització (Règim general i RETA). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i règim de cotització (Règim general i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10602/26444?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10776",
+    "table_id": "11355",
+    "label": "Grau de temporalitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Grau de temporalitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10776/11355?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10777",
+    "table_id": "11356",
+    "label": "Grau de parcialitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Grau de parcialitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10777/11356?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10779",
+    "table_id": "11348",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10779/11348?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10780",
+    "table_id": "11349",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10780/11349?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10781",
+    "table_id": "11350",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10781/11350?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10782",
+    "table_id": "11351",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10782/11351?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10783",
+    "table_id": "11353",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i tipus de contracte. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10783/11353?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10783",
+    "table_id": "26445",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i tipus de contracte. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10783/26445?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10784",
+    "table_id": "11354",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i tipus de jornada. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10784/11354?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10786",
+    "table_id": "11357",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10786/11357?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10787",
+    "table_id": "11358",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10787/11358?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10788",
+    "table_id": "11359",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10788/11359?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10789",
+    "table_id": "11360",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10789/11360?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10790",
+    "table_id": "11361",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i tipus de jornada. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10790/11361?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10790",
+    "table_id": "26446",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i tipus de jornada. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10790/26446?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "10796",
+    "table_id": "11375",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/10796/11375?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13266",
+    "table_id": "14121",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i sexe. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13266/14121?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13266",
+    "table_id": "26491",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i sexe. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13266/26491?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13268",
+    "table_id": "14122",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13268/14122?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13268",
+    "table_id": "26492",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13268/26492?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13269",
+    "table_id": "14123",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13269/14123?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13269",
+    "table_id": "26493",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13269/26493?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13270",
+    "table_id": "14124",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i tipus de relació laboral. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13270/14124?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13270",
+    "table_id": "26494",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i tipus de relació laboral. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13270/26494?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13271",
+    "table_id": "14126",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i règim de cotització. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13271/14126?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13271",
+    "table_id": "26496",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i règim de cotització. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13271/26496?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13272",
+    "table_id": "14125",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13272/14125?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13272",
+    "table_id": "26495",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13272/26495?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13273",
+    "table_id": "14127",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i tipus de contracte. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13273/14127?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13273",
+    "table_id": "26497",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i tipus de contracte. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13273/26497?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13274",
+    "table_id": "14128",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i tipus de jornada. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13274/14128?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13274",
+    "table_id": "26498",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i tipus de jornada. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13274/26498?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13338",
+    "table_id": "19722",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009). A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13338/19722?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13338",
+    "table_id": "26468",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13338/26468?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13339",
+    "table_id": "19723",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i sexe. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13339/19723?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13339",
+    "table_id": "26469",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i sexe. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13339/26469?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13340",
+    "table_id": "19724",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13340/19724?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13340",
+    "table_id": "26470",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13340/26470?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13341",
+    "table_id": "19725",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13341/19725?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13341",
+    "table_id": "26471",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13341/26471?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13342",
+    "table_id": "19726",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i tipus de relació laboral. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13342/19726?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13342",
+    "table_id": "26472",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i tipus de relació laboral. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13342/26472?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13343",
+    "table_id": "19727",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i règim de cotització (Règim General i RETA). A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13343/19727?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13343",
+    "table_id": "26473",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i règim de cotització (Règim General i RETA). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13343/26473?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13344",
+    "table_id": "19728",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i secció d'activitat econòmica (CCAE-2009). A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13344/19728?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13344",
+    "table_id": "26474",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i secció d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13344/26474?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13345",
+    "table_id": "19729",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i tipus de jornada. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13345/19729?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "13345",
+    "table_id": "26475",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i tipus de jornada. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/13345/26475?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16282",
+    "table_id": "19640",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16282/19640?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16337",
+    "table_id": "19698",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16337/19698?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16339",
+    "table_id": "19699",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16339/19699?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16344",
+    "table_id": "19777",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16344/19777?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16345",
+    "table_id": "19778",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16345/19778?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16346",
+    "table_id": "19779",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16346/19779?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16347",
+    "table_id": "19780",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i grup de cotització. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16347/19780?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16347",
+    "table_id": "26447",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i grup de cotització. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16347/26447?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16348",
+    "table_id": "19781",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i grup de cotització. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16348/19781?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16348",
+    "table_id": "26476",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i grup de cotització. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16348/26476?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16349",
+    "table_id": "19782",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i grup de cotització. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16349/19782?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16349",
+    "table_id": "26499",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i grup de cotització. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grup de cotització. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16349/26499?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16350",
+    "table_id": "19783",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de contracte. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de contracte. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16350/19783?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "16351",
+    "table_id": "19784",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de jornada. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de jornada. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/16351/19784?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "20646",
+    "table_id": "25258",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/20646/25258?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "20647",
+    "table_id": "25237",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/20647/25237?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21358",
+    "table_id": "25238",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21358/25238?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21359",
+    "table_id": "25259",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21359/25259?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21360",
+    "table_id": "25260",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21360/25260?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21361",
+    "table_id": "25261",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21361/25261?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21380",
+    "table_id": "25280",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21380/25280?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21381",
+    "table_id": "25281",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21381/25281?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21382",
+    "table_id": "25282",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21382/25282?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21384",
+    "table_id": "25284",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21384/25284?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21385",
+    "table_id": "25285",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21385/25285?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21392",
+    "table_id": "25291",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21392/25291?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21393",
+    "table_id": "25292",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21393/25292?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21394",
+    "table_id": "25293",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21394/25293?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21395",
+    "table_id": "25294",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21395/25294?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21395",
+    "table_id": "26448",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i sexe. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21395/26448?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21396",
+    "table_id": "25295",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21396/25295?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21396",
+    "table_id": "26477",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i sexe. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21396/26477?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21397",
+    "table_id": "25296",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21397/25296?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21397",
+    "table_id": "26500",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe (CCAE-2025). A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21397/26500?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21398",
+    "table_id": "25297",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21398/25297?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21400",
+    "table_id": "25299",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21400/25299?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21401",
+    "table_id": "25300",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21401/25300?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21402",
+    "table_id": "25301",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21402/25301?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21402",
+    "table_id": "26449",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21402/26449?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21403",
+    "table_id": "25302",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21403/25302?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21403",
+    "table_id": "26478",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21403/26478?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21404",
+    "table_id": "25303",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21404/25303?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21404",
+    "table_id": "26501",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21404/26501?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21405",
+    "table_id": "25304",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21405/25304?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21407",
+    "table_id": "25306",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21407/25306?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21408",
+    "table_id": "25307",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21408/25307?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21408",
+    "table_id": "26450",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21408/26450?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21409",
+    "table_id": "25308",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21409/25308?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21409",
+    "table_id": "26479",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21409/26479?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21410",
+    "table_id": "25309",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21410/25309?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21410",
+    "table_id": "26502",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21410/26502?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21411",
+    "table_id": "25310",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21411/25310?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21414",
+    "table_id": "25314",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i àrea geogràfica de la nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21414/25314?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21415",
+    "table_id": "25315",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de contracte. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de contracte. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21415/25315?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21416",
+    "table_id": "25316",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de jornada. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de jornada. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21416/25316?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21417",
+    "table_id": "25317",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grup de cotització. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grup de cotització. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21417/25317?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21420",
+    "table_id": "25318",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i naturalesa jurídica de l'empresa. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21420/25318?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21420",
+    "table_id": "26451",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i naturalesa jurídica de l'empresa. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21420/26451?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21424",
+    "table_id": "25320",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i naturalesa jurídica de l'empresa. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21424/25320?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21424",
+    "table_id": "26480",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i naturalesa jurídica de l'empresa. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21424/26480?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21427",
+    "table_id": "25322",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i forma jurídica de l'empresa. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21427/25322?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21427",
+    "table_id": "26503",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i forma jurídica de l'empresa. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21427/26503?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21439",
+    "table_id": "25334",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21439/25334?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21440",
+    "table_id": "25325",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21440/25325?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21441",
+    "table_id": "25326",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21441/25326?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21442",
+    "table_id": "25327",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21442/25327?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21443",
+    "table_id": "25329",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21443/25329?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21443",
+    "table_id": "26452",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i sexe. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21443/26452?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21444",
+    "table_id": "25330",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21444/25330?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21444",
+    "table_id": "26481",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i sexe. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21444/26481?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21445",
+    "table_id": "25331",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i sexe. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21445/25331?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21445",
+    "table_id": "26504",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i sexe. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21445/26504?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21446",
+    "table_id": "25332",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21446/25332?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21447",
+    "table_id": "25333",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21447/25333?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21449",
+    "table_id": "25335",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21449/25335?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21450",
+    "table_id": "25336",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21450/25336?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21450",
+    "table_id": "26453",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21450/26453?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21451",
+    "table_id": "25337",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21451/25337?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21451",
+    "table_id": "26482",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21451/26482?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21452",
+    "table_id": "25338",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21452/25338?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21452",
+    "table_id": "26505",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21452/26505?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21453",
+    "table_id": "25339",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21453/25339?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21454",
+    "table_id": "25340",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21454/25340?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21456",
+    "table_id": "25341",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21456/25341?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21456",
+    "table_id": "26454",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21456/26454?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21457",
+    "table_id": "25342",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21457/25342?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21457",
+    "table_id": "26483",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21457/26483?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21458",
+    "table_id": "25343",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia de mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21458/25343?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21458",
+    "table_id": "26506",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia de mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21458/26506?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21459",
+    "table_id": "25344",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21459/25344?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21460",
+    "table_id": "25345",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21460/25345?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21461",
+    "table_id": "25346",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i àrea geogràfica de la nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21461/25346?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21462",
+    "table_id": "25347",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i àrea geogràfica de la nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21462/25347?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21471",
+    "table_id": "25349",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i sexe. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i sexe. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21471/25349?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21472",
+    "table_id": "25350",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i grups d'edat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i grups d'edat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21472/25350?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21473",
+    "table_id": "25351",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21473/25351?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21474",
+    "table_id": "25352",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i àrea geogràfica de la nacionalitat. A últim dia de mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i àrea geogràfica de la nacionalitat. A últim dia de mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21474/25352?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21588",
+    "table_id": "25394",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21588/25394?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21589",
+    "table_id": "25395",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21589/25395?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21592",
+    "table_id": "25398",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21592/25398?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21593",
+    "table_id": "25399",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21593/25399?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21598",
+    "table_id": "25404",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21598/25404?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21599",
+    "table_id": "25405",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21599/25405?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21600",
+    "table_id": "25406",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21600/25406?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21601",
+    "table_id": "25407",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21601/25407?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21602",
+    "table_id": "25408",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21602/25408?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21603",
+    "table_id": "25409",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21603/25409?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21603",
+    "table_id": "26455",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21603/26455?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21604",
+    "table_id": "25410",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009). A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21604/25410?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21604",
+    "table_id": "26484",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21604/26484?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21605",
+    "table_id": "25411",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21605/25411?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21605",
+    "table_id": "26507",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21605/26507?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21606",
+    "table_id": "25412",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21606/25412?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21606",
+    "table_id": "26456",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21606/26456?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21607",
+    "table_id": "25413",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009). A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21607/25413?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21607",
+    "table_id": "26485",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21607/26485?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21608",
+    "table_id": "25414",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21608/25414?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21608",
+    "table_id": "26508",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat (CCAE-2025). Per divisió d'activitat econòmica. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21608/26508?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21627",
+    "table_id": "25469",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21627/25469?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21628",
+    "table_id": "25470",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21628/25470?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21629",
+    "table_id": "25471",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21629/25471?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21629",
+    "table_id": "26457",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21629/26457?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21630",
+    "table_id": "25472",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21630/25472?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21630",
+    "table_id": "26486",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21630/26486?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21631",
+    "table_id": "25473",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21631/25473?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21631",
+    "table_id": "26509",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21631/26509?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21632",
+    "table_id": "25474",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21632/25474?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21633",
+    "table_id": "25475",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21633/25475?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21634",
+    "table_id": "25476",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21634/25476?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21635",
+    "table_id": "25477",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21635/25477?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21635",
+    "table_id": "26458",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21635/26458?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21636",
+    "table_id": "25478",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21636/25478?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21636",
+    "table_id": "26487",
+    "label": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21636/26487?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21638",
+    "table_id": "25480",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21638/25480?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21639",
+    "table_id": "25481",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21639/25481?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21639",
+    "table_id": "26459",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21639/26459?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21640",
+    "table_id": "25482",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21640/25482?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21640",
+    "table_id": "26488",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i àrea geogràfica de la nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21640/26488?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21642",
+    "table_id": "25484",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i situació de pluriactivitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21642/25484?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21642",
+    "table_id": "26460",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i situació de pluriactivitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21642/26460?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21643",
+    "table_id": "25485",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i situació de pluriactivitat. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21643/25485?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21643",
+    "table_id": "26489",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i situació de pluriactivitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21643/26489?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21644",
+    "table_id": "25486",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i situació de pluriactivitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i pluriactivitat de l'autònom. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21644/25486?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21644",
+    "table_id": "26510",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i situació de pluriactivitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i pluriactivitat de l'autònom. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21644/26510?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21645",
+    "table_id": "25487",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i disponibilitat de treballadors a càrrec. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21645/25487?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21645",
+    "table_id": "26461",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i disponibilitat de treballadors a càrrec. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21645/26461?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21646",
+    "table_id": "25488",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2009) i disponibilitat de treballadors a càrrec. A últim dia del mes (01/2022–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21646/25488?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21646",
+    "table_id": "26490",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica (CCAE-2025) i disponibilitat de treballadors a càrrec. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21646/26490?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21647",
+    "table_id": "25489",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2009) i disponibilitat de treballadors a càrrec. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21647/25489?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21647",
+    "table_id": "26511",
+    "label": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica (CCAE-2025) i disponibilitat de treballadors a càrrec. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21647/26511?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21648",
+    "table_id": "25490",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i situació de pluriactivitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i situació de pluriactivitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21648/25490?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "21649",
+    "table_id": "25491",
+    "label": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/21649/25491?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8598",
+    "table_id": "26439",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025). A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8598/26439?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8598",
+    "table_id": "8709",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009). A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8598/8709?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8601",
+    "table_id": "8701",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8601/8701?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8602",
+    "table_id": "8702",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8602/8702?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8603",
+    "table_id": "8703",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8603/8703?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8604",
+    "table_id": "8704",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8604/8704?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8605",
+    "table_id": "8705",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8605/8705?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8606",
+    "table_id": "8706",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8606/8706?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8607",
+    "table_id": "8707",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8607/8707?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8608",
+    "table_id": "8708",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8608/8708?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "8609",
+    "table_id": "8710",
+    "label": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/8609/8710?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9295",
+    "table_id": "10292",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9295/10292?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9296",
+    "table_id": "10293",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i sexe. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9296/10293?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9296",
+    "table_id": "26440",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i sexe. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9296/26440?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9297",
+    "table_id": "10294",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i sexe. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i sexe. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9297/10294?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9298",
+    "table_id": "10295",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9298/10295?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9299",
+    "table_id": "10296",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i nacionalitat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9299/10296?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9299",
+    "table_id": "26441",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i nacionalitat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9299/26441?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9300",
+    "table_id": "10297",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i nacionalitat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i nacionalitat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9300/10297?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9517",
+    "table_id": "10457",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9517/10457?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9518",
+    "table_id": "10458",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i grups d'edat. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9518/10458?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9518",
+    "table_id": "26442",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i grups d'edat. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9518/26442?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9519",
+    "table_id": "10459",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i grups d'edat. A últim dia del mes",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i grups d'edat. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9519/10459?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9545",
+    "table_id": "10489",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2009) i tipus de relació laboral. A últim dia del mes (03/2012–12/2025)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9545/10489?lang=ca"
+  },
+  {
+    "statistics_id": "afi",
+    "node_id": "9545",
+    "table_id": "26443",
+    "label": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica (CCAE-2025) i tipus de relació laboral. A últim dia del mes (01/2026–)",
+    "ancestor_labels": {
+      "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
+      "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/afi/9545/26443?lang=ca"
+  }
+];
+
+export default entries;

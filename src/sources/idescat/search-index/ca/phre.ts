@@ -1,0 +1,722 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25005",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2025)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25005?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25007",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2024)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25007?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25008",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2023)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25008?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25009",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2022)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25009?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25011",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2021)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25011?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25012",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2020)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25012?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25013",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2019)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25013?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "25015",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2018)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25015?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21174",
+    "table_id": "26683",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat) (2026)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21174/26683?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21175",
+    "table_id": "25006",
+    "label": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat) (2022–)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25006?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "21175",
+    "table_id": "25016",
+    "label": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat) (2018–2021)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25016?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3471",
+    "table_id": "3608",
+    "label": "Població resident a l'estranger. Per continent de residència, sexe i edat quinquennal",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per continent de residència, sexe i edat quinquennal"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3471/3608?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3473",
+    "table_id": "3613",
+    "label": "Població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3473/3613?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3697",
+    "table_id": "3577",
+    "label": "Població resident a l'estranger. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3697/3577?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "10165",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2017)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10165?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "10501",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2018)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10501?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "11505",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2019)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/11505?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "14111",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2020)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/14111?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "15012",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2021)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15012?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "15673",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2022)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15673?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "19894",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2023)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/19894?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "21194",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/21194?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "24946",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2025)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/24946?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "26680",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2026)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/26680?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "4767",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2009)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4767?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "4768",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2010)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4768?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "4769",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2011)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4769?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "5439",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2012)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/5439?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "6216",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2013)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/6216?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "7013",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2014)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/7013?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "8140",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2015)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8140?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3698",
+    "table_id": "8513",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe (2016)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8513?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "3737",
+    "table_id": "3624",
+    "label": "Població resident a l'estranger. Per continent de residència i lloc de naixement",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per continent de residència i lloc de naixement"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/3737/3624?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "6274",
+    "table_id": "6277",
+    "label": "Població resident a l'estranger. Per lloc de naixement, sexe i edat quinquennal",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Població resident a l'estranger. Per lloc de naixement, sexe i edat quinquennal"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/6274/6277?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7037",
+    "table_id": "6956",
+    "label": "Noves inscripcions de població resident a l'estranger. Per sexe",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7037/6956?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7399",
+    "table_id": "7246",
+    "label": "Noves inscripcions de població resident a l'estranger. Per edat en grans grups",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per edat en grans grups"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7399/7246?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7400",
+    "table_id": "7251",
+    "label": "Noves inscripcions de població resident a l'estranger. Per lloc de naixement i sexe",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per lloc de naixement i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7400/7251?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7401",
+    "table_id": "7287",
+    "label": "Noves inscripcions de població resident a l'estranger. Per continent de residència i sexe",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7401/7287?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "10164",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2017)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10164?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "10503",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2018)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10503?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "11502",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2019–2020)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/11502?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "15014",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2021)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15014?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "15683",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2022–2023)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15683?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "21204",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2024)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/21204?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "24948",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2025)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/24948?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "26682",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2026)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/26682?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "7402",
+    "table_id": "7465",
+    "label": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe (2009–2016)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/7402/7465?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "10166",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2017)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10166?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "10502",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2018)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10502?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "11504",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2019)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/11504?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "14113",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2020)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/14113?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "15013",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2021)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15013?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "15674",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2022)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15674?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "19895",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2023)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/19895?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "21196",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2024)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/21196?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "24947",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2025)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/24947?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "26681",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2026)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/26681?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8584",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2016)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8584?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8585",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2015)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8585?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8586",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2014)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8586?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8587",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2013)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8587?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8588",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2012)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8588?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8589",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2011)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8589?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8590",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2010)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8590?lang=ca"
+  },
+  {
+    "statistics_id": "phre",
+    "node_id": "8544",
+    "table_id": "8591",
+    "label": "Població resident a l'estranger. Per país de residència (500 residents o més) i lloc de naixement (agregat) (2009)",
+    "ancestor_labels": {
+      "statistic": "Padró d'habitants residents a l'estranger",
+      "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8591?lang=ca"
+  }
+];
+
+export default entries;

@@ -1,0 +1,128 @@
+import type { IdescatSearchIndexEntry } from "../types.js";
+
+// biome-ignore format: generated search-index entries
+const entries: IdescatSearchIndexEntry[] = [
+  {
+    "statistics_id": "projl",
+    "node_id": "21003",
+    "table_id": "24891",
+    "label": "Llars projectades (base 2024). Per escenari",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Llars projectades (base 2024). Per escenari"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21003/24891?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21004",
+    "table_id": "24892",
+    "label": "Grandària mitjana de la llar projectada (base 2024). Per escenari",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Grandària mitjana de la llar projectada (base 2024). Per escenari"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21004/24892?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21009",
+    "table_id": "24854",
+    "label": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari mitjà",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21009/24854?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21010",
+    "table_id": "24855",
+    "label": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari mitjà",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21010/24855?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21011",
+    "table_id": "24904",
+    "label": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari mitjà",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari mitjà"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21011/24904?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21012",
+    "table_id": "24857",
+    "label": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari alt",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari alt"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21012/24857?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21013",
+    "table_id": "24858",
+    "label": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari alt",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari alt"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21013/24858?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21014",
+    "table_id": "24905",
+    "label": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari alt",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari alt"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21014/24905?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21015",
+    "table_id": "24860",
+    "label": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari baix",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari baix"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21015/24860?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21016",
+    "table_id": "24866",
+    "label": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari baix",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari baix"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21016/24866?lang=ca"
+  },
+  {
+    "statistics_id": "projl",
+    "node_id": "21017",
+    "table_id": "24906",
+    "label": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari baix",
+    "ancestor_labels": {
+      "statistic": "Projeccions de llars",
+      "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari baix"
+    },
+    "source_url": "https://api.idescat.cat/taules/v2/projl/21017/24906?lang=ca"
+  }
+];
+
+export default entries;
