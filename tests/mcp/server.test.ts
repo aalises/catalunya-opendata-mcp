@@ -53,6 +53,120 @@ describe("createMcpServer", () => {
     }
   });
 
+  it("registers the IDESCAT tools, prompts, and metadata resource template", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const tools = await client.listTools();
+      expect(tools.tools.map((tool) => tool.name)).toEqual(
+        expect.arrayContaining([
+          "idescat_search_tables",
+          "idescat_list_statistics",
+          "idescat_list_nodes",
+          "idescat_list_tables",
+          "idescat_list_table_geos",
+          "idescat_get_table_metadata",
+          "idescat_get_table_data",
+        ]),
+      );
+
+      const prompts = await client.listPrompts();
+      expect(prompts.prompts.map((prompt) => prompt.name)).toEqual(
+        expect.arrayContaining(["idescat_query_workflow", "idescat_citation"]),
+      );
+
+      const templates = await client.listResourceTemplates();
+      expect(templates.resourceTemplates).toContainEqual(
+        expect.objectContaining({
+          name: "idescat_table_metadata",
+          uriTemplate: "idescat://tables/{statistics_id}/{node_id}/{table_id}/{geo_id}/metadata",
+          mimeType: "application/json",
+        }),
+      );
+    } finally {
+      await close();
+    }
+  });
+
+  it("searches the committed IDESCAT table index without calling upstream", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_search_tables",
+        arguments: {
+          query: "poblacio edat",
+          limit: 1,
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBeUndefined();
+      expect(toolResult.structuredContent).toMatchObject({
+        data: {
+          query: "poblacio edat",
+          lang: "ca",
+          requested_lang: "ca",
+          limit: 1,
+          results: [
+            {
+              statistics_id: "pmh",
+              node_id: "1180",
+              table_id: "8078",
+            },
+          ],
+        },
+        provenance: {
+          source: "idescat",
+          id: "idescat:tables:table_search",
+        },
+      });
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured IDESCAT input errors from the adapter", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_get_table_data",
+        arguments: {
+          statistics_id: " pmh ",
+          node_id: "1180",
+          table_id: "8078",
+          geo_id: "com",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        provenance: {
+          source: "idescat",
+          source_url: "https://api.idescat.cat/taules/v2?lang=ca",
+        },
+        error: {
+          source: "idescat",
+          code: "invalid_input",
+          retryable: false,
+        },
+      });
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
   it("registers the Socrata query workflow prompt", async () => {
     const { client, close } = await connectInMemoryServer();
 

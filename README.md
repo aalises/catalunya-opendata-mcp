@@ -2,7 +2,7 @@
 
 A read-only Model Context Protocol server for discovering, describing, and querying public datasets from Catalunya.
 
-The server currently focuses on the Generalitat de Catalunya open data portal powered by Socrata. It exposes a small, reliable workflow: search the catalog, inspect a dataset schema, query rows with SODA clauses, and keep enough provenance to cite the source cleanly.
+The server currently supports the Generalitat de Catalunya open data portal powered by Socrata and IDESCAT Tables v2. It exposes small, reliable workflows: search or browse the catalog, inspect schemas or dimensions, query bounded extracts, and keep enough provenance to cite the source cleanly.
 
 ## Why This Exists
 
@@ -70,6 +70,13 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `socrata_search_datasets` | Search the Catalunya Socrata catalog and return dataset IDs, titles, web URLs, API endpoints, update times, and provenance. |
 | `socrata_describe_dataset` | Fetch dataset metadata, license or terms, timestamps, attribution, and queryable column `field_name` values. |
 | `socrata_query_dataset` | Query dataset rows with raw SODA clause values: `select`, `where`, `group`, `order`, `limit`, and `offset`. |
+| `idescat_search_tables` | Search the committed IDESCAT Tables v2 index and return table IDs plus hierarchy labels. The index is currently a small manual seed — for full coverage prefer `idescat_list_*` to browse statistics, nodes, tables, and geos. |
+| `idescat_list_statistics` | List top-level IDESCAT statistics. |
+| `idescat_list_nodes` | List nodes under an IDESCAT statistic. |
+| `idescat_list_tables` | List tables under an IDESCAT statistic node. |
+| `idescat_list_table_geos` | List territorial divisions available for an IDESCAT table. |
+| `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, sources, links, and provenance. |
+| `idescat_get_table_data` | Fetch a bounded flattened data extract using IDESCAT dimension/category filters and `_LAST_`. |
 
 ### Prompts
 
@@ -77,6 +84,8 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | --- | --- |
 | `socrata_query_workflow` | Guides a search -> describe -> query flow and reminds clients to use returned `field_name` values. |
 | `socrata_citation` | Builds a concise citation from described dataset metadata or the metadata resource. |
+| `idescat_query_workflow` | Guides an IDESCAT search/browse -> geos -> metadata -> bounded data flow. |
+| `idescat_citation` | Builds a concise citation from IDESCAT table metadata. |
 
 ### Resources
 
@@ -84,6 +93,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | --- | --- |
 | `catalunya-opendata://about` | Short server metadata. |
 | `socrata://datasets/{source_id}/metadata` | Dataset schema and provenance metadata, matching `socrata_describe_dataset.data`. |
+| `idescat://tables/{statistics_id}/{node_id}/{table_id}/{geo_id}/metadata` | IDESCAT table metadata artifact, matching `idescat_get_table_metadata.data`. |
 
 ## Socrata Workflow
 
@@ -166,6 +176,30 @@ The resource body is the dataset metadata object itself, without the tool-call e
 
 Use `socrata_citation` with `socrata_describe_dataset` output or the metadata resource. A concise citation should include the dataset title, attribution, source domain or URL, last updated timestamp, and license or terms when available.
 
+## IDESCAT Workflow
+
+Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
+
+Call `idescat_get_table_metadata` before querying. Use the returned dimension IDs and category IDs in `idescat_get_table_data.filters`, and use `last` to request the latest time periods:
+
+```json
+{
+  "statistics_id": "pmh",
+  "node_id": "1180",
+  "table_id": "8078",
+  "geo_id": "com",
+  "lang": "en",
+  "filters": {
+    "COM": ["01", "TOTAL"],
+    "SEX": "F"
+  },
+  "last": 2,
+  "limit": 20
+}
+```
+
+IDESCAT data tools are for bounded extracts, not exhaustive table export. If the upstream API returns `narrow_filters`, reduce dimensions with filters or `_LAST_`. For citations, use `idescat_get_table_metadata` or the IDESCAT metadata resource; search/list operation provenance is only an operation trace.
+
 ## Query Safety
 
 The server is deliberately defensive:
@@ -176,6 +210,7 @@ The server is deliberately defensive:
 - It caps response size with `CATALUNYA_MCP_RESPONSE_MAX_BYTES`.
 - It applies request timeouts with `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`.
 - It preserves upstream error details when they help the model fix a query.
+- It maps IDESCAT cell-limit errors to `narrow_filters` with the original JSON-stat error in `source_error`.
 
 If Socrata rejects a query, inspect `error.message`. For example, `query.soql.no-such-column` means the query used an invalid field. Return to `socrata_describe_dataset`, choose a valid `field_name`, and retry with a corrected clause.
 
@@ -191,6 +226,7 @@ The server reads configuration from environment variables supplied by the shell 
 | `CATALUNYA_MCP_MAX_RESULTS` | `100` | Maximum rows/results per tool call. Hard limit: `1000`. |
 | `CATALUNYA_MCP_REQUEST_TIMEOUT_MS` | `30000` | Upstream request timeout. Allowed range: `100` to `120000`. |
 | `CATALUNYA_MCP_RESPONSE_MAX_BYTES` | `262144` | Maximum upstream response body size. Allowed range: `65536` to `1048576`. |
+| `CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES` | `8388608` | Maximum IDESCAT upstream success body to read before flattening/capping. Allowed range: `65536` to `33554432`. |
 | `SOCRATA_APP_TOKEN` | unset | Optional Socrata app token for better rate-limit stability. |
 
 Example client configuration with environment overrides:
@@ -222,13 +258,14 @@ Example client configuration with environment overrides:
 | `npm test` | Runs the Vitest suite. |
 | `npm run smoke` | Builds the server and calls `ping` over stdio. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
+| `npm run refresh:idescat` | Placeholder for refreshing the committed IDESCAT search index. |
 | `npm run lint` | Runs Biome checks. |
 | `npm run format` | Formats the repository with Biome. |
 | `npm run check` | Runs typecheck, lint, tests, and smoke. |
 
 ## Project Notes
 
-The current implementation is intentionally small: one transport, one source adapter, and a polished Socrata workflow. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
+The current implementation is intentionally small: one transport and two source adapters (Socrata catalog/query and IDESCAT Tables v2 browse/metadata/data). The IDESCAT search index ships as a committed manual seed; full crawler refresh is a follow-up. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
 
 ## License
 
