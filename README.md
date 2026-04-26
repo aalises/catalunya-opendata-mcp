@@ -200,6 +200,8 @@ Call `idescat_get_table_metadata` before querying. Use the returned dimension ID
 
 IDESCAT data tools are for bounded extracts, not exhaustive table export. If the upstream API returns `narrow_filters`, reduce dimensions with filters or `_LAST_`. For citations, use `idescat_get_table_metadata` or the IDESCAT metadata resource; search/list operation provenance is only an operation trace.
 
+To manually verify the live IDESCAT journey, run `npm run canary:idescat`. It builds the server, then checks search -> geos -> metadata -> bounded data against a known PMH table using the public MCP tool surface.
+
 ## Query Safety
 
 The server is deliberately defensive:
