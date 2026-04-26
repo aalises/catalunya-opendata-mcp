@@ -5,6 +5,11 @@ import { IdescatError, type IdescatLanguage } from "./client.js";
 import { createIdescatOperationProvenance } from "./metadata.js";
 import { normalizeLimit } from "./request.js";
 import type { IdescatSearchIndexEntry } from "./search-index/types.js";
+import {
+  CANONICAL_STATISTIC_PRIORITY,
+  PRIORITY_BOOST_FACTOR,
+  STOP_TOKENS,
+} from "./search-priority.js";
 
 export interface IdescatSearchTablesInput {
   lang?: IdescatLanguage;
@@ -46,6 +51,14 @@ interface SearchIndexModule {
   generatedAt: string;
   indexVersion: string;
   sourceCollectionUrls: string[];
+}
+
+interface RankCandidate {
+  entry: IdescatSearchIndexEntry;
+  firstPos: number;
+  openSeries: boolean;
+  priority: number;
+  score: number;
 }
 
 export async function searchIdescatTables(
@@ -107,37 +120,134 @@ export function rankIdescatSearchResults(
     return [];
   }
 
-  return entries
-    .map((entry) => {
-      const haystack = normalizeSearchTerm(
-        [entry.label, entry.ancestor_labels.statistic, entry.ancestor_labels.node].join(" "),
-      );
+  const phraseTokens = stripStop(tokens);
+  const phrase = phraseTokens.join(" ");
 
-      if (!tokens.every((token) => haystack.includes(token))) {
+  return entries
+    .map((entry): RankCandidate | null => {
+      const normLabel = normalizeSearchTerm(entry.label);
+      const normNode = normalizeSearchTerm(entry.ancestor_labels.node);
+      const normStat = normalizeSearchTerm(entry.ancestor_labels.statistic);
+      const normHaystack = [normLabel, normStat, normNode].join(" ");
+      const haystackTokens = normHaystack.split(" ");
+
+      const tokenSatisfied = (token: string): boolean => {
+        if (token === entry.statistics_id.toLowerCase()) {
+          return true;
+        }
+
+        if (token === entry.table_id || token === entry.node_id) {
+          return true;
+        }
+
+        if (token.length <= 2) {
+          return haystackTokens.includes(token);
+        }
+
+        return normHaystack.includes(token);
+      };
+
+      if (!tokens.every(tokenSatisfied)) {
         return null;
       }
 
-      const score = tokens.reduce((sum, token) => {
-        if (normalizeSearchTerm(entry.label).includes(token)) {
+      const priority = CANONICAL_STATISTIC_PRIORITY.get(entry.statistics_id) ?? 0;
+      let score = tokens.reduce((sum, token) => {
+        if (normLabel.includes(token)) {
           return sum + 5;
         }
 
-        if (normalizeSearchTerm(entry.ancestor_labels.node).includes(token)) {
+        if (normNode.includes(token)) {
           return sum + 3;
         }
 
-        return sum + 1;
+        if (normStat.includes(token)) {
+          return sum + 1;
+        }
+
+        return token === entry.statistics_id.toLowerCase() ||
+          token === entry.table_id ||
+          token === entry.node_id
+          ? sum + 5
+          : sum + 1;
       }, 0);
 
-      return { entry, score };
+      const phraseLabel = buildPhraseHaystack(entry.label);
+      const phraseNode = buildPhraseHaystack(entry.ancestor_labels.node);
+
+      if (phraseTokens.length >= 2) {
+        if (phraseLabel.includes(phrase)) {
+          score += 15;
+        }
+
+        if (phraseNode.includes(phrase)) {
+          score += 8;
+        }
+
+        for (let index = 0; index < phraseTokens.length - 1; index += 1) {
+          const pair = `${phraseTokens[index]} ${phraseTokens[index + 1]}`;
+
+          if (phraseLabel.includes(pair)) {
+            score += 3;
+          }
+
+          if (phraseNode.includes(pair)) {
+            score += 2;
+          }
+        }
+      }
+
+      if (tokens.length >= 2 && tokens.every((token) => normLabel.includes(token))) {
+        score += 4;
+      }
+
+      if (
+        tokens.some((token) => token.length >= 3 && token === entry.statistics_id.toLowerCase())
+      ) {
+        score += 20;
+      }
+
+      if (tokens.length >= 2 && tokens.every((token) => normStat.includes(token))) {
+        score += 6;
+      }
+
+      score += priority * PRIORITY_BOOST_FACTOR;
+
+      const firstPosRaw = normLabel.indexOf(tokens[0] ?? "");
+      const firstPos = firstPosRaw === -1 ? Number.POSITIVE_INFINITY : firstPosRaw;
+
+      return {
+        entry,
+        firstPos,
+        openSeries: isOpenEndedSeries(entry.label),
+        priority,
+        score,
+      };
     })
-    .filter(
-      (result): result is { entry: IdescatSearchIndexEntry; score: number } => result !== null,
-    )
-    .sort(
-      (left, right) =>
-        right.score - left.score || left.entry.label.localeCompare(right.entry.label),
-    );
+    .filter((result): result is RankCandidate => result !== null)
+    .sort((left, right) => {
+      if (right.score !== left.score) {
+        return right.score - left.score;
+      }
+
+      if (right.priority !== left.priority) {
+        return right.priority - left.priority;
+      }
+
+      if (
+        left.entry.statistics_id === right.entry.statistics_id &&
+        left.openSeries !== right.openSeries
+      ) {
+        return left.openSeries ? -1 : 1;
+      }
+
+      if (left.firstPos !== right.firstPos) {
+        return left.firstPos - right.firstPos;
+      }
+
+      return left.entry.label.localeCompare(right.entry.label);
+    })
+    .map(({ entry, score }) => ({ entry, score }));
 }
 
 export function normalizeSearchTerm(value: string): string {
@@ -145,8 +255,23 @@ export function normalizeSearchTerm(value: string): string {
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
     .toLowerCase()
+    .replace(/\p{P}/gu, " ")
     .replace(/\s+/gu, " ")
     .trim();
+}
+
+function stripStop(tokens: readonly string[]): string[] {
+  return tokens.filter((token) => token.length > 0 && !STOP_TOKENS.has(token));
+}
+
+function buildPhraseHaystack(text: string): string {
+  return stripStop(normalizeSearchTerm(text).split(" ")).join(" ");
+}
+
+const OPEN_SERIES_LABEL_REGEX = /\(\d{4}\s*[–-]\s*\)/u;
+
+function isOpenEndedSeries(rawLabel: string): boolean {
+  return OPEN_SERIES_LABEL_REGEX.test(rawLabel);
 }
 
 async function selectIndex(lang: IdescatLanguage): Promise<LoadedIndex> {

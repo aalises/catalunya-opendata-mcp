@@ -1,0 +1,57 @@
+export const STOP_TOKENS: ReadonlySet<string> = new Set([
+  // Catalan
+  "i",
+  "o",
+  "a",
+  "al",
+  "als",
+  "el",
+  "la",
+  "els",
+  "les",
+  "de",
+  "d",
+  "del",
+  "dels",
+  "en",
+  "un",
+  "una",
+  "per",
+  "que",
+  "amb",
+  "sobre",
+  // Spanish
+  "y",
+  "u",
+  "los",
+  "las",
+  "por",
+  "con",
+  // English
+  "the",
+  "of",
+  "in",
+  "and",
+  "or",
+  "to",
+  "for",
+  "an",
+  "by",
+  "with",
+]);
+
+export const CANONICAL_STATISTIC_PRIORITY: ReadonlyMap<string, number> = new Map([
+  ["pmh", 5],
+  ["e03", 4],
+  ["rfdbc", 4],
+  ["ee", 3],
+  ["afic", 3],
+  ["phre", 2],
+  ["ep", 2],
+  ["censph", 2],
+  ["proj", 1],
+  ["projl", 1],
+  ["projm", 1],
+]);
+
+export const PRIORITY_BOOST_FACTOR = 12;
