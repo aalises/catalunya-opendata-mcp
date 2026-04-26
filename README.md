@@ -70,7 +70,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `socrata_search_datasets` | Search the Catalunya Socrata catalog and return dataset IDs, titles, web URLs, API endpoints, update times, and provenance. |
 | `socrata_describe_dataset` | Fetch dataset metadata, license or terms, timestamps, attribution, and queryable column `field_name` values. |
 | `socrata_query_dataset` | Query dataset rows with raw SODA clause values: `select`, `where`, `group`, `order`, `limit`, and `offset`. |
-| `idescat_search_tables` | Search the committed IDESCAT Tables v2 index and return table IDs plus hierarchy labels. The index is currently a small manual seed — for full coverage prefer `idescat_list_*` to browse statistics, nodes, tables, and geos. |
+| `idescat_search_tables` | Search the committed IDESCAT Tables v2 index and return table IDs plus hierarchy labels. For exhaustive discovery, use `idescat_list_*` to browse statistics, nodes, tables, and geos directly from IDESCAT. |
 | `idescat_list_statistics` | List top-level IDESCAT statistics. |
 | `idescat_list_nodes` | List nodes under an IDESCAT statistic. |
 | `idescat_list_tables` | List tables under an IDESCAT statistic node. |
@@ -258,14 +258,14 @@ Example client configuration with environment overrides:
 | `npm test` | Runs the Vitest suite. |
 | `npm run smoke` | Builds the server and calls `ping` over stdio. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
-| `npm run refresh:idescat` | Placeholder for refreshing the committed IDESCAT search index. |
+| `npm run refresh:idescat` | Crawl IDESCAT Tables v2 and regenerate the committed search index. |
 | `npm run lint` | Runs Biome checks. |
 | `npm run format` | Formats the repository with Biome. |
 | `npm run check` | Runs typecheck, lint, tests, and smoke. |
 
 ## Project Notes
 
-The current implementation is intentionally small: one transport and two source adapters (Socrata catalog/query and IDESCAT Tables v2 browse/metadata/data). The IDESCAT search index ships as a committed manual seed; full crawler refresh is a follow-up. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
+The current implementation is intentionally small: one transport and two source adapters (Socrata catalog/query and IDESCAT Tables v2 browse/metadata/data). The IDESCAT search index ships as committed generated source; refresh it manually with `npm run refresh:idescat` when the upstream catalog changes. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
 
 ## License
 

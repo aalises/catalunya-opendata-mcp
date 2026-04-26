@@ -1,4 +1,6 @@
 import { readdirSync, readFileSync, statSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
@@ -11,24 +13,18 @@ const SEARCH_INDEX_SOURCE_MAX_BYTES = 1024 * 1024;
 const distSearchIndexDir = new URL("../dist/sources/idescat/search-index/", import.meta.url);
 const srcSearchIndexDir = new URL("../src/sources/idescat/search-index/", import.meta.url);
 
-const caDeclPath = new URL("ca.d.ts", distSearchIndexDir);
-const caDeclSize = statSync(caDeclPath).size;
-if (caDeclSize > SEARCH_INDEX_DECL_MAX_BYTES) {
-  throw new Error(
-    `dist/sources/idescat/search-index/ca.d.ts is ${caDeclSize} bytes, exceeds ${SEARCH_INDEX_DECL_MAX_BYTES}.`,
-  );
-}
-
-for (const entry of readdirSync(srcSearchIndexDir)) {
-  if (!entry.endsWith(".ts")) continue;
-  const path = new URL(entry, srcSearchIndexDir);
-  const size = statSync(path).size;
-  if (size > SEARCH_INDEX_SOURCE_MAX_BYTES) {
-    throw new Error(
-      `src/sources/idescat/search-index/${entry} is ${size} bytes, exceeds ${SEARCH_INDEX_SOURCE_MAX_BYTES}. Switch to per-statistic sharding.`,
-    );
-  }
-}
+assertFilesUnderByteCap(
+  fileURLToPath(distSearchIndexDir),
+  ".d.ts",
+  SEARCH_INDEX_DECL_MAX_BYTES,
+  "dist/sources/idescat/search-index",
+);
+assertFilesUnderByteCap(
+  fileURLToPath(srcSearchIndexDir),
+  ".ts",
+  SEARCH_INDEX_SOURCE_MAX_BYTES,
+  "src/sources/idescat/search-index",
+);
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -92,4 +88,27 @@ try {
   console.log(JSON.stringify(result, null, 2));
 } finally {
   await client.close();
+}
+
+function assertFilesUnderByteCap(rootDir, extension, maxBytes, label) {
+  for (const entry of readdirSync(rootDir, { withFileTypes: true })) {
+    const entryPath = path.join(rootDir, entry.name);
+
+    if (entry.isDirectory()) {
+      assertFilesUnderByteCap(entryPath, extension, maxBytes, `${label}/${entry.name}`);
+      continue;
+    }
+
+    if (!entry.name.endsWith(extension)) {
+      continue;
+    }
+
+    const size = statSync(entryPath).size;
+
+    if (size > maxBytes) {
+      throw new Error(
+        `${label}/${entry.name} is ${size} bytes, exceeds ${maxBytes}. Switch to per-statistic sharding.`,
+      );
+    }
+  }
 }
