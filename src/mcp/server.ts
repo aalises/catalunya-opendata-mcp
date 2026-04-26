@@ -5,6 +5,7 @@ import type { AppConfig } from "../config.js";
 import { createLogger } from "../logger.js";
 import { packageVersion } from "../package-info.js";
 import { createJsonTextContent } from "../sources/common/caps.js";
+import { toJsonSafeValue } from "../sources/common/json-safe.js";
 import {
   createSocrataSearchProvenance,
   searchSocrataDatasets,
@@ -372,6 +373,7 @@ const socrataToolErrorOutputSchema = z.object({
   message: z.string(),
   retryable: z.boolean(),
   status: z.number().int().optional(),
+  source_error: z.unknown().optional(),
 });
 
 const socrataDatasetCardOutputSchema = z.object({
@@ -468,6 +470,9 @@ function toSocrataToolError(
       message: error.message,
       retryable: error.retryable,
       ...(error.status === undefined ? {} : { status: error.status }),
+      ...(error.source_error === undefined
+        ? {}
+        : { source_error: toJsonSafeValue(error.source_error) }),
     };
   }
 

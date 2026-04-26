@@ -24,6 +24,7 @@ export class SocrataError extends SourceError<"socrata"> {
     options: {
       cause?: unknown;
       retryable?: boolean;
+      source_error?: unknown;
       status?: number;
     } = {},
   ) {
@@ -175,14 +176,15 @@ function buildHeaders(config: AppConfig): Record<string, string> {
 }
 
 async function createHttpError(response: Response, config: AppConfig): Promise<SocrataError> {
-  const bodyExcerpt = await readErrorBodyExcerpt(response, config);
-  const bodyMessage = bodyExcerpt ? ` Response body: ${bodyExcerpt}` : "";
+  const bodyDetails = await readErrorBodyDetails(response, config);
+  const bodyMessage = bodyDetails.excerpt ? ` Response body: ${bodyDetails.excerpt}` : "";
 
   return new SocrataError(
     "http_error",
     `Socrata request failed with HTTP ${response.status} ${response.statusText}.${bodyMessage}`,
     {
       retryable: response.status === 429 || response.status >= 500,
+      source_error: bodyDetails.json,
       status: response.status,
     },
   );
@@ -256,9 +258,17 @@ async function readSuccessBodyBytes(response: Response, maxBytes: number): Promi
   }
 }
 
-async function readErrorBodyExcerpt(response: Response, config: AppConfig): Promise<string | null> {
+interface SocrataErrorBodyDetails {
+  excerpt: string | null;
+  json?: unknown;
+}
+
+async function readErrorBodyDetails(
+  response: Response,
+  config: AppConfig,
+): Promise<SocrataErrorBodyDetails> {
   if (!response.body) {
-    return null;
+    return { excerpt: null };
   }
 
   try {
@@ -297,7 +307,7 @@ async function readErrorBodyExcerpt(response: Response, config: AppConfig): Prom
     }
 
     if (byteLength === 0) {
-      return null;
+      return { excerpt: null };
     }
 
     const bodyBytes = new Uint8Array(byteLength);
@@ -314,16 +324,32 @@ async function readErrorBodyExcerpt(response: Response, config: AppConfig): Prom
     const redacted = redactSecrets(decoded, config).replace(/\s+/g, " ").trim();
 
     if (!redacted) {
-      return null;
+      return { excerpt: null };
     }
+
+    const json = parseJsonSafely(redacted);
 
     if (redacted.length > SOCRATA_ERROR_BODY_MAX_CHARS) {
-      return `${redacted.slice(0, SOCRATA_ERROR_BODY_MAX_CHARS)}...`;
+      return {
+        excerpt: `${redacted.slice(0, SOCRATA_ERROR_BODY_MAX_CHARS)}...`,
+        ...(json === undefined ? {} : { json }),
+      };
     }
 
-    return truncated ? `${redacted}...` : redacted;
+    return {
+      excerpt: truncated ? `${redacted}...` : redacted,
+      ...(json === undefined ? {} : { json }),
+    };
   } catch {
-    return null;
+    return { excerpt: null };
+  }
+}
+
+function parseJsonSafely(value: string): unknown | undefined {
+  try {
+    return JSON.parse(value);
+  } catch {
+    return undefined;
   }
 }
 

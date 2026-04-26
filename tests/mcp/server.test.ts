@@ -530,6 +530,9 @@ describe("createMcpServer", () => {
             'Response body: {"message":"No such column: municipi_nom"}',
           ),
           retryable: false,
+          source_error: {
+            message: "No such column: municipi_nom",
+          },
           status: 400,
         },
       });
