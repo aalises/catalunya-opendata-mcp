@@ -47,6 +47,7 @@
     "postbuild": "chmod +x dist/index.js",
     "start": "node dist/index.js",
     "smoke": "npm run build && node scripts/smoke.mjs",
+    "canary:socrata": "npm run build && node scripts/socrata-live-canary.mjs",
     "canary:idescat": "npm run build && node scripts/idescat-live-canary.mjs",
     "package:size": "node scripts/package-size.mjs",
     "refresh:idescat": "tsx scripts/refresh-idescat.ts",
