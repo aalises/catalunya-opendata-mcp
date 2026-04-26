@@ -38,8 +38,11 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     "idescat_search_tables",
     {
       title: "idescat.search_tables",
-      description:
-        "Search the generated IDESCAT Tables v2 index. Use this before list_table_geos, get_table_metadata, and get_table_data.",
+      description: [
+        "Topic discovery for IDESCAT Tables v2.",
+        "Search by subject, then reuse the returned statistics_id, node_id, and table_id with idescat_list_table_geos.",
+        "Search/list provenance is discovery-only; cite idescat_get_table_metadata or the metadata resource.",
+      ].join(" "),
       inputSchema: schemas.inputs.searchTables,
       outputSchema: schemas.outputs.searchTables,
     },
@@ -53,7 +56,8 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     "idescat_list_statistics",
     {
       title: "idescat.list_statistics",
-      description: "List top-level IDESCAT statistics available through Tables v2.",
+      description:
+        "Browse fallback when idescat_search_tables is too broad or empty. Start here, then call idescat_list_nodes with a returned statistics_id.",
       inputSchema: schemas.inputs.listStatistics,
       outputSchema: schemas.outputs.listStatistics,
     },
@@ -70,7 +74,8 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     "idescat_list_nodes",
     {
       title: "idescat.list_nodes",
-      description: "List nodes under an IDESCAT statistic.",
+      description:
+        "Browse nodes under an IDESCAT statistic. Use a statistics_id from idescat_list_statistics, then call idescat_list_tables with the returned node_id.",
       inputSchema: schemas.inputs.listNodes,
       outputSchema: schemas.outputs.listNodes,
     },
@@ -87,7 +92,8 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     "idescat_list_tables",
     {
       title: "idescat.list_tables",
-      description: "List IDESCAT tables within a statistic node.",
+      description:
+        "Browse tables within an IDESCAT statistic node. Use returned statistics_id, node_id, and table_id with idescat_list_table_geos before metadata or data.",
       inputSchema: schemas.inputs.listTables,
       outputSchema: schemas.outputs.listTables,
     },
@@ -105,7 +111,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     {
       title: "idescat.list_table_geos",
       description:
-        "List territorial divisions for an IDESCAT table. Call this before metadata or data because every table request requires a geo_id.",
+        "Required bridge from table discovery to metadata/data. Choose a returned geo_id, then call idescat_get_table_metadata before idescat_get_table_data.",
       inputSchema: schemas.inputs.listTableGeos,
       outputSchema: schemas.outputs.listTableGeos,
     },
@@ -123,7 +129,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     {
       title: "idescat.get_table_metadata",
       description:
-        "Fetch IDESCAT JSON-stat table metadata for a statistics/node/table/geo tuple, including dimensions, category IDs, sources, and links.",
+        "Inspect an IDESCAT table after selecting geo_id with idescat_list_table_geos. Use returned dimension IDs and category IDs exactly in idescat_get_table_data filters; use this tool or its metadata resource for citations.",
       inputSchema: schemas.inputs.getTableMetadata,
       outputSchema: schemas.outputs.getTableMetadata,
     },
@@ -146,11 +152,10 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     {
       title: "idescat.get_table_data",
       description: [
-        "Fetch a bounded, flattened extract from an IDESCAT Tables v2 JSON-stat table.",
-        "Call idescat_get_table_metadata first and use returned dimension/category IDs in filters.",
+        "Fetch a bounded, flattened IDESCAT data extract only after idescat_list_table_geos and idescat_get_table_metadata.",
         "Every request requires statistics_id, node_id, table_id, and geo_id.",
-        "Use filters and last to narrow cells; this tool is for bounded extracts, not exhaustive table export.",
-        "If IDESCAT returns narrow_filters, reduce dimensions or use last.",
+        "Use metadata dimension/category IDs exactly in filters, and use last for recent periods.",
+        "This is not an exhaustive export tool; if IDESCAT returns narrow_filters, call metadata and retry with filters or last.",
       ].join(" "),
       inputSchema: schemas.inputs.getTableData,
       outputSchema: schemas.outputs.getTableData,
@@ -178,13 +183,21 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
           content: {
             type: "text",
             text: [
-              "Use this workflow for IDESCAT Tables v2 questions.",
+              "Use this prescriptive workflow for IDESCAT Tables v2 questions.",
               "",
-              "1. Discover the table with `idescat_search_tables` or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`.",
-              "2. Call `idescat_list_table_geos` because every metadata and data request needs a `geo_id`.",
-              "3. Call `idescat_get_table_metadata` before querying. Use returned dimension IDs and category IDs in filters.",
-              "4. Call `idescat_get_table_data` for a bounded extract. Prefer filters and `last` over raising `limit`.",
-              "5. For citations, call `idescat_get_table_metadata` and cite the nested provenance, sources, links, and last updated date. Do not cite from search/list output alone.",
+              "1. Search first with `idescat_search_tables` for topic discovery. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
+              "2. Call `idescat_list_table_geos` with the chosen statistics_id/node_id/table_id. For discovery workflows, continue only after a `geo_id` has been selected or supplied.",
+              "3. Call `idescat_get_table_metadata` with the selected geo_id. Use returned dimension IDs and category IDs exactly in `filters`; do not invent display-label filters.",
+              "4. Call `idescat_get_table_data` for a bounded extract. Prefer dimension filters and `last` over raising `limit`; do not use it as a full table export.",
+              "5. Cite `idescat_get_table_metadata` output or the `idescat://tables/{statistics_id}/{node_id}/{table_id}/{geo_id}/metadata` resource. Treat search/list provenance as discovery-only.",
+              "",
+              "Recovery rules:",
+              "- Empty search: broaden terms or use the browse path.",
+              "- No geos: try another table from search/list; metadata/data require geo_id.",
+              "- `invalid_input`: reuse IDs returned by IDESCAT search/list/geos/metadata tools.",
+              "- `narrow_filters`: call metadata, then retry data with dimension filters or `last`.",
+              "- Truncation: keep the same IDs and narrow with filters, `last`, or lower `limit`.",
+              "- Filter cap errors: reduce or split filters before retrying.",
             ].join("\n"),
           },
         },
@@ -553,15 +566,16 @@ function toIdescatToolError(error: unknown): {
   status?: number;
 } {
   if (isIdescatError(error)) {
+    const sourceError =
+      error.source_error === undefined ? undefined : toJsonSafeValue(error.source_error);
+
     return {
       source: "idescat",
       code: error.code,
-      message: error.message,
+      message: addIdescatNextStep(error.message, error.code, error.retryable, sourceError),
       retryable: error.retryable,
       ...(error.status === undefined ? {} : { status: error.status }),
-      ...(error.source_error === undefined
-        ? {}
-        : { source_error: toJsonSafeValue(error.source_error) }),
+      ...(sourceError === undefined ? {} : { source_error: sourceError }),
     };
   }
 
@@ -571,6 +585,51 @@ function toIdescatToolError(error: unknown): {
     message: error instanceof Error ? error.message : "Unexpected IDESCAT failure.",
     retryable: false,
   };
+}
+
+function addIdescatNextStep(
+  message: string,
+  code: string,
+  retryable: boolean,
+  sourceError: unknown,
+): string {
+  const guidance = getIdescatNextStepGuidance(code, retryable, sourceError);
+
+  return guidance === undefined ? message : `${message} Next step: ${guidance}`;
+}
+
+function getIdescatNextStepGuidance(
+  code: string,
+  retryable: boolean,
+  sourceError: unknown,
+): string | undefined {
+  if (hasFilterCapRule(sourceError)) {
+    return "reduce or split filters and retry.";
+  }
+
+  switch (code) {
+    case "invalid_input":
+      return "reuse IDs returned by IDESCAT search/list/geos/metadata tools.";
+    case "narrow_filters":
+      return "call idescat_get_table_metadata, then retry with dimension filters or last.";
+    case "network_error":
+    case "timeout":
+    case "http_error":
+      return retryable
+        ? "retry the request; if it repeats, narrow filters or use last."
+        : "verify IDs and filters with search/list/geos/metadata before retrying.";
+    default:
+      return undefined;
+  }
+}
+
+function hasFilterCapRule(value: unknown): boolean {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "rule" in value &&
+    typeof (value as { rule?: unknown }).rule === "string"
+  );
 }
 
 function getSingleTemplateVariable(name: string, value: string | string[] | undefined): string {

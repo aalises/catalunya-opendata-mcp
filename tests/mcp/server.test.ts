@@ -70,6 +70,26 @@ describe("createMcpServer", () => {
         ]),
       );
 
+      const descriptions = Object.fromEntries(
+        tools.tools
+          .filter((tool) => tool.name.startsWith("idescat_"))
+          .map((tool) => [tool.name, tool.description ?? ""]),
+      );
+      expect(descriptions.idescat_search_tables).toContain("Topic discovery");
+      expect(descriptions.idescat_search_tables).toContain("idescat_list_table_geos");
+      expect(descriptions.idescat_list_statistics).toContain("Browse fallback");
+      expect(descriptions.idescat_list_statistics).toContain("idescat_list_nodes");
+      expect(descriptions.idescat_list_nodes).toContain("idescat_list_statistics");
+      expect(descriptions.idescat_list_nodes).toContain("idescat_list_tables");
+      expect(descriptions.idescat_list_tables).toContain("idescat_list_table_geos");
+      expect(descriptions.idescat_list_table_geos).toContain("Required bridge");
+      expect(descriptions.idescat_list_table_geos).toContain("idescat_get_table_metadata");
+      expect(descriptions.idescat_get_table_metadata).toContain("dimension IDs");
+      expect(descriptions.idescat_get_table_metadata).toContain("idescat_get_table_data");
+      expect(descriptions.idescat_get_table_data).toContain("bounded");
+      expect(descriptions.idescat_get_table_data).toContain("idescat_get_table_metadata");
+      expect(descriptions.idescat_get_table_data).toContain("last");
+
       const prompts = await client.listPrompts();
       expect(prompts.prompts.map((prompt) => prompt.name)).toEqual(
         expect.arrayContaining(["idescat_query_workflow", "idescat_citation"]),
@@ -83,6 +103,41 @@ describe("createMcpServer", () => {
           mimeType: "application/json",
         }),
       );
+    } finally {
+      await close();
+    }
+  });
+
+  it("registers the IDESCAT query workflow prompt as an ordered playbook", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const prompt = await client.getPrompt({
+        name: "idescat_query_workflow",
+      });
+      const text = prompt.messages
+        .map((message) => message.content)
+        .filter((content) => content.type === "text")
+        .map((content) => content.text)
+        .join("\n");
+
+      const searchIndex = text.indexOf("idescat_search_tables");
+      const browseIndex = text.indexOf("idescat_list_statistics");
+      const geosIndex = text.indexOf("idescat_list_table_geos");
+      const metadataIndex = text.indexOf("idescat_get_table_metadata");
+      const dataIndex = text.indexOf("idescat_get_table_data");
+      const citationIndex = text.indexOf("Cite `idescat_get_table_metadata`");
+
+      expect(searchIndex).toBeGreaterThanOrEqual(0);
+      expect(browseIndex).toBeGreaterThan(searchIndex);
+      expect(geosIndex).toBeGreaterThan(browseIndex);
+      expect(metadataIndex).toBeGreaterThan(geosIndex);
+      expect(dataIndex).toBeGreaterThan(metadataIndex);
+      expect(citationIndex).toBeGreaterThan(dataIndex);
+      expect(text).toContain("Use returned dimension IDs and category IDs exactly");
+      expect(text).toContain("Treat search/list provenance as discovery-only");
+      expect(text).toContain("`narrow_filters`: call metadata");
+      expect(text).toContain("Filter cap errors: reduce or split filters");
     } finally {
       await close();
     }
@@ -158,7 +213,101 @@ describe("createMcpServer", () => {
         error: {
           source: "idescat",
           code: "invalid_input",
+          message: expect.stringContaining("IDs returned by IDESCAT search/list"),
           retryable: false,
+        },
+      });
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("adds IDESCAT narrow_filters recovery guidance while preserving the error shape", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          version: "2.0",
+          class: "error",
+          status: "416",
+          id: "05",
+          label: "Data limit exceeded.",
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+          status: 416,
+        },
+      ),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_get_table_data",
+        arguments: {
+          statistics_id: "pmh",
+          node_id: "1180",
+          table_id: "8078",
+          geo_id: "com",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "idescat",
+          code: "narrow_filters",
+          message: expect.stringContaining("idescat_get_table_metadata"),
+          retryable: false,
+          status: 416,
+          source_error: {
+            id: "05",
+            status: "416",
+          },
+        },
+      });
+      const error = toolResult.structuredContent?.error as { message?: string } | undefined;
+      expect(error?.message).toContain("dimension filters or last");
+    } finally {
+      await close();
+    }
+  });
+
+  it("adds IDESCAT filter-cap recovery guidance while preserving source_error.rule", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_get_table_data",
+        arguments: {
+          statistics_id: "pmh",
+          node_id: "1180",
+          table_id: "8078",
+          geo_id: "com",
+          filters: {
+            COM: "x".repeat(257),
+          },
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "idescat",
+          code: "invalid_input",
+          message: expect.stringContaining("reduce or split filters"),
+          retryable: false,
+          source_error: {
+            rule: "filter_value_bytes",
+            limit: 256,
+          },
         },
       });
       expect(fetchMock).not.toHaveBeenCalled();
