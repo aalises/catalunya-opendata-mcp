@@ -47,6 +47,7 @@
     "postbuild": "chmod +x dist/index.js",
     "start": "node dist/index.js",
     "smoke": "npm run build && node scripts/smoke.mjs",
+    "package:size": "node scripts/package-size.mjs",
     "refresh:idescat": "tsx scripts/refresh-idescat.ts",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
     "test": "vitest run",
@@ -54,7 +55,7 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
-    "check": "npm run typecheck && npm run lint && npm test && npm run smoke",
+    "check": "npm run typecheck && npm run lint && npm test && npm run smoke && npm run package:size",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json",
     "clean": "rm -rf dist"
   },

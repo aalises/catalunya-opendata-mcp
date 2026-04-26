@@ -257,6 +257,7 @@ Example client configuration with environment overrides:
 | `npm run typecheck` | Type-checks source and tests. |
 | `npm test` | Runs the Vitest suite. |
 | `npm run smoke` | Builds the server and calls `ping` over stdio. |
+| `npm run package:size` | Checks packed/unpacked package size and total generated IDESCAT index size. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
 | `npm run refresh:idescat` | Crawl IDESCAT Tables v2 and regenerate the committed search index. |
 | `npm run lint` | Runs Biome checks. |
