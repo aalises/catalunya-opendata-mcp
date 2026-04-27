@@ -178,7 +178,7 @@ Use `socrata_citation` with `socrata_describe_dataset` output or the metadata re
 
 ## IDESCAT Workflow
 
-Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
+Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Search can recognize geography words such as `comarca`, `municipi`, and `provincia`; prefer results whose `geo_candidates` include the requested geography, then confirm the `geo_id` with `idescat_list_table_geos`. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
 
 Call `idescat_get_table_metadata` before querying. Use the returned dimension IDs and category IDs in `idescat_get_table_data.filters`, and use `last` to request the latest time periods:
 
