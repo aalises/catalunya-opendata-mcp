@@ -16,6 +16,7 @@ const NON_PMH_EXPECTED_STATISTICS_ID = "rfdbc";
 const NON_PMH_PLACE_QUERY = "Maresme";
 const SEMANTIC_UNEMPLOYMENT_QUERY = "taxa atur";
 const SEMANTIC_INCOME_PLACE_QUERY = "renda per capita Maresme";
+const EN_POPULATION_AGE_QUERY = "population by age";
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -227,6 +228,20 @@ try {
     )}.`,
   );
 
+  const englishPopulationAgeSearch = await callTool("idescat_search_tables", {
+    query: EN_POPULATION_AGE_QUERY,
+    lang: "en",
+    limit: 3,
+  });
+  const englishPopulationAgeTable = englishPopulationAgeSearch.data.results[0];
+
+  assert(
+    englishPopulationAgeTable?.statistics_id === EXPECTED_STATISTICS_ID,
+    `Expected ${EN_POPULATION_AGE_QUERY} top result to be ${EXPECTED_STATISTICS_ID}, got ${formatTableId(
+      englishPopulationAgeTable,
+    )}.`,
+  );
+
   const summary = {
     ok: true,
     workflow: [
@@ -315,6 +330,10 @@ try {
         query: semanticIncomeSearch.data.query,
         selected: pickTableSummary(semanticIncomeTable),
         geo_candidates: semanticIncomeTable.geo_candidates,
+      },
+      english_population_age: {
+        query: englishPopulationAgeSearch.data.query,
+        selected: pickTableSummary(englishPopulationAgeTable),
       },
     },
   };
