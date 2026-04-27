@@ -182,6 +182,8 @@ Use `socrata_citation` with `socrata_describe_dataset` output or the metadata re
 
 Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Search can recognize geography words such as `comarca`, `municipi`, `municipal`, and `provincia`, plus named places such as `Maresme`, `Barcelonès`, and `Girona`; prefer results whose `geo_candidates` include the requested geography, then confirm the `geo_id` with `idescat_list_table_geos`. It also handles common semantic aliases such as `taxa atur`, `paro`, `renda per capita Maresme`, and `poblacio municipal` without changing the tool inputs. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
 
+IDESCAT support is scoped to Tables v2. Idescat topic pages may list inactive statistics, additional statistics, or statistics from other organisms that are not exposed through this connector.
+
 Named-place workflow example:
 
 ```json
