@@ -11,16 +11,22 @@ import {
   type IdescatLanguage,
 } from "./client.js";
 import { buildIdescatUrl, safePathSegment } from "./request.js";
+import { normalizeSearchTerm } from "./search-normalize.js";
+import { findIdescatPlaceAliasesInText } from "./search-places.js";
 
 export type IdescatOperationProvenance = SourceOperationProvenance<"idescat">;
 export type IdescatDatasetProvenance = SourceDatasetProvenance<"idescat">;
 
-export interface IdescatTableMetadataInput {
+export interface IdescatTableTupleInput {
   geo_id: string;
   lang?: IdescatLanguage;
   node_id: string;
   statistics_id: string;
   table_id: string;
+}
+
+export interface IdescatTableMetadataInput extends IdescatTableTupleInput {
+  place_query?: string;
 }
 
 export interface IdescatUnit {
@@ -65,12 +71,46 @@ export interface IdescatMetadataDegradation {
   hint: string;
 }
 
+export type IdescatRecommendedFilters = Record<string, string | string[]>;
+
+export interface IdescatFilterGuidancePlaceMatch {
+  category_id: string;
+  category_label: string;
+  dimension_id: string;
+  dimension_label: string;
+}
+
+export interface IdescatFilterGuidanceNeedsFilterDimension {
+  candidates: Array<{ id: string; label: string }>;
+  id: string;
+  label: string;
+  role?: "geo" | "metric" | "time";
+  size: number;
+}
+
+export interface IdescatFilterGuidance {
+  latest?: {
+    last: 1;
+    time_dimension_ids: string[];
+  };
+  needs_filter_dimensions?: IdescatFilterGuidanceNeedsFilterDimension[];
+  place_matches?: IdescatFilterGuidancePlaceMatch[];
+  recommended_data_call?: {
+    filters?: IdescatRecommendedFilters;
+    last?: 1;
+    limit: 20;
+  };
+  recommended_filters?: IdescatRecommendedFilters;
+  unresolved_place_terms?: string[];
+}
+
 export interface IdescatTableMetadata {
   alternate_geographies?: IdescatMetadataLink[];
   correction_links?: IdescatMetadataLink[];
   degradation?: IdescatMetadataDegradation;
   description?: string;
   dimensions: IdescatDimensionMetadata[];
+  filter_guidance?: IdescatFilterGuidance;
   extensions?: Record<string, unknown>;
   geo_id: string;
   lang: IdescatLanguage;
@@ -115,6 +155,10 @@ const jsonStatDatasetSchema = z
 
 type JsonStatDataset = z.infer<typeof jsonStatDatasetSchema>;
 
+interface NormalizedIdescatTableMetadataInput extends Required<IdescatTableTupleInput> {
+  place_query?: string;
+}
+
 export async function getIdescatTableMetadata(
   input: IdescatTableMetadataInput,
   config: AppConfig,
@@ -133,7 +177,7 @@ export async function getIdescatTableMetadata(
 
 export function parseIdescatTableMetadata(
   raw: unknown,
-  input: Required<IdescatTableMetadataInput>,
+  input: NormalizedIdescatTableMetadataInput,
   requestUrl: URL,
 ): IdescatTableMetadata {
   const parsed = jsonStatDatasetSchema.safeParse(raw);
@@ -153,13 +197,14 @@ export function parseIdescatTableMetadata(
 
 export function normalizeMetadataInput(
   input: IdescatTableMetadataInput,
-): Required<IdescatTableMetadataInput> {
+): NormalizedIdescatTableMetadataInput {
   return {
     geo_id: safePathSegment("geo_id", input.geo_id),
     lang: input.lang ?? "ca",
     node_id: safePathSegment("node_id", input.node_id),
     statistics_id: safePathSegment("statistics_id", input.statistics_id),
     table_id: safePathSegment("table_id", input.table_id),
+    ...(input.place_query?.trim() ? { place_query: input.place_query.trim() } : {}),
   };
 }
 
@@ -180,7 +225,7 @@ export function createIdescatOperationProvenance(
 
 function toTableMetadata(
   dataset: JsonStatDataset,
-  input: Required<IdescatTableMetadataInput>,
+  input: NormalizedIdescatTableMetadataInput,
   requestUrl: URL,
 ): IdescatTableMetadata {
   const dimensions = dataset.id.map((dimensionId, index) =>
@@ -199,11 +244,13 @@ function toTableMetadata(
   // Resolve terms link from the dataset's link relations — do NOT fabricate
   // a terms string when the upstream payload does not surface one.
   const termsUrl = findTermsUrl(links);
+  const filterGuidance = buildFilterGuidance(dimensions, input.place_query);
 
   return {
     ...input,
     title: dataset.label,
     dimensions,
+    ...(filterGuidance ? { filter_guidance: filterGuidance } : {}),
     ...(dataset.note ? { notes: dataset.note } : {}),
     ...(statisticalSources ? { statistical_sources: statisticalSources } : {}),
     ...(units ? { units } : {}),
@@ -232,6 +279,176 @@ function findTermsUrl(links: IdescatMetadataLink[]): string | undefined {
   // when none exists.
   const termsRels = new Set(["license", "terms", "terms-of-service", "tos"]);
   return links.find((link) => termsRels.has(link.rel.toLowerCase()))?.href;
+}
+
+function buildFilterGuidance(
+  dimensions: IdescatDimensionMetadata[],
+  placeQuery?: string,
+): IdescatFilterGuidance | undefined {
+  const recommendedFilters: IdescatRecommendedFilters = {};
+  const placeMatches = findPlaceMatches(dimensions, placeQuery);
+  const needsFilterDimensions: IdescatFilterGuidanceNeedsFilterDimension[] = [];
+
+  for (const [dimensionId, matches] of groupPlaceMatches(placeMatches)) {
+    recommendedFilters[dimensionId] =
+      matches.length === 1
+        ? (matches[0]?.category_id ?? "")
+        : matches.map((match) => match.category_id);
+  }
+
+  for (const dimension of dimensions) {
+    if (dimension.role === "time" || recommendedFilters[dimension.id] !== undefined) {
+      continue;
+    }
+
+    const safeDefault = getSafeDefaultCategory(dimension);
+
+    if (safeDefault) {
+      recommendedFilters[dimension.id] = safeDefault.id;
+      continue;
+    }
+
+    if (dimension.categories.length > 1) {
+      needsFilterDimensions.push({
+        id: dimension.id,
+        label: dimension.label,
+        ...(dimension.role ? { role: dimension.role } : {}),
+        size: dimension.size,
+        candidates: dimension.categories.slice(0, 5).map((category) => ({
+          id: category.id,
+          label: category.label,
+        })),
+      });
+    }
+  }
+
+  const timeDimensionIds = dimensions
+    .filter((dimension) => dimension.role === "time")
+    .map((dimension) => dimension.id);
+  const hasRecommendedFilters = Object.keys(recommendedFilters).length > 0;
+  const latest =
+    timeDimensionIds.length > 0
+      ? { last: 1 as const, time_dimension_ids: timeDimensionIds }
+      : undefined;
+  const unresolvedPlaceTerms = findUnresolvedPlaceTerms(placeQuery, placeMatches);
+  const recommendedDataCall =
+    hasRecommendedFilters || latest
+      ? {
+          ...(hasRecommendedFilters ? { filters: recommendedFilters } : {}),
+          ...(latest ? { last: latest.last } : {}),
+          limit: 20 as const,
+        }
+      : undefined;
+  const guidance: IdescatFilterGuidance = {
+    ...(placeMatches.length > 0 ? { place_matches: placeMatches } : {}),
+    ...(hasRecommendedFilters ? { recommended_filters: recommendedFilters } : {}),
+    ...(latest ? { latest } : {}),
+    ...(recommendedDataCall ? { recommended_data_call: recommendedDataCall } : {}),
+    ...(unresolvedPlaceTerms.length > 0 ? { unresolved_place_terms: unresolvedPlaceTerms } : {}),
+    ...(needsFilterDimensions.length > 0 ? { needs_filter_dimensions: needsFilterDimensions } : {}),
+  };
+
+  return Object.keys(guidance).length > 0 ? guidance : undefined;
+}
+
+function findPlaceMatches(
+  dimensions: IdescatDimensionMetadata[],
+  placeQuery?: string,
+): IdescatFilterGuidancePlaceMatch[] {
+  if (!placeQuery?.trim()) {
+    return [];
+  }
+
+  const queryTokens = normalizeSearchTerm(placeQuery).split(" ").filter(Boolean);
+
+  if (queryTokens.length === 0) {
+    return [];
+  }
+
+  const matches: IdescatFilterGuidancePlaceMatch[] = [];
+
+  for (const dimension of dimensions) {
+    if (dimension.role !== "geo") {
+      continue;
+    }
+
+    for (const category of dimension.categories) {
+      const categoryTokens = normalizeSearchTerm(category.label).split(" ").filter(Boolean);
+
+      if (categoryTokens.length === 0 || !containsTokenSequence(queryTokens, categoryTokens)) {
+        continue;
+      }
+
+      matches.push({
+        dimension_id: dimension.id,
+        dimension_label: dimension.label,
+        category_id: category.id,
+        category_label: category.label,
+      });
+    }
+  }
+
+  return matches;
+}
+
+function groupPlaceMatches(
+  matches: IdescatFilterGuidancePlaceMatch[],
+): Array<[string, IdescatFilterGuidancePlaceMatch[]]> {
+  const grouped = new Map<string, IdescatFilterGuidancePlaceMatch[]>();
+
+  for (const match of matches) {
+    grouped.set(match.dimension_id, [...(grouped.get(match.dimension_id) ?? []), match]);
+  }
+
+  return [...grouped.entries()];
+}
+
+function getSafeDefaultCategory(
+  dimension: IdescatDimensionMetadata,
+): IdescatDimensionCategory | undefined {
+  if (dimension.categories.length === 1) {
+    return dimension.categories[0];
+  }
+
+  return dimension.categories.find(
+    (category) => category.id === "TOTAL" || normalizeSearchTerm(category.label) === "total",
+  );
+}
+
+function findUnresolvedPlaceTerms(
+  placeQuery: string | undefined,
+  placeMatches: IdescatFilterGuidancePlaceMatch[],
+): string[] {
+  if (!placeQuery?.trim()) {
+    return [];
+  }
+
+  const matchedLabels = new Set(
+    placeMatches.map((match) => normalizeSearchTerm(match.category_label)),
+  );
+  const unresolved = findIdescatPlaceAliasesInText(placeQuery)
+    .filter((alias) => !matchedLabels.has(alias.tokens.join(" ")))
+    .map((alias) => alias.name);
+
+  if (unresolved.length > 0) {
+    return [...new Set(unresolved)];
+  }
+
+  return placeMatches.length === 0 ? [placeQuery.trim()] : [];
+}
+
+function containsTokenSequence(haystack: readonly string[], needle: readonly string[]): boolean {
+  if (needle.length > haystack.length) {
+    return false;
+  }
+
+  for (let index = 0; index <= haystack.length - needle.length; index += 1) {
+    if (needle.every((token, offset) => haystack[index + offset] === token)) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 function toDimensionMetadata(input: {
@@ -415,7 +632,7 @@ function flattenLinks(link: unknown): IdescatMetadataLink[] {
 
 function getConvenienceLinks(
   links: IdescatMetadataLink[],
-  input: Required<IdescatTableMetadataInput>,
+  input: NormalizedIdescatTableMetadataInput,
   requestUrl: URL,
 ): Pick<IdescatTableMetadata, "alternate_geographies" | "correction_links" | "related_tables"> {
   const correctionLinks = links.filter((link) => link.rel === "monitor");

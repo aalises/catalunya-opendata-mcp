@@ -40,7 +40,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
       title: "idescat.search_tables",
       description: [
         "Topic discovery for IDESCAT Tables v2.",
-        "Search by subject and optional geography words such as comarca, municipi, or provincia.",
+        "Search by subject and optional geography words or named places such as comarca, municipi, Maresme, Barcelonès, or Girona.",
         "Prefer results whose geo_candidates include the requested geo_id, then confirm with idescat_list_table_geos.",
         "Reuse the returned statistics_id, node_id, and table_id with idescat_list_table_geos.",
         "Search/list provenance is discovery-only; cite idescat_get_table_metadata or the metadata resource.",
@@ -130,8 +130,11 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
     "idescat_get_table_metadata",
     {
       title: "idescat.get_table_metadata",
-      description:
-        "Inspect an IDESCAT table after selecting geo_id with idescat_list_table_geos. Use returned dimension IDs and category IDs exactly in idescat_get_table_data filters; use this tool or its metadata resource for citations.",
+      description: [
+        "Inspect an IDESCAT table after selecting geo_id with idescat_list_table_geos.",
+        "Optionally pass place_query with the original user place phrase, such as Maresme or renda Girona, to receive filter_guidance.",
+        "Use returned dimension IDs, category IDs, and filter_guidance.recommended_data_call exactly in idescat_get_table_data filters; use this tool or its metadata resource for citations.",
+      ].join(" "),
       inputSchema: schemas.inputs.getTableMetadata,
       outputSchema: schemas.outputs.getTableMetadata,
     },
@@ -187,10 +190,10 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
             text: [
               "Use this prescriptive workflow for IDESCAT Tables v2 questions.",
               "",
-              "1. Search first with `idescat_search_tables` for topic discovery. Geography words such as comarca, municipi, or provincia can be included; prefer results whose `geo_candidates` include the requested geo_id. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
+              "1. Search first with `idescat_search_tables` for topic discovery. Geography words or named places such as comarca, municipi, Maresme, Barcelonès, or Girona can be included; prefer results whose `geo_candidates` include the requested geo_id. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
               "2. Call `idescat_list_table_geos` with the chosen statistics_id/node_id/table_id. For discovery workflows, continue only after a `geo_id` has been selected or supplied.",
-              "3. Call `idescat_get_table_metadata` with the selected geo_id. Use returned dimension IDs and category IDs exactly in `filters`; do not invent display-label filters.",
-              "4. Call `idescat_get_table_data` for a bounded extract. Prefer dimension filters and `last` over raising `limit`; do not use it as a full table export.",
+              "3. Call `idescat_get_table_metadata` with the selected geo_id. If the user named a place, pass the original phrase in `place_query`. Use returned dimension IDs and category IDs exactly in `filters`; prefer `filter_guidance` when present; do not invent display-label filters.",
+              "4. Call `idescat_get_table_data` for a bounded extract. Prefer `filter_guidance.recommended_data_call` when present, then dimension filters and `last` over raising `limit`; do not use it as a full table export.",
               "5. Cite `idescat_get_table_metadata` output or the `idescat://tables/{statistics_id}/{node_id}/{table_id}/{geo_id}/metadata` resource. Treat search/list provenance as discovery-only.",
               "",
               "Recovery rules:",
@@ -349,6 +352,50 @@ function createIdescatSchemas() {
     breaks: z.array(dimensionBreakSchema).optional(),
     extensions: jsonObjectSchema.optional(),
   });
+  const filterValueSchema = z.union([z.string(), z.array(z.string())]);
+  const filterGuidanceSchema = z.object({
+    place_matches: z
+      .array(
+        z.object({
+          dimension_id: z.string(),
+          dimension_label: z.string(),
+          category_id: z.string(),
+          category_label: z.string(),
+        }),
+      )
+      .optional(),
+    recommended_filters: z.record(filterValueSchema).optional(),
+    latest: z
+      .object({
+        last: z.literal(1),
+        time_dimension_ids: z.array(z.string()),
+      })
+      .optional(),
+    recommended_data_call: z
+      .object({
+        filters: z.record(filterValueSchema).optional(),
+        last: z.literal(1).optional(),
+        limit: z.literal(20),
+      })
+      .optional(),
+    unresolved_place_terms: z.array(z.string()).optional(),
+    needs_filter_dimensions: z
+      .array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+          role: z.enum(["geo", "metric", "time"]).optional(),
+          size: z.number().int().nonnegative(),
+          candidates: z.array(
+            z.object({
+              id: z.string(),
+              label: z.string(),
+            }),
+          ),
+        }),
+      )
+      .optional(),
+  });
   const unitsSchema = z
     .object({
       default: unitSchema.optional(),
@@ -368,6 +415,7 @@ function createIdescatSchemas() {
     statistical_sources: z.array(z.string()).optional(),
     notes: z.array(z.string()).optional(),
     dimensions: z.array(dimensionSchema),
+    filter_guidance: filterGuidanceSchema.optional(),
     units: unitsSchema.optional(),
     status_labels: statusLabelsSchema.optional(),
     links: z.array(metadataLinkSchema).optional(),
@@ -434,7 +482,6 @@ function createIdescatSchemas() {
     source_collection_urls: z.array(z.string()),
     results: z.array(searchCardSchema),
   });
-  const filterValueSchema = z.union([z.string(), z.array(z.string())]);
   const dataRowSchema = z.object({
     value: z.number().nullable(),
     dimensions: z.record(
@@ -511,6 +558,7 @@ function createIdescatSchemas() {
         table_id: idSchema,
         geo_id: idSchema,
         lang: idescatLangSchema,
+        place_query: z.string().trim().min(1).optional(),
       },
       getTableData: {
         statistics_id: idSchema,

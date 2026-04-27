@@ -1,4 +1,5 @@
 import { normalizeSearchTerm } from "./search-normalize.js";
+import { IDESCAT_PLACE_ALIASES } from "./search-places.js";
 
 export const CANONICAL_GEO_ORDER = ["cat", "prov", "at", "com", "mun", "ac", "dis", "sec"] as const;
 
@@ -9,7 +10,7 @@ export interface IdescatDiscoveryQueryAnalysis {
 }
 
 interface GeoAlias {
-  geoId: string;
+  geoIds: string[];
   tokens: string[];
 }
 
@@ -45,7 +46,19 @@ const GEO_ALIASES: GeoAlias[] = [
   alias("districtes", "dis"),
   alias("district", "dis"),
   alias("districts", "dis"),
-].sort((left, right) => right.tokens.length - left.tokens.length);
+];
+
+const DISCOVERY_ALIASES: GeoAlias[] = [...GEO_ALIASES, ...IDESCAT_PLACE_ALIASES].sort(
+  (left, right) => {
+    if (right.tokens.length !== left.tokens.length) {
+      return right.tokens.length - left.tokens.length;
+    }
+
+    const leftText = left.tokens.join(" ");
+    const rightText = right.tokens.join(" ");
+    return leftText < rightText ? -1 : leftText > rightText ? 1 : 0;
+  },
+);
 
 const CANONICAL_GEO_POSITION = new Map<string, number>(
   CANONICAL_GEO_ORDER.map((geoId, index) => [geoId, index]),
@@ -58,7 +71,7 @@ export function analyzeIdescatDiscoveryQuery(query: string): IdescatDiscoveryQue
   const requestedGeoIds: string[] = [];
 
   for (let index = 0; index < tokens.length; ) {
-    const match = GEO_ALIASES.find((candidate) => matchesAt(tokens, index, candidate.tokens));
+    const match = DISCOVERY_ALIASES.find((candidate) => matchesAt(tokens, index, candidate.tokens));
 
     if (!match) {
       topicTokens.push(tokens[index] ?? "");
@@ -67,7 +80,9 @@ export function analyzeIdescatDiscoveryQuery(query: string): IdescatDiscoveryQue
     }
 
     geoTokens.push(...match.tokens);
-    pushUnique(requestedGeoIds, match.geoId);
+    for (const geoId of match.geoIds) {
+      pushUnique(requestedGeoIds, geoId);
+    }
     index += match.tokens.length;
   }
 
@@ -91,7 +106,7 @@ export function orderGeoCandidates(
 
 function alias(value: string, geoId: string): GeoAlias {
   return {
-    geoId,
+    geoIds: [geoId],
     tokens: normalizeSearchTerm(value).split(" ").filter(Boolean),
   };
 }

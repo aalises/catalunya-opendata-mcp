@@ -70,12 +70,12 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `socrata_search_datasets` | Search the Catalunya Socrata catalog and return dataset IDs, titles, web URLs, API endpoints, update times, and provenance. |
 | `socrata_describe_dataset` | Fetch dataset metadata, license or terms, timestamps, attribution, and queryable column `field_name` values. |
 | `socrata_query_dataset` | Query dataset rows with raw SODA clause values: `select`, `where`, `group`, `order`, `limit`, and `offset`. |
-| `idescat_search_tables` | Search the committed IDESCAT Tables v2 index and return table IDs plus hierarchy labels. For exhaustive discovery, use `idescat_list_*` to browse statistics, nodes, tables, and geos directly from IDESCAT. |
+| `idescat_search_tables` | Search the committed IDESCAT Tables v2 index and return table IDs plus hierarchy labels. Geography words and named places are mapped to `geo_candidates`. For exhaustive discovery, use `idescat_list_*` to browse statistics, nodes, tables, and geos directly from IDESCAT. |
 | `idescat_list_statistics` | List top-level IDESCAT statistics. |
 | `idescat_list_nodes` | List nodes under an IDESCAT statistic. |
 | `idescat_list_tables` | List tables under an IDESCAT statistic node. |
 | `idescat_list_table_geos` | List territorial divisions available for an IDESCAT table. |
-| `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, sources, links, and provenance. |
+| `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, filter guidance, sources, links, and provenance. |
 | `idescat_get_table_data` | Fetch a bounded flattened data extract using IDESCAT dimension/category filters and `_LAST_`. |
 
 ### Prompts
@@ -178,7 +178,32 @@ Use `socrata_citation` with `socrata_describe_dataset` output or the metadata re
 
 ## IDESCAT Workflow
 
-Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Search can recognize geography words such as `comarca`, `municipi`, and `provincia`; prefer results whose `geo_candidates` include the requested geography, then confirm the `geo_id` with `idescat_list_table_geos`. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
+Use `idescat_search_tables` for topic discovery, or browse with `idescat_list_statistics`, `idescat_list_nodes`, and `idescat_list_tables`. Search can recognize geography words such as `comarca`, `municipi`, and `provincia`, plus named places such as `Maresme`, `Barcelonès`, and `Girona`; prefer results whose `geo_candidates` include the requested geography, then confirm the `geo_id` with `idescat_list_table_geos`. Every metadata and data request requires a territorial division, so call `idescat_list_table_geos` before fetching a table.
+
+Named-place workflow example:
+
+```json
+{
+  "query": "renda Maresme",
+  "lang": "ca",
+  "limit": 5
+}
+```
+
+After choosing an RFDBC result with `com` in `geo_candidates`, call `idescat_list_table_geos` and select `geo_id: "com"`. Then pass the original place phrase into metadata:
+
+```json
+{
+  "statistics_id": "rfdbc",
+  "node_id": "13302",
+  "table_id": "21197",
+  "geo_id": "com",
+  "lang": "ca",
+  "place_query": "Maresme"
+}
+```
+
+When `filter_guidance.recommended_data_call` is present, use it as the starting point for `idescat_get_table_data`; it contains only actual metadata category IDs and neutral defaults such as `TOTAL` or single-category dimensions.
 
 Call `idescat_get_table_metadata` before querying. Use the returned dimension IDs and category IDs in `idescat_get_table_data.filters`, and use `last` to request the latest time periods:
 

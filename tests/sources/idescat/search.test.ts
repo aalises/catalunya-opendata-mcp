@@ -168,6 +168,18 @@ const entries: IdescatSearchIndexEntry[] = [
     source_url: "https://api.idescat.cat/taules/v2/afi/21424/25320?lang=ca",
   },
   {
+    statistics_id: "rfdbc",
+    node_id: "13301",
+    table_id: "14148",
+    label: "RFDB i RFDB per habitant. Revisió estadística 2019",
+    ancestor_labels: {
+      statistic: "Renda familiar disponible bruta territorial",
+      node: "RFDB i RFDB per habitant",
+    },
+    geo_ids: ["cat", "com", "mun"],
+    source_url: "https://api.idescat.cat/taules/v2/rfdbc/13301/14148?lang=ca",
+  },
+  {
     statistics_id: "ispat",
     node_id: "14664",
     table_id: "20433",
@@ -231,6 +243,31 @@ describe("rankIdescatSearchResults", () => {
       requestedGeoIds: ["mun"],
       geoTokens: ["municipi"],
     });
+    expect(analyzeIdescatDiscoveryQuery("atur Maresme")).toEqual({
+      topicTokens: ["atur"],
+      requestedGeoIds: ["com"],
+      geoTokens: ["maresme"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("poblacio Barcelonès")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["com"],
+      geoTokens: ["barcelones"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("poblacio Barcelones")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["com"],
+      geoTokens: ["barcelones"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("renda Girona")).toEqual({
+      topicTokens: ["renda"],
+      requestedGeoIds: ["prov", "mun"],
+      geoTokens: ["girona"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("poblacio l'Ametlla de Mar")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["mun"],
+      geoTokens: ["l", "ametlla", "de", "mar"],
+    });
   });
 
   it("orders requested geo candidates first without exposing unknown ordering drift", () => {
@@ -251,6 +288,8 @@ describe("rankIdescatSearchResults", () => {
     ["poblacio municipi", "pmh"],
     ["afiliacions comarca", "afi"],
     ["atur comarca", "e03"],
+    ["atur Maresme", "e03"],
+    ["renda Girona", "rfdbc"],
   ])("puts the canonical statistic first for %s", (query, statisticsId) => {
     const results = rankIdescatSearchResults(entries, query);
 
@@ -260,6 +299,8 @@ describe("rankIdescatSearchResults", () => {
   it.each([
     ["poblacio comarca", "com"],
     ["poblacio municipi", "mun"],
+    ["poblacio Barcelonès", "com"],
+    ["renda Girona", "mun"],
   ])("keeps the requested geography first for %s", (query, geoId) => {
     const analysis = analyzeIdescatDiscoveryQuery(query);
     const results = rankIdescatSearchResults(entries, query, analysis);
@@ -322,6 +363,8 @@ describe("rankIdescatSearchResults", () => {
       ["covid 19", "covid"],
       ["atur ocupacio", "e03"],
       ["poblacio comarca", "pmh"],
+      ["poblacio Barcelonès", "pmh"],
+      ["renda Girona", "rfdbc"],
     ])("ranks %s with %s first", (query, statisticsId) => {
       const results = rankIdescatSearchResults(caEntries, query);
 
@@ -336,6 +379,25 @@ describe("rankIdescatSearchResults", () => {
       expect(first?.geo_candidates).toContain("com");
       expect(first?.geo_candidates?.[0]).toBe("com");
       expect(first).not.toHaveProperty("geo_ids");
+    });
+
+    it("uses named comarques as geo intent for real population discovery", async () => {
+      const result = await searchIdescatTables({ query: "poblacio Barcelonès", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("pmh");
+      expect(first?.geo_candidates).toContain("com");
+      expect(first?.geo_candidates?.[0]).toBe("com");
+    });
+
+    it("uses ambiguous municipality/province names as recoverable geo intent", async () => {
+      const result = await searchIdescatTables({ query: "renda Girona", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("rfdbc");
+      expect(first?.geo_candidates).not.toBeNull();
+      expect(first?.geo_candidates).toContain("mun");
+      expect(first?.geo_candidates?.[0]).toBe("mun");
     });
 
     it("keeps real atur comarca discovery recoverable even when geography is unavailable", async () => {
@@ -404,12 +466,6 @@ describe("rankIdescatSearchResults", () => {
     it("does not solve English substring leakage for population by age", () => {
       expect(rankIdescatSearchResults(enEntries, "population by age")[0]?.entry.statistics_id).toBe(
         "pmh",
-      );
-    });
-
-    it("does not resolve named places such as atur Maresme", () => {
-      expect(rankIdescatSearchResults(caEntries, "atur maresme")[0]?.entry.statistics_id).toBe(
-        "e03",
       );
     });
   });

@@ -10,7 +10,7 @@ import {
   createIdescatOperationProvenance,
   type IdescatOperationProvenance,
   type IdescatTableMetadata,
-  type IdescatTableMetadataInput,
+  type IdescatTableTupleInput,
   parseIdescatTableMetadata,
 } from "./metadata.js";
 import {
@@ -20,7 +20,7 @@ import {
   safePathSegment,
 } from "./request.js";
 
-export interface IdescatTableDataInput extends IdescatTableMetadataInput {
+export interface IdescatTableDataInput extends IdescatTableTupleInput {
   filters?: Record<string, unknown>;
   last?: number;
   limit?: number;
@@ -68,7 +68,7 @@ export interface IdescatTableDataResult {
 
 interface NormalizedDataInput
   extends Required<
-    Pick<IdescatTableMetadataInput, "geo_id" | "lang" | "node_id" | "statistics_id" | "table_id">
+    Pick<IdescatTableTupleInput, "geo_id" | "lang" | "node_id" | "statistics_id" | "table_id">
   > {
   filters?: Record<string, unknown>;
   last?: number;

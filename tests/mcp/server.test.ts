@@ -76,6 +76,7 @@ describe("createMcpServer", () => {
           .map((tool) => [tool.name, tool.description ?? ""]),
       );
       expect(descriptions.idescat_search_tables).toContain("Topic discovery");
+      expect(descriptions.idescat_search_tables).toContain("named places");
       expect(descriptions.idescat_search_tables).toContain("idescat_list_table_geos");
       expect(descriptions.idescat_search_tables).toContain("geo_candidates");
       expect(descriptions.idescat_list_statistics).toContain("Browse fallback");
@@ -86,6 +87,8 @@ describe("createMcpServer", () => {
       expect(descriptions.idescat_list_table_geos).toContain("Required bridge");
       expect(descriptions.idescat_list_table_geos).toContain("idescat_get_table_metadata");
       expect(descriptions.idescat_get_table_metadata).toContain("dimension IDs");
+      expect(descriptions.idescat_get_table_metadata).toContain("place_query");
+      expect(descriptions.idescat_get_table_metadata).toContain("filter_guidance");
       expect(descriptions.idescat_get_table_metadata).toContain("idescat_get_table_data");
       expect(descriptions.idescat_get_table_data).toContain("bounded");
       expect(descriptions.idescat_get_table_data).toContain("idescat_get_table_metadata");
@@ -136,6 +139,8 @@ describe("createMcpServer", () => {
       expect(dataIndex).toBeGreaterThan(metadataIndex);
       expect(citationIndex).toBeGreaterThan(dataIndex);
       expect(text).toContain("Use returned dimension IDs and category IDs exactly");
+      expect(text).toContain("place_query");
+      expect(text).toContain("filter_guidance.recommended_data_call");
       expect(text).toContain("Treat search/list provenance as discovery-only");
       expect(text).toContain("geo_candidates");
       expect(text).toContain("do not invent a geo_id");
@@ -188,6 +193,65 @@ describe("createMcpServer", () => {
         | undefined;
       expect(first?.results?.[0]).not.toHaveProperty("geo_ids");
       expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns IDESCAT metadata filter guidance for named-place queries", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify(idescatGuidanceMetadata()), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_get_table_metadata",
+        arguments: {
+          statistics_id: "rfdbc",
+          node_id: "13302",
+          table_id: "21197",
+          geo_id: "com",
+          place_query: "renda Maresme",
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBeUndefined();
+      expect(toolResult.structuredContent).toMatchObject({
+        data: {
+          filter_guidance: {
+            place_matches: [
+              {
+                dimension_id: "COM",
+                category_id: "21",
+                category_label: "Maresme",
+              },
+            ],
+            recommended_filters: {
+              COM: "21",
+              CONCEPT: "GROSS_INCOME",
+              MAIN_RESOURCES_USES_INCOME: "TOTAL",
+            },
+            latest: {
+              last: 1,
+              time_dimension_ids: ["YEAR"],
+            },
+            recommended_data_call: {
+              filters: {
+                COM: "21",
+                CONCEPT: "GROSS_INCOME",
+                MAIN_RESOURCES_USES_INCOME: "TOTAL",
+              },
+              last: 1,
+              limit: 20,
+            },
+          },
+        },
+      });
     } finally {
       await close();
     }
@@ -946,5 +1010,71 @@ function viewMetadata() {
         fieldName: "municipi",
       },
     ],
+  };
+}
+
+function idescatGuidanceMetadata() {
+  return {
+    version: "2.0",
+    class: "dataset",
+    label: "Components de la RFDB",
+    id: ["YEAR", "COM", "CONCEPT", "INDICATOR", "MAIN_RESOURCES_USES_INCOME"],
+    size: [2, 2, 1, 2, 2],
+    role: {
+      time: ["YEAR"],
+      geo: ["COM"],
+      metric: ["CONCEPT", "INDICATOR"],
+    },
+    dimension: {
+      YEAR: {
+        label: "any",
+        category: {
+          index: ["2022", "2023"],
+          label: {
+            "2022": "2022",
+            "2023": "2023",
+          },
+        },
+      },
+      COM: {
+        label: "comarca o Aran",
+        category: {
+          index: ["13", "21"],
+          label: {
+            "13": "Barcelonès",
+            "21": "Maresme",
+          },
+        },
+      },
+      CONCEPT: {
+        label: "concepte",
+        category: {
+          index: ["GROSS_INCOME"],
+          label: {
+            GROSS_INCOME: "renda familiar disponible bruta",
+          },
+        },
+      },
+      INDICATOR: {
+        label: "indicador",
+        category: {
+          index: ["VALUE_EK", "REL_WEIGHT_SG"],
+          label: {
+            VALUE_EK: "valor (milers €)",
+            REL_WEIGHT_SG: "pes (%)",
+          },
+        },
+      },
+      MAIN_RESOURCES_USES_INCOME: {
+        label: "components de la renda",
+        category: {
+          index: ["COMP_EMPL", "TOTAL"],
+          label: {
+            COMP_EMPL: "remuneració d'assalariats (+)",
+            TOTAL: "total",
+          },
+        },
+      },
+    },
   };
 }
