@@ -175,7 +175,7 @@ export function rankIdescatSearchResults(
           return null;
         }
 
-        return normHaystack.includes(token) ? "substring" : null;
+        return hasPrefixSubstringMatch(haystackTokens, token) ? "substring" : null;
       };
 
       const scoreToken = (token: string): number => {
@@ -339,6 +339,12 @@ export function rankIdescatSearchResults(
 
 function stripStop(tokens: readonly string[]): string[] {
   return tokens.filter((token) => token.length > 0 && !STOP_TOKENS.has(token));
+}
+
+function hasPrefixSubstringMatch(haystackTokens: readonly string[], token: string): boolean {
+  return haystackTokens.some((haystackToken) => {
+    return haystackToken.length > token.length && haystackToken.startsWith(token);
+  });
 }
 
 function compareSemanticGroupMatches(left: SemanticGroupMatch, right: SemanticGroupMatch): number {

@@ -356,14 +356,24 @@ describe("rankIdescatSearchResults", () => {
     expect(results[0]?.entry.geo_ids).toContain("com");
   });
 
-  it("does not geo-boost substring-only topic matches", () => {
+  it("does not surface infix-only topic matches for geo-aware queries", () => {
     const results = rankIdescatSearchResults(entries, "atur comarca");
 
     expect(results[0]?.entry.statistics_id).toBe("e03");
     expect(results[0]?.entry.label).toContain("atur");
-    expect(results.findIndex((result) => result.entry.statistics_id === "ispat")).toBeGreaterThan(
-      0,
-    );
+    expect(results.some((result) => result.entry.statistics_id === "ispat")).toBe(false);
+  });
+
+  it("does not accept infix-only substring matches as eligibility", () => {
+    const ispatEntry = entries.find((entry) => entry.statistics_id === "ispat");
+
+    if (!ispatEntry) {
+      throw new Error("Expected synthetic ISPAT entry.");
+    }
+
+    const results = rankIdescatSearchResults([ispatEntry], "atur");
+
+    expect(results).toEqual([]);
   });
 
   it("keeps canonical priority ahead of lower-priority original-token alias matches", () => {
@@ -568,6 +578,7 @@ describe("rankIdescatSearchResults", () => {
   describe("real EN index regressions", () => {
     it.each([
       ["municipal population register", "pmh"],
+      ["population by age", "pmh"],
       ["population sex age", "pmh"],
       ["family income", "rfdbc"],
       ["income of household", "rfdbc"],
@@ -586,14 +597,6 @@ describe("rankIdescatSearchResults", () => {
       const results = rankIdescatSearchResults(esEntries, query);
 
       expect(results[0]?.entry.statistics_id).toBe(statisticsId);
-    });
-  });
-
-  describe.skip("acknowledged search limitations", () => {
-    it("does not solve English substring leakage for population by age", () => {
-      expect(rankIdescatSearchResults(enEntries, "population by age")[0]?.entry.statistics_id).toBe(
-        "pmh",
-      );
     });
   });
 
