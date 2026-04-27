@@ -144,7 +144,8 @@ export function rankIdescatSearchResults(
   query: string,
   analysis: IdescatDiscoveryQueryAnalysis = analyzeIdescatDiscoveryQuery(query),
 ): Array<{ entry: IdescatSearchIndexEntry; score: number }> {
-  const semanticGroups = buildIdescatSemanticTopicGroups(analysis.topicTokens);
+  const topicTokens = stripTemporalSearchTokens(analysis.topicTokens);
+  const semanticGroups = buildIdescatSemanticTopicGroups(topicTokens);
 
   if (semanticGroups.length === 0) {
     return [];
@@ -341,10 +342,62 @@ function stripStop(tokens: readonly string[]): string[] {
   return tokens.filter((token) => token.length > 0 && !STOP_TOKENS.has(token));
 }
 
+const TEMPORAL_YEAR_TOKEN_REGEX = /^(?:18|19|20)\d{2}$/u;
+
+const TEMPORAL_PHRASES: readonly (readonly string[])[] = [
+  ["most", "recent"],
+  ["last", "year"],
+  ["latest", "year"],
+  ["ultim", "any"],
+  ["darrer", "any"],
+  ["ultim", "periode"],
+  ["darrer", "periode"],
+  ["ultimo", "ano"],
+  ["ultimo", "periodo"],
+  ["serie", "historica"],
+  ["series", "historicas"],
+  ["historical", "series"],
+  ["time", "series"],
+  ["latest"],
+];
+
+function stripTemporalSearchTokens(tokens: readonly string[]): string[] {
+  const stripped: string[] = [];
+
+  for (let index = 0; index < tokens.length; ) {
+    const phrase = TEMPORAL_PHRASES.find((candidate) => matchesAt(tokens, index, candidate));
+
+    if (phrase !== undefined) {
+      index += phrase.length;
+      continue;
+    }
+
+    const token = tokens[index] ?? "";
+
+    if (TEMPORAL_YEAR_TOKEN_REGEX.test(token)) {
+      index += 1;
+      continue;
+    }
+
+    stripped.push(token);
+    index += 1;
+  }
+
+  return stripped;
+}
+
 function hasPrefixSubstringMatch(haystackTokens: readonly string[], token: string): boolean {
   return haystackTokens.some((haystackToken) => {
     return haystackToken.length > token.length && haystackToken.startsWith(token);
   });
+}
+
+function matchesAt(
+  tokens: readonly string[],
+  index: number,
+  candidate: readonly string[],
+): boolean {
+  return candidate.every((token, offset) => tokens[index + offset] === token);
 }
 
 function compareSemanticGroupMatches(left: SemanticGroupMatch, right: SemanticGroupMatch): number {

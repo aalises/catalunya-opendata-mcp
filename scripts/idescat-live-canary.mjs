@@ -16,6 +16,7 @@ const NON_PMH_EXPECTED_STATISTICS_ID = "rfdbc";
 const NON_PMH_PLACE_QUERY = "Maresme";
 const SEMANTIC_UNEMPLOYMENT_QUERY = "taxa atur";
 const SEMANTIC_INCOME_PLACE_QUERY = "renda per capita Maresme";
+const SEMANTIC_INCOME_PLACE_WITH_YEAR_QUERY = "renda per capita Maresme 2021";
 const EN_POPULATION_AGE_QUERY = "population by age";
 
 const transport = new StdioClientTransport({
@@ -228,6 +229,26 @@ try {
     )}.`,
   );
 
+  const temporalIncomeSearch = await callTool("idescat_search_tables", {
+    query: SEMANTIC_INCOME_PLACE_WITH_YEAR_QUERY,
+    lang: "ca",
+    limit: 3,
+  });
+  const temporalIncomeTable = temporalIncomeSearch.data.results[0];
+
+  assert(
+    temporalIncomeTable?.statistics_id === NON_PMH_EXPECTED_STATISTICS_ID,
+    `Expected ${SEMANTIC_INCOME_PLACE_WITH_YEAR_QUERY} top result to be ${NON_PMH_EXPECTED_STATISTICS_ID}, got ${formatTableId(
+      temporalIncomeTable,
+    )}.`,
+  );
+  assert(
+    temporalIncomeTable.geo_candidates?.[0] === GEO_AWARE_GEO_ID,
+    `Expected ${SEMANTIC_INCOME_PLACE_WITH_YEAR_QUERY} top result to prefer geo candidate ${GEO_AWARE_GEO_ID}, got ${JSON.stringify(
+      temporalIncomeTable.geo_candidates ?? null,
+    )}.`,
+  );
+
   const englishPopulationAgeSearch = await callTool("idescat_search_tables", {
     query: EN_POPULATION_AGE_QUERY,
     lang: "en",
@@ -330,6 +351,11 @@ try {
         query: semanticIncomeSearch.data.query,
         selected: pickTableSummary(semanticIncomeTable),
         geo_candidates: semanticIncomeTable.geo_candidates,
+      },
+      temporal_income_place: {
+        query: temporalIncomeSearch.data.query,
+        selected: pickTableSummary(temporalIncomeTable),
+        geo_candidates: temporalIncomeTable.geo_candidates,
       },
       english_population_age: {
         query: englishPopulationAgeSearch.data.query,

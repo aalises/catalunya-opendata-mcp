@@ -406,6 +406,25 @@ describe("rankIdescatSearchResults", () => {
     expect(rankIdescatSearchResults(entries, "comarca")).toEqual([]);
   });
 
+  it.each([
+    "2021",
+    "latest",
+    "serie historica",
+  ])("returns no results for temporal-only queries: %s", (query) => {
+    expect(rankIdescatSearchResults(entries, query)).toEqual([]);
+  });
+
+  it.each([
+    "renda per capita Maresme 2021",
+    "renda per capita Maresme latest",
+    "renda per capita Maresme ultim any",
+    "renda per capita Maresme serie historica",
+  ])("ignores conservative temporal tokens during table discovery for %s", (query) => {
+    const results = rankIdescatSearchResults(entries, query);
+
+    expect(results[0]?.entry.statistics_id).toBe("rfdbc");
+  });
+
   it.each(["pmh", "pmh 8078", "8078"])("matches direct identifiers for %s", (query) => {
     const results = rankIdescatSearchResults(entries, query);
 
@@ -414,6 +433,14 @@ describe("rankIdescatSearchResults", () => {
     if (query !== "pmh") {
       expect(results[0]?.entry.table_id).toBe("8078");
     }
+  });
+
+  it("preserves direct identifier lookup when temporal noise is present", () => {
+    const results = rankIdescatSearchResults(entries, "pmh 8078 2021");
+
+    expect(results).toHaveLength(1);
+    expect(results[0]?.entry.statistics_id).toBe("pmh");
+    expect(results[0]?.entry.table_id).toBe("8078");
   });
 
   it("prefers the open-ended table within a statistic", () => {
@@ -529,6 +556,20 @@ describe("rankIdescatSearchResults", () => {
         { query: "renda per capita Maresme", limit: 1 },
         config,
       );
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("rfdbc");
+      expect(first?.geo_candidates).not.toBeNull();
+      expect(first?.geo_candidates?.[0]).toBe("com");
+    });
+
+    it.each([
+      "renda per capita Maresme 2021",
+      "renda per capita Maresme latest",
+      "renda per capita Maresme ultim any",
+      "renda per capita Maresme serie historica",
+    ])("keeps real RFDBC discovery recoverable with temporal tokens: %s", async (query) => {
+      const result = await searchIdescatTables({ query, limit: 1 }, config);
       const first = result.data.results[0];
 
       expect(first?.statistics_id).toBe("rfdbc");
