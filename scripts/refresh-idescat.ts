@@ -447,15 +447,25 @@ function renderFlatLanguageIndex(index: IdescatGeneratedLanguageIndex): string {
 }
 
 function renderEntriesModule(entries: IdescatSearchIndexEntry[], typeImport: string): string {
+  const renderedEntries = renderGeneratedEntries(entries);
+
   return [
     `import type { IdescatSearchIndexEntry } from ${JSON.stringify(typeImport)};`,
     "",
     "// biome-ignore format: generated search-index entries",
-    `const entries: IdescatSearchIndexEntry[] = ${JSON.stringify(entries, null, 2)};`,
+    `const entries: IdescatSearchIndexEntry[] = ${renderedEntries};`,
     "",
     "export default entries;",
     "",
   ].join("\n");
+}
+
+function renderGeneratedEntries(entries: IdescatSearchIndexEntry[]): string {
+  if (entries.length === 0) {
+    return "[]";
+  }
+
+  return ["[", entries.map((entry) => `  ${JSON.stringify(entry)}`).join(",\n"), "]"].join("\n");
 }
 
 function groupEntriesByStatistic(
