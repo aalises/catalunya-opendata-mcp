@@ -15,6 +15,8 @@ Open data portals are rich, but they are not always pleasant to explore from a c
 
 Every data-returning tool includes provenance, response caps, and structured errors so the model can recover from bad filters instead of guessing.
 
+For copy-paste task examples, see [`COOKBOOK.md`](./COOKBOOK.md).
+
 ## Requirements
 
 - Node.js 22.12 or newer
