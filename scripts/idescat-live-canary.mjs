@@ -9,6 +9,8 @@ const EXPECTED_STATISTICS_ID = "pmh";
 const EXPECTED_NODE_ID = "1180";
 const EXPECTED_TABLE_ID = "8078";
 const PREFERRED_GEO_ID = "cat";
+const GEO_QUERY = "poblacio comarca";
+const GEO_AWARE_GEO_ID = "com";
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -74,6 +76,55 @@ try {
   assert(data.data.row_count > 0, "Expected at least one data row.");
   assert(data.data.rows.length > 0, "Expected returned rows to be non-empty.");
 
+  const geoAwareSearch = await callTool("idescat_search_tables", {
+    query: GEO_QUERY,
+    lang: "ca",
+    limit: 5,
+  });
+  const geoAwareTable = geoAwareSearch.data.results[0];
+
+  assert(
+    geoAwareTable?.geo_candidates?.includes(GEO_AWARE_GEO_ID),
+    `Expected ${GEO_QUERY} top result to include geo candidate ${GEO_AWARE_GEO_ID}, got ${JSON.stringify(
+      geoAwareTable?.geo_candidates ?? null,
+    )}.`,
+  );
+
+  const geoAwareGeos = await callTool("idescat_list_table_geos", {
+    statistics_id: geoAwareTable.statistics_id,
+    node_id: geoAwareTable.node_id,
+    table_id: geoAwareTable.table_id,
+    lang: "ca",
+    limit: 20,
+  });
+  const geoAwareGeo = geoAwareGeos.data.items.find((item) => item.geo_id === GEO_AWARE_GEO_ID);
+
+  assert(
+    geoAwareGeo !== undefined,
+    `Expected ${formatTableId(geoAwareTable)} to expose ${GEO_AWARE_GEO_ID}.`,
+  );
+
+  const geoAwareMetadata = await callTool("idescat_get_table_metadata", {
+    statistics_id: geoAwareTable.statistics_id,
+    node_id: geoAwareTable.node_id,
+    table_id: geoAwareTable.table_id,
+    geo_id: geoAwareGeo.geo_id,
+    lang: "ca",
+  });
+  const geoAwareFilters = buildTinyFilters(geoAwareMetadata.data.dimensions);
+  const geoAwareData = await callTool("idescat_get_table_data", {
+    statistics_id: geoAwareTable.statistics_id,
+    node_id: geoAwareTable.node_id,
+    table_id: geoAwareTable.table_id,
+    geo_id: geoAwareGeo.geo_id,
+    lang: "ca",
+    filters: geoAwareFilters,
+    last: 1,
+    limit: 3,
+  });
+
+  assert(geoAwareData.data.row_count > 0, "Expected geo-aware journey to return data rows.");
+
   const summary = {
     ok: true,
     workflow: [
@@ -116,6 +167,21 @@ try {
       source_url: metadata.data.provenance.source_url,
       last_updated: metadata.data.last_updated ?? metadata.data.provenance.last_updated,
       license_or_terms: metadata.data.provenance.license_or_terms,
+    },
+    geo_aware: {
+      query: geoAwareSearch.data.query,
+      selected: pickTableSummary(geoAwareTable),
+      geo_candidates: geoAwareTable.geo_candidates,
+      selected_geo: {
+        geo_id: geoAwareGeo.geo_id,
+        label: geoAwareGeo.label,
+      },
+      data: {
+        filters: geoAwareFilters,
+        selected_cell_count: geoAwareData.data.selected_cell_count,
+        row_count: geoAwareData.data.row_count,
+        first_row: geoAwareData.data.rows[0],
+      },
     },
   };
 

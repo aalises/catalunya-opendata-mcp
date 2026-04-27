@@ -40,7 +40,9 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
       title: "idescat.search_tables",
       description: [
         "Topic discovery for IDESCAT Tables v2.",
-        "Search by subject, then reuse the returned statistics_id, node_id, and table_id with idescat_list_table_geos.",
+        "Search by subject and optional geography words such as comarca, municipi, or provincia.",
+        "Prefer results whose geo_candidates include the requested geo_id, then confirm with idescat_list_table_geos.",
+        "Reuse the returned statistics_id, node_id, and table_id with idescat_list_table_geos.",
         "Search/list provenance is discovery-only; cite idescat_get_table_metadata or the metadata resource.",
       ].join(" "),
       inputSchema: schemas.inputs.searchTables,
@@ -185,7 +187,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
             text: [
               "Use this prescriptive workflow for IDESCAT Tables v2 questions.",
               "",
-              "1. Search first with `idescat_search_tables` for topic discovery. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
+              "1. Search first with `idescat_search_tables` for topic discovery. Geography words such as comarca, municipi, or provincia can be included; prefer results whose `geo_candidates` include the requested geo_id. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
               "2. Call `idescat_list_table_geos` with the chosen statistics_id/node_id/table_id. For discovery workflows, continue only after a `geo_id` has been selected or supplied.",
               "3. Call `idescat_get_table_metadata` with the selected geo_id. Use returned dimension IDs and category IDs exactly in `filters`; do not invent display-label filters.",
               "4. Call `idescat_get_table_data` for a bounded extract. Prefer dimension filters and `last` over raising `limit`; do not use it as a full table export.",
@@ -193,6 +195,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
               "",
               "Recovery rules:",
               "- Empty search: broaden terms or use the browse path.",
+              "- Requested geography absent: try another search result or explain the available geographies from idescat_list_table_geos; do not invent a geo_id.",
               "- No geos: try another table from search/list; metadata/data require geo_id.",
               "- `invalid_input`: reuse IDs returned by IDESCAT search/list/geos/metadata tools.",
               "- `narrow_filters`: call metadata, then retry data with dimension filters or `last`.",

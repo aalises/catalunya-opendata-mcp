@@ -77,6 +77,7 @@ describe("createMcpServer", () => {
       );
       expect(descriptions.idescat_search_tables).toContain("Topic discovery");
       expect(descriptions.idescat_search_tables).toContain("idescat_list_table_geos");
+      expect(descriptions.idescat_search_tables).toContain("geo_candidates");
       expect(descriptions.idescat_list_statistics).toContain("Browse fallback");
       expect(descriptions.idescat_list_statistics).toContain("idescat_list_nodes");
       expect(descriptions.idescat_list_nodes).toContain("idescat_list_statistics");
@@ -136,6 +137,8 @@ describe("createMcpServer", () => {
       expect(citationIndex).toBeGreaterThan(dataIndex);
       expect(text).toContain("Use returned dimension IDs and category IDs exactly");
       expect(text).toContain("Treat search/list provenance as discovery-only");
+      expect(text).toContain("geo_candidates");
+      expect(text).toContain("do not invent a geo_id");
       expect(text).toContain("`narrow_filters`: call metadata");
       expect(text).toContain("Filter cap errors: reduce or split filters");
     } finally {
@@ -171,6 +174,7 @@ describe("createMcpServer", () => {
               statistics_id: "pmh",
               node_id: "1180",
               table_id: "8078",
+              geo_candidates: expect.any(Array),
             },
           ],
         },
@@ -179,6 +183,10 @@ describe("createMcpServer", () => {
           id: "idescat:tables:table_search",
         },
       });
+      const first = toolResult.structuredContent?.data as
+        | { results?: Array<Record<string, unknown>> }
+        | undefined;
+      expect(first?.results?.[0]).not.toHaveProperty("geo_ids");
       expect(fetchMock).not.toHaveBeenCalled();
     } finally {
       await close();

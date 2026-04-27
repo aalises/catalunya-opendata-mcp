@@ -5,6 +5,10 @@ import {
   rankIdescatSearchResults,
   searchIdescatTables,
 } from "../../../src/sources/idescat/search.js";
+import {
+  analyzeIdescatDiscoveryQuery,
+  orderGeoCandidates,
+} from "../../../src/sources/idescat/search-geography.js";
 import caEntries, {
   generatedAt as caGeneratedAt,
 } from "../../../src/sources/idescat/search-index/ca.js";
@@ -21,6 +25,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Padró municipal d'habitants",
       node: "Població a 1 de gener. Per sexe i edat any a any",
     },
+    geo_ids: ["cat", "com", "mun"],
     source_url: "https://api.idescat.cat/taules/v2/pmh/1180/8078?lang=ca",
   },
   {
@@ -32,6 +37,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Mercat de treball",
       node: "Atur",
     },
+    geo_ids: ["com"],
     source_url: "https://api.idescat.cat/taules/v2/atur/1/2?lang=ca",
   },
   {
@@ -43,6 +49,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Padró municipal d'habitants",
       node: "Població a 1 de gener. Per sexe i edat any a any",
     },
+    geo_ids: ["cat", "com"],
     source_url: "https://api.idescat.cat/taules/v2/pmh/1180/1063?lang=ca",
   },
   {
@@ -55,6 +62,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Padró d'habitants residents a l'estranger",
       node: "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/phre/21174/25005?lang=ca",
   },
   {
@@ -66,6 +74,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Projeccions de població",
       node: "Població projectada a 1 de gener per sexe i edat. Escenari mitjà (base 2021)",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/proj/14560/15410?lang=ca",
   },
   {
@@ -78,6 +87,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Projeccions de llars",
       node: "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari mitjà",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/projl/21011/24904?lang=ca",
   },
   {
@@ -89,6 +99,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Estimacions de població",
       node: "Població. Per sexe i edat",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/ep/9123/20149?lang=ca",
   },
   {
@@ -100,6 +111,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Estadística de la covid-19",
       node: "Defuncions per covid-19. Per sexe i edat en grans grups",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/covid/14184/15254?lang=ca",
   },
   {
@@ -112,6 +124,7 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Enquesta de l'ús del temps",
       node: "Població que va participar en activitats culturals i de lleure en el mes anterior. Per sexe i edat en grans grups",
     },
+    geo_ids: ["cat"],
     source_url: "https://api.idescat.cat/taules/v2/eut/1014/951?lang=ca",
   },
   {
@@ -123,7 +136,48 @@ const entries: IdescatSearchIndexEntry[] = [
       statistic: "Estimació mensual de la població activa",
       node: "Taxes d'activitat, ocupació i atur",
     },
+    // Fictional "com": real e03 only exposes "cat". Synthetic so the geo-boost
+    // branch is exercised; real-CA-index assertions below cover production shape.
+    geo_ids: ["cat", "com"],
     source_url: "https://api.idescat.cat/taules/v2/e03/22274/26671?lang=ca",
+  },
+  {
+    statistics_id: "afi",
+    node_id: "21420",
+    table_id: "25318",
+    label:
+      "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica",
+    ancestor_labels: {
+      statistic: "Afiliats i afiliacions a la Seguretat Social",
+      node: "Afiliacions per sector d'activitat econòmica",
+    },
+    geo_ids: ["cat", "com"],
+    source_url: "https://api.idescat.cat/taules/v2/afi/21420/25318?lang=ca",
+  },
+  {
+    statistics_id: "afi",
+    node_id: "21424",
+    table_id: "25320",
+    label:
+      "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica",
+    ancestor_labels: {
+      statistic: "Afiliats i afiliacions a la Seguretat Social",
+      node: "Afiliacions per secció d'activitat econòmica",
+    },
+    geo_ids: ["cat"],
+    source_url: "https://api.idescat.cat/taules/v2/afi/21424/25320?lang=ca",
+  },
+  {
+    statistics_id: "ispat",
+    node_id: "14664",
+    table_id: "20433",
+    label: "Despesa en R+D interna feta a Catalunya. Per naturalesa de la despesa",
+    ancestor_labels: {
+      statistic: "Indicadors sectorials",
+      node: "Despesa per naturalesa de la despesa",
+    },
+    geo_ids: ["com"],
+    source_url: "https://api.idescat.cat/taules/v2/ispat/14664/20433?lang=ca",
   },
 ];
 
@@ -161,6 +215,29 @@ describe("rankIdescatSearchResults", () => {
     expect(results[0]?.entry.table_id).toBe("2");
   });
 
+  it("analyzes geography intent without keeping geo words as topic tokens", () => {
+    expect(analyzeIdescatDiscoveryQuery("poblacio comarca")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["com"],
+      geoTokens: ["comarca"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("poblacio seccio censal seccio censal")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["sec"],
+      geoTokens: ["seccio", "censal", "seccio", "censal"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("municipi")).toEqual({
+      topicTokens: [],
+      requestedGeoIds: ["mun"],
+      geoTokens: ["municipi"],
+    });
+  });
+
+  it("orders requested geo candidates first without exposing unknown ordering drift", () => {
+    expect(orderGeoCandidates(["mun", "cat", "com"], ["com"])).toEqual(["com", "cat", "mun"]);
+    expect(orderGeoCandidates(["zzz", "cat", "aaa"], [])).toEqual(["cat", "aaa", "zzz"]);
+  });
+
   it.each([
     ["poblacio edat", "pmh"],
     ["poblacio sexe edat", "pmh"],
@@ -170,10 +247,47 @@ describe("rankIdescatSearchResults", () => {
     ["covid 19", "covid"],
     ["ep", "ep"],
     ["atur ocupacio", "e03"],
+    ["poblacio comarca", "pmh"],
+    ["poblacio municipi", "pmh"],
+    ["afiliacions comarca", "afi"],
+    ["atur comarca", "e03"],
   ])("puts the canonical statistic first for %s", (query, statisticsId) => {
     const results = rankIdescatSearchResults(entries, query);
 
     expect(results[0]?.entry.statistics_id).toBe(statisticsId);
+  });
+
+  it.each([
+    ["poblacio comarca", "com"],
+    ["poblacio municipi", "mun"],
+  ])("keeps the requested geography first for %s", (query, geoId) => {
+    const analysis = analyzeIdescatDiscoveryQuery(query);
+    const results = rankIdescatSearchResults(entries, query, analysis);
+    const geoIds = results[0]?.entry.geo_ids ?? [];
+
+    expect(orderGeoCandidates(geoIds, analysis.requestedGeoIds)[0]).toBe(geoId);
+  });
+
+  it("prefers same-topic rows that support the requested geography", () => {
+    const results = rankIdescatSearchResults(entries, "afiliacions comarca");
+
+    expect(results[0]?.entry.statistics_id).toBe("afi");
+    expect(results[0]?.entry.table_id).toBe("25318");
+    expect(results[0]?.entry.geo_ids).toContain("com");
+  });
+
+  it("does not geo-boost substring-only topic matches", () => {
+    const results = rankIdescatSearchResults(entries, "atur comarca");
+
+    expect(results[0]?.entry.statistics_id).toBe("e03");
+    expect(results[0]?.entry.label).toContain("atur");
+    expect(results.findIndex((result) => result.entry.statistics_id === "ispat")).toBeGreaterThan(
+      0,
+    );
+  });
+
+  it("returns no results for geo-only queries", () => {
+    expect(rankIdescatSearchResults(entries, "comarca")).toEqual([]);
   });
 
   it.each(["pmh", "pmh 8078", "8078"])("matches direct identifiers for %s", (query) => {
@@ -207,10 +321,29 @@ describe("rankIdescatSearchResults", () => {
       ["ep", "ep"],
       ["covid 19", "covid"],
       ["atur ocupacio", "e03"],
+      ["poblacio comarca", "pmh"],
     ])("ranks %s with %s first", (query, statisticsId) => {
       const results = rankIdescatSearchResults(caEntries, query);
 
       expect(results[0]?.entry.statistics_id).toBe(statisticsId);
+    });
+
+    it("exposes real geo hints for geo-aware population discovery", async () => {
+      const result = await searchIdescatTables({ query: "poblacio comarca", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("pmh");
+      expect(first?.geo_candidates).toContain("com");
+      expect(first?.geo_candidates?.[0]).toBe("com");
+      expect(first).not.toHaveProperty("geo_ids");
+    });
+
+    it("keeps real atur comarca discovery recoverable even when geography is unavailable", async () => {
+      const result = await searchIdescatTables({ query: "atur comarca", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("e03");
+      expect(first?.geo_candidates).not.toBeNull();
     });
 
     it("keeps PHRE behind PMH for padro habitants", () => {
@@ -274,8 +407,8 @@ describe("rankIdescatSearchResults", () => {
       );
     });
 
-    it("does not solve geo-style atur comarca queries", () => {
-      expect(rankIdescatSearchResults(caEntries, "atur comarca")[0]?.entry.statistics_id).toBe(
+    it("does not resolve named places such as atur Maresme", () => {
+      expect(rankIdescatSearchResults(caEntries, "atur maresme")[0]?.entry.statistics_id).toBe(
         "e03",
       );
     });

@@ -4,12 +4,21 @@ import type { SourceOperationProvenance } from "../common/provenance.js";
 import { IdescatError, type IdescatLanguage } from "./client.js";
 import { createIdescatOperationProvenance } from "./metadata.js";
 import { normalizeLimit } from "./request.js";
+import {
+  analyzeIdescatDiscoveryQuery,
+  type IdescatDiscoveryQueryAnalysis,
+  orderGeoCandidates,
+} from "./search-geography.js";
 import type { IdescatSearchIndexEntry } from "./search-index/types.js";
+import { normalizeSearchTerm } from "./search-normalize.js";
 import {
   CANONICAL_STATISTIC_PRIORITY,
+  GEO_MATCH_BOOST,
   PRIORITY_BOOST_FACTOR,
   STOP_TOKENS,
 } from "./search-priority.js";
+
+export { normalizeSearchTerm } from "./search-normalize.js";
 
 export interface IdescatSearchTablesInput {
   lang?: IdescatLanguage;
@@ -17,11 +26,11 @@ export interface IdescatSearchTablesInput {
   query: string;
 }
 
-export interface IdescatTableSearchCard extends IdescatSearchIndexEntry {
+export type IdescatTableSearchCard = Omit<IdescatSearchIndexEntry, "geo_ids"> & {
   geo_candidates: string[] | null;
   lang: IdescatLanguage;
   score: number;
-}
+};
 
 export interface IdescatSearchTablesResult {
   data: {
@@ -56,10 +65,13 @@ interface SearchIndexModule {
 interface RankCandidate {
   entry: IdescatSearchIndexEntry;
   firstPos: number;
+  geoMatchCount: number;
   openSeries: boolean;
   priority: number;
   score: number;
 }
+
+type MatchQuality = "id" | "word" | "substring";
 
 export async function searchIdescatTables(
   input: IdescatSearchTablesInput,
@@ -78,13 +90,19 @@ export async function searchIdescatTables(
   const logger = options.logger ?? createLogger(config).child({ source: "idescat" });
   maybeWarnStaleIndex(index, logger);
 
-  const rankedResults = rankIdescatSearchResults(index.entries, query);
-  const ranked = rankedResults.slice(0, limit).map((result) => ({
-    ...result.entry,
-    geo_candidates: null,
-    lang: index.lang,
-    score: result.score,
-  }));
+  const queryAnalysis = analyzeIdescatDiscoveryQuery(query);
+  const rankedResults = rankIdescatSearchResults(index.entries, query, queryAnalysis);
+  const ranked = rankedResults.slice(0, limit).map((result) => {
+    const { geo_ids: geoIds, ...publicEntry } = result.entry;
+    return {
+      ...publicEntry,
+      geo_candidates: geoIds?.length
+        ? orderGeoCandidates(geoIds, queryAnalysis.requestedGeoIds)
+        : null,
+      lang: index.lang,
+      score: result.score,
+    };
+  });
 
   const provenance = createIdescatOperationProvenance(
     "table_search",
@@ -113,8 +131,9 @@ export async function searchIdescatTables(
 export function rankIdescatSearchResults(
   entries: IdescatSearchIndexEntry[],
   query: string,
+  analysis: IdescatDiscoveryQueryAnalysis = analyzeIdescatDiscoveryQuery(query),
 ): Array<{ entry: IdescatSearchIndexEntry; score: number }> {
-  const tokens = normalizeSearchTerm(query).split(" ").filter(Boolean);
+  const tokens = analysis.topicTokens;
 
   if (tokens.length === 0) {
     return [];
@@ -131,23 +150,28 @@ export function rankIdescatSearchResults(
       const normHaystack = [normLabel, normStat, normNode].join(" ");
       const haystackTokens = normHaystack.split(" ");
 
-      const tokenSatisfied = (token: string): boolean => {
+      const matchQuality = (token: string): MatchQuality | null => {
         if (token === entry.statistics_id.toLowerCase()) {
-          return true;
+          return "id";
         }
 
         if (token === entry.table_id || token === entry.node_id) {
-          return true;
+          return "id";
+        }
+
+        if (haystackTokens.includes(token)) {
+          return "word";
         }
 
         if (token.length <= 2) {
-          return haystackTokens.includes(token);
+          return null;
         }
 
-        return normHaystack.includes(token);
+        return normHaystack.includes(token) ? "substring" : null;
       };
+      const matchQualities = tokens.map(matchQuality);
 
-      if (!tokens.every(tokenSatisfied)) {
+      if (matchQualities.some((quality) => quality === null)) {
         return null;
       }
 
@@ -213,12 +237,23 @@ export function rankIdescatSearchResults(
 
       score += priority * PRIORITY_BOOST_FACTOR;
 
+      const geoMatchCount = getGeoMatchCount(entry.geo_ids ?? [], analysis.requestedGeoIds);
+      const shouldBoostGeo =
+        analysis.requestedGeoIds.length > 0 &&
+        geoMatchCount > 0 &&
+        matchQualities.every((quality) => quality === "id" || quality === "word");
+
+      if (shouldBoostGeo) {
+        score += geoMatchCount * GEO_MATCH_BOOST;
+      }
+
       const firstPosRaw = normLabel.indexOf(tokens[0] ?? "");
       const firstPos = firstPosRaw === -1 ? Number.POSITIVE_INFINITY : firstPosRaw;
 
       return {
         entry,
         firstPos,
+        geoMatchCount,
         openSeries: isOpenEndedSeries(entry.label),
         priority,
         score,
@@ -228,6 +263,10 @@ export function rankIdescatSearchResults(
     .sort((left, right) => {
       if (right.score !== left.score) {
         return right.score - left.score;
+      }
+
+      if (right.geoMatchCount !== left.geoMatchCount) {
+        return right.geoMatchCount - left.geoMatchCount;
       }
 
       if (right.priority !== left.priority) {
@@ -250,22 +289,17 @@ export function rankIdescatSearchResults(
     .map(({ entry, score }) => ({ entry, score }));
 }
 
-export function normalizeSearchTerm(value: string): string {
-  return value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLowerCase()
-    .replace(/\p{P}/gu, " ")
-    .replace(/\s+/gu, " ")
-    .trim();
-}
-
 function stripStop(tokens: readonly string[]): string[] {
   return tokens.filter((token) => token.length > 0 && !STOP_TOKENS.has(token));
 }
 
 function buildPhraseHaystack(text: string): string {
   return stripStop(normalizeSearchTerm(text).split(" ")).join(" ");
+}
+
+function getGeoMatchCount(available: readonly string[], requested: readonly string[]): number {
+  const availableSet = new Set(available);
+  return requested.filter((geoId) => availableSet.has(geoId)).length;
 }
 
 const OPEN_SERIES_LABEL_REGEX = /\(\d{4}\s*[–-]\s*\)/u;

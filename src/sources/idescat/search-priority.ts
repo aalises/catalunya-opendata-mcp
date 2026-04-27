@@ -55,3 +55,5 @@ export const CANONICAL_STATISTIC_PRIORITY: ReadonlyMap<string, number> = new Map
 ]);
 
 export const PRIORITY_BOOST_FACTOR = 12;
+
+export const GEO_MATCH_BOOST = 8;
