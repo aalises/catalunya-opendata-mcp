@@ -11,6 +11,9 @@ const EXPECTED_TABLE_ID = "8078";
 const PREFERRED_GEO_ID = "cat";
 const GEO_QUERY = "poblacio comarca";
 const GEO_AWARE_GEO_ID = "com";
+const NON_PMH_GEO_QUERY = "renda comarca";
+const NON_PMH_EXPECTED_STATISTICS_ID = "rfdbc";
+const NON_PMH_PLACE_QUERY = "Maresme";
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -125,6 +128,69 @@ try {
 
   assert(geoAwareData.data.row_count > 0, "Expected geo-aware journey to return data rows.");
 
+  const nonPmhSearch = await callTool("idescat_search_tables", {
+    query: NON_PMH_GEO_QUERY,
+    lang: "ca",
+    limit: 5,
+  });
+  const nonPmhTable = nonPmhSearch.data.results[0];
+
+  assert(
+    nonPmhTable?.statistics_id === NON_PMH_EXPECTED_STATISTICS_ID,
+    `Expected ${NON_PMH_GEO_QUERY} top result to be ${NON_PMH_EXPECTED_STATISTICS_ID}, got ${formatTableId(
+      nonPmhTable,
+    )}.`,
+  );
+  assert(
+    nonPmhTable.geo_candidates?.includes(GEO_AWARE_GEO_ID),
+    `Expected ${NON_PMH_GEO_QUERY} top result to include geo candidate ${GEO_AWARE_GEO_ID}.`,
+  );
+
+  const nonPmhGeos = await callTool("idescat_list_table_geos", {
+    statistics_id: nonPmhTable.statistics_id,
+    node_id: nonPmhTable.node_id,
+    table_id: nonPmhTable.table_id,
+    lang: "ca",
+    limit: 20,
+  });
+  const nonPmhGeo = nonPmhGeos.data.items.find((item) => item.geo_id === GEO_AWARE_GEO_ID);
+
+  assert(
+    nonPmhGeo !== undefined,
+    `Expected ${formatTableId(nonPmhTable)} to expose ${GEO_AWARE_GEO_ID}.`,
+  );
+
+  const nonPmhMetadata = await callTool("idescat_get_table_metadata", {
+    statistics_id: nonPmhTable.statistics_id,
+    node_id: nonPmhTable.node_id,
+    table_id: nonPmhTable.table_id,
+    geo_id: nonPmhGeo.geo_id,
+    lang: "ca",
+    place_query: NON_PMH_PLACE_QUERY,
+  });
+  const nonPmhGuidance = nonPmhMetadata.data.filter_guidance;
+
+  assert(nonPmhGuidance !== undefined, "Expected non-PMH metadata to include filter_guidance.");
+  assert(
+    nonPmhGuidance.place_matches?.some((match) => match.category_label === NON_PMH_PLACE_QUERY),
+    `Expected filter_guidance to resolve ${NON_PMH_PLACE_QUERY}.`,
+  );
+  assert(
+    nonPmhGuidance.recommended_data_call?.filters,
+    "Expected filter_guidance to include recommended data filters.",
+  );
+
+  const nonPmhData = await callTool("idescat_get_table_data", {
+    statistics_id: nonPmhTable.statistics_id,
+    node_id: nonPmhTable.node_id,
+    table_id: nonPmhTable.table_id,
+    geo_id: nonPmhGeo.geo_id,
+    lang: "ca",
+    ...nonPmhGuidance.recommended_data_call,
+  });
+
+  assert(nonPmhData.data.row_count > 0, "Expected non-PMH geo-aware journey to return data rows.");
+
   const summary = {
     ok: true,
     workflow: [
@@ -181,6 +247,27 @@ try {
         selected_cell_count: geoAwareData.data.selected_cell_count,
         row_count: geoAwareData.data.row_count,
         first_row: geoAwareData.data.rows[0],
+      },
+    },
+    non_pmh_geo_aware: {
+      query: nonPmhSearch.data.query,
+      selected: pickTableSummary(nonPmhTable),
+      geo_candidates: nonPmhTable.geo_candidates,
+      selected_geo: {
+        geo_id: nonPmhGeo.geo_id,
+        label: nonPmhGeo.label,
+      },
+      filter_guidance: {
+        place_matches: nonPmhGuidance.place_matches,
+        recommended_data_call: nonPmhGuidance.recommended_data_call,
+        needs_filter_dimensions: nonPmhGuidance.needs_filter_dimensions,
+      },
+      data: {
+        filters: nonPmhGuidance.recommended_data_call.filters,
+        last: nonPmhData.data.last ?? null,
+        selected_cell_count: nonPmhData.data.selected_cell_count,
+        row_count: nonPmhData.data.row_count,
+        first_row: nonPmhData.data.rows[0],
       },
     },
   };
