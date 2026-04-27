@@ -3,6 +3,7 @@ import { mkdir, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getUtf8ByteLength } from "../src/sources/common/caps.js";
+import { parseIdescatCollectionHref } from "../src/sources/idescat/catalog.js";
 import {
   IDESCAT_TABLES_BASE_URL,
   IDESCAT_USER_AGENT,
@@ -33,6 +34,7 @@ export interface RenderedIndexFile {
 export interface RefreshIdescatOptions {
   fetchFn?: typeof fetch;
   generatedAt?: string;
+  geoIdsByTable?: Map<string, string[]>;
   indexVersion?: string;
   languages?: readonly IdescatLanguage[];
   log?: (message: string) => void;
@@ -74,6 +76,7 @@ export async function refreshIdescatSearchIndex(
     fileURLToPath(new URL("../src/sources/idescat/search-index/", import.meta.url));
   const languages = options.languages ?? DEFAULT_REFRESH_LANGUAGES;
   const shardThresholdBytes = options.shardThresholdBytes ?? DEFAULT_SHARD_THRESHOLD_BYTES;
+  const geoIdsByTable = options.geoIdsByTable ?? new Map<string, string[]>();
   const results: IdescatGeneratedLanguageIndex[] = [];
 
   for (const lang of languages) {
@@ -81,6 +84,7 @@ export async function refreshIdescatSearchIndex(
     const index = await crawlIdescatLanguageIndex(lang, {
       ...options,
       generatedAt,
+      geoIdsByTable,
       indexVersion,
     });
     await writeLanguageIndex(outputDir, index, shardThresholdBytes);
@@ -99,6 +103,7 @@ export async function crawlIdescatLanguageIndex(
   const indexVersion =
     options.indexVersion ?? `${INDEX_VERSION_PREFIX}-${generatedAt.slice(0, 10)}`;
   const fetcher = createCollectionFetcher(options);
+  const geoIdsByTable = options.geoIdsByTable ?? new Map<string, string[]>();
   const rootUrl = buildCollectionUrl(lang);
   const rootCollection = await fetcher.fetchCollection(rootUrl);
   const statistics = parseCollectionItems(rootCollection, rootUrl, [], 1).sort(compareItemIds);
@@ -121,19 +126,40 @@ export async function crawlIdescatLanguageIndex(
       const nodeId = node.ids[1] ?? "";
       const tablesUrl = buildCollectionUrl(lang, statisticId, nodeId);
       const tablesCollection = await fetcher.fetchCollection(tablesUrl);
-      const tables = parseCollectionItems(tablesCollection, tablesUrl, [statisticId, nodeId], 3)
-        .map((table) => ({
+      const tableItems = parseCollectionItems(
+        tablesCollection,
+        tablesUrl,
+        [statisticId, nodeId],
+        3,
+      ).sort(compareItemIds);
+      const tables: IdescatSearchIndexEntry[] = [];
+
+      for (const table of tableItems) {
+        const tableId = table.ids[2] ?? "";
+        const geoIds = await getTableGeoIds({
+          fetcher,
+          geoIdsByTable,
+          lang,
+          nodeId,
+          statisticId,
+          tableId,
+        });
+
+        tables.push({
           statistics_id: statisticId,
           node_id: nodeId,
-          table_id: table.ids[2] ?? "",
+          table_id: tableId,
           label: table.label,
           ancestor_labels: {
             statistic: statistic.label,
             node: node.label,
           },
-          source_url: buildCollectionUrl(lang, statisticId, nodeId, table.ids[2] ?? "").toString(),
-        }))
-        .sort(compareEntries);
+          geo_ids: geoIds,
+          source_url: buildCollectionUrl(lang, statisticId, nodeId, tableId).toString(),
+        });
+      }
+
+      tables.sort(compareEntries);
 
       statisticTableCount += tables.length;
       entries.push(...tables);
@@ -151,6 +177,40 @@ export async function crawlIdescatLanguageIndex(
     sourceCollectionUrls: [rootUrl.toString()],
     entries,
   };
+}
+
+async function getTableGeoIds(input: {
+  fetcher: CollectionFetcher;
+  geoIdsByTable: Map<string, string[]>;
+  lang: IdescatLanguage;
+  nodeId: string;
+  statisticId: string;
+  tableId: string;
+}): Promise<string[]> {
+  const cacheKey = `${input.statisticId}/${input.nodeId}/${input.tableId}`;
+
+  if (input.geoIdsByTable.has(cacheKey)) {
+    return input.geoIdsByTable.get(cacheKey) ?? [];
+  }
+
+  const url = buildCollectionUrl(input.lang, input.statisticId, input.nodeId, input.tableId);
+  const collection = await input.fetcher.fetchCollection(url);
+  const collectionBase = resolveCollectionBase(collection.href, url);
+  const geoIds = collection.link.item
+    .map((item) => {
+      const [, , , geoId] = parseIdescatCollectionHref(
+        item,
+        [input.statisticId, input.nodeId, input.tableId],
+        4,
+        collectionBase,
+      );
+      return geoId;
+    })
+    .filter((geoId): geoId is string => typeof geoId === "string" && geoId.length > 0);
+  const sorted = [...new Set(geoIds)].sort(compareCodePoints);
+
+  input.geoIdsByTable.set(cacheKey, sorted);
+  return sorted;
 }
 
 export function renderLanguageIndexFiles(

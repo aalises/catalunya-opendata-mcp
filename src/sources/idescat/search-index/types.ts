@@ -3,6 +3,7 @@ export interface IdescatSearchIndexEntry {
     node: string;
     statistic: string;
   };
+  geo_ids?: string[];
   label: string;
   node_id: string;
   source_url: string;

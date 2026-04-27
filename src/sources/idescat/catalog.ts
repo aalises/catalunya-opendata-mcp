@@ -93,8 +93,6 @@ export interface IdescatGeoItem extends IdescatTableItem {
   geo_id: string;
 }
 
-type CollectionItem = z.infer<typeof collectionSchema>["link"]["item"][number];
-
 export async function listIdescatStatistics(
   input: IdescatListInput,
   config: AppConfig,
@@ -105,7 +103,7 @@ export async function listIdescatStatistics(
   const collection = parseCollection(await fetchIdescatJson({ url }, config, options));
   const collectionBase = resolveCollectionBase(collection.href, url);
   const items = collection.link.item.map((item) => {
-    const [statisticsId] = parseCollectionHref(item, [], 1, collectionBase);
+    const [statisticsId] = parseIdescatCollectionHref(item, [], 1, collectionBase);
     return {
       statistics_id: statisticsId,
       label: item.label,
@@ -129,7 +127,7 @@ export async function listIdescatNodes(
   const collection = parseCollection(await fetchIdescatJson({ url }, config, options));
   const collectionBase = resolveCollectionBase(collection.href, url);
   const items = collection.link.item.map((item) => {
-    const [statisticsId, nodeId] = parseCollectionHref(
+    const [statisticsId, nodeId] = parseIdescatCollectionHref(
       item,
       [normalized.statistics_id],
       2,
@@ -160,7 +158,7 @@ export async function listIdescatTables(
   const collection = parseCollection(await fetchIdescatJson({ url }, config, options));
   const collectionBase = resolveCollectionBase(collection.href, url);
   const items = collection.link.item.map((item) => {
-    const [statisticsId, nodeId, tableId] = parseCollectionHref(
+    const [statisticsId, nodeId, tableId] = parseIdescatCollectionHref(
       item,
       [normalized.statistics_id, normalized.node_id],
       3,
@@ -194,21 +192,9 @@ export async function listIdescatTableGeos(
   const url = buildIdescatUrl(normalized);
   const collection = parseCollection(await fetchIdescatJson({ url }, config, options));
   const collectionBase = resolveCollectionBase(collection.href, url);
-  const items = collection.link.item.map((item) => {
-    const [statisticsId, nodeId, tableId, geoId] = parseCollectionHref(
-      item,
-      [normalized.statistics_id, normalized.node_id, normalized.table_id],
-      4,
-      collectionBase,
-    );
-    return {
-      statistics_id: statisticsId,
-      node_id: nodeId,
-      table_id: tableId,
-      geo_id: geoId,
-      label: item.label,
-      href: item.href,
-    };
+  const items = parseIdescatGeoItems(collection.link.item, {
+    collectionBase,
+    parentSegments: [normalized.statistics_id, normalized.node_id, normalized.table_id],
   });
 
   return createListResult("list_table_geos", collection, items, normalized, url, config);
@@ -307,8 +293,30 @@ function resolveCollectionBase(collectionHref: string | undefined, requestUrl: U
   }
 }
 
-function parseCollectionHref(
-  item: CollectionItem,
+export function parseIdescatGeoItems(
+  items: Array<{ href: string; label: string }>,
+  options: { collectionBase: URL; parentSegments: [string, string, string] },
+): IdescatGeoItem[] {
+  return items.map((item) => {
+    const [statisticsId, nodeId, tableId, geoId] = parseIdescatCollectionHref(
+      item,
+      options.parentSegments,
+      4,
+      options.collectionBase,
+    );
+    return {
+      statistics_id: statisticsId,
+      node_id: nodeId,
+      table_id: tableId,
+      geo_id: geoId,
+      label: item.label,
+      href: item.href,
+    };
+  });
+}
+
+export function parseIdescatCollectionHref(
+  item: { href: string },
   parentSegments: string[],
   expectedLength: number,
   collectionBase: URL,

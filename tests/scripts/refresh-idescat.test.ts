@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import {
   crawlIdescatLanguageIndex,
+  refreshIdescatSearchIndex,
   renderLanguageIndexFiles,
 } from "../../scripts/refresh-idescat.js";
 import { getUtf8ByteLength } from "../../src/sources/common/caps.js";
@@ -33,6 +34,7 @@ describe("crawlIdescatLanguageIndex", () => {
           statistic: "Affiliations",
           node: "Affiliation node",
         },
+        geo_ids: ["cat", "com"],
         source_url: "https://api.idescat.cat/taules/v2/afi/10/99?lang=ca",
       },
       {
@@ -44,6 +46,7 @@ describe("crawlIdescatLanguageIndex", () => {
           statistic: "Municipal register",
           node: "Population by age",
         },
+        geo_ids: ["cat"],
         source_url: "https://api.idescat.cat/taules/v2/pmh/1180/477?lang=ca",
       },
       {
@@ -55,9 +58,59 @@ describe("crawlIdescatLanguageIndex", () => {
           statistic: "Municipal register",
           node: "Population by age",
         },
+        geo_ids: ["cat", "com", "mun"],
         source_url: "https://api.idescat.cat/taules/v2/pmh/1180/8078?lang=ca",
       },
     ]);
+  });
+
+  it("reuses cached geo collections across languages", async () => {
+    const fetchFn = vi.fn<typeof fetch>(async (input) => jsonResponse(collectionFor(toUrl(input))));
+    const geoIdsByTable = new Map<string, string[]>();
+
+    await crawlIdescatLanguageIndex("ca", {
+      fetchFn,
+      generatedAt: "2026-04-26T00:00:00.000Z",
+      geoIdsByTable,
+      indexVersion: "test",
+      paceMs: 0,
+    });
+    await crawlIdescatLanguageIndex("en", {
+      fetchFn,
+      generatedAt: "2026-04-26T00:00:00.000Z",
+      geoIdsByTable,
+      indexVersion: "test",
+      paceMs: 0,
+    });
+
+    const geoFetches = fetchFn.mock.calls
+      .map(([input]) => toUrl(input))
+      .filter((url) => /^\/taules\/v2\/[^/]+\/[^/]+\/[^/]+$/u.test(url.pathname));
+
+    expect(geoFetches.map((url) => url.pathname).sort()).toEqual([
+      "/taules/v2/afi/10/99",
+      "/taules/v2/pmh/1180/477",
+      "/taules/v2/pmh/1180/8078",
+    ]);
+  });
+
+  it("shares the geo cache through a full refresh", async () => {
+    const fetchFn = vi.fn<typeof fetch>(async (input) => jsonResponse(collectionFor(toUrl(input))));
+
+    await refreshIdescatSearchIndex({
+      fetchFn,
+      generatedAt: "2026-04-26T00:00:00.000Z",
+      indexVersion: "test",
+      languages: ["ca", "en"],
+      outputDir: "/tmp/catalunya-opendata-mcp-refresh-test",
+      paceMs: 0,
+    });
+
+    const geoFetches = fetchFn.mock.calls
+      .map(([input]) => toUrl(input))
+      .filter((url) => /^\/taules\/v2\/[^/]+\/[^/]+\/[^/]+$/u.test(url.pathname));
+
+    expect(geoFetches).toHaveLength(3);
   });
 
   it("retries 429 with backoff", async () => {
@@ -265,6 +318,32 @@ function collectionFor(url: URL) {
     };
   }
 
+  if (url.pathname === "/taules/v2/pmh/1180/8078") {
+    return {
+      class: "collection",
+      label: "Population by sex and age",
+      href: "https://api.idescat.cat/taules/v2/pmh/1180/8078",
+      link: {
+        item: [
+          { href: "mun", label: "By municipalities" },
+          { href: "cat", label: "Catalonia" },
+          { href: "com", label: "By counties" },
+        ],
+      },
+    };
+  }
+
+  if (url.pathname === "/taules/v2/pmh/1180/477") {
+    return {
+      class: "collection",
+      label: "Population by sex",
+      href: "https://api.idescat.cat/taules/v2/pmh/1180/477",
+      link: {
+        item: [{ href: "cat", label: "Catalonia" }],
+      },
+    };
+  }
+
   if (url.pathname === "/taules/v2/afi") {
     return {
       class: "collection",
@@ -283,6 +362,20 @@ function collectionFor(url: URL) {
       href: "https://api.idescat.cat/taules/v2/afi/10",
       link: {
         item: [{ href: "99", label: "Affiliations table" }],
+      },
+    };
+  }
+
+  if (url.pathname === "/taules/v2/afi/10/99") {
+    return {
+      class: "collection",
+      label: "Affiliations table",
+      href: "https://api.idescat.cat/taules/v2/afi/10/99",
+      link: {
+        item: [
+          { href: "com", label: "By counties" },
+          { href: "cat", label: "Catalonia" },
+        ],
       },
     };
   }
@@ -337,6 +430,7 @@ function entries(): IdescatSearchIndexEntry[] {
         statistic: "Municipal register",
         node: "Population by age",
       },
+      geo_ids: ["cat", "com", "mun"],
       source_url: "https://api.idescat.cat/taules/v2/pmh/1180/8078?lang=ca",
     },
     {
@@ -348,6 +442,7 @@ function entries(): IdescatSearchIndexEntry[] {
         statistic: "Labour market",
         node: "Unemployment",
       },
+      geo_ids: ["cat"],
       source_url: "https://api.idescat.cat/taules/v2/atur/1/2?lang=ca",
     },
   ];
