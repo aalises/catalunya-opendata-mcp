@@ -77,6 +77,8 @@ describe("createMcpServer", () => {
       );
       expect(descriptions.idescat_search_tables).toContain("Topic discovery");
       expect(descriptions.idescat_search_tables).toContain("named places");
+      expect(descriptions.idescat_search_tables).toContain("semantic aliases");
+      expect(descriptions.idescat_search_tables).toContain("taxa atur");
       expect(descriptions.idescat_search_tables).toContain("idescat_list_table_geos");
       expect(descriptions.idescat_search_tables).toContain("geo_candidates");
       expect(descriptions.idescat_list_statistics).toContain("Browse fallback");
@@ -139,6 +141,8 @@ describe("createMcpServer", () => {
       expect(dataIndex).toBeGreaterThan(metadataIndex);
       expect(citationIndex).toBeGreaterThan(dataIndex);
       expect(text).toContain("Use returned dimension IDs and category IDs exactly");
+      expect(text).toContain("semantic aliases");
+      expect(text).toContain("renda per capita");
       expect(text).toContain("place_query");
       expect(text).toContain("filter_guidance.recommended_data_call");
       expect(text).toContain("Treat search/list provenance as discovery-only");

@@ -41,6 +41,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
       description: [
         "Topic discovery for IDESCAT Tables v2.",
         "Search by subject and optional geography words or named places such as comarca, municipi, Maresme, Barcelonès, or Girona.",
+        "Common semantic aliases such as taxa atur, paro, renda per capita, family income, and poblacio municipal can be used directly.",
         "Prefer results whose geo_candidates include the requested geo_id, then confirm with idescat_list_table_geos.",
         "Reuse the returned statistics_id, node_id, and table_id with idescat_list_table_geos.",
         "Search/list provenance is discovery-only; cite idescat_get_table_metadata or the metadata resource.",
@@ -190,7 +191,7 @@ export function registerIdescatTools(server: McpServer, config: AppConfig, logge
             text: [
               "Use this prescriptive workflow for IDESCAT Tables v2 questions.",
               "",
-              "1. Search first with `idescat_search_tables` for topic discovery. Geography words or named places such as comarca, municipi, Maresme, Barcelonès, or Girona can be included; prefer results whose `geo_candidates` include the requested geo_id. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
+              "1. Search first with `idescat_search_tables` for topic discovery. Geography words, named places, and common semantic aliases such as taxa atur, paro, renda per capita, family income, or poblacio municipal can be included; prefer results whose `geo_candidates` include the requested geo_id. If search is empty or too broad, browse with `idescat_list_statistics` -> `idescat_list_nodes` -> `idescat_list_tables`.",
               "2. Call `idescat_list_table_geos` with the chosen statistics_id/node_id/table_id. For discovery workflows, continue only after a `geo_id` has been selected or supplied.",
               "3. Call `idescat_get_table_metadata` with the selected geo_id. If the user named a place, pass the original phrase in `place_query`. Use returned dimension IDs and category IDs exactly in `filters`; prefer `filter_guidance` when present; do not invent display-label filters.",
               "4. Call `idescat_get_table_data` for a bounded extract. Prefer `filter_guidance.recommended_data_call` when present, then dimension filters and `last` over raising `limit`; do not use it as a full table export.",

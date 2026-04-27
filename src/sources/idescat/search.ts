@@ -17,6 +17,7 @@ import {
   PRIORITY_BOOST_FACTOR,
   STOP_TOKENS,
 } from "./search-priority.js";
+import { buildIdescatSemanticTopicGroups } from "./search-semantics.js";
 
 export { normalizeSearchTerm } from "./search-normalize.js";
 
@@ -72,6 +73,16 @@ interface RankCandidate {
 }
 
 type MatchQuality = "id" | "word" | "substring";
+
+const SEMANTIC_ALIAS_MATCH_BONUS = 2;
+
+interface SemanticGroupMatch {
+  qualities: MatchQuality[];
+  score: number;
+  substringCount: number;
+  tokens: string[];
+  strongCount: number;
+}
 
 export async function searchIdescatTables(
   input: IdescatSearchTablesInput,
@@ -133,14 +144,11 @@ export function rankIdescatSearchResults(
   query: string,
   analysis: IdescatDiscoveryQueryAnalysis = analyzeIdescatDiscoveryQuery(query),
 ): Array<{ entry: IdescatSearchIndexEntry; score: number }> {
-  const tokens = analysis.topicTokens;
+  const semanticGroups = buildIdescatSemanticTopicGroups(analysis.topicTokens);
 
-  if (tokens.length === 0) {
+  if (semanticGroups.length === 0) {
     return [];
   }
-
-  const phraseTokens = stripStop(tokens);
-  const phrase = phraseTokens.join(" ");
 
   return entries
     .map((entry): RankCandidate | null => {
@@ -169,32 +177,70 @@ export function rankIdescatSearchResults(
 
         return normHaystack.includes(token) ? "substring" : null;
       };
-      const matchQualities = tokens.map(matchQuality);
 
-      if (matchQualities.some((quality) => quality === null)) {
-        return null;
-      }
-
-      const priority = CANONICAL_STATISTIC_PRIORITY.get(entry.statistics_id) ?? 0;
-      let score = tokens.reduce((sum, token) => {
+      const scoreToken = (token: string): number => {
         if (normLabel.includes(token)) {
-          return sum + 5;
+          return 5;
         }
 
         if (normNode.includes(token)) {
-          return sum + 3;
+          return 3;
         }
 
         if (normStat.includes(token)) {
-          return sum + 1;
+          return 1;
         }
 
         return token === entry.statistics_id.toLowerCase() ||
           token === entry.table_id ||
           token === entry.node_id
-          ? sum + 5
-          : sum + 1;
-      }, 0);
+          ? 5
+          : 1;
+      };
+
+      const groupMatches = semanticGroups.map((group): SemanticGroupMatch | null => {
+        let bestMatch: SemanticGroupMatch | null = null;
+
+        for (const alternative of group.alternatives) {
+          const qualities = alternative.tokens.map(matchQuality);
+
+          if (qualities.some((quality) => quality === null)) {
+            continue;
+          }
+
+          const strongCount = qualities.filter(
+            (quality) => quality === "id" || quality === "word",
+          ).length;
+          const substringCount = qualities.length - strongCount;
+          const candidate: SemanticGroupMatch = {
+            qualities: qualities as MatchQuality[],
+            score:
+              alternative.tokens.reduce((sum, token) => sum + scoreToken(token), 0) +
+              (alternative.semantic ? SEMANTIC_ALIAS_MATCH_BONUS : 0),
+            strongCount,
+            substringCount,
+            tokens: alternative.tokens,
+          };
+
+          if (bestMatch === null || compareSemanticGroupMatches(candidate, bestMatch) < 0) {
+            bestMatch = candidate;
+          }
+        }
+
+        return bestMatch;
+      });
+
+      if (groupMatches.some((match) => match === null)) {
+        return null;
+      }
+
+      const priority = CANONICAL_STATISTIC_PRIORITY.get(entry.statistics_id) ?? 0;
+      const matchedGroups = groupMatches as SemanticGroupMatch[];
+      const matchedTokens = matchedGroups.flatMap((match) => match.tokens);
+      const matchQualities = matchedGroups.flatMap((match) => match.qualities);
+      const phraseTokens = stripStop(matchedTokens);
+      const phrase = phraseTokens.join(" ");
+      let score = matchedGroups.reduce((sum, match) => sum + match.score, 0);
 
       const phraseLabel = buildPhraseHaystack(entry.label);
       const phraseNode = buildPhraseHaystack(entry.ancestor_labels.node);
@@ -221,17 +267,19 @@ export function rankIdescatSearchResults(
         }
       }
 
-      if (tokens.length >= 2 && tokens.every((token) => normLabel.includes(token))) {
+      if (matchedTokens.length >= 2 && matchedTokens.every((token) => normLabel.includes(token))) {
         score += 4;
       }
 
       if (
-        tokens.some((token) => token.length >= 3 && token === entry.statistics_id.toLowerCase())
+        matchedTokens.some(
+          (token) => token.length >= 3 && token === entry.statistics_id.toLowerCase(),
+        )
       ) {
         score += 20;
       }
 
-      if (tokens.length >= 2 && tokens.every((token) => normStat.includes(token))) {
+      if (matchedTokens.length >= 2 && matchedTokens.every((token) => normStat.includes(token))) {
         score += 6;
       }
 
@@ -247,7 +295,7 @@ export function rankIdescatSearchResults(
         score += geoMatchCount * GEO_MATCH_BOOST;
       }
 
-      const firstPosRaw = normLabel.indexOf(tokens[0] ?? "");
+      const firstPosRaw = normLabel.indexOf(matchedTokens[0] ?? "");
       const firstPos = firstPosRaw === -1 ? Number.POSITIVE_INFINITY : firstPosRaw;
 
       return {
@@ -291,6 +339,26 @@ export function rankIdescatSearchResults(
 
 function stripStop(tokens: readonly string[]): string[] {
   return tokens.filter((token) => token.length > 0 && !STOP_TOKENS.has(token));
+}
+
+function compareSemanticGroupMatches(left: SemanticGroupMatch, right: SemanticGroupMatch): number {
+  if (right.score !== left.score) {
+    return right.score - left.score;
+  }
+
+  if (right.strongCount !== left.strongCount) {
+    return right.strongCount - left.strongCount;
+  }
+
+  if (left.substringCount !== right.substringCount) {
+    return left.substringCount - right.substringCount;
+  }
+
+  if (right.tokens.length !== left.tokens.length) {
+    return right.tokens.length - left.tokens.length;
+  }
+
+  return left.tokens.join(" ").localeCompare(right.tokens.join(" "));
 }
 
 function buildPhraseHaystack(text: string): string {

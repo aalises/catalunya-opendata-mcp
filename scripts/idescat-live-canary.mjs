@@ -14,6 +14,8 @@ const GEO_AWARE_GEO_ID = "com";
 const NON_PMH_GEO_QUERY = "renda comarca";
 const NON_PMH_EXPECTED_STATISTICS_ID = "rfdbc";
 const NON_PMH_PLACE_QUERY = "Maresme";
+const SEMANTIC_UNEMPLOYMENT_QUERY = "taxa atur";
+const SEMANTIC_INCOME_PLACE_QUERY = "renda per capita Maresme";
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -191,6 +193,40 @@ try {
 
   assert(nonPmhData.data.row_count > 0, "Expected non-PMH geo-aware journey to return data rows.");
 
+  const semanticUnemploymentSearch = await callTool("idescat_search_tables", {
+    query: SEMANTIC_UNEMPLOYMENT_QUERY,
+    lang: "ca",
+    limit: 3,
+  });
+  const semanticUnemploymentTable = semanticUnemploymentSearch.data.results[0];
+
+  assert(
+    semanticUnemploymentTable?.statistics_id === "e03",
+    `Expected ${SEMANTIC_UNEMPLOYMENT_QUERY} top result to be e03, got ${formatTableId(
+      semanticUnemploymentTable,
+    )}.`,
+  );
+
+  const semanticIncomeSearch = await callTool("idescat_search_tables", {
+    query: SEMANTIC_INCOME_PLACE_QUERY,
+    lang: "ca",
+    limit: 3,
+  });
+  const semanticIncomeTable = semanticIncomeSearch.data.results[0];
+
+  assert(
+    semanticIncomeTable?.statistics_id === NON_PMH_EXPECTED_STATISTICS_ID,
+    `Expected ${SEMANTIC_INCOME_PLACE_QUERY} top result to be ${NON_PMH_EXPECTED_STATISTICS_ID}, got ${formatTableId(
+      semanticIncomeTable,
+    )}.`,
+  );
+  assert(
+    semanticIncomeTable.geo_candidates?.[0] === GEO_AWARE_GEO_ID,
+    `Expected ${SEMANTIC_INCOME_PLACE_QUERY} top result to prefer geo candidate ${GEO_AWARE_GEO_ID}, got ${JSON.stringify(
+      semanticIncomeTable.geo_candidates ?? null,
+    )}.`,
+  );
+
   const summary = {
     ok: true,
     workflow: [
@@ -268,6 +304,17 @@ try {
         selected_cell_count: nonPmhData.data.selected_cell_count,
         row_count: nonPmhData.data.row_count,
         first_row: nonPmhData.data.rows[0],
+      },
+    },
+    semantic_search: {
+      unemployment_rate: {
+        query: semanticUnemploymentSearch.data.query,
+        selected: pickTableSummary(semanticUnemploymentTable),
+      },
+      income_place: {
+        query: semanticIncomeSearch.data.query,
+        selected: pickTableSummary(semanticIncomeTable),
+        geo_candidates: semanticIncomeTable.geo_candidates,
       },
     },
   };

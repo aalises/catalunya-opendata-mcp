@@ -111,6 +111,8 @@ Search with the named place included:
 }
 ```
 
+Common semantic phrasing works in the same search step: `taxa atur`, `paro comarca`, `renda per capita Maresme`, and `poblacio municipal` all stay within the standard `idescat_search_tables` workflow.
+
 Choose a PMH result whose `geo_candidates` includes `com`, then confirm geographies:
 
 ```json
@@ -169,7 +171,7 @@ Then use `filter_guidance.recommended_data_call` when present. For this table it
 
 User prompt:
 
-> Show renda data for Maresme.
+> Show renda per capita data for Maresme.
 
 Search:
 
@@ -177,7 +179,7 @@ Search:
 {
   "tool": "idescat_search_tables",
   "arguments": {
-    "query": "renda Maresme",
+    "query": "renda per capita Maresme",
     "lang": "ca",
     "limit": 5
   }

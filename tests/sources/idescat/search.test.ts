@@ -13,7 +13,9 @@ import caEntries, {
   generatedAt as caGeneratedAt,
 } from "../../../src/sources/idescat/search-index/ca.js";
 import enEntries from "../../../src/sources/idescat/search-index/en.js";
+import esEntries from "../../../src/sources/idescat/search-index/es.js";
 import type { IdescatSearchIndexEntry } from "../../../src/sources/idescat/search-index/types.js";
+import { buildIdescatSemanticTopicGroups } from "../../../src/sources/idescat/search-semantics.js";
 
 const entries: IdescatSearchIndexEntry[] = [
   {
@@ -227,6 +229,30 @@ describe("rankIdescatSearchResults", () => {
     expect(results[0]?.entry.table_id).toBe("2");
   });
 
+  it("builds semantic topic groups greedily without keeping stop tokens as requirements", () => {
+    const rendaGroups = buildIdescatSemanticTopicGroups(["renda", "per", "capita"]);
+    const rendaAlternatives = rendaGroups[0]?.alternatives.map((alternative) =>
+      alternative.tokens.join(" "),
+    );
+    const stopwordPhraseGroups = buildIdescatSemanticTopicGroups(["renda", "de", "la", "familia"]);
+    const stopwordPhraseAlternatives = stopwordPhraseGroups[0]?.alternatives.map((alternative) =>
+      alternative.tokens.join(" "),
+    );
+
+    expect(rendaGroups).toHaveLength(1);
+    expect(rendaGroups[0]?.originalTokens).toEqual(["renda", "per", "capita"]);
+    expect(rendaAlternatives).toContain("rfdb habitant");
+    expect(stopwordPhraseGroups).toHaveLength(1);
+    expect(stopwordPhraseGroups[0]?.originalTokens).toEqual(["renda", "de", "la", "familia"]);
+    expect(stopwordPhraseAlternatives).toContain("rfdb");
+
+    expect(
+      buildIdescatSemanticTopicGroups(["poblacio", "per", "edat"]).map(
+        (group) => group.originalTokens,
+      ),
+    ).toEqual([["poblacio"], ["edat"]]);
+  });
+
   it("analyzes geography intent without keeping geo words as topic tokens", () => {
     expect(analyzeIdescatDiscoveryQuery("poblacio comarca")).toEqual({
       topicTokens: ["poblacio"],
@@ -242,6 +268,11 @@ describe("rankIdescatSearchResults", () => {
       topicTokens: [],
       requestedGeoIds: ["mun"],
       geoTokens: ["municipi"],
+    });
+    expect(analyzeIdescatDiscoveryQuery("poblacio municipal")).toEqual({
+      topicTokens: ["poblacio"],
+      requestedGeoIds: ["mun"],
+      geoTokens: ["municipal"],
     });
     expect(analyzeIdescatDiscoveryQuery("atur Maresme")).toEqual({
       topicTokens: ["atur"],
@@ -284,12 +315,18 @@ describe("rankIdescatSearchResults", () => {
     ["covid 19", "covid"],
     ["ep", "ep"],
     ["atur ocupacio", "e03"],
+    ["taxa atur", "e03"],
+    ["paro", "e03"],
     ["poblacio comarca", "pmh"],
     ["poblacio municipi", "pmh"],
+    ["poblacio municipal", "pmh"],
     ["afiliacions comarca", "afi"],
     ["atur comarca", "e03"],
+    ["paro comarca", "e03"],
+    ["atur municipal", "e03"],
     ["atur Maresme", "e03"],
     ["renda Girona", "rfdbc"],
+    ["renda per capita Maresme", "rfdbc"],
   ])("puts the canonical statistic first for %s", (query, statisticsId) => {
     const results = rankIdescatSearchResults(entries, query);
 
@@ -299,8 +336,10 @@ describe("rankIdescatSearchResults", () => {
   it.each([
     ["poblacio comarca", "com"],
     ["poblacio municipi", "mun"],
+    ["poblacio municipal", "mun"],
     ["poblacio Barcelonès", "com"],
     ["renda Girona", "mun"],
+    ["renda per capita Maresme", "com"],
   ])("keeps the requested geography first for %s", (query, geoId) => {
     const analysis = analyzeIdescatDiscoveryQuery(query);
     const results = rankIdescatSearchResults(entries, query, analysis);
@@ -325,6 +364,32 @@ describe("rankIdescatSearchResults", () => {
     expect(results.findIndex((result) => result.entry.statistics_id === "ispat")).toBeGreaterThan(
       0,
     );
+  });
+
+  it("keeps canonical priority ahead of lower-priority original-token alias matches", () => {
+    const e03Entry = entries.find((entry) => entry.statistics_id === "e03");
+
+    if (!e03Entry) {
+      throw new Error("Expected synthetic e03 entry.");
+    }
+
+    const nonCanonicalParo: IdescatSearchIndexEntry = {
+      statistics_id: "custom",
+      node_id: "1",
+      table_id: "1",
+      label: "Paro registrat",
+      ancestor_labels: {
+        statistic: "Mercat de treball",
+        node: "Paro",
+      },
+      geo_ids: ["cat"],
+      source_url: "https://api.idescat.cat/taules/v2/custom/1/1?lang=ca",
+    };
+
+    const results = rankIdescatSearchResults([nonCanonicalParo, e03Entry], "paro");
+
+    expect(results[0]?.entry.statistics_id).toBe("e03");
+    expect(results[1]?.entry.statistics_id).toBe("custom");
   });
 
   it("returns no results for geo-only queries", () => {
@@ -362,10 +427,26 @@ describe("rankIdescatSearchResults", () => {
       ["ep", "ep"],
       ["covid 19", "covid"],
       ["atur ocupacio", "e03"],
+      ["taxa atur", "e03"],
+      ["paro", "e03"],
+      ["paro comarca", "e03"],
       ["poblacio comarca", "pmh"],
+      ["poblacio municipal", "pmh"],
       ["poblacio Barcelonès", "pmh"],
       ["renda Girona", "rfdbc"],
+      ["renda de la familia", "rfdbc"],
+      ["renda per capita Maresme", "rfdbc"],
     ])("ranks %s with %s first", (query, statisticsId) => {
+      const results = rankIdescatSearchResults(caEntries, query);
+
+      expect(results[0]?.entry.statistics_id).toBe(statisticsId);
+    });
+
+    it.each([
+      ["atur ocupacio", "e03"],
+      ["padro habitants", "pmh"],
+      ["sexe edat", "pmh"],
+    ])("preserves existing two-token ranking quality for %s", (query, statisticsId) => {
       const results = rankIdescatSearchResults(caEntries, query);
 
       expect(results[0]?.entry.statistics_id).toBe(statisticsId);
@@ -379,6 +460,15 @@ describe("rankIdescatSearchResults", () => {
       expect(first?.geo_candidates).toContain("com");
       expect(first?.geo_candidates?.[0]).toBe("com");
       expect(first).not.toHaveProperty("geo_ids");
+    });
+
+    it("exposes municipal adjective geo hints for real population discovery", async () => {
+      const result = await searchIdescatTables({ query: "poblacio municipal", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("pmh");
+      expect(first?.geo_candidates).toContain("mun");
+      expect(first?.geo_candidates?.[0]).toBe("mun");
     });
 
     it("uses named comarques as geo intent for real population discovery", async () => {
@@ -406,6 +496,34 @@ describe("rankIdescatSearchResults", () => {
 
       expect(first?.statistics_id).toBe("e03");
       expect(first?.geo_candidates).not.toBeNull();
+    });
+
+    it("keeps real paro comarca discovery recoverable via semantic aliases", async () => {
+      const result = await searchIdescatTables({ query: "paro comarca", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("e03");
+      expect(first?.geo_candidates).not.toBeNull();
+    });
+
+    it("keeps real atur municipal discovery recoverable even when geography is unavailable", async () => {
+      const result = await searchIdescatTables({ query: "atur municipal", limit: 1 }, config);
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("e03");
+      expect(first?.geo_candidates).not.toBeNull();
+    });
+
+    it("uses semantic aliases for real renda per capita place discovery", async () => {
+      const result = await searchIdescatTables(
+        { query: "renda per capita Maresme", limit: 1 },
+        config,
+      );
+      const first = result.data.results[0];
+
+      expect(first?.statistics_id).toBe("rfdbc");
+      expect(first?.geo_candidates).not.toBeNull();
+      expect(first?.geo_candidates?.[0]).toBe("com");
     });
 
     it("keeps PHRE behind PMH for padro habitants", () => {
@@ -451,6 +569,8 @@ describe("rankIdescatSearchResults", () => {
     it.each([
       ["municipal population register", "pmh"],
       ["population sex age", "pmh"],
+      ["family income", "rfdbc"],
+      ["income of household", "rfdbc"],
     ])("ranks %s with %s first", (query, statisticsId) => {
       const results = rankIdescatSearchResults(enEntries, query);
 
@@ -458,11 +578,18 @@ describe("rankIdescatSearchResults", () => {
     });
   });
 
-  describe.skip("acknowledged search limitations", () => {
-    it("does not solve stemming for taxa atur", () => {
-      expect(rankIdescatSearchResults(caEntries, "taxa atur")[0]?.entry.statistics_id).toBe("e03");
-    });
+  describe("real ES index regressions", () => {
+    it.each([
+      ["renta familiar", "rfdbc"],
+      ["renta de la familia", "rfdbc"],
+    ])("uses semantic aliases for Spanish renda phrasing: %s", (query, statisticsId) => {
+      const results = rankIdescatSearchResults(esEntries, query);
 
+      expect(results[0]?.entry.statistics_id).toBe(statisticsId);
+    });
+  });
+
+  describe.skip("acknowledged search limitations", () => {
     it("does not solve English substring leakage for population by age", () => {
       expect(rankIdescatSearchResults(enEntries, "population by age")[0]?.entry.statistics_id).toBe(
         "pmh",
