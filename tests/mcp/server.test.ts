@@ -5,6 +5,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { AppConfig } from "../../src/config.js";
 import { createMcpServer, createPingMessage, serverName } from "../../src/mcp/server.js";
 import { packageVersion } from "../../src/package-info.js";
+import { IDESCAT_LOGICAL_URL_MAX_BYTES } from "../../src/sources/idescat/request.js";
 
 const testConfig: AppConfig = {
   nodeEnv: "test",
@@ -383,6 +384,48 @@ describe("createMcpServer", () => {
           source_error: {
             rule: "filter_value_bytes",
             limit: 256,
+          },
+        },
+      });
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("rejects overlong IDESCAT data GET URLs before calling upstream", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = await client.callTool({
+        name: "idescat_get_table_data",
+        arguments: {
+          statistics_id: "pmh",
+          node_id: "1180",
+          table_id: "8078",
+          geo_id: "com",
+          filters: {
+            COM: Array(15).fill("é".repeat(128)),
+          },
+          limit: 1,
+        },
+      });
+      const toolResult = result as ToolCallResult;
+
+      expect(toolResult.isError).toBe(true);
+      expect(toolResult.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "idescat",
+          code: "invalid_input",
+          message: expect.stringContaining("reduce or split filters"),
+          retryable: false,
+          source_error: {
+            rule: "logical_url_bytes",
+            limit: IDESCAT_LOGICAL_URL_MAX_BYTES,
           },
         },
       });

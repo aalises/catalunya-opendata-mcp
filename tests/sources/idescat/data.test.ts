@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import type { AppConfig } from "../../../src/config.js";
+import { getUrlByteLength } from "../../../src/sources/common/caps.js";
 import { IDESCAT_USER_AGENT } from "../../../src/sources/idescat/client.js";
 import { getIdescatTableData } from "../../../src/sources/idescat/data.js";
 
@@ -78,6 +79,45 @@ describe("getIdescatTableData", () => {
       label: "Provisional data",
     });
     expect(result.data.units?.by_dimension?.VALUE?.POP).toEqual({ decimals: 0 });
+  });
+
+  it("keeps long multi-value filters in the GET query instead of falling back to POST", async () => {
+    const fetchMock = mockJsonResponse(jsonStatDataset());
+    const comFilter = Array(9).fill("x".repeat(240));
+
+    const result = await getIdescatTableData(
+      {
+        statistics_id: "pmh",
+        node_id: "1180",
+        table_id: "8078",
+        geo_id: "com",
+        lang: "en",
+        filters: {
+          COM: comFilter,
+          SEX: "F",
+        },
+        last: 2,
+        limit: 3,
+      },
+      baseConfig,
+    );
+
+    const [requestUrl, init] = fetchMock.mock.calls[0] as [URL, RequestInit];
+    const url = new URL(requestUrl);
+
+    expect(getUrlByteLength(url)).toBeGreaterThan(2_000);
+    expect(init.method).toBe("GET");
+    expect(init.body).toBeUndefined();
+    expect(init.headers).not.toHaveProperty("Content-Type");
+    expect(url.pathname).toBe("/taules/v2/pmh/1180/8078/com/data");
+    expect(url.searchParams.get("lang")).toBe("en");
+    expect(url.searchParams.get("COM")).toBe(comFilter.join(","));
+    expect(url.searchParams.get("SEX")).toBe("F");
+    expect(url.searchParams.get("_LAST_")).toBe("2");
+
+    expect(result.data.request_method).toBe("GET");
+    expect(result.data.request_url).toBe(result.data.logical_request_url);
+    expect(result.data).not.toHaveProperty("request_body_params");
   });
 
   it("maps IDESCAT cell-limit errors to narrow_filters with source_error", async () => {

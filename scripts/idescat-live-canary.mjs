@@ -9,6 +9,8 @@ const EXPECTED_STATISTICS_ID = "pmh";
 const EXPECTED_NODE_ID = "1180";
 const EXPECTED_TABLE_ID = "8078";
 const PREFERRED_GEO_ID = "cat";
+const MUNICIPALITY_GEO_ID = "mun";
+const LONG_FILTER_MUNICIPALITY_COUNT = 250;
 const GEO_QUERY = "poblacio comarca";
 const GEO_AWARE_GEO_ID = "com";
 const NON_PMH_GEO_QUERY = "renda comarca";
@@ -82,6 +84,51 @@ try {
 
   assert(data.data.row_count > 0, "Expected at least one data row.");
   assert(data.data.rows.length > 0, "Expected returned rows to be non-empty.");
+
+  const municipalityMetadata = await callTool("idescat_get_table_metadata", {
+    statistics_id: selectedTable.statistics_id,
+    node_id: selectedTable.node_id,
+    table_id: selectedTable.table_id,
+    geo_id: MUNICIPALITY_GEO_ID,
+    lang: "ca",
+  });
+  const municipalityDimension = municipalityMetadata.data.dimensions.find(
+    (dimension) => dimension.id === "MUN",
+  );
+  const municipalityIds = (municipalityDimension?.categories ?? [])
+    .map((category) => category.id)
+    .filter((id) => id !== "TOTAL")
+    .slice(0, LONG_FILTER_MUNICIPALITY_COUNT);
+
+  assert(
+    municipalityIds.length === LONG_FILTER_MUNICIPALITY_COUNT,
+    `Expected at least ${LONG_FILTER_MUNICIPALITY_COUNT} municipality IDs for long-filter canary.`,
+  );
+
+  const longMunicipalityFilterData = await callTool("idescat_get_table_data", {
+    statistics_id: selectedTable.statistics_id,
+    node_id: selectedTable.node_id,
+    table_id: selectedTable.table_id,
+    geo_id: MUNICIPALITY_GEO_ID,
+    lang: "ca",
+    filters: {
+      MUN: municipalityIds,
+      AGE: "TOTAL",
+      SEX: "TOTAL",
+      CONCEPT: "POP",
+    },
+    last: 1,
+    limit: 3,
+  });
+
+  assert(
+    longMunicipalityFilterData.data.request_method === "GET",
+    "Expected long municipality filter request to use GET.",
+  );
+  assert(
+    longMunicipalityFilterData.data.selected_cell_count === LONG_FILTER_MUNICIPALITY_COUNT,
+    `Expected long municipality filter to select ${LONG_FILTER_MUNICIPALITY_COUNT} cells, got ${longMunicipalityFilterData.data.selected_cell_count}.`,
+  );
 
   const geoAwareSearch = await callTool("idescat_search_tables", {
     query: GEO_QUERY,
@@ -300,6 +347,14 @@ try {
       truncated: data.data.truncated,
       truncation_reason: data.data.truncation_reason ?? null,
       first_row: data.data.rows[0],
+    },
+    long_municipality_filter: {
+      municipality_count: LONG_FILTER_MUNICIPALITY_COUNT,
+      request_method: longMunicipalityFilterData.data.request_method,
+      selected_cell_count: longMunicipalityFilterData.data.selected_cell_count,
+      row_count: longMunicipalityFilterData.data.row_count,
+      truncated: longMunicipalityFilterData.data.truncated,
+      first_row: longMunicipalityFilterData.data.rows[0],
     },
     citation: {
       source_url: metadata.data.provenance.source_url,

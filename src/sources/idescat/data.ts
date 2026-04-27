@@ -45,8 +45,7 @@ export interface IdescatTableData {
   logical_request_url: string;
   node_id: string;
   notes?: string[];
-  request_body_params?: Record<string, string>;
-  request_method: "GET" | "POST";
+  request_method: "GET";
   request_url: string;
   row_count: number;
   rows: IdescatDataRow[];
@@ -100,9 +99,6 @@ export async function getIdescatTableData(
     lang: normalizedInput.lang,
     request_method: builtRequest.requestMethod,
     request_url: builtRequest.request.url.toString(),
-    ...(builtRequest.requestBodyParams
-      ? { request_body_params: builtRequest.requestBodyParams }
-      : {}),
     logical_request_url: builtRequest.logicalRequestUrl.toString(),
     ...(builtRequest.filters ? { filters: builtRequest.filters } : {}),
     ...(builtRequest.last === undefined ? {} : { last: builtRequest.last }),

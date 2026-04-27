@@ -11,8 +11,6 @@ export const IDESCAT_FILTER_KEY_MAX_BYTES = 64;
 export const IDESCAT_FILTER_TOTAL_MAX_BYTES = 4_096;
 export const IDESCAT_FILTER_VALUE_MAX_BYTES = 256;
 export const IDESCAT_LOGICAL_URL_MAX_BYTES = 8_192;
-export const IDESCAT_POST_BODY_MAX_BYTES = 16_384;
-export const IDESCAT_POST_THRESHOLD_BYTES = 2_000;
 
 export type IdescatFilterValue = string | string[];
 export type NormalizedIdescatFilters = Record<string, IdescatFilterValue>;
@@ -45,8 +43,7 @@ export interface BuiltIdescatDataRequest {
   last?: number;
   logicalRequestUrl: URL;
   request: IdescatHttpRequest;
-  requestBodyParams?: Record<string, string>;
-  requestMethod: "GET" | "POST";
+  requestMethod: "GET";
 }
 
 export function buildIdescatUrl(input: BuildIdescatUrlInput): URL {
@@ -76,45 +73,16 @@ export function buildIdescatDataRequest(
   const normalizedFilters = normalizeFilters(input.filters);
   const filters = normalizedFilters.filters;
   const logicalRequestUrl = buildIdescatUrl({ ...input, data: true });
-  const bodyParams = new URLSearchParams();
 
   for (const [key, value] of Object.entries(filters)) {
     const joinedValue = Array.isArray(value) ? value.join(",") : value;
     logicalRequestUrl.searchParams.set(key, joinedValue);
-    bodyParams.set(key, joinedValue);
   }
 
   if (last !== undefined) {
     logicalRequestUrl.searchParams.set("_LAST_", String(last));
   }
 
-  if (getUrlByteLength(logicalRequestUrl) <= IDESCAT_POST_THRESHOLD_BYTES) {
-    validateFilterTotalLength(normalizedFilters.totalBytes);
-    validateUrlLength(logicalRequestUrl);
-
-    return {
-      filters: emptyRecordAsUndefined(filters),
-      last,
-      logicalRequestUrl,
-      request: {
-        method: "GET",
-        url: logicalRequestUrl,
-      },
-      requestMethod: "GET",
-    };
-  }
-
-  const requestUrl = buildIdescatUrl({ ...input, data: true });
-
-  if (last !== undefined) {
-    requestUrl.searchParams.set("_LAST_", String(last));
-  }
-
-  const requestBodyParams = Object.fromEntries(bodyParams.entries());
-  // Validate POST body before filter_total/url so post_body_bytes is reachable —
-  // an earlier revision deliberately put it last to keep the cap unreachable; do
-  // not flip the order back without re-reading the cap-error tests.
-  validatePostBodyLength(bodyParams);
   validateFilterTotalLength(normalizedFilters.totalBytes);
   validateUrlLength(logicalRequestUrl);
 
@@ -123,12 +91,10 @@ export function buildIdescatDataRequest(
     last,
     logicalRequestUrl,
     request: {
-      body: bodyParams,
-      method: "POST",
-      url: requestUrl,
+      method: "GET",
+      url: logicalRequestUrl,
     },
-    requestBodyParams,
-    requestMethod: "POST",
+    requestMethod: "GET",
   };
 }
 
@@ -297,14 +263,6 @@ function validateUrlLength(url: URL): void {
 function validateFilterTotalLength(byteLength: number): void {
   if (byteLength > IDESCAT_FILTER_TOTAL_MAX_BYTES) {
     throwFilterCapError("filter_total_bytes", byteLength, IDESCAT_FILTER_TOTAL_MAX_BYTES);
-  }
-}
-
-function validatePostBodyLength(body: URLSearchParams): void {
-  const byteLength = getUtf8ByteLength(body.toString());
-
-  if (byteLength > IDESCAT_POST_BODY_MAX_BYTES) {
-    throwFilterCapError("post_body_bytes", byteLength, IDESCAT_POST_BODY_MAX_BYTES);
   }
 }
 

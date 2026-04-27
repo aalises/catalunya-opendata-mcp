@@ -9,8 +9,6 @@ import {
   IDESCAT_FILTER_TOTAL_MAX_BYTES,
   IDESCAT_FILTER_VALUE_MAX_BYTES,
   IDESCAT_LOGICAL_URL_MAX_BYTES,
-  IDESCAT_POST_BODY_MAX_BYTES,
-  IDESCAT_POST_THRESHOLD_BYTES,
 } from "../../../src/sources/idescat/request.js";
 
 const baseInput = {
@@ -20,6 +18,7 @@ const baseInput = {
   geo_id: "com",
   lang: "en" as const,
 };
+const FORMER_POST_THRESHOLD_BYTES = 2_000;
 
 describe("buildIdescatDataRequest", () => {
   it("keeps an exactly 2000-byte canonical URL as GET", () => {
@@ -34,13 +33,13 @@ describe("buildIdescatDataRequest", () => {
       },
     });
 
-    expect(getUrlByteLength(request.logicalRequestUrl)).toBe(IDESCAT_POST_THRESHOLD_BYTES);
+    expect(getUrlByteLength(request.logicalRequestUrl)).toBe(FORMER_POST_THRESHOLD_BYTES);
     expect(request.requestMethod).toBe("GET");
     expect(request.request.url.toString()).toBe(request.logicalRequestUrl.toString());
-    expect(request.requestBodyParams).toBeUndefined();
+    expect(request).not.toHaveProperty("requestBodyParams");
   });
 
-  it("uses POST above the 2000-byte threshold while preserving the logical URL", () => {
+  it("keeps filters in a GET URL above the former 2000-byte POST threshold", () => {
     const request = buildIdescatDataRequest({
       ...baseInput,
       filters: {
@@ -53,20 +52,23 @@ describe("buildIdescatDataRequest", () => {
     });
 
     expect(getUrlByteLength(request.logicalRequestUrl)).toBeGreaterThan(
-      IDESCAT_POST_THRESHOLD_BYTES,
+      FORMER_POST_THRESHOLD_BYTES,
     );
-    expect(request.requestMethod).toBe("POST");
-    expect(request.request.url.toString()).toBe(
-      "https://api.idescat.cat/taules/v2/pmh/1180/8078/com/data?lang=en&_LAST_=2",
+    expect(getUrlByteLength(request.logicalRequestUrl)).toBeLessThanOrEqual(
+      IDESCAT_LOGICAL_URL_MAX_BYTES,
     );
+    expect(request.requestMethod).toBe("GET");
+    expect(request.request.url.toString()).toBe(request.logicalRequestUrl.toString());
     expect(request.logicalRequestUrl.toString()).toContain("?lang=en&A=1%2C3&AA=4&B=2&K=");
     expect(request.logicalRequestUrl.searchParams.get("_LAST_")).toBe("2");
-    expect(request.requestBodyParams).toMatchObject({
-      A: "1,3",
-      AA: "4",
-      B: "2",
-      K: Array(8).fill("x".repeat(240)).join(","),
-    });
+    expect(request.logicalRequestUrl.searchParams.get("A")).toBe("1,3");
+    expect(request.logicalRequestUrl.searchParams.get("AA")).toBe("4");
+    expect(request.logicalRequestUrl.searchParams.get("B")).toBe("2");
+    expect(request.logicalRequestUrl.searchParams.get("K")).toBe(
+      Array(8).fill("x".repeat(240)).join(","),
+    );
+    expect(request.request.body).toBeUndefined();
+    expect(request).not.toHaveProperty("requestBodyParams");
   });
 
   it("reports filter_count cap details", () => {
@@ -126,37 +128,20 @@ describe("buildIdescatDataRequest", () => {
     );
   });
 
-  it("reports logical_url_bytes after POST body validation passes", () => {
+  it("reports logical_url_bytes for URL-encoded payloads within the filter cap", () => {
     const filters = {
       A: Array(15).fill("é".repeat(128)),
     };
     const observed = getUrlByteLength(createLogicalUrl(filters));
-    const bodyLength = getUtf8ByteLength(
-      new URLSearchParams({ A: filters.A.join(",") }).toString(),
-    );
+    const filterByteLength = getUtf8ByteLength("A") + 15 * getUtf8ByteLength("é".repeat(128));
 
     expect(observed).toBeGreaterThan(IDESCAT_LOGICAL_URL_MAX_BYTES);
-    expect(bodyLength).toBeLessThanOrEqual(IDESCAT_POST_BODY_MAX_BYTES);
+    expect(filterByteLength).toBeLessThanOrEqual(IDESCAT_FILTER_TOTAL_MAX_BYTES);
     expectCapError(
       () => buildIdescatDataRequest({ ...baseInput, filters }),
       "logical_url_bytes",
       observed,
       IDESCAT_LOGICAL_URL_MAX_BYTES,
-    );
-  });
-
-  it("reports post_body_bytes before broader filter/URL caps", () => {
-    const filters = {
-      A: Array(64).fill("é".repeat(128)),
-    };
-    const observed = getUtf8ByteLength(new URLSearchParams({ A: filters.A.join(",") }).toString());
-
-    expect(observed).toBeGreaterThan(IDESCAT_POST_BODY_MAX_BYTES);
-    expectCapError(
-      () => buildIdescatDataRequest({ ...baseInput, filters }),
-      "post_body_bytes",
-      observed,
-      IDESCAT_POST_BODY_MAX_BYTES,
     );
   });
 });
