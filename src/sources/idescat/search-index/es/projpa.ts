@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y escenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14859/15719?lang=es"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y grupo de edad. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14863/15720?lang=es"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y grupo de edad. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14864/15745?lang=es"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y grupo de edad. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14865/15747?lang=es"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y edad quinquenal. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14866/15754?lang=es"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y edad quinquenal. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14867/15755?lang=es"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Población activa proyectada por sexo y edad quinquenal. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14868/15756?lang=es"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por escenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14869/15721?lang=es"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14870/15751?lang=es"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14871/15752?lang=es"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14872/15753?lang=es"
   },
   {
@@ -132,6 +209,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo y grupo de edad. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14873/15722?lang=es"
   },
   {
@@ -143,6 +227,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo y grupo de edad. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14874/15749?lang=es"
   },
   {
@@ -154,6 +245,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de población activa",
       "node": "Tasa de actividad proyectada por sexo y grupo de edad. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14875/15750?lang=es"
   }
 ];

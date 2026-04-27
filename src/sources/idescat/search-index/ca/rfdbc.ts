@@ -11,6 +11,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Renda familiar disponible bruta territorial",
       "node": "RFDB i RFDB per habitant. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/13301/14148?lang=ca"
   },
   {
@@ -22,6 +28,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Renda familiar disponible bruta territorial",
       "node": "Components de la RFDB: principals recursos (+) i usos (−). Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/13302/21197?lang=ca"
   },
   {
@@ -33,6 +45,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Renda familiar disponible bruta territorial",
       "node": "RFDB i RFDB per habitant. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/21181/25017?lang=ca"
   },
   {
@@ -44,6 +62,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Renda familiar disponible bruta territorial",
       "node": "Components de la RFDB: principals recursos (+) i usos (−). Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/21182/25018?lang=ca"
   }
 ];

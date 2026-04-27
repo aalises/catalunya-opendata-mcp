@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimació mensual de la població activa",
       "node": "Població activa, ocupada i desocupada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e03/22273/26670?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimació mensual de la població activa",
       "node": "Taxes d'activitat, ocupació i atur"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e03/22274/26671?lang=ca"
   }
 ];

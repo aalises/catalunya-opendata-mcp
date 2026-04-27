@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Supply. Seasonally adjusted data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13077/15840?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Supply. Seasonally adjusted data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13078/15842?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Supply. Gross data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13080/15844?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Supply. Gross data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13081/15849?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Supply. Seasonally adjusted data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21129/24938?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Supply. Seasonally adjusted data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21130/24940?lang=en"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Supply. Gross data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21132/24942?lang=en"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Supply. Gross data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21133/24944?lang=en"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Seasonally adjusted data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21651/15841?lang=en"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Seasonally adjusted data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21652/24939?lang=en"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Demand. Seasonally adjusted data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21653/15843?lang=en"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product in volume. Demand. Seasonally adjusted data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21654/24941?lang=en"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Gross data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21655/15845?lang=en"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Gross data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21656/24943?lang=en"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Gross data. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21657/15850?lang=en"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Quarterly Accounts",
       "node": "Gross Domestic Product at current prices. Demand. Gross data. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21658/24945?lang=en"
   }
 ];

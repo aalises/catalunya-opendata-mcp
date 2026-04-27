@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Índex socioeconòmic territorial (IST). Índex Catalunya=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14034/14994?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Indicadors socioeconòmics estandarditzats. Índex Catalunya=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14036/14992?lang=ca"
   },
   {
@@ -33,6 +47,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Índex socioeconòmic territorial (IST). Índex Catalunya=100. Per barris de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14058/15010?lang=ca"
   },
   {
@@ -44,6 +61,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Indicadors socioeconòmics estandarditzats. Índex Catalunya=100. Per barris de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14059/15011?lang=ca"
   },
   {
@@ -55,6 +75,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Indicadors socioeconòmics. Valors"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14074/15022?lang=ca"
   },
   {
@@ -66,6 +93,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex socioeconòmic territorial",
       "node": "Indicadors socioeconòmics. Valors. Per barris de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14075/15023?lang=ca"
   }
 ];

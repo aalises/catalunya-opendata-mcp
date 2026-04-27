@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25005?lang=ca"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25007?lang=ca"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25008?lang=ca"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25009?lang=ca"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25011?lang=ca"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25012?lang=ca"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25013?lang=ca"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25015?lang=ca"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/26683?lang=ca"
   },
   {
@@ -110,6 +146,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25006?lang=ca"
   },
   {
@@ -121,6 +164,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25016?lang=ca"
   },
   {
@@ -132,6 +179,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per continent de residència, sexe i edat quinquennal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3471/3608?lang=ca"
   },
   {
@@ -143,6 +197,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per continent de residència i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3473/3613?lang=ca"
   },
   {
@@ -154,6 +215,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3697/3577?lang=ca"
   },
   {
@@ -165,6 +233,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10165?lang=ca"
   },
   {
@@ -176,6 +251,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10501?lang=ca"
   },
   {
@@ -187,6 +269,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/11505?lang=ca"
   },
   {
@@ -198,6 +287,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/14111?lang=ca"
   },
   {
@@ -209,6 +305,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15012?lang=ca"
   },
   {
@@ -220,6 +323,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15673?lang=ca"
   },
   {
@@ -231,6 +341,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/19894?lang=ca"
   },
   {
@@ -242,6 +359,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/21194?lang=ca"
   },
   {
@@ -253,6 +377,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/24946?lang=ca"
   },
   {
@@ -264,6 +395,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/26680?lang=ca"
   },
   {
@@ -275,6 +413,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4767?lang=ca"
   },
   {
@@ -286,6 +431,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4768?lang=ca"
   },
   {
@@ -297,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4769?lang=ca"
   },
   {
@@ -308,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/5439?lang=ca"
   },
   {
@@ -319,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/6216?lang=ca"
   },
   {
@@ -330,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/7013?lang=ca"
   },
   {
@@ -341,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8140?lang=ca"
   },
   {
@@ -352,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per país de residència (500 residents o més) i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8513?lang=ca"
   },
   {
@@ -363,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per continent de residència i lloc de naixement"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3737/3624?lang=ca"
   },
   {
@@ -374,6 +575,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Població resident a l'estranger. Per lloc de naixement, sexe i edat quinquennal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/6274/6277?lang=ca"
   },
   {
@@ -385,6 +593,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7037/6956?lang=ca"
   },
   {
@@ -396,6 +611,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per edat en grans grups"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7399/7246?lang=ca"
   },
   {
@@ -407,6 +629,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7400/7251?lang=ca"
   },
   {
@@ -418,6 +647,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per continent de residència i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7401/7287?lang=ca"
   },
   {
@@ -429,6 +665,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10164?lang=ca"
   },
   {
@@ -440,6 +680,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10503?lang=ca"
   },
   {
@@ -451,6 +695,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/11502?lang=ca"
   },
   {
@@ -462,6 +710,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15014?lang=ca"
   },
   {
@@ -473,6 +725,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15683?lang=ca"
   },
   {
@@ -484,6 +740,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/21204?lang=ca"
   },
   {
@@ -495,6 +755,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/24948?lang=ca"
   },
   {
@@ -506,6 +770,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/26682?lang=ca"
   },
   {
@@ -517,6 +785,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Noves inscripcions de població resident a l'estranger. Per país de residència (1.000 residents o més) i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/7465?lang=ca"
   },
   {
@@ -528,6 +800,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10166?lang=ca"
   },
   {
@@ -539,6 +818,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10502?lang=ca"
   },
   {
@@ -550,6 +836,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/11504?lang=ca"
   },
   {
@@ -561,6 +854,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/14113?lang=ca"
   },
   {
@@ -572,6 +872,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15013?lang=ca"
   },
   {
@@ -583,6 +890,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15674?lang=ca"
   },
   {
@@ -594,6 +908,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/19895?lang=ca"
   },
   {
@@ -605,6 +926,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/21196?lang=ca"
   },
   {
@@ -616,6 +944,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/24947?lang=ca"
   },
   {
@@ -627,6 +962,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/26681?lang=ca"
   },
   {
@@ -638,6 +980,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8584?lang=ca"
   },
   {
@@ -649,6 +998,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8585?lang=ca"
   },
   {
@@ -660,6 +1016,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8586?lang=ca"
   },
   {
@@ -671,6 +1034,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8587?lang=ca"
   },
   {
@@ -682,6 +1052,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8588?lang=ca"
   },
   {
@@ -693,6 +1070,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8589?lang=ca"
   },
   {
@@ -704,6 +1088,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8590?lang=ca"
   },
   {
@@ -715,6 +1106,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padró d'habitants residents a l'estranger",
       "node": "Per país de residència (500 residents o més) i lloc de naixement (agregat)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8591?lang=ca"
   }
 ];

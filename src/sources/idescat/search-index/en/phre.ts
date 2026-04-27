@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25005?lang=en"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25007?lang=en"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25008?lang=en"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25009?lang=en"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25011?lang=en"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25012?lang=en"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25013?lang=en"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25015?lang=en"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/26683?lang=en"
   },
   {
@@ -110,6 +146,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By continent of residence and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25006?lang=en"
   },
   {
@@ -121,6 +164,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By continent of residence and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25016?lang=en"
   },
   {
@@ -132,6 +179,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By continent of residence, sex and five-year age group"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3471/3608?lang=en"
   },
   {
@@ -143,6 +197,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By continent of residence and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3473/3613?lang=en"
   },
   {
@@ -154,6 +215,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3697/3577?lang=en"
   },
   {
@@ -165,6 +233,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10165?lang=en"
   },
   {
@@ -176,6 +251,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10501?lang=en"
   },
   {
@@ -187,6 +269,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/11505?lang=en"
   },
   {
@@ -198,6 +287,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/14111?lang=en"
   },
   {
@@ -209,6 +305,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15012?lang=en"
   },
   {
@@ -220,6 +323,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15673?lang=en"
   },
   {
@@ -231,6 +341,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/19894?lang=en"
   },
   {
@@ -242,6 +359,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/21194?lang=en"
   },
   {
@@ -253,6 +377,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/24946?lang=en"
   },
   {
@@ -264,6 +395,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/26680?lang=en"
   },
   {
@@ -275,6 +413,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4767?lang=en"
   },
   {
@@ -286,6 +431,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4768?lang=en"
   },
   {
@@ -297,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4769?lang=en"
   },
   {
@@ -308,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/5439?lang=en"
   },
   {
@@ -319,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/6216?lang=en"
   },
   {
@@ -330,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/7013?lang=en"
   },
   {
@@ -341,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8140?lang=en"
   },
   {
@@ -352,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8513?lang=en"
   },
   {
@@ -363,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By continent of residence and place of birth"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3737/3624?lang=en"
   },
   {
@@ -374,6 +575,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By place of birth, sex and five-year age group"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/6274/6277?lang=en"
   },
   {
@@ -385,6 +593,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7037/6956?lang=en"
   },
   {
@@ -396,6 +611,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By age in large age groups"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7399/7246?lang=en"
   },
   {
@@ -407,6 +629,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By place of birth and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7400/7251?lang=en"
   },
   {
@@ -418,6 +647,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By continent of residence and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7401/7287?lang=en"
   },
   {
@@ -429,6 +665,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10164?lang=en"
   },
   {
@@ -440,6 +680,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10503?lang=en"
   },
   {
@@ -451,6 +695,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/11502?lang=en"
   },
   {
@@ -462,6 +710,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15014?lang=en"
   },
   {
@@ -473,6 +725,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15683?lang=en"
   },
   {
@@ -484,6 +740,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/21204?lang=en"
   },
   {
@@ -495,6 +755,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/24948?lang=en"
   },
   {
@@ -506,6 +770,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/26682?lang=en"
   },
   {
@@ -517,6 +785,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "New registrations of population residing abroad. By country of residence (1,000 residents and over) and sex"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/7465?lang=en"
   },
   {
@@ -528,6 +800,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10166?lang=en"
   },
   {
@@ -539,6 +818,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10502?lang=en"
   },
   {
@@ -550,6 +836,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/11504?lang=en"
   },
   {
@@ -561,6 +854,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/14113?lang=en"
   },
   {
@@ -572,6 +872,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15013?lang=en"
   },
   {
@@ -583,6 +890,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15674?lang=en"
   },
   {
@@ -594,6 +908,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/19895?lang=en"
   },
   {
@@ -605,6 +926,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/21196?lang=en"
   },
   {
@@ -616,6 +944,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/24947?lang=en"
   },
   {
@@ -627,6 +962,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/26681?lang=en"
   },
   {
@@ -638,6 +980,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8584?lang=en"
   },
   {
@@ -649,6 +998,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8585?lang=en"
   },
   {
@@ -660,6 +1016,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8586?lang=en"
   },
   {
@@ -671,6 +1034,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8587?lang=en"
   },
   {
@@ -682,6 +1052,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8588?lang=en"
   },
   {
@@ -693,6 +1070,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8589?lang=en"
   },
   {
@@ -704,6 +1088,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8590?lang=en"
   },
   {
@@ -715,6 +1106,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Register of Inhabitants Residing Abroad",
       "node": "Population residing abroad. By country of residence (500 residents and over) and place of birth (aggregate)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8591?lang=en"
   }
 ];

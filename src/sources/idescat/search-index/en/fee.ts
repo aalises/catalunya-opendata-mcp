@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by economic activity sector of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21934/23172?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by economic activity sector of the company. Percentage of the total number of companies with establishments in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21935/24523?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by economic activity branch of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21936/24547?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by economic activity branch of the company. Percentage of the total number of companies with establishments in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21937/24548?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by country of the parent company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21938/21264?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by company size and sector of economic activity of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21939/24989?lang=en"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by company size and sector of economic activity of the company. Percentage of the total number of companies with establishments in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21940/24990?lang=en"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies with establishments in Catalonia. Main results by geographical area of the parent company and sector of economic activity of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21941/24991?lang=en"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies with establishments in Catalonia. Main indicators by economic activity sector of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21943/26432?lang=en"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies with establishments in Catalonia. Main indicators by economic activity branch of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21945/26433?lang=en"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies with establishments in Catalonia. Main indicators by country of the parent company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21947/21267?lang=en"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies with establishments in Catalonia. Main indicators by company size and economic activity sector"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21948/26434?lang=en"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies with establishments in Catalonia. Main indicators by geographical area of the parent company and sector of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21950/24994?lang=en"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by sector of economic activity of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21953/24526?lang=en"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by sector of economic activity of the company. Percentage of the total number of companies based in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21954/24527?lang=en"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by economic activity branch of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21955/24551?lang=en"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by economic activity branch of the company. Percentage of the total number of companies based in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21956/24552?lang=en"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by geographical area of the parent company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21957/21279?lang=en"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by company size and economic activity sector of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21958/24995?lang=en"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by company size and economic activity sector of the company. Percentage of the total number of companies based in Catalonia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21959/24996?lang=en"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies based in Catalonia. Main results by geographical area of the parent company and economic activity sector of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21960/24997?lang=en"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies based in Catalonia. Main indicators by economic activity sector of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21962/26435?lang=en"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies based in Catalonia. Main indicators by economic activity branch of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21964/26436?lang=en"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies based in Catalonia. Main indicators by geographical area of the parent company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21966/21282?lang=en"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companies and companies based in Catalonia. Main indicators by company size and economic activity sector"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21967/26437?lang=en"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Affiliates of Foreign Companies",
       "node": "Affiliates of foreign companiesand companies based in Catalonia. Main indicators by geographical area of the parent company and sector of econòmic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21969/25000?lang=en"
   }
 ];

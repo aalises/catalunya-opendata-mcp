@@ -11,6 +11,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Disposable Household Income",
       "node": "RFDB and RFDB per inhabitant. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/13301/14148?lang=en"
   },
   {
@@ -22,6 +28,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Disposable Household Income",
       "node": "Components of the RFDB: main resources (+) and uses (−). 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/13302/21197?lang=en"
   },
   {
@@ -33,6 +45,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Disposable Household Income",
       "node": "RFDB and RFDB per inhabitant. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/21181/25017?lang=en"
   },
   {
@@ -44,6 +62,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Disposable Household Income",
       "node": "Components of the RFDB: main resources (+) and uses (−). 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/rfdbc/21182/25018?lang=en"
   }
 ];

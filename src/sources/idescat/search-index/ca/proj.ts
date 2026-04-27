@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per escenari (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14549/15404?lang=ca"
   },
   {
@@ -22,6 +29,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Índex de dependència de la gent gran projectat per escenari (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14555/15423?lang=ca"
   },
   {
@@ -33,6 +43,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari baix (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14556/15405?lang=ca"
   },
   {
@@ -44,6 +61,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari mitjà (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14557/15409?lang=ca"
   },
   {
@@ -55,6 +79,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari alt (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14558/15413?lang=ca"
   },
   {
@@ -66,6 +97,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari baix (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14559/15406?lang=ca"
   },
   {
@@ -77,6 +115,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari mitjà (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14560/15410?lang=ca"
   },
   {
@@ -88,6 +133,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari alt (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14561/15414?lang=ca"
   },
   {
@@ -99,6 +151,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari baix (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14562/15407?lang=ca"
   },
   {
@@ -110,6 +169,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari mitjà (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14563/15411?lang=ca"
   },
   {
@@ -121,6 +187,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari alt (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14564/15415?lang=ca"
   },
   {
@@ -132,6 +205,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari baix (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14565/15408?lang=ca"
   },
   {
@@ -143,6 +223,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari mitjà (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14566/15412?lang=ca"
   },
   {
@@ -154,6 +241,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari alt (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14567/15416?lang=ca"
   },
   {
@@ -165,6 +259,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic projectat (base 2021). Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14568/15417?lang=ca"
   },
   {
@@ -176,6 +277,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic projectat (base 2021). Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14569/15418?lang=ca"
   },
   {
@@ -187,6 +295,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic projectat (base 2021). Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14570/15419?lang=ca"
   },
   {
@@ -198,6 +313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Fecunditat projectada per escenari (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14571/15420?lang=ca"
   },
   {
@@ -209,6 +327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Esperança de vida projectada per escenari (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14572/15421?lang=ca"
   },
   {
@@ -220,6 +341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Migració projectada per escenari (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14573/15422?lang=ca"
   },
   {
@@ -231,6 +355,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada per escenari (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20944/24796?lang=ca"
   },
   {
@@ -242,6 +373,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Índex de dependència de la gent gran projectat per escenari (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20950/24816?lang=ca"
   },
   {
@@ -253,6 +387,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20951/24797?lang=ca"
   },
   {
@@ -264,6 +405,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20952/24831?lang=ca"
   },
   {
@@ -275,6 +423,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20953/24798?lang=ca"
   },
   {
@@ -286,6 +441,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20954/24799?lang=ca"
   },
   {
@@ -297,6 +459,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20955/24800?lang=ca"
   },
   {
@@ -308,6 +477,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20956/24829?lang=ca"
   },
   {
@@ -319,6 +495,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20957/24801?lang=ca"
   },
   {
@@ -330,6 +513,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20958/24802?lang=ca"
   },
   {
@@ -341,6 +531,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20959/24803?lang=ca"
   },
   {
@@ -352,6 +549,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20960/24830?lang=ca"
   },
   {
@@ -363,6 +567,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i edat quinquennal. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20961/24804?lang=ca"
   },
   {
@@ -374,6 +585,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada a 1 de gener per sexe i grans grups d'edat. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20962/24805?lang=ca"
   },
   {
@@ -385,6 +603,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic anual projectat. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20963/24810?lang=ca"
   },
   {
@@ -396,6 +620,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic anual projectat. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20964/24811?lang=ca"
   },
   {
@@ -407,6 +637,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic anual projectat. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20965/24812?lang=ca"
   },
   {
@@ -418,6 +654,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Indicador conjuntural de fecunditat projectat per escenari (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20966/24813?lang=ca"
   },
   {
@@ -429,6 +668,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Esperança de vida projectada per sexe i escenari (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20967/24814?lang=ca"
   },
   {
@@ -440,6 +682,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Migració projectada per escenari (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20968/24832?lang=ca"
   },
   {
@@ -451,6 +696,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic quinquennal projectat. Escenari mitjà (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21504/25366?lang=ca"
   },
   {
@@ -462,6 +714,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic quinquennal projectat. Escenari alt (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21505/25367?lang=ca"
   },
   {
@@ -473,6 +732,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Components del creixement demogràfic quinquennal projectat. Escenari baix (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21506/25368?lang=ca"
   },
   {
@@ -484,6 +750,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població",
       "node": "Població projectada. Per escenari i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21507/25369?lang=ca"
   }
 ];

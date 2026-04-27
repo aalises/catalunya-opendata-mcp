@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14549/15404?lang=en"
   },
   {
@@ -22,6 +29,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected old-age dependency ratio by scenario (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14555/15423?lang=en"
   },
   {
@@ -33,6 +43,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. Low scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14556/15405?lang=en"
   },
   {
@@ -44,6 +61,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. Medium scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14557/15409?lang=en"
   },
   {
@@ -55,6 +79,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. High scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14558/15413?lang=en"
   },
   {
@@ -66,6 +97,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. Low scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14559/15406?lang=en"
   },
   {
@@ -77,6 +115,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. Medium scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14560/15410?lang=en"
   },
   {
@@ -88,6 +133,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. High scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14561/15414?lang=en"
   },
   {
@@ -99,6 +151,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. Low scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14562/15407?lang=en"
   },
   {
@@ -110,6 +169,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. Medium scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14563/15411?lang=en"
   },
   {
@@ -121,6 +187,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. High scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14564/15415?lang=en"
   },
   {
@@ -132,6 +205,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. Low scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14565/15408?lang=en"
   },
   {
@@ -143,6 +223,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. Medium scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14566/15412?lang=en"
   },
   {
@@ -154,6 +241,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. High scenario (base 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14567/15416?lang=en"
   },
   {
@@ -165,6 +259,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected population growth (base 2021). Low scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14568/15417?lang=en"
   },
   {
@@ -176,6 +277,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected population growth (base 2021). Medium scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14569/15418?lang=en"
   },
   {
@@ -187,6 +295,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected population growth (base 2021). High scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14570/15419?lang=en"
   },
   {
@@ -198,6 +313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected fertility by scenario (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14571/15420?lang=en"
   },
   {
@@ -209,6 +327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected life expectancy by scenario (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14572/15421?lang=en"
   },
   {
@@ -220,6 +341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected migration by scenario (base 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/14573/15422?lang=en"
   },
   {
@@ -231,6 +355,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population. By scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20944/24796?lang=en"
   },
   {
@@ -242,6 +373,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected old-age dependency ratio by scenario (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20950/24816?lang=en"
   },
   {
@@ -253,6 +387,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20951/24797?lang=en"
   },
   {
@@ -264,6 +405,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20952/24831?lang=en"
   },
   {
@@ -275,6 +423,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20953/24798?lang=en"
   },
   {
@@ -286,6 +441,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20954/24799?lang=en"
   },
   {
@@ -297,6 +459,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20955/24800?lang=en"
   },
   {
@@ -308,6 +477,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20956/24829?lang=en"
   },
   {
@@ -319,6 +495,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20957/24801?lang=en"
   },
   {
@@ -330,6 +513,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20958/24802?lang=en"
   },
   {
@@ -341,6 +531,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20959/24803?lang=en"
   },
   {
@@ -352,6 +549,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and age. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20960/24830?lang=en"
   },
   {
@@ -363,6 +567,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and five year age group. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20961/24804?lang=en"
   },
   {
@@ -374,6 +585,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population as of 1 January by sex and large age groups. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20962/24805?lang=en"
   },
   {
@@ -385,6 +603,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected annual population growth. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20963/24810?lang=en"
   },
   {
@@ -396,6 +620,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected annual population growth. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20964/24811?lang=en"
   },
   {
@@ -407,6 +637,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected annual population growth. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20965/24812?lang=en"
   },
   {
@@ -418,6 +654,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected short-term fertility rate. By scenario (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20966/24813?lang=en"
   },
   {
@@ -429,6 +668,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected life expectancy. By sex and scenario (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20967/24814?lang=en"
   },
   {
@@ -440,6 +682,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected migration. By scenario (base 2024)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/20968/24832?lang=en"
   },
   {
@@ -451,6 +696,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected five-year population growth. Medium scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21504/25366?lang=en"
   },
   {
@@ -462,6 +714,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected five-year population growth. High scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21505/25367?lang=en"
   },
   {
@@ -473,6 +732,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Components of projected five-year population growth. Low scenario (base 2024)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21506/25368?lang=en"
   },
   {
@@ -484,6 +750,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Projections",
       "node": "Projected population. By scenario and degree of urbanization"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/proj/21507/25369?lang=en"
   }
 ];

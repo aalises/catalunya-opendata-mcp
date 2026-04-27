@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Small Area Socioeconomic index (IST). Catalonia Index=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14034/14994?lang=en"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Standardized socioeconomic indicators. Catalonia Index=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14036/14992?lang=en"
   },
   {
@@ -33,6 +47,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Territorial socio-economic index (IST). Catalonia Index = 100. By neighborhoods of Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14058/15010?lang=en"
   },
   {
@@ -44,6 +61,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Standardized socio-economic indicators. Catalonia Index = 100. By neighborhoods of Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14059/15011?lang=en"
   },
   {
@@ -55,6 +75,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Socio-economic indicators. Values"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14074/15022?lang=en"
   },
   {
@@ -66,6 +93,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Small Area Socioeconomic Index",
       "node": "Socio-economic indicators. Values. By neighborhoods of Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14075/15023?lang=en"
   }
 ];

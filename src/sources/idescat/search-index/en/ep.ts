@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Demographic changes in the population estimates. Total"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10610/11112?lang=en"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Demographic changes in the population estimates. Men"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10611/11113?lang=en"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Demographic changes in the population estimates. Women"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10612/11114?lang=en"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and age in large age groups"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/17363/20891?lang=en"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9122/10002?lang=en"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and age"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/10007?lang=en"
   },
   {
@@ -77,6 +119,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and age"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/10008?lang=en"
   },
   {
@@ -88,6 +136,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and age"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/20149?lang=en"
   },
   {
@@ -99,6 +154,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and age"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/21460?lang=en"
   },
   {
@@ -110,6 +169,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and five year age group"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/10009?lang=en"
   },
   {
@@ -121,6 +187,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and five year age group"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/10011?lang=en"
   },
   {
@@ -132,6 +204,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Population Estimates",
       "node": "Population. By sex and five year age group"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/20150?lang=en"
   }
 ];

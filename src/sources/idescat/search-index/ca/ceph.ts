@@ -11,6 +11,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16500/19995?lang=ca"
   },
   {
@@ -22,6 +27,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16501/19996?lang=ca"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16502/19997?lang=ca"
   },
   {
@@ -44,6 +56,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, edat en grans grups i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16503/19998?lang=ca"
   },
   {
@@ -55,6 +72,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16504/19999?lang=ca"
   },
   {
@@ -66,6 +88,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16505/20000?lang=ca"
   },
   {
@@ -77,6 +102,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16506/20001?lang=ca"
   },
   {
@@ -88,6 +118,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16507/20002?lang=ca"
   },
   {
@@ -99,6 +132,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per coneixement del català, nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16508/20003?lang=ca"
   },
   {
@@ -110,6 +148,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per coneixement del català, nivell de formació assolit i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16509/20004?lang=ca"
   },
   {
@@ -121,6 +163,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16510/20005?lang=ca"
   },
   {
@@ -132,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16511/20006?lang=ca"
   },
   {
@@ -143,6 +193,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16512/20007?lang=ca"
   },
   {
@@ -154,6 +208,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, edat en grans grups i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16513/20008?lang=ca"
   },
   {
@@ -165,6 +224,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16514/20009?lang=ca"
   },
   {
@@ -176,6 +240,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16515/20010?lang=ca"
   },
   {
@@ -187,6 +254,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16516/20011?lang=ca"
   },
   {
@@ -198,6 +270,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16517/20012?lang=ca"
   },
   {
@@ -209,6 +284,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per àmbit i freqüència d'ús del català, nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16518/20013?lang=ca"
   },
   {
@@ -220,6 +300,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16519/20014?lang=ca"
   },
   {
@@ -231,6 +316,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16520/20015?lang=ca"
   },
   {
@@ -242,6 +330,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16521/20016?lang=ca"
   },
   {
@@ -253,6 +345,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, edat en grans grups i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16522/20017?lang=ca"
   },
   {
@@ -264,6 +361,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16523/20018?lang=ca"
   },
   {
@@ -275,6 +377,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16524/20019?lang=ca"
   },
   {
@@ -286,6 +391,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16525/20020?lang=ca"
   },
   {
@@ -297,6 +407,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del castellà, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16526/20021?lang=ca"
   },
   {
@@ -308,6 +421,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per coneixement del castellà, nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16527/20022?lang=ca"
   },
   {
@@ -319,6 +437,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per coneixement del castellà, nivell de formació assolit i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16528/20023?lang=ca"
   },
   {
@@ -330,6 +452,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16529/20024?lang=ca"
   },
   {
@@ -341,6 +468,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16530/20025?lang=ca"
   },
   {
@@ -352,6 +482,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16531/20026?lang=ca"
   },
   {
@@ -363,6 +497,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, edat en grans grups i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16532/20027?lang=ca"
   },
   {
@@ -374,6 +513,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16533/20028?lang=ca"
   },
   {
@@ -385,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16534/20029?lang=ca"
   },
   {
@@ -396,6 +543,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16535/20030?lang=ca"
   },
   {
@@ -407,6 +559,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del castellà, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16536/20031?lang=ca"
   },
   {
@@ -418,6 +573,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per àmbit i freqüència d'ús del castellà, nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16537/20032?lang=ca"
   },
   {
@@ -429,6 +589,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16553/20033?lang=ca"
   },
   {
@@ -440,6 +605,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16554/20034?lang=ca"
   },
   {
@@ -451,6 +619,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16556/20035?lang=ca"
   },
   {
@@ -462,6 +633,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16557/20036?lang=ca"
   },
   {
@@ -473,6 +647,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16559/20061?lang=ca"
   },
   {
@@ -484,6 +661,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'anglès, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16560/20062?lang=ca"
   },
   {
@@ -495,6 +675,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16561/20039?lang=ca"
   },
   {
@@ -506,6 +691,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16562/20040?lang=ca"
   },
   {
@@ -517,6 +705,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16564/20041?lang=ca"
   },
   {
@@ -528,6 +719,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16565/20042?lang=ca"
   },
   {
@@ -539,6 +733,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16567/20063?lang=ca"
   },
   {
@@ -550,6 +747,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del francès, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16568/20064?lang=ca"
   },
   {
@@ -561,6 +761,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16569/20045?lang=ca"
   },
   {
@@ -572,6 +775,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16570/20046?lang=ca"
   },
   {
@@ -583,6 +789,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16572/20047?lang=ca"
   },
   {
@@ -594,6 +803,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16573/20048?lang=ca"
   },
   {
@@ -605,6 +817,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16575/20065?lang=ca"
   },
   {
@@ -616,6 +831,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'àrab, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16576/20066?lang=ca"
   },
   {
@@ -627,6 +845,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16577/20051?lang=ca"
   },
   {
@@ -638,6 +859,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16578/20052?lang=ca"
   },
   {
@@ -649,6 +873,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16580/20053?lang=ca"
   },
   {
@@ -660,6 +887,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16581/20054?lang=ca"
   },
   {
@@ -671,6 +901,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16583/20067?lang=ca"
   },
   {
@@ -682,6 +915,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'italià, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16584/20068?lang=ca"
   },
   {
@@ -693,6 +929,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16585/20057?lang=ca"
   },
   {
@@ -704,6 +943,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16586/20058?lang=ca"
   },
   {
@@ -715,6 +957,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16588/20059?lang=ca"
   },
   {
@@ -726,6 +971,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16589/20060?lang=ca"
   },
   {
@@ -737,6 +985,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16591/20069?lang=ca"
   },
   {
@@ -748,6 +999,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement de l'alemany, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16592/20070?lang=ca"
   },
   {
@@ -759,6 +1013,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16593/20071?lang=ca"
   },
   {
@@ -770,6 +1029,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16594/20072?lang=ca"
   },
   {
@@ -781,6 +1043,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16596/20073?lang=ca"
   },
   {
@@ -792,6 +1057,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16597/20074?lang=ca"
   },
   {
@@ -803,6 +1071,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16599/20075?lang=ca"
   },
   {
@@ -814,6 +1085,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'anglès, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16600/20076?lang=ca"
   },
   {
@@ -825,6 +1099,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16601/20077?lang=ca"
   },
   {
@@ -836,6 +1115,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16602/20078?lang=ca"
   },
   {
@@ -847,6 +1129,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16604/20079?lang=ca"
   },
   {
@@ -858,6 +1143,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16605/20080?lang=ca"
   },
   {
@@ -869,6 +1157,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16607/20081?lang=ca"
   },
   {
@@ -880,6 +1171,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del francès, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16608/20082?lang=ca"
   },
   {
@@ -891,6 +1185,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16609/20083?lang=ca"
   },
   {
@@ -902,6 +1199,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16610/20084?lang=ca"
   },
   {
@@ -913,6 +1213,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16612/20085?lang=ca"
   },
   {
@@ -924,6 +1227,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16613/20086?lang=ca"
   },
   {
@@ -935,6 +1241,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16615/20087?lang=ca"
   },
   {
@@ -946,6 +1255,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'àrab, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16616/20088?lang=ca"
   },
   {
@@ -957,6 +1269,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16617/20089?lang=ca"
   },
   {
@@ -968,6 +1283,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16618/20090?lang=ca"
   },
   {
@@ -979,6 +1297,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16620/20091?lang=ca"
   },
   {
@@ -990,6 +1311,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16621/20092?lang=ca"
   },
   {
@@ -1001,6 +1325,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16623/20093?lang=ca"
   },
   {
@@ -1012,6 +1339,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'italià, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16624/20094?lang=ca"
   },
   {
@@ -1023,6 +1353,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16625/20095?lang=ca"
   },
   {
@@ -1034,6 +1367,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16626/20096?lang=ca"
   },
   {
@@ -1045,6 +1381,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16628/20097?lang=ca"
   },
   {
@@ -1056,6 +1395,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16629/20098?lang=ca"
   },
   {
@@ -1067,6 +1409,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16631/20099?lang=ca"
   },
   {
@@ -1078,6 +1423,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús de l'alemany, lloc de naixement i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16632/20100?lang=ca"
   },
   {
@@ -1089,6 +1437,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial i sexe. Resposta múltiple"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16638/20106?lang=ca"
   },
   {
@@ -1100,6 +1451,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16639/20107?lang=ca"
   },
   {
@@ -1111,6 +1467,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial, edat decennal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16640/20108?lang=ca"
   },
   {
@@ -1122,6 +1483,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16642/20109?lang=ca"
   },
   {
@@ -1133,6 +1498,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16643/20110?lang=ca"
   },
   {
@@ -1144,6 +1513,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16645/20111?lang=ca"
   },
   {
@@ -1155,6 +1528,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial, lloc de naixement i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16646/20112?lang=ca"
   },
   {
@@ -1166,6 +1543,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16648/20113?lang=ca"
   },
   {
@@ -1177,6 +1559,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, sexe i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16650/20114?lang=ca"
   },
   {
@@ -1188,6 +1573,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16651/20115?lang=ca"
   },
   {
@@ -1199,6 +1588,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16653/20116?lang=ca"
   },
   {
@@ -1210,6 +1603,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, nacionalitat i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16654/20117?lang=ca"
   },
   {
@@ -1221,6 +1617,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, lloc de naixement i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16656/20118?lang=ca"
   },
   {
@@ -1232,6 +1632,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per nombre de llengües inicials, lloc de naixement i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16657/20119?lang=ca"
   },
   {
@@ -1243,6 +1646,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 15 anys o més. Per nombre de llengües inicials, nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16658/20120?lang=ca"
   },
   {
@@ -1254,6 +1662,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, llengua inicial i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16668/20139?lang=ca"
   },
   {
@@ -1265,6 +1676,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català, llengua inicial i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16669/20140?lang=ca"
   },
   {
@@ -1276,6 +1690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, llengua inicial i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16671/20141?lang=ca"
   },
   {
@@ -1287,6 +1704,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català, llengua inicial i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16672/20142?lang=ca"
   },
   {
@@ -1298,6 +1718,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per coneixement del català i sexe (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16673/20143?lang=ca"
   },
   {
@@ -1309,6 +1734,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per àmbit i freqüència d'ús del català i sexe (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16674/20144?lang=ca"
   },
   {
@@ -1320,6 +1750,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 2 anys o més. Per llengua inicial i sexe (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16675/20145?lang=ca"
   },
   {
@@ -1331,6 +1766,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16713/20346?lang=ca"
   },
   {
@@ -1342,6 +1782,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16714/20347?lang=ca"
   },
   {
@@ -1353,6 +1798,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per adaptació funcional a la gent gran i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16715/20299?lang=ca"
   },
   {
@@ -1364,6 +1814,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16716/20348?lang=ca"
   },
   {
@@ -1375,6 +1830,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per adaptació funcional a la gent gran"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16717/20373?lang=ca"
   },
   {
@@ -1386,6 +1846,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per règim de tinença"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16784/20258?lang=ca"
   },
   {
@@ -1397,6 +1862,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per règim de tinença i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16785/20259?lang=ca"
   },
   {
@@ -1408,6 +1878,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per règim de tinença i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16786/20260?lang=ca"
   },
   {
@@ -1419,6 +1894,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per règim de tinença i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16787/20261?lang=ca"
   },
   {
@@ -1430,6 +1908,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16788/20269?lang=ca"
   },
   {
@@ -1441,6 +1924,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per any de construcció i règim de tinença"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16789/20263?lang=ca"
   },
   {
@@ -1452,6 +1938,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per any de construcció i nombre de dormitoris"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16790/20264?lang=ca"
   },
   {
@@ -1463,6 +1953,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per any de construcció i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16791/20265?lang=ca"
   },
   {
@@ -1474,6 +1968,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per any de construcció i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16792/20266?lang=ca"
   },
   {
@@ -1485,6 +1982,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16793/20268?lang=ca"
   },
   {
@@ -1496,6 +1998,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil i règim de tinença"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16794/20271?lang=ca"
   },
   {
@@ -1507,6 +2014,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16795/20272?lang=ca"
   },
   {
@@ -1518,6 +2030,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16796/20273?lang=ca"
   },
   {
@@ -1529,6 +2045,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16797/20274?lang=ca"
   },
   {
@@ -1540,6 +2061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per superfície útil i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16798/20275?lang=ca"
   },
   {
@@ -1551,6 +2075,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16799/20276?lang=ca"
   },
   {
@@ -1562,6 +2091,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16800/20277?lang=ca"
   },
   {
@@ -1573,6 +2106,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16801/20279?lang=ca"
   },
   {
@@ -1584,6 +2121,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i superfície útil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16802/20281?lang=ca"
   },
   {
@@ -1595,6 +2136,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16803/20283?lang=ca"
   },
   {
@@ -1606,6 +2151,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16804/20297?lang=ca"
   },
   {
@@ -1617,6 +2166,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de dormitoris i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16805/20286?lang=ca"
   },
   {
@@ -1628,6 +2180,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per adaptació funcional a la gent gran i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16815/20300?lang=ca"
   },
   {
@@ -1639,6 +2194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes d'aïllament i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16816/20302?lang=ca"
   },
   {
@@ -1650,6 +2210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes d'aïllament i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16817/20303?lang=ca"
   },
   {
@@ -1661,6 +2226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes d'aïllament i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16818/20304?lang=ca"
   },
   {
@@ -1672,6 +2240,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de calefacció i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16819/20306?lang=ca"
   },
   {
@@ -1683,6 +2255,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de calefacció i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16820/20307?lang=ca"
   },
   {
@@ -1694,6 +2270,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de calefacció i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16821/20308?lang=ca"
   },
   {
@@ -1705,6 +2285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de calefacció i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16822/20309?lang=ca"
   },
   {
@@ -1716,6 +2299,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de combustible de la calefacció i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16823/20311?lang=ca"
   },
   {
@@ -1727,6 +2314,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de combustible de la calefacció i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16824/20312?lang=ca"
   },
   {
@@ -1738,6 +2329,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de combustible de la calefacció i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16825/20313?lang=ca"
   },
   {
@@ -1749,6 +2344,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de combustible de la calefacció i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16826/20314?lang=ca"
   },
   {
@@ -1760,6 +2358,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de subministrament d'aigua corrent i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16827/20316?lang=ca"
   },
   {
@@ -1771,6 +2373,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de subministrament d'aigua corrent i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16828/20318?lang=ca"
   },
   {
@@ -1782,6 +2388,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de subministrament d'aigua corrent i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16829/20320?lang=ca"
   },
   {
@@ -1793,6 +2402,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per sistema de refrigeració i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16830/20323?lang=ca"
   },
   {
@@ -1804,6 +2418,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per sistema de refrigeració i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16831/20324?lang=ca"
   },
   {
@@ -1815,6 +2434,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per sistema de refrigeració i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16832/20325?lang=ca"
   },
   {
@@ -1826,6 +2450,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per sistema de refrigeració i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16833/20326?lang=ca"
   },
   {
@@ -1837,6 +2464,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16834/20349?lang=ca"
   },
   {
@@ -1848,6 +2480,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16835/20350?lang=ca"
   },
   {
@@ -1859,6 +2494,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per electrodomèstics i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16836/20338?lang=ca"
   },
   {
@@ -1870,6 +2509,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per electrodomèstics i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16837/20339?lang=ca"
   },
   {
@@ -1881,6 +2524,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per electrodomèstics i superfície útil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16838/20340?lang=ca"
   },
   {
@@ -1892,6 +2539,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per electrodomèstics i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16839/20341?lang=ca"
   },
   {
@@ -1903,6 +2553,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de bombetes i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16840/20343?lang=ca"
   },
   {
@@ -1914,6 +2569,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de bombetes i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16841/20344?lang=ca"
   },
   {
@@ -1925,6 +2583,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per dispositiu d'energia renovable instal·lat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16848/20366?lang=ca"
   },
   {
@@ -1936,6 +2599,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16858/20841?lang=ca"
   },
   {
@@ -1947,6 +2615,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per grandària de la llar i del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16859/20842?lang=ca"
   },
   {
@@ -1958,6 +2629,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per infraestructures i serveis a l'entorn i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16860/20352?lang=ca"
   },
   {
@@ -1969,6 +2644,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per infraestructures i serveis a l'entorn i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16861/20353?lang=ca"
   },
   {
@@ -1980,6 +2659,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per infraestructures i serveis a l'entorn i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16862/20354?lang=ca"
   },
   {
@@ -1991,6 +2674,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per infraestructures i serveis a l'entorn i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16863/20355?lang=ca"
   },
   {
@@ -2002,6 +2688,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per infraestructures i serveis a l'entorn"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16864/20351?lang=ca"
   },
   {
@@ -2013,6 +2704,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Grandària mitjana de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16865/20843?lang=ca"
   },
   {
@@ -2024,6 +2719,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre i tipus de nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16866/20844?lang=ca"
   },
   {
@@ -2035,6 +2735,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre i tipus de nucli (agregat)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16867/20845?lang=ca"
   },
   {
@@ -2046,6 +2751,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre i tipus de nucli i règim de tinença de l'habitatge principal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16868/20846?lang=ca"
   },
   {
@@ -2057,6 +2766,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre i tipus de nucli i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16869/20847?lang=ca"
   },
   {
@@ -2068,6 +2780,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars amb almenys un nucli. Per tipus de llar i nombre de fills a la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16870/20848?lang=ca"
   },
   {
@@ -2079,6 +2796,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars amb almenys un nucli. Per tipus de llar i nombre de fills menors de 25 anys a la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16871/20849?lang=ca"
   },
   {
@@ -2090,6 +2812,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars amb almenys un nucli. Per tipus de llar i nombre de fills menors de 16 anys a la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16872/20850?lang=ca"
   },
   {
@@ -2101,6 +2828,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població a la llar. Per tipus de llar i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16873/20851?lang=ca"
   },
   {
@@ -2112,6 +2844,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població que viu a la llar. Per posició a la llar, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16874/20852?lang=ca"
   },
   {
@@ -2123,6 +2860,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Fills a la llar. Per tipus de llar i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16875/20853?lang=ca"
   },
   {
@@ -2134,6 +2876,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16877/20611?lang=ca"
   },
   {
@@ -2145,6 +2892,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16878/20681?lang=ca"
   },
   {
@@ -2156,6 +2907,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per nacionalitat, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16879/20682?lang=ca"
   },
   {
@@ -2167,6 +2922,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes a l'entorn i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16880/20357?lang=ca"
   },
   {
@@ -2178,6 +2938,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes a l'entorn i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16881/20358?lang=ca"
   },
   {
@@ -2189,6 +2954,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes a l'entorn i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16882/20359?lang=ca"
   },
   {
@@ -2200,6 +2970,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes a l'entorn i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16883/20360?lang=ca"
   },
   {
@@ -2211,6 +2984,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes a l'entorn"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16884/20356?lang=ca"
   },
   {
@@ -2222,6 +3000,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per estat civil i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16885/20683?lang=ca"
   },
   {
@@ -2233,6 +3016,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per estat civil, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16886/20684?lang=ca"
   },
   {
@@ -2244,6 +3031,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16887/20685?lang=ca"
   },
   {
@@ -2255,6 +3047,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per nivell de formació assolit, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16888/20686?lang=ca"
   },
   {
@@ -2266,6 +3062,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per situació laboral i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16889/20687?lang=ca"
   },
   {
@@ -2277,6 +3078,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per situació laboral, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16890/20696?lang=ca"
   },
   {
@@ -2288,6 +3093,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per ingressos nets mensuals de la llar i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16891/20697?lang=ca"
   },
   {
@@ -2299,6 +3109,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per ingressos nets mensuals de la llar, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16892/20698?lang=ca"
   },
   {
@@ -2310,6 +3124,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars unipersonals. Per règim de tinença de l'habitatge principal i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16893/20699?lang=ca"
   },
   {
@@ -2321,6 +3140,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per l'estat de conservació i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16910/20288?lang=ca"
   },
   {
@@ -2332,6 +3155,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per l'estat de conservació i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16911/20289?lang=ca"
   },
   {
@@ -2343,6 +3170,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per l'estat de conservació i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16912/20290?lang=ca"
   },
   {
@@ -2354,6 +3185,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per l'estat de conservació i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16913/20291?lang=ca"
   },
   {
@@ -2365,6 +3199,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per accessibilitat i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16914/20293?lang=ca"
   },
   {
@@ -2376,6 +3215,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per accessibilitat i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16915/20294?lang=ca"
   },
   {
@@ -2387,6 +3231,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per accessibilitat i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16916/20295?lang=ca"
   },
   {
@@ -2398,6 +3247,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per accessibilitat i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16917/20296?lang=ca"
   },
   {
@@ -2409,6 +3261,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per instal·lacions de l'edifici i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16921/20362?lang=ca"
   },
   {
@@ -2420,6 +3277,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per instal·lacions de l'edifici i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16922/20363?lang=ca"
   },
   {
@@ -2431,6 +3293,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per instal·lacions de l'edifici i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16923/20364?lang=ca"
   },
   {
@@ -2442,6 +3309,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per instal·lacions de l'edifici i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16924/20365?lang=ca"
   },
   {
@@ -2453,6 +3323,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de places de garatge i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16925/20332?lang=ca"
   },
   {
@@ -2464,6 +3338,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de places de garatge i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16926/20333?lang=ca"
   },
   {
@@ -2475,6 +3353,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de places de garatge i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16927/20334?lang=ca"
   },
   {
@@ -2486,6 +3368,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de places de garatge i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16928/20335?lang=ca"
   },
   {
@@ -2497,6 +3382,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per dispositiu d'energia renovable instal·lat i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16929/20367?lang=ca"
   },
   {
@@ -2508,6 +3397,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per dispositiu d'energia renovable instal·lat i any de construcció"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16930/20368?lang=ca"
   },
   {
@@ -2519,6 +3412,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per dispositiu d'energia renovable instal·lat i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16931/20369?lang=ca"
   },
   {
@@ -2530,6 +3427,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per dispositiu d'energia renovable instal·lat i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16932/20370?lang=ca"
   },
   {
@@ -2541,6 +3441,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per l'estat de conservació"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16939/20287?lang=ca"
   },
   {
@@ -2552,6 +3457,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per accessibilitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16940/20292?lang=ca"
   },
   {
@@ -2563,6 +3473,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per adaptació funcional a la gent gran i nombre d'habitatges a l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16943/20298?lang=ca"
   },
   {
@@ -2574,6 +3489,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per instal·lacions de l'edifici"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16944/20361?lang=ca"
   },
   {
@@ -2585,6 +3505,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per problemes d'aïllament"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16945/20301?lang=ca"
   },
   {
@@ -2596,6 +3521,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de calefacció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16946/20305?lang=ca"
   },
   {
@@ -2607,6 +3537,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de combustible de la calefacció"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16947/20310?lang=ca"
   },
   {
@@ -2618,6 +3553,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de subministrament d'aigua corrent"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16948/20315?lang=ca"
   },
   {
@@ -2629,6 +3569,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per sistema de refrigeració"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16949/20322?lang=ca"
   },
   {
@@ -2640,6 +3585,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de connexió a internet"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16950/20345?lang=ca"
   },
   {
@@ -2651,6 +3601,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per electrodomèstics"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16951/20337?lang=ca"
   },
   {
@@ -2662,6 +3617,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per tipus de bombetes"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16952/20342?lang=ca"
   },
   {
@@ -2673,6 +3633,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per nombre de places de garatge"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16953/20327?lang=ca"
   },
   {
@@ -2684,6 +3649,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Habitatges principals. Per disponibilitat de cuina independent, lavabo i bany"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17097/20516?lang=ca"
   },
   {
@@ -2695,6 +3665,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Cònjuges. Per sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17130/20704?lang=ca"
   },
   {
@@ -2706,6 +3681,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nacionalitat dels cònjuges"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17131/20705?lang=ca"
   },
   {
@@ -2717,6 +3697,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17132/20706?lang=ca"
   },
   {
@@ -2728,6 +3713,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills menors de 25 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17133/20707?lang=ca"
   },
   {
@@ -2739,6 +3729,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills menors de 16 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17134/20708?lang=ca"
   },
   {
@@ -2750,6 +3745,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills en el nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17135/20709?lang=ca"
   },
   {
@@ -2761,6 +3761,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills i règim de tinença de l'habitatge principal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17136/20710?lang=ca"
   },
   {
@@ -2772,6 +3777,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills menors de 25 anys al nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17137/20711?lang=ca"
   },
   {
@@ -2783,6 +3793,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nombre de fills menors de 16 anys al nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17138/20712?lang=ca"
   },
   {
@@ -2794,6 +3809,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per diferència d'edat entre els cònjuges (de diferent sexe)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17139/20713?lang=ca"
   },
   {
@@ -2805,6 +3825,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Cònjuges. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17140/20714?lang=ca"
   },
   {
@@ -2816,6 +3841,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per nivell de formació conjunt"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17141/20715?lang=ca"
   },
   {
@@ -2827,6 +3857,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Cònjuges. Per situació laboral, sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17142/20716?lang=ca"
   },
   {
@@ -2838,6 +3873,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Matrimonis. Per situació laboral conjunta"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17143/20717?lang=ca"
   },
   {
@@ -2849,6 +3889,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de les parelles de fet. Per sexe i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17144/20718?lang=ca"
   },
   {
@@ -2860,6 +3905,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per estat civil"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17145/20719?lang=ca"
   },
   {
@@ -2871,6 +3921,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nacionalitat dels membres de la parella"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17146/20720?lang=ca"
   },
   {
@@ -2882,6 +3937,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17147/20721?lang=ca"
   },
   {
@@ -2893,6 +3953,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills menors de 25 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17148/20722?lang=ca"
   },
   {
@@ -2904,6 +3969,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills menors de 16 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17149/20723?lang=ca"
   },
   {
@@ -2915,6 +3985,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills al nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17150/20724?lang=ca"
   },
   {
@@ -2926,6 +4000,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills al nucli i règim de tinença de l'habitatge principal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17151/20725?lang=ca"
   },
   {
@@ -2937,6 +4015,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills menors de 25 anys al nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17152/20726?lang=ca"
   },
   {
@@ -2948,6 +4030,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nombre de fills menors de 16 anys al nucli i ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17153/20727?lang=ca"
   },
   {
@@ -2959,6 +4045,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per diferència d'edat entre els membres de la parella (de diferent sexe)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17154/20728?lang=ca"
   },
   {
@@ -2970,6 +4061,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de les parelles de fet. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17155/20729?lang=ca"
   },
   {
@@ -2981,6 +4077,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per nivell de formació conjunt"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17156/20730?lang=ca"
   },
   {
@@ -2992,6 +4093,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població en parelles de fet. Per situació laboral, sexe i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17157/20731?lang=ca"
   },
   {
@@ -3003,6 +4107,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles de fet. Per situació laboral conjunta"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17158/20732?lang=ca"
   },
   {
@@ -3014,6 +4122,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per sexe de la parella"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17159/20757?lang=ca"
   },
   {
@@ -3025,6 +4138,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de les parelles del mateix sexe. Per sexe i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17160/20758?lang=ca"
   },
   {
@@ -3036,6 +4152,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per tipus de família i sexe de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17161/20759?lang=ca"
   },
   {
@@ -3047,6 +4166,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per nombre de fills al nucli i sexe de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17162/20760?lang=ca"
   },
   {
@@ -3058,6 +4180,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de les parelles del mateix sexe. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17163/20761?lang=ca"
   },
   {
@@ -3069,6 +4194,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per nivell de formació conjunt i sexe de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17164/20762?lang=ca"
   },
   {
@@ -3080,6 +4208,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per ingressos mensuals nets de la llar i sexe de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17165/20763?lang=ca"
   },
   {
@@ -3091,6 +4222,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Parelles del mateix sexe. Per règim de tinença de l'habitatge principal i sexe de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17166/20764?lang=ca"
   },
   {
@@ -3102,6 +4236,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17167/20810?lang=ca"
   },
   {
@@ -3113,6 +4252,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe i edat del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17168/20811?lang=ca"
   },
   {
@@ -3124,6 +4268,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe i estat civil del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17169/20814?lang=ca"
   },
   {
@@ -3135,6 +4284,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe, estat civil i edat del progenitor"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17170/20817?lang=ca"
   },
   {
@@ -3146,6 +4298,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe i nacionalitat del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17171/20820?lang=ca"
   },
   {
@@ -3157,6 +4313,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe del progenitor i nombre de fills al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17172/20832?lang=ca"
   },
   {
@@ -3168,6 +4329,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe del progenitor i nombre de fills menors de 25 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17173/20833?lang=ca"
   },
   {
@@ -3179,6 +4345,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe del progenitor i nombre de fills menors de 16 anys al nucli"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17174/20834?lang=ca"
   },
   {
@@ -3190,6 +4361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe, estat civil del progenitor i nombre de fills menors de 25 anys al nucli"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17175/20835?lang=ca"
   },
   {
@@ -3201,6 +4375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe, estat civil del progenitor i nombre de fills menors de 16 anys al nucli"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17176/20836?lang=ca"
   },
   {
@@ -3212,6 +4389,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe i nivell de formació assolit del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17177/20837?lang=ca"
   },
   {
@@ -3223,6 +4405,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe i situació laboral del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17178/20838?lang=ca"
   },
   {
@@ -3234,6 +4421,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Famílies monoparentals. Per sexe del progenitor i ingressos mensuals nets de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17179/20839?lang=ca"
   },
   {
@@ -3245,6 +4437,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Nuclis monoparentals. Per sexe del progenitor i règim de tinença de l'habitatge principal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17180/20840?lang=ca"
   },
   {
@@ -3256,6 +4453,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17365/20933?lang=ca"
   },
   {
@@ -3267,6 +4469,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17366/20935?lang=ca"
   },
   {
@@ -3278,6 +4484,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17367/20936?lang=ca"
   },
   {
@@ -3289,6 +4499,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17368/20938?lang=ca"
   },
   {
@@ -3300,6 +4515,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17369/20939?lang=ca"
   },
   {
@@ -3311,6 +4531,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17370/20940?lang=ca"
   },
   {
@@ -3322,6 +4547,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen segona residència i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17371/20941?lang=ca"
   },
   {
@@ -3333,6 +4561,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars amb segona residència. Pel lloc de la segona residència"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17372/20942?lang=ca"
   },
   {
@@ -3344,6 +4576,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars amb segona residència. Pels dies d'ús de la segona residència a l'any"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17373/20943?lang=ca"
   },
   {
@@ -3355,6 +4592,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17377/20944?lang=ca"
   },
   {
@@ -3366,6 +4608,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17378/20945?lang=ca"
   },
   {
@@ -3377,6 +4623,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17379/20946?lang=ca"
   },
   {
@@ -3388,6 +4639,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17380/20947?lang=ca"
   },
   {
@@ -3399,6 +4655,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17381/20948?lang=ca"
   },
   {
@@ -3410,6 +4671,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17382/20950?lang=ca"
   },
   {
@@ -3421,6 +4687,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per nombre de vehicles i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17383/20951?lang=ca"
   },
   {
@@ -3432,6 +4701,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17384/20952?lang=ca"
   },
   {
@@ -3443,6 +4717,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17385/20953?lang=ca"
   },
   {
@@ -3454,6 +4732,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17386/20954?lang=ca"
   },
   {
@@ -3465,6 +4747,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i nivell de formació assolit dels seus membres"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17387/20955?lang=ca"
   },
   {
@@ -3476,6 +4762,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17388/20956?lang=ca"
   },
   {
@@ -3487,6 +4777,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17389/20957?lang=ca"
   },
   {
@@ -3498,6 +4792,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen vehicle elèctric o híbrid i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17390/20958?lang=ca"
   },
   {
@@ -3509,6 +4806,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17435/20988?lang=ca"
   },
   {
@@ -3520,6 +4822,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17436/20989?lang=ca"
   },
   {
@@ -3531,6 +4837,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17437/20990?lang=ca"
   },
   {
@@ -3542,6 +4853,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17438/20991?lang=ca"
   },
   {
@@ -3553,6 +4869,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17439/20992?lang=ca"
   },
   {
@@ -3564,6 +4885,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17440/20993?lang=ca"
   },
   {
@@ -3575,6 +4901,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per separació de residus i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17441/20994?lang=ca"
   },
   {
@@ -3586,6 +4915,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17442/20995?lang=ca"
   },
   {
@@ -3597,6 +4931,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17443/20996?lang=ca"
   },
   {
@@ -3608,6 +4946,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17444/20997?lang=ca"
   },
   {
@@ -3619,6 +4962,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17445/20998?lang=ca"
   },
   {
@@ -3630,6 +4978,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i nivell d'ingressos mensuals nets de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17446/20999?lang=ca"
   },
   {
@@ -3641,6 +4994,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17447/21000?lang=ca"
   },
   {
@@ -3652,6 +5010,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Per tipus de residus separats i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17448/21001?lang=ca"
   },
   {
@@ -3663,6 +5024,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17451/21002?lang=ca"
   },
   {
@@ -3674,6 +5040,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17452/21072?lang=ca"
   },
   {
@@ -3685,6 +5055,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17453/21004?lang=ca"
   },
   {
@@ -3696,6 +5070,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17454/21005?lang=ca"
   },
   {
@@ -3707,6 +5086,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17455/21006?lang=ca"
   },
   {
@@ -3718,6 +5102,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17456/21007?lang=ca"
   },
   {
@@ -3729,6 +5118,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen servei domèstic i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17457/21008?lang=ca"
   },
   {
@@ -3740,6 +5132,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17458/21010?lang=ca"
   },
   {
@@ -3751,6 +5148,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17459/21011?lang=ca"
   },
   {
@@ -3762,6 +5163,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i nacionalitat dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17460/21012?lang=ca"
   },
   {
@@ -3773,6 +5178,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i nivell de formació assolit dels membres de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17461/21013?lang=ca"
   },
   {
@@ -3784,6 +5194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i nivell d'ingressos nets mensuals de llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17462/21014?lang=ca"
   },
   {
@@ -3795,6 +5210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17463/21015?lang=ca"
   },
   {
@@ -3806,6 +5226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Llars. Segons si tenen ajuda externa en el treball domèstic i de cura, i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17464/21016?lang=ca"
   },
   {
@@ -3817,6 +5240,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17518/21037?lang=ca"
   },
   {
@@ -3828,6 +5256,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17519/21038?lang=ca"
   },
   {
@@ -3839,6 +5272,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17520/21154?lang=ca"
   },
   {
@@ -3850,6 +5288,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17521/21163?lang=ca"
   },
   {
@@ -3861,6 +5302,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques i tipus de llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17522/21041?lang=ca"
   },
   {
@@ -3872,6 +5316,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques i posició a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17523/21042?lang=ca"
   },
   {
@@ -3883,6 +5330,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17524/21043?lang=ca"
   },
   {
@@ -3894,6 +5346,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de les persones dependents dins de la llar i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17525/21044?lang=ca"
   },
   {
@@ -3905,6 +5362,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17526/21165?lang=ca"
   },
   {
@@ -3916,6 +5378,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17527/21169?lang=ca"
   },
   {
@@ -3927,6 +5392,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar i tipus de llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17528/21182?lang=ca"
   },
   {
@@ -3938,6 +5406,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar i posició a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17529/21183?lang=ca"
   },
   {
@@ -3949,6 +5420,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar i tipus de persona dependent"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17530/21090?lang=ca"
   },
   {
@@ -3960,6 +5434,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17531/21050?lang=ca"
   },
   {
@@ -3971,6 +5450,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17532/21051?lang=ca"
   },
   {
@@ -3982,6 +5466,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17533/21170?lang=ca"
   },
   {
@@ -3993,6 +5482,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17534/21172?lang=ca"
   },
   {
@@ -4004,6 +5496,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents i tipus de llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17535/21185?lang=ca"
   },
   {
@@ -4015,6 +5510,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents i posició a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17536/21186?lang=ca"
   },
   {
@@ -4026,6 +5524,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar i conviu amb altres persones. Per les hores setmanals dedicades a la cura de persones dependents i tipus de persona dependent"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17537/21056?lang=ca"
   },
   {
@@ -4037,6 +5538,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17538/21057?lang=ca"
   },
   {
@@ -4048,6 +5554,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17539/21058?lang=ca"
   },
   {
@@ -4059,6 +5570,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17540/21174?lang=ca"
   },
   {
@@ -4070,6 +5586,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17541/21175?lang=ca"
   },
   {
@@ -4081,6 +5600,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar i tipus de llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17542/21061?lang=ca"
   },
   {
@@ -4092,6 +5614,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar i posició a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17543/21062?lang=ca"
   },
   {
@@ -4103,6 +5628,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar i tipus de persona dependent"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17544/21091?lang=ca"
   },
   {
@@ -4114,6 +5642,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17545/21064?lang=ca"
   },
   {
@@ -4125,6 +5658,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17546/21065?lang=ca"
   },
   {
@@ -4136,6 +5674,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17547/21176?lang=ca"
   },
   {
@@ -4147,6 +5690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17548/21177?lang=ca"
   },
   {
@@ -4158,6 +5704,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents i tipus de llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17549/21068?lang=ca"
   },
   {
@@ -4169,6 +5718,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents i posició a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17550/21069?lang=ca"
   },
   {
@@ -4180,6 +5732,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents i tipus de persona dependent"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17551/21070?lang=ca"
   },
   {
@@ -4191,6 +5746,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel lloc de treball."
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17671/21198?lang=ca"
   },
   {
@@ -4202,6 +5762,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel lloc de treball i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17672/21199?lang=ca"
   },
   {
@@ -4213,6 +5778,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel lloc de treball, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17673/21200?lang=ca"
   },
   {
@@ -4224,6 +5794,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel lloc de treball, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17674/21201?lang=ca"
   },
   {
@@ -4235,6 +5810,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel lloc de treball i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17675/21202?lang=ca"
   },
   {
@@ -4246,6 +5825,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel nombre de desplaçaments diaris al lloc de treball"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17676/21203?lang=ca"
   },
   {
@@ -4257,6 +5841,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel nombre de desplaçaments diaris al lloc de treball i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17677/21205?lang=ca"
   },
   {
@@ -4268,6 +5857,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel nombre de desplaçaments diaris al lloc de treball, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17678/21206?lang=ca"
   },
   {
@@ -4279,6 +5873,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel nombre de desplaçaments diaris al lloc de treball, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17679/21207?lang=ca"
   },
   {
@@ -4290,6 +5889,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel nombre de desplaçaments diaris al lloc de treball i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17680/21208?lang=ca"
   },
   {
@@ -4301,6 +5904,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel principal tipus de transport al lloc de treball"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17681/21209?lang=ca"
   },
   {
@@ -4312,6 +5920,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel principal tipus de transport al lloc de treball i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17682/21210?lang=ca"
   },
   {
@@ -4323,6 +5936,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel principal tipus de transport al lloc de treball, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17683/21211?lang=ca"
   },
   {
@@ -4334,6 +5952,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel principal tipus de transport al lloc de treball, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17684/21212?lang=ca"
   },
   {
@@ -4345,6 +5968,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel principal tipus de transport al lloc de treball i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17685/21213?lang=ca"
   },
   {
@@ -4356,6 +5983,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel mitjà de transport al lloc de treball (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17686/21214?lang=ca"
   },
   {
@@ -4367,6 +5999,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel mitjà de transport al lloc de treball i sexe (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17687/21215?lang=ca"
   },
   {
@@ -4378,6 +6015,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel mitjà de transport al lloc de treball, sexe i edat en grans grups (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17688/21216?lang=ca"
   },
   {
@@ -4389,6 +6031,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel mitjà de transport al lloc de treball, sexe i nacionalitat (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17689/21217?lang=ca"
   },
   {
@@ -4400,6 +6047,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel mitjà de transport al lloc de treball i tipus de llar (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17690/21218?lang=ca"
   },
   {
@@ -4411,6 +6062,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel temps diari de desplaçament al lloc de treball"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17691/21219?lang=ca"
   },
   {
@@ -4422,6 +6078,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel temps diari de desplaçament al lloc de treball i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17692/21220?lang=ca"
   },
   {
@@ -4433,6 +6094,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel temps diari de desplaçament al lloc de treball, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17693/21221?lang=ca"
   },
   {
@@ -4444,6 +6110,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel temps diari de desplaçament al lloc de treball, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17694/21222?lang=ca"
   },
   {
@@ -4455,6 +6126,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel temps diari de desplaçament al lloc de treball i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17695/21223?lang=ca"
   },
   {
@@ -4466,6 +6141,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17696/21224?lang=ca"
   },
   {
@@ -4477,6 +6157,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17697/21225?lang=ca"
   },
   {
@@ -4488,6 +6173,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17698/21226?lang=ca"
   },
   {
@@ -4499,6 +6189,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17699/21227?lang=ca"
   },
   {
@@ -4510,6 +6205,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17700/21228?lang=ca"
   },
   {
@@ -4521,6 +6220,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball i principal tipus de transport"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17701/21229?lang=ca"
   },
   {
@@ -4532,6 +6236,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població ocupada. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc de treball i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17702/21230?lang=ca"
   },
   {
@@ -4543,6 +6252,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Segons si tenen suport social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17735/21136?lang=ca"
   },
   {
@@ -4554,6 +6268,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Segons si tenen suport social i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17736/21137?lang=ca"
   },
   {
@@ -4565,6 +6284,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Segons si tenen suport social, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17737/21138?lang=ca"
   },
   {
@@ -4576,6 +6300,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Segons si tenen suport social, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17738/21139?lang=ca"
   },
   {
@@ -4587,6 +6316,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Segons si tenen suport social i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17739/21140?lang=ca"
   },
   {
@@ -4598,6 +6331,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel tipus de relació amb la persona que dona suport social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17742/21141?lang=ca"
   },
   {
@@ -4609,6 +6347,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel tipus de relació amb la persona que els dona suport social i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17743/21142?lang=ca"
   },
   {
@@ -4620,6 +6363,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel tipus de relació amb la persona que els dona suport social, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17744/21143?lang=ca"
   },
   {
@@ -4631,6 +6378,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel lloc de residència de la persona que dona suport social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17746/21144?lang=ca"
   },
   {
@@ -4642,6 +6394,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel lloc de residència de la persona que dona suport social i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17747/21145?lang=ca"
   },
   {
@@ -4653,6 +6410,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que viu sola i disposa de suport social. Pel lloc de residència de la persona que dona suport social, sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17748/21146?lang=ca"
   },
   {
@@ -4664,6 +6425,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques, sexe i edat decennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17751/21180?lang=ca"
   },
   {
@@ -4675,6 +6439,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en les tasques domèstiques, sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17752/21181?lang=ca"
   },
   {
@@ -4686,6 +6453,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que conviu amb altres persones. Pel grau de participació en la cura de persones dependents dins de la llar, sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17753/21184?lang=ca"
   },
   {
@@ -4697,6 +6467,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Pel grau de participació en la cura de persones dependents fora de la llar, sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17754/21188?lang=ca"
   },
   {
@@ -4708,6 +6481,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents dins de la llar. Per les hores setmanals dedicades a la cura de persones dependents dins de la llar,sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17755/21187?lang=ca"
   },
   {
@@ -4719,6 +6495,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més que participa en la cura de persones dependents fora de la llar. Per les hores setmanals dedicades a la cura de persones dependents, sexe y la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17756/21189?lang=ca"
   },
   {
@@ -4730,6 +6509,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17765/21235?lang=ca"
   },
   {
@@ -4741,6 +6525,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC, sexe i edat decennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17766/21236?lang=ca"
   },
   {
@@ -4752,6 +6541,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17767/21237?lang=ca"
   },
   {
@@ -4763,6 +6557,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC, sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17768/21238?lang=ca"
   },
   {
@@ -4774,6 +6573,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC, sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17769/21239?lang=ca"
   },
   {
@@ -4785,6 +6589,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC i nivell d'ingressos nets mensuals de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17770/21240?lang=ca"
   },
   {
@@ -4796,6 +6605,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC i tipus de llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17771/21241?lang=ca"
   },
   {
@@ -4807,6 +6621,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC i grandària de la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17772/21244?lang=ca"
   },
   {
@@ -4818,6 +6637,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per ús de les TIC i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17773/21243?lang=ca"
   },
   {
@@ -4829,6 +6651,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel lloc d'estudi"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17780/21231?lang=ca"
   },
   {
@@ -4840,6 +6667,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel lloc d'estudi i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17781/21232?lang=ca"
   },
   {
@@ -4851,6 +6683,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel lloc d'estudi, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17782/21234?lang=ca"
   },
   {
@@ -4862,6 +6699,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel nombre de desplaçaments diaris al lloc d'estudi"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17783/21245?lang=ca"
   },
   {
@@ -4873,6 +6715,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel nombre diari de desplaçaments al lloc d'estudi i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17784/21246?lang=ca"
   },
   {
@@ -4884,6 +6731,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel nombre de desplaçaments diaris al lloc d'estudi, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17785/21247?lang=ca"
   },
   {
@@ -4895,6 +6747,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel principal tipus de transport al lloc d'estudi"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17786/21248?lang=ca"
   },
   {
@@ -4906,6 +6763,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel principal tipus de transport al lloc d'estudi i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17787/21249?lang=ca"
   },
   {
@@ -4917,6 +6779,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel principal tipus de transport al lloc d'estudi, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17788/21250?lang=ca"
   },
   {
@@ -4928,6 +6795,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel mitjà de transport al lloc d'estudi (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17789/21251?lang=ca"
   },
   {
@@ -4939,6 +6811,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel mitjà de transport al lloc d'estudi i sexe (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17790/21252?lang=ca"
   },
   {
@@ -4950,6 +6827,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel mitjà de transport al lloc d'estudi, sexe i nacionalitat (resposta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17791/21253?lang=ca"
   },
   {
@@ -4961,6 +6842,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel temps diari de desplaçament al lloc d'estudi"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17792/21254?lang=ca"
   },
   {
@@ -4972,6 +6858,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel temps diari de desplaçament al lloc d'estudi i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17793/21255?lang=ca"
   },
   {
@@ -4983,6 +6874,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel temps diari de desplaçament al lloc d'estudi, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17794/21256?lang=ca"
   },
   {
@@ -4994,6 +6890,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc d'estudi"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17795/21257?lang=ca"
   },
   {
@@ -5005,6 +6906,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc d'estudi i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17796/21258?lang=ca"
   },
   {
@@ -5016,6 +6922,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc d'estudi, sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17797/21259?lang=ca"
   },
   {
@@ -5027,6 +6938,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc d'estudi i principal tipus de transport"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17798/21260?lang=ca"
   },
   {
@@ -5038,6 +6954,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població estudiant de 16 anys o més. Pel grau de satisfacció respecte al temps diari de desplaçament al lloc d'estudi i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17799/21261?lang=ca"
   },
   {
@@ -5049,6 +6970,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per lloc de naixement dels progenitors i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17804/21294?lang=ca"
   },
   {
@@ -5060,6 +6986,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per lloc de naixement dels progenitors i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17805/21315?lang=ca"
   },
   {
@@ -5071,6 +7002,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per lloc de naixement dels progenitors i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17806/21296?lang=ca"
   },
   {
@@ -5082,6 +7018,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per lloc de naixement dels progenitors i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17807/21297?lang=ca"
   },
   {
@@ -5093,6 +7034,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per lloc de naixement dels progenitors, edat i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17808/24833?lang=ca"
   },
   {
@@ -5104,6 +7050,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per nacionalitat dels progenitors i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17809/21300?lang=ca"
   },
   {
@@ -5115,6 +7066,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per nacionalitat dels progenitors i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17810/21301?lang=ca"
   },
   {
@@ -5126,6 +7082,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per nacionalitat dels progenitors i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17811/21317?lang=ca"
   },
   {
@@ -5137,6 +7098,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per nacionalitat dels progenitors i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17812/21303?lang=ca"
   },
   {
@@ -5148,6 +7114,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població. Per nacionalitat dels progenitors, edat i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17813/21304?lang=ca"
   },
   {
@@ -5159,6 +7130,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per nivell de formació propi i màxim nivell de formació assolit dels progenitors"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17814/21310?lang=ca"
   },
   {
@@ -5170,6 +7146,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per nivell de formació propi, màxim nivell de formació dels progenitors i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17815/21311?lang=ca"
   },
   {
@@ -5181,6 +7162,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per nivell de formació propi, màxim nivell de formació dels progenitors i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17816/21312?lang=ca"
   },
   {
@@ -5192,6 +7178,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per nivell de formació propi, màxim nivell de formació dels progenitors i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17817/21313?lang=ca"
   },
   {
@@ -5203,6 +7194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Població de 16 anys o més. Per nivell de formació propi i dels progenitors, i edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17818/21314?lang=ca"
   },
   {
@@ -5214,6 +7210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18078/21595?lang=ca"
   },
   {
@@ -5225,6 +7226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per edat quinquennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18080/21634?lang=ca"
   },
   {
@@ -5236,6 +7240,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18081/21635?lang=ca"
   },
   {
@@ -5247,6 +7256,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per any de naixement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18082/21598?lang=ca"
   },
   {
@@ -5258,6 +7270,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per lloc de naixement i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18083/21636?lang=ca"
   },
   {
@@ -5269,6 +7284,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per nacionalitat i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18084/21637?lang=ca"
   },
   {
@@ -5280,6 +7298,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per estat civil i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18085/21638?lang=ca"
   },
   {
@@ -5291,6 +7312,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per nivell de formació assolit i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18086/21639?lang=ca"
   },
   {
@@ -5302,6 +7326,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat de les dones. Per la relació amb l'activitat econòmica i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18087/21640?lang=ca"
   },
   {
@@ -5313,6 +7340,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18088/21604?lang=ca"
   },
   {
@@ -5324,6 +7356,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts i edat quinquennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18090/21641?lang=ca"
   },
   {
@@ -5335,6 +7370,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18091/21642?lang=ca"
   },
   {
@@ -5346,6 +7386,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts i any de naixement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18092/21607?lang=ca"
   },
   {
@@ -5357,6 +7400,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts, lloc de naixement i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18093/21643?lang=ca"
   },
   {
@@ -5368,6 +7414,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts, nacionalitat i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18094/21644?lang=ca"
   },
   {
@@ -5379,6 +7428,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts, estat civil i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18095/21645?lang=ca"
   },
   {
@@ -5390,6 +7442,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 anys o més. Per nombre de fills tinguts, nivell de formació assolit i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18096/21646?lang=ca"
   },
   {
@@ -5401,6 +7456,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Dones de 16 a 69 anys. Per nombre de fills tinguts, relació amb l'activitat econòmica i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18097/21647?lang=ca"
   },
   {
@@ -5412,6 +7470,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18098/21613?lang=ca"
   },
   {
@@ -5423,6 +7486,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per edat quinquennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18100/21648?lang=ca"
   },
   {
@@ -5434,6 +7500,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18101/21649?lang=ca"
   },
   {
@@ -5445,6 +7516,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per any de naixement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18102/21616?lang=ca"
   },
   {
@@ -5456,6 +7530,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per lloc de naixement i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18103/21650?lang=ca"
   },
   {
@@ -5467,6 +7544,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per nacionalitat i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18104/21651?lang=ca"
   },
   {
@@ -5478,6 +7558,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per estat civil i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18105/21652?lang=ca"
   },
   {
@@ -5489,6 +7572,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per nivell de formació assolit i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18106/21653?lang=ca"
   },
   {
@@ -5500,6 +7586,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Indicadors de fecunditat dels homes. Per la relació amb l'activitat econòmica i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18107/21654?lang=ca"
   },
   {
@@ -5511,6 +7600,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18108/21622?lang=ca"
   },
   {
@@ -5522,6 +7616,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts i edat quinquennal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18110/21655?lang=ca"
   },
   {
@@ -5533,6 +7630,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18111/21656?lang=ca"
   },
   {
@@ -5544,6 +7646,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts i any de naixement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18112/21625?lang=ca"
   },
   {
@@ -5555,6 +7660,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts, lloc de naixement i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18113/21657?lang=ca"
   },
   {
@@ -5566,6 +7674,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts, nacionalitat i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18114/21658?lang=ca"
   },
   {
@@ -5577,6 +7688,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts, estat civil i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18115/21659?lang=ca"
   },
   {
@@ -5588,6 +7702,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 anys o més. Per nombre de fills tinguts, nivell de formació assolit i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18116/21660?lang=ca"
   },
   {
@@ -5599,6 +7716,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de característiques essencials de la població i els habitatges",
       "node": "Homes de 16 a 69 anys. Per nombre de fills tinguts, relació amb l'activitat econòmica i edat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18117/21661?lang=ca"
   }
 ];

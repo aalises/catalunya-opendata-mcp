@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero según contenido tecnológico",
       "node": "Exportaciones e importaciones. Por grupos de productos, países y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22177/22?lang=es"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero según contenido tecnológico",
       "node": "Exportaciones e importaciones. Por grupos de productos, países y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22178/21?lang=es"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero según contenido tecnológico",
       "node": "Exportaciones e importaciones. Por grupos de productos, continentes y áreas geográficas y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22179/57?lang=es"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero según contenido tecnológico",
       "node": "Exportaciones e importaciones. Por grupos de productos, continentes y áreas geográficas y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22180/56?lang=es"
   }
 ];

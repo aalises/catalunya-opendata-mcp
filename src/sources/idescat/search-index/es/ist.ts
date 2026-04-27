@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Índice socioeconómico territorial (IST). Índice Cataluña=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14034/14994?lang=es"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Indicadores socioeconómicos estandarizados. Índice Cataluña=100"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14036/14992?lang=es"
   },
   {
@@ -33,6 +47,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Índice socioeconómico territorial (IST). Índice Cataluña=100. Por barrios de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14058/15010?lang=es"
   },
   {
@@ -44,6 +61,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Indicadores socioeconómicos estandarizados. Índice Cataluña=100. Por barrios de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14059/15011?lang=es"
   },
   {
@@ -55,6 +75,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Indicadores socioeconómicos. Valores"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "com",
+      "mun",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14074/15022?lang=es"
   },
   {
@@ -66,6 +93,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índice socioeconómico territorial",
       "node": "Indicadores socioeconómicos. Valores. Por barrios de Barcelona"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ist/14075/15023?lang=es"
   }
 ];

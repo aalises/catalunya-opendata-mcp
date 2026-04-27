@@ -11,6 +11,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/10/1?lang=es"
   },
   {
@@ -22,6 +31,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/10/5464?lang=es"
   },
   {
@@ -33,6 +46,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/10/5975?lang=es"
   },
   {
@@ -44,6 +66,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/117/20186?lang=es"
   },
   {
@@ -55,6 +84,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/117/21582?lang=es"
   },
   {
@@ -66,6 +104,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/117/21583?lang=es"
   },
   {
@@ -77,6 +122,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/117/21584?lang=es"
   },
   {
@@ -88,6 +140,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/117/7550?lang=es"
   },
   {
@@ -99,6 +155,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, estado civil y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/118/20556?lang=es"
   },
   {
@@ -110,6 +176,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, estado civil y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/118/21586?lang=es"
   },
   {
@@ -121,6 +194,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, estado civil y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/118/21588?lang=es"
   },
   {
@@ -132,6 +212,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, estado civil y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/118/248?lang=es"
   },
   {
@@ -143,6 +230,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, estado civil y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/118/425?lang=es"
   },
   {
@@ -154,6 +250,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (CCAA y extranjero)"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/12/19928?lang=es"
   },
   {
@@ -165,6 +267,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (CCAA y extranjero)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/12/19929?lang=es"
   },
   {
@@ -176,6 +285,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (CCAA y extranjero)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/12/19931?lang=es"
   },
   {
@@ -187,6 +306,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (CCAA y extranjero) y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/122/19939?lang=es"
   },
   {
@@ -198,6 +327,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (CCAA y extranjero) y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/123/19941?lang=es"
   },
   {
@@ -209,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Dones per edat i convivència amb els pares"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/13776/14647?lang=es"
   },
   {
@@ -220,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Dones que conviuen amb almenys un dels progenitors. Segons si tenen fills o no"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/13777/14648?lang=es"
   },
   {
@@ -231,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Dones segons si tenen fills o no per nacionalitat i per la de la parella"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/13778/14649?lang=es"
   },
   {
@@ -242,6 +389,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19932?lang=es"
   },
   {
@@ -253,6 +407,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19933?lang=es"
   },
   {
@@ -264,6 +425,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19934?lang=es"
   },
   {
@@ -275,6 +443,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19935?lang=es"
   },
   {
@@ -286,6 +463,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19936?lang=es"
   },
   {
@@ -297,6 +481,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/19937?lang=es"
   },
   {
@@ -308,6 +502,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/23037?lang=es"
   },
   {
@@ -319,6 +523,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/23049?lang=es"
   },
   {
@@ -330,6 +544,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/14/25456?lang=es"
   },
   {
@@ -341,6 +565,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/159?lang=es"
   },
   {
@@ -352,6 +583,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/20165?lang=es"
   },
   {
@@ -363,6 +602,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/216?lang=es"
   },
   {
@@ -374,6 +620,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/3?lang=es"
   },
   {
@@ -385,6 +638,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/418?lang=es"
   },
   {
@@ -396,6 +658,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/7009?lang=es"
   },
   {
@@ -407,6 +676,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/8046?lang=es"
   },
   {
@@ -418,6 +693,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/15/813?lang=es"
   },
   {
@@ -429,6 +713,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16340/19701?lang=es"
   },
   {
@@ -440,6 +730,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, edad en grandes grupos y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16341/19702?lang=es"
   },
   {
@@ -451,6 +747,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16352/19786?lang=es"
   },
   {
@@ -462,6 +765,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16354/19788?lang=es"
   },
   {
@@ -473,6 +784,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16356/19790?lang=es"
   },
   {
@@ -484,6 +801,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16358/19811?lang=es"
   },
   {
@@ -495,6 +822,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16359/19812?lang=es"
   },
   {
@@ -506,6 +839,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Crecimiento intercensal de la población. 2011-2021"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16394/19872?lang=es"
   },
   {
@@ -517,6 +857,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de edad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16400/19880?lang=es"
   },
   {
@@ -528,6 +878,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de nacionalidad, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16401/19881?lang=es"
   },
   {
@@ -539,6 +899,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de migración y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16402/19882?lang=es"
   },
   {
@@ -550,6 +920,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, nacionalidad y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16448/19969?lang=es"
   },
   {
@@ -561,6 +941,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16450/19971?lang=es"
   },
   {
@@ -572,6 +962,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, nacionalidad y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16452/20129?lang=es"
   },
   {
@@ -583,6 +983,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16682/20173?lang=es"
   },
   {
@@ -594,6 +1004,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16683/20176?lang=es"
   },
   {
@@ -605,6 +1018,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16685/20168?lang=es"
   },
   {
@@ -616,6 +1036,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16686/20175?lang=es"
   },
   {
@@ -627,6 +1050,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16689/20160?lang=es"
   },
   {
@@ -638,6 +1071,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16690/20161?lang=es"
   },
   {
@@ -649,6 +1092,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16691/20162?lang=es"
   },
   {
@@ -660,6 +1111,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16692/20163?lang=es"
   },
   {
@@ -671,6 +1125,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16695/20153?lang=es"
   },
   {
@@ -682,6 +1144,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16696/20154?lang=es"
   },
   {
@@ -693,6 +1163,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16697/20155?lang=es"
   },
   {
@@ -704,6 +1181,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16698/20156?lang=es"
   },
   {
@@ -715,6 +1200,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16699/20157?lang=es"
   },
   {
@@ -726,6 +1214,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel de otros estudios en curso y sexo (si cursa más de un estudio)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16701/20205?lang=es"
   },
   {
@@ -737,6 +1233,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel de otros estudios en curso, sexo y edad quinquenal (si cursa más de un estudio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16702/20206?lang=es"
   },
   {
@@ -748,6 +1251,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población cursando estudios universitarios. Por campo de educación y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16704/20164?lang=es"
   },
   {
@@ -759,6 +1269,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16708/20187?lang=es"
   },
   {
@@ -770,6 +1288,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16708/21665?lang=es"
   },
   {
@@ -781,6 +1306,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16709/20188?lang=es"
   },
   {
@@ -792,6 +1325,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16710/20189?lang=es"
   },
   {
@@ -803,6 +1339,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Datos básicos por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16712/20190?lang=es"
   },
   {
@@ -814,6 +1360,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de estudios"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16719/20207?lang=es"
   },
   {
@@ -825,6 +1381,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de relación con la actividad económica"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16720/20208?lang=es"
   },
   {
@@ -836,6 +1402,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población y crecimiento intercensal medio anual de la población"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16845/20254?lang=es"
   },
   {
@@ -847,6 +1420,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Crecimiento intercensal medio anual de la población. Por componentes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16846/20255?lang=es"
   },
   {
@@ -858,6 +1438,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Crecimiento intercensal medio anual de la población. Por componentes y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16847/20257?lang=es"
   },
   {
@@ -869,6 +1456,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie por ocupante"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16983/20386?lang=es"
   },
   {
@@ -880,6 +1477,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16991/20402?lang=es"
   },
   {
@@ -891,6 +1498,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y superficie útil"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16992/20409?lang=es"
   },
   {
@@ -902,6 +1519,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y tipo de edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16993/20410?lang=es"
   },
   {
@@ -913,6 +1540,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y número de plantas sobre rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16994/20411?lang=es"
   },
   {
@@ -924,6 +1561,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y número de plantas bajo rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16995/20412?lang=es"
   },
   {
@@ -935,6 +1582,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y año de construcción"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16996/20413?lang=es"
   },
   {
@@ -946,6 +1603,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y año de construcción (último decenio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16997/20414?lang=es"
   },
   {
@@ -957,6 +1621,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y número de plantas sobre rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16998/20477?lang=es"
   },
   {
@@ -968,6 +1640,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y número de plantas bajo rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/16999/20478?lang=es"
   },
   {
@@ -979,6 +1659,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción y número de plantas sobre rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17001/20423?lang=es"
   },
   {
@@ -990,6 +1678,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción y número de plantas bajo rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17002/20424?lang=es"
   },
   {
@@ -1001,6 +1697,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17035/20472?lang=es"
   },
   {
@@ -1012,6 +1718,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y superficie útil"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17036/20473?lang=es"
   },
   {
@@ -1023,6 +1737,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y régimen de tenencia"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17037/20474?lang=es"
   },
   {
@@ -1034,6 +1756,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y año de construcción"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17038/20475?lang=es"
   },
   {
@@ -1045,6 +1775,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tipo de edificio y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17039/20476?lang=es"
   },
   {
@@ -1056,6 +1794,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas sobre rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17041/20479?lang=es"
   },
   {
@@ -1067,6 +1815,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas sobre rasante del edificio y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17042/20480?lang=es"
   },
   {
@@ -1078,6 +1834,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas sobre rasante del edificio y superficie útil"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17043/20481?lang=es"
   },
   {
@@ -1089,6 +1853,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas bajo rasante del edificio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17045/20482?lang=es"
   },
   {
@@ -1100,6 +1874,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas bajo rasante del edificio y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17046/20483?lang=es"
   },
   {
@@ -1111,6 +1893,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por número de plantas bajo rasante del edificio y superficie útil"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17047/20484?lang=es"
   },
   {
@@ -1122,6 +1912,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie por ocupante y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17048/20485?lang=es"
   },
   {
@@ -1133,6 +1931,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17049/20466?lang=es"
   },
   {
@@ -1144,6 +1945,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y número de plantas sobre rasante del edificio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17050/20469?lang=es"
   },
   {
@@ -1155,6 +1959,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y número de plantas bajo rasante del edificio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17051/20470?lang=es"
   },
   {
@@ -1166,6 +1973,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y tipo de edificio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17052/20471?lang=es"
   },
   {
@@ -1177,6 +1987,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de viviendas"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17089/20495?lang=es"
   },
   {
@@ -1188,6 +2008,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de viviendas por intensidad de uso a partir del consumo eléctrico"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17090/20497?lang=es"
   },
   {
@@ -1199,6 +2024,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas. Por intensidad de uso"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17092/20490?lang=es"
   },
   {
@@ -1210,6 +2040,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas. Por consumo eléctrico"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17093/20491?lang=es"
   },
   {
@@ -1221,6 +2056,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas. Por intensidad de uso y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17094/20493?lang=es"
   },
   {
@@ -1232,6 +2070,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Mediana de consumo eléctrico anual"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17095/20494?lang=es"
   },
   {
@@ -1243,6 +2086,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17098/20517?lang=es"
   },
   {
@@ -1254,6 +2100,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil, lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17189/20568?lang=es"
   },
   {
@@ -1265,6 +2118,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil, lugar de nacimiento (CCAA y extranjero) y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17190/20605?lang=es"
   },
   {
@@ -1276,6 +2137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil, nacionalidad, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17191/20570?lang=es"
   },
   {
@@ -1287,6 +2155,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17237/20650?lang=es"
   },
   {
@@ -1298,6 +2174,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17238/20651?lang=es"
   },
   {
@@ -1309,6 +2193,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17239/20653?lang=es"
   },
   {
@@ -1320,6 +2211,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nivel de formación ampliado alcanzado y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17240/20654?lang=es"
   },
   {
@@ -1331,6 +2229,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17241/20655?lang=es"
   },
   {
@@ -1342,6 +2247,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17242/20656?lang=es"
   },
   {
@@ -1353,6 +2265,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Edad media por tipo de establecimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17286/20733?lang=es"
   },
   {
@@ -1364,6 +2283,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17287/20765?lang=es"
   },
   {
@@ -1375,6 +2304,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17288/20766?lang=es"
   },
   {
@@ -1386,6 +2322,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17289/20767?lang=es"
   },
   {
@@ -1397,6 +2341,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17290/20768?lang=es"
   },
   {
@@ -1408,6 +2360,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17291/20769?lang=es"
   },
   {
@@ -1419,6 +2378,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por estado civil y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17292/20770?lang=es"
   },
   {
@@ -1430,6 +2397,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por estado civil, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17293/20771?lang=es"
   },
   {
@@ -1441,6 +2415,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17294/20772?lang=es"
   },
   {
@@ -1452,6 +2434,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por nivel de formación alcanzado, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17295/20773?lang=es"
   },
   {
@@ -1463,6 +2452,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17296/20774?lang=es"
   },
   {
@@ -1474,6 +2471,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por régimen de tenencia de la vivienda principal, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17297/20778?lang=es"
   },
   {
@@ -1485,6 +2489,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por edad de los miembros"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17298/20736?lang=es"
   },
   {
@@ -1496,6 +2510,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por edad de los miembros y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17299/20737?lang=es"
   },
   {
@@ -1507,6 +2524,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por edad de los miembros y tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17300/20738?lang=es"
   },
   {
@@ -1518,6 +2543,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por edad de los miembros y tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17301/20739?lang=es"
   },
   {
@@ -1529,6 +2561,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por edad de los miembros y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17302/20741?lang=es"
   },
   {
@@ -1540,6 +2580,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por nacionalidad de los miembros y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17303/20748?lang=es"
   },
   {
@@ -1551,6 +2594,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por nacionalidad de los miembros y tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17304/20749?lang=es"
   },
   {
@@ -1562,6 +2613,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por nacionalidad de los miembros y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17305/20750?lang=es"
   },
   {
@@ -1573,6 +2632,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por nacionalidad de los miembros y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17306/20751?lang=es"
   },
   {
@@ -1584,6 +2651,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17311/20788?lang=es"
   },
   {
@@ -1595,6 +2669,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por composición del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17313/20790?lang=es"
   },
   {
@@ -1606,6 +2690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por composición del hogar y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17314/20791?lang=es"
   },
   {
@@ -1617,6 +2704,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población que vive en el hogar. Por tipo de hogar y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17315/20793?lang=es"
   },
   {
@@ -1628,6 +2725,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población que vive en el hogar. Edad media por tipo de hogar y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17316/20794?lang=es"
   },
   {
@@ -1639,6 +2746,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población que vive en el hogar. Edad media por tipo de hogar y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17316/20868?lang=es"
   },
   {
@@ -1650,6 +2764,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Indicadores de hogares"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17317/20806?lang=es"
   },
   {
@@ -1661,6 +2785,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Por sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17933/21482?lang=es"
   },
   {
@@ -1672,6 +2801,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17934/21483?lang=es"
   },
   {
@@ -1683,6 +2816,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sector de actividad, sexo y situación profesional"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17961/21531?lang=es"
   },
   {
@@ -1694,6 +2835,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sección de actividad económica del establecimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17964/21490?lang=es"
   },
   {
@@ -1705,6 +2854,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sección de actividad económica del establecimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17965/21495?lang=es"
   },
   {
@@ -1716,6 +2873,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sección de actividad económica del establecimiento, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17966/21496?lang=es"
   },
   {
@@ -1727,6 +2891,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sección de actividad económica del establecimiento, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17967/21497?lang=es"
   },
   {
@@ -1738,6 +2909,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sección de actividad económica del establecimiento, sexo y situación profesional"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17968/21511?lang=es"
   },
   {
@@ -1749,6 +2927,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por división de actividad económica del establecimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17970/21498?lang=es"
   },
   {
@@ -1760,6 +2942,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por división de actividad económica del establecimiento, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17971/21499?lang=es"
   },
   {
@@ -1771,6 +2957,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por división de actividad económica del establecimiento, sexo y situación profesional"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17972/21510?lang=es"
   },
   {
@@ -1782,6 +2972,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grupo de actividad económica del establecimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17974/21500?lang=es"
   },
   {
@@ -1793,6 +2986,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por subgrupos principales de ocupación y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17977/21517?lang=es"
   },
   {
@@ -1804,6 +3004,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por subgrupos de ocupación y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/17980/21518?lang=es"
   },
   {
@@ -1815,6 +3018,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18009/21547?lang=es"
   },
   {
@@ -1826,6 +3032,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18011/21549?lang=es"
   },
   {
@@ -1837,6 +3053,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, lugar de nacimiento y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18012/21559?lang=es"
   },
   {
@@ -1848,6 +3071,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18013/21548?lang=es"
   },
   {
@@ -1859,6 +3085,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18015/21551?lang=es"
   },
   {
@@ -1870,6 +3103,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado, lugar de nacimiento y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18016/21552?lang=es"
   },
   {
@@ -1881,6 +3121,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por el nivel más alto de los estudios en curso ampliado, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18017/21553?lang=es"
   },
   {
@@ -1892,6 +3140,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica, sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/18019/21556?lang=es"
   },
   {
@@ -1903,6 +3156,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/19/20185?lang=es"
   },
   {
@@ -1914,6 +3177,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/19/20924?lang=es"
   },
   {
@@ -1925,6 +3195,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/19/20925?lang=es"
   },
   {
@@ -1936,6 +3215,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/19/20926?lang=es"
   },
   {
@@ -1947,6 +3233,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/19/20927?lang=es"
   },
   {
@@ -1958,6 +3251,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/201/195?lang=es"
   },
   {
@@ -1969,6 +3271,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/201/21509?lang=es"
   },
   {
@@ -1980,6 +3290,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/201/7600?lang=es"
   },
   {
@@ -1991,6 +3308,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20603/23010?lang=es"
   },
   {
@@ -2002,6 +3326,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20603/23023?lang=es"
   },
   {
@@ -2013,6 +3344,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20603/23028?lang=es"
   },
   {
@@ -2024,6 +3362,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20603/25455?lang=es"
   },
   {
@@ -2035,6 +3380,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20607/23032?lang=es"
   },
   {
@@ -2046,6 +3398,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20607/23044?lang=es"
   },
   {
@@ -2057,6 +3416,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20607/23056?lang=es"
   },
   {
@@ -2068,6 +3434,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20607/25463?lang=es"
   },
   {
@@ -2079,6 +3452,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20608/23034?lang=es"
   },
   {
@@ -2090,6 +3466,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20608/23046?lang=es"
   },
   {
@@ -2101,6 +3480,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20608/23058?lang=es"
   },
   {
@@ -2112,6 +3494,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20608/25465?lang=es"
   },
   {
@@ -2123,6 +3508,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20609/23031?lang=es"
   },
   {
@@ -2134,6 +3526,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20609/23043?lang=es"
   },
   {
@@ -2145,6 +3544,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20609/23055?lang=es"
   },
   {
@@ -2156,6 +3562,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20609/25462?lang=es"
   },
   {
@@ -2167,6 +3580,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20610/23033?lang=es"
   },
   {
@@ -2178,6 +3594,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20610/23045?lang=es"
   },
   {
@@ -2189,6 +3608,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20610/23057?lang=es"
   },
   {
@@ -2200,6 +3622,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20610/25464?lang=es"
   },
   {
@@ -2211,6 +3636,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20611/23035?lang=es"
   },
   {
@@ -2222,6 +3650,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20611/23047?lang=es"
   },
   {
@@ -2233,6 +3664,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20611/23059?lang=es"
   },
   {
@@ -2244,6 +3678,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20611/25466?lang=es"
   },
   {
@@ -2255,6 +3692,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20612/23036?lang=es"
   },
   {
@@ -2266,6 +3706,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20612/23048?lang=es"
   },
   {
@@ -2277,6 +3720,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20612/23060?lang=es"
   },
   {
@@ -2288,6 +3734,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, año de llegada a España y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20612/25467?lang=es"
   },
   {
@@ -2299,6 +3748,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de residencia anterior"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20615/23063?lang=es"
   },
   {
@@ -2310,6 +3769,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de residencia anterior y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20616/23064?lang=es"
   },
   {
@@ -2321,6 +3790,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de residencia anterior, sexo y edad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20617/23065?lang=es"
   },
   {
@@ -2332,6 +3809,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de residencia anterior, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20618/23066?lang=es"
   },
   {
@@ -2343,6 +3828,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de residencia anterior, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/20619/23067?lang=es"
   },
   {
@@ -2354,6 +3847,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por país de nacimiento y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/21211/25052?lang=es"
   },
   {
@@ -2365,6 +3863,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población extranjera. Por país de nacionalidad y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/21213/25051?lang=es"
   },
   {
@@ -2376,6 +3879,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/19942?lang=es"
   },
   {
@@ -2387,6 +3897,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/19943?lang=es"
   },
   {
@@ -2398,6 +3915,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/19944?lang=es"
   },
   {
@@ -2409,6 +3935,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/19945?lang=es"
   },
   {
@@ -2420,6 +3953,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/19946?lang=es"
   },
   {
@@ -2431,6 +3974,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/23038?lang=es"
   },
   {
@@ -2442,6 +3995,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/23050?lang=es"
   },
   {
@@ -2453,6 +4016,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/216/25457?lang=es"
   },
   {
@@ -2464,6 +4037,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/219/21512?lang=es"
   },
   {
@@ -2475,6 +4055,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/219/220?lang=es"
   },
   {
@@ -2486,6 +4075,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/219/7603?lang=es"
   },
   {
@@ -2497,6 +4092,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento, sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22169/26462?lang=es"
   },
   {
@@ -2508,6 +4109,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Edad media. Por país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22170/26463?lang=es"
   },
   {
@@ -2519,6 +4124,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Edad media. Por país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22171/26464?lang=es"
   },
   {
@@ -2530,6 +4139,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y área básica de salud"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22172/26465?lang=es"
   },
   {
@@ -2541,6 +4153,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y área básica de salud"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22172/26466?lang=es"
   },
   {
@@ -2552,6 +4167,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y área básica de salud"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22172/26467?lang=es"
   },
   {
@@ -2563,6 +4181,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas familiares convencionales. Por tipo de vivienda y área básica de salud"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/22194/26522?lang=es"
   },
   {
@@ -2574,6 +4195,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20184?lang=es"
   },
   {
@@ -2585,6 +4216,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20919?lang=es"
   },
   {
@@ -2596,6 +4234,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20920?lang=es"
   },
   {
@@ -2607,6 +4254,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20921?lang=es"
   },
   {
@@ -2618,6 +4272,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20922?lang=es"
   },
   {
@@ -2629,6 +4290,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por la relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/270/20923?lang=es"
   },
   {
@@ -2640,6 +4307,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/293/296?lang=es"
   },
   {
@@ -2651,6 +4328,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de familias (agregado)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/298/20785?lang=es"
   },
   {
@@ -2662,6 +4347,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de familias (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/298/20913?lang=es"
   },
   {
@@ -2673,6 +4365,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/300/20786?lang=es"
   },
   {
@@ -2684,6 +4384,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/300/20914?lang=es"
   },
   {
@@ -2695,6 +4402,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/304/20780?lang=es"
   },
   {
@@ -2706,6 +4420,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/304/306?lang=es"
   },
   {
@@ -2717,6 +4440,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/304/7935?lang=es"
   },
   {
@@ -2728,6 +4458,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/309/20420?lang=es"
   },
   {
@@ -2739,6 +4479,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/309/343?lang=es"
   },
   {
@@ -2750,6 +4497,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/309/6925?lang=es"
   },
   {
@@ -2761,6 +4515,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por régimen de tenencia"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/310/20419?lang=es"
   },
   {
@@ -2772,6 +4536,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/310/344?lang=es"
   },
   {
@@ -2783,6 +4554,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/310/6924?lang=es"
   },
   {
@@ -2794,6 +4572,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/310/697?lang=es"
   },
   {
@@ -2805,6 +4592,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/311/20425?lang=es"
   },
   {
@@ -2816,6 +4613,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/311/6927?lang=es"
   },
   {
@@ -2827,6 +4631,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/311/7031?lang=es"
   },
   {
@@ -2838,6 +4649,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/352/20427?lang=es"
   },
   {
@@ -2849,6 +4668,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/352/377?lang=es"
   },
   {
@@ -2860,6 +4686,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/352/6936?lang=es"
   },
   {
@@ -2871,6 +4702,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y régimen de tenencia"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/353/20426?lang=es"
   },
   {
@@ -2882,6 +4721,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/353/378?lang=es"
   },
   {
@@ -2893,6 +4739,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/353/6935?lang=es"
   },
   {
@@ -2904,6 +4755,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/353/700?lang=es"
   },
   {
@@ -2915,6 +4773,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción y régimen de tenencia"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/358/20422?lang=es"
   },
   {
@@ -2926,6 +4792,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/358/383?lang=es"
   },
   {
@@ -2937,6 +4810,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/358/6933?lang=es"
   },
   {
@@ -2948,6 +4826,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/408/21491?lang=es"
   },
   {
@@ -2959,6 +4845,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/408/435?lang=es"
   },
   {
@@ -2970,6 +4865,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/409/21492?lang=es"
   },
   {
@@ -2981,6 +4884,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/409/436?lang=es"
   },
   {
@@ -2992,6 +4904,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Tamaño medio del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/450/481?lang=es"
   },
   {
@@ -3003,6 +4925,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/478/502?lang=es"
   },
   {
@@ -3014,6 +4946,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad (continentes) y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/479/503?lang=es"
   },
   {
@@ -3025,6 +4967,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo (agregado)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/531/20787?lang=es"
   },
   {
@@ -3036,6 +4988,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/531/20859?lang=es"
   },
   {
@@ -3047,6 +5008,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/535/562?lang=es"
   },
   {
@@ -3058,6 +5027,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad (continentes), sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/536/19792?lang=es"
   },
   {
@@ -3069,6 +5045,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad (continentes) y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/537/25050?lang=es"
   },
   {
@@ -3080,6 +5063,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad (continentes) y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/537/564?lang=es"
   },
   {
@@ -3091,6 +5081,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/538/565?lang=es"
   },
   {
@@ -3102,6 +5102,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/539/566?lang=es"
   },
   {
@@ -3113,6 +5120,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/539/5976?lang=es"
   },
   {
@@ -3124,6 +5141,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/539/9963?lang=es"
   },
   {
@@ -3135,6 +5158,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/540/19948?lang=es"
   },
   {
@@ -3146,6 +5179,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (continentes)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5988/5984?lang=es"
   },
   {
@@ -3157,6 +5200,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (continentes) y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5989/5985?lang=es"
   },
   {
@@ -3168,6 +5221,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (continentes) y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5990/25049?lang=es"
   },
   {
@@ -3179,6 +5242,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por lugar de nacimiento (continentes) y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5990/5986?lang=es"
   },
   {
@@ -3190,6 +5260,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5992/5987?lang=es"
   },
   {
@@ -3201,6 +5281,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5993/19791?lang=es"
   },
   {
@@ -3212,6 +5302,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nacionalidad, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/5993/5988?lang=es"
   },
   {
@@ -3223,6 +5320,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población extranjera. Por país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6000/20200?lang=es"
   },
   {
@@ -3234,6 +5338,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población extranjera. Por país de nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6000/20963?lang=es"
   },
   {
@@ -3245,6 +5353,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6001/20198?lang=es"
   },
   {
@@ -3256,6 +5369,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por país de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6001/20964?lang=es"
   },
   {
@@ -3267,6 +5384,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por país de nacimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6004/20199?lang=es"
   },
   {
@@ -3278,6 +5400,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por país de nacimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6004/20965?lang=es"
   },
   {
@@ -3289,6 +5415,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población extranjera. Por país de nacionalidad y grupo de edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6005/20231?lang=es"
   },
   {
@@ -3300,6 +5433,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población extranjera. Por país de nacionalidad y grupo de edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6005/20966?lang=es"
   },
   {
@@ -3311,6 +5448,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/119?lang=es"
   },
   {
@@ -3322,6 +5466,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/19774?lang=es"
   },
   {
@@ -3333,6 +5485,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/20967?lang=es"
   },
   {
@@ -3344,6 +5504,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/20968?lang=es"
   },
   {
@@ -3355,6 +5523,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/24851?lang=es"
   },
   {
@@ -3366,6 +5542,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/25?lang=es"
   },
   {
@@ -3377,6 +5560,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/26521?lang=es"
   },
   {
@@ -3388,6 +5579,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/410?lang=es"
   },
   {
@@ -3399,6 +5599,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/561?lang=es"
   },
   {
@@ -3410,6 +5619,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/61/5977?lang=es"
   },
   {
@@ -3421,6 +5637,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6211/6217?lang=es"
   },
   {
@@ -3432,6 +5653,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6212/6218?lang=es"
   },
   {
@@ -3443,6 +5671,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6213/20617?lang=es"
   },
   {
@@ -3454,6 +5689,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y estado civil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6213/20884?lang=es"
   },
   {
@@ -3465,6 +5704,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6214/20618?lang=es"
   },
   {
@@ -3476,6 +5722,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6214/20878?lang=es"
   },
   {
@@ -3487,6 +5737,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6215/20619?lang=es"
   },
   {
@@ -3498,6 +5755,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6215/20880?lang=es"
   },
   {
@@ -3509,6 +5770,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6216/20621?lang=es"
   },
   {
@@ -3520,6 +5788,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6216/6222?lang=es"
   },
   {
@@ -3531,6 +5802,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6217/20622?lang=es"
   },
   {
@@ -3542,6 +5820,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por la relación con la actividad económica y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6217/21101?lang=es"
   },
   {
@@ -3553,6 +5834,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6218/20623?lang=es"
   },
   {
@@ -3564,6 +5852,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6218/20883?lang=es"
   },
   {
@@ -3575,6 +5866,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6219/20624?lang=es"
   },
   {
@@ -3586,6 +5880,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6219/20876?lang=es"
   },
   {
@@ -3597,6 +5894,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo, edad quinquenal y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6221/20625?lang=es"
   },
   {
@@ -3608,6 +5910,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo, edad quinquenal y estado civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6221/20877?lang=es"
   },
   {
@@ -3619,6 +5924,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6222/20626?lang=es"
   },
   {
@@ -3630,6 +5940,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6222/20879?lang=es"
   },
   {
@@ -3641,6 +5954,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6223/20627?lang=es"
   },
   {
@@ -3652,6 +5970,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6223/20882?lang=es"
   },
   {
@@ -3663,6 +5984,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nivel de formación alcanzado, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6224/20628?lang=es"
   },
   {
@@ -3674,6 +6000,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nivel de formación alcanzado, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6224/6230?lang=es"
   },
   {
@@ -3685,6 +6014,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6225/20629?lang=es"
   },
   {
@@ -3696,6 +6030,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6225/6231?lang=es"
   },
   {
@@ -3707,6 +6044,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6226/20630?lang=es"
   },
   {
@@ -3718,6 +6060,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6226/6232?lang=es"
   },
   {
@@ -3729,6 +6074,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo, edad quinquenal y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6227/20631?lang=es"
   },
   {
@@ -3740,6 +6088,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por sexo, edad quinquenal y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6227/6233?lang=es"
   },
   {
@@ -3751,6 +6102,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6228/20632?lang=es"
   },
   {
@@ -3762,6 +6116,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6228/21102?lang=es"
   },
   {
@@ -3773,6 +6130,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6229/20634?lang=es"
   },
   {
@@ -3784,6 +6144,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6229/6235?lang=es"
   },
   {
@@ -3795,6 +6158,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad, sexo, y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6230/20635?lang=es"
   },
   {
@@ -3806,6 +6172,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por nacionalidad, sexo, y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6230/6236?lang=es"
   },
   {
@@ -3817,6 +6186,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6231/20636?lang=es"
   },
   {
@@ -3828,6 +6204,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6231/21516?lang=es"
   },
   {
@@ -3839,6 +6218,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6232/20637?lang=es"
   },
   {
@@ -3850,6 +6236,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6232/6238?lang=es"
   },
   {
@@ -3861,6 +6250,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6233/20638?lang=es"
   },
   {
@@ -3872,6 +6268,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de residencia 1 año atrás, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6233/6239?lang=es"
   },
   {
@@ -3883,6 +6282,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6234/20639?lang=es"
   },
   {
@@ -3894,6 +6300,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por lugar de nacimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6234/6240?lang=es"
   },
   {
@@ -3905,6 +6314,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6235/20640?lang=es"
   },
   {
@@ -3916,6 +6332,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por relación con la actividad económica, sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6235/6241?lang=es"
   },
   {
@@ -3927,6 +6346,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6237/20642?lang=es"
   },
   {
@@ -3938,6 +6361,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6237/6244?lang=es"
   },
   {
@@ -3949,6 +6376,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6239/20649?lang=es"
   },
   {
@@ -3960,6 +6390,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6239/6246?lang=es"
   },
   {
@@ -3971,6 +6405,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Edad media por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6240/20620?lang=es"
   },
   {
@@ -3982,6 +6423,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Edad media por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6240/20881?lang=es"
   },
   {
@@ -3993,6 +6437,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y estado civil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6347/20643?lang=es"
   },
   {
@@ -4004,6 +6452,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y estado civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6347/6341?lang=es"
   },
   {
@@ -4015,6 +6466,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6348/20644?lang=es"
   },
   {
@@ -4026,6 +6481,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6348/6342?lang=es"
   },
   {
@@ -4037,6 +6495,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6349/20645?lang=es"
   },
   {
@@ -4048,6 +6510,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6349/6343?lang=es"
   },
   {
@@ -4059,6 +6524,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6350/20646?lang=es"
   },
   {
@@ -4070,6 +6539,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6350/6344?lang=es"
   },
   {
@@ -4081,6 +6553,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6351/20648?lang=es"
   },
   {
@@ -4092,6 +6568,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6351/6345?lang=es"
   },
   {
@@ -4103,6 +6582,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6352/20647?lang=es"
   },
   {
@@ -4114,6 +6597,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población en establecimientos colectivos. Por tipo de establecimiento, sexo y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6352/6346?lang=es"
   },
   {
@@ -4125,6 +6611,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Establecimientos colectivos. Por tipo de establecimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6354/20487?lang=es"
   },
   {
@@ -4136,6 +6629,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Establecimientos colectivos. Por tipo de establecimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6354/6349?lang=es"
   },
   {
@@ -4147,6 +6645,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Establecimientos colectivos. Por tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6355/20488?lang=es"
   },
   {
@@ -4158,6 +6659,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Establecimientos colectivos. Por tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/6355/6348?lang=es"
   },
   {
@@ -4169,6 +6673,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción (último decenio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7007/20421?lang=es"
   },
   {
@@ -4180,6 +6691,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por año de construcción (último decenio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7007/6926?lang=es"
   },
   {
@@ -4191,6 +6708,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción (último decenio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7009/20428?lang=es"
   },
   {
@@ -4202,6 +6726,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción (último decenio)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7009/6937?lang=es"
   },
   {
@@ -4213,6 +6742,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil, nacionalidad (continentes) y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7049/20554?lang=es"
   },
   {
@@ -4224,6 +6763,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil, nacionalidad (continentes) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7049/6966?lang=es"
   },
   {
@@ -4235,6 +6779,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7057/20429?lang=es"
   },
   {
@@ -4246,6 +6798,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por superficie útil y tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7057/6976?lang=es"
   },
   {
@@ -4257,6 +6814,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7061/20468?lang=es"
   },
   {
@@ -4268,6 +6828,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7061/6980?lang=es"
   },
   {
@@ -4279,6 +6844,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y régimen de tenencia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7062/20467?lang=es"
   },
   {
@@ -4290,6 +6858,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Viviendas principales. Por tamaño del municipio y régimen de tenencia"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7062/6981?lang=es"
   },
   {
@@ -4301,6 +6874,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población de 16 años o más. Por nivel de formación ampliado alcanzado y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7102/7012?lang=es"
   },
   {
@@ -4312,6 +6892,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado, nacionalidad y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7103/20169?lang=es"
   },
   {
@@ -4323,6 +6910,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación ampliado alcanzado, nacionalidad y edad quinquenal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7103/7014?lang=es"
   },
   {
@@ -4334,6 +6926,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7104/20170?lang=es"
   },
   {
@@ -4345,6 +6947,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7104/7015?lang=es"
   },
   {
@@ -4356,6 +6965,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7105/20171?lang=es"
   },
   {
@@ -4367,6 +6986,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7105/7016?lang=es"
   },
   {
@@ -4378,6 +7004,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7106/20203?lang=es"
   },
   {
@@ -4389,6 +7022,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7106/7017?lang=es"
   },
   {
@@ -4400,6 +7039,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población de 16 años o más. Por nivel de formación alcanzado y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7108/7018?lang=es"
   },
   {
@@ -4411,6 +7057,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, nacionalidad y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7109/20204?lang=es"
   },
   {
@@ -4422,6 +7075,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por nivel de formación alcanzado, nacionalidad y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7109/7019?lang=es"
   },
   {
@@ -4433,6 +7092,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7129/21493?lang=es"
   },
   {
@@ -4444,6 +7110,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7129/7561?lang=es"
   },
   {
@@ -4455,6 +7128,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7131/21494?lang=es"
   },
   {
@@ -4466,6 +7147,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7131/7559?lang=es"
   },
   {
@@ -4477,6 +7165,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7132/21481?lang=es"
   },
   {
@@ -4488,6 +7182,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por sectores de actividad, nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7132/21519?lang=es"
   },
   {
@@ -4499,6 +7200,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por nacionalidad, ramas de actividad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7146/21484?lang=es"
   },
   {
@@ -4510,6 +7216,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Població ocupada. Per branques d'activitat, ocupació i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7149/21485?lang=es"
   },
   {
@@ -4521,6 +7230,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7152/21501?lang=es"
   },
   {
@@ -4532,6 +7249,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7152/7588?lang=es"
   },
   {
@@ -4543,6 +7267,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7153/21514?lang=es"
   },
   {
@@ -4554,6 +7286,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7153/7592?lang=es"
   },
   {
@@ -4565,6 +7304,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7154/21486?lang=es"
   },
   {
@@ -4576,6 +7321,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7154/21520?lang=es"
   },
   {
@@ -4587,6 +7339,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7160/21515?lang=es"
   },
   {
@@ -4598,6 +7357,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por grandes grupos de ocupación, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7160/7597?lang=es"
   },
   {
@@ -4609,6 +7375,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7161/21513?lang=es"
   },
   {
@@ -4620,6 +7393,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población ocupada. Por situación profesional, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7161/7601?lang=es"
   },
   {
@@ -4631,6 +7410,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7450/20127?lang=es"
   },
   {
@@ -4642,6 +7431,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7450/7474?lang=es"
   },
   {
@@ -4653,6 +7448,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, edad y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7451/20128?lang=es"
   },
   {
@@ -4664,6 +7466,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, edad y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7451/7475?lang=es"
   },
   {
@@ -4675,6 +7483,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia 1 año atrás y municipio de residencia actual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7452/24707?lang=es"
   },
   {
@@ -4686,6 +7497,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia 1 año atrás y municipio de residencia actual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7452/7476?lang=es"
   },
   {
@@ -4697,6 +7511,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia actual y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7454/20131?lang=es"
   },
   {
@@ -4708,6 +7527,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia actual y lugar de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7454/7484?lang=es"
   },
   {
@@ -4719,6 +7542,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7456/7485?lang=es"
   },
   {
@@ -4730,6 +7560,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7457/23080?lang=es"
   },
   {
@@ -4741,6 +7578,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7457/7487?lang=es"
   },
   {
@@ -4752,6 +7595,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7458/20217?lang=es"
   },
   {
@@ -4763,6 +7613,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7458/7488?lang=es"
   },
   {
@@ -4774,6 +7630,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7459/20225?lang=es"
   },
   {
@@ -4785,6 +7648,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7459/7489?lang=es"
   },
   {
@@ -4796,6 +7665,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7469/7496?lang=es"
   },
   {
@@ -4807,6 +7683,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7470/23082?lang=es"
   },
   {
@@ -4818,6 +7701,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7470/7497?lang=es"
   },
   {
@@ -4829,6 +7718,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7471/20218?lang=es"
   },
   {
@@ -4840,6 +7737,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7471/7498?lang=es"
   },
   {
@@ -4851,6 +7754,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7473/20226?lang=es"
   },
   {
@@ -4862,6 +7772,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7473/7500?lang=es"
   },
   {
@@ -4873,6 +7789,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población de 1 año o más por sexo y comunidad autónoma de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7494/7516?lang=es"
   },
   {
@@ -4884,6 +7807,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7495/7517?lang=es"
   },
   {
@@ -4895,6 +7825,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7496/20219?lang=es"
   },
   {
@@ -4906,6 +7844,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7496/7526?lang=es"
   },
   {
@@ -4917,6 +7859,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7498/20227?lang=es"
   },
   {
@@ -4928,6 +7877,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7498/7528?lang=es"
   },
   {
@@ -4939,6 +7893,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población de 1 año o más por sexo, edad y continente de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7501/20105?lang=es"
   },
   {
@@ -4950,6 +7911,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7502/7535?lang=es"
   },
   {
@@ -4961,6 +7929,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por nacionalidad, edad y continente de residencia 1 año atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7503/7536?lang=es"
   },
   {
@@ -4972,6 +7947,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7504/23084?lang=es"
   },
   {
@@ -4983,6 +7965,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7504/7537?lang=es"
   },
   {
@@ -4994,6 +7980,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7505/20220?lang=es"
   },
   {
@@ -5005,6 +7999,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7505/7538?lang=es"
   },
   {
@@ -5016,6 +8014,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7506/20228?lang=es"
   },
   {
@@ -5027,6 +8032,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último año. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7506/7539?lang=es"
   },
   {
@@ -5038,6 +8048,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7510/19972?lang=es"
   },
   {
@@ -5049,6 +8069,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7510/7541?lang=es"
   },
   {
@@ -5060,6 +8087,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia actual y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7511/19973?lang=es"
   },
   {
@@ -5071,6 +8104,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia actual y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7511/7543?lang=es"
   },
   {
@@ -5082,6 +8120,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, edad y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7512/24723?lang=es"
   },
   {
@@ -5093,6 +8138,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo, edad y lugar de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7512/7544?lang=es"
   },
   {
@@ -5104,6 +8156,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia 10 años atrás y del municipio de residencia actual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7514/24709?lang=es"
   },
   {
@@ -5115,6 +8170,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por tamaño del municipio de residencia 10 años atrás y del municipio de residencia actual"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7514/7546?lang=es"
   },
   {
@@ -5126,6 +8186,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7516/24711?lang=es"
   },
   {
@@ -5137,6 +8204,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7516/7547?lang=es"
   },
   {
@@ -5148,6 +8222,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7517/23085?lang=es"
   },
   {
@@ -5159,6 +8240,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7517/7552?lang=es"
   },
   {
@@ -5170,6 +8257,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7518/20213?lang=es"
   },
   {
@@ -5181,6 +8275,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7518/7553?lang=es"
   },
   {
@@ -5192,6 +8293,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7520/20221?lang=es"
   },
   {
@@ -5203,6 +8311,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7520/7554?lang=es"
   },
   {
@@ -5214,6 +8329,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Ocupats"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7522/7558?lang=es"
   },
   {
@@ -5225,6 +8346,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Desocupats"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7523/7560?lang=es"
   },
   {
@@ -5236,6 +8363,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7528/24713?lang=es"
   },
   {
@@ -5247,6 +8381,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7528/7567?lang=es"
   },
   {
@@ -5258,6 +8399,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7529/23086?lang=es"
   },
   {
@@ -5269,6 +8417,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7529/7568?lang=es"
   },
   {
@@ -5280,6 +8435,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7530/20214?lang=es"
   },
   {
@@ -5291,6 +8454,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7530/7572?lang=es"
   },
   {
@@ -5302,6 +8472,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7532/20222?lang=es"
   },
   {
@@ -5313,6 +8490,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7532/7574?lang=es"
   },
   {
@@ -5324,6 +8508,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Ocupats"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7534/7576?lang=es"
   },
   {
@@ -5335,6 +8525,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Desocupats"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7535/7578?lang=es"
   },
   {
@@ -5346,6 +8542,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y comunidad autónoma de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7540/7589?lang=es"
   },
   {
@@ -5357,6 +8561,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población de 10 años o más por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7541/24727?lang=es"
   },
   {
@@ -5368,6 +8579,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población de 10 años o más por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7541/7663?lang=es"
   },
   {
@@ -5379,6 +8596,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7542/23083?lang=es"
   },
   {
@@ -5390,6 +8614,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7542/7594?lang=es"
   },
   {
@@ -5401,6 +8630,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7543/23087?lang=es"
   },
   {
@@ -5412,6 +8648,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y estado civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7543/7598?lang=es"
   },
   {
@@ -5423,6 +8665,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7544/20215?lang=es"
   },
   {
@@ -5434,6 +8684,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7544/7599?lang=es"
   },
   {
@@ -5445,6 +8701,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7546/20223?lang=es"
   },
   {
@@ -5456,6 +8719,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7546/7602?lang=es"
   },
   {
@@ -5467,6 +8736,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Ocupats"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7548/7604?lang=es"
   },
   {
@@ -5478,6 +8752,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Desocupats"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7549/7605?lang=es"
   },
   {
@@ -5489,6 +8767,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo, edad y continente de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7554/7608?lang=es"
   },
   {
@@ -5500,6 +8785,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo, edad quinquenal y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7555/24717?lang=es"
   },
   {
@@ -5511,6 +8803,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo, edad quinquenal y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7555/7609?lang=es"
   },
   {
@@ -5522,6 +8820,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por nacionalidad, edad en grandes grupos y continente de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7556/24718?lang=es"
   },
   {
@@ -5533,6 +8838,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por nacionalidad, edad en grandes grupos y continente de residencia 10 años atrás"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7556/7610?lang=es"
   },
   {
@@ -5544,6 +8855,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y edad civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7557/23088?lang=es"
   },
   {
@@ -5555,6 +8873,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y edad civil"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7557/7614?lang=es"
   },
   {
@@ -5566,6 +8890,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7558/20216?lang=es"
   },
   {
@@ -5577,6 +8909,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7558/7616?lang=es"
   },
   {
@@ -5588,6 +8926,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7560/20224?lang=es"
   },
   {
@@ -5599,6 +8944,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del extranjero en el último decenio. Población por sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7560/7624?lang=es"
   },
   {
@@ -5610,6 +8962,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Ocupats"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7562/7625?lang=es"
   },
   {
@@ -5621,6 +8979,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Desocupats"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7563/7626?lang=es"
   },
   {
@@ -5632,6 +8995,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7569/19862?lang=es"
   },
   {
@@ -5643,6 +9016,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7569/23011?lang=es"
   },
   {
@@ -5654,6 +9037,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7569/23015?lang=es"
   },
   {
@@ -5665,6 +9058,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7569/25447?lang=es"
   },
   {
@@ -5676,6 +9079,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7569/7640?lang=es"
   },
   {
@@ -5687,6 +9097,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7570/19863?lang=es"
   },
   {
@@ -5698,6 +9118,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7570/23012?lang=es"
   },
   {
@@ -5709,6 +9139,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7570/23016?lang=es"
   },
   {
@@ -5720,6 +9160,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7570/25448?lang=es"
   },
   {
@@ -5731,6 +9181,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7570/7643?lang=es"
   },
   {
@@ -5742,6 +9199,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7572/19949?lang=es"
   },
   {
@@ -5753,6 +9217,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7572/19950?lang=es"
   },
   {
@@ -5764,6 +9236,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7572/23013?lang=es"
   },
   {
@@ -5775,6 +9255,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7572/23017?lang=es"
   },
   {
@@ -5786,6 +9274,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7572/25449?lang=es"
   },
   {
@@ -5797,6 +9293,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7573/19951?lang=es"
   },
   {
@@ -5808,6 +9311,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7573/19952?lang=es"
   },
   {
@@ -5819,6 +9330,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7573/23014?lang=es"
   },
   {
@@ -5830,6 +9349,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7573/23018?lang=es"
   },
   {
@@ -5841,6 +9368,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada al municipio, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7573/25450?lang=es"
   },
   {
@@ -5852,6 +9387,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7632/19953?lang=es"
   },
   {
@@ -5863,6 +9405,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7632/19954?lang=es"
   },
   {
@@ -5874,6 +9424,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7632/23040?lang=es"
   },
   {
@@ -5885,6 +9443,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7632/23052?lang=es"
   },
   {
@@ -5896,6 +9462,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7632/25459?lang=es"
   },
   {
@@ -5907,6 +9481,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7674/19955?lang=es"
   },
   {
@@ -5918,6 +9498,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7674/19956?lang=es"
   },
   {
@@ -5929,6 +9517,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7674/23042?lang=es"
   },
   {
@@ -5940,6 +9536,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7674/23054?lang=es"
   },
   {
@@ -5951,6 +9555,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a Cataluña, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7674/25461?lang=es"
   },
   {
@@ -5962,6 +9574,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/768/20553?lang=es"
   },
   {
@@ -5973,6 +9595,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/768/7008?lang=es"
   },
   {
@@ -5984,6 +9611,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por estado civil y nacionalidad (continentes)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/768/786?lang=es"
   },
   {
@@ -5995,6 +9629,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7718/19847?lang=es"
   },
   {
@@ -6006,6 +9650,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7718/23019?lang=es"
   },
   {
@@ -6017,6 +9671,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7718/23024?lang=es"
   },
   {
@@ -6028,6 +9692,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7718/25451?lang=es"
   },
   {
@@ -6039,6 +9713,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7718/7656?lang=es"
   },
   {
@@ -6050,6 +9731,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7719/19848?lang=es"
   },
   {
@@ -6061,6 +9752,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7719/23020?lang=es"
   },
   {
@@ -6072,6 +9773,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7719/23025?lang=es"
   },
   {
@@ -6083,6 +9794,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7719/25452?lang=es"
   },
   {
@@ -6094,6 +9815,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7719/7657?lang=es"
   },
   {
@@ -6105,6 +9832,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7721/19957?lang=es"
   },
   {
@@ -6116,6 +9849,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7721/19958?lang=es"
   },
   {
@@ -6127,6 +9868,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7721/23021?lang=es"
   },
   {
@@ -6138,6 +9887,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7721/23026?lang=es"
   },
   {
@@ -6149,6 +9906,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7721/25453?lang=es"
   },
   {
@@ -6160,6 +9925,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7722/19959?lang=es"
   },
   {
@@ -6171,6 +9942,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7722/19960?lang=es"
   },
   {
@@ -6182,6 +9961,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7722/23022?lang=es"
   },
   {
@@ -6193,6 +9980,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7722/23027?lang=es"
   },
   {
@@ -6204,6 +9999,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a España, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7722/25454?lang=es"
   },
   {
@@ -6215,6 +10018,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7724/19858?lang=es"
   },
   {
@@ -6226,6 +10039,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7724/7661?lang=es"
   },
   {
@@ -6237,6 +10057,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7725/19859?lang=es"
   },
   {
@@ -6248,6 +10078,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7725/7662?lang=es"
   },
   {
@@ -6259,6 +10096,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7729/19961?lang=es"
   },
   {
@@ -6270,6 +10114,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7729/19962?lang=es"
   },
   {
@@ -6281,6 +10133,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7730/19963?lang=es"
   },
   {
@@ -6292,6 +10151,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por año de llegada a la vivienda, sexo y lugar de nacimiento"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7730/19964?lang=es"
   },
   {
@@ -6303,6 +10170,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7734/24712?lang=es"
   },
   {
@@ -6314,6 +10191,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último decenio. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7734/7669?lang=es"
   },
   {
@@ -6325,6 +10208,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7735/24714?lang=es"
   },
   {
@@ -6336,6 +10229,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último decenio. Población por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7735/7670?lang=es"
   },
   {
@@ -6347,6 +10246,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7736/24715?lang=es"
   },
   {
@@ -6358,6 +10265,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último decenio. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7736/7671?lang=es"
   },
   {
@@ -6369,6 +10282,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intramunicipales en el último año. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7737/23081?lang=es"
   },
   {
@@ -6380,6 +10303,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7738/24686?lang=es"
   },
   {
@@ -6391,6 +10324,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Migrantes intermunicipales en el último año. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7738/7673?lang=es"
   },
   {
@@ -6402,6 +10341,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7739/24687?lang=es"
   },
   {
@@ -6413,6 +10360,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Inmigrantes procedentes del resto de España en el último año. Población por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7739/7674?lang=es"
   },
   {
@@ -6424,6 +10376,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población. Por sexo y por la relación entre el lugar de nacimiento y el de residencia"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7747/7679?lang=es"
   },
   {
@@ -6435,6 +10397,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar y del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7912/20782?lang=es"
   },
   {
@@ -6446,6 +10411,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar y del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7912/7990?lang=es"
   },
   {
@@ -6457,6 +10427,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7913/20789?lang=es"
   },
   {
@@ -6468,6 +10441,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número y tipo de núcleo y tamaño del municipio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7913/20860?lang=es"
   },
   {
@@ -6479,6 +10457,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro de 65 años o más. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7920/20743?lang=es"
   },
   {
@@ -6490,6 +10476,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro de 65 años o más. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7920/7996?lang=es"
   },
   {
@@ -6501,6 +10494,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro de 65 años o más. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7921/20744?lang=es"
   },
   {
@@ -6512,6 +10512,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro de 65 años o más. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7921/7997?lang=es"
   },
   {
@@ -6523,6 +10530,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos los miembros de 65 años o más. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7922/20745?lang=es"
   },
   {
@@ -6534,6 +10549,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos los miembros de 65 años o más. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7922/7998?lang=es"
   },
   {
@@ -6545,6 +10566,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos los miembros de 65 años o más. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7923/20746?lang=es"
   },
   {
@@ -6556,6 +10584,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos los miembros de 65 años o más. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7923/7999?lang=es"
   },
   {
@@ -6567,6 +10602,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro extranjero. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7925/20752?lang=es"
   },
   {
@@ -6578,6 +10621,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro extranjero. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7925/8000?lang=es"
   },
   {
@@ -6589,6 +10638,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con al menos un miembro extranjero. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7926/20753?lang=es"
   },
   {
@@ -6600,6 +10657,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos sus miembros extranjeros. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7927/20754?lang=es"
   },
   {
@@ -6611,6 +10676,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos sus miembros extranjeros. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7927/8002?lang=es"
   },
   {
@@ -6622,6 +10693,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares con todos sus miembros extranjeros. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7928/20755?lang=es"
   },
   {
@@ -6633,6 +10712,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Tamaño medio del hogar. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7945/20784?lang=es"
   },
   {
@@ -6644,6 +10733,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Tamaño medio del hogar. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7945/20858?lang=es"
   },
   {
@@ -6655,6 +10751,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Total"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/7952/8018?lang=es"
   },
   {
@@ -6666,6 +10772,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar (agregado)"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/8274/20781?lang=es"
   },
   {
@@ -6677,6 +10793,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por tamaño del hogar (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/8274/8352?lang=es"
   },
   {
@@ -6688,6 +10811,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por relación con la actividad económica, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9091/20775?lang=es"
   },
   {
@@ -6699,6 +10829,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por relación con la actividad económica, sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9091/20863?lang=es"
   },
   {
@@ -6710,6 +10846,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por profesión y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9092/20777?lang=es"
   },
   {
@@ -6721,6 +10864,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por profesión y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9092/9960?lang=es"
   },
   {
@@ -6732,6 +10881,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por sectores de actividad y sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9094/20776?lang=es"
   },
   {
@@ -6743,6 +10900,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares unipersonales. Por sectores de actividad y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9094/20912?lang=es"
   },
   {
@@ -6754,6 +10917,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número de personas de 65 años o más y tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9101/20740?lang=es"
   },
   {
@@ -6765,6 +10935,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número de personas de 65 años o más y tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9101/9976?lang=es"
   },
   {
@@ -6776,6 +10953,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Hogares. Por número de personas de 65 años o más y tamaño del hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9102/20742?lang=es"
   },
   {
@@ -6787,6 +10971,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población que vive en el hogar. Por tipo de hogar"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9117/20792?lang=es"
   },
   {
@@ -6798,6 +10992,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Censo de población y viviendas",
       "node": "Población que vive en el hogar. Por tipo de hogar"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/censph/9117/20861?lang=es"
   }
 ];

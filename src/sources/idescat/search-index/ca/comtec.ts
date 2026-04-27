@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comerç amb l'estranger segons contingut tecnològic",
       "node": "Exportacions i importacions. Per grups de productes, països i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22177/22?lang=ca"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comerç amb l'estranger segons contingut tecnològic",
       "node": "Exportacions i importacions. Per grups de productes, països i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22178/21?lang=ca"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comerç amb l'estranger segons contingut tecnològic",
       "node": "Exportacions i importacions. Per grups de productes, continents i àrees geogràfiques i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22179/57?lang=ca"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comerç amb l'estranger segons contingut tecnològic",
       "node": "Exportacions i importacions. Per grups de productes, continents i àrees geogràfiques i mitjà de transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22180/56?lang=ca"
   }
 ];

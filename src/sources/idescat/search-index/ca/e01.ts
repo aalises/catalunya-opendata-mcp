@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Índex de confiança del consumidor. Situació actual i expectatives"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21700/26020?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Índex de confiança del consumidor i components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21701/26027?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Situació econòmica de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21704/26030?lang=ca"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Índex de confiança en l'economia de la llar. Situació actual i expectatives"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21992/26143?lang=ca"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Índex de confiança en el mercat de treball. Situació actual i expectatives"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21993/26185?lang=ca"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Índex de confiança del consumidor",
       "node": "Índex de confiança en l'economia general. Situació actual i expectatives"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21994/26189?lang=ca"
   }
 ];

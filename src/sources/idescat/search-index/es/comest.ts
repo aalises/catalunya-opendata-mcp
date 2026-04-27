@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y secciones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18130/9?lang=es"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de 1.er y 2.º nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18131/14?lang=es"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y capítulos (Nomenclatura Combinada – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18132/5?lang=es"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones (CUCI-Rev.4 – 1 dígito)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18133/10?lang=es"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18134/8?lang=es"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de 1.er y 2º nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18135/13?lang=es"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y capítulos (Nomenclatura combinada – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18136/4?lang=es"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones (CUCI-Rev. 4 – 1 dígito)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18137/2?lang=es"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18176/19?lang=es"
   },
   {
@@ -110,6 +146,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y secciones (CUCI-Rev.4 – 1 dígito)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18177/17?lang=es"
   },
   {
@@ -121,6 +161,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y capítulos (Nomenclatura Combinada – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18178/15?lang=es"
   },
   {
@@ -132,6 +176,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de 1.er y 2.º nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18179/12?lang=es"
   },
   {
@@ -143,6 +191,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y secciones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18182/20?lang=es"
   },
   {
@@ -154,6 +206,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de 1.er y 2.º nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18183/11?lang=es"
   },
   {
@@ -165,6 +221,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y capítulos (Nomenclatura Combinada – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18184/16?lang=es"
   },
   {
@@ -176,6 +236,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y secciones (CUCI-Rev.4 – 1 dígito)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18185/18?lang=es"
   },
   {
@@ -187,6 +251,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y partidas (Nomenclatura combinada – 4 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/20613/1?lang=es"
   },
   {
@@ -198,6 +266,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y partidas (Nomenclatura Combinada – 4 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22063/30?lang=es"
   },
   {
@@ -209,6 +281,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y partidas (Nomenclatura Combinada – 4 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22064/29?lang=es"
   },
   {
@@ -220,6 +296,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y partidas (Nomenclatura Combinada – 4 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22065/33?lang=es"
   },
   {
@@ -231,6 +311,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y subpartidas (Nomenclatura combinada – 6 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22066/28?lang=es"
   },
   {
@@ -242,6 +326,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y subpartidas (Nomenclatura Combinada – 6 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22067/31?lang=es"
   },
   {
@@ -253,6 +341,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y subpartidas (Nomenclatura Combinada – 6 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22068/27?lang=es"
   },
   {
@@ -264,6 +356,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y subpartidas (Nomenclatura Combinada – 6 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22069/34?lang=es"
   },
   {
@@ -275,6 +371,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y posiciones (Nomenclatura combinada – 8 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22070/24?lang=es"
   },
   {
@@ -286,6 +386,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y posiciones (Nomenclatura Combinada – 8 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22071/32?lang=es"
   },
   {
@@ -297,6 +401,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y capítulos (Nomenclatura Combinada – 8 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22072/23?lang=es"
   },
   {
@@ -308,6 +416,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y posiciones (Nomenclatura Combinada – 8 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22073/35?lang=es"
   },
   {
@@ -319,6 +431,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por país, medio de transporte y divisiones (CUCI-Rev. 4 – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22074/36?lang=es"
   },
   {
@@ -330,6 +446,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y divisiones (CUCI-Rev.4 – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22075/38?lang=es"
   },
   {
@@ -341,6 +461,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones (CUCI-Rev.4 – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22076/40?lang=es"
   },
   {
@@ -352,6 +476,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y divisiones (CUCI-Rev.4 – 2 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22077/42?lang=es"
   },
   {
@@ -363,6 +491,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por país, medio de transporte y grupos (CUCI-Rev. 4 – 3 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22078/37?lang=es"
   },
   {
@@ -374,6 +506,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos (CUCI-Rev.4 – 3 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22079/39?lang=es"
   },
   {
@@ -385,6 +521,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y secciones (CUCI-Rev.4 – 3 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22080/41?lang=es"
   },
   {
@@ -396,6 +536,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos (CUCI-Rev.4 – 3 dígitos)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22082/43?lang=es"
   },
   {
@@ -407,6 +551,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de 3.er nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22083/44?lang=es"
   },
   {
@@ -418,6 +566,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de 3.er nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22084/45?lang=es"
   },
   {
@@ -429,6 +581,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de 3.er nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22085/46?lang=es"
   },
   {
@@ -440,6 +596,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de 3.er nivel (destino económico de los bienes)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22086/47?lang=es"
   },
   {
@@ -451,6 +611,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y divisiones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22088/48?lang=es"
   },
   {
@@ -462,6 +626,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y divisiones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22089/50?lang=es"
   },
   {
@@ -473,6 +641,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y divisiones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22090/52?lang=es"
   },
   {
@@ -484,6 +656,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y divisiones de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22091/54?lang=es"
   },
   {
@@ -495,6 +671,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22092/49?lang=es"
   },
   {
@@ -506,6 +686,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22093/51?lang=es"
   },
   {
@@ -517,6 +701,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por países, medio de transporte y grupos de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22094/53?lang=es"
   },
   {
@@ -528,6 +716,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comercio con el extranjero",
       "node": "Exportaciones e importaciones. Por continentes y áreas geográficas, medio de transporte y grupos de actividad económica (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22095/55?lang=es"
   }
 ];

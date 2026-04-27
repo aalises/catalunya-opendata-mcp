@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Oferta. Dades corregides d'estacionalitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13077/15840?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Oferta. Dades corregides d'estacionalitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13078/15842?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Oferta. Dades brutes. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13080/15844?lang=ca"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Oferta. Dades brutes. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/13081/15849?lang=ca"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Oferta. Dades corregides d'estacionalitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21129/24938?lang=ca"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Oferta. Dades corregides d'estacionalitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21130/24940?lang=ca"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Oferta. Dades brutes. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21132/24942?lang=ca"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Oferta. Dades brutes. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21133/24944?lang=ca"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades corregides d'estacionalitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21651/15841?lang=ca"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades corregides d'estacionalitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21652/24939?lang=ca"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Demanda. Dades corregides d'estacionalitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21653/15843?lang=ca"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut en volum. Demanda. Dades corregides d'estacionalitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21654/24941?lang=ca"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades brutes. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21655/15845?lang=ca"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades brutes. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21656/24943?lang=ca"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades brutes. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21657/15850?lang=ca"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptabilitat trimestral",
       "node": "Producte interior brut a preus corrents. Demanda. Dades brutes. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibt/21658/24945?lang=ca"
   }
 ];

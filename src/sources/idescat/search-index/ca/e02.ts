@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per grups d'edat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21984/26136?lang=ca"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per nacionalitat i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21985/26137?lang=ca"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per tipus de jornada i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21986/26140?lang=ca"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per tipus de contracte i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21987/26138?lang=ca"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per branca d'activitat econòmica i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21989/26141?lang=ca"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salaris territorial",
       "node": "Ingressos salarials bruts. Per grup de cotització i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21990/26142?lang=ca"
   }
 ];

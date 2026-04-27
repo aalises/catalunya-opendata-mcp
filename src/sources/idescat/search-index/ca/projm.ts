@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per escenari (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16137/19440?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe. Escenari baix (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16139/19441?lang=ca"
   },
   {
@@ -33,6 +47,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat. Escenari baix (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16140/19442?lang=ca"
   },
   {
@@ -44,6 +61,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat quinquennal. Escenari baix (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16141/19443?lang=ca"
   },
   {
@@ -55,6 +75,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i grans grups d'edat. Escenari baix (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16142/19478?lang=ca"
   },
   {
@@ -66,6 +93,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe. Escenari mitjà (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16144/19445?lang=ca"
   },
   {
@@ -77,6 +111,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat. Escenari mitjà (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16145/19446?lang=ca"
   },
   {
@@ -88,6 +125,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat quinquennal. Escenari mitjà (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16146/19447?lang=ca"
   },
   {
@@ -99,6 +139,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i grans grups d'edat. Escenari mitjà (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16147/19479?lang=ca"
   },
   {
@@ -110,6 +157,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe. Escenari alt (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16149/19449?lang=ca"
   },
   {
@@ -121,6 +175,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat. Escenari alt (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16150/19450?lang=ca"
   },
   {
@@ -132,6 +189,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i edat quinquennal. Escenari alt (base padró 2021)"
     },
+    "geo_ids": [
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16151/19451?lang=ca"
   },
   {
@@ -143,6 +203,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per sexe i grans grups d'edat. Escenari alt (base padró 2021)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16152/19480?lang=ca"
   },
   {
@@ -154,6 +221,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Components del creixement demogràfic projectat (base padró 2021). Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16154/19453?lang=ca"
   },
   {
@@ -165,6 +239,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Components del creixement demogràfic projectat (base padró 2021). Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16155/19454?lang=ca"
   },
   {
@@ -176,6 +257,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Components del creixement demogràfic projectat (base padró 2021). Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16156/19455?lang=ca"
   },
   {
@@ -187,6 +275,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població municipals",
       "node": "Població projectada per escenari i grau d'urbanització (base padró 2021)"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projm/16236/19595?lang=ca"
   }
 ];

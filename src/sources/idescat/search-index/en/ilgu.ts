@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/16935/20285?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/16936/20280?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17009/20434?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17010/20435?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex, age groups and type of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17055/20800?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex, nationality and type of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17056/20801?lang=en"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary subfield, type of employment relationship and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17058/23170?lang=en"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary field, type of employment relationship and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17059/20986?lang=en"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17066/20805?lang=en"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17067/20807?lang=en"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17074/20981?lang=en"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex and branch of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17100/20541?lang=en"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and branch of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17181/20815?lang=en"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for the total number of university graduates. By sex, age groups and type of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17184/20795?lang=en"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for the total number of university graduates. By sex, nationality and type of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17185/20796?lang=en"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for the total number of university graduates. By disciplinary field, type of employment relationship and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17186/23154?lang=en"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17235/23106?lang=en"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Comparison of first employment relationship characteristics for university graduates who were unemployed in the moment of graduating. By sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17243/20932?lang=en"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex and sector of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17254/20660?lang=en"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and sector of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17255/20813?lang=en"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex and whether they are pursuing new studies in the following school year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17418/20915?lang=en"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17474/23160?lang=en"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17901/21448?lang=en"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17902/21449?lang=en"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By sex and sector of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17906/21452?lang=en"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By sex and branch of economic activity"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17907/21453?lang=en"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17908/23145?lang=en"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Main indicators. By sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17981/21502?lang=en"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Main indicators. By age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17982/21503?lang=en"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Main indicators. By nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17983/21504?lang=en"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Main indicators. By disciplinary field"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17987/23090?lang=en"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20621/23078?lang=en"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20629/23108?lang=en"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Main indicators. By disciplinary subfield"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20633/23118?lang=en"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20635/23147?lang=en"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Days elapsed until finding the first employment relationship for the total number of university graduates. By disciplinary subfield, type of employment relationship and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20637/23156?lang=en"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20640/23162?lang=en"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By sex, place of residence and degree of urbanisation in the graduation year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20853/24716?lang=en"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20880/24741?lang=en"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20881/24742?lang=en"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20903/24769?lang=en"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20904/24768?lang=en"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20929/24781?lang=en"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20930/24782?lang=en"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20931/24783?lang=en"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20932/24784?lang=en"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary field, place of residence and degree of urbanisation in the graduation year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20971/24819?lang=en"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary subfield, place of residence and degree of urbanisation in the graduation year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20972/24820?lang=en"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By age groups, place of residence and degree of urbanisation in the graduation year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20975/24826?lang=en"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By nationality, place of residence and degree of urbanisation in the graduation year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20977/24828?lang=en"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Monitoring of place of residence and degree of urbanisation of university graduates from the graduation year to five years after graduation. By sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20986/24845?lang=en"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Comparison of first employment relationship characteristics for the total number of university graduates. By sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21126/24937?lang=en"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By disciplinary field, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21204/25043?lang=en"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By age groups, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21205/25044?lang=en"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By nationality, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21208/25047?lang=en"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By sex, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21209/25048?lang=en"
   },
   {
@@ -627,6 +795,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21225/25066?lang=en"
   },
   {
@@ -638,6 +809,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "University graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21228/25069?lang=en"
   },
   {
@@ -649,6 +823,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of university graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21250/25093?lang=en"
   },
   {
@@ -660,6 +837,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Salaried degree of the first employment relationship for the total number of university graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21258/25103?lang=en"
   },
   {
@@ -671,6 +851,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21303/25163?lang=en"
   },
   {
@@ -682,6 +865,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21306/25166?lang=en"
   },
   {
@@ -693,6 +879,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21307/25167?lang=en"
   },
   {
@@ -704,6 +893,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21308/25168?lang=en"
   },
   {
@@ -715,6 +907,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By disciplinary field, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21309/25169?lang=en"
   },
   {
@@ -726,6 +921,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21310/25170?lang=en"
   },
   {
@@ -737,6 +935,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21311/25171?lang=en"
   },
   {
@@ -748,6 +949,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21312/25172?lang=en"
   },
   {
@@ -759,6 +963,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By sex and place of residence"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21313/25173?lang=en"
   },
   {
@@ -770,6 +977,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By sex, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21314/25174?lang=en"
   },
   {
@@ -781,6 +991,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By sex and whether they are pursuing new studies in the following school year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21315/25175?lang=en"
   },
   {
@@ -792,6 +1005,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By age groups, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21316/25176?lang=en"
   },
   {
@@ -803,6 +1019,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates. By nationality, place of residence and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21319/25179?lang=en"
   },
   {
@@ -814,6 +1033,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21321/25181?lang=en"
   },
   {
@@ -825,6 +1047,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21323/25183?lang=en"
   },
   {
@@ -836,6 +1061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21325/25185?lang=en"
   },
   {
@@ -847,6 +1075,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21326/25186?lang=en"
   },
   {
@@ -858,6 +1089,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By disciplinary field and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21327/25187?lang=en"
   },
   {
@@ -869,6 +1103,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By field of study"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21328/25188?lang=en"
   },
   {
@@ -880,6 +1117,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21329/25189?lang=en"
   },
   {
@@ -891,6 +1131,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21330/25190?lang=en"
   },
   {
@@ -902,6 +1145,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By sex and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21331/25191?lang=en"
   },
   {
@@ -913,6 +1159,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By sex and whether they are pursuing new studies in the following school year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21332/25192?lang=en"
   },
   {
@@ -924,6 +1173,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By age groups and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21333/25193?lang=en"
   },
   {
@@ -935,6 +1187,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Employability rates of university graduates residing in Catalonia at different times. By nationality and degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21336/25196?lang=en"
   },
   {
@@ -946,6 +1201,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21338/25198?lang=en"
   },
   {
@@ -957,6 +1215,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By disciplinary field and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21339/25199?lang=en"
   },
   {
@@ -968,6 +1229,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By disciplinary field and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21340/25200?lang=en"
   },
   {
@@ -979,6 +1243,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21341/25201?lang=en"
   },
   {
@@ -990,6 +1257,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21343/25203?lang=en"
   },
   {
@@ -1001,6 +1271,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21344/25204?lang=en"
   },
   {
@@ -1012,6 +1285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of university graduates. By sex and whether they are pursuing new studies in the following school year"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21345/25205?lang=en"
   },
   {
@@ -1023,6 +1299,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for the total number of university graduates. By disciplinary field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21347/25207?lang=en"
   },
   {
@@ -1034,6 +1313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for the total number of university graduates. By disciplinary subfield and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21348/25208?lang=en"
   },
   {
@@ -1045,6 +1327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for the total number of university graduates. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21349/25209?lang=en"
   },
   {
@@ -1056,6 +1341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for the total number of university graduates. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21350/25210?lang=en"
   },
   {
@@ -1067,6 +1355,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinar field and sex"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21351/25211?lang=en"
   },
   {
@@ -1078,6 +1369,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for university graduates who were unemployed in the moment of graduating. By disciplinar subfield"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21353/25213?lang=en"
   },
   {
@@ -1089,6 +1383,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and age groups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21354/25214?lang=en"
   },
   {
@@ -1100,6 +1397,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on the Employability of University Graduates",
       "node": "Levels of part-time work, temporary contracts and level of adequacy to degree's qualification of the first employment relationship for university graduates who were unemployed in the moment of graduating. By sex and nationality"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21355/25215?lang=en"
   }
 ];

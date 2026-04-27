@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con establecimientos en Cataluña a 1 de enero. Por sector, rama de actividad económica y número de asalariados de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20907/24699?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con establecimientos en Cataluña a 1 de enero. Por sector, rama de actividad económica y forma jurídica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20908/24700?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con establecimientos en Cataluña a 1 de enero. Por grupo de actividad económica y número de asalariados de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20910/24701?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con establecimientos en Cataluña a 1 de enero. Por grupo de actividad económica y forma jurídica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20911/24702?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con sede social en Cataluña a 1 de enero. Por sector, rama de actividad económica y número de asalariados de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20920/24703?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con sede social en Cataluña a 1 de enero. Por sector, rama de actividad económica y forma jurídica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20921/24704?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con sede social en Cataluña a 1 de enero. Por grupo de actividad económica y número de asalariados de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20923/24705?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Empresas con sede social en Cataluña a 1 de enero. Por grupo de actividad económica y forma jurídica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20924/24706?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Establecimientos en Cataluña a 1 de enero. Por sector, rama de actividad económica y número de asalariados del establecimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20926/21576?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Empresas y establecimientos",
       "node": "Establecimientos en Cataluña a 1 de enero. Por grupo de actividad económica y número de asalariados del establecimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20927/21577?lang=es"
   }
 ];

@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25005?lang=es"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25007?lang=es"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25008?lang=es"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25009?lang=es"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25011?lang=es"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25012?lang=es"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25013?lang=es"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/25015?lang=es"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21174/26683?lang=es"
   },
   {
@@ -110,6 +146,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por continente de residencia y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25006?lang=es"
   },
   {
@@ -121,6 +164,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por continente de residencia y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/21175/25016?lang=es"
   },
   {
@@ -132,6 +179,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por continente de residencia, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3471/3608?lang=es"
   },
   {
@@ -143,6 +197,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por continente de residencia y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3473/3613?lang=es"
   },
   {
@@ -154,6 +215,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3697/3577?lang=es"
   },
   {
@@ -165,6 +233,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10165?lang=es"
   },
   {
@@ -176,6 +251,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/10501?lang=es"
   },
   {
@@ -187,6 +269,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/11505?lang=es"
   },
   {
@@ -198,6 +287,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/14111?lang=es"
   },
   {
@@ -209,6 +305,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15012?lang=es"
   },
   {
@@ -220,6 +323,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/15673?lang=es"
   },
   {
@@ -231,6 +341,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/19894?lang=es"
   },
   {
@@ -242,6 +359,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/21194?lang=es"
   },
   {
@@ -253,6 +377,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/24946?lang=es"
   },
   {
@@ -264,6 +395,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/26680?lang=es"
   },
   {
@@ -275,6 +413,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4767?lang=es"
   },
   {
@@ -286,6 +431,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4768?lang=es"
   },
   {
@@ -297,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/4769?lang=es"
   },
   {
@@ -308,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/5439?lang=es"
   },
   {
@@ -319,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/6216?lang=es"
   },
   {
@@ -330,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/7013?lang=es"
   },
   {
@@ -341,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8140?lang=es"
   },
   {
@@ -352,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3698/8513?lang=es"
   },
   {
@@ -363,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por continente de residencia y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/3737/3624?lang=es"
   },
   {
@@ -374,6 +575,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/6274/6277?lang=es"
   },
   {
@@ -385,6 +593,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7037/6956?lang=es"
   },
   {
@@ -396,6 +611,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por edad en grandes grupos"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7399/7246?lang=es"
   },
   {
@@ -407,6 +629,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7400/7251?lang=es"
   },
   {
@@ -418,6 +647,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por continente de residencia y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7401/7287?lang=es"
   },
   {
@@ -429,6 +665,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10164?lang=es"
   },
   {
@@ -440,6 +680,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/10503?lang=es"
   },
   {
@@ -451,6 +695,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/11502?lang=es"
   },
   {
@@ -462,6 +710,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15014?lang=es"
   },
   {
@@ -473,6 +725,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/15683?lang=es"
   },
   {
@@ -484,6 +740,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/21204?lang=es"
   },
   {
@@ -495,6 +755,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/24948?lang=es"
   },
   {
@@ -506,6 +770,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/26682?lang=es"
   },
   {
@@ -517,6 +785,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Nuevas inscripciones de población residente en el extranjero. Por país de residencia (1.000 residentes o más) y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/7402/7465?lang=es"
   },
   {
@@ -528,6 +800,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10166?lang=es"
   },
   {
@@ -539,6 +818,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/10502?lang=es"
   },
   {
@@ -550,6 +836,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/11504?lang=es"
   },
   {
@@ -561,6 +854,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/14113?lang=es"
   },
   {
@@ -572,6 +872,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15013?lang=es"
   },
   {
@@ -583,6 +890,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/15674?lang=es"
   },
   {
@@ -594,6 +908,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/19895?lang=es"
   },
   {
@@ -605,6 +926,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/21196?lang=es"
   },
   {
@@ -616,6 +944,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/24947?lang=es"
   },
   {
@@ -627,6 +962,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/26681?lang=es"
   },
   {
@@ -638,6 +980,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8584?lang=es"
   },
   {
@@ -649,6 +998,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8585?lang=es"
   },
   {
@@ -660,6 +1016,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8586?lang=es"
   },
   {
@@ -671,6 +1034,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8587?lang=es"
   },
   {
@@ -682,6 +1052,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8588?lang=es"
   },
   {
@@ -693,6 +1070,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8589?lang=es"
   },
   {
@@ -704,6 +1088,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8590?lang=es"
   },
   {
@@ -715,6 +1106,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón de habitantes residentes en el extranjero",
       "node": "Población residente en el extranjero. Por país de residencia (500 residentes o más) y lugar de nacimiento (agregado)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/phre/8544/8591?lang=es"
   }
 ];

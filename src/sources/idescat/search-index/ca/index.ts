@@ -36,6 +36,6 @@ import entries_rfdbc from "./rfdbc.js";
 const entries: IdescatSearchIndexEntry[] = [...entries_afi, ...entries_afic, ...entries_censph, ...entries_ceph, ...entries_comest, ...entries_comtec, ...entries_covid, ...entries_degurba, ...entries_e01, ...entries_e02, ...entries_e03, ...entries_ecl, ...entries_ee, ...entries_eep, ...entries_ep, ...entries_eulp, ...entries_eut, ...entries_fee, ...entries_ilgu, ...entries_irpf, ...entries_ispat, ...entries_ist, ...entries_phre, ...entries_piba, ...entries_pibc, ...entries_pibt, ...entries_pmh, ...entries_proj, ...entries_projl, ...entries_projm, ...entries_projpa, ...entries_rfdbc];
 
 export default entries;
-export const generatedAt = "2026-04-26T17:33:08.557Z";
-export const indexVersion = "generated-2026-04-26";
+export const generatedAt = "2026-04-27T06:51:54.841Z";
+export const indexVersion = "generated-2026-04-27";
 export const sourceCollectionUrls = ["https://api.idescat.cat/taules/v2?lang=ca"];

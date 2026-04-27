@@ -11,6 +11,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By level of education attained and sex"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/13825/15351?lang=en"
   },
   {
@@ -22,6 +30,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By level of education attained, five year age group and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/13827/15353?lang=en"
   },
   {
@@ -33,6 +48,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By level of education attained and nationality"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14492/15356?lang=en"
   },
   {
@@ -44,6 +67,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By level of education attained, nationality and sex"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14493/15357?lang=en"
   },
   {
@@ -55,6 +86,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By extended levels of education attained and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14494/15332?lang=en"
   },
   {
@@ -66,6 +104,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By extended levels of education attained, five year age group and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14496/15359?lang=en"
   },
   {
@@ -77,6 +122,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 15 or over. By extended levels of education attained, nationality and sex"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14500/15363?lang=en"
   },
   {
@@ -88,6 +140,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population from 25 to 64 years. By level of education attained and sex"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14791/15681?lang=en"
   },
   {
@@ -99,6 +159,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Total Population aged 25-64 with only primary or lower education"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16209/19482?lang=en"
   },
   {
@@ -110,6 +178,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 25-64 with at least second stage of secondary education"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16210/19483?lang=en"
   },
   {
@@ -121,6 +197,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Educational Attainment Statistics",
       "node": "Population aged 25-64 with higher education"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16211/19484?lang=en"
   }
 ];

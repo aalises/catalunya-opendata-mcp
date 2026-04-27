@@ -11,6 +11,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16500/19995?lang=es"
   },
   {
@@ -22,6 +27,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16501/19996?lang=es"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16502/19997?lang=es"
   },
   {
@@ -44,6 +56,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, edad en grandes grupos y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16503/19998?lang=es"
   },
   {
@@ -55,6 +72,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16504/19999?lang=es"
   },
   {
@@ -66,6 +88,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16505/20000?lang=es"
   },
   {
@@ -77,6 +102,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16506/20001?lang=es"
   },
   {
@@ -88,6 +118,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16507/20002?lang=es"
   },
   {
@@ -99,6 +132,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por conocimiento del catalán, nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16508/20003?lang=es"
   },
   {
@@ -110,6 +148,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por conocimiento del catalán, nivel de formación alcanzado y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16509/20004?lang=es"
   },
   {
@@ -121,6 +163,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16510/20005?lang=es"
   },
   {
@@ -132,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16511/20006?lang=es"
   },
   {
@@ -143,6 +193,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16512/20007?lang=es"
   },
   {
@@ -154,6 +208,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, edad en grandes grupos y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16513/20008?lang=es"
   },
   {
@@ -165,6 +224,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16514/20009?lang=es"
   },
   {
@@ -176,6 +240,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16515/20010?lang=es"
   },
   {
@@ -187,6 +254,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16516/20011?lang=es"
   },
   {
@@ -198,6 +270,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16517/20012?lang=es"
   },
   {
@@ -209,6 +284,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por ámbito y frecuencia de uso del catalán, nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16518/20013?lang=es"
   },
   {
@@ -220,6 +300,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16519/20014?lang=es"
   },
   {
@@ -231,6 +316,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16520/20015?lang=es"
   },
   {
@@ -242,6 +330,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16521/20016?lang=es"
   },
   {
@@ -253,6 +345,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, edad en grandes grupos y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16522/20017?lang=es"
   },
   {
@@ -264,6 +361,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16523/20018?lang=es"
   },
   {
@@ -275,6 +377,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16524/20019?lang=es"
   },
   {
@@ -286,6 +391,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16525/20020?lang=es"
   },
   {
@@ -297,6 +407,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del castellano, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16526/20021?lang=es"
   },
   {
@@ -308,6 +421,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por conocimiento del castellano, nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16527/20022?lang=es"
   },
   {
@@ -319,6 +437,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por conocimiento del castellano, nivel de formación alcanzado y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16528/20023?lang=es"
   },
   {
@@ -330,6 +452,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16529/20024?lang=es"
   },
   {
@@ -341,6 +468,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16530/20025?lang=es"
   },
   {
@@ -352,6 +482,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16531/20026?lang=es"
   },
   {
@@ -363,6 +497,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, edad en grandes grupos y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16532/20027?lang=es"
   },
   {
@@ -374,6 +513,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16533/20028?lang=es"
   },
   {
@@ -385,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16534/20029?lang=es"
   },
   {
@@ -396,6 +543,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16535/20030?lang=es"
   },
   {
@@ -407,6 +559,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del castellano, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16536/20031?lang=es"
   },
   {
@@ -418,6 +573,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por ámbito y frecuencia de uso del castellano, nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16537/20032?lang=es"
   },
   {
@@ -429,6 +589,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16553/20033?lang=es"
   },
   {
@@ -440,6 +605,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16554/20034?lang=es"
   },
   {
@@ -451,6 +619,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16556/20035?lang=es"
   },
   {
@@ -462,6 +633,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16557/20036?lang=es"
   },
   {
@@ -473,6 +647,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16559/20061?lang=es"
   },
   {
@@ -484,6 +661,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del inglés, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16560/20062?lang=es"
   },
   {
@@ -495,6 +675,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16561/20039?lang=es"
   },
   {
@@ -506,6 +691,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16562/20040?lang=es"
   },
   {
@@ -517,6 +705,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16564/20041?lang=es"
   },
   {
@@ -528,6 +719,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16565/20042?lang=es"
   },
   {
@@ -539,6 +733,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16567/20063?lang=es"
   },
   {
@@ -550,6 +747,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del francés, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16568/20064?lang=es"
   },
   {
@@ -561,6 +761,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16569/20045?lang=es"
   },
   {
@@ -572,6 +775,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16570/20046?lang=es"
   },
   {
@@ -583,6 +789,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16572/20047?lang=es"
   },
   {
@@ -594,6 +803,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16573/20048?lang=es"
   },
   {
@@ -605,6 +817,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16575/20065?lang=es"
   },
   {
@@ -616,6 +831,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del árabe, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16576/20066?lang=es"
   },
   {
@@ -627,6 +845,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16577/20051?lang=es"
   },
   {
@@ -638,6 +859,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16578/20052?lang=es"
   },
   {
@@ -649,6 +873,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16580/20053?lang=es"
   },
   {
@@ -660,6 +887,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16581/20054?lang=es"
   },
   {
@@ -671,6 +901,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16583/20067?lang=es"
   },
   {
@@ -682,6 +915,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del italiano, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16584/20068?lang=es"
   },
   {
@@ -693,6 +929,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16585/20057?lang=es"
   },
   {
@@ -704,6 +943,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16586/20058?lang=es"
   },
   {
@@ -715,6 +957,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16588/20059?lang=es"
   },
   {
@@ -726,6 +971,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16589/20060?lang=es"
   },
   {
@@ -737,6 +985,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16591/20069?lang=es"
   },
   {
@@ -748,6 +999,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del alemán, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16592/20070?lang=es"
   },
   {
@@ -759,6 +1013,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16593/20071?lang=es"
   },
   {
@@ -770,6 +1029,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16594/20072?lang=es"
   },
   {
@@ -781,6 +1043,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16596/20073?lang=es"
   },
   {
@@ -792,6 +1057,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16597/20074?lang=es"
   },
   {
@@ -803,6 +1071,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16599/20075?lang=es"
   },
   {
@@ -814,6 +1085,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del inglés, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16600/20076?lang=es"
   },
   {
@@ -825,6 +1099,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16601/20077?lang=es"
   },
   {
@@ -836,6 +1115,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés, edad quinquenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16602/20078?lang=es"
   },
   {
@@ -847,6 +1129,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16604/20079?lang=es"
   },
   {
@@ -858,6 +1143,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16605/20080?lang=es"
   },
   {
@@ -869,6 +1157,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16607/20081?lang=es"
   },
   {
@@ -880,6 +1171,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del francés, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16608/20082?lang=es"
   },
   {
@@ -891,6 +1185,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16609/20083?lang=es"
   },
   {
@@ -902,6 +1199,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16610/20084?lang=es"
   },
   {
@@ -913,6 +1213,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16612/20085?lang=es"
   },
   {
@@ -924,6 +1227,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16613/20086?lang=es"
   },
   {
@@ -935,6 +1241,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16615/20087?lang=es"
   },
   {
@@ -946,6 +1255,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del árabe, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16616/20088?lang=es"
   },
   {
@@ -957,6 +1269,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16617/20089?lang=es"
   },
   {
@@ -968,6 +1283,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16618/20090?lang=es"
   },
   {
@@ -979,6 +1297,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16620/20091?lang=es"
   },
   {
@@ -990,6 +1311,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16621/20092?lang=es"
   },
   {
@@ -1001,6 +1325,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16623/20093?lang=es"
   },
   {
@@ -1012,6 +1339,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del italiano, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16624/20094?lang=es"
   },
   {
@@ -1023,6 +1353,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16625/20095?lang=es"
   },
   {
@@ -1034,6 +1367,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16626/20096?lang=es"
   },
   {
@@ -1045,6 +1381,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16628/20097?lang=es"
   },
   {
@@ -1056,6 +1395,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16629/20098?lang=es"
   },
   {
@@ -1067,6 +1409,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16631/20099?lang=es"
   },
   {
@@ -1078,6 +1423,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del alemán, lugar de nacimiento y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16632/20100?lang=es"
   },
   {
@@ -1089,6 +1437,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial y sexo. Respuesta múltiple"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16638/20106?lang=es"
   },
   {
@@ -1100,6 +1451,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16639/20107?lang=es"
   },
   {
@@ -1111,6 +1467,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial, edad decenal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16640/20108?lang=es"
   },
   {
@@ -1122,6 +1483,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16642/20109?lang=es"
   },
   {
@@ -1133,6 +1498,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16643/20110?lang=es"
   },
   {
@@ -1144,6 +1513,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16645/20111?lang=es"
   },
   {
@@ -1155,6 +1528,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial, lugar de nacimiento y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16646/20112?lang=es"
   },
   {
@@ -1166,6 +1543,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16648/20113?lang=es"
   },
   {
@@ -1177,6 +1559,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16650/20114?lang=es"
   },
   {
@@ -1188,6 +1573,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16651/20115?lang=es"
   },
   {
@@ -1199,6 +1588,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16653/20116?lang=es"
   },
   {
@@ -1210,6 +1603,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, nacionalidad y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16654/20117?lang=es"
   },
   {
@@ -1221,6 +1617,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16656/20118?lang=es"
   },
   {
@@ -1232,6 +1632,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por número de lenguas iniciales, lugar de nacimiento y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16657/20119?lang=es"
   },
   {
@@ -1243,6 +1646,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 15 años o más. Por número de lenguas iniciales, nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16658/20120?lang=es"
   },
   {
@@ -1254,6 +1662,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, lengua inicial y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16668/20139?lang=es"
   },
   {
@@ -1265,6 +1676,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán, lengua inicial y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16669/20140?lang=es"
   },
   {
@@ -1276,6 +1690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, lengua inicial y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16671/20141?lang=es"
   },
   {
@@ -1287,6 +1704,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán, lengua inicial y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16672/20142?lang=es"
   },
   {
@@ -1298,6 +1718,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por conocimiento del catalán y sexo (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16673/20143?lang=es"
   },
   {
@@ -1309,6 +1734,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por ámbito y frecuencia de uso del catalán y sexo (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16674/20144?lang=es"
   },
   {
@@ -1320,6 +1750,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 2 años o más. Por lengua inicial y sexo (%)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16675/20145?lang=es"
   },
   {
@@ -1331,6 +1766,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16713/20346?lang=es"
   },
   {
@@ -1342,6 +1782,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16714/20347?lang=es"
   },
   {
@@ -1353,6 +1798,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por adaptación funcional a la gente mayor y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16715/20299?lang=es"
   },
   {
@@ -1364,6 +1814,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16716/20348?lang=es"
   },
   {
@@ -1375,6 +1830,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por adaptación funcional a la gente mayor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16717/20373?lang=es"
   },
   {
@@ -1386,6 +1846,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por régimen de tenencia"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16784/20258?lang=es"
   },
   {
@@ -1397,6 +1862,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por régimen de tenencia y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16785/20259?lang=es"
   },
   {
@@ -1408,6 +1878,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por régimen de tenencia e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16786/20260?lang=es"
   },
   {
@@ -1419,6 +1894,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por régimen de tenencia y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16787/20261?lang=es"
   },
   {
@@ -1430,6 +1908,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16788/20269?lang=es"
   },
   {
@@ -1441,6 +1924,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por año de construcción y régimen de tenencia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16789/20263?lang=es"
   },
   {
@@ -1452,6 +1938,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por año de construcción y número de dormitorios"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16790/20264?lang=es"
   },
   {
@@ -1463,6 +1953,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por año de construcción y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16791/20265?lang=es"
   },
   {
@@ -1474,6 +1968,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por año de construcción y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16792/20266?lang=es"
   },
   {
@@ -1485,6 +1982,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16793/20268?lang=es"
   },
   {
@@ -1496,6 +1998,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil y régimen de tenencia"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16794/20271?lang=es"
   },
   {
@@ -1507,6 +2014,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16795/20272?lang=es"
   },
   {
@@ -1518,6 +2030,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil y nacionalidad de miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16796/20273?lang=es"
   },
   {
@@ -1529,6 +2045,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16797/20274?lang=es"
   },
   {
@@ -1540,6 +2061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por superficie útil y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16798/20275?lang=es"
   },
   {
@@ -1551,6 +2075,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16799/20276?lang=es"
   },
   {
@@ -1562,6 +2091,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16800/20277?lang=es"
   },
   {
@@ -1573,6 +2106,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16801/20279?lang=es"
   },
   {
@@ -1584,6 +2121,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios y superficie útil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16802/20281?lang=es"
   },
   {
@@ -1595,6 +2136,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16803/20283?lang=es"
   },
   {
@@ -1606,6 +2151,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16804/20297?lang=es"
   },
   {
@@ -1617,6 +2166,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de dormitorios y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16805/20286?lang=es"
   },
   {
@@ -1628,6 +2180,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por adaptación funcional a la gente mayor y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16815/20300?lang=es"
   },
   {
@@ -1639,6 +2194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas de aislamiento y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16816/20302?lang=es"
   },
   {
@@ -1650,6 +2210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas de aislamiento y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16817/20303?lang=es"
   },
   {
@@ -1661,6 +2226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas de aislamiento y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16818/20304?lang=es"
   },
   {
@@ -1672,6 +2240,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de calefacción y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16819/20306?lang=es"
   },
   {
@@ -1683,6 +2255,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de calefacción y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16820/20307?lang=es"
   },
   {
@@ -1694,6 +2270,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de calefacción e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16821/20308?lang=es"
   },
   {
@@ -1705,6 +2285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de calefacción y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16822/20309?lang=es"
   },
   {
@@ -1716,6 +2299,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de combustible de la calefacción y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16823/20311?lang=es"
   },
   {
@@ -1727,6 +2314,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de combustible de la calefacción y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16824/20312?lang=es"
   },
   {
@@ -1738,6 +2329,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de combustible de la calefacción e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16825/20313?lang=es"
   },
   {
@@ -1749,6 +2344,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de combustible de la calefacción y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16826/20314?lang=es"
   },
   {
@@ -1760,6 +2358,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de suministro de agua corriente y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16827/20316?lang=es"
   },
   {
@@ -1771,6 +2373,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de suministro de agua corriente y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16828/20318?lang=es"
   },
   {
@@ -1782,6 +2388,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de suministro de agua corriente y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16829/20320?lang=es"
   },
   {
@@ -1793,6 +2402,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por sistema de refrigeración y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16830/20323?lang=es"
   },
   {
@@ -1804,6 +2418,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por sistema de refrigeración y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16831/20324?lang=es"
   },
   {
@@ -1815,6 +2434,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por sistema de refrigeración e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16832/20325?lang=es"
   },
   {
@@ -1826,6 +2450,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por sistema de refrigeración y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16833/20326?lang=es"
   },
   {
@@ -1837,6 +2464,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16834/20349?lang=es"
   },
   {
@@ -1848,6 +2480,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16835/20350?lang=es"
   },
   {
@@ -1859,6 +2494,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por electrodomésticos e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16836/20338?lang=es"
   },
   {
@@ -1870,6 +2509,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por electrodomésticos y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16837/20339?lang=es"
   },
   {
@@ -1881,6 +2524,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por electrodomésticos y superficie útil"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16838/20340?lang=es"
   },
   {
@@ -1892,6 +2539,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por electrodomésticos y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16839/20341?lang=es"
   },
   {
@@ -1903,6 +2553,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de bombillas e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16840/20343?lang=es"
   },
   {
@@ -1914,6 +2569,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de bombillas y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16841/20344?lang=es"
   },
   {
@@ -1925,6 +2583,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por dispositivo de energía renovable instalado"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16848/20366?lang=es"
   },
   {
@@ -1936,6 +2599,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16858/20841?lang=es"
   },
   {
@@ -1947,6 +2615,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tamaño del hogar y del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16859/20842?lang=es"
   },
   {
@@ -1958,6 +2629,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por infraestructuras y servicios en el entorno y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16860/20352?lang=es"
   },
   {
@@ -1969,6 +2644,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por infraestructuras y servicios en el entorno y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16861/20353?lang=es"
   },
   {
@@ -1980,6 +2659,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por infraestructuras y servicios en el entorno e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16862/20354?lang=es"
   },
   {
@@ -1991,6 +2674,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por infraestructuras y servicios en el entorno y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16863/20355?lang=es"
   },
   {
@@ -2002,6 +2688,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por infraestructuras y servicios en el entorno"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16864/20351?lang=es"
   },
   {
@@ -2013,6 +2704,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Tamaño medio del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16865/20843?lang=es"
   },
   {
@@ -2024,6 +2719,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número y tipo de núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16866/20844?lang=es"
   },
   {
@@ -2035,6 +2735,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número y tipo de núcleo (agregado)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16867/20845?lang=es"
   },
   {
@@ -2046,6 +2751,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número y tipo de núcleo y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16868/20846?lang=es"
   },
   {
@@ -2057,6 +2766,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número y tipo de núcleo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16869/20847?lang=es"
   },
   {
@@ -2068,6 +2780,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares con al menos un núcleo. Por tipo de hogar y número de hijos en el hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16870/20848?lang=es"
   },
   {
@@ -2079,6 +2796,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares con al menos un núcleo. Por tipo de hogar y número de hijos menores de 25 años en el hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16871/20849?lang=es"
   },
   {
@@ -2090,6 +2812,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares con al menos un núcleo. Por tipo de hogar y número de hijos menores de 16 años en el hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16872/20850?lang=es"
   },
   {
@@ -2101,6 +2828,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población que vive en el hogar. Por tipo de hogar y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16873/20851?lang=es"
   },
   {
@@ -2112,6 +2844,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población que vive en el hogar. Por posición en el hogar, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16874/20852?lang=es"
   },
   {
@@ -2123,6 +2860,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hijos en el hogar. Por tipo de hogar y grupos de edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16875/20853?lang=es"
   },
   {
@@ -2134,6 +2876,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16877/20611?lang=es"
   },
   {
@@ -2145,6 +2892,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16878/20681?lang=es"
   },
   {
@@ -2156,6 +2907,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por nacionalidad, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16879/20682?lang=es"
   },
   {
@@ -2167,6 +2922,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas en el entorno y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16880/20357?lang=es"
   },
   {
@@ -2178,6 +2938,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas en el entorno y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16881/20358?lang=es"
   },
   {
@@ -2189,6 +2954,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas en el entorno e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16882/20359?lang=es"
   },
   {
@@ -2200,6 +2970,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas en el entorno y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16883/20360?lang=es"
   },
   {
@@ -2211,6 +2984,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas en el entorno"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16884/20356?lang=es"
   },
   {
@@ -2222,6 +3000,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por estado civil y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16885/20683?lang=es"
   },
   {
@@ -2233,6 +3016,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por estado civil, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16886/20684?lang=es"
   },
   {
@@ -2244,6 +3031,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16887/20685?lang=es"
   },
   {
@@ -2255,6 +3047,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por nivel de formación alcanzado, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16888/20686?lang=es"
   },
   {
@@ -2266,6 +3062,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por situación laboral y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16889/20687?lang=es"
   },
   {
@@ -2277,6 +3078,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por situación laboral, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16890/20696?lang=es"
   },
   {
@@ -2288,6 +3093,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por ingresos netos mensuales del hogar y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16891/20697?lang=es"
   },
   {
@@ -2299,6 +3109,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por ingresos netos mensuales del hogar, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16892/20698?lang=es"
   },
   {
@@ -2310,6 +3124,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares unipersonales. Por régimen de tenencia de la vivienda principal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16893/20699?lang=es"
   },
   {
@@ -2321,6 +3140,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por estado de conservación y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16910/20288?lang=es"
   },
   {
@@ -2332,6 +3155,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por estado de conservación y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16911/20289?lang=es"
   },
   {
@@ -2343,6 +3170,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por estado de conservación e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16912/20290?lang=es"
   },
   {
@@ -2354,6 +3185,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por estado de conservación y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16913/20291?lang=es"
   },
   {
@@ -2365,6 +3199,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por accesibilidad y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16914/20293?lang=es"
   },
   {
@@ -2376,6 +3215,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por accesibilidad y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16915/20294?lang=es"
   },
   {
@@ -2387,6 +3231,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por accesibilidad e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16916/20295?lang=es"
   },
   {
@@ -2398,6 +3247,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por accesibilidad y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16917/20296?lang=es"
   },
   {
@@ -2409,6 +3261,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por instalaciones del edificio y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16921/20362?lang=es"
   },
   {
@@ -2420,6 +3277,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por instalaciones del edificio y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16922/20363?lang=es"
   },
   {
@@ -2431,6 +3293,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por instalaciones del edificio e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16923/20364?lang=es"
   },
   {
@@ -2442,6 +3309,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por instalaciones del edificio y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16924/20365?lang=es"
   },
   {
@@ -2453,6 +3323,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de plazas de garaje y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16925/20332?lang=es"
   },
   {
@@ -2464,6 +3338,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de plazas de garaje y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16926/20333?lang=es"
   },
   {
@@ -2475,6 +3353,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de plazas de garaje e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16927/20334?lang=es"
   },
   {
@@ -2486,6 +3368,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de plazas de garaje y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16928/20335?lang=es"
   },
   {
@@ -2497,6 +3382,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por dispositivo de energía renovable instalado y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16929/20367?lang=es"
   },
   {
@@ -2508,6 +3397,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por dispositivo de energía renovable instalado y año de construcción"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16930/20368?lang=es"
   },
   {
@@ -2519,6 +3412,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por dispositivo de energía renovable instalado e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16931/20369?lang=es"
   },
   {
@@ -2530,6 +3427,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por dispositivo de energía renovable instalado y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16932/20370?lang=es"
   },
   {
@@ -2541,6 +3441,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por estado de conservación"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16939/20287?lang=es"
   },
   {
@@ -2552,6 +3457,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por accesibilidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16940/20292?lang=es"
   },
   {
@@ -2563,6 +3473,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por adaptación funcional a la gente mayor y número de viviendas en el edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16943/20298?lang=es"
   },
   {
@@ -2574,6 +3489,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por instalaciones del edificio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16944/20361?lang=es"
   },
   {
@@ -2585,6 +3505,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por problemas de aislamiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16945/20301?lang=es"
   },
   {
@@ -2596,6 +3521,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de calefacción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16946/20305?lang=es"
   },
   {
@@ -2607,6 +3537,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de combustible de la calefacción"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16947/20310?lang=es"
   },
   {
@@ -2618,6 +3553,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de suministro de agua corriente"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16948/20315?lang=es"
   },
   {
@@ -2629,6 +3569,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por sistema de refrigeración"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16949/20322?lang=es"
   },
   {
@@ -2640,6 +3585,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de conexión a internet"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16950/20345?lang=es"
   },
   {
@@ -2651,6 +3601,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por electrodomésticos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16951/20337?lang=es"
   },
   {
@@ -2662,6 +3617,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por tipo de bombillas"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16952/20342?lang=es"
   },
   {
@@ -2673,6 +3633,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por número de plazas de garaje"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/16953/20327?lang=es"
   },
   {
@@ -2684,6 +3649,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Viviendas principales. Por disponibilidad de cocina independiente, aseo y baño"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17097/20516?lang=es"
   },
   {
@@ -2695,6 +3665,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Cónyuges. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17130/20704?lang=es"
   },
   {
@@ -2706,6 +3681,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por nacionalidad de los cónyuges"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17131/20705?lang=es"
   },
   {
@@ -2717,6 +3697,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17132/20706?lang=es"
   },
   {
@@ -2728,6 +3713,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos menores de 25 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17133/20707?lang=es"
   },
   {
@@ -2739,6 +3729,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos menores de 16 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17134/20708?lang=es"
   },
   {
@@ -2750,6 +3745,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17135/20709?lang=es"
   },
   {
@@ -2761,6 +3761,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17136/20710?lang=es"
   },
   {
@@ -2772,6 +3777,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos menores de 25 años en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17137/20711?lang=es"
   },
   {
@@ -2783,6 +3793,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por número de hijos menores de 16 años en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17138/20712?lang=es"
   },
   {
@@ -2794,6 +3809,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por diferencia de edad entre los cónyuges (de distinto sexo)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17139/20713?lang=es"
   },
   {
@@ -2805,6 +3825,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Cónyuges. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17140/20714?lang=es"
   },
   {
@@ -2816,6 +3841,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por nivel de formación conjunto"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17141/20715?lang=es"
   },
   {
@@ -2827,6 +3857,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Cónyuges. Por situación laboral, sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17142/20716?lang=es"
   },
   {
@@ -2838,6 +3873,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Matrimonios. Por situación laboral conjunta"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17143/20717?lang=es"
   },
   {
@@ -2849,6 +3889,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de las parejas de hecho. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17144/20718?lang=es"
   },
   {
@@ -2860,6 +3905,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por estado civil"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17145/20719?lang=es"
   },
   {
@@ -2871,6 +3921,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por nacionalidad de los miembros de la pareja"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17146/20720?lang=es"
   },
   {
@@ -2882,6 +3937,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17147/20721?lang=es"
   },
   {
@@ -2893,6 +3953,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos menores de 25 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17148/20722?lang=es"
   },
   {
@@ -2904,6 +3969,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos menores de 16 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17149/20723?lang=es"
   },
   {
@@ -2915,6 +3985,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17150/20724?lang=es"
   },
   {
@@ -2926,6 +4000,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos en el núcleo y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17151/20725?lang=es"
   },
   {
@@ -2937,6 +4015,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos menores de 25 años en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17152/20726?lang=es"
   },
   {
@@ -2948,6 +4030,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por número de hijos menores de 16 años en el núcleo e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17153/20727?lang=es"
   },
   {
@@ -2959,6 +4045,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por diferencia de edad entre los miembros de la pareja (de distinto sexo)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17154/20728?lang=es"
   },
   {
@@ -2970,6 +4061,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de las parejas de hecho. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17155/20729?lang=es"
   },
   {
@@ -2981,6 +4077,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por nivel de formación conjunto"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17156/20730?lang=es"
   },
   {
@@ -2992,6 +4093,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población en parejas de hecho. Por situación laboral, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17157/20731?lang=es"
   },
   {
@@ -3003,6 +4107,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas de hecho. Por situación laboral conjunta"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17158/20732?lang=es"
   },
   {
@@ -3014,6 +4122,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por sexo de la pareja"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17159/20757?lang=es"
   },
   {
@@ -3025,6 +4138,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de las parejas del mismo sexo. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17160/20758?lang=es"
   },
   {
@@ -3036,6 +4152,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por tipo de familia y sexo de la pareja"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17161/20759?lang=es"
   },
   {
@@ -3047,6 +4166,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por número de hijos en el núcleo y sexo de la pareja"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17162/20760?lang=es"
   },
   {
@@ -3058,6 +4180,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de las parejas del mismo sexo. Por nivel de formación alcanzado y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17163/20761?lang=es"
   },
   {
@@ -3069,6 +4194,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por nivel de formación conjunto y sexo de la pareja"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17164/20762?lang=es"
   },
   {
@@ -3080,6 +4208,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por ingresos mensuales netos del hogar y sexo de la pareja"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17165/20763?lang=es"
   },
   {
@@ -3091,6 +4222,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Parejas del mismo sexo. Por régimen de tenencia de la vivienda principal y sexo de la pareja"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17166/20764?lang=es"
   },
   {
@@ -3102,6 +4236,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17167/20810?lang=es"
   },
   {
@@ -3113,6 +4252,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo y edad del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17168/20811?lang=es"
   },
   {
@@ -3124,6 +4268,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo y estado civil del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17169/20814?lang=es"
   },
   {
@@ -3135,6 +4284,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo, estado civil y edad del progenitor"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17170/20817?lang=es"
   },
   {
@@ -3146,6 +4298,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo y nacionalidad del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17171/20820?lang=es"
   },
   {
@@ -3157,6 +4313,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo del progenitor y número de hijos en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17172/20832?lang=es"
   },
   {
@@ -3168,6 +4329,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo del progenitor y número de hijos menores de 25 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17173/20833?lang=es"
   },
   {
@@ -3179,6 +4345,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo del progenitor y número de hijos menores de 16 años en el núcleo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17174/20834?lang=es"
   },
   {
@@ -3190,6 +4361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo, estado civil del progenitor y número de hijos menores de 25 años en el núcleo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17175/20835?lang=es"
   },
   {
@@ -3201,6 +4375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo , estado civil del progenitor y número de hijos menores de 16 años en el núcleo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17176/20836?lang=es"
   },
   {
@@ -3212,6 +4389,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo y nivel de formación alcanzado del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17177/20837?lang=es"
   },
   {
@@ -3223,6 +4405,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo y situación laboral del progenitor"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17178/20838?lang=es"
   },
   {
@@ -3234,6 +4421,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Familias monoparentales. Por sexo del progenitor e ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17179/20839?lang=es"
   },
   {
@@ -3245,6 +4437,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Núcleos monoparentales. Por sexo del progenitor y régimen de tenencia de la vivienda principal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17180/20840?lang=es"
   },
   {
@@ -3256,6 +4453,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17365/20933?lang=es"
   },
   {
@@ -3267,6 +4469,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17366/20935?lang=es"
   },
   {
@@ -3278,6 +4484,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17367/20936?lang=es"
   },
   {
@@ -3289,6 +4499,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17368/20938?lang=es"
   },
   {
@@ -3300,6 +4515,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17369/20939?lang=es"
   },
   {
@@ -3311,6 +4531,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17370/20940?lang=es"
   },
   {
@@ -3322,6 +4547,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen segunda residencia y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17371/20941?lang=es"
   },
   {
@@ -3333,6 +4561,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares con segunda residencia. Por lugar de la segunda residencia"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17372/20942?lang=es"
   },
   {
@@ -3344,6 +4576,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares con segunda residencia. Por los días de uso de la segunda residencia al año"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17373/20943?lang=es"
   },
   {
@@ -3355,6 +4592,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17377/20944?lang=es"
   },
   {
@@ -3366,6 +4608,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17378/20945?lang=es"
   },
   {
@@ -3377,6 +4623,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17379/20946?lang=es"
   },
   {
@@ -3388,6 +4639,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17380/20947?lang=es"
   },
   {
@@ -3399,6 +4655,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17381/20948?lang=es"
   },
   {
@@ -3410,6 +4671,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17382/20950?lang=es"
   },
   {
@@ -3421,6 +4687,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por número de vehículos y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17383/20951?lang=es"
   },
   {
@@ -3432,6 +4701,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17384/20952?lang=es"
   },
   {
@@ -3443,6 +4717,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17385/20953?lang=es"
   },
   {
@@ -3454,6 +4732,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17386/20954?lang=es"
   },
   {
@@ -3465,6 +4747,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y nivel de formación alcanzado por los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17387/20955?lang=es"
   },
   {
@@ -3476,6 +4762,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17388/20956?lang=es"
   },
   {
@@ -3487,6 +4777,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17389/20957?lang=es"
   },
   {
@@ -3498,6 +4792,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen vehículo eléctrico o híbrido y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17390/20958?lang=es"
   },
   {
@@ -3509,6 +4806,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17435/20988?lang=es"
   },
   {
@@ -3520,6 +4822,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17436/20989?lang=es"
   },
   {
@@ -3531,6 +4837,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17437/20990?lang=es"
   },
   {
@@ -3542,6 +4853,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17438/20991?lang=es"
   },
   {
@@ -3553,6 +4869,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17439/20992?lang=es"
   },
   {
@@ -3564,6 +4885,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17440/20993?lang=es"
   },
   {
@@ -3575,6 +4901,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por separación de residuos y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17441/20994?lang=es"
   },
   {
@@ -3586,6 +4915,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17442/20995?lang=es"
   },
   {
@@ -3597,6 +4931,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17443/20996?lang=es"
   },
   {
@@ -3608,6 +4946,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17444/20997?lang=es"
   },
   {
@@ -3619,6 +4962,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17445/20998?lang=es"
   },
   {
@@ -3630,6 +4978,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17446/20999?lang=es"
   },
   {
@@ -3641,6 +4994,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17447/21000?lang=es"
   },
   {
@@ -3652,6 +5010,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Por tipo de residuos separados y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17448/21001?lang=es"
   },
   {
@@ -3663,6 +5024,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17451/21002?lang=es"
   },
   {
@@ -3674,6 +5040,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17452/21072?lang=es"
   },
   {
@@ -3685,6 +5055,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17453/21004?lang=es"
   },
   {
@@ -3696,6 +5070,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17454/21005?lang=es"
   },
   {
@@ -3707,6 +5086,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17455/21006?lang=es"
   },
   {
@@ -3718,6 +5102,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17456/21007?lang=es"
   },
   {
@@ -3729,6 +5118,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen servicio doméstico y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17457/21008?lang=es"
   },
   {
@@ -3740,6 +5132,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17458/21010?lang=es"
   },
   {
@@ -3751,6 +5148,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17459/21011?lang=es"
   },
   {
@@ -3762,6 +5163,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y nacionalidad de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17460/21012?lang=es"
   },
   {
@@ -3773,6 +5178,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y nivel de formación alcanzado de los miembros del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17461/21013?lang=es"
   },
   {
@@ -3784,6 +5194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17462/21014?lang=es"
   },
   {
@@ -3795,6 +5210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17463/21015?lang=es"
   },
   {
@@ -3806,6 +5226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hogares. Según si tienen ayuda externa en el trabajo doméstico y de cuidado, y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17464/21016?lang=es"
   },
   {
@@ -3817,6 +5240,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17518/21037?lang=es"
   },
   {
@@ -3828,6 +5256,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17519/21038?lang=es"
   },
   {
@@ -3839,6 +5272,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17520/21154?lang=es"
   },
   {
@@ -3850,6 +5288,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17521/21163?lang=es"
   },
   {
@@ -3861,6 +5302,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar y tipo de hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17522/21041?lang=es"
   },
   {
@@ -3872,6 +5316,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar y posición en el hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17523/21042?lang=es"
   },
   {
@@ -3883,6 +5330,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17524/21043?lang=es"
   },
   {
@@ -3894,6 +5346,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17525/21044?lang=es"
   },
   {
@@ -3905,6 +5362,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17526/21165?lang=es"
   },
   {
@@ -3916,6 +5378,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17527/21169?lang=es"
   },
   {
@@ -3927,6 +5392,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar y tipo de hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17528/21182?lang=es"
   },
   {
@@ -3938,6 +5406,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar y posición en el hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17529/21183?lang=es"
   },
   {
@@ -3949,6 +5420,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar y tipo de persona dependiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17530/21090?lang=es"
   },
   {
@@ -3960,6 +5434,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17531/21050?lang=es"
   },
   {
@@ -3971,6 +5450,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17532/21051?lang=es"
   },
   {
@@ -3982,6 +5466,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17533/21170?lang=es"
   },
   {
@@ -3993,6 +5482,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17534/21172?lang=es"
   },
   {
@@ -4004,6 +5496,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17535/21185?lang=es"
   },
   {
@@ -4015,6 +5510,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17536/21186?lang=es"
   },
   {
@@ -4026,6 +5524,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar y convive con otras personas. Por las horas semanales dedicadas al cuidado de personas dependientes y tipo de persona dependiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17537/21056?lang=es"
   },
   {
@@ -4037,6 +5538,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17538/21057?lang=es"
   },
   {
@@ -4048,6 +5554,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17539/21058?lang=es"
   },
   {
@@ -4059,6 +5570,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17540/21174?lang=es"
   },
   {
@@ -4070,6 +5586,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17541/21175?lang=es"
   },
   {
@@ -4081,6 +5600,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar y tipo de hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17542/21061?lang=es"
   },
   {
@@ -4092,6 +5614,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar y posición en el hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17543/21062?lang=es"
   },
   {
@@ -4103,6 +5628,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar y tipo de persona dependiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17544/21091?lang=es"
   },
   {
@@ -4114,6 +5642,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17545/21064?lang=es"
   },
   {
@@ -4125,6 +5658,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17546/21065?lang=es"
   },
   {
@@ -4136,6 +5674,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17547/21176?lang=es"
   },
   {
@@ -4147,6 +5690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17548/21177?lang=es"
   },
   {
@@ -4158,6 +5704,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes y tipo de hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17549/21068?lang=es"
   },
   {
@@ -4169,6 +5718,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes y posición en el hogar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17550/21069?lang=es"
   },
   {
@@ -4180,6 +5732,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes y tipo de persona dependiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17551/21070?lang=es"
   },
   {
@@ -4191,6 +5746,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el lugar de trabajo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17671/21198?lang=es"
   },
   {
@@ -4202,6 +5762,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el lugar de trabajo y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17672/21199?lang=es"
   },
   {
@@ -4213,6 +5778,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el lugar de trabajo, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17673/21200?lang=es"
   },
   {
@@ -4224,6 +5794,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el lugar de trabajo, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17674/21201?lang=es"
   },
   {
@@ -4235,6 +5810,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el lugar de trabajo y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17675/21202?lang=es"
   },
   {
@@ -4246,6 +5825,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el número de desplazamientos diarios al lugar de trabajo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17676/21203?lang=es"
   },
   {
@@ -4257,6 +5841,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el número de desplazamientos diarios al lugar de trabajo y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17677/21205?lang=es"
   },
   {
@@ -4268,6 +5857,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el número de desplazamientos diarios al lugar de trabajo, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17678/21206?lang=es"
   },
   {
@@ -4279,6 +5873,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el número de desplazamientos diarios al lugar de trabajo, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17679/21207?lang=es"
   },
   {
@@ -4290,6 +5889,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el número de desplazamientos diarios al lugar de trabajo y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17680/21208?lang=es"
   },
   {
@@ -4301,6 +5904,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el principal tipo de transporte al lugar de trabajo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17681/21209?lang=es"
   },
   {
@@ -4312,6 +5920,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el principal tipo de transporte al lugar de trabajo y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17682/21210?lang=es"
   },
   {
@@ -4323,6 +5936,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el principal tipo de transporte al lugar de trabajo, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17683/21211?lang=es"
   },
   {
@@ -4334,6 +5952,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el principal tipo de transporte al lugar de trabajo, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17684/21212?lang=es"
   },
   {
@@ -4345,6 +5968,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el principal tipo de transporte al lugar de trabajo y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17685/21213?lang=es"
   },
   {
@@ -4356,6 +5983,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el medio de transporte al lugar de trabajo (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17686/21214?lang=es"
   },
   {
@@ -4367,6 +5999,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el medio de transporte al lugar de trabajo y sexo (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17687/21215?lang=es"
   },
   {
@@ -4378,6 +6015,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el medio de transporte al lugar de trabajo, sexo y edad en grandes grupos (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17688/21216?lang=es"
   },
   {
@@ -4389,6 +6031,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el medio de transporte al lugar de trabajo, sexo y nacionalidad (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17689/21217?lang=es"
   },
   {
@@ -4400,6 +6047,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el medio de transporte al lugar de trabajo y tipo de hogar (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17690/21218?lang=es"
   },
   {
@@ -4411,6 +6062,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el tiempo diario de desplazamiento al lugar de trabajo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17691/21219?lang=es"
   },
   {
@@ -4422,6 +6078,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el tiempo diario de desplazamiento al lugar de trabajo y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17692/21220?lang=es"
   },
   {
@@ -4433,6 +6094,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el tiempo diario de desplazamiento al lugar de trabajo, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17693/21221?lang=es"
   },
   {
@@ -4444,6 +6110,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el tiempo diario de desplazamiento al lugar de trabajo, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17694/21222?lang=es"
   },
   {
@@ -4455,6 +6126,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el tiempo diario de desplazamiento al lugar de trabajo y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17695/21223?lang=es"
   },
   {
@@ -4466,6 +6141,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17696/21224?lang=es"
   },
   {
@@ -4477,6 +6157,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17697/21225?lang=es"
   },
   {
@@ -4488,6 +6173,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17698/21226?lang=es"
   },
   {
@@ -4499,6 +6189,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17699/21227?lang=es"
   },
   {
@@ -4510,6 +6205,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17700/21228?lang=es"
   },
   {
@@ -4521,6 +6220,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo y principal tipo de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17701/21229?lang=es"
   },
   {
@@ -4532,6 +6236,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población ocupada. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de trabajo y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17702/21230?lang=es"
   },
   {
@@ -4543,6 +6252,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Según si tienen apoyo social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17735/21136?lang=es"
   },
   {
@@ -4554,6 +6268,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Según si tienen apoyo social y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17736/21137?lang=es"
   },
   {
@@ -4565,6 +6284,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Según si tienen apoyo social, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17737/21138?lang=es"
   },
   {
@@ -4576,6 +6300,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Según si tienen apoyo social, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17738/21139?lang=es"
   },
   {
@@ -4587,6 +6316,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Según si tienen apoyo social y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17739/21140?lang=es"
   },
   {
@@ -4598,6 +6331,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el tipo de relación con la persona que da apoyo social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17742/21141?lang=es"
   },
   {
@@ -4609,6 +6347,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el tipo de relación con la persona que da apoyo social y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17743/21142?lang=es"
   },
   {
@@ -4620,6 +6363,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el tipo de relación con la persona que da apoyo social, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17744/21143?lang=es"
   },
   {
@@ -4631,6 +6378,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el lugar de residencia de la persona que da apoyo social"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17746/21144?lang=es"
   },
   {
@@ -4642,6 +6394,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el lugar de residencia de la persona que da apoyo social y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17747/21145?lang=es"
   },
   {
@@ -4653,6 +6410,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que vive sola y dispone de apoyo social. Por el lugar de residencia de la persona que da apoyo social, sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17748/21146?lang=es"
   },
   {
@@ -4664,6 +6425,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar, sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17751/21180?lang=es"
   },
   {
@@ -4675,6 +6439,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en las tareas del hogar, sexo y la relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17752/21181?lang=es"
   },
   {
@@ -4686,6 +6453,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que convive con otras personas. Por el grado de participación en el cuidado de personas dependientes dentro del hogar, sexo y la relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17753/21184?lang=es"
   },
   {
@@ -4697,6 +6467,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por el grado de participación en el cuidado de personas dependientes fuera del hogar, sexo y la relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17754/21188?lang=es"
   },
   {
@@ -4708,6 +6481,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes dentro del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes,sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17755/21187?lang=es"
   },
   {
@@ -4719,6 +6495,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más que participa en el cuidado de personas dependientes fuera del hogar. Por las horas semanales dedicadas al cuidado de personas dependientes, sexo y la relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17756/21189?lang=es"
   },
   {
@@ -4730,6 +6509,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17765/21235?lang=es"
   },
   {
@@ -4741,6 +6525,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC, sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17766/21236?lang=es"
   },
   {
@@ -4752,6 +6541,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17767/21237?lang=es"
   },
   {
@@ -4763,6 +6557,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC, sexo y nivel de formación alcanzado"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17768/21238?lang=es"
   },
   {
@@ -4774,6 +6573,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC, sexo y relación con la actividad económica"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17769/21239?lang=es"
   },
   {
@@ -4785,6 +6589,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y nivel de ingresos netos mensuales del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17770/21240?lang=es"
   },
   {
@@ -4796,6 +6605,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y tipo de hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17771/21241?lang=es"
   },
   {
@@ -4807,6 +6621,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y tamaño del hogar"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17772/21244?lang=es"
   },
   {
@@ -4818,6 +6637,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por uso de las TIC y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17773/21243?lang=es"
   },
   {
@@ -4829,6 +6651,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el lugar de estudio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17780/21231?lang=es"
   },
   {
@@ -4840,6 +6667,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el lugar de estudio y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17781/21232?lang=es"
   },
   {
@@ -4851,6 +6683,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el lugar de estudio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17782/21234?lang=es"
   },
   {
@@ -4862,6 +6699,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el número de desplazamientos diarios al lugar de estudio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17783/21245?lang=es"
   },
   {
@@ -4873,6 +6715,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el número de desplazamientos diarios al lugar de estudio y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17784/21246?lang=es"
   },
   {
@@ -4884,6 +6731,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el número de desplazamientos diarios al lugar de estudio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17785/21247?lang=es"
   },
   {
@@ -4895,6 +6747,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el principal tipo de transporte al lugar de estudio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17786/21248?lang=es"
   },
   {
@@ -4906,6 +6763,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el principal tipo de transporte al lugar de estudio y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17787/21249?lang=es"
   },
   {
@@ -4917,6 +6779,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el principal tipo de transporte al lugar de estudio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17788/21250?lang=es"
   },
   {
@@ -4928,6 +6795,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el medio de transporte al lugar de estudio (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17789/21251?lang=es"
   },
   {
@@ -4939,6 +6811,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el medio de transporte al lugar de estudio y sexo (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17790/21252?lang=es"
   },
   {
@@ -4950,6 +6827,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el medio de transporte al lugar de estudio, sexo y nacionalidad (respuesta múltiple)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17791/21253?lang=es"
   },
   {
@@ -4961,6 +6842,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el tiempo diario de desplazamiento al lugar de estudio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17792/21254?lang=es"
   },
   {
@@ -4972,6 +6858,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el tiempo diario de desplazamiento al lugar de estudio y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17793/21255?lang=es"
   },
   {
@@ -4983,6 +6874,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el tiempo diario de desplazamiento al lugar de estudio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17794/21256?lang=es"
   },
   {
@@ -4994,6 +6890,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de estudio"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17795/21257?lang=es"
   },
   {
@@ -5005,6 +6906,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de estudio y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17796/21258?lang=es"
   },
   {
@@ -5016,6 +6922,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de estudio, sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17797/21259?lang=es"
   },
   {
@@ -5027,6 +6938,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de estudio y principal tipo de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17798/21260?lang=es"
   },
   {
@@ -5038,6 +6954,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población estudiante de 16 años o más. Por el grado de satisfacción respecto al tiempo diario de desplazamiento al lugar de estudio y medio de transporte"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17799/21261?lang=es"
   },
   {
@@ -5049,6 +6970,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por lugar de nacimiento de los progenitores y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17804/21294?lang=es"
   },
   {
@@ -5060,6 +6986,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por lugar de nacimiento de los progenitores y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17805/21315?lang=es"
   },
   {
@@ -5071,6 +7002,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por lugar de nacimiento de los progenitores y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17806/21296?lang=es"
   },
   {
@@ -5082,6 +7018,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por lugar de nacimiento de los progenitores y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17807/21297?lang=es"
   },
   {
@@ -5093,6 +7034,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por lugar de nacimiento de los progenitores, edad y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17808/24833?lang=es"
   },
   {
@@ -5104,6 +7050,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por nacionalidad de los progenitores y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17809/21300?lang=es"
   },
   {
@@ -5115,6 +7066,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por nacionalidad de los progenitores y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17810/21301?lang=es"
   },
   {
@@ -5126,6 +7082,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por nacionalidad de los progenitores y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17811/21317?lang=es"
   },
   {
@@ -5137,6 +7098,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por nacionalidad de los progenitores y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17812/21303?lang=es"
   },
   {
@@ -5148,6 +7114,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población. Por nacionalidad de los progenitores, edad y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17813/21304?lang=es"
   },
   {
@@ -5159,6 +7130,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por nivel de formación propio y máximo nivel de formación alcanzado de los progenitores"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17814/21310?lang=es"
   },
   {
@@ -5170,6 +7146,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por nivel de formación propio, máximo nivel de formación de los progenitores y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17815/21311?lang=es"
   },
   {
@@ -5181,6 +7162,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por nivel de formación propio, máximo nivel de formación de los progenitores y lugar de nacimiento"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17816/21312?lang=es"
   },
   {
@@ -5192,6 +7178,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por nivel de formación propio, máximo nivel de formación de los progenitores y nacionalidad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17817/21313?lang=es"
   },
   {
@@ -5203,6 +7194,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Población de 16 años o más. Por nivel de formación propio, máximo nivel de formación de los progenitores y edad"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/17818/21314?lang=es"
   },
   {
@@ -5214,6 +7210,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18078/21595?lang=es"
   },
   {
@@ -5225,6 +7226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18080/21634?lang=es"
   },
   {
@@ -5236,6 +7240,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18081/21635?lang=es"
   },
   {
@@ -5247,6 +7256,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por año de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18082/21598?lang=es"
   },
   {
@@ -5258,6 +7270,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por lugar de nacimiento y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18083/21636?lang=es"
   },
   {
@@ -5269,6 +7284,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por nacionalidad y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18084/21637?lang=es"
   },
   {
@@ -5280,6 +7298,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por estado civil y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18085/21638?lang=es"
   },
   {
@@ -5291,6 +7312,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por nivel de formación alcanzado y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18086/21639?lang=es"
   },
   {
@@ -5302,6 +7326,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de las mujeres. Por la relación con la actividad económica y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18087/21640?lang=es"
   },
   {
@@ -5313,6 +7340,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18088/21604?lang=es"
   },
   {
@@ -5324,6 +7356,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18090/21641?lang=es"
   },
   {
@@ -5335,6 +7370,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18091/21642?lang=es"
   },
   {
@@ -5346,6 +7386,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos y año de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18092/21607?lang=es"
   },
   {
@@ -5357,6 +7400,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos, lugar de nacimiento y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18093/21643?lang=es"
   },
   {
@@ -5368,6 +7414,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos, nacionalidad y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18094/21644?lang=es"
   },
   {
@@ -5379,6 +7428,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos, estado civil y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18095/21645?lang=es"
   },
   {
@@ -5390,6 +7442,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 años o más. Por número de hijos tenidos, nivel de formación alcanzado y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18096/21646?lang=es"
   },
   {
@@ -5401,6 +7456,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Mujeres de 16 a 69 años. Por número de hijos tenidos, relación con la actividad económica y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18097/21647?lang=es"
   },
   {
@@ -5412,6 +7470,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18098/21613?lang=es"
   },
   {
@@ -5423,6 +7486,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18100/21648?lang=es"
   },
   {
@@ -5434,6 +7500,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18101/21649?lang=es"
   },
   {
@@ -5445,6 +7516,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por año de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18102/21616?lang=es"
   },
   {
@@ -5456,6 +7530,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por lugar de nacimiento y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18103/21650?lang=es"
   },
   {
@@ -5467,6 +7544,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por nacionalidad y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18104/21651?lang=es"
   },
   {
@@ -5478,6 +7558,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por estado civil y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18105/21652?lang=es"
   },
   {
@@ -5489,6 +7572,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por nivel de formación alcanzado y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18106/21653?lang=es"
   },
   {
@@ -5500,6 +7586,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Indicadores de fecundidad de los hombres. Por la relación con la actividad económica y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18107/21654?lang=es"
   },
   {
@@ -5511,6 +7600,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos tenidos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18108/21622?lang=es"
   },
   {
@@ -5522,6 +7616,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos y edad quinquenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18110/21655?lang=es"
   },
   {
@@ -5533,6 +7630,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18111/21656?lang=es"
   },
   {
@@ -5544,6 +7646,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos y año de nacimiento"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18112/21625?lang=es"
   },
   {
@@ -5555,6 +7660,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos, lugar de nacimiento y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18113/21657?lang=es"
   },
   {
@@ -5566,6 +7674,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos, nacionalidad y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18114/21658?lang=es"
   },
   {
@@ -5577,6 +7688,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos, estado civil y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18115/21659?lang=es"
   },
   {
@@ -5588,6 +7702,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 años o más. Por número de hijos tenidos, nivel de formación alcanzado y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18116/21660?lang=es"
   },
   {
@@ -5599,6 +7716,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de características esenciales de la población y las viviendas",
       "node": "Hombres de 16 a 69 años. Por número de hijos tenidos, relación con la actividad económica y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ceph/18117/21661?lang=es"
   }
 ];

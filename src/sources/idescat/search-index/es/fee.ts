@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21934/23172?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por sector de actividad económica de la empresa. Porcentaje sobre el total de empresas con establecimientos en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21935/24523?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por rama de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21936/24547?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por rama de actividad económica de la empresa. Porcentaje sobre el total de empresas con establecimientos en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21937/24548?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por país de la empresa matriz"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21938/21264?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por tamaño y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21939/24989?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por tamaño y sector de actividad económica de la empresa. Porcentaje sobre el total de empresas con establecimientos en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21940/24990?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con establecimientos en Cataluña. Principales resultados por zona geográfica de la empresa matriz y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21941/24991?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con establecimientos en Cataluña. Principales indicadores por sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21943/26432?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con establecimientos en Cataluña. Principales indicadores por rama de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21945/26433?lang=es"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con establecimientos en Cataluña. Principales indicadores por país de la empresa matriz"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21947/21267?lang=es"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con establecimientos en Cataluña. Principales indicadores por tamaño y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21948/26434?lang=es"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con establecimientos en Cataluña. Principales indicadores por zona geográfica de la empresa matriz y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21950/24994?lang=es"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21953/24526?lang=es"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por sector de actividad económica de la empresa. Porcentaje sobre el total de empresas con sede en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21954/24527?lang=es"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por rama de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21955/24551?lang=es"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por rama de actividad económica de la empresa. Porcentaje sobre el total de empresas con sede en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21956/24552?lang=es"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por país de la empresa matriz"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21957/21279?lang=es"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por tamaño y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21958/24995?lang=es"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por tamaño y sector de actividad económica de la empresa. Porcentaje sobre el total de empresas con sede en Cataluña"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21959/24996?lang=es"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras con sede en Cataluña. Principales resultados por zona geográfica de la empresa matriz y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21960/24997?lang=es"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con sede en Cataluña. Principales indicadores por sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21962/26435?lang=es"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras i empresas con sede en Cataluña. Principales indicadores por rama de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21964/26436?lang=es"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con sede en Cataluña. Principales indicadores por país de la empresa matriz"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21966/21282?lang=es"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con sede en Cataluña. Principales indicadores por tamaño y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21967/26437?lang=es"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de filiales de empresas extranjeras",
       "node": "Filiales de empresas extranjeras y empresas con sede en Cataluña. Principales indicadores por zona geográfica de la empresa matriz y sector de actividad económica de la empresa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/fee/21969/25000?lang=es"
   }
 ];

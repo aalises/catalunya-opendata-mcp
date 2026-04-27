@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Degree of Urbanisation",
       "node": "Urbanisation indicators"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/17107/20579?lang=en"
   },
   {
@@ -22,6 +29,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Degree of Urbanisation",
       "node": "Municipalities, population and area. By degree of urbanisation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/17108/20529?lang=en"
   },
   {
@@ -33,6 +43,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Degree of Urbanisation",
       "node": "Distribution of the population in the 1 km² standard grid"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/18126/21594?lang=en"
   }
 ];

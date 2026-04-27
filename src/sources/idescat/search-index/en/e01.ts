@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "Consumer Confidence Index: Current situation and expectations"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21700/26020?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "Consumer Confidence Index and its components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21701/26027?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "Household economic situation"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21704/26030?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "Household economy confidence index. Current situation and expectations"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21992/26143?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "Labour market confidence index. Current situation and expectations"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21993/26185?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Consumer Confidence Index",
       "node": "General economy confidence index. Current situation and expectations"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e01/21994/26189?lang=en"
   }
 ];

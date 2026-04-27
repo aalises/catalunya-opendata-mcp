@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14941/15809?lang=es"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/15803?lang=es"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/26699?lang=es"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/15875?lang=es"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/26701?lang=es"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/15807?lang=es"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/26704?lang=es"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sector de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/15804?lang=es"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sector de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/26700?lang=es"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sección de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/15876?lang=es"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por sección de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/26703?lang=es"
   },
   {
@@ -132,6 +209,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por división de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/15813?lang=es"
   },
   {
@@ -143,6 +224,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Cuentas de cotización del Régimen general de la Seguridad Social y Régimen especial de la minería del carbón. Por división de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/26705?lang=es"
   },
   {
@@ -154,6 +239,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/15879?lang=es"
   },
   {
@@ -165,6 +257,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/26690?lang=es"
   },
   {
@@ -176,6 +275,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sector de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/15880?lang=es"
   },
   {
@@ -187,6 +293,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sector de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/26691?lang=es"
   },
   {
@@ -198,6 +311,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/15881?lang=es"
   },
   {
@@ -209,6 +329,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/26692?lang=es"
   },
   {
@@ -220,6 +347,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sección de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/15882?lang=es"
   },
   {
@@ -231,6 +365,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por sección de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/26693?lang=es"
   },
   {
@@ -242,6 +383,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/15883?lang=es"
   },
   {
@@ -253,6 +401,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/26694?lang=es"
   },
   {
@@ -264,6 +419,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por división de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/15884?lang=es"
   },
   {
@@ -275,6 +434,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por división de actividad económica y tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/26695?lang=es"
   },
   {
@@ -286,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen general de la Seguridad Social y al Régimen especial de la minería del carbón. Por tamaño de la cuenta de cotización. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14993/15885?lang=es"
   },
   {
@@ -297,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/15886?lang=es"
   },
   {
@@ -308,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por sector de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/26696?lang=es"
   },
   {
@@ -319,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/15887?lang=es"
   },
   {
@@ -330,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por sección de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/26697?lang=es"
   },
   {
@@ -341,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/15888?lang=es"
   },
   {
@@ -352,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la ocupación asalariada y autónoma según afiliaciones a la Seguridad Social",
       "node": "Afiliaciones al Régimen especial de trabajadores autónomos. Por división de actividad económica. A último día del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/26698?lang=es"
   }
 ];

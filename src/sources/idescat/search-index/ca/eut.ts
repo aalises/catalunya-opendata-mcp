@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1002/25919?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1002/5114?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat el mes anterior. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1002/941?lang=ca"
   },
   {
@@ -44,6 +53,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per àmbit territorial"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1004/942?lang=ca"
   },
   {
@@ -55,6 +68,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1005/943?lang=ca"
   },
   {
@@ -66,6 +82,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1006/944?lang=ca"
   },
   {
@@ -77,6 +96,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1007/945?lang=ca"
   },
   {
@@ -88,6 +110,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1009/947?lang=ca"
   },
   {
@@ -99,6 +124,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats socials el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1010/948?lang=ca"
   },
   {
@@ -110,6 +138,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per àmbit territorial"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1012/949?lang=ca"
   },
   {
@@ -121,6 +153,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1013/950?lang=ca"
   },
   {
@@ -132,6 +167,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1014/951?lang=ca"
   },
   {
@@ -143,6 +181,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1015/952?lang=ca"
   },
   {
@@ -154,6 +195,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1017/954?lang=ca"
   },
   {
@@ -165,6 +209,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats culturals i de lleure en el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1018/955?lang=ca"
   },
   {
@@ -176,6 +223,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats esportives en el mes anterior. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1020/956?lang=ca"
   },
   {
@@ -187,6 +237,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats esportives en el mes anterior. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1021/957?lang=ca"
   },
   {
@@ -198,6 +251,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats esportives en el mes anterior. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1022/958?lang=ca"
   },
   {
@@ -209,6 +265,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats esportives en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1023/959?lang=ca"
   },
   {
@@ -220,6 +279,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va participar en activitats esportives en el mes anterior. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/1024/960?lang=ca"
   },
   {
@@ -231,6 +293,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21621/25433?lang=ca"
   },
   {
@@ -242,6 +307,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21622/25441?lang=ca"
   },
   {
@@ -253,6 +321,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21623/25442?lang=ca"
   },
   {
@@ -264,6 +335,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21671/25519?lang=ca"
   },
   {
@@ -275,6 +349,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21672/25533?lang=ca"
   },
   {
@@ -286,6 +363,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21673/25534?lang=ca"
   },
   {
@@ -297,6 +377,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21682/25551?lang=ca"
   },
   {
@@ -308,6 +392,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21683/25552?lang=ca"
   },
   {
@@ -319,6 +406,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21684/25553?lang=ca"
   },
   {
@@ -330,6 +420,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21685/25554?lang=ca"
   },
   {
@@ -341,6 +434,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21686/25555?lang=ca"
   },
   {
@@ -352,6 +449,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21687/26337?lang=ca"
   },
   {
@@ -363,6 +463,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21688/25557?lang=ca"
   },
   {
@@ -374,6 +477,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21689/25558?lang=ca"
   },
   {
@@ -385,6 +491,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21690/26327?lang=ca"
   },
   {
@@ -396,6 +505,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21691/26057?lang=ca"
   },
   {
@@ -407,6 +519,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21692/25560?lang=ca"
   },
   {
@@ -418,6 +533,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21693/25561?lang=ca"
   },
   {
@@ -429,6 +547,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21694/25562?lang=ca"
   },
   {
@@ -440,6 +561,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21695/25563?lang=ca"
   },
   {
@@ -451,6 +575,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21696/25564?lang=ca"
   },
   {
@@ -462,6 +589,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària del treball remunerat de la població ocupada. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21697/25565?lang=ca"
   },
   {
@@ -473,6 +603,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21698/26249?lang=ca"
   },
   {
@@ -484,6 +617,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21699/26259?lang=ca"
   },
   {
@@ -495,6 +631,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21706/26260?lang=ca"
   },
   {
@@ -506,6 +645,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21709/26298?lang=ca"
   },
   {
@@ -517,6 +660,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21710/26297?lang=ca"
   },
   {
@@ -528,6 +674,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21711/26299?lang=ca"
   },
   {
@@ -539,6 +689,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21712/26300?lang=ca"
   },
   {
@@ -550,6 +704,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21713/26301?lang=ca"
   },
   {
@@ -561,6 +718,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21714/26302?lang=ca"
   },
   {
@@ -572,6 +732,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21715/26303?lang=ca"
   },
   {
@@ -583,6 +746,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21716/26304?lang=ca"
   },
   {
@@ -594,6 +760,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21717/26310?lang=ca"
   },
   {
@@ -605,6 +774,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21719/26306?lang=ca"
   },
   {
@@ -616,6 +788,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21720/26307?lang=ca"
   },
   {
@@ -627,6 +802,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21721/26308?lang=ca"
   },
   {
@@ -638,6 +816,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21722/26309?lang=ca"
   },
   {
@@ -649,6 +830,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21724/25904?lang=ca"
   },
   {
@@ -660,6 +844,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21725/25905?lang=ca"
   },
   {
@@ -671,6 +858,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21726/25906?lang=ca"
   },
   {
@@ -682,6 +872,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21727/25907?lang=ca"
   },
   {
@@ -693,6 +886,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estudis assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21728/25908?lang=ca"
   },
   {
@@ -704,6 +900,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21729/25909?lang=ca"
   },
   {
@@ -715,6 +914,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21730/25910?lang=ca"
   },
   {
@@ -726,6 +928,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21731/25911?lang=ca"
   },
   {
@@ -737,6 +942,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i segons si hi ha fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21732/25912?lang=ca"
   },
   {
@@ -748,6 +956,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21734/25914?lang=ca"
   },
   {
@@ -759,6 +970,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21735/25915?lang=ca"
   },
   {
@@ -770,6 +984,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21736/25916?lang=ca"
   },
   {
@@ -781,6 +998,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per tipus d'activitat i estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21737/25917?lang=ca"
   },
   {
@@ -792,6 +1012,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21738/25929?lang=ca"
   },
   {
@@ -803,6 +1026,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21739/25930?lang=ca"
   },
   {
@@ -814,6 +1040,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21740/25931?lang=ca"
   },
   {
@@ -825,6 +1054,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21741/25940?lang=ca"
   },
   {
@@ -836,6 +1068,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21742/25941?lang=ca"
   },
   {
@@ -847,6 +1082,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21743/26265?lang=ca"
   },
   {
@@ -858,6 +1097,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21744/26266?lang=ca"
   },
   {
@@ -869,6 +1112,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21745/25955?lang=ca"
   },
   {
@@ -880,6 +1126,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21746/25971?lang=ca"
   },
   {
@@ -891,6 +1140,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21747/25972?lang=ca"
   },
   {
@@ -902,6 +1154,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21748/25973?lang=ca"
   },
   {
@@ -913,6 +1168,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21752/26150?lang=ca"
   },
   {
@@ -924,6 +1183,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21753/26151?lang=ca"
   },
   {
@@ -935,6 +1198,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21754/26152?lang=ca"
   },
   {
@@ -946,6 +1212,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i situació de convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21755/26154?lang=ca"
   },
   {
@@ -957,6 +1226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21756/26155?lang=ca"
   },
   {
@@ -968,6 +1240,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21757/26156?lang=ca"
   },
   {
@@ -979,6 +1254,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21758/26157?lang=ca"
   },
   {
@@ -990,6 +1268,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de les principals tasques de la llar. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21759/26158?lang=ca"
   },
   {
@@ -1001,6 +1282,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21760/25985?lang=ca"
   },
   {
@@ -1012,6 +1296,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21761/25989?lang=ca"
   },
   {
@@ -1023,6 +1310,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants a les llars amb menors de 10 anys. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21762/25991?lang=ca"
   },
   {
@@ -1034,6 +1324,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21763/25993?lang=ca"
   },
   {
@@ -1045,6 +1338,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21764/25995?lang=ca"
   },
   {
@@ -1056,6 +1352,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21765/25997?lang=ca"
   },
   {
@@ -1067,6 +1366,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21766/25999?lang=ca"
   },
   {
@@ -1078,6 +1380,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Planificació de diferents tasques relacionades amb la cura dels infants. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21767/26001?lang=ca"
   },
   {
@@ -1089,6 +1394,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Temps mitjà destinat a internet i dispositius electrònics. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21769/26211?lang=ca"
   },
   {
@@ -1100,6 +1408,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Temps mitjà destinat a internet i dispositius electrònics. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21770/26212?lang=ca"
   },
   {
@@ -1111,6 +1423,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Temps mitjà destinat a internet i dispositius electrònics. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21771/26213?lang=ca"
   },
   {
@@ -1122,6 +1438,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Temps mitjà destinat a internet i dispositius electrònics. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21773/26214?lang=ca"
   },
   {
@@ -1133,6 +1453,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21775/26216?lang=ca"
   },
   {
@@ -1144,6 +1467,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21776/26217?lang=ca"
   },
   {
@@ -1155,6 +1482,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21777/26218?lang=ca"
   },
   {
@@ -1166,6 +1497,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21779/26219?lang=ca"
   },
   {
@@ -1177,6 +1512,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21781/26221?lang=ca"
   },
   {
@@ -1188,6 +1526,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21782/26222?lang=ca"
   },
   {
@@ -1199,6 +1541,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21783/26223?lang=ca"
   },
   {
@@ -1210,6 +1556,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21784/26224?lang=ca"
   },
   {
@@ -1221,6 +1570,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21785/26225?lang=ca"
   },
   {
@@ -1232,6 +1585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21786/26226?lang=ca"
   },
   {
@@ -1243,6 +1599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21787/26228?lang=ca"
   },
   {
@@ -1254,6 +1613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals fetes amb internet i dispositius electrònics. Per limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21788/26229?lang=ca"
   },
   {
@@ -1265,6 +1627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per dia laborable i cap de setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21829/26066?lang=ca"
   },
   {
@@ -1276,6 +1641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21830/26067?lang=ca"
   },
   {
@@ -1287,6 +1655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21831/26068?lang=ca"
   },
   {
@@ -1298,6 +1669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per dia laborable i cap de setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21832/26063?lang=ca"
   },
   {
@@ -1309,6 +1683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21833/26054?lang=ca"
   },
   {
@@ -1320,6 +1697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana diària de treball remunerat de la població ocupada. Per sexe i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21859/26058?lang=ca"
   },
   {
@@ -1331,6 +1711,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21861/26168?lang=ca"
   },
   {
@@ -1342,6 +1726,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21862/26169?lang=ca"
   },
   {
@@ -1353,6 +1740,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21863/26170?lang=ca"
   },
   {
@@ -1364,6 +1754,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21864/26171?lang=ca"
   },
   {
@@ -1375,6 +1768,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21865/26173?lang=ca"
   },
   {
@@ -1386,6 +1782,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21866/26174?lang=ca"
   },
   {
@@ -1397,6 +1796,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i sector d'activitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21867/26331?lang=ca"
   },
   {
@@ -1408,6 +1810,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21868/26176?lang=ca"
   },
   {
@@ -1419,6 +1824,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21869/26180?lang=ca"
   },
   {
@@ -1430,6 +1839,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21870/26182?lang=ca"
   },
   {
@@ -1441,6 +1853,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21871/26184?lang=ca"
   },
   {
@@ -1452,6 +1867,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i sector d'activitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21872/26332?lang=ca"
   },
   {
@@ -1463,6 +1881,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21873/26191?lang=ca"
   },
   {
@@ -1474,6 +1895,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Temps mitjà destinat a internet i dispositius electrònics. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21874/26215?lang=ca"
   },
   {
@@ -1485,6 +1909,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats principals fetes amb internet i dispositius electrònics. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21875/26220?lang=ca"
   },
   {
@@ -1496,6 +1923,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21876/26248?lang=ca"
   },
   {
@@ -1507,6 +1937,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21877/26333?lang=ca"
   },
   {
@@ -1518,6 +1951,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21878/26233?lang=ca"
   },
   {
@@ -1529,6 +1965,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21879/26235?lang=ca"
   },
   {
@@ -1540,6 +1979,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21881/26334?lang=ca"
   },
   {
@@ -1551,6 +1993,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21882/26238?lang=ca"
   },
   {
@@ -1562,6 +2007,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21883/26059?lang=ca"
   },
   {
@@ -1573,6 +2022,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21884/26060?lang=ca"
   },
   {
@@ -1584,6 +2036,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21885/26090?lang=ca"
   },
   {
@@ -1595,6 +2051,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21886/26091?lang=ca"
   },
   {
@@ -1606,6 +2065,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21887/26093?lang=ca"
   },
   {
@@ -1617,6 +2079,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21888/26094?lang=ca"
   },
   {
@@ -1628,6 +2093,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21889/26329?lang=ca"
   },
   {
@@ -1639,6 +2107,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21890/26096?lang=ca"
   },
   {
@@ -1650,6 +2121,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21891/26193?lang=ca"
   },
   {
@@ -1661,6 +2136,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21892/26194?lang=ca"
   },
   {
@@ -1672,6 +2150,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21893/26195?lang=ca"
   },
   {
@@ -1683,6 +2164,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21894/26330?lang=ca"
   },
   {
@@ -1694,6 +2178,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21895/26197?lang=ca"
   },
   {
@@ -1705,6 +2192,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21896/26198?lang=ca"
   },
   {
@@ -1716,6 +2206,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21897/26199?lang=ca"
   },
   {
@@ -1727,6 +2220,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Persona responsable de planificar les principals tasques de la llar. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21898/26153?lang=ca"
   },
   {
@@ -1738,6 +2235,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21900/26311?lang=ca"
   },
   {
@@ -1749,6 +2250,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21901/26312?lang=ca"
   },
   {
@@ -1760,6 +2264,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21902/26313?lang=ca"
   },
   {
@@ -1771,6 +2278,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats socials. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21903/26314?lang=ca"
   },
   {
@@ -1782,6 +2292,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21904/26205?lang=ca"
   },
   {
@@ -1793,6 +2306,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21905/26207?lang=ca"
   },
   {
@@ -1804,6 +2320,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21906/26208?lang=ca"
   },
   {
@@ -1815,6 +2334,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats esportives. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21907/26209?lang=ca"
   },
   {
@@ -1826,6 +2348,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21923/26092?lang=ca"
   },
   {
@@ -1837,6 +2362,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/21980/26122?lang=ca"
   },
   {
@@ -1848,6 +2376,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22004/26315?lang=ca"
   },
   {
@@ -1859,6 +2391,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22005/26316?lang=ca"
   },
   {
@@ -1870,6 +2405,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22006/26318?lang=ca"
   },
   {
@@ -1881,6 +2420,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22007/26319?lang=ca"
   },
   {
@@ -1892,6 +2435,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22008/26320?lang=ca"
   },
   {
@@ -1903,6 +2450,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats socials en un dia mitjà. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22009/26321?lang=ca"
   },
   {
@@ -1914,6 +2464,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22011/26277?lang=ca"
   },
   {
@@ -1925,6 +2478,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22012/26278?lang=ca"
   },
   {
@@ -1936,6 +2492,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22013/26279?lang=ca"
   },
   {
@@ -1947,6 +2506,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22014/26280?lang=ca"
   },
   {
@@ -1958,6 +2520,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22015/26281?lang=ca"
   },
   {
@@ -1969,6 +2534,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats esportives en un dia mitjà. Per grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22016/26282?lang=ca"
   },
   {
@@ -1980,6 +2548,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau d'urbanització"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22019/26268?lang=ca"
   },
   {
@@ -1991,6 +2562,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell d'estrès"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22020/26269?lang=ca"
   },
   {
@@ -2002,6 +2576,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i grau de limitació"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22021/26270?lang=ca"
   },
   {
@@ -2013,6 +2590,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22024/26342?lang=ca"
   },
   {
@@ -2024,6 +2605,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22025/26343?lang=ca"
   },
   {
@@ -2035,6 +2620,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i àmbits territorials"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22027/26349?lang=ca"
   },
   {
@@ -2046,6 +2636,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per edat en grans grups i àmbit territorial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22028/26350?lang=ca"
   },
   {
@@ -2057,6 +2652,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sexe i àmbit territorial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22029/26351?lang=ca"
   },
   {
@@ -2068,6 +2668,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per edat en grans grups i àmbit territorial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22030/26348?lang=ca"
   },
   {
@@ -2079,6 +2684,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana de treball remunerat de la població ocupada. Per sexe i àmbits territorials"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22031/26352?lang=ca"
   },
   {
@@ -2090,6 +2700,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana de treball remunerat de la població ocupada. Per edat en grans grups i àmbits territorials"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22032/26354?lang=ca"
   },
   {
@@ -2101,6 +2716,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per àmbit Metropolità desagregat"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22033/26356?lang=ca"
   },
   {
@@ -2112,6 +2732,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per ingressos mensuals a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/22036/26355?lang=ca"
   },
   {
@@ -2123,6 +2746,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/4870/26323?lang=ca"
   },
   {
@@ -2134,6 +2760,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/4870/5152?lang=ca"
   },
   {
@@ -2145,6 +2774,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa la mateixa activitat a l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/4870/5158?lang=ca"
   },
   {
@@ -2156,6 +2788,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5116/25431?lang=ca"
   },
   {
@@ -2167,6 +2803,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5116/5048?lang=ca"
   },
   {
@@ -2178,6 +2817,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5117/25432?lang=ca"
   },
   {
@@ -2189,6 +2832,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5117/5049?lang=ca"
   },
   {
@@ -2200,6 +2846,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5119/25520?lang=ca"
   },
   {
@@ -2211,6 +2861,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5119/5053?lang=ca"
   },
   {
@@ -2222,6 +2875,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5122/26064?lang=ca"
   },
   {
@@ -2233,6 +2889,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5122/5064?lang=ca"
   },
   {
@@ -2244,6 +2903,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5123/26053?lang=ca"
   },
   {
@@ -2255,6 +2918,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5123/5067?lang=ca"
   },
   {
@@ -2266,6 +2932,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de contracte"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5126/25548?lang=ca"
   },
   {
@@ -2277,6 +2946,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de contracte"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5126/5073?lang=ca"
   },
   {
@@ -2288,6 +2960,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5130/26244?lang=ca"
   },
   {
@@ -2299,6 +2974,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5130/5081?lang=ca"
   },
   {
@@ -2310,6 +2988,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5131/5084?lang=ca"
   },
   {
@@ -2321,6 +3002,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5132/5085?lang=ca"
   },
   {
@@ -2332,6 +3016,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5133/5086?lang=ca"
   },
   {
@@ -2343,6 +3030,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5134/5087?lang=ca"
   },
   {
@@ -2354,6 +3044,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5135/5088?lang=ca"
   },
   {
@@ -2365,6 +3058,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5136/5089?lang=ca"
   },
   {
@@ -2376,6 +3072,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5136/5130?lang=ca"
   },
   {
@@ -2387,6 +3086,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5137/5090?lang=ca"
   },
   {
@@ -2398,6 +3100,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5137/5131?lang=ca"
   },
   {
@@ -2409,6 +3114,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5138/5091?lang=ca"
   },
   {
@@ -2420,6 +3128,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5138/5132?lang=ca"
   },
   {
@@ -2431,6 +3142,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5139/5092?lang=ca"
   },
   {
@@ -2442,6 +3156,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5139/5133?lang=ca"
   },
   {
@@ -2453,6 +3170,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5140/5093?lang=ca"
   },
   {
@@ -2464,6 +3184,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5141/5094?lang=ca"
   },
   {
@@ -2475,6 +3198,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5142/5095?lang=ca"
   },
   {
@@ -2486,6 +3212,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5143/5096?lang=ca"
   },
   {
@@ -2497,6 +3226,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5144/5097?lang=ca"
   },
   {
@@ -2508,6 +3240,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5146/26250?lang=ca"
   },
   {
@@ -2519,6 +3254,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5146/5101?lang=ca"
   },
   {
@@ -2530,6 +3268,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5147/26251?lang=ca"
   },
   {
@@ -2541,6 +3282,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5147/5102?lang=ca"
   },
   {
@@ -2552,6 +3296,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5148/26252?lang=ca"
   },
   {
@@ -2563,6 +3310,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5148/5103?lang=ca"
   },
   {
@@ -2574,6 +3324,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5149/26253?lang=ca"
   },
   {
@@ -2585,6 +3338,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5149/5104?lang=ca"
   },
   {
@@ -2596,6 +3352,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5150/26344?lang=ca"
   },
   {
@@ -2607,6 +3367,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5150/5105?lang=ca"
   },
   {
@@ -2618,6 +3381,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5151/26263?lang=ca"
   },
   {
@@ -2629,6 +3395,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5151/5106?lang=ca"
   },
   {
@@ -2640,6 +3409,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5152/26264?lang=ca"
   },
   {
@@ -2651,6 +3423,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que va ajudar altres llars en el mes anterior. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5152/5107?lang=ca"
   },
   {
@@ -2662,6 +3437,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que va ajudar altres llars en el mes anterior. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5153/26262?lang=ca"
   },
   {
@@ -2673,6 +3451,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que va ajudar altres llars en el mes anterior. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5153/5108?lang=ca"
   },
   {
@@ -2684,6 +3465,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5154/26254?lang=ca"
   },
   {
@@ -2695,6 +3479,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5154/5109?lang=ca"
   },
   {
@@ -2706,6 +3493,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5155/26255?lang=ca"
   },
   {
@@ -2717,6 +3507,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5155/5110?lang=ca"
   },
   {
@@ -2728,6 +3521,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5156/26256?lang=ca"
   },
   {
@@ -2739,6 +3535,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5156/5111?lang=ca"
   },
   {
@@ -2750,6 +3549,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5157/26267?lang=ca"
   },
   {
@@ -2761,6 +3563,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar a altres llars en el mes anterior. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5157/5112?lang=ca"
   },
   {
@@ -2772,6 +3577,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5158/26257?lang=ca"
   },
   {
@@ -2783,6 +3591,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5158/5113?lang=ca"
   },
   {
@@ -2794,6 +3605,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5159/25920?lang=ca"
   },
   {
@@ -2805,6 +3619,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5159/5115?lang=ca"
   },
   {
@@ -2816,6 +3633,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5160/26341?lang=ca"
   },
   {
@@ -2827,6 +3647,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5160/5123?lang=ca"
   },
   {
@@ -2838,6 +3661,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5161/25924?lang=ca"
   },
   {
@@ -2849,6 +3675,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5161/5124?lang=ca"
   },
   {
@@ -2860,6 +3689,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5162/26234?lang=ca"
   },
   {
@@ -2871,6 +3703,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5162/5125?lang=ca"
   },
   {
@@ -2882,6 +3717,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5163/25928?lang=ca"
   },
   {
@@ -2893,6 +3731,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5163/5126?lang=ca"
   },
   {
@@ -2904,6 +3745,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5164/25923?lang=ca"
   },
   {
@@ -2915,6 +3759,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per càrregues familiars a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5164/5127?lang=ca"
   },
   {
@@ -2926,6 +3773,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5165/5118?lang=ca"
   },
   {
@@ -2937,6 +3787,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5166/26240?lang=ca"
   },
   {
@@ -2948,6 +3801,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5166/5119?lang=ca"
   },
   {
@@ -2959,6 +3815,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5167/25922?lang=ca"
   },
   {
@@ -2970,6 +3829,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5167/5120?lang=ca"
   },
   {
@@ -2981,6 +3843,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5168/25925?lang=ca"
   },
   {
@@ -2992,6 +3857,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5168/5121?lang=ca"
   },
   {
@@ -3003,6 +3871,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5169/25926?lang=ca"
   },
   {
@@ -3014,6 +3885,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació en activitats de voluntariat en el mes anterior. Per relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5169/5122?lang=ca"
   },
   {
@@ -3025,6 +3899,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5193/25502?lang=ca"
   },
   {
@@ -3036,6 +3913,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sexe i nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5193/25522?lang=ca"
   },
   {
@@ -3047,6 +3927,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5219/25518?lang=ca"
   },
   {
@@ -3058,6 +3942,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/5219/5194?lang=ca"
   },
   {
@@ -3069,6 +3956,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6288/25566?lang=ca"
   },
   {
@@ -3080,6 +3970,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6288/6278?lang=ca"
   },
   {
@@ -3091,6 +3984,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6289/25571?lang=ca"
   },
   {
@@ -3102,6 +3999,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6289/6279?lang=ca"
   },
   {
@@ -3113,6 +4013,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6290/25567?lang=ca"
   },
   {
@@ -3124,6 +4027,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6290/6280?lang=ca"
   },
   {
@@ -3135,6 +4041,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6291/25568?lang=ca"
   },
   {
@@ -3146,6 +4055,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6291/6281?lang=ca"
   },
   {
@@ -3157,6 +4069,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6292/25572?lang=ca"
   },
   {
@@ -3168,6 +4083,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6292/6282?lang=ca"
   },
   {
@@ -3179,6 +4097,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6293/25574?lang=ca"
   },
   {
@@ -3190,6 +4111,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6293/6283?lang=ca"
   },
   {
@@ -3201,6 +4125,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6294/26172?lang=ca"
   },
   {
@@ -3212,6 +4139,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6294/6289?lang=ca"
   },
   {
@@ -3223,6 +4153,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6295/25570?lang=ca"
   },
   {
@@ -3234,6 +4167,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6295/6285?lang=ca"
   },
   {
@@ -3245,6 +4181,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6296/25569?lang=ca"
   },
   {
@@ -3256,6 +4195,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6296/6286?lang=ca"
   },
   {
@@ -3267,6 +4209,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6297/26177?lang=ca"
   },
   {
@@ -3278,6 +4223,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de treball remunerat i no remunerat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6297/6287?lang=ca"
   },
   {
@@ -3289,6 +4237,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6298/25575?lang=ca"
   },
   {
@@ -3300,6 +4251,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6298/25584?lang=ca"
   },
   {
@@ -3311,6 +4265,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6299/25576?lang=ca"
   },
   {
@@ -3322,6 +4279,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6299/26179?lang=ca"
   },
   {
@@ -3333,6 +4294,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6300/25577?lang=ca"
   },
   {
@@ -3344,6 +4308,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6300/25585?lang=ca"
   },
   {
@@ -3355,6 +4322,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6301/25578?lang=ca"
   },
   {
@@ -3366,6 +4336,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6301/25586?lang=ca"
   },
   {
@@ -3377,6 +4350,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6302/25579?lang=ca"
   },
   {
@@ -3388,6 +4364,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6302/26181?lang=ca"
   },
   {
@@ -3399,6 +4378,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6303/25580?lang=ca"
   },
   {
@@ -3410,6 +4392,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6303/26183?lang=ca"
   },
   {
@@ -3421,6 +4406,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6304/26186?lang=ca"
   },
   {
@@ -3432,6 +4420,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6304/6295?lang=ca"
   },
   {
@@ -3443,6 +4434,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6305/25581?lang=ca"
   },
   {
@@ -3454,6 +4448,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de treball remunerat i no remunerat. Per sexe i convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6305/25587?lang=ca"
   },
   {
@@ -3465,6 +4462,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6306/25582?lang=ca"
   },
   {
@@ -3476,6 +4476,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6306/26190?lang=ca"
   },
   {
@@ -3487,6 +4490,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6307/25583?lang=ca"
   },
   {
@@ -3498,6 +4504,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries de treball remunerat i no remunerat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6307/26340?lang=ca"
   },
   {
@@ -3509,6 +4518,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6308/26204?lang=ca"
   },
   {
@@ -3520,6 +4532,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6308/6299?lang=ca"
   },
   {
@@ -3531,6 +4546,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6309/26206?lang=ca"
   },
   {
@@ -3542,6 +4560,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa treball remunerat i no remunerat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6309/6300?lang=ca"
   },
   {
@@ -3553,6 +4574,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6310/25932?lang=ca"
   },
   {
@@ -3564,6 +4588,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6310/6301?lang=ca"
   },
   {
@@ -3575,6 +4602,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6311/25933?lang=ca"
   },
   {
@@ -3586,6 +4617,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6311/6302?lang=ca"
   },
   {
@@ -3597,6 +4631,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6312/25934?lang=ca"
   },
   {
@@ -3608,6 +4646,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6312/6303?lang=ca"
   },
   {
@@ -3619,6 +4660,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6313/6304?lang=ca"
   },
   {
@@ -3630,6 +4674,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6314/25935?lang=ca"
   },
   {
@@ -3641,6 +4689,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6314/6305?lang=ca"
   },
   {
@@ -3652,6 +4703,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6315/25936?lang=ca"
   },
   {
@@ -3663,6 +4717,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6315/6306?lang=ca"
   },
   {
@@ -3674,6 +4731,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6316/25937?lang=ca"
   },
   {
@@ -3685,6 +4746,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6316/6307?lang=ca"
   },
   {
@@ -3696,6 +4760,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6317/25938?lang=ca"
   },
   {
@@ -3707,6 +4775,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6317/6308?lang=ca"
   },
   {
@@ -3718,6 +4789,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6318/6309?lang=ca"
   },
   {
@@ -3729,6 +4803,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6319/25939?lang=ca"
   },
   {
@@ -3740,6 +4818,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades de la llar, la família i de voluntariat. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6319/6310?lang=ca"
   },
   {
@@ -3751,6 +4832,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6320/25951?lang=ca"
   },
   {
@@ -3762,6 +4847,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6320/6311?lang=ca"
   },
   {
@@ -3773,6 +4861,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6321/25944?lang=ca"
   },
   {
@@ -3784,6 +4875,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6321/6312?lang=ca"
   },
   {
@@ -3795,6 +4889,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6322/25945?lang=ca"
   },
   {
@@ -3806,6 +4904,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6322/6313?lang=ca"
   },
   {
@@ -3817,6 +4918,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6323/25947?lang=ca"
   },
   {
@@ -3828,6 +4932,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6323/6314?lang=ca"
   },
   {
@@ -3839,6 +4946,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6324/25946?lang=ca"
   },
   {
@@ -3850,6 +4960,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6324/6315?lang=ca"
   },
   {
@@ -3861,6 +4974,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6325/25952?lang=ca"
   },
   {
@@ -3872,6 +4988,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6325/6316?lang=ca"
   },
   {
@@ -3883,6 +5002,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6326/25953?lang=ca"
   },
   {
@@ -3894,6 +5016,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6326/6317?lang=ca"
   },
   {
@@ -3905,6 +5030,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6327/25948?lang=ca"
   },
   {
@@ -3916,6 +5044,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6327/6318?lang=ca"
   },
   {
@@ -3927,6 +5058,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6328/25949?lang=ca"
   },
   {
@@ -3938,6 +5072,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació de convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6328/6319?lang=ca"
   },
   {
@@ -3949,6 +5086,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6329/25950?lang=ca"
   },
   {
@@ -3960,6 +5100,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6329/6320?lang=ca"
   },
   {
@@ -3971,6 +5114,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6330/25954?lang=ca"
   },
   {
@@ -3982,6 +5128,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats de la llar i la família per tipus i quotidianitat en un dia mitjà. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6330/6321?lang=ca"
   },
   {
@@ -3993,6 +5142,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6331/25960?lang=ca"
   },
   {
@@ -4004,6 +5157,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6331/6322?lang=ca"
   },
   {
@@ -4015,6 +5171,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6332/25961?lang=ca"
   },
   {
@@ -4026,6 +5185,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6332/6323?lang=ca"
   },
   {
@@ -4037,6 +5199,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6333/25962?lang=ca"
   },
   {
@@ -4048,6 +5214,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6333/6324?lang=ca"
   },
   {
@@ -4059,6 +5228,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6334/25963?lang=ca"
   },
   {
@@ -4070,6 +5242,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6334/6325?lang=ca"
   },
   {
@@ -4081,6 +5256,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6335/25964?lang=ca"
   },
   {
@@ -4092,6 +5270,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6335/6326?lang=ca"
   },
   {
@@ -4103,6 +5284,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6336/25965?lang=ca"
   },
   {
@@ -4114,6 +5298,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6336/6327?lang=ca"
   },
   {
@@ -4125,6 +5312,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6337/25966?lang=ca"
   },
   {
@@ -4136,6 +5326,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6337/6328?lang=ca"
   },
   {
@@ -4147,6 +5340,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6338/25967?lang=ca"
   },
   {
@@ -4158,6 +5354,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i fills menors a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6338/6329?lang=ca"
   },
   {
@@ -4169,6 +5368,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació de convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6339/25968?lang=ca"
   },
   {
@@ -4180,6 +5382,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació de convivència"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6339/6330?lang=ca"
   },
   {
@@ -4191,6 +5396,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6340/25969?lang=ca"
   },
   {
@@ -4202,6 +5410,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6340/6331?lang=ca"
   },
   {
@@ -4213,6 +5424,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6341/26339?lang=ca"
   },
   {
@@ -4224,6 +5438,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats de la llar i la família per tipus i quotidianitat. Per sexe i situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6341/6332?lang=ca"
   },
   {
@@ -4235,6 +5452,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6342/25956?lang=ca"
   },
   {
@@ -4246,6 +5466,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6342/6333?lang=ca"
   },
   {
@@ -4257,6 +5480,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6343/25959?lang=ca"
   },
   {
@@ -4268,6 +5494,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6343/6334?lang=ca"
   },
   {
@@ -4279,6 +5508,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6344/25957?lang=ca"
   },
   {
@@ -4290,6 +5522,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6344/6335?lang=ca"
   },
   {
@@ -4301,6 +5536,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6345/25958?lang=ca"
   },
   {
@@ -4312,6 +5550,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat de la llar i la família a l'inici de cada hora. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6345/6336?lang=ca"
   },
   {
@@ -4323,6 +5564,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6346/26097?lang=ca"
   },
   {
@@ -4334,6 +5578,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats principals i secundàries de la llar i la família. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/6346/6337?lang=ca"
   },
   {
@@ -4345,6 +5592,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/933/25429?lang=ca"
   },
   {
@@ -4356,6 +5606,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/933/4760?lang=ca"
   },
   {
@@ -4367,6 +5620,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/933/889?lang=ca"
   },
   {
@@ -4378,6 +5634,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/934/25430?lang=ca"
   },
   {
@@ -4389,6 +5649,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/934/4913?lang=ca"
   },
   {
@@ -4400,6 +5663,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/934/890?lang=ca"
   },
   {
@@ -4411,6 +5677,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/935/25443?lang=ca"
   },
   {
@@ -4422,6 +5692,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/935/4737?lang=ca"
   },
   {
@@ -4433,6 +5707,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/935/891?lang=ca"
   },
   {
@@ -4444,6 +5722,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/936/4914?lang=ca"
   },
   {
@@ -4455,6 +5736,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries detallades en un dia mitjà. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/936/892?lang=ca"
   },
   {
@@ -4466,6 +5750,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/938/25434?lang=ca"
   },
   {
@@ -4477,6 +5764,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/938/4738?lang=ca"
   },
   {
@@ -4488,6 +5778,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/938/893?lang=ca"
   },
   {
@@ -4499,6 +5792,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/939/25435?lang=ca"
   },
   {
@@ -4510,6 +5806,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/939/4758?lang=ca"
   },
   {
@@ -4521,6 +5820,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/939/4759?lang=ca"
   },
   {
@@ -4532,6 +5834,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/940/25436?lang=ca"
   },
   {
@@ -4543,6 +5848,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/940/4915?lang=ca"
   },
   {
@@ -4554,6 +5862,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/940/895?lang=ca"
   },
   {
@@ -4565,6 +5876,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/941/25437?lang=ca"
   },
   {
@@ -4576,6 +5890,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/941/4740?lang=ca"
   },
   {
@@ -4587,6 +5904,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/941/896?lang=ca"
   },
   {
@@ -4598,6 +5918,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/942/25438?lang=ca"
   },
   {
@@ -4609,6 +5932,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/942/4916?lang=ca"
   },
   {
@@ -4620,6 +5946,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/942/897?lang=ca"
   },
   {
@@ -4631,6 +5960,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/943/25439?lang=ca"
   },
   {
@@ -4642,6 +5974,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/943/4917?lang=ca"
   },
   {
@@ -4653,6 +5988,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/943/898?lang=ca"
   },
   {
@@ -4664,6 +6002,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/944/25446?lang=ca"
   },
   {
@@ -4675,6 +6016,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/944/4741?lang=ca"
   },
   {
@@ -4686,6 +6030,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/944/899?lang=ca"
   },
   {
@@ -4697,6 +6044,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/945/25440?lang=ca"
   },
   {
@@ -4708,6 +6058,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/945/5050?lang=ca"
   },
   {
@@ -4719,6 +6072,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Distribució temporal de les activitats diàries en un dia mitjà. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/945/900?lang=ca"
   },
   {
@@ -4730,6 +6086,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/948/25516?lang=ca"
   },
   {
@@ -4741,6 +6100,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/948/4761?lang=ca"
   },
   {
@@ -4752,6 +6114,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/948/901?lang=ca"
   },
   {
@@ -4763,6 +6128,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/949/25517?lang=ca"
   },
   {
@@ -4774,6 +6143,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/949/4919?lang=ca"
   },
   {
@@ -4785,6 +6157,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/949/902?lang=ca"
   },
   {
@@ -4796,6 +6171,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/950/25515?lang=ca"
   },
   {
@@ -4807,6 +6186,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/950/4742?lang=ca"
   },
   {
@@ -4818,6 +6201,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/950/903?lang=ca"
   },
   {
@@ -4829,6 +6216,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/951/5052?lang=ca"
   },
   {
@@ -4840,6 +6230,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries detallades. Per grandària del municipi"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/951/904?lang=ca"
   },
   {
@@ -4851,6 +6244,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/960/25468?lang=ca"
   },
   {
@@ -4862,6 +6258,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/960/25521?lang=ca"
   },
   {
@@ -4873,6 +6272,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/961/25523?lang=ca"
   },
   {
@@ -4884,6 +6286,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/961/4744?lang=ca"
   },
   {
@@ -4895,6 +6300,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/961/906?lang=ca"
   },
   {
@@ -4906,6 +6314,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/962/25524?lang=ca"
   },
   {
@@ -4917,6 +6328,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/962/5054?lang=ca"
   },
   {
@@ -4928,6 +6342,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat civil"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/962/907?lang=ca"
   },
   {
@@ -4939,6 +6356,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/963/25525?lang=ca"
   },
   {
@@ -4950,6 +6370,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/963/4756?lang=ca"
   },
   {
@@ -4961,6 +6384,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/963/4757?lang=ca"
   },
   {
@@ -4972,6 +6398,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/964/25526?lang=ca"
   },
   {
@@ -4983,6 +6412,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/964/5055?lang=ca"
   },
   {
@@ -4994,6 +6426,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per estat de salut"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/964/909?lang=ca"
   },
   {
@@ -5005,6 +6440,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per nacionalitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/965/910?lang=ca"
   },
   {
@@ -5016,6 +6454,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/966/25527?lang=ca"
   },
   {
@@ -5027,6 +6468,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/966/5056?lang=ca"
   },
   {
@@ -5038,6 +6482,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/966/911?lang=ca"
   },
   {
@@ -5049,6 +6496,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/967/25528?lang=ca"
   },
   {
@@ -5060,6 +6510,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/967/5057?lang=ca"
   },
   {
@@ -5071,6 +6524,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/967/912?lang=ca"
   },
   {
@@ -5082,6 +6538,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/968/26336?lang=ca"
   },
   {
@@ -5093,6 +6552,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/968/5059?lang=ca"
   },
   {
@@ -5104,6 +6566,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/968/913?lang=ca"
   },
   {
@@ -5115,6 +6580,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/969/26326?lang=ca"
   },
   {
@@ -5126,6 +6594,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/969/5060?lang=ca"
   },
   {
@@ -5137,6 +6608,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/969/914?lang=ca"
   },
   {
@@ -5148,6 +6622,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/970/26061?lang=ca"
   },
   {
@@ -5159,6 +6636,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/970/5061?lang=ca"
   },
   {
@@ -5170,6 +6650,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per trimestre de realització de l'enquesta"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/970/915?lang=ca"
   },
   {
@@ -5181,6 +6664,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/971/25531?lang=ca"
   },
   {
@@ -5192,6 +6678,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/971/5062?lang=ca"
   },
   {
@@ -5203,6 +6692,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/971/916?lang=ca"
   },
   {
@@ -5214,6 +6706,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/972/25535?lang=ca"
   },
   {
@@ -5225,6 +6720,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/972/4747?lang=ca"
   },
   {
@@ -5236,6 +6734,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per composició de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/972/917?lang=ca"
   },
   {
@@ -5247,6 +6748,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/973/25532?lang=ca"
   },
   {
@@ -5258,6 +6762,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/973/5063?lang=ca"
   },
   {
@@ -5269,6 +6776,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/973/918?lang=ca"
   },
   {
@@ -5280,6 +6790,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Participació i durada mitjana de les activitats diàries. Per règim de tinença de l'habitatge"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/975/920?lang=ca"
   },
   {
@@ -5291,6 +6804,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/977/26050?lang=ca"
   },
   {
@@ -5302,6 +6818,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/977/5148?lang=ca"
   },
   {
@@ -5313,6 +6832,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per dia de la setmana"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/977/5154?lang=ca"
   },
   {
@@ -5324,6 +6846,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/978/26049?lang=ca"
   },
   {
@@ -5335,6 +6861,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/978/5128?lang=ca"
   },
   {
@@ -5346,6 +6876,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/978/5159?lang=ca"
   },
   {
@@ -5357,6 +6891,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/979/26051?lang=ca"
   },
   {
@@ -5368,6 +6906,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/979/5150?lang=ca"
   },
   {
@@ -5379,6 +6920,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/979/5155?lang=ca"
   },
   {
@@ -5390,6 +6934,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/980/26317?lang=ca"
   },
   {
@@ -5401,6 +6949,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/980/5151?lang=ca"
   },
   {
@@ -5412,6 +6963,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/980/5156?lang=ca"
   },
   {
@@ -5423,6 +6977,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/981/26322?lang=ca"
   },
   {
@@ -5434,6 +6991,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/981/5153?lang=ca"
   },
   {
@@ -5445,6 +7005,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que fa la mateixa activitat a l'inici de cada hora. Per la relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/981/5157?lang=ca"
   },
   {
@@ -5456,6 +7019,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/983/25544?lang=ca"
   },
   {
@@ -5467,6 +7034,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/983/5068?lang=ca"
   },
   {
@@ -5478,6 +7048,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per sexe"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/983/926?lang=ca"
   },
   {
@@ -5489,6 +7062,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/984/25545?lang=ca"
   },
   {
@@ -5500,6 +7077,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/984/5069?lang=ca"
   },
   {
@@ -5511,6 +7091,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat a l'inici de cada hora. Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/984/927?lang=ca"
   },
   {
@@ -5522,6 +7105,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/985/25546?lang=ca"
   },
   {
@@ -5533,6 +7119,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/985/5070?lang=ca"
   },
   {
@@ -5544,6 +7133,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per tipus de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/985/928?lang=ca"
   },
   {
@@ -5555,6 +7147,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/986/25547?lang=ca"
   },
   {
@@ -5566,6 +7161,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/986/5071?lang=ca"
   },
   {
@@ -5577,6 +7175,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada per compte d'altri que fa treball remunerat a l'inici de cada hora. Per distribució de la jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/986/929?lang=ca"
   },
   {
@@ -5588,6 +7189,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/987/26338?lang=ca"
   },
   {
@@ -5599,6 +7203,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/987/5074?lang=ca"
   },
   {
@@ -5610,6 +7217,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per situació professional"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/987/930?lang=ca"
   },
   {
@@ -5621,6 +7231,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/988/26328?lang=ca"
   },
   {
@@ -5632,6 +7245,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/988/5075?lang=ca"
   },
   {
@@ -5643,6 +7259,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població ocupada que fa treball remunerat l'inici de cada hora. Per sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/988/931?lang=ca"
   },
   {
@@ -5654,6 +7273,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/989/5083?lang=ca"
   },
   {
@@ -5665,6 +7287,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Durada mitjana setmanal del treball remunerat de la població ocupada. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/989/5129?lang=ca"
   },
   {
@@ -5676,6 +7301,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/993/26242?lang=ca"
   },
   {
@@ -5687,6 +7315,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/993/5078?lang=ca"
   },
   {
@@ -5698,6 +7329,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/993/934?lang=ca"
   },
   {
@@ -5709,6 +7343,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/994/26243?lang=ca"
   },
   {
@@ -5720,6 +7357,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/994/5080?lang=ca"
   },
   {
@@ -5731,6 +7371,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per grandària de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/994/935?lang=ca"
   },
   {
@@ -5742,6 +7385,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/995/26245?lang=ca"
   },
   {
@@ -5753,6 +7399,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/995/5082?lang=ca"
   },
   {
@@ -5764,6 +7413,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Llars que han rebut ajuda en el mes anterior. Per ingressos mensuals de la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/995/936?lang=ca"
   },
   {
@@ -5775,6 +7427,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/997/26246?lang=ca"
   },
   {
@@ -5786,6 +7441,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/997/5177?lang=ca"
   },
   {
@@ -5797,6 +7456,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior"
     },
+    "geo_ids": [
+      "at",
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/997/937?lang=ca"
   },
   {
@@ -5808,6 +7471,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/998/26247?lang=ca"
   },
   {
@@ -5819,6 +7485,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/998/5099?lang=ca"
   },
   {
@@ -5830,6 +7499,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta de l'ús del temps",
       "node": "Població que va ajudar altres llars en el mes anterior. Per sexe i edat en grans grups"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eut/998/938?lang=ca"
   }
 ];

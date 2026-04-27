@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with establishments in Catalonia as of 1 January. By economic activity sector, branch and number of employees in the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20907/24699?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with establishments in Catalonia as of 1 January. By economic activity sector, branch and legal form of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20908/24700?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with establishments in Catalonia as of 1 January. By economic activity group and number of employees in the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20910/24701?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with establishments in Catalonia as of 1 January. By economic activity group and legal form of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20911/24702?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with the head office in Catalonia as of 1 January. By economic activity sector, branch and number of employees in the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20920/24703?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with the head office in Catalonia as of 1 January. By economic activity sector, branch and legal form of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20921/24704?lang=en"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with the head office in Catalonia as of 1 January. By economic activity group and number of employees in the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20923/24705?lang=en"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Companies with the head office in Catalonia as of 1 January. By economic activity group and legal form of the company"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20924/24706?lang=en"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Establishments in Catalonia as of 1 January. By economic activity sector, branch and number of employees of the establishment"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20926/21576?lang=en"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Companies and Establishments",
       "node": "Establishments in Catalonia as of 1 January. By economic activity group and number of employees of the establishment"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ee/20927/21577?lang=en"
   }
 ];

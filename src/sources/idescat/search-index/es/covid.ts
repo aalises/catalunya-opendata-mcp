@@ -11,6 +11,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14172/15258?lang=es"
   },
   {
@@ -22,6 +27,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19 por PCR/TA. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14176/15252?lang=es"
   },
   {
@@ -33,6 +42,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por tipo de diagnóstico"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14177/15078?lang=es"
   },
   {
@@ -44,6 +57,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14179/15260?lang=es"
   },
   {
@@ -55,6 +72,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos en la UCI por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14180/15261?lang=es"
   },
   {
@@ -66,6 +87,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14181/15253?lang=es"
   },
   {
@@ -77,6 +102,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14183/15263?lang=es"
   },
   {
@@ -88,6 +117,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14184/15254?lang=es"
   },
   {
@@ -99,6 +132,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados por PCR/TA y defunciones de población en residencias. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14186/15255?lang=es"
   },
   {
@@ -110,6 +147,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados por PCR/TA y defunciones de población en residencias. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14187/15256?lang=es"
   },
   {
@@ -121,6 +161,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados por PCR/TA y defunciones de población en residencias. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14187/15632?lang=es"
   },
   {
@@ -132,6 +175,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14323/15621?lang=es"
   },
   {
@@ -143,6 +189,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos en la UCI por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14324/15622?lang=es"
   },
   {
@@ -154,6 +203,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14332/15623?lang=es"
   },
   {
@@ -165,6 +217,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14333/15620?lang=es"
   },
   {
@@ -176,6 +231,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14334/15265?lang=es"
   },
   {
@@ -187,6 +247,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14335/15286?lang=es"
   },
   {
@@ -198,6 +261,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por tipo de diagnóstico"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14336/15267?lang=es"
   },
   {
@@ -209,6 +276,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14337/15268?lang=es"
   },
   {
@@ -220,6 +291,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos en la UCI por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14338/15269?lang=es"
   },
   {
@@ -231,6 +306,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14339/15270?lang=es"
   },
   {
@@ -242,6 +321,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados por PCR/TA y defunciones de población en residencias. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14340/15271?lang=es"
   },
   {
@@ -253,6 +336,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14341/15552?lang=es"
   },
   {
@@ -264,6 +351,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14342/15579?lang=es"
   },
   {
@@ -275,6 +365,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14452/15317?lang=es"
   },
   {
@@ -286,6 +381,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por edad decenal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14453/15318?lang=es"
   },
   {
@@ -297,6 +395,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por tipo de diagnóstico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14454/15319?lang=es"
   },
   {
@@ -308,6 +409,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14455/15320?lang=es"
   },
   {
@@ -319,6 +423,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14456/15321?lang=es"
   },
   {
@@ -330,6 +438,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados por PCR/TA de la población en residencias"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14457/15322?lang=es"
   },
   {
@@ -341,6 +453,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19 de la población en residencias"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14458/15323?lang=es"
   },
   {
@@ -352,6 +468,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14464/15553?lang=es"
   },
   {
@@ -363,6 +483,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14465/15580?lang=es"
   },
   {
@@ -374,6 +497,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados, ingresos hospitalarios y defunciones. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14466/15582?lang=es"
   },
   {
@@ -385,6 +511,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados, ingresos hospitalarios y defunciones. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14467/15634?lang=es"
   },
   {
@@ -396,6 +525,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14684/15599?lang=es"
   },
   {
@@ -407,6 +540,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14685/15600?lang=es"
   },
   {
@@ -418,6 +554,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Vacunación del covid-19. Por pauta vacunal y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14686/15624?lang=es"
   },
   {
@@ -429,6 +569,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados, ingresos hospitalarios e ingresos en la UCI. Por pauta vacunal y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14689/15581?lang=es"
   },
   {
@@ -440,6 +583,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14690/15554?lang=es"
   },
   {
@@ -451,6 +597,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14691/15536?lang=es"
   },
   {
@@ -462,6 +611,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos en la UCI por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14692/15555?lang=es"
   },
   {
@@ -473,6 +625,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por pauta vacunal, sexo y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14693/15556?lang=es"
   },
   {
@@ -484,6 +639,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados, ingresos hospitalarios e ingresos en la UCI. Por pauta vacunal y edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14695/15619?lang=es"
   },
   {
@@ -495,6 +653,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Casos confirmados del covid-19 por PCR/TA. Por sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14735/15633?lang=es"
   },
   {
@@ -506,6 +668,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos hospitalarios por covid-19. Por sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14736/15629?lang=es"
   },
   {
@@ -517,6 +683,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Ingresos en la UCI por covid-19. Por sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14737/15630?lang=es"
   },
   {
@@ -528,6 +698,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del covid-19",
       "node": "Defunciones por covid-19. Por sexo y edad decenal"
     },
+    "geo_ids": [
+      "cat",
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/covid/14738/15631?lang=es"
   }
 ];

@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14941/15809?lang=en"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/15803?lang=en"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/26699?lang=en"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/15875?lang=en"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/26701?lang=en"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/15807?lang=en"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/26704?lang=en"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity sector and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/15804?lang=en"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity sector and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/26700?lang=en"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity section and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/15876?lang=en"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity section and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/26703?lang=en"
   },
   {
@@ -132,6 +209,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity division and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/15813?lang=en"
   },
   {
@@ -143,6 +224,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Contribution accounts under the Social Security General Regime and the Special Coal Mining Regime . By economic activity division and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/26705?lang=en"
   },
   {
@@ -154,6 +239,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/15879?lang=en"
   },
   {
@@ -165,6 +257,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/26690?lang=en"
   },
   {
@@ -176,6 +275,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity sector and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/15880?lang=en"
   },
   {
@@ -187,6 +293,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity sector and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/26691?lang=en"
   },
   {
@@ -198,6 +311,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/15881?lang=en"
   },
   {
@@ -209,6 +329,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/26692?lang=en"
   },
   {
@@ -220,6 +347,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity section and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/15882?lang=en"
   },
   {
@@ -231,6 +365,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity section and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/26693?lang=en"
   },
   {
@@ -242,6 +383,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/15883?lang=en"
   },
   {
@@ -253,6 +401,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/26694?lang=en"
   },
   {
@@ -264,6 +419,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity division and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/15884?lang=en"
   },
   {
@@ -275,6 +434,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By economic activity division and contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/26695?lang=en"
   },
   {
@@ -286,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Social Security General Regime and the Special Coal Mining Regime. By contribution account size. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14993/15885?lang=en"
   },
   {
@@ -297,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/15886?lang=en"
   },
   {
@@ -308,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity sector. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/26696?lang=en"
   },
   {
@@ -319,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/15887?lang=en"
   },
   {
@@ -330,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity section. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/26697?lang=en"
   },
   {
@@ -341,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/15888?lang=en"
   },
   {
@@ -352,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Salaried Employment and Self-Employment according to Social Security Affiliations",
       "node": "Affiliations to the Special Regime for Self-Employed Workers. By economic activity division. As of last day of the month"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/26698?lang=en"
   }
 ];

@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de uso de las tecnologías de la información y la comunicación y del comercio electrónico de las empresas. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14621/20418?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Coste salarial. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14622/23079?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Coste salarial. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14623/20417?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Valor de la producción vendida de bienes de alta tecnología. Por grupos de productos"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14624/15831?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado por empresas con sede social en Cataluña. Por sectores según el nivel tecnológico y tipo de actividad innovadora. Distribución porcentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14625/20449?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de innovación de las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14632/19341?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de innovación de las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14633/19342?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Intensidad de innovación de las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14636/20436?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Intensidad de innovación de las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14637/20439?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores económicos de la actividad realizada en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14650/19529?lang=es"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores económicos de las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14651/23072?lang=es"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores económicos de la actividad realizada en Cataluña. Por ramas de actividad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14652/19530?lang=es"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores económicos de las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14653/23073?lang=es"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14654/20448?lang=es"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado por empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14655/20450?lang=es"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14656/20452?lang=es"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado por empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14657/20454?lang=es"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de gasto en I+D interna realizada en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14658/19355?lang=es"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de gasto en I+D interna realizada por las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14659/19548?lang=es"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de gasto en I+D interna realizada en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14660/19550?lang=es"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en I+D interno realizada en Cataluña. Por sectores según el nivel tecnológico y la naturaleza del gasto"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14661/20432?lang=es"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de gasto en I+D interna realizada por las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14662/19552?lang=es"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en I+D interno realizada por las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico y la naturaleza del gasto"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14663/20430?lang=es"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en I+D interno realizada en Cataluña. Por rama de actividad económica y la naturaleza del gasto"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14664/20433?lang=es"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en I+D interno realizada por las empresas con sede social en Cataluña. Por rama de actividad económica y la naturaleza del gasto"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14665/20431?lang=es"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal ocupado en I+D interna realizada en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14666/19564?lang=es"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal ocupado en I+D interna en empresas con sede social en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14667/19565?lang=es"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal ocupado en I+D interna realizada en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14668/19572?lang=es"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal ocupado en I+D interna en empresas con sede social en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14669/19573?lang=es"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14670/19566?lang=es"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal en equivalencia a jornada completa (EJC) ocupado en I+D interna en empresas con sede social en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14671/19567?lang=es"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14672/19574?lang=es"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Personal en equivalencia a jornada completa (EJC) ocupado en I+D interna en empresas con sede social en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14673/19575?lang=es"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20804/19354?lang=es"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada por las empresas con sede social en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20805/19547?lang=es"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada en Cataluña. Por sectores según el nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20811/19549?lang=es"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales indicadores de personal en equivalencia a jornada completa (EJC) ocupado en I+D interna realizada por las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20812/19551?lang=es"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres ocupadas en I+D interna realizada en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20815/19568?lang=es"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres ocupadas en I+D interna en empresas con sede social en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20816/19569?lang=es"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres ocupadas en I+D interna realizada en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20818/19576?lang=es"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres ocupadas en I+D interna en empresas con sede social en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20819/19577?lang=es"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres en equivalencia a jornada completa (EJC) ocupadas en I+D interna realizada en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20822/19570?lang=es"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres en equivalencia a jornada completa (EJC) ocupadas en I+D interna en empresas con sede social en Cataluña. Por sectores según nivel tecnológico y por tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20823/19571?lang=es"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres en equivalencia a jornada completa (EJC) ocupadas en I+D interna realizada en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20825/19578?lang=es"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Porcentaje de mujeres en equivalencia a jornada completa (EJC) ocupadas en I+D en empresas con sede social en Cataluña. Por rama de actividad económica y tipo de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20826/19579?lang=es"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado por empresas con sede social en Cataluña. Por sectores según el nivel tecnológico y tipo de actividad innovadora. Distribución percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20827/20451?lang=es"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Por rama de actividad económica y tipo de actividad innovadora"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20829/20453?lang=es"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Gasto en actividades innovadoras realizado por empresas con sede social en Cataluña. Por rama de actividad económica y tipo de actividad innovadora. Distribución porcentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20830/20455?lang=es"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad realizada en Cataluña. Por sectores según nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22039/19506?lang=es"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad realizada en Cataluña. Por sectores según el nivel tecnológico. Distribución porcentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22040/19512?lang=es"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22041/23003?lang=es"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por rama de actividad económica. Distribución percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22042/19514?lang=es"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por sectores según nivel tecnológico"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22043/23068?lang=es"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por sectores según nivel tecnológico. Distribución porcentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22044/23069?lang=es"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22045/23070?lang=es"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadores de los sectores y productos de alta tecnología",
       "node": "Principales resultados económicos de la actividad de las empresas con sede social en Cataluña. Por rama de actividad económica. Distribución porcentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22046/23071?lang=es"
   }
 ];

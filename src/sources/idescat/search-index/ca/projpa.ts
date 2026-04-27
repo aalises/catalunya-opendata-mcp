@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i escenari"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14859/15719?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i grup d'edat. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14863/15720?lang=ca"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i grup d'edat. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14864/15745?lang=ca"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i grup d'edat. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14865/15747?lang=ca"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i edat quinquennal. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14866/15754?lang=ca"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i edat quinquennal. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14867/15755?lang=ca"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Població activa projectada per sexe i edat quinquennal. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14868/15756?lang=ca"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per escenari"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14869/15721?lang=ca"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14870/15751?lang=ca"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14871/15752?lang=ca"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14872/15753?lang=ca"
   },
   {
@@ -132,6 +209,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe i grup d'edat. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14873/15722?lang=ca"
   },
   {
@@ -143,6 +227,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe i grup d'edat. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14874/15749?lang=ca"
   },
   {
@@ -154,6 +245,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de població activa",
       "node": "Taxa d'activitat projectada per sexe i grup d'edat. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14875/15750?lang=ca"
   }
 ];

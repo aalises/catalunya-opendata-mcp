@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, means of transport and sections of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18130/9?lang=en"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and 1st and 2nd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18131/14?lang=en"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and chapters (Combined Nomenclature – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18132/5?lang=en"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and sections (SITC-Rev.4 – 1 digit)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18133/10?lang=en"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity sections (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18134/8?lang=en"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and 1st and 2nd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18135/13?lang=en"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and chapters (Combined Nomenclature – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18136/4?lang=en"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and sections (SITC-Rev.4 – 1 digit)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18137/2?lang=en"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity sections (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18176/19?lang=en"
   },
   {
@@ -110,6 +146,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and sections (SITC-Rev.4 – 1 digit)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18177/17?lang=en"
   },
   {
@@ -121,6 +161,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and chapters (Combined Nomenclature – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18178/15?lang=en"
   },
   {
@@ -132,6 +176,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, means of transport and 1st and 2nd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18179/12?lang=en"
   },
   {
@@ -143,6 +191,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, mode of transport and sections of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18182/20?lang=en"
   },
   {
@@ -154,6 +206,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, mode of transport and groups 1st and 2nd level (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18183/11?lang=en"
   },
   {
@@ -165,6 +221,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and chapters (Combined Nomenclature – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18184/16?lang=en"
   },
   {
@@ -176,6 +236,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and sections (SITC-Rev.4 – 1 digit)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/18185/18?lang=en"
   },
   {
@@ -187,6 +251,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and headings (Combined Nomenclature – 4 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/20613/1?lang=en"
   },
   {
@@ -198,6 +266,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and headings (Combined Nomenclature – 4 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22063/30?lang=en"
   },
   {
@@ -209,6 +281,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and headings (Combined Nomenclature – 4 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22064/29?lang=en"
   },
   {
@@ -220,6 +296,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and headings (Combined Nomenclature – 4 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22065/33?lang=en"
   },
   {
@@ -231,6 +311,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and subheadings (Combined Nomenclature – 6 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22066/28?lang=en"
   },
   {
@@ -242,6 +326,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and subheadings (Combined Nomenclature – 6 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22067/31?lang=en"
   },
   {
@@ -253,6 +341,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and subheadings (Combined Nomenclature – 6 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22068/27?lang=en"
   },
   {
@@ -264,6 +356,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and subheadings (Combined Nomenclature – 6 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22069/34?lang=en"
   },
   {
@@ -275,6 +371,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and positions (Combined Nomenclature – 8 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22070/24?lang=en"
   },
   {
@@ -286,6 +386,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and positions (Combined Nomenclature – 8 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22071/32?lang=en"
   },
   {
@@ -297,6 +401,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and positions (Combined Nomenclature – 8 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22072/23?lang=en"
   },
   {
@@ -308,6 +416,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and positions (Combined Nomenclature – 8 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22073/35?lang=en"
   },
   {
@@ -319,6 +431,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and divisions (SITC-Rev.4 – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22074/36?lang=en"
   },
   {
@@ -330,6 +446,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and divisions (SITC-Rev.4 – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22075/38?lang=en"
   },
   {
@@ -341,6 +461,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and divisions (SITC-Rev.4 – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22076/40?lang=en"
   },
   {
@@ -352,6 +476,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and divisions (SITC-Rev.4 – 2 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22077/42?lang=en"
   },
   {
@@ -363,6 +491,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and groups (SITC-Rev.4 – 3 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22078/37?lang=en"
   },
   {
@@ -374,6 +506,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and groups (SITC-Rev.4 – 3 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22079/39?lang=en"
   },
   {
@@ -385,6 +521,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and groups (SITC-Rev.4 – 3 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22080/41?lang=en"
   },
   {
@@ -396,6 +536,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continents and geographical areas, means of transport and groups (SITC-Rev.4 – 3 digits)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22082/43?lang=en"
   },
   {
@@ -407,6 +551,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and 3rd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22083/44?lang=en"
   },
   {
@@ -418,6 +566,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, means of transport and 3rd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22084/45?lang=en"
   },
   {
@@ -429,6 +581,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and 3rd level groups (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22085/46?lang=en"
   },
   {
@@ -440,6 +596,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, mode of transport and groups 3rd level (economic destination of goods)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22086/47?lang=en"
   },
   {
@@ -451,6 +611,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity divisions (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22088/48?lang=en"
   },
   {
@@ -462,6 +626,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, means of transport and divisions of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22089/50?lang=en"
   },
   {
@@ -473,6 +641,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity divisions (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22090/52?lang=en"
   },
   {
@@ -484,6 +656,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, mode of transport and divisions of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22091/54?lang=en"
   },
   {
@@ -495,6 +671,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity groups (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22092/49?lang=en"
   },
   {
@@ -506,6 +686,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, means of transport and groups of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22093/51?lang=en"
   },
   {
@@ -517,6 +701,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By countries, means of transport and economic activity groups (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22094/53?lang=en"
   },
   {
@@ -528,6 +716,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade",
       "node": "Exports and imports. By continent and geographic area, mode of transport and groups of economic activity (CCAE-2009)"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comest/22095/55?lang=en"
   }
 ];

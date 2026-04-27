@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Llars projectades (base 2024). Per escenari"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21003/24891?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Grandària mitjana de la llar projectada (base 2024). Per escenari"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21004/24892?lang=ca"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21009/24854?lang=ca"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21010/24855?lang=ca"
   },
   {
@@ -55,6 +83,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari mitjà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21011/24904?lang=ca"
   },
   {
@@ -66,6 +100,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21012/24857?lang=ca"
   },
   {
@@ -77,6 +118,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21013/24858?lang=ca"
   },
   {
@@ -88,6 +136,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari alt"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21014/24905?lang=ca"
   },
   {
@@ -99,6 +153,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Llars projectades a 1 de gener (base 2024). Per grandària de la llar. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21015/24860?lang=ca"
   },
   {
@@ -110,6 +171,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Grandària mitjana de la llar projectada a 1 de gener (base 2024). Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21016/24866?lang=ca"
   },
   {
@@ -121,6 +189,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Projeccions de llars",
       "node": "Població projectada a 1 de gener (base 2024). Per sexe, edat i grandària de la llar. Escenari baix"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21017/24906?lang=ca"
   }
 ];

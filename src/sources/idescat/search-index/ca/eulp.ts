@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/11588/25356?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/11588/26085?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/13022/13969?lang=ca"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/13022/24696?lang=ca"
   },
   {
@@ -55,6 +67,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics i àmbits d'ús"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20807/24697?lang=ca"
   },
   {
@@ -66,6 +84,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics i àmbits d'ús"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20807/24765?lang=ca"
   },
   {
@@ -77,6 +101,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20808/24666?lang=ca"
   },
   {
@@ -88,6 +116,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20808/24698?lang=ca"
   },
   {
@@ -99,6 +131,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20809/24667?lang=ca"
   },
   {
@@ -110,6 +146,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20809/24708?lang=ca"
   },
   {
@@ -121,6 +161,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20810/24668?lang=ca"
   },
   {
@@ -132,6 +176,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20810/24748?lang=ca"
   },
   {
@@ -143,6 +191,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20832/24672?lang=ca"
   },
   {
@@ -154,6 +206,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20832/26132?lang=ca"
   },
   {
@@ -165,6 +222,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20833/24674?lang=ca"
   },
   {
@@ -176,6 +238,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20833/26121?lang=ca"
   },
   {
@@ -187,6 +254,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20834/24675?lang=ca"
   },
   {
@@ -198,6 +269,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20834/26131?lang=ca"
   },
   {
@@ -209,6 +285,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20836/24676?lang=ca"
   },
   {
@@ -220,6 +300,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nacionalitat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20836/26126?lang=ca"
   },
   {
@@ -231,6 +315,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20837/24730?lang=ca"
   },
   {
@@ -242,6 +330,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20837/24732?lang=ca"
   },
   {
@@ -253,6 +345,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20838/24688?lang=ca"
   },
   {
@@ -264,6 +360,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i relació amb l'activitat econòmica"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20838/26127?lang=ca"
   },
   {
@@ -275,6 +375,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població ocupada. Per coneixement de llengües i situació professional"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20839/24889?lang=ca"
   },
   {
@@ -286,6 +390,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement de la mare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20840/24677?lang=ca"
   },
   {
@@ -297,6 +405,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement de la mare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20840/26128?lang=ca"
   },
   {
@@ -308,6 +420,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement del pare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20841/24678?lang=ca"
   },
   {
@@ -319,6 +435,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement del pare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20841/26129?lang=ca"
   },
   {
@@ -330,6 +450,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i lloc de naixement de la parella"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20842/24679?lang=ca"
   },
   {
@@ -341,6 +465,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit per la mare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20843/24733?lang=ca"
   },
   {
@@ -352,6 +480,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit per la mare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20843/24734?lang=ca"
   },
   {
@@ -363,6 +495,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit per la mare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20843/24735?lang=ca"
   },
   {
@@ -374,6 +510,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit pel pare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20844/24736?lang=ca"
   },
   {
@@ -385,6 +525,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit pel pare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20844/24737?lang=ca"
   },
   {
@@ -396,6 +540,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i nivell de formació assolit pel pare"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20844/24738?lang=ca"
   },
   {
@@ -407,6 +555,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua d'identificació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20845/24689?lang=ca"
   },
   {
@@ -418,6 +570,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua d'identificació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20845/24719?lang=ca"
   },
   {
@@ -429,6 +585,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua d'identificació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20845/24822?lang=ca"
   },
   {
@@ -440,6 +600,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20846/24690?lang=ca"
   },
   {
@@ -451,6 +615,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20846/24720?lang=ca"
   },
   {
@@ -462,6 +630,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20846/24823?lang=ca"
   },
   {
@@ -473,6 +645,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20847/24691?lang=ca"
   },
   {
@@ -484,6 +660,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20847/24721?lang=ca"
   },
   {
@@ -495,6 +675,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20847/24824?lang=ca"
   },
   {
@@ -506,6 +690,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i usos lingüístics a la llar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20848/24693?lang=ca"
   },
   {
@@ -517,6 +704,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i usos lingüístics a la llar"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20848/24722?lang=ca"
   },
   {
@@ -528,6 +719,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del català i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20849/24680?lang=ca"
   },
   {
@@ -539,6 +734,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del català i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20849/24681?lang=ca"
   },
   {
@@ -550,6 +749,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del català i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20849/25124?lang=ca"
   },
   {
@@ -561,6 +764,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del castellà i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20850/24682?lang=ca"
   },
   {
@@ -572,6 +779,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del castellà i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20850/24683?lang=ca"
   },
   {
@@ -583,6 +794,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del castellà i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20850/25153?lang=ca"
   },
   {
@@ -594,6 +809,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de l'anglès i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20851/24684?lang=ca"
   },
   {
@@ -605,6 +824,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement del francès i edat quinquennal"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20852/24685?lang=ca"
   },
   {
@@ -616,6 +839,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que parla habitualment"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20896/24759?lang=ca"
   },
   {
@@ -627,6 +853,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per les tres primeres llengües més freqüents que parla habitualment"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20897/24760?lang=ca"
   },
   {
@@ -638,6 +869,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que parla habitualment i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20898/24761?lang=ca"
   },
   {
@@ -649,6 +884,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que parla habitualment i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20899/24762?lang=ca"
   },
   {
@@ -660,6 +899,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que parla habitualment i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20900/24763?lang=ca"
   },
   {
@@ -671,6 +914,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20912/24777?lang=ca"
   },
   {
@@ -682,6 +931,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20912/24778?lang=ca"
   },
   {
@@ -693,6 +948,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20913/24770?lang=ca"
   },
   {
@@ -704,6 +963,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20913/24771?lang=ca"
   },
   {
@@ -715,6 +978,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20914/24772?lang=ca"
   },
   {
@@ -726,6 +993,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20914/24773?lang=ca"
   },
   {
@@ -737,6 +1008,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20915/24774?lang=ca"
   },
   {
@@ -748,6 +1023,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20915/24775?lang=ca"
   },
   {
@@ -759,6 +1038,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb la mare, pare o parella segons la llengua inicial de la mare, pare o parella"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20916/24776?lang=ca"
   },
   {
@@ -770,6 +1053,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20933/24786?lang=ca"
   },
   {
@@ -781,6 +1069,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20933/26120?lang=ca"
   },
   {
@@ -792,6 +1085,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20934/24787?lang=ca"
   },
   {
@@ -803,6 +1100,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20935/24788?lang=ca"
   },
   {
@@ -814,6 +1115,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre l'interès a aprendre català o millorar-ne els coneixements, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20936/24789?lang=ca"
   },
   {
@@ -825,6 +1130,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i coneixement del català"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20974/24825?lang=ca"
   },
   {
@@ -836,6 +1145,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de llengües i coneixement del català"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/20974/26130?lang=ca"
   },
   {
@@ -847,6 +1160,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per percentatge diari d'ús parlat del català"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21001/26110?lang=ca"
   },
   {
@@ -858,6 +1176,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població ocupada. Per coneixement de llengües i sector d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21069/24886?lang=ca"
   },
   {
@@ -869,6 +1191,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població ocupada. Per coneixement de llengües i ocupació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21070/24887?lang=ca"
   },
   {
@@ -880,6 +1206,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població ocupada. Per coneixement de llengües i ocupació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21070/24888?lang=ca"
   },
   {
@@ -891,6 +1221,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població ocupada. Per coneixement de llengües i llengua habitual al centre de treball"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21071/24890?lang=ca"
   },
   {
@@ -902,6 +1236,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21214/25053?lang=ca"
   },
   {
@@ -913,6 +1251,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21214/25057?lang=ca"
   },
   {
@@ -924,6 +1266,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua d'identificació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21215/25058?lang=ca"
   },
   {
@@ -935,6 +1281,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua d'identificació"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21215/25065?lang=ca"
   },
   {
@@ -946,6 +1296,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21216/25059?lang=ca"
   },
   {
@@ -957,6 +1311,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics, àmbits d'ús i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21216/25152?lang=ca"
   },
   {
@@ -968,6 +1326,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21429/25311?lang=ca"
   },
   {
@@ -979,6 +1340,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21429/26074?lang=ca"
   },
   {
@@ -990,6 +1354,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21430/25324?lang=ca"
   },
   {
@@ -1001,6 +1368,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21430/26075?lang=ca"
   },
   {
@@ -1012,6 +1382,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21431/25328?lang=ca"
   },
   {
@@ -1023,6 +1396,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21431/26076?lang=ca"
   },
   {
@@ -1034,6 +1410,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21432/25232?lang=ca"
   },
   {
@@ -1045,6 +1424,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21432/26077?lang=ca"
   },
   {
@@ -1056,6 +1438,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21433/25233?lang=ca"
   },
   {
@@ -1067,6 +1452,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per usos lingüístics amb els membres de la família i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21433/26078?lang=ca"
   },
   {
@@ -1078,6 +1466,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català i per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21434/25234?lang=ca"
   },
   {
@@ -1089,6 +1480,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català i per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21434/26087?lang=ca"
   },
   {
@@ -1100,6 +1494,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21435/25235?lang=ca"
   },
   {
@@ -1111,6 +1508,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21435/26088?lang=ca"
   },
   {
@@ -1122,6 +1522,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21436/25236?lang=ca"
   },
   {
@@ -1133,6 +1536,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21436/26089?lang=ca"
   },
   {
@@ -1144,6 +1550,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21487/25267?lang=ca"
   },
   {
@@ -1155,6 +1564,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua, i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21487/26079?lang=ca"
   },
   {
@@ -1166,6 +1578,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21488/25268?lang=ca"
   },
   {
@@ -1177,6 +1592,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21488/26080?lang=ca"
   },
   {
@@ -1188,6 +1606,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Per estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21489/26081?lang=ca"
   },
   {
@@ -1199,6 +1620,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per percentatge diari d'ús parlat del català i estratificació territorial mostral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21494/26086?lang=ca"
   },
   {
@@ -1210,6 +1634,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per coneixement de l'aranès i edat"
     },
+    "geo_ids": [
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21502/26134?lang=ca"
   },
   {
@@ -1221,6 +1648,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per percentatge diari d'ús parlat de l'aranès"
     },
+    "geo_ids": [
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/21991/26139?lang=ca"
   },
   {
@@ -1232,6 +1662,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2973/23131?lang=ca"
   },
   {
@@ -1243,6 +1678,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2973/3002?lang=ca"
   },
   {
@@ -1254,6 +1694,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2989/23141?lang=ca"
   },
   {
@@ -1265,6 +1710,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2989/3010?lang=ca"
   },
   {
@@ -1276,6 +1726,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2990/23136?lang=ca"
   },
   {
@@ -1287,6 +1742,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/2990/3006?lang=ca"
   },
   {
@@ -1298,6 +1758,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3085/25219?lang=ca"
   },
   {
@@ -1309,6 +1773,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3085/3034?lang=ca"
   },
   {
@@ -1320,6 +1788,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3086/25223?lang=ca"
   },
   {
@@ -1331,6 +1803,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3086/3039?lang=ca"
   },
   {
@@ -1342,6 +1818,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3091/3041?lang=ca"
   },
   {
@@ -1353,6 +1833,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3092/3042?lang=ca"
   },
   {
@@ -1364,6 +1848,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua, i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3093/3044?lang=ca"
   },
   {
@@ -1375,6 +1863,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3100/3071?lang=ca"
   },
   {
@@ -1386,6 +1878,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3100/7368?lang=ca"
   },
   {
@@ -1397,6 +1893,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3101/3073?lang=ca"
   },
   {
@@ -1408,6 +1908,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3101/7370?lang=ca"
   },
   {
@@ -1419,6 +1923,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3102/3074?lang=ca"
   },
   {
@@ -1430,6 +1938,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3102/7372?lang=ca"
   },
   {
@@ -1441,6 +1953,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3163/11761?lang=ca"
   },
   {
@@ -1452,6 +1967,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3163/23127?lang=ca"
   },
   {
@@ -1463,6 +1983,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3163/2986?lang=ca"
   },
   {
@@ -1474,6 +1998,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3163/7219?lang=ca"
   },
   {
@@ -1485,6 +2013,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3165/23142?lang=ca"
   },
   {
@@ -1496,6 +2029,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3165/2998?lang=ca"
   },
   {
@@ -1507,6 +2045,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3167/23130?lang=ca"
   },
   {
@@ -1518,6 +2061,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3167/2999?lang=ca"
   },
   {
@@ -1529,6 +2077,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3170/23128?lang=ca"
   },
   {
@@ -1540,6 +2094,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3170/25363?lang=ca"
   },
   {
@@ -1551,6 +2111,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua inicial"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3170/3126?lang=ca"
   },
   {
@@ -1562,6 +2128,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3173/11762?lang=ca"
   },
   {
@@ -1573,6 +2142,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3173/23132?lang=ca"
   },
   {
@@ -1584,6 +2158,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3173/3003?lang=ca"
   },
   {
@@ -1595,6 +2173,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3173/7220?lang=ca"
   },
   {
@@ -1606,6 +2188,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3175/25217?lang=ca"
   },
   {
@@ -1617,6 +2203,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3175/3025?lang=ca"
   },
   {
@@ -1628,6 +2218,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3177/25218?lang=ca"
   },
   {
@@ -1639,6 +2233,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3177/3033?lang=ca"
   },
   {
@@ -1650,6 +2248,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3178/23134?lang=ca"
   },
   {
@@ -1661,6 +2264,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3178/3004?lang=ca"
   },
   {
@@ -1672,6 +2280,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3179/25216?lang=ca"
   },
   {
@@ -1683,6 +2296,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en català i rebre resposta en castellà"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3179/3138?lang=ca"
   },
   {
@@ -1694,6 +2312,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3182/25221?lang=ca"
   },
   {
@@ -1705,6 +2327,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3182/3036?lang=ca"
   },
   {
@@ -1716,6 +2342,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3183/25222?lang=ca"
   },
   {
@@ -1727,6 +2357,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català, i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3183/3037?lang=ca"
   },
   {
@@ -1738,6 +2372,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3184/23135?lang=ca"
   },
   {
@@ -1749,6 +2388,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3184/3005?lang=ca"
   },
   {
@@ -1760,6 +2404,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3185/25220?lang=ca"
   },
   {
@@ -1771,6 +2420,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons l'actitud en iniciar una conversa en castellà i rebre resposta en català"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3185/3193?lang=ca"
   },
   {
@@ -1782,6 +2436,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre si la parla de les Illes Balears, la Comunitat Valenciana, Andorra i Catalunya són la mateixa llengua"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3188/3045?lang=ca"
   },
   {
@@ -1793,6 +2452,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3190/23133?lang=ca"
   },
   {
@@ -1804,6 +2469,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3190/25364?lang=ca"
   },
   {
@@ -1815,6 +2486,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3190/25370?lang=ca"
   },
   {
@@ -1826,6 +2503,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3190/3135?lang=ca"
   },
   {
@@ -1837,6 +2520,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3192/11797?lang=ca"
   },
   {
@@ -1848,6 +2534,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3192/23137?lang=ca"
   },
   {
@@ -1859,6 +2550,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3192/3007?lang=ca"
   },
   {
@@ -1870,6 +2565,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual. Llengües més freqüents"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3192/7221?lang=ca"
   },
   {
@@ -1881,6 +2580,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3194/23139?lang=ca"
   },
   {
@@ -1892,6 +2596,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3194/3008?lang=ca"
   },
   {
@@ -1903,6 +2612,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3196/23140?lang=ca"
   },
   {
@@ -1914,6 +2628,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3196/3009?lang=ca"
   },
   {
@@ -1925,6 +2644,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3202/23138?lang=ca"
   },
   {
@@ -1936,6 +2661,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3202/25365?lang=ca"
   },
   {
@@ -1947,6 +2677,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3202/3136?lang=ca"
   },
   {
@@ -1958,6 +2693,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3203/3202?lang=ca"
   },
   {
@@ -1969,6 +2709,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Sobre les llengües que li agradaria parlar en el futur"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3203/7366?lang=ca"
   },
   {
@@ -1980,6 +2725,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3291/3123?lang=ca"
   },
   {
@@ -1991,6 +2740,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3291/7450?lang=ca"
   },
   {
@@ -2002,6 +2755,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3292/3124?lang=ca"
   },
   {
@@ -2013,6 +2770,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3292/7451?lang=ca"
   },
   {
@@ -2024,6 +2785,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3293/3125?lang=ca"
   },
   {
@@ -2035,6 +2800,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per altres llengües més freqüents que sap parlar fluidament i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3293/7452?lang=ca"
   },
   {
@@ -2046,6 +2815,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per les tres primeres llengües més freqüents que sap parlar fluidament"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3294/3208?lang=ca"
   },
   {
@@ -2057,6 +2831,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per les tres primeres llengües més freqüents que sap parlar fluidament"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/3294/7449?lang=ca"
   },
   {
@@ -2068,6 +2847,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4951/25062?lang=ca"
   },
   {
@@ -2079,6 +2862,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4951/4862?lang=ca"
   },
   {
@@ -2090,6 +2877,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua habitual i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4951/7457?lang=ca"
   },
   {
@@ -2101,6 +2892,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4952/25063?lang=ca"
   },
   {
@@ -2112,6 +2907,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4952/4863?lang=ca"
   },
   {
@@ -2123,6 +2922,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua inicial"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4952/7459?lang=ca"
   },
   {
@@ -2134,6 +2937,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4953/25064?lang=ca"
   },
   {
@@ -2145,6 +2952,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4953/4864?lang=ca"
   },
   {
@@ -2156,6 +2967,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Per llengua d'identificació i llengua habitual"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/4953/7461?lang=ca"
   },
   {
@@ -2167,6 +2982,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7341/7154?lang=ca"
   },
   {
@@ -2178,6 +2998,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català i sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7343/7157?lang=ca"
   },
   {
@@ -2189,6 +3013,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català i grups d'edat"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7345/7159?lang=ca"
   },
   {
@@ -2200,6 +3028,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Població. Segons la freqüència amb què inicia les converses en català i lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7347/7161?lang=ca"
   },
   {
@@ -2211,6 +3043,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7350/7163?lang=ca"
   },
   {
@@ -2222,6 +3059,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10)"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7350/7477?lang=ca"
   },
   {
@@ -2233,6 +3075,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7351/7164?lang=ca"
   },
   {
@@ -2244,6 +3091,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per sexe"
     },
+    "geo_ids": [
+      "com"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7351/7235?lang=ca"
   },
   {
@@ -2255,6 +3105,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per sexe"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7351/7478?lang=ca"
   },
   {
@@ -2266,6 +3120,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7352/7165?lang=ca"
   },
   {
@@ -2277,6 +3136,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per edat en grans grups"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7352/7479?lang=ca"
   },
   {
@@ -2288,6 +3151,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7353/7166?lang=ca"
   },
   {
@@ -2299,6 +3167,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Enquesta d'usos lingüístics de la població",
       "node": "Autovaloració mitjana del coneixement de llengües (de 0 a 10). Per lloc de naixement"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eulp/7353/7480?lang=ca"
   }
 ];

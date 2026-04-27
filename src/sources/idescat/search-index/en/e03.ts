@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Monthly Estimate of the Economically Active Population",
       "node": "Active, employed and unemployed population"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e03/22273/26670?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Monthly Estimate of the Economically Active Population",
       "node": "Activity, employment and unemployment rates"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e03/22274/26671?lang=en"
   }
 ];

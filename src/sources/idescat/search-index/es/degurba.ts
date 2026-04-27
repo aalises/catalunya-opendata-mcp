@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del grado de urbanización",
       "node": "Indicadores de urbanización"
     },
+    "geo_ids": [
+      "ac",
+      "cat",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/17107/20579?lang=es"
   },
   {
@@ -22,6 +29,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del grado de urbanización",
       "node": "Municipios, población y superficie. Por grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/17108/20529?lang=es"
   },
   {
@@ -33,6 +43,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística del grado de urbanización",
       "node": "Distribución de la población en la cuadrícula estándar de 1 km²"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/degurba/18126/21594?lang=es"
   }
 ];

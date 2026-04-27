@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por componentes del coste salarial y ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20212/22776?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por componentes del coste salarial y ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20212/22800?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por componentes del coste salarial y ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20229/22788?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por componentes del coste salarial y ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20229/22812?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Percepciones por día de incapacidad temporal. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20299/22835?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Percepciones por día de incapacidad temporal. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20299/22840?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Percepciones por día de incapacidad temporal. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20300/22836?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Percepciones por día de incapacidad temporal. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20300/22841?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste indemnización por trabajador despedido. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20302/22837?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste indemnización por trabajador despedido. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20302/22842?lang=es"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste por hora extraordinaria. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20304/22838?lang=es"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste por hora extraordinaria. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20304/22843?lang=es"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste por hora extraordinaria. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20305/22839?lang=es"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste por hora extraordinaria. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20305/22844?lang=es"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20316/22845?lang=es"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20317/22846?lang=es"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Motivo por el cual no hay vacantes. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20319/22847?lang=es"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Motivo por el cual no hay vacantes. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20320/22848?lang=es"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Turismo. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20424/22908?lang=es"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Turismo. Por tamaño de las unidades y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20425/22909?lang=es"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Turismo. Por componentes del coste salarial y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20426/22910?lang=es"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Turismo. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20432/22913?lang=es"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Turismo. Por componentes del coste salarial y tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20433/22914?lang=es"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Turismo. Por componentes del coste salarial y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20434/22915?lang=es"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Cultura. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20451/22922?lang=es"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Cultura. Por componentes del coste salarial y tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20452/22923?lang=es"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Cultura. Por componentes del coste salarial y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20453/22924?lang=es"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Cultura. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20458/22927?lang=es"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Cultura. Por componentes del coste salarial y tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20459/22928?lang=es"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Cultura. Por componentes del coste salarial y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20460/22929?lang=es"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. TIC. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20469/22931?lang=es"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. TIC"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20473/22933?lang=es"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. TIC. Por tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20475/22934?lang=es"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20538/22967?lang=es"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20538/26291?lang=es"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20549/22973?lang=es"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20549/26293?lang=es"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Dietas y gastos de viaje por trabajador y año. Por tamaño de las unidades y sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20556/22978?lang=es"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Dietas y gastos de viaje por trabajador y año. Por tamaño de las unidades y sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20556/26531?lang=es"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Dietas y gastos de viaje por trabajador y año. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20557/22979?lang=es"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Dietas y gastos de viaje por trabajador y año. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20557/26295?lang=es"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de centros de trabajo según el ámbito de regulación de la relación laboral. Por sectores de activitad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20592/22994?lang=es"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de centros de trabajo según el ámbito de regulación de la relación laboral. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20593/22995?lang=es"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de trabajadores según el ámbito de regulación de la relación laboral. Por sectores de activitad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20594/22996?lang=es"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de trabajadores según el ámbito de regulación de la relación laboral. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20595/22997?lang=es"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de centros de trabajo según si ha habido modificaciones en el convenio colectivo. Por sectores de activitad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20599/22998?lang=es"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de centros de trabajo según si ha habido modificaciones en el convenio colectivo. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20600/22999?lang=es"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de trabajadores según si ha habido modificaciones en el convenio colectivo. Por sector de activitad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20601/23000?lang=es"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Proporción de trabajadores según si ha habido modificaciones en el convenio colectivo. Por tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20602/23001?lang=es"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. Por agrupaciones de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22022/26289?lang=es"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por sectores de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22102/26374?lang=es"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por sectores de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22102/26376?lang=es"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22103/26384?lang=es"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22103/26394?lang=es"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por sectores de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22108/26375?lang=es"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por sectores de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22108/26377?lang=es"
   },
   {
@@ -627,6 +795,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22109/26389?lang=es"
   },
   {
@@ -638,6 +809,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por ramas de actividad económica y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22109/26399?lang=es"
   },
   {
@@ -649,6 +823,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22129/26408?lang=es"
   },
   {
@@ -660,6 +837,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por ramas de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22129/26420?lang=es"
   },
   {
@@ -671,6 +851,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22132/26411?lang=es"
   },
   {
@@ -682,6 +865,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22132/26419?lang=es"
   },
   {
@@ -693,6 +879,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Turismo. Por componentes del coste laboral y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22143/26378?lang=es"
   },
   {
@@ -704,6 +893,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Turismo. Por tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22144/26404?lang=es"
   },
   {
@@ -715,6 +907,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Turismo. Por subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22145/26428?lang=es"
   },
   {
@@ -726,6 +921,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Turismo. Por componentes del coste laboral y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22146/26379?lang=es"
   },
   {
@@ -737,6 +935,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Turismo. Por tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22147/26405?lang=es"
   },
   {
@@ -748,6 +949,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Cultura. Por subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22148/26429?lang=es"
   },
   {
@@ -759,6 +963,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Cultura. Por componentes del coste laboral y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22149/26380?lang=es"
   },
   {
@@ -770,6 +977,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Cultura. Por tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22150/26406?lang=es"
   },
   {
@@ -781,6 +991,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Cultura. Por tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22151/26407?lang=es"
   },
   {
@@ -792,6 +1005,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Cultura. Por componentes del coste laboral y subsectores"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22152/26381?lang=es"
   },
   {
@@ -803,6 +1019,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. TIC. Por componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22153/26382?lang=es"
   },
   {
@@ -814,6 +1033,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. TIC"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22154/26430?lang=es"
   },
   {
@@ -825,6 +1047,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. TIC. Por componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22155/26383?lang=es"
   },
   {
@@ -836,6 +1061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. Turismo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22199/26532?lang=es"
   },
   {
@@ -847,6 +1075,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Puestos de trabajo vacantes. Cultura"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22200/26533?lang=es"
   },
   {
@@ -858,6 +1089,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22230/26622?lang=es"
   },
   {
@@ -869,6 +1103,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y mes. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22230/26623?lang=es"
   },
   {
@@ -880,6 +1117,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22231/26624?lang=es"
   },
   {
@@ -891,6 +1131,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por hora efectiva. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22231/26625?lang=es"
   },
   {
@@ -902,6 +1145,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por sectores de actividad económica, tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22232/26626?lang=es"
   },
   {
@@ -913,6 +1159,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por sectores de actividad económica, tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22232/26627?lang=es"
   },
   {
@@ -924,6 +1173,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por sectores de actividad económica, tamaño de las unidades y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22233/26628?lang=es"
   },
   {
@@ -935,6 +1187,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por trabajador y mes. Por sectores de actividad económica, tamaño de las unidades y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22233/26629?lang=es"
   },
   {
@@ -946,6 +1201,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por sectores de actividad económica, tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22234/26630?lang=es"
   },
   {
@@ -957,6 +1215,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por sectores de actividad económica, tipo de jornada y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22234/26631?lang=es"
   },
   {
@@ -968,6 +1229,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por sectores de actividad económica, tamaño de las unidades y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22235/26632?lang=es"
   },
   {
@@ -979,6 +1243,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste salarial por hora efectiva. Por sectores de actividad económica, tamaño de las unidades y componentes del coste salarial"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22235/26633?lang=es"
   },
   {
@@ -990,6 +1257,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica y tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22236/26634?lang=es"
   },
   {
@@ -1001,6 +1271,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica y tamaño de las unidades"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22236/26635?lang=es"
   },
   {
@@ -1012,6 +1285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica y tipo de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22237/26636?lang=es"
   },
   {
@@ -1023,6 +1299,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Horas de trabajo por trabajador y mes. Por sectores de actividad económica y tipo de jornada"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22237/26637?lang=es"
   },
   {
@@ -1034,6 +1313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22238/26638?lang=es"
   },
   {
@@ -1045,6 +1327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22238/26639?lang=es"
   },
   {
@@ -1056,6 +1341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22239/26640?lang=es"
   },
   {
@@ -1067,6 +1355,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por sectores de actividad económica, tamaño de las unidades y componentes del coste laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22239/26641?lang=es"
   },
   {
@@ -1078,6 +1369,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por sectores de activitad económica, componentes del coste laboral y ámbito de regulación de la relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22240/26642?lang=es"
   },
   {
@@ -1089,6 +1383,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Coste laboral por trabajador y año. Por sectores de activitad económica, componentes del coste laboral y modificaciones en el convenio colectivo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22241/26643?lang=es"
   },
   {
@@ -1100,6 +1397,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por sectores de activitad económica, componentes del coste laboral y ámbito de regulación de la relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22242/26644?lang=es"
   },
   {
@@ -1111,6 +1411,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadísticas de coste laboral y vacantes",
       "node": "Estructura porcentual del coste laboral por trabajador y año. Por sectores de activitad económica, componentes del coste laboral y modificaciones en el convenio colectivo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22243/26645?lang=es"
   }
 ];

@@ -11,6 +11,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "PIB i PIB per habitant. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13830/14779?lang=ca"
   },
   {
@@ -22,6 +28,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut. Per sectors d'activitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13831/14780?lang=ca"
   },
   {
@@ -33,6 +45,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut de la indústria. Per branques d'activitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13833/14782?lang=ca"
   },
   {
@@ -44,6 +62,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut dels serveis. Per branques d'activitat. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13835/14784?lang=ca"
   },
   {
@@ -55,6 +79,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "PIB i PIB per habitant. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21925/26069?lang=ca"
   },
   {
@@ -66,6 +96,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut. Per sectors d'activitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21926/26070?lang=ca"
   },
   {
@@ -77,6 +113,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut de la indústria. Per branques d'activitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21927/26071?lang=ca"
   },
   {
@@ -88,6 +130,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Producte interior brut territorial",
       "node": "Valor afegit brut dels serveis. Per branques d'activitat. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21928/26072?lang=ca"
   }
 ];

@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per grandària del compte de cotització. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14941/15809?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/15803?lang=ca"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14942/26699?lang=ca"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/15875?lang=ca"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14943/26701?lang=ca"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/15807?lang=ca"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14944/26704?lang=ca"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/15804?lang=ca"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14945/26700?lang=ca"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/15876?lang=ca"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14946/26703?lang=ca"
   },
   {
@@ -132,6 +209,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/15813?lang=ca"
   },
   {
@@ -143,6 +224,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Comptes de cotització del Règim general de la Seguretat Social i del Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14947/26705?lang=ca"
   },
   {
@@ -154,6 +239,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/15879?lang=ca"
   },
   {
@@ -165,6 +257,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14983/26690?lang=ca"
   },
   {
@@ -176,6 +275,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/15880?lang=ca"
   },
   {
@@ -187,6 +293,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per sector d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14984/26691?lang=ca"
   },
   {
@@ -198,6 +311,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/15881?lang=ca"
   },
   {
@@ -209,6 +329,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14987/26692?lang=ca"
   },
   {
@@ -220,6 +347,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/15882?lang=ca"
   },
   {
@@ -231,6 +365,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per secció d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14988/26693?lang=ca"
   },
   {
@@ -242,6 +383,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/15883?lang=ca"
   },
   {
@@ -253,6 +401,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14990/26694?lang=ca"
   },
   {
@@ -264,6 +419,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/15884?lang=ca"
   },
   {
@@ -275,6 +434,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per divisió d'activitat econòmica i grandària del compte de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14991/26695?lang=ca"
   },
   {
@@ -286,6 +449,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim general de la Seguretat Social i al Règim especial de la mineria del carbó. Per grandària del compte de cotització. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14993/15885?lang=ca"
   },
   {
@@ -297,6 +467,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/15886?lang=ca"
   },
   {
@@ -308,6 +485,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14995/26696?lang=ca"
   },
   {
@@ -319,6 +503,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/15887?lang=ca"
   },
   {
@@ -330,6 +521,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14996/26697?lang=ca"
   },
   {
@@ -341,6 +539,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/15888?lang=ca"
   },
   {
@@ -352,6 +557,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de l'ocupació assalariada i autònoma segons afiliacions a la Seguretat Social",
       "node": "Afiliacions al Règim especial de treballadors autònoms. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afic/14997/26698?lang=ca"
   }
 ];

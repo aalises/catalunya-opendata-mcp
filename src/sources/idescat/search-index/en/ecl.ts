@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By wage cost components and economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20212/22776?lang=en"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By wage cost components and economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20212/22800?lang=en"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By wage cost components and economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20229/22788?lang=en"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By wage cost components and economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20229/22812?lang=en"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Payment per day of temporary disability. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20299/22835?lang=en"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Payment per day of temporary disability. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20299/22840?lang=en"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Payment per day of temporary disability. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20300/22836?lang=en"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Payment per day of temporary disability. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20300/22841?lang=en"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost of severance pay per dismissed worker. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20302/22837?lang=en"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost of severance pay per dismissed worker. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20302/22842?lang=en"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost per hour of overtime. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20304/22838?lang=en"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost per hour of overtime. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20304/22843?lang=en"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost per hour of overtime. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20305/22839?lang=en"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Cost per hour of overtime. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20305/22844?lang=en"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Vacancies. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20316/22845?lang=en"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Vacancies. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20317/22846?lang=en"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Reason why there are no vacancies. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20319/22847?lang=en"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Reason why there are no vacancies. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20320/22848?lang=en"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Tourism. By type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20424/22908?lang=en"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Tourism. By size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20425/22909?lang=en"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Tourism. By wage cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20426/22910?lang=en"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Tourism. By type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20432/22913?lang=en"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Tourism. By size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20433/22914?lang=en"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Tourism. By wage cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20434/22915?lang=en"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Culture. By type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20451/22922?lang=en"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Culture. By size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20452/22923?lang=en"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. Culture. By wage cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20453/22924?lang=en"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Culture. By type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20458/22927?lang=en"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Culture. By size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20459/22928?lang=en"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. Culture. By labour wage components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20460/22929?lang=en"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. ICT. By wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20469/22931?lang=en"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Vacancies. ICT"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20473/22933?lang=en"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. ICT. By wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20475/22934?lang=en"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20538/22967?lang=en"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20538/26291?lang=en"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20549/22973?lang=en"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20549/26293?lang=en"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Allowances and travel expenses per worker. By size of the unit and activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20556/22978?lang=en"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Allowances and travel expenses per worker. By size of the unit and activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20556/26531?lang=en"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Allowances and travel expenses per worker and year. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20557/22979?lang=en"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Allowances and travel expenses per worker and year. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20557/26295?lang=en"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of work centres by scope of regulation of employment relationship. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20592/22994?lang=en"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of work centres by scope of regulation of employment relationship. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20593/22995?lang=en"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of workers by scope of regulation of employment relationship. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20594/22996?lang=en"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of workers by scope of regulation of employment relationship. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20595/22997?lang=en"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of work centres by whether there have been amendments to the collective agreement. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20599/22998?lang=en"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of work centres by whether there have been amendments to the collective agreement. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20600/22999?lang=en"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of workers by whether there have been amendments to the collective agreement. By activity sector"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20601/23000?lang=en"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Proportion of workers by whether there have been amendments to the collective agreement. By size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/20602/23001?lang=en"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Number of vacancies. By economic activity grouping"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22022/26289?lang=en"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity sectors and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22102/26374?lang=en"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity sectors and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22102/26376?lang=en"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22103/26384?lang=en"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22103/26394?lang=en"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity sectors and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22108/26375?lang=en"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity sectors and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22108/26377?lang=en"
   },
   {
@@ -627,6 +795,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22109/26389?lang=en"
   },
   {
@@ -638,6 +809,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity branches and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22109/26399?lang=en"
   },
   {
@@ -649,6 +823,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22129/26408?lang=en"
   },
   {
@@ -660,6 +837,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity branches"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22129/26420?lang=en"
   },
   {
@@ -671,6 +851,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22132/26411?lang=en"
   },
   {
@@ -682,6 +865,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22132/26419?lang=en"
   },
   {
@@ -693,6 +879,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. Tourism. By labour cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22143/26378?lang=en"
   },
   {
@@ -704,6 +893,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. Tourism. By size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22144/26404?lang=en"
   },
   {
@@ -715,6 +907,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. Tourism. By subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22145/26428?lang=en"
   },
   {
@@ -726,6 +921,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. Tourism. By labour cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22146/26379?lang=en"
   },
   {
@@ -737,6 +935,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. Tourism. By size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22147/26405?lang=en"
   },
   {
@@ -748,6 +949,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. Culture. By subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22148/26429?lang=en"
   },
   {
@@ -759,6 +963,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. Culture. By labour cost components and subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22149/26380?lang=en"
   },
   {
@@ -770,6 +977,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. Culture. By size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22150/26406?lang=en"
   },
   {
@@ -781,6 +991,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. Culture. By size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22151/26407?lang=en"
   },
   {
@@ -792,6 +1005,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. Culture. By subsectors"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22152/26381?lang=en"
   },
   {
@@ -803,6 +1019,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. ICT. By labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22153/26382?lang=en"
   },
   {
@@ -814,6 +1033,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. ICT. Total"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22154/26430?lang=en"
   },
   {
@@ -825,6 +1047,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. ICT. By labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22155/26383?lang=en"
   },
   {
@@ -836,6 +1061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Vacancies. Tourism"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22199/26532?lang=en"
   },
   {
@@ -847,6 +1075,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Vacancies. Culture"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22200/26533?lang=en"
   },
   {
@@ -858,6 +1089,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22230/26622?lang=en"
   },
   {
@@ -869,6 +1103,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and month. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22230/26623?lang=en"
   },
   {
@@ -880,6 +1117,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22231/26624?lang=en"
   },
   {
@@ -891,6 +1131,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per hour actually worked. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22231/26625?lang=en"
   },
   {
@@ -902,6 +1145,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By economic activity sectors, type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22232/26626?lang=en"
   },
   {
@@ -913,6 +1159,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By economic activity sectors, type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22232/26627?lang=en"
   },
   {
@@ -924,6 +1173,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By economic activity sectors, size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22233/26628?lang=en"
   },
   {
@@ -935,6 +1187,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per worker and month. By economic activity sectors, size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22233/26629?lang=en"
   },
   {
@@ -946,6 +1201,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By economic activity sectors, type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22234/26630?lang=en"
   },
   {
@@ -957,6 +1215,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By economic activity sectors, type of working day and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22234/26631?lang=en"
   },
   {
@@ -968,6 +1229,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By economic activity sectors, size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22235/26632?lang=en"
   },
   {
@@ -979,6 +1243,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Wage cost per hour actually worked. By economic activity sectors, size of the unit and wage cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22235/26633?lang=en"
   },
   {
@@ -990,6 +1257,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors and size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22236/26634?lang=en"
   },
   {
@@ -1001,6 +1271,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors and size of the unit"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22236/26635?lang=en"
   },
   {
@@ -1012,6 +1285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors and type of working day"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22237/26636?lang=en"
   },
   {
@@ -1023,6 +1299,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Working hours per worker and month. By economic activity sectors and type of working day"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22237/26637?lang=en"
   },
   {
@@ -1034,6 +1313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22238/26638?lang=en"
   },
   {
@@ -1045,6 +1327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22238/26639?lang=en"
   },
   {
@@ -1056,6 +1341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22239/26640?lang=en"
   },
   {
@@ -1067,6 +1355,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity sectors, size of the unit and labour cost components"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22239/26641?lang=en"
   },
   {
@@ -1078,6 +1369,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity sector, labour cost components and scope of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22240/26642?lang=en"
   },
   {
@@ -1089,6 +1383,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Labour cost per worker and year. By economic activity sectors, labour cost components and whether there have been amendments to the collective agreement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22241/26643?lang=en"
   },
   {
@@ -1100,6 +1397,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity sector, labour cost components and scope of employment relationship"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22242/26644?lang=en"
   },
   {
@@ -1111,6 +1411,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Statistics on Labour Cost and Vacancies",
       "node": "Percentage structure of labour cost per worker and year. By economic activity sectors, labour cost components and whether there have been amendments to the collective agreement"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ecl/22243/26645?lang=en"
   }
 ];

@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Hogares proyectados (base 2024). Por escenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21003/24891?lang=es"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Tamaño medio del hogar proyectado (base 2024). Por escenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21004/24892?lang=es"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Hogares proyectados a 1 de enero (base 2024). Por tamaño del hogar. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21009/24854?lang=es"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Tamaño medio del hogar proyectado a 1 de enero (base 2024). Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21010/24855?lang=es"
   },
   {
@@ -55,6 +83,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Población proyectada a 1 de enero (base 2024). Por sexo, edad y tamaño del hogar. Escenario medio"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21011/24904?lang=es"
   },
   {
@@ -66,6 +100,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Hogares proyectados a 1 de enero (base 2024). Por tamaño del hogar. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21012/24857?lang=es"
   },
   {
@@ -77,6 +118,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Tamaño medio del hogar proyectado a 1 de enero (base 2024). Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21013/24858?lang=es"
   },
   {
@@ -88,6 +136,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Población proyectada a 1 de enero (base 2024). Por sexo, edad y tamaño del hogar. Escenario alto"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21014/24905?lang=es"
   },
   {
@@ -99,6 +153,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Hogares proyectados a 1 de enero (base 2024). Por tamaño del hogar. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21015/24860?lang=es"
   },
   {
@@ -110,6 +171,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Tamaño medio del hogar proyectado a 1 de enero (base 2024). Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21016/24866?lang=es"
   },
   {
@@ -121,6 +189,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Proyecciones de hogares",
       "node": "Población proyectada a 1 de enero (base 2024). Por sexo, edad y tamaño del hogar. Escenario bajo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projl/21017/24906?lang=es"
   }
 ];

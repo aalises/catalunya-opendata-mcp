@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Movimiento demográfico de las estimaciones de población. Total"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10610/11112?lang=es"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Movimiento demográfico de las estimaciones de población. Hombres"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10611/11113?lang=es"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Movimiento demográfico de las estimaciones de la población. Mujeres"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/10612/11114?lang=es"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad en grandes grupos"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/17363/20891?lang=es"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9122/10002?lang=es"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/10007?lang=es"
   },
   {
@@ -77,6 +119,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/10008?lang=es"
   },
   {
@@ -88,6 +136,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/20149?lang=es"
   },
   {
@@ -99,6 +154,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9123/21460?lang=es"
   },
   {
@@ -110,6 +169,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/10009?lang=es"
   },
   {
@@ -121,6 +187,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/10011?lang=es"
   },
   {
@@ -132,6 +204,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estimaciones de población",
       "node": "Población. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ep/9124/20150?lang=es"
   }
 ];

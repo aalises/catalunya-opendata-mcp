@@ -11,6 +11,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "GDP and GDP per inhabitant. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13830/14779?lang=en"
   },
   {
@@ -22,6 +28,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value. By activity sectors. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13831/14780?lang=en"
   },
   {
@@ -33,6 +45,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value of the industry. By branches of activity. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13833/14782?lang=en"
   },
   {
@@ -44,6 +62,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value of services. By branches of activity. 2019 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/13835/14784?lang=en"
   },
   {
@@ -55,6 +79,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "GDP and GDP per inhabitant. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21925/26069?lang=en"
   },
   {
@@ -66,6 +96,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value. By activity sectors. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21926/26070?lang=en"
   },
   {
@@ -77,6 +113,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value of the industry. By branches of activity. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21927/26071?lang=en"
   },
   {
@@ -88,6 +130,12 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Territorial Gross Domestic Product",
       "node": "Gross added value of services. By branches of activity. 2024 Benchmark Revision"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pibc/21928/26072?lang=en"
   }
 ];

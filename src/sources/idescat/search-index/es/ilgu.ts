@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/16935/20285?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/16936/20280?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17009/20434?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17010/20435?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo, grupos de edad y tipo de relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17055/20800?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo, nacionalidad y tipo de relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17056/20801?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por subámbito disciplinar, tipo de relación laboral y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17058/23170?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por ámbito disciplinar, tipo de relación laboral y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17059/20986?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17066/20805?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17067/20807?lang=es"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17074/20981?lang=es"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo y rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17100/20541?lang=es"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17181/20815?lang=es"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo, grupos de edad y tipo de relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17184/20795?lang=es"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo, nacionalidad y tipo de relación laboral"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17185/20796?lang=es"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para el total de graduados y graduadas universitarios. Por ámbito disciplinar, tipo de relación laboral y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17186/23154?lang=es"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17235/23106?lang=es"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Comparación de las características de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17243/20932?lang=es"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo y sector de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17254/20660?lang=es"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y sector de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17255/20813?lang=es"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo y según si cursan nuevos estudios el curso siguiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17418/20915?lang=es"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17474/23160?lang=es"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17901/21448?lang=es"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17902/21449?lang=es"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y sector de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17906/21452?lang=es"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y rama de actividad económica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17907/21453?lang=es"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17908/23145?lang=es"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Principales indicadores. Por sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17981/21502?lang=es"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Principales indicadores. Por grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17982/21503?lang=es"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Principales indicadores. Por nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17983/21504?lang=es"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Principales indicadores. Por ámbito disciplinar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/17987/23090?lang=es"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20621/23078?lang=es"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20629/23108?lang=es"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Principales indicadores. Por subámbito disciplinar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20633/23118?lang=es"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20635/23147?lang=es"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Días hasta encontrar la primera relación laboral para el total de graduados y graduadas universitarios. Por subámbito disciplinar, tipo de relación laboral y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20637/23156?lang=es"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20640/23162?lang=es"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por sexo, lugar de residencia y grado de urbanización en el año de la titulación"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20853/24716?lang=es"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20880/24741?lang=es"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20881/24742?lang=es"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20903/24769?lang=es"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20904/24768?lang=es"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20929/24781?lang=es"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20930/24782?lang=es"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20931/24783?lang=es"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20932/24784?lang=es"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por ámbito disciplinar, lugar de residencia y grado de urbanización en el año de la titulación"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20971/24819?lang=es"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por subámbito disciplinar, lugar de residencia y grado de urbanización en el año de la titulación"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20972/24820?lang=es"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por grupos de edad, lugar de residencia y grado de urbanización en el año de la titulación"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20975/24826?lang=es"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por nacionalidad, lugar de residencia y grado de urbanización en el año de la titulación"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20977/24828?lang=es"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Seguimiento del lugar de residencia y grado de urbanización de los graduados y graduadas universitarios desde el año de la titulación hasta los cinco años posteriores. Por sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/20986/24845?lang=es"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Comparación de las características de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21126/24937?lang=es"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por ámbito disciplinar, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21204/25043?lang=es"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por grupos de edad, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21205/25044?lang=es"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por nacionalidad, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21208/25047?lang=es"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por sexo, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21209/25048?lang=es"
   },
   {
@@ -627,6 +795,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21225/25066?lang=es"
   },
   {
@@ -638,6 +809,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Graduados y graduadas universitarios. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21228/25069?lang=es"
   },
   {
@@ -649,6 +823,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de los graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21250/25093?lang=es"
   },
   {
@@ -660,6 +837,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grado de salarización de la primera relación laboral para el total de graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21258/25103?lang=es"
   },
   {
@@ -671,6 +851,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21303/25163?lang=es"
   },
   {
@@ -682,6 +865,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21306/25166?lang=es"
   },
   {
@@ -693,6 +879,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21307/25167?lang=es"
   },
   {
@@ -704,6 +893,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21308/25168?lang=es"
   },
   {
@@ -715,6 +907,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por ámbito disciplinar, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21309/25169?lang=es"
   },
   {
@@ -726,6 +921,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21310/25170?lang=es"
   },
   {
@@ -737,6 +935,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21311/25171?lang=es"
   },
   {
@@ -748,6 +949,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21312/25172?lang=es"
   },
   {
@@ -759,6 +963,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por sexo y lugar de residencia"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21313/25173?lang=es"
   },
   {
@@ -770,6 +977,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por sexo, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21314/25174?lang=es"
   },
   {
@@ -781,6 +991,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por sexo y según si cursan nuevos estudios el curso siguiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21315/25175?lang=es"
   },
   {
@@ -792,6 +1005,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por grupos de edad, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21316/25176?lang=es"
   },
   {
@@ -803,6 +1019,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios. Por nacionalidad, lugar de residencia y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21319/25179?lang=es"
   },
   {
@@ -814,6 +1033,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21321/25181?lang=es"
   },
   {
@@ -825,6 +1047,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21323/25183?lang=es"
   },
   {
@@ -836,6 +1061,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21325/25185?lang=es"
   },
   {
@@ -847,6 +1075,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21326/25186?lang=es"
   },
   {
@@ -858,6 +1089,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por ámbito disciplinar y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21327/25187?lang=es"
   },
   {
@@ -869,6 +1103,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduados universitarios residentes en Cataluña en diferentes momentos del tiempo. Por campo de estudio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21328/25188?lang=es"
   },
   {
@@ -880,6 +1117,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21329/25189?lang=es"
   },
   {
@@ -891,6 +1131,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21330/25190?lang=es"
   },
   {
@@ -902,6 +1145,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por sexo y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21331/25191?lang=es"
   },
   {
@@ -913,6 +1159,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por sexo y según si cursan nuevos estudios el curso siguiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21332/25192?lang=es"
   },
   {
@@ -924,6 +1173,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por grupos de edad y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21333/25193?lang=es"
   },
   {
@@ -935,6 +1187,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Tasas de inserción de los graduados y graduadas universitarios residentes en Cataluña en diferentes momentos del tiempo. Por nacionalidad y grado de urbanización"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21336/25196?lang=es"
   },
   {
@@ -946,6 +1201,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21338/25198?lang=es"
   },
   {
@@ -957,6 +1215,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por ámbito disciplinar y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21339/25199?lang=es"
   },
   {
@@ -968,6 +1229,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por ámbito disciplinar y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21340/25200?lang=es"
   },
   {
@@ -979,6 +1243,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por subámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21341/25201?lang=es"
   },
   {
@@ -990,6 +1257,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21343/25203?lang=es"
   },
   {
@@ -1001,6 +1271,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21344/25204?lang=es"
   },
   {
@@ -1012,6 +1285,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de los graduados y graduadas universitarios. Por sexo y según si cursan nuevos estudios el curso siguiente"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21345/25205?lang=es"
   },
   {
@@ -1023,6 +1299,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para el total de graduados y graduadas universitarios. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21347/25207?lang=es"
   },
   {
@@ -1034,6 +1313,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para el total de graduados y graduadas universitarios. Por subámbito y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21348/25208?lang=es"
   },
   {
@@ -1045,6 +1327,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21349/25209?lang=es"
   },
   {
@@ -1056,6 +1341,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para el total de graduados y graduadas universitarios. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21350/25210?lang=es"
   },
   {
@@ -1067,6 +1355,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por ámbito disciplinar y sexo"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21351/25211?lang=es"
   },
   {
@@ -1078,6 +1369,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por subámbito disciplinar"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21353/25213?lang=es"
   },
   {
@@ -1089,6 +1383,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y grupos de edad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21354/25214?lang=es"
   },
   {
@@ -1100,6 +1397,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de la inserción laboral de graduados y graduadas universitarios",
       "node": "Grados de parcialidad, de temporalidad y de adecuación a la calificación de la titulación de la primera relación laboral para los graduados y graduadas universitarios no inseridos en el momento de la titulación. Por sexo y nacionalidad"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ilgu/21355/25215?lang=es"
   }
 ];

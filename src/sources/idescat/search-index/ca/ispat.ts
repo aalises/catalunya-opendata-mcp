@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors d'ús de les tecnologies de la informació i la comunicació i del comerç electrònic de les empreses. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14621/20418?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Cost salarial. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14622/23079?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Cost salarial. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14623/20417?lang=ca"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Valor de la producció venuda de béns d'alta tecnologia. Per grups de productes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14624/15831?lang=ca"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta a Catalunya. Per sectors segons nivell tecnològic i tipus d'activitat innovadora. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14625/20449?lang=ca"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors d'innovació de les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14632/19341?lang=ca"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors d'innovació de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14633/19342?lang=ca"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Intensitat d'innovació de les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14636/20436?lang=ca"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Intensitat d'innovació de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14637/20439?lang=ca"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors econòmics de l'activitat feta a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14650/19529?lang=ca"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors econòmics de l'activitat de les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14651/23072?lang=ca"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors econòmics de l'activitat feta a Catalunya. Per branques d'activitat"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14652/19530?lang=ca"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors econòmics de l'activitat de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14653/23073?lang=ca"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14654/20448?lang=ca"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta per les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14655/20450?lang=ca"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14656/20452?lang=ca"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta per les empreses amb seu a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14657/20454?lang=ca"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de despesa en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14658/19355?lang=ca"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de depesa en R+D interna feta per les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14659/19548?lang=ca"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de despesa en R+D interna feta a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14660/19550?lang=ca"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic i la naturalesa de la despesa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14661/20432?lang=ca"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de despesa en R+D interna feta per les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14662/19552?lang=ca"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en R+D interna feta per les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic i la naturalesa de la despesa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14663/20430?lang=ca"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en R+D interna feta a Catalunya. Per branca d'activitat econòmica i la naturalesa de la despesa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14664/20433?lang=ca"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en R+D interna feta per les empreses amb seu social a Catalunya. Per branca d'activitat econòmica i la naturalesa de la despesa"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14665/20431?lang=ca"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal ocupat en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14666/19564?lang=ca"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal ocupat en R+D interna en empreses amb seu a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14667/19565?lang=ca"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal ocupat en R+D interna feta a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14668/19572?lang=ca"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal ocupat en R+D interna en empreses amb seu a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14669/19573?lang=ca"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14670/19566?lang=ca"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal en equivalència a jornada completa (EJC) ocupat en R+D interna en empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14671/19567?lang=ca"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14672/19574?lang=ca"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Personal en equivalència a jornada completa (EJC) ocupat en R+D interna en empreses amb seu a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/14673/19575?lang=ca"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20804/19354?lang=ca"
   },
   {
@@ -385,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta per les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20805/19547?lang=ca"
   },
   {
@@ -396,6 +501,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20811/19549?lang=ca"
   },
   {
@@ -407,6 +515,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals indicadors de personal en equivalència a jornada completa (EJC) ocupat en R+D interna feta per les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20812/19551?lang=ca"
   },
   {
@@ -418,6 +529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones ocupades en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20815/19568?lang=ca"
   },
   {
@@ -429,6 +543,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones ocupades en R+D interna en empreses amb seu a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20816/19569?lang=ca"
   },
   {
@@ -440,6 +557,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones ocupades en R+D interna feta a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20818/19576?lang=ca"
   },
   {
@@ -451,6 +571,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones ocupades en R+D interna en empreses amb seu a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20819/19577?lang=ca"
   },
   {
@@ -462,6 +585,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones en equivalència a jornada completa (EJC) ocupades en R+D interna feta a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20822/19570?lang=ca"
   },
   {
@@ -473,6 +599,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones en equivalència a jornada completa (EJC) ocupades en R+D interna en empreses amb seu a Catalunya. Per sectors segons nivell tecnològic i per tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20823/19571?lang=ca"
   },
   {
@@ -484,6 +613,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones en equivalència a jornada completa (EJC) ocupades en R+D interna feta a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20825/19578?lang=ca"
   },
   {
@@ -495,6 +627,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Percentatge de dones en equivalència a jornada completa (EJC) ocupades en R+D interna en empreses amb seu social a Catalunya. Per branca d'activitat econòmica i tipus de personal"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20826/19579?lang=ca"
   },
   {
@@ -506,6 +641,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta per les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic i tipus d'activitat innovadora. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20827/20451?lang=ca"
   },
   {
@@ -517,6 +655,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Per branca d'activitat econòmica i tipus d'activitat innovadora"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20829/20453?lang=ca"
   },
   {
@@ -528,6 +669,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Despesa en activitats innovadores feta per les empreses amb seu a Catalunya. Per branca d'activitat econòmica i tipus d'activitat innovadora. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/20830/20455?lang=ca"
   },
   {
@@ -539,6 +683,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat feta a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22039/19506?lang=ca"
   },
   {
@@ -550,6 +697,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat feta a Catalunya. Per sectors segons nivell tecnològic. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22040/19512?lang=ca"
   },
   {
@@ -561,6 +711,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22041/23003?lang=ca"
   },
   {
@@ -572,6 +725,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22042/19514?lang=ca"
   },
   {
@@ -583,6 +739,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22043/23068?lang=ca"
   },
   {
@@ -594,6 +753,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per sectors segons nivell tecnològic. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22044/23069?lang=ca"
   },
   {
@@ -605,6 +767,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22045/23070?lang=ca"
   },
   {
@@ -616,6 +781,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Indicadors dels sectors i productes d'alta tecnologia",
       "node": "Principals resultats econòmics de l'activitat de les empreses amb seu social a Catalunya. Per branca d'activitat econòmica. Distribució percentual"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/ispat/22046/23071?lang=ca"
   }
 ];

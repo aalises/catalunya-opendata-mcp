@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por grupos de edad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21984/26136?lang=es"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por nacionalidad y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21985/26137?lang=es"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por tipo de jornada y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21986/26140?lang=es"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por tipo de contrato y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21987/26138?lang=es"
   },
   {
@@ -55,6 +71,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por rama de actividad económica y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21989/26141?lang=es"
   },
   {
@@ -66,6 +86,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística de salarios territorial",
       "node": "Ingresos salariales brutos. Por grupo de cotización y sexo"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/e02/21990/26142?lang=es"
   }
 ];

@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10599/11105?lang=ca"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10600/11106?lang=ca"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10601/11107?lang=ca"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i règim de cotització (Règim general i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10602/11111?lang=ca"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i règim de cotització (Règim general i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10602/26444?lang=ca"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Grau de temporalitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10776/11355?lang=ca"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Grau de parcialitat de les afiliacions a la Seguretat Social per compte d'altri. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10777/11356?lang=ca"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10779/11348?lang=ca"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10780/11349?lang=ca"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10781/11350?lang=ca"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10782/11351?lang=ca"
   },
   {
@@ -132,6 +209,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10783/11353?lang=ca"
   },
   {
@@ -143,6 +227,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10783/26445?lang=ca"
   },
   {
@@ -154,6 +245,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10784/11354?lang=ca"
   },
   {
@@ -165,6 +263,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10786/11357?lang=ca"
   },
   {
@@ -176,6 +281,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10787/11358?lang=ca"
   },
   {
@@ -187,6 +299,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10788/11359?lang=ca"
   },
   {
@@ -198,6 +317,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10789/11360?lang=ca"
   },
   {
@@ -209,6 +335,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10790/11361?lang=ca"
   },
   {
@@ -220,6 +353,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10790/26446?lang=ca"
   },
   {
@@ -231,6 +371,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/10796/11375?lang=ca"
   },
   {
@@ -242,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13266/14121?lang=ca"
   },
   {
@@ -253,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13266/26491?lang=ca"
   },
   {
@@ -264,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13268/14122?lang=ca"
   },
   {
@@ -275,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13268/26492?lang=ca"
   },
   {
@@ -286,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13269/14123?lang=ca"
   },
   {
@@ -297,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13269/26493?lang=ca"
   },
   {
@@ -308,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13270/14124?lang=ca"
   },
   {
@@ -319,6 +487,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13270/26494?lang=ca"
   },
   {
@@ -330,6 +501,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "mun"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13271/14126?lang=ca"
   },
   {
@@ -341,6 +516,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13271/26496?lang=ca"
   },
   {
@@ -352,6 +530,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13272/14125?lang=ca"
   },
   {
@@ -363,6 +544,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13272/26495?lang=ca"
   },
   {
@@ -374,6 +558,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13273/14127?lang=ca"
   },
   {
@@ -385,6 +572,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13273/26497?lang=ca"
   },
   {
@@ -396,6 +586,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13274/14128?lang=ca"
   },
   {
@@ -407,6 +600,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13274/26498?lang=ca"
   },
   {
@@ -418,6 +614,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13338/19722?lang=ca"
   },
   {
@@ -429,6 +632,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13338/26468?lang=ca"
   },
   {
@@ -440,6 +650,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13339/19723?lang=ca"
   },
   {
@@ -451,6 +668,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13339/26469?lang=ca"
   },
   {
@@ -462,6 +686,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13340/19724?lang=ca"
   },
   {
@@ -473,6 +704,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13340/26470?lang=ca"
   },
   {
@@ -484,6 +722,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13341/19725?lang=ca"
   },
   {
@@ -495,6 +740,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13341/26471?lang=ca"
   },
   {
@@ -506,6 +758,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13342/19726?lang=ca"
   },
   {
@@ -517,6 +776,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13342/26472?lang=ca"
   },
   {
@@ -528,6 +794,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13343/19727?lang=ca"
   },
   {
@@ -539,6 +812,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i règim de cotització (Règim General i RETA). A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13343/26473?lang=ca"
   },
   {
@@ -550,6 +830,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13344/19728?lang=ca"
   },
   {
@@ -561,6 +848,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13344/26474?lang=ca"
   },
   {
@@ -572,6 +866,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13345/19729?lang=ca"
   },
   {
@@ -583,6 +884,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/13345/26475?lang=ca"
   },
   {
@@ -594,6 +902,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16282/19640?lang=ca"
   },
   {
@@ -605,6 +920,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16337/19698?lang=ca"
   },
   {
@@ -616,6 +938,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16339/19699?lang=ca"
   },
   {
@@ -627,6 +956,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16344/19777?lang=ca"
   },
   {
@@ -638,6 +974,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16345/19778?lang=ca"
   },
   {
@@ -649,6 +992,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16346/19779?lang=ca"
   },
   {
@@ -660,6 +1010,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16347/19780?lang=ca"
   },
   {
@@ -671,6 +1026,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16347/26447?lang=ca"
   },
   {
@@ -682,6 +1042,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16348/19781?lang=ca"
   },
   {
@@ -693,6 +1058,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16348/26476?lang=ca"
   },
   {
@@ -704,6 +1074,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16349/19782?lang=ca"
   },
   {
@@ -715,6 +1088,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grup de cotització. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16349/26499?lang=ca"
   },
   {
@@ -726,6 +1102,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de contracte. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16350/19783?lang=ca"
   },
   {
@@ -737,6 +1120,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i tipus de jornada. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/16351/19784?lang=ca"
   },
   {
@@ -748,6 +1138,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/20646/25258?lang=ca"
   },
   {
@@ -759,6 +1156,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/20647/25237?lang=ca"
   },
   {
@@ -770,6 +1174,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21358/25238?lang=ca"
   },
   {
@@ -781,6 +1192,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21359/25259?lang=ca"
   },
   {
@@ -792,6 +1210,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació) i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21360/25260?lang=ca"
   },
   {
@@ -803,6 +1228,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21361/25261?lang=ca"
   },
   {
@@ -814,6 +1243,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21380/25280?lang=ca"
   },
   {
@@ -825,6 +1261,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21381/25281?lang=ca"
   },
   {
@@ -836,6 +1279,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21382/25282?lang=ca"
   },
   {
@@ -847,6 +1297,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21384/25284?lang=ca"
   },
   {
@@ -858,6 +1315,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21385/25285?lang=ca"
   },
   {
@@ -869,6 +1331,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21392/25291?lang=ca"
   },
   {
@@ -880,6 +1349,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21393/25292?lang=ca"
   },
   {
@@ -891,6 +1367,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21394/25293?lang=ca"
   },
   {
@@ -902,6 +1383,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21395/25294?lang=ca"
   },
   {
@@ -913,6 +1401,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21395/26448?lang=ca"
   },
   {
@@ -924,6 +1419,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21396/25295?lang=ca"
   },
   {
@@ -935,6 +1437,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21396/26477?lang=ca"
   },
   {
@@ -946,6 +1455,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21397/25296?lang=ca"
   },
   {
@@ -957,6 +1469,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21397/26500?lang=ca"
   },
   {
@@ -968,6 +1483,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21398/25297?lang=ca"
   },
   {
@@ -979,6 +1501,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21400/25299?lang=ca"
   },
   {
@@ -990,6 +1519,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21401/25300?lang=ca"
   },
   {
@@ -1001,6 +1535,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21402/25301?lang=ca"
   },
   {
@@ -1012,6 +1553,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21402/26449?lang=ca"
   },
   {
@@ -1023,6 +1571,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21403/25302?lang=ca"
   },
   {
@@ -1034,6 +1589,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21403/26478?lang=ca"
   },
   {
@@ -1045,6 +1607,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21404/25303?lang=ca"
   },
   {
@@ -1056,6 +1621,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21404/26501?lang=ca"
   },
   {
@@ -1067,6 +1635,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21405/25304?lang=ca"
   },
   {
@@ -1078,6 +1653,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21407/25306?lang=ca"
   },
   {
@@ -1089,6 +1671,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21408/25307?lang=ca"
   },
   {
@@ -1100,6 +1689,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21408/26450?lang=ca"
   },
   {
@@ -1111,6 +1707,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21409/25308?lang=ca"
   },
   {
@@ -1122,6 +1725,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21409/26479?lang=ca"
   },
   {
@@ -1133,6 +1743,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21410/25309?lang=ca"
   },
   {
@@ -1144,6 +1757,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21410/26502?lang=ca"
   },
   {
@@ -1155,6 +1771,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21411/25310?lang=ca"
   },
   {
@@ -1166,6 +1789,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i àrea geogràfica de la nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21414/25314?lang=ca"
   },
   {
@@ -1177,6 +1805,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de contracte. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21415/25315?lang=ca"
   },
   {
@@ -1188,6 +1823,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i tipus de jornada. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21416/25316?lang=ca"
   },
   {
@@ -1199,6 +1841,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa i grup de cotització. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21417/25317?lang=ca"
   },
   {
@@ -1210,6 +1857,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21420/25318?lang=ca"
   },
   {
@@ -1221,6 +1875,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21420/26451?lang=ca"
   },
   {
@@ -1232,6 +1893,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21424/25320?lang=ca"
   },
   {
@@ -1243,6 +1907,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21424/26480?lang=ca"
   },
   {
@@ -1254,6 +1921,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21427/25322?lang=ca"
   },
   {
@@ -1265,6 +1935,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i forma jurídica de l'empresa. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21427/26503?lang=ca"
   },
   {
@@ -1276,6 +1949,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21439/25334?lang=ca"
   },
   {
@@ -1287,6 +1967,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21440/25325?lang=ca"
   },
   {
@@ -1298,6 +1985,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21441/25326?lang=ca"
   },
   {
@@ -1309,6 +2003,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21442/25327?lang=ca"
   },
   {
@@ -1320,6 +2019,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21443/25329?lang=ca"
   },
   {
@@ -1331,6 +2037,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21443/26452?lang=ca"
   },
   {
@@ -1342,6 +2055,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21444/25330?lang=ca"
   },
   {
@@ -1353,6 +2073,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21444/26481?lang=ca"
   },
   {
@@ -1364,6 +2091,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21445/25331?lang=ca"
   },
   {
@@ -1375,6 +2105,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21445/26504?lang=ca"
   },
   {
@@ -1386,6 +2119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21446/25332?lang=ca"
   },
   {
@@ -1397,6 +2137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21447/25333?lang=ca"
   },
   {
@@ -1408,6 +2155,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21449/25335?lang=ca"
   },
   {
@@ -1419,6 +2171,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21450/25336?lang=ca"
   },
   {
@@ -1430,6 +2189,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21450/26453?lang=ca"
   },
   {
@@ -1441,6 +2207,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21451/25337?lang=ca"
   },
   {
@@ -1452,6 +2225,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21451/26482?lang=ca"
   },
   {
@@ -1463,6 +2243,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21452/25338?lang=ca"
   },
   {
@@ -1474,6 +2257,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21452/26505?lang=ca"
   },
   {
@@ -1485,6 +2271,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21453/25339?lang=ca"
   },
   {
@@ -1496,6 +2289,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21454/25340?lang=ca"
   },
   {
@@ -1507,6 +2307,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21456/25341?lang=ca"
   },
   {
@@ -1518,6 +2325,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21456/26454?lang=ca"
   },
   {
@@ -1529,6 +2343,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21457/25342?lang=ca"
   },
   {
@@ -1540,6 +2361,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21457/26483?lang=ca"
   },
   {
@@ -1551,6 +2379,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21458/25343?lang=ca"
   },
   {
@@ -1562,6 +2393,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21458/26506?lang=ca"
   },
   {
@@ -1573,6 +2407,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21459/25344?lang=ca"
   },
   {
@@ -1584,6 +2425,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21460/25345?lang=ca"
   },
   {
@@ -1595,6 +2443,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec i àrea geogràfica de la nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21461/25346?lang=ca"
   },
   {
@@ -1606,6 +2459,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat i àrea geogràfica de la nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21462/25347?lang=ca"
   },
   {
@@ -1617,6 +2475,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i sexe. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21471/25349?lang=ca"
   },
   {
@@ -1628,6 +2493,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i grups d'edat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21472/25350?lang=ca"
   },
   {
@@ -1639,6 +2511,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21473/25351?lang=ca"
   },
   {
@@ -1650,6 +2529,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i àrea geogràfica de la nacionalitat. A últim dia de mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21474/25352?lang=ca"
   },
   {
@@ -1661,6 +2543,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21588/25394?lang=ca"
   },
   {
@@ -1672,6 +2561,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nombre d'afiliacions (pluriactivitat i pluriocupació). A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21589/25395?lang=ca"
   },
   {
@@ -1683,6 +2579,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21592/25398?lang=ca"
   },
   {
@@ -1694,6 +2597,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per forma jurídica de l'empresa. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21593/25399?lang=ca"
   },
   {
@@ -1705,6 +2615,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21598/25404?lang=ca"
   },
   {
@@ -1716,6 +2633,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21599/25405?lang=ca"
   },
   {
@@ -1727,6 +2651,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21600/25406?lang=ca"
   },
   {
@@ -1738,6 +2669,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21601/25407?lang=ca"
   },
   {
@@ -1749,6 +2685,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21602/25408?lang=ca"
   },
   {
@@ -1760,6 +2703,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21603/25409?lang=ca"
   },
   {
@@ -1771,6 +2721,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21603/26455?lang=ca"
   },
   {
@@ -1782,6 +2739,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21604/25410?lang=ca"
   },
   {
@@ -1793,6 +2757,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21604/26484?lang=ca"
   },
   {
@@ -1804,6 +2775,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21605/25411?lang=ca"
   },
   {
@@ -1815,6 +2789,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21605/26507?lang=ca"
   },
   {
@@ -1826,6 +2803,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21606/25412?lang=ca"
   },
   {
@@ -1837,6 +2821,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21606/26456?lang=ca"
   },
   {
@@ -1848,6 +2839,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21607/25413?lang=ca"
   },
   {
@@ -1859,6 +2857,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21607/26485?lang=ca"
   },
   {
@@ -1870,6 +2875,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21608/25414?lang=ca"
   },
   {
@@ -1881,6 +2889,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per divisió d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21608/26508?lang=ca"
   },
   {
@@ -1892,6 +2903,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21627/25469?lang=ca"
   },
   {
@@ -1903,6 +2921,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21628/25470?lang=ca"
   },
   {
@@ -1914,6 +2937,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21629/25471?lang=ca"
   },
   {
@@ -1925,6 +2953,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21629/26457?lang=ca"
   },
   {
@@ -1936,6 +2969,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21630/25472?lang=ca"
   },
   {
@@ -1947,6 +2984,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21630/26486?lang=ca"
   },
   {
@@ -1958,6 +2999,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21631/25473?lang=ca"
   },
   {
@@ -1969,6 +3013,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21631/26509?lang=ca"
   },
   {
@@ -1980,6 +3027,11 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de jornada i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21632/25474?lang=ca"
   },
   {
@@ -1991,6 +3043,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per tipus de contracte i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21633/25475?lang=ca"
   },
   {
@@ -2002,6 +3061,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per grup de cotització i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21634/25476?lang=ca"
   },
   {
@@ -2013,6 +3076,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21635/25477?lang=ca"
   },
   {
@@ -2024,6 +3091,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21635/26458?lang=ca"
   },
   {
@@ -2035,6 +3106,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21636/25478?lang=ca"
   },
   {
@@ -2046,6 +3120,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte d'altri segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21636/26487?lang=ca"
   },
   {
@@ -2057,6 +3134,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21638/25480?lang=ca"
   },
   {
@@ -2068,6 +3152,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21639/25481?lang=ca"
   },
   {
@@ -2079,6 +3167,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21639/26459?lang=ca"
   },
   {
@@ -2090,6 +3182,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21640/25482?lang=ca"
   },
   {
@@ -2101,6 +3196,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i àrea geogràfica de la nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21640/26488?lang=ca"
   },
   {
@@ -2112,6 +3210,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21642/25484?lang=ca"
   },
   {
@@ -2123,6 +3228,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21642/26460?lang=ca"
   },
   {
@@ -2134,6 +3246,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21643/25485?lang=ca"
   },
   {
@@ -2145,6 +3260,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21643/26489?lang=ca"
   },
   {
@@ -2156,6 +3274,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i pluriactivitat de l'autònom. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21644/25486?lang=ca"
   },
   {
@@ -2167,6 +3288,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i pluriactivitat de l'autònom. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21644/26510?lang=ca"
   },
   {
@@ -2178,6 +3302,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21645/25487?lang=ca"
   },
   {
@@ -2189,6 +3320,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per sector d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21645/26461?lang=ca"
   },
   {
@@ -2200,6 +3338,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21646/25488?lang=ca"
   },
   {
@@ -2211,6 +3353,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per secció d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21646/26490?lang=ca"
   },
   {
@@ -2222,6 +3368,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21647/25489?lang=ca"
   },
   {
@@ -2233,6 +3382,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social per compte propi segons residència padronal de l'afiliat. Per divisió d'activitat econòmica i disponibilitat de treballadors a càrrec. A últim dia del mes"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21647/26511?lang=ca"
   },
   {
@@ -2244,6 +3396,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu i situació de pluriactivitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21648/25490?lang=ca"
   },
   {
@@ -2255,6 +3414,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions al Règim especial dels treballadors autònoms segons residència padronal de l'afiliat. Per tipus de col·lectiu. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/21649/25491?lang=ca"
   },
   {
@@ -2266,6 +3432,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8598/26439?lang=ca"
   },
   {
@@ -2277,6 +3450,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8598/8709?lang=ca"
   },
   {
@@ -2288,6 +3468,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8601/8701?lang=ca"
   },
   {
@@ -2299,6 +3486,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Tots els règims. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8602/8702?lang=ca"
   },
   {
@@ -2310,6 +3504,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Règim general de la Seguretat Social i Règim especial de treballadors autònoms. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8603/8703?lang=ca"
   },
   {
@@ -2321,6 +3522,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8604/8704?lang=ca"
   },
   {
@@ -2332,6 +3540,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8605/8705?lang=ca"
   },
   {
@@ -2343,6 +3558,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8606/8706?lang=ca"
   },
   {
@@ -2354,6 +3576,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per sexe i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8607/8707?lang=ca"
   },
   {
@@ -2365,6 +3594,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8608/8708?lang=ca"
   },
   {
@@ -2376,6 +3612,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliats a la Seguretat Social segons residència padronal de l'afiliat. Per nacionalitat i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/8609/8710?lang=ca"
   },
   {
@@ -2387,6 +3630,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9295/10292?lang=ca"
   },
   {
@@ -2398,6 +3648,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9296/10293?lang=ca"
   },
   {
@@ -2409,6 +3666,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9296/26440?lang=ca"
   },
   {
@@ -2420,6 +3684,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i sexe. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9297/10294?lang=ca"
   },
   {
@@ -2431,6 +3702,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9298/10295?lang=ca"
   },
   {
@@ -2442,6 +3720,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9299/10296?lang=ca"
   },
   {
@@ -2453,6 +3738,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9299/26441?lang=ca"
   },
   {
@@ -2464,6 +3756,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i nacionalitat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9300/10297?lang=ca"
   },
   {
@@ -2475,6 +3774,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per tipus de relació laboral i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9517/10457?lang=ca"
   },
   {
@@ -2486,6 +3792,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9518/10458?lang=ca"
   },
   {
@@ -2497,6 +3810,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9518/26442?lang=ca"
   },
   {
@@ -2508,6 +3828,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per règim de cotització i grups d'edat. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9519/10459?lang=ca"
   },
   {
@@ -2519,6 +3846,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9545/10489?lang=ca"
   },
   {
@@ -2530,6 +3864,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Afiliats i afiliacions a la Seguretat Social segons residència padronal de l'afiliat",
       "node": "Afiliacions a la Seguretat Social segons residència padronal de l'afiliat. Per sector d'activitat econòmica i tipus de relació laboral. A últim dia del mes"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/afi/9545/26443?lang=ca"
   }
 ];

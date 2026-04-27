@@ -11,6 +11,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/1180/1063?lang=es"
   },
   {
@@ -22,6 +31,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/1180/8078?lang=es"
   },
   {
@@ -33,6 +51,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo, edad quinquenal y regiones sanitarias"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/13312/14159?lang=es"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/14683/15490?lang=es"
   },
   {
@@ -55,6 +83,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/14699/15595?lang=es"
   },
   {
@@ -66,6 +97,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo, edad en grandes grupos y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/14700/15596?lang=es"
   },
   {
@@ -77,6 +111,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por lugar de nacimiento y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/14701/15597?lang=es"
   },
   {
@@ -88,6 +125,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad, sexo y tamaño del municipio"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/14702/15598?lang=es"
   },
   {
@@ -99,6 +139,16 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/446/477?lang=es"
   },
   {
@@ -110,6 +160,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/10474?lang=es"
   },
   {
@@ -121,6 +178,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/1108?lang=es"
   },
   {
@@ -132,6 +196,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/11394?lang=es"
   },
   {
@@ -143,6 +214,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/1296?lang=es"
   },
   {
@@ -154,6 +232,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/14003?lang=es"
   },
   {
@@ -165,6 +250,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/14951?lang=es"
   },
   {
@@ -176,6 +268,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/15583?lang=es"
   },
   {
@@ -187,6 +286,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/1803?lang=es"
   },
   {
@@ -198,6 +304,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/19720?lang=es"
   },
   {
@@ -209,6 +322,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/2420?lang=es"
   },
   {
@@ -220,6 +340,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/3941?lang=es"
   },
   {
@@ -231,6 +358,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/4736?lang=es"
   },
   {
@@ -242,6 +376,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/5206?lang=es"
   },
   {
@@ -253,6 +394,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/5998?lang=es"
   },
   {
@@ -264,6 +412,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/683?lang=es"
   },
   {
@@ -275,6 +430,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/693?lang=es"
   },
   {
@@ -286,6 +448,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/694?lang=es"
   },
   {
@@ -297,6 +466,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/6968?lang=es"
   },
   {
@@ -308,6 +484,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/707?lang=es"
   },
   {
@@ -319,6 +502,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/8079?lang=es"
   },
   {
@@ -330,6 +520,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/8388?lang=es"
   },
   {
@@ -341,6 +538,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/940?lang=es"
   },
   {
@@ -352,6 +556,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y generaciones"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/672/9990?lang=es"
   },
   {
@@ -363,6 +574,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por lugar de nacimiento (CCAA y extranjero) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/676/686?lang=es"
   },
   {
@@ -374,6 +592,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por lugar de nacimiento, sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/677/688?lang=es"
   },
   {
@@ -385,6 +610,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por lugar de nacimiento (CCAA y extranjero) y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/678/687?lang=es"
   },
   {
@@ -396,6 +628,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad (continentes) y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/680/690?lang=es"
   },
   {
@@ -407,6 +648,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad (continentes), sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/681/691?lang=es"
   },
   {
@@ -418,6 +666,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad (continentes) y lugar de nacimiento"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/682/692?lang=es"
   },
   {
@@ -429,6 +684,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por lugar de nacimiento y sexo"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/8284/8389?lang=es"
   },
   {
@@ -440,6 +704,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por nacionalidad, sexo y edad año a año"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/9145/10091?lang=es"
   },
   {
@@ -451,6 +722,15 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Padrón municipal de habitantes",
       "node": "Población a 1 de enero. Por sexo y edad quinquenal"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "dis",
+      "mun",
+      "prov",
+      "sec"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/pmh/9548/10494?lang=es"
   }
 ];

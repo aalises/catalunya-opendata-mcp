@@ -11,6 +11,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/13825/15351?lang=ca"
   },
   {
@@ -22,6 +30,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació assolit, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/13827/15353?lang=ca"
   },
   {
@@ -33,6 +48,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació assolit i nacionalitat"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14492/15356?lang=ca"
   },
   {
@@ -44,6 +67,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació assolit, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14493/15357?lang=ca"
   },
   {
@@ -55,6 +86,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació ampliat assolit i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14494/15332?lang=ca"
   },
   {
@@ -66,6 +104,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació ampliat assolit, edat quinquennal i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14496/15359?lang=ca"
   },
   {
@@ -77,6 +122,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 15 anys o més. Per nivell de formació ampliat assolit, nacionalitat i sexe"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14500/15363?lang=ca"
   },
   {
@@ -88,6 +140,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 25 a 64 anys. Per nivell de formació assolit i sexe"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/14791/15681?lang=ca"
   },
   {
@@ -99,6 +159,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 25 a 64 anys amb només educació primària o inferior"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16209/19482?lang=ca"
   },
   {
@@ -110,6 +178,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 25 a 64 anys amb almenys segona etapa d'educació secundària"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16210/19483?lang=ca"
   },
   {
@@ -121,6 +197,14 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Estadística dels estudis de la població",
       "node": "Població de 25 a 64 anys amb educació superior"
     },
+    "geo_ids": [
+      "ac",
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/eep/16211/19484?lang=ca"
   }
 ];

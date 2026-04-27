@@ -11,6 +11,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14859/15719?lang=en"
   },
   {
@@ -22,6 +29,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and age group. Low scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14863/15720?lang=en"
   },
   {
@@ -33,6 +47,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and age group. Medium scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14864/15745?lang=en"
   },
   {
@@ -44,6 +65,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and age group. High scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14865/15747?lang=en"
   },
   {
@@ -55,6 +83,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and five-year age group. Low scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14866/15754?lang=en"
   },
   {
@@ -66,6 +101,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and five-year age group. Medium scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14867/15755?lang=en"
   },
   {
@@ -77,6 +119,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected active population by sex and five-year age group. High scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14868/15756?lang=en"
   },
   {
@@ -88,6 +137,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14869/15721?lang=en"
   },
   {
@@ -99,6 +155,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex. Low scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14870/15751?lang=en"
   },
   {
@@ -110,6 +173,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex. Medium scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14871/15752?lang=en"
   },
   {
@@ -121,6 +191,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex. High scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14872/15753?lang=en"
   },
   {
@@ -132,6 +209,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex and age group. Low scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14873/15722?lang=en"
   },
   {
@@ -143,6 +227,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex and age group. Medium scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14874/15749?lang=en"
   },
   {
@@ -154,6 +245,13 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Active Population Projections",
       "node": "Projected activity rate by sex and age group. High scenario"
     },
+    "geo_ids": [
+      "at",
+      "cat",
+      "com",
+      "mun",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/projpa/14875/15750?lang=en"
   }
 ];

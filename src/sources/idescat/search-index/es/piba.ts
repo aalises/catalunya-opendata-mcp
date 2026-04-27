@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor añadido bruto. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13243/14096?lang=es"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor añadido bruto. Índices en volumen encadenados (año 2015=100). Por ramas de actividad económica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13244/14102?lang=es"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor de la producción. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13245/14099?lang=es"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Consumo intermedio. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13246/14103?lang=es"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Remuneración de asalariados. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13248/14104?lang=es"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Excedente bruto de explotación. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13249/14105?lang=es"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo. Totales. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13251/14106?lang=es"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo. Asalariados. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13252/14107?lang=es"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo equivalentes a tiempo completo. Totales. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13253/14108?lang=es"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo equivalentes a tiempo completo. Asalariados. Por ramas de actividad económica. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13254/14109?lang=es"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor añadido bruto. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21114/24927?lang=es"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor añadido bruto. Índices en volumen encadenados (año 2020=100). Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21115/24928?lang=es"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Valor de la producción. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21116/24929?lang=es"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Consumo intermedio. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21117/24930?lang=es"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Remuneración de asalariados. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21119/24931?lang=es"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Excedente bruto de explotación. Precios corrientes. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21120/24932?lang=es"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo totales y de los asalariados. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21122/26657?lang=es"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Puestos de trabajo equivalentes a tiempo completo totales i de los asalariados. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21124/26658?lang=es"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Precios corrientes. Revisión Estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21909/24920?lang=es"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Precios corrientes. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21910/24921?lang=es"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB renda. Precios corrientes. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21911/24922?lang=es"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Índices en volumen encadenados (año 2020=100). Revisión estadística 2024."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21912/24923?lang=es"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Índices en volumen encadenados (any 2020=100). Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21913/24924?lang=es"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Índice deflactor (any 2020=100). Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21914/24925?lang=es"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Índice deflactor (any 2020=100). Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21915/24926?lang=es"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Precios corrientes. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21916/19257?lang=es"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Precios corrientes. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21917/19258?lang=es"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB renta. Precios corrientes. Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21918/19305?lang=es"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Índices en volum encadenados (año 2015=100). Revisión estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21919/19260?lang=es"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Índices en volumen encadenados (año 2015=100). Revisió estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21920/19261?lang=es"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB oferta. Índice deflactor (año 2015=100). Revisión estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21921/19262?lang=es"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "PIB demanda. Índice deflactor (año 2015=100). Revisión estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21922/19263?lang=es"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Ocupados y asalariados. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/22267/26659?lang=es"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Cuentas económicas anuales de Cataluña",
       "node": "Horas de trabajo totales y de los asalariados. Por ramas de actividad económica. Revisión estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/22268/26660?lang=es"
   }
 ];

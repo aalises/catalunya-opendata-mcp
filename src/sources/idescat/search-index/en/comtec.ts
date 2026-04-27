@@ -11,6 +11,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade according to Technological Content",
       "node": "Exports and imports. By groups of products, countries and means of transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22177/22?lang=en"
   },
   {
@@ -22,6 +26,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade according to Technological Content",
       "node": "Exports and imports. By groups of products, countries and means of transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22178/21?lang=en"
   },
   {
@@ -33,6 +41,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade according to Technological Content",
       "node": "Exports and imports. By groups of products, continents and geographical areas and means of transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22179/57?lang=en"
   },
   {
@@ -44,6 +56,10 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Foreign Trade according to Technological Content",
       "node": "Exports and imports. By groups of products, continents and geographical areas and means of transport"
     },
+    "geo_ids": [
+      "cat",
+      "prov"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/comtec/22180/56?lang=en"
   }
 ];

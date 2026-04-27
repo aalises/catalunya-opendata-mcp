@@ -11,6 +11,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor afegit brut. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13243/14096?lang=ca"
   },
   {
@@ -22,6 +25,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor afegit brut. Índexs en volum encadenats (any 2015=100). Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13244/14102?lang=ca"
   },
   {
@@ -33,6 +39,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor de la producció. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13245/14099?lang=ca"
   },
   {
@@ -44,6 +53,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Consum intermedi. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13246/14103?lang=ca"
   },
   {
@@ -55,6 +67,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Remuneració d'assalariats. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13248/14104?lang=ca"
   },
   {
@@ -66,6 +81,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Excedent brut d'explotació. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13249/14105?lang=ca"
   },
   {
@@ -77,6 +95,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball. Totals. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13251/14106?lang=ca"
   },
   {
@@ -88,6 +109,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball. Assalariats. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13252/14107?lang=ca"
   },
   {
@@ -99,6 +123,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball equivalents a temps complet. Totals. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13253/14108?lang=ca"
   },
   {
@@ -110,6 +137,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball equivalents a temps complet. Assalariats. Per branques d'activitat econòmica. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/13254/14109?lang=ca"
   },
   {
@@ -121,6 +151,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor afegit brut. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21114/24927?lang=ca"
   },
   {
@@ -132,6 +165,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor afegit brut. Índexs en volum encadenats (any 2020=100). Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21115/24928?lang=ca"
   },
   {
@@ -143,6 +179,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Valor de la producció. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21116/24929?lang=ca"
   },
   {
@@ -154,6 +193,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Consum intermedi. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21117/24930?lang=ca"
   },
   {
@@ -165,6 +207,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Remuneració d'assalariats. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21119/24931?lang=ca"
   },
   {
@@ -176,6 +221,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Excedent brut d'explotació. Preus corrents. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21120/24932?lang=ca"
   },
   {
@@ -187,6 +235,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball totals i dels assalariats. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21122/26657?lang=ca"
   },
   {
@@ -198,6 +249,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Llocs de treball equivalents a temps complet totals i dels assalariats. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21124/26658?lang=ca"
   },
   {
@@ -209,6 +263,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Preus corrents. Revisio Estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21909/24920?lang=ca"
   },
   {
@@ -220,6 +277,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Preus corrents. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21910/24921?lang=ca"
   },
   {
@@ -231,6 +291,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB renda. Preus corrents. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21911/24922?lang=ca"
   },
   {
@@ -242,6 +305,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Índexs en volum encadenats (any 2020=100). Revisió estadística 2024."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21912/24923?lang=ca"
   },
   {
@@ -253,6 +319,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Índexs en volum encadenats (any 2020=100). Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21913/24924?lang=ca"
   },
   {
@@ -264,6 +333,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Índex deflactor (any 2020=100). Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21914/24925?lang=ca"
   },
   {
@@ -275,6 +347,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Índex deflactor (any 2020=100). Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21915/24926?lang=ca"
   },
   {
@@ -286,6 +361,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Preus corrents. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21916/19257?lang=ca"
   },
   {
@@ -297,6 +375,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Preus corrents. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21917/19258?lang=ca"
   },
   {
@@ -308,6 +389,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB renda. Preus corrents. Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21918/19305?lang=ca"
   },
   {
@@ -319,6 +403,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Índexs en volum encadenats (any 2015=100). Revisió estadística 2019"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21919/19260?lang=ca"
   },
   {
@@ -330,6 +417,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Índexs en volum encadenats (any 2015=100). Revisió estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21920/19261?lang=ca"
   },
   {
@@ -341,6 +431,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB oferta. Índex deflactor (any 2015=100). Revisió estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21921/19262?lang=ca"
   },
   {
@@ -352,6 +445,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "PIB demanda. Índex deflactor (any 2015=100). Revisió estadística 2019."
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/21922/19263?lang=ca"
   },
   {
@@ -363,6 +459,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Ocupats i assalariats. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/22267/26659?lang=ca"
   },
   {
@@ -374,6 +473,9 @@ const entries: IdescatSearchIndexEntry[] = [
       "statistic": "Comptes econòmics anuals de Catalunya",
       "node": "Hores de treball totals i dels assalariats. Per branques d'activitat econòmica. Revisió estadística 2024"
     },
+    "geo_ids": [
+      "cat"
+    ],
     "source_url": "https://api.idescat.cat/taules/v2/piba/22268/26660?lang=ca"
   }
 ];
