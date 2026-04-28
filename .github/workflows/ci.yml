@@ -29,3 +29,6 @@ jobs:
 
       - name: Check
         run: npm run check
+
+      - name: Replay MCP stress evaluation
+        run: npm run eval:replay:stress -- --quiet
