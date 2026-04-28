@@ -10,11 +10,13 @@ The live evals intentionally test the server the way an MCP client sees it. They
 ## Commands
 
 ```bash
+npm run eval:replay:canary
+npm run eval:replay:stress
 npm run eval:canary
 npm run eval:stress
 ```
 
-Both commands build first. Reports are written to `tmp/mcp-eval-<profile>-<timestamp>.json`.
+All commands build first. Reports are written to `tmp/mcp-eval-<profile>-<timestamp>.json`.
 
 Use an explicit report path when comparing runs:
 
@@ -28,6 +30,10 @@ Useful flags:
 | --- | --- |
 | `--profile=canary` | Fast live eval over MCP health, core Socrata, and core IDESCAT flows. |
 | `--profile=stress` | Full live eval over discovery, metadata, data, resources, caps, and error behavior. |
+| `--mode=live` | Call the MCP server directly without reading or writing a cassette. |
+| `--mode=record` | Call the MCP server directly and write a cassette after a green run. |
+| `--mode=replay` | Run against a recorded cassette without starting the MCP server. |
+| `--cassette=path` | Override the default cassette path. |
 | `--quiet` | Print only failures and the final JSON summary. |
 | `--fail-fast` | Stop at the first failed eval case. |
 
@@ -72,7 +78,38 @@ Binary scoring is deliberate for this MCP because most desired behaviors are str
 - A data call should preserve provenance and row caps.
 - The IDESCAT long-filter regression should return `request_method: "GET"`, no request body params, and the exact selected cell count.
 
-The final report also records connector counts. A run fails if any case fails or if the profile no longer executes the expected number of cases.
+Each case also records sub-assertions for triage:
+
+```json
+{
+  "name": "selected_cell_count",
+  "passed": true,
+  "expected": 250,
+  "actual": 250
+}
+```
+
+The top-level score remains binary, but failed sub-assertions show the exact contract that broke. The final report also records connector counts. A run fails if any case fails or if the profile no longer executes the expected number of cases.
+
+## Record and Replay
+
+Replay mode is the deterministic lane. It uses committed cassettes in `tests/fixtures/evals/`:
+
+```bash
+npm run eval:replay:canary
+npm run eval:replay:stress
+```
+
+Record mode is the refresh lane. It calls live Socrata and IDESCAT services, then overwrites the profile cassette only after the full eval run passes:
+
+```bash
+npm run eval:record:canary
+npm run eval:record:stress
+```
+
+Cassettes are captured at the MCP protocol boundary. They store the method (`callTool`, `getPrompt`, or `readResource`), scope (`default` or `low-cap`), stable params, and the resulting MCP response. The evaluator de-duplicates identical interactions inside a recording run, so repeated metadata calls share one cassette entry.
+
+Use replay when you want to know whether local code still satisfies the known-good MCP contract. Use live or record mode when you want to know whether the current upstream services still satisfy that contract.
 
 ## Report Shape
 
@@ -80,7 +117,8 @@ Each report contains:
 
 - `generated_at`, `completed_at`, and `duration_ms`.
 - `profile`, package metadata, and the evaluated server command.
-- `cases[]` with inputs, pass/fail score, duration, status, and a compact result summary.
+- `evaluation.mode` and `evaluation.cassette_path`, when applicable.
+- `cases[]` with inputs, pass/fail score, sub-assertions, duration, status, and a compact result summary.
 - `summary` with total score, per-connector counts, expected counts, and count mismatches.
 
 The report is meant to be machine-readable for CI, release checklists, and trend dashboards.
@@ -95,7 +133,7 @@ Good eval cases should:
 - Use stable public datasets or stable error expectations.
 - Prefer exact structural assertions over fuzzy content assertions.
 - Include negative cases for invalid input, upstream errors, byte caps, and row caps.
-- Keep live upstream flakiness isolated to `eval:*` scripts instead of `npm run check`.
+- Keep live upstream flakiness isolated to live/record evals instead of `npm run check`.
 
 Open-ended model-in-the-loop evals can be added later on top of this harness, but they should answer a different question: whether an agent chooses the right MCP calls and interprets the results correctly.
 

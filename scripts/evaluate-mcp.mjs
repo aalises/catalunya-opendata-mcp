@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
@@ -6,6 +6,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 const packageJson = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 const DEFAULT_REQUEST_TIMEOUT_MS = "60000";
 const VALID_PROFILES = new Set(["canary", "stress"]);
+const VALID_MODES = new Set(["live", "record", "replay"]);
 const PROFILE_CASE_COUNTS = {
   canary: {
     mcp: 1,
@@ -21,6 +22,16 @@ const PROFILE_CASE_COUNTS = {
 
 const options = parseArgs(process.argv.slice(2));
 const startedAt = new Date();
+const cassettePath =
+  options.cassette ??
+  (options.mode === "live"
+    ? undefined
+    : resolve(process.cwd(), "tests", "fixtures", "evals", `${options.profile}.json`));
+const recorder = createMcpRecorder({
+  cassettePath,
+  mode: options.mode,
+  profile: options.profile,
+});
 const reportPath =
   options.report ??
   resolve(
@@ -40,6 +51,10 @@ const report = {
     server: "node dist/index.js",
     report_path: reportPath,
   },
+  evaluation: {
+    mode: options.mode,
+    cassette_path: cassettePath,
+  },
   cases: [],
 };
 
@@ -47,7 +62,7 @@ await run();
 
 async function run() {
   const env = createServerEnv();
-  const clientHandle = createClient("catalunya-opendata-mcp-evaluator", env);
+  const clientHandle = createClient("catalunya-opendata-mcp-evaluator", env, "default");
 
   try {
     await clientHandle.client.connect(clientHandle.transport);
@@ -228,13 +243,12 @@ async function runCanaryProfile(client) {
       limit: 3,
     },
     expect: ({ data }) =>
-      passIf(
-        isGetOnlyData(data) &&
-          data.selected_cell_count === 1 &&
-          data.row_count === 1 &&
-          data.rows?.[0]?.dimensions?.CAT?.label === "Catalunya",
-        "latest Catalonia total population returns one GET-backed cell",
-      ),
+      expectIdescatGetData(data, {
+        firstDimensionLabel: ["CAT", "Catalunya"],
+        reason: "latest Catalonia total population returns one GET-backed cell",
+        rowCount: 1,
+        selectedCellCount: 1,
+      }),
   });
 
   await evaluateTool({
@@ -278,13 +292,12 @@ async function runCanaryProfile(client) {
       limit: 3,
     }),
     expect: ({ data }) =>
-      passIf(
-        isGetOnlyData(data) &&
-          data.selected_cell_count === 250 &&
-          data.row_count === 3 &&
-          data.truncated === true,
-        "250-municipality filter stays GET and selects exactly 250 cells",
-      ),
+      expectIdescatGetData(data, {
+        reason: "250-municipality filter stays GET and selects exactly 250 cells",
+        rowCount: 3,
+        selectedCellCount: 250,
+        truncated: true,
+      }),
   });
 
   await evaluateTool({
@@ -324,12 +337,11 @@ async function runCanaryProfile(client) {
       limit: 3,
     },
     expect: ({ data }) =>
-      passIf(
-        isGetOnlyData(data) &&
-          data.selected_cell_count === 1 &&
-          data.rows?.[0]?.dimensions?.COM?.label === "Catalunya",
-        "county geography total returns one Catalonia row",
-      ),
+      expectIdescatGetData(data, {
+        firstDimensionLabel: ["COM", "Catalunya"],
+        reason: "county geography total returns one Catalonia row",
+        selectedCellCount: 1,
+      }),
   });
 
   await evaluateTool({
@@ -938,10 +950,10 @@ async function runStressProfile(client) {
         limit,
       },
       expect: ({ data }) =>
-        passIf(
-          isGetOnlyData(data) && data.selected_cell_count === count,
-          `${count}-municipality filter stays GET and selects exactly ${count} cells`,
-        ),
+        expectIdescatGetData(data, {
+          reason: `${count}-municipality filter stays GET and selects exactly ${count} cells`,
+          selectedCellCount: count,
+        }),
     });
   }
 
@@ -1172,7 +1184,7 @@ async function runLowCapChecks() {
     ...createServerEnv(),
     CATALUNYA_MCP_RESPONSE_MAX_BYTES: "65536",
   };
-  const handle = createClient("catalunya-opendata-mcp-evaluator-low-cap", lowCapEnv);
+  const handle = createClient("catalunya-opendata-mcp-evaluator-low-cap", lowCapEnv, "low-cap");
 
   try {
     await handle.client.connect(handle.transport);
@@ -1252,16 +1264,18 @@ async function evaluateTool(caseDef) {
   const structuredContent = result?.structuredContent;
   const data = isRecord(structuredContent) ? structuredContent.data : undefined;
   const error = isRecord(structuredContent) ? structuredContent.error : undefined;
-  const expectation = caseDef.expect({
-    args,
-    data,
-    error,
-    prompt,
-    resource,
-    result,
-    structuredContent,
-    thrown,
-  });
+  const expectation = normalizeExpectation(
+    caseDef.expect({
+      args,
+      data,
+      error,
+      prompt,
+      resource,
+      result,
+      structuredContent,
+      thrown,
+    }),
+  );
   const passed = expectation.score === 1;
   const entry = {
     sequence,
@@ -1277,6 +1291,8 @@ async function evaluateTool(caseDef) {
     passed,
     score: expectation.score,
     reason: expectation.reason,
+    assertions: expectation.assertions,
+    failed_assertions: expectation.assertions.filter((assertion) => !assertion.passed).length,
     duration_ms: Math.round(performance.now() - startedAtMs),
     status: thrown ? "thrown" : result?.isError ? "tool_error" : "ok",
     summary: summarizeResult({
@@ -1356,19 +1372,28 @@ function finalizeReport() {
     count_failures: countFailures,
   };
 
+  const ok = failed.length === 0 && countFailures.length === 0;
+
+  if (ok) {
+    recorder.save(report.summary);
+  }
+
   mkdirSync(dirname(reportPath), { recursive: true });
   writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 
   console.log(
     JSON.stringify(
       {
-        ok: failed.length === 0 && countFailures.length === 0,
+        ok,
         profile: options.profile,
+        mode: options.mode,
+        cassettePath,
         reportPath,
         summary: report.summary,
         failures: failed.map((entry) => ({
           id: entry.id,
           reason: entry.reason,
+          assertions: entry.assertions?.filter((assertion) => !assertion.passed),
           summary: entry.summary,
         })),
       },
@@ -1377,7 +1402,7 @@ function finalizeReport() {
     ),
   );
 
-  if (failed.length > 0 || countFailures.length > 0) {
+  if (!ok) {
     process.exitCode = 1;
   }
 }
@@ -1404,18 +1429,183 @@ function countByConnector(cases) {
   return counts;
 }
 
-function createClient(name, env) {
+function createClient(name, env, scope) {
+  if (options.mode === "replay") {
+    return {
+      client: createRecordedClient(scope),
+      transport: undefined,
+    };
+  }
+
+  const sdkClient = new Client({
+    name,
+    version: packageJson.version,
+  });
+
   return {
-    client: new Client({
-      name,
-      version: packageJson.version,
-    }),
+    client: createRecordedClient(scope, sdkClient),
     transport: new StdioClientTransport({
       command: "node",
       args: ["dist/index.js"],
       env,
     }),
   };
+}
+
+function createRecordedClient(scope, sdkClient) {
+  return {
+    async callTool(params) {
+      return recorder.invoke(scope, "callTool", params, () => sdkClient.callTool(params));
+    },
+    async close() {
+      if (sdkClient !== undefined) {
+        await sdkClient.close();
+      }
+    },
+    async connect(transport) {
+      if (sdkClient !== undefined) {
+        await sdkClient.connect(transport);
+      }
+    },
+    async getPrompt(params) {
+      return recorder.invoke(scope, "getPrompt", params, () => sdkClient.getPrompt(params));
+    },
+    async readResource(params) {
+      return recorder.invoke(scope, "readResource", params, () => sdkClient.readResource(params));
+    },
+  };
+}
+
+function createMcpRecorder({ cassettePath, mode, profile }) {
+  const interactions = [];
+  const byKey = new Map();
+
+  if (mode === "replay") {
+    if (cassettePath === undefined || !existsSync(cassettePath)) {
+      throw new Error(
+        `Replay cassette not found: ${cassettePath ?? "(missing)"}. Run with --mode=record first.`,
+      );
+    }
+
+    const cassette = JSON.parse(readFileSync(cassettePath, "utf8"));
+    for (const interaction of cassette.interactions ?? []) {
+      byKey.set(interaction.key, interaction);
+    }
+  }
+
+  return {
+    mode,
+    async invoke(scope, method, params, perform) {
+      const key = createInteractionKey(scope, method, params);
+      const existing = byKey.get(key);
+
+      if (existing !== undefined) {
+        if (existing.error !== undefined) {
+          throw deserializeRecordedError(existing.error);
+        }
+
+        return cloneJson(existing.result);
+      }
+
+      if (mode === "replay") {
+        throw new Error(
+          `Missing replay cassette interaction: ${scope}:${method}:${stableJson(params)}`,
+        );
+      }
+
+      try {
+        const result = await perform();
+        const interaction = {
+          key,
+          scope,
+          method,
+          params: cloneJson(params),
+          recorded_at: new Date().toISOString(),
+          result: cloneJson(result),
+        };
+        interactions.push(interaction);
+        byKey.set(key, interaction);
+        return result;
+      } catch (error) {
+        const interaction = {
+          key,
+          scope,
+          method,
+          params: cloneJson(params),
+          recorded_at: new Date().toISOString(),
+          error: serializeRecordedError(error),
+        };
+        interactions.push(interaction);
+        byKey.set(key, interaction);
+        throw error;
+      }
+    },
+    save(summary) {
+      if (mode !== "record" || cassettePath === undefined) {
+        return;
+      }
+
+      const cassette = {
+        version: 1,
+        profile,
+        package: {
+          name: packageJson.name,
+          version: packageJson.version,
+        },
+        recorded_at: new Date().toISOString(),
+        summary,
+        interactions,
+      };
+
+      mkdirSync(dirname(cassettePath), { recursive: true });
+      writeFileSync(cassettePath, `${JSON.stringify(cassette, null, 2)}\n`);
+    },
+  };
+}
+
+function createInteractionKey(scope, method, params) {
+  return `${scope}:${method}:${stableJson(params)}`;
+}
+
+function stableJson(value) {
+  return JSON.stringify(sortJsonValue(value));
+}
+
+function sortJsonValue(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => sortJsonValue(item));
+  }
+
+  if (!isRecord(value)) {
+    return value;
+  }
+
+  return Object.fromEntries(
+    Object.keys(value)
+      .filter((key) => value[key] !== undefined)
+      .sort()
+      .map((key) => [key, sortJsonValue(value[key])]),
+  );
+}
+
+function cloneJson(value) {
+  return value === undefined ? undefined : JSON.parse(JSON.stringify(value));
+}
+
+function serializeRecordedError(error) {
+  return {
+    name: error?.name,
+    code: error?.code,
+    message: String(error?.message ?? error),
+  };
+}
+
+function deserializeRecordedError(error) {
+  const replayError = new Error(error.message);
+  replayError.name = error.name ?? "RecordedMcpError";
+  replayError.code = error.code;
+
+  return replayError;
 }
 
 function createServerEnv() {
@@ -1460,72 +1650,244 @@ function getDimensionCategories(data, dimensionId) {
 }
 
 function passIf(condition, reason) {
+  return assertAll(reason, [assertThat(reason, condition)]);
+}
+
+function expectIdescatGetData(
+  data,
+  { firstDimensionLabel, reason, rowCount, selectedCellCount, truncated },
+) {
+  const assertions = [...getOnlyDataAssertions(data)];
+
+  if (selectedCellCount !== undefined) {
+    assertions.push(
+      assertEqual("selected_cell_count", data?.selected_cell_count, selectedCellCount),
+    );
+  }
+
+  if (rowCount !== undefined) {
+    assertions.push(assertEqual("row_count", data?.row_count, rowCount));
+  }
+
+  if (truncated !== undefined) {
+    assertions.push(assertEqual("truncated", data?.truncated, truncated));
+  }
+
+  if (firstDimensionLabel !== undefined) {
+    const [dimensionId, expectedLabel] = firstDimensionLabel;
+    assertions.push(
+      assertEqual(
+        `first row ${dimensionId} label`,
+        data?.rows?.[0]?.dimensions?.[dimensionId]?.label,
+        expectedLabel,
+      ),
+    );
+  }
+
+  return assertAll(reason, assertions);
+}
+
+function getOnlyDataAssertions(data) {
+  return [
+    assertThat("data is structured object", isRecord(data), {
+      actual: data === undefined ? "undefined" : typeof data,
+      expected: "object",
+    }),
+    assertEqual("request_method", data?.request_method, "GET"),
+    assertThat(
+      "request_url equals logical_request_url",
+      data?.request_url === data?.logical_request_url,
+      {
+        actual: data?.request_url === data?.logical_request_url,
+        expected: true,
+      },
+    ),
+    assertThat(
+      "request_body_params omitted",
+      isRecord(data) && !Object.hasOwn(data, "request_body_params"),
+      {
+        actual: isRecord(data) && Object.hasOwn(data, "request_body_params") ? "present" : "absent",
+        expected: "absent",
+      },
+    ),
+  ];
+}
+
+function assertAll(reason, assertions) {
+  const normalizedAssertions = assertions.map((assertion) => normalizeAssertion(assertion));
+  const failedAssertion = normalizedAssertions.find((assertion) => !assertion.passed);
+
   return {
-    score: condition ? 1 : 0,
-    reason,
+    score: failedAssertion === undefined ? 1 : 0,
+    reason: failedAssertion === undefined ? reason : `${reason}: ${failedAssertion.name}`,
+    assertions: normalizedAssertions,
   };
+}
+
+function assertThat(name, condition, details = {}) {
+  return {
+    name,
+    passed: Boolean(condition),
+    ...details,
+  };
+}
+
+function assertEqual(name, actual, expected) {
+  return assertThat(name, Object.is(actual, expected), {
+    actual,
+    expected,
+  });
+}
+
+function normalizeExpectation(expectation) {
+  if (!isRecord(expectation)) {
+    return assertAll("expectation returned an invalid result", [
+      assertThat("expectation is an object", false, {
+        actual: typeof expectation,
+        expected: "object",
+      }),
+    ]);
+  }
+
+  const score = expectation.score === 1 ? 1 : 0;
+  const assertions = Array.isArray(expectation.assertions)
+    ? expectation.assertions.map((assertion) => normalizeAssertion(assertion))
+    : [
+        normalizeAssertion({
+          name: expectation.reason ?? "case expectation",
+          passed: score === 1,
+        }),
+      ];
+  const failedAssertion = assertions.find((assertion) => !assertion.passed);
+
+  return {
+    score,
+    reason:
+      expectation.reason ??
+      (failedAssertion === undefined ? "expectation passed" : `failed: ${failedAssertion.name}`),
+    assertions,
+  };
+}
+
+function normalizeAssertion(assertion) {
+  const assertionObject = isRecord(assertion) ? assertion : {};
+  const normalized = {
+    name: String(assertionObject.name ?? "unnamed assertion"),
+    passed: assertionObject.passed === true,
+  };
+
+  if (Object.hasOwn(assertionObject, "expected")) {
+    normalized.expected = compactAssertionValue(assertionObject.expected);
+  }
+
+  if (Object.hasOwn(assertionObject, "actual")) {
+    normalized.actual = compactAssertionValue(assertionObject.actual);
+  }
+
+  if (assertionObject.hint !== undefined) {
+    normalized.hint = String(assertionObject.hint);
+  }
+
+  return normalized;
+}
+
+function compactAssertionValue(value) {
+  if (typeof value === "string") {
+    return value.length > 300 ? `${value.slice(0, 300)}...` : value;
+  }
+
+  if (Array.isArray(value)) {
+    return value.length > 20
+      ? {
+          type: "array",
+          length: value.length,
+          preview: value.slice(0, 20),
+        }
+      : value;
+  }
+
+  if (isRecord(value)) {
+    const text = JSON.stringify(value);
+    return text.length > 500
+      ? {
+          type: "object",
+          keys: Object.keys(value).slice(0, 20),
+        }
+      : value;
+  }
+
+  return value;
 }
 
 function expectToolError(expected) {
   return ({ error, result }) => {
-    if (!isRecord(error) || result?.isError !== true) {
-      return {
-        score: 0,
-        reason: "expected structured tool error",
-      };
+    const assertions = [
+      assertThat("result is a structured tool error", isRecord(error) && result?.isError === true, {
+        actual: {
+          has_structured_error: isRecord(error),
+          is_error: result?.isError === true,
+        },
+        expected: {
+          has_structured_error: true,
+          is_error: true,
+        },
+      }),
+    ];
+
+    if (expected.code !== undefined) {
+      assertions.push(assertEqual("error code", error?.code, expected.code));
     }
 
-    if (expected.code !== undefined && error.code !== expected.code) {
-      return {
-        score: 0,
-        reason: `expected error code ${expected.code}, got ${String(error.code)}`,
-      };
+    if (expected.status !== undefined) {
+      assertions.push(assertEqual("error status", error?.status, expected.status));
     }
 
-    if (expected.status !== undefined && error.status !== expected.status) {
-      return {
-        score: 0,
-        reason: `expected error status ${expected.status}, got ${String(error.status)}`,
-      };
+    if (expected.sourceRule !== undefined) {
+      assertions.push(
+        assertEqual("source_error.rule", error?.source_error?.rule, expected.sourceRule),
+      );
     }
 
-    if (expected.sourceRule !== undefined && error.source_error?.rule !== expected.sourceRule) {
-      return {
-        score: 0,
-        reason: `expected source_error.rule ${expected.sourceRule}, got ${String(
-          error.source_error?.rule,
-        )}`,
-      };
+    if (expected.messageIncludes !== undefined) {
+      assertions.push(
+        assertThat(
+          "error message includes expected text",
+          String(error?.message).includes(expected.messageIncludes),
+          {
+            actual: String(error?.message),
+            expected: expected.messageIncludes,
+          },
+        ),
+      );
     }
 
-    if (
-      expected.messageIncludes !== undefined &&
-      !String(error.message).includes(expected.messageIncludes)
-    ) {
-      return {
-        score: 0,
-        reason: `expected error message to include ${expected.messageIncludes}`,
-      };
-    }
-
-    return {
-      score: 1,
-      reason: `got expected ${expected.code ?? expected.sourceRule ?? "tool"} error`,
-    };
+    return assertAll(
+      `got expected ${expected.code ?? expected.sourceRule ?? "tool"} error`,
+      assertions,
+    );
   };
 }
 
 function expectSdkValidationError(text) {
   return ({ result, structuredContent, thrown }) => {
     const message = textOf(result);
-    return passIf(
-      !thrown &&
-        result?.isError === true &&
-        structuredContent === undefined &&
-        message.includes("Input validation error") &&
-        message.includes(text),
-      `SDK validation error mentions ${text}`,
-    );
+    return assertAll(`SDK validation error mentions ${text}`, [
+      assertEqual("no exception thrown", thrown === undefined, true),
+      assertEqual("result is MCP error", result?.isError, true),
+      assertEqual("structured content omitted", structuredContent, undefined),
+      assertThat(
+        "message includes SDK validation prefix",
+        message.includes("Input validation error"),
+        {
+          actual: message,
+          expected: "Input validation error",
+        },
+      ),
+      assertThat("message includes expected field text", message.includes(text), {
+        actual: message,
+        expected: text,
+      }),
+    ]);
   };
 }
 
@@ -1661,7 +2023,9 @@ function summarizeResult({ data, error, prompt, resource, resourceTextBytes, res
 
 function parseArgs(args) {
   const parsed = {
+    cassette: undefined,
     failFast: false,
+    mode: "live",
     profile: "canary",
     quiet: false,
     report: undefined,
@@ -1675,6 +2039,26 @@ function parseArgs(args) {
 
     if (arg === "--quiet") {
       parsed.quiet = true;
+      continue;
+    }
+
+    if (arg === "--record") {
+      parsed.mode = "record";
+      continue;
+    }
+
+    if (arg === "--replay") {
+      parsed.mode = "replay";
+      continue;
+    }
+
+    if (arg.startsWith("--mode=")) {
+      parsed.mode = arg.slice("--mode=".length);
+      continue;
+    }
+
+    if (arg.startsWith("--cassette=")) {
+      parsed.cassette = resolve(process.cwd(), arg.slice("--cassette=".length));
       continue;
     }
 
@@ -1701,15 +2085,26 @@ function parseArgs(args) {
     );
   }
 
+  if (!VALID_MODES.has(parsed.mode)) {
+    throw new Error(
+      `Invalid --mode=${parsed.mode}. Expected one of: ${[...VALID_MODES].join(", ")}`,
+    );
+  }
+
   return parsed;
 }
 
 function printHelpAndExit() {
-  console.log(`Usage: node scripts/evaluate-mcp.mjs [--profile=canary|stress] [--report=path] [--quiet] [--fail-fast]
+  console.log(`Usage: node scripts/evaluate-mcp.mjs [--profile=canary|stress] [--mode=live|record|replay] [--cassette=path] [--report=path] [--quiet] [--fail-fast]
 
 Profiles:
   canary  Fast live eval over MCP health, Socrata core path, and IDESCAT core path.
   stress  Full live eval over search, metadata, data, resources, caps, and regressions.
+
+Modes:
+  live    Call the MCP server directly and do not write a cassette.
+  record  Call the MCP server directly and write a replay cassette after a green run.
+  replay  Run against a previously recorded cassette without starting the MCP server.
 `);
   process.exit(0);
 }

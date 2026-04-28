@@ -292,6 +292,8 @@ Example client configuration with environment overrides:
 | `npm run canary:idescat` | Builds the server and runs the live IDESCAT search -> geos -> metadata -> data canary. |
 | `npm run eval:canary` | Builds the server and runs the live binary MCP evaluation canary. |
 | `npm run eval:stress` | Builds the server and runs the full live binary MCP evaluation suite. |
+| `npm run eval:replay:canary` | Replays the canary evaluation from the committed MCP cassette. |
+| `npm run eval:replay:stress` | Replays the full evaluation suite from the committed MCP cassette. |
 | `npm run package:size` | Checks packed/unpacked package size and total generated IDESCAT index size. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
 | `npm run refresh:idescat` | Crawl IDESCAT Tables v2 and regenerate the committed search index. |
@@ -303,16 +305,27 @@ Example client configuration with environment overrides:
 
 The repository includes live MCP evaluations for checking how well the server performs as an actual MCP adapter, not just as local TypeScript modules. The evaluator builds the project, starts `node dist/index.js` over stdio, calls the public MCP surface, and grades each tool, prompt, and resource response with a deterministic pass/fail assertion.
 
-Use the fast profile while iterating on connector behavior:
+Use replay mode for deterministic local or CI checks that should not depend on live upstream availability:
+
+```bash
+npm run eval:replay:canary
+npm run eval:replay:stress
+```
+
+Replay mode reads committed cassettes from `tests/fixtures/evals/`. It exercises the same evaluation logic and report schema, but returns previously captured MCP responses instead of calling Socrata or IDESCAT.
+
+Use live mode while checking current upstream behavior:
 
 ```bash
 npm run eval:canary
+npm run eval:stress
 ```
 
-Use the full profile before release or after adapter changes:
+Refresh cassettes after intentionally changing adapter behavior or accepting upstream drift:
 
 ```bash
-npm run eval:stress
+npm run eval:record:canary
+npm run eval:record:stress
 ```
 
 The stress profile currently runs 125 live cases:
@@ -325,9 +338,9 @@ The stress profile currently runs 125 live cases:
 
 The cases cover discovery, metadata, bounded data queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
-Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
+Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 
-These evals are intentionally separate from `npm run check` because they call live Generalitat and IDESCAT services. If an upstream service is down or rate-limited, the eval can fail even when local unit tests are healthy. For more detail on the evaluation design and report format, see [`docs/evaluations.md`](./docs/evaluations.md).
+Live evals are intentionally separate from `npm run check` because they call Generalitat and IDESCAT services. If an upstream service is down or rate-limited, a live eval can fail even when local unit tests and replay evals are healthy. For more detail on the evaluation design, cassette modes, and report format, see [`docs/evaluations.md`](./docs/evaluations.md).
 
 ## Release Checklist
 
