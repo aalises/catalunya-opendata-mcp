@@ -49,6 +49,8 @@
     "smoke": "npm run build && node scripts/smoke.mjs",
     "canary:socrata": "npm run build && node scripts/socrata-live-canary.mjs",
     "canary:idescat": "npm run build && node scripts/idescat-live-canary.mjs",
+    "eval:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary",
+    "eval:stress": "npm run build && node scripts/evaluate-mcp.mjs --profile=stress",
     "package:size": "node scripts/package-size.mjs",
     "refresh:idescat": "tsx scripts/refresh-idescat.ts",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",

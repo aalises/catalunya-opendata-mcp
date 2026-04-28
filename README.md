@@ -290,6 +290,8 @@ Example client configuration with environment overrides:
 | `npm run smoke` | Builds the server and calls `ping` over stdio. |
 | `npm run canary:socrata` | Builds the server and runs the live Socrata search -> describe -> query canary. |
 | `npm run canary:idescat` | Builds the server and runs the live IDESCAT search -> geos -> metadata -> data canary. |
+| `npm run eval:canary` | Builds the server and runs the live binary MCP evaluation canary. |
+| `npm run eval:stress` | Builds the server and runs the full live binary MCP evaluation suite. |
 | `npm run package:size` | Checks packed/unpacked package size and total generated IDESCAT index size. |
 | `npm run inspect` | Builds the server and opens the MCP Inspector against `dist/index.js`. |
 | `npm run refresh:idescat` | Crawl IDESCAT Tables v2 and regenerate the committed search index. |
@@ -297,11 +299,41 @@ Example client configuration with environment overrides:
 | `npm run format` | Formats the repository with Biome. |
 | `npm run check` | Runs typecheck, lint, tests, smoke, and package size checks. |
 
+## Evaluations
+
+The repository includes live MCP evaluations for checking how well the server performs as an actual MCP adapter, not just as local TypeScript modules. The evaluator builds the project, starts `node dist/index.js` over stdio, calls the public MCP surface, and grades each tool, prompt, and resource response with a deterministic pass/fail assertion.
+
+Use the fast profile while iterating on connector behavior:
+
+```bash
+npm run eval:canary
+```
+
+Use the full profile before release or after adapter changes:
+
+```bash
+npm run eval:stress
+```
+
+The stress profile currently runs 125 live cases:
+
+| Connector | Cases |
+| --- | ---: |
+| MCP surface | 1 |
+| Socrata | 53 |
+| IDESCAT | 71 |
+
+The cases cover discovery, metadata, bounded data queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+
+Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
+
+These evals are intentionally separate from `npm run check` because they call live Generalitat and IDESCAT services. If an upstream service is down or rate-limited, the eval can fail even when local unit tests are healthy. For more detail on the evaluation design and report format, see [`docs/evaluations.md`](./docs/evaluations.md).
+
 ## Release Checklist
 
 Before opening or merging routine changes, run `npm run check`. This stays local and does not include live upstream canaries.
 
-For release readiness or adapter changes, optionally run `npm run canary:socrata` and `npm run canary:idescat`. These commands exercise the public MCP surface against live Generalitat/IDESCAT services, so they are intentionally manual and may fail when an upstream service is unavailable.
+For release readiness or adapter changes, optionally run `npm run canary:socrata`, `npm run canary:idescat`, and `npm run eval:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md).
 
 ## Project Notes
 
