@@ -8,6 +8,29 @@ describe("previewBcnResource", () => {
     vi.restoreAllMocks();
   });
 
+  it("skips the package_show round trip when the resource already exposes a license", async () => {
+    const fetchMock = mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          package_id: "package-1",
+          license_title: "Resource terms",
+          format: "CSV",
+          mimetype: "text/csv",
+          url: "https://opendata-ajuntament.barcelona.cat/download/resource.csv",
+        }),
+      ),
+      new Response("Nom;Barri\nArbre;Gracia\n", {
+        headers: { "Content-Type": "text/csv" },
+        status: 200,
+      }),
+    );
+
+    const result = await previewBcnResource({ resource_id: "resource-1" }, baseConfig);
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(result.data.format).toBe("csv");
+  });
+
   it("rejects non-BCN and non-HTTPS download URLs before fetching them", async () => {
     const fetchMock = mockFetchResponses(
       ckanSuccess(

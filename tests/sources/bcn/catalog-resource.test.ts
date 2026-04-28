@@ -112,6 +112,29 @@ describe("Open Data BCN catalog and resource metadata", () => {
     });
   });
 
+  it("returns active DataStore resource info when the schema fetch fails", async () => {
+    const fetchMock = mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          datastore_active: true,
+          package_id: null,
+          license_title: "Resource terms",
+        }),
+      ),
+      ckanFailure({ message: "datastore unavailable" }),
+    );
+
+    const result = await getBcnResourceInfo({ resource_id: "resource-1" }, baseConfig);
+
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(result.data).toMatchObject({
+      datastore_active: true,
+      fields: null,
+      fields_unavailable_reason: expect.stringContaining("datastore"),
+      suggested_next_action: expect.stringContaining("temporarily unavailable"),
+    });
+  });
+
   it("returns resource metadata even when parent package enrichment fails", async () => {
     mockFetchResponses(
       ckanSuccess(

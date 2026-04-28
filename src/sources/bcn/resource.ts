@@ -45,7 +45,12 @@ export interface BcnResourceMetadata {
 
 export interface BcnResourceInfoData extends BcnResourceMetadata {
   fields: BcnDatastoreField[] | null;
+  fields_unavailable_reason?: string;
   suggested_next_action: string;
+}
+
+export interface BcnResourceMetadataEnrichment {
+  includePackageTitle?: boolean;
 }
 
 export interface BcnResourceInfoResult {
@@ -94,17 +99,18 @@ export async function getBcnResourceInfo(
   const url = buildBcnActionUrl("resource_show", { id: resourceId });
   const raw = await fetchBcnActionResult({ url }, config, options);
   const metadata = await enrichResourceMetadata(parseResource(raw), config, options);
-  const fields = metadata.datastore_active
-    ? await getBcnDatastoreFields(resourceId, config, options)
-    : null;
+  const fieldsResult = metadata.datastore_active
+    ? await tryGetBcnDatastoreFields(resourceId, config, options)
+    : { fields: null };
 
   return {
     data: {
       ...metadata,
-      fields,
-      suggested_next_action: metadata.datastore_active
-        ? "Use bcn_query_resource with returned field IDs for filters, fields, and sort."
-        : "Use bcn_preview_resource for a bounded CSV/JSON download preview; this resource is not DataStore-active.",
+      fields: fieldsResult.fields,
+      ...(fieldsResult.unavailable_reason
+        ? { fields_unavailable_reason: fieldsResult.unavailable_reason }
+        : {}),
+      suggested_next_action: getSuggestedNextAction(metadata.datastore_active, fieldsResult),
     },
     provenance: createBcnOperationProvenance("resource_show", url),
   };
@@ -114,11 +120,12 @@ export async function fetchBcnResourceMetadata(
   resourceId: string,
   config: AppConfig,
   options: FetchBcnJsonOptions = {},
+  enrichment: BcnResourceMetadataEnrichment = {},
 ): Promise<BcnResourceMetadata> {
   const normalizedResourceId = normalizeBcnId("resource_id", resourceId);
   const url = buildBcnActionUrl("resource_show", { id: normalizedResourceId });
   const raw = await fetchBcnActionResult({ url }, config, options);
-  return enrichResourceMetadata(parseResource(raw), config, options);
+  return enrichResourceMetadata(parseResource(raw), config, options, enrichment);
 }
 
 export async function getBcnDatastoreFields(
@@ -170,12 +177,15 @@ async function enrichResourceMetadata(
   resource: RawResource,
   config: AppConfig,
   options: FetchBcnJsonOptions,
+  enrichment: BcnResourceMetadataEnrichment = {},
 ): Promise<BcnResourceMetadata> {
+  const includePackageTitle = enrichment.includePackageTitle ?? true;
   const packageId = normalizeNullableString(resource.package_id);
   let packageTitle: string | null = null;
   let packageLicense = getBcnLicenseOrTerms(resource);
+  const needsPackageFetch = Boolean(packageId) && (includePackageTitle || !packageLicense);
 
-  if (packageId) {
+  if (packageId && needsPackageFetch) {
     try {
       const pkg = await fetchBcnPackageData(packageId, config, options);
       packageTitle = pkg.title;
@@ -210,6 +220,42 @@ async function enrichResourceMetadata(
       language: "ca",
     },
   };
+}
+
+interface DatastoreFieldsAttempt {
+  fields: BcnDatastoreField[] | null;
+  unavailable_reason?: string;
+}
+
+async function tryGetBcnDatastoreFields(
+  resourceId: string,
+  config: AppConfig,
+  options: FetchBcnJsonOptions,
+): Promise<DatastoreFieldsAttempt> {
+  try {
+    return { fields: await getBcnDatastoreFields(resourceId, config, options) };
+  } catch (error) {
+    return {
+      fields: null,
+      unavailable_reason:
+        error instanceof BcnError ? error.message : "DataStore schema fetch failed.",
+    };
+  }
+}
+
+function getSuggestedNextAction(
+  datastoreActive: boolean,
+  fieldsResult: DatastoreFieldsAttempt,
+): string {
+  if (!datastoreActive) {
+    return "Use bcn_preview_resource for a bounded CSV/JSON download preview; this resource is not DataStore-active.";
+  }
+
+  if (fieldsResult.fields) {
+    return "Use bcn_query_resource with returned field IDs for filters, fields, and sort.";
+  }
+
+  return "DataStore is active but the field schema is temporarily unavailable; retry bcn_get_resource_info or call bcn_query_resource with cautious filters.";
 }
 
 export function normalizeBcnJsonObject(value: unknown, name: string): Record<string, JsonValue> {

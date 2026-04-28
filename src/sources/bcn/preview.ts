@@ -74,7 +74,9 @@ export async function previewBcnResource(
   options: FetchBcnJsonOptions = {},
 ): Promise<BcnPreviewResourceResult> {
   const normalized = normalizePreviewInput(input, config);
-  const metadata = await fetchBcnResourceMetadata(normalized.resource_id, config, options);
+  const metadata = await fetchBcnResourceMetadata(normalized.resource_id, config, options, {
+    includePackageTitle: false,
+  });
 
   if (!metadata.url) {
     throw new BcnError("invalid_input", "Open Data BCN resource does not expose a download URL.");

@@ -306,7 +306,9 @@ async function getInactiveDatastoreError(
   }
 
   try {
-    const metadata = await fetchBcnResourceMetadata(resourceId, config, options);
+    const metadata = await fetchBcnResourceMetadata(resourceId, config, options, {
+      includePackageTitle: false,
+    });
 
     if (!metadata.datastore_active) {
       return new BcnError(
