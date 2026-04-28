@@ -56,14 +56,14 @@ export interface BcnPreviewResourceResult {
   provenance: BcnOperationProvenance;
 }
 
-interface DownloadResult {
+export interface BcnDownloadResult {
   bytes: Uint8Array;
   contentType: string | null;
   truncated: boolean;
   url: URL;
 }
 
-interface DecodedText {
+export interface BcnDecodedText {
   charset: string;
   text: string;
 }
@@ -123,11 +123,12 @@ export function isAllowedBcnDownloadUrl(value: URL): boolean {
   );
 }
 
-async function fetchBcnDownload(
+export async function fetchBcnDownload(
   rawUrl: string,
   config: AppConfig,
   options: FetchBcnJsonOptions,
-): Promise<DownloadResult> {
+  maxBytes = config.bcnUpstreamReadBytes,
+): Promise<BcnDownloadResult> {
   let url = parseAllowedDownloadUrl(rawUrl);
 
   for (let redirectCount = 0; redirectCount <= BCN_DOWNLOAD_MAX_REDIRECTS; redirectCount += 1) {
@@ -167,7 +168,7 @@ async function fetchBcnDownload(
       );
     }
 
-    const body = await readPreviewBodyBytes(response, config.bcnUpstreamReadBytes);
+    const body = await readPreviewBodyBytes(response, maxBytes);
 
     return {
       bytes: body.bytes,
@@ -281,7 +282,7 @@ async function readPreviewBodyBytes(
   }
 }
 
-function detectPreviewFormat(input: {
+export function detectPreviewFormat(input: {
   contentType: string | null;
   format: string | null;
   mimetype: string | null;
@@ -321,7 +322,7 @@ function detectPreviewFormat(input: {
   );
 }
 
-function decodePreviewBytes(bytes: Uint8Array, contentType: string | null): DecodedText {
+export function decodePreviewBytes(bytes: Uint8Array, contentType: string | null): BcnDecodedText {
   const declaredCharset = getCharset(contentType);
 
   if (declaredCharset) {
@@ -350,7 +351,7 @@ function decodeWithCharset(
   bytes: Uint8Array,
   charset: string,
   fatal = true,
-): DecodedText | undefined {
+): BcnDecodedText | undefined {
   try {
     return {
       charset: charset.toLowerCase(),
@@ -439,7 +440,10 @@ function createJsonPreview(
   return hasMoreRows ? withPreviewTruncation(data, "row_cap") : data;
 }
 
-function parseCsvRows(text: string, delimiter: "," | ";" | "\t"): Record<string, JsonValue>[] {
+export function parseCsvRows(
+  text: string,
+  delimiter: "," | ";" | "\t",
+): Record<string, JsonValue>[] {
   try {
     const parsed = parseCsv(text, {
       bom: true,
@@ -474,7 +478,7 @@ function getCsvColumns(text: string, delimiter: "," | ";" | "\t"): string[] {
   }
 }
 
-function detectCsvDelimiter(text: string): "," | ";" | "\t" {
+export function detectCsvDelimiter(text: string): "," | ";" | "\t" {
   const headerLine = text
     .split(/\r?\n/u)
     .find((line) => line.trim().length > 0)
@@ -490,7 +494,7 @@ function detectCsvDelimiter(text: string): "," | ";" | "\t" {
   );
 }
 
-function trimToLastCompleteLine(text: string): string {
+export function trimToLastCompleteLine(text: string): string {
   const newlineIndex = Math.max(text.lastIndexOf("\n"), text.lastIndexOf("\r"));
 
   if (newlineIndex < 0) {

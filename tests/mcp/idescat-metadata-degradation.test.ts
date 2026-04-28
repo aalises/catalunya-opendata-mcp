@@ -15,6 +15,8 @@ const baseConfig: AppConfig = {
   responseMaxBytes: 8_000,
   idescatUpstreamReadBytes: 8_388_608,
   bcnUpstreamReadBytes: 2_097_152,
+  bcnGeoScanMaxRows: 10_000,
+  bcnGeoScanBytes: 67_108_864,
   socrataAppToken: undefined,
 };
 

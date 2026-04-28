@@ -28,7 +28,7 @@ Useful flags:
 
 | Flag | Purpose |
 | --- | --- |
-| `--profile=canary` | Fast live eval over MCP health, core Socrata, and core IDESCAT flows. |
+| `--profile=canary` | Fast live eval over MCP health and core Socrata, Open Data BCN, and IDESCAT flows. |
 | `--profile=stress` | Full live eval over discovery, metadata, data, resources, caps, and error behavior. |
 | `--mode=live` | Call the MCP server directly without reading or writing a cassette. |
 | `--mode=record` | Call the MCP server directly and write a cassette after a green run. |
@@ -45,6 +45,7 @@ The canary profile is the release-readiness smoke layer. It verifies:
 
 - MCP server health through `ping`.
 - Socrata catalog search, metadata, selected-field query, and upstream query error handling.
+- Open Data BCN package search, DataStore query, inactive-resource error recovery, and CSV preview.
 - IDESCAT search, geos, metadata, bounded data, place guidance, multilingual search, and the long-filter GET regression.
 
 ### Stress
@@ -54,9 +55,9 @@ The stress profile is the adapter-health suite. It currently targets the same co
 - `MCP: 1`
 - `Socrata: 53`
 - `IDESCAT: 71`
-- `Total: 125`
+- `Total: 133`
 
-It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
+It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN geospatial queries, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
 
 ## Scoring
 

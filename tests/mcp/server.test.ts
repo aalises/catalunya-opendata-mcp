@@ -16,6 +16,8 @@ const testConfig: AppConfig = {
   responseMaxBytes: 262_144,
   idescatUpstreamReadBytes: 8_388_608,
   bcnUpstreamReadBytes: 2_097_152,
+  bcnGeoScanMaxRows: 10_000,
+  bcnGeoScanBytes: 67_108_864,
   socrataAppToken: undefined,
 };
 
@@ -127,6 +129,7 @@ describe("createMcpServer", () => {
           "bcn_get_package",
           "bcn_get_resource_info",
           "bcn_query_resource",
+          "bcn_query_resource_geo",
           "bcn_preview_resource",
         ]),
       );
@@ -139,6 +142,8 @@ describe("createMcpServer", () => {
       expect(descriptions.bcn_search_packages).toContain("Open Data BCN");
       expect(descriptions.bcn_query_resource).toContain("bcn_get_resource_info");
       expect(descriptions.bcn_query_resource).toContain("filters as a JSON object");
+      expect(descriptions.bcn_query_resource_geo).toContain("geospatial query");
+      expect(descriptions.bcn_query_resource_geo).toContain("group_by");
       expect(descriptions.bcn_preview_resource).toContain("HTTPS BCN-hosted");
 
       const prompts = await client.listPrompts();
@@ -195,6 +200,82 @@ describe("createMcpServer", () => {
         provenance: {
           source: "bcn",
           id: "opendata-ajuntament.barcelona.cat:package_search",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN geo output with JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            datastore_active: true,
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(
+        bcnCkanSuccess({
+          fields: [
+            { id: "_id", type: "int" },
+            { id: "name", type: "text" },
+            { id: "latitud", type: "numeric" },
+            { id: "longitud", type: "numeric" },
+          ],
+        }),
+      )
+      .mockResolvedValueOnce(
+        bcnCkanSuccess({
+          records: [
+            {
+              _id: 1,
+              name: "Point A",
+              latitud: 41.4036,
+              longitud: 2.1744,
+            },
+          ],
+        }),
+      )
+      .mockResolvedValueOnce(bcnCkanSuccess({ records: [] }));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_query_resource_geo",
+        arguments: {
+          resource_id: "resource-1",
+          near: { lat: 41.4036, lon: 2.1744, radius_m: 100 },
+          fields: ["_id", "name"],
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          resource_id: "resource-1",
+          strategy: "datastore",
+          coordinate_fields: {
+            lat: "latitud",
+            lon: "longitud",
+          },
+          rows: [
+            {
+              _id: 1,
+              name: "Point A",
+              _geo: {
+                lat: 41.4036,
+                lon: 2.1744,
+              },
+            },
+          ],
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:resource_geo_query",
         },
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);

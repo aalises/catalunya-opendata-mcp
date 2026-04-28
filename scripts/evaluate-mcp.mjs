@@ -17,7 +17,7 @@ const PROFILE_CASE_COUNTS = {
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 4,
+    bcn: 8,
     idescat: 71,
   },
 };
@@ -509,6 +509,107 @@ async function runCanaryProfile(client) {
 }
 
 async function runStressProfile(client) {
+  await evaluateTool({
+    client,
+    id: "bcn.geo.arbrat_consell_species",
+    connector: "bcn",
+    category: "geo",
+    tool: "bcn_query_resource_geo",
+    args: {
+      resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      contains: {
+        adreca: "Carrer Consell de Cent",
+      },
+      group_by: "cat_nom_catala",
+      fields: ["adreca", "cat_nom_catala"],
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.strategy === "download_stream" &&
+          data.coordinate_fields?.lat === "latitud" &&
+          data.coordinate_fields?.lon === "longitud" &&
+          data.matched_row_count > 0 &&
+          data.groups?.some((group) => group.key === "Lledoner" && group.count > 0),
+        "BCN geo scan counts street-tree species on Consell de Cent",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.geo.facilities_near_sagrada",
+    connector: "bcn",
+    category: "geo",
+    tool: "bcn_query_resource_geo",
+    args: {
+      resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+      near: {
+        lat: 41.4036,
+        lon: 2.1744,
+        radius_m: 1_500,
+      },
+      fields: ["name", "addresses_road_name", "addresses_neighborhood_name"],
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.strategy === "datastore" &&
+          data.row_count > 0 &&
+          typeof data.rows?.[0]?._geo?.distance_m === "number",
+        "BCN geo near query returns facilities sorted with distance metadata",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.geo.explicit_bad_fields",
+    connector: "bcn",
+    category: "error",
+    tool: "bcn_query_resource_geo",
+    args: {
+      resource_id: "52696168-d8bc-4707-9a09-a21c6c2669f3",
+      bbox: {
+        min_lat: 41.3,
+        min_lon: 2.1,
+        max_lat: 41.5,
+        max_lon: 2.3,
+      },
+      lat_field: "missing_lat",
+      lon_field: "missing_lon",
+      limit: 1,
+    },
+    expect: expectToolError({
+      code: "invalid_input",
+      messageIncludes: "lat_field",
+    }),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.geo.arbrat_bbox_scan_cap",
+    connector: "bcn",
+    category: "geo",
+    tool: "bcn_query_resource_geo",
+    args: {
+      resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      bbox: {
+        min_lat: 41.3,
+        min_lon: 2.0,
+        max_lat: 41.5,
+        max_lon: 2.3,
+      },
+      fields: ["adreca"],
+      limit: 1,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.strategy === "download_stream" &&
+          data.truncated === true &&
+          data.truncation_reason === "scan_cap",
+        "BCN broad geo scan reports the configured scan cap",
+      ),
+  });
+
   await evaluateTool({
     client,
     id: "socrata.resource.metadata.housing",

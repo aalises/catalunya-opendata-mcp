@@ -2,7 +2,7 @@
 
 A read-only Model Context Protocol server for discovering, describing, and querying public datasets from Catalunya.
 
-The server currently supports the Generalitat de Catalunya open data portal powered by Socrata, IDESCAT Tables v2, and Open Data BCN. It exposes small, reliable workflows: search or browse catalogs, inspect schemas or dimensions, query bounded extracts, preview safe CSV/JSON downloads, and keep enough provenance to cite the source cleanly.
+The server currently supports the Generalitat de Catalunya open data portal powered by Socrata, IDESCAT Tables v2, and Open Data BCN. It exposes small, reliable workflows: search or browse catalogs, inspect schemas or dimensions, query bounded extracts, run BCN geospatial scans, preview safe CSV/JSON downloads, and keep enough provenance to cite the source cleanly.
 
 ## Why This Exists
 
@@ -12,6 +12,7 @@ Open data portals are rich, but they are not always pleasant to explore from a c
 - "Which fields can I query in this dataset?"
 - "Show the latest rows for Girona, using valid API field names."
 - "Preview Barcelona street-tree data or query DataStore-active city equipment."
+- "Count tree species on Carrer Consell de Cent or find facilities near a coordinate."
 - "Create a citation for the dataset and include the source URL."
 
 Every data-returning tool includes provenance, response caps, and structured errors so the model can recover from bad filters instead of guessing.
@@ -84,6 +85,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
 | `bcn_query_resource` | Query an active Open Data BCN CKAN DataStore resource with structured filters and bounded POST responses. |
+| `bcn_query_resource_geo` | Query BCN resources with latitude/longitude columns using `near`, `bbox`, street/name `contains`, and optional `group_by` counts. |
 | `bcn_preview_resource` | Fetch a safe bounded CSV/JSON preview for non-DataStore Open Data BCN resources. |
 
 ### Prompts
@@ -243,7 +245,7 @@ To manually verify the live IDESCAT journey, run `npm run canary:idescat`. It bu
 
 ## Open Data BCN Workflow
 
-Use Open Data BCN for Barcelona city datasets such as street trees, equipment, mobility, facilities, and municipal services. Start with packages, then choose either DataStore query or download preview based on the resource metadata.
+Use Open Data BCN for Barcelona city datasets such as street trees, equipment, mobility, facilities, and municipal services. Start with packages, then choose DataStore query, geospatial query, or download preview based on the resource metadata and the user's question.
 
 ### 1. Search Packages
 
@@ -293,7 +295,44 @@ If `datastore_active` is true, the response includes queryable `fields`.
 
 The response includes `request_body` with the logical replayable request, row counts, truncation flags, and provenance.
 
-### 4. Preview Inactive CSV/JSON Resources
+### 4. Query Resources Geospatially
+
+Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
+
+Street or name matching uses `contains`:
+
+```json
+{
+  "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+  "contains": {
+    "adreca": "Carrer Consell de Cent"
+  },
+  "group_by": "cat_nom_catala",
+  "fields": ["adreca", "cat_nom_catala"],
+  "limit": 10
+}
+```
+
+Nearby queries use explicit coordinates:
+
+```json
+{
+  "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+  "near": {
+    "lat": 41.4036,
+    "lon": 2.1744,
+    "radius_m": 750
+  },
+  "fields": ["name", "addresses_road_name", "addresses_neighborhood_name"],
+  "limit": 10
+}
+```
+
+The response includes `strategy`, `coordinate_fields`, `_geo` coordinates with optional `distance_m`, scan counts, match counts, truncation flags, `upstream_total` for DataStore resources when CKAN returns it, and `groups` when `group_by` is provided.
+
+Geo helpers are bounded scans, not a spatial index. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are parsed as complete byte-capped JSON documents, so very large JSON resources may need a CSV or DataStore resource instead.
+
+### 5. Preview Inactive CSV/JSON Resources
 
 If `datastore_active` is false, use `bcn_preview_resource` for a bounded sample:
 
@@ -318,6 +357,7 @@ The server is deliberately defensive:
 - It preserves upstream error details when they help the model fix a query.
 - It maps IDESCAT cell-limit errors to `narrow_filters` with the original JSON-stat error in `source_error`.
 - It restricts Open Data BCN previews to allowlisted HTTPS BCN download hosts and caps upstream preview bytes.
+- It reuses the same BCN download allowlist for geospatial CSV/JSON scans and caps scanned bytes and rows.
 
 If Socrata rejects a query, inspect `error.message`. For example, `query.soql.no-such-column` means the query used an invalid field. Return to `socrata_describe_dataset`, choose a valid `field_name`, and retry with a corrected clause.
 
@@ -335,6 +375,8 @@ The server reads configuration from environment variables supplied by the shell 
 | `CATALUNYA_MCP_RESPONSE_MAX_BYTES` | `262144` | Maximum upstream response body size. Allowed range: `65536` to `1048576`. |
 | `CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES` | `8388608` | Maximum IDESCAT upstream success body to read before flattening/capping. Allowed range: `65536` to `33554432`. |
 | `CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES` | `2097152` | Maximum Open Data BCN download preview body to read before parsing/capping. Allowed range: `65536` to `16777216`. |
+| `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` | `50000` | Maximum Open Data BCN rows to scan for geospatial helper calls. Allowed range: `1000` to `100000`. |
+| `CATALUNYA_MCP_BCN_GEO_SCAN_BYTES` | `67108864` | Maximum Open Data BCN CSV/JSON download body to read for one geospatial helper call. Allowed range: `2097152` to `134217728`. |
 | `SOCRATA_APP_TOKEN` | unset | Optional Socrata app token for better rate-limit stability. |
 
 Example client configuration with environment overrides:
@@ -405,16 +447,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 129 live cases:
+The stress profile currently runs 133 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 4 |
+| Open Data BCN | 8 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 

@@ -70,6 +70,7 @@ try {
     "bcn_get_package",
     "bcn_get_resource_info",
     "bcn_query_resource",
+    "bcn_query_resource_geo",
     "bcn_preview_resource",
   ]) {
     if (!tools.tools.some((tool) => tool.name === toolName)) {

@@ -10,6 +10,7 @@ import {
   searchBcnPackages,
 } from "../../sources/bcn/catalog.js";
 import { BcnError, isBcnError } from "../../sources/bcn/client.js";
+import { queryBcnResourceGeo } from "../../sources/bcn/geo.js";
 import { previewBcnResource } from "../../sources/bcn/preview.js";
 import { queryBcnResource } from "../../sources/bcn/query.js";
 import { getBcnResourceInfo } from "../../sources/bcn/resource.js";
@@ -98,6 +99,28 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
   );
 
   server.registerTool(
+    "bcn_query_resource_geo",
+    {
+      title: "bcn.query_resource_geo",
+      description: [
+        "Run a bounded geospatial query over an Open Data BCN resource with WGS84 latitude/longitude columns.",
+        "Works for DataStore-active resources and safe BCN-hosted CSV/JSON downloads.",
+        "Use near for distance queries, bbox for rectangular areas, contains for street/name text filters, and group_by for counts such as species by street.",
+        "Coordinate fields are inferred from common BCN names such as latitud/longitud, geo_epgs_4326_lat/geo_epgs_4326_lon, and geo_epgs_4326_y/geo_epgs_4326_x; pass lat_field/lon_field when ambiguous.",
+      ].join(" "),
+      inputSchema: schemas.inputs.queryResourceGeo,
+      outputSchema: schemas.outputs.queryResourceGeo,
+    },
+    async (input, extra) =>
+      wrapBcnTool("resource_geo_query", async () =>
+        queryBcnResourceGeo(input, config, {
+          logger: logger.child({ op: "resource_geo_query" }),
+          signal: extra.signal,
+        }),
+      ),
+  );
+
+  server.registerTool(
     "bcn_preview_resource",
     {
       title: "bcn.preview_resource",
@@ -134,9 +157,10 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
               "1. Discover candidate packages with `bcn_search_packages`. Choose the package whose title, description, tags, and resource formats match the user's request.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
-              "4. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
-              "5. For inactive DataStore resources, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
-              "6. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
+              "4. For place-aware questions, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist.",
+              "5. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
+              "6. For inactive DataStore resources when only a sample is needed, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
+              "7. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
             ].join("\n"),
           },
         },
@@ -330,6 +354,58 @@ function createBcnSchemas(config: AppConfig) {
     truncation_hint: z.string().optional(),
     rows: z.array(z.record(jsonValueSchema)),
   });
+  const geoCoordinateSchema = z.object({
+    lat: z.number(),
+    lon: z.number(),
+  });
+  const geoNearSchema = geoCoordinateSchema.extend({
+    radius_m: z.number().positive().max(5_000),
+  });
+  const geoBboxSchema = z.object({
+    min_lat: z.number().min(-90).max(90),
+    min_lon: z.number().min(-180).max(180),
+    max_lat: z.number().min(-90).max(90),
+    max_lon: z.number().min(-180).max(180),
+  });
+  const geoRowSchema = z.record(jsonValueSchema).and(
+    z.object({
+      _geo: z.record(jsonValueSchema),
+    }),
+  );
+  const geoGroupSchema = z.object({
+    key: jsonValueSchema,
+    count: z.number().int().nonnegative(),
+    sample: z.record(jsonValueSchema).optional(),
+  });
+  const geoDataSchema = z.object({
+    resource_id: z.string(),
+    strategy: z.enum(["datastore", "download_stream"]),
+    request_method: z.enum(["GET", "POST"]),
+    request_url: z.string().url(),
+    logical_request_body: z.record(jsonValueSchema).optional(),
+    coordinate_fields: z.object({
+      lat: z.string(),
+      lon: z.string(),
+    }),
+    near: geoNearSchema.optional(),
+    bbox: geoBboxSchema.optional(),
+    filters: z.record(jsonValueSchema).optional(),
+    contains: z.record(z.string()).optional(),
+    fields: z.array(z.string()).optional(),
+    group_by: z.string().optional(),
+    group_limit: z.number().int().min(1).optional(),
+    limit: z.number().int().min(1),
+    offset: z.number().int().min(0),
+    scanned_row_count: z.number().int().nonnegative(),
+    matched_row_count: z.number().int().nonnegative(),
+    row_count: z.number().int().nonnegative(),
+    rows: z.array(geoRowSchema),
+    groups: z.array(geoGroupSchema).optional(),
+    truncated: z.boolean(),
+    truncation_reason: z.enum(["byte_cap", "row_cap", "scan_cap"]).optional(),
+    truncation_hint: z.string().optional(),
+    upstream_total: z.number().int().nonnegative().nullable().optional(),
+  });
   const errorSchema = z.object({
     source: z.literal("bcn"),
     code: z.string(),
@@ -367,6 +443,20 @@ function createBcnSchemas(config: AppConfig) {
         limit: positiveLimitSchema,
         offset: offsetSchema,
       },
+      queryResourceGeo: {
+        resource_id: z.string(),
+        near: geoNearSchema.partial({ radius_m: true }).optional(),
+        bbox: geoBboxSchema.optional(),
+        lat_field: z.string().trim().min(1).optional(),
+        lon_field: z.string().trim().min(1).optional(),
+        filters: z.record(jsonValueSchema).optional(),
+        contains: z.record(z.string()).optional(),
+        fields: z.array(z.string()).optional(),
+        limit: positiveLimitSchema,
+        offset: offsetSchema,
+        group_by: z.string().trim().min(1).optional(),
+        group_limit: positiveLimitSchema,
+      },
       previewResource: {
         resource_id: z.string(),
         limit: positiveLimitSchema.default(defaultPreviewLimit),
@@ -385,6 +475,7 @@ function createBcnSchemas(config: AppConfig) {
       getPackage: toolResultSchema(packageDataSchema),
       getResourceInfo: toolResultSchema(resourceInfoSchema),
       queryResource: toolResultSchema(queryDataSchema),
+      queryResourceGeo: toolResultSchema(geoDataSchema),
       previewResource: toolResultSchema(previewDataSchema),
     },
   };
@@ -468,7 +559,7 @@ function addBcnNextStep(message: string, code: string, retryable: boolean): stri
 function getBcnNextStepGuidance(code: string, retryable: boolean): string | undefined {
   switch (code) {
     case "invalid_input":
-      return "use package and resource IDs returned by BCN tools; inactive DataStore resources should use bcn_preview_resource.";
+      return "use package and resource IDs returned by BCN tools; inactive DataStore resources should use bcn_preview_resource or bcn_query_resource_geo when coordinate fields exist.";
     case "invalid_response":
       return "try bcn_get_resource_info, lower limit, or switch between query and preview based on DataStore activity.";
     case "network_error":

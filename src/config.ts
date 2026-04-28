@@ -45,6 +45,14 @@ const envSchema = z
       emptyStringAsUndefined,
       z.coerce.number().int().min(65_536).max(16_777_216).default(2_097_152),
     ),
+    CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS: z.preprocess(
+      emptyStringAsUndefined,
+      z.coerce.number().int().min(1_000).max(100_000).default(50_000),
+    ),
+    CATALUNYA_MCP_BCN_GEO_SCAN_BYTES: z.preprocess(
+      emptyStringAsUndefined,
+      z.coerce.number().int().min(2_097_152).max(134_217_728).default(67_108_864),
+    ),
     SOCRATA_APP_TOKEN: optionalSecretSchema,
   })
   .transform((env) => ({
@@ -56,6 +64,8 @@ const envSchema = z
     responseMaxBytes: env.CATALUNYA_MCP_RESPONSE_MAX_BYTES,
     idescatUpstreamReadBytes: env.CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES,
     bcnUpstreamReadBytes: env.CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES,
+    bcnGeoScanMaxRows: env.CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS,
+    bcnGeoScanBytes: env.CATALUNYA_MCP_BCN_GEO_SCAN_BYTES,
     socrataAppToken: env.SOCRATA_APP_TOKEN,
   }));
 

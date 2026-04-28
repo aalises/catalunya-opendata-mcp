@@ -304,6 +304,57 @@ Pick package `27b3f8a7-e536-4eea-b025-ce094817b2bd`, then inspect resource `2312
 
 Preview follows only allowlisted HTTPS Open Data BCN download URLs and returns sample rows, columns, parsing format, and truncation flags. Treat it as a sample, not a full export.
 
+## Open Data BCN: Tree Species On A Street
+
+User prompt:
+
+> What tree species are on Carrer Consell de Cent?
+
+Use the general geo helper against a coordinate-bearing resource. This is not hardcoded to trees: `contains` can target any street/name/address field, and `group_by` can count any returned field.
+
+```json
+{
+  "tool": "bcn_query_resource_geo",
+  "arguments": {
+    "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+    "contains": {
+      "adreca": "Carrer Consell de Cent"
+    },
+    "group_by": "cat_nom_catala",
+    "fields": ["adreca", "cat_nom_catala"],
+    "limit": 10
+  }
+}
+```
+
+Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. If `truncation_reason` is `scan_cap`, treat counts as partial and narrow the query or raise the local geo scan cap.
+
+## Open Data BCN: Facilities Near A Coordinate
+
+User prompt:
+
+> Show facilities near Sagrada Familia.
+
+The connector does not geocode place names. Provide coordinates from the caller or another trusted tool, then use `near`:
+
+```json
+{
+  "tool": "bcn_query_resource_geo",
+  "arguments": {
+    "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+    "near": {
+      "lat": 41.4036,
+      "lon": 2.1744,
+      "radius_m": 750
+    },
+    "fields": ["name", "addresses_road_name", "addresses_neighborhood_name"],
+    "limit": 10
+  }
+}
+```
+
+Rows are sorted by `_geo.distance_m` for `near` queries. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`. If `scan_cap` appears on a large resource, farther pages may contain additional nearby rows.
+
 ## IDESCAT: Recover When Geography Is Unavailable
 
 User prompt:

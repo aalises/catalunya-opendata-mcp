@@ -204,6 +204,8 @@ const config = {
   responseMaxBytes: 262_144,
   idescatUpstreamReadBytes: 8_388_608,
   bcnUpstreamReadBytes: 2_097_152,
+  bcnGeoScanMaxRows: 10_000,
+  bcnGeoScanBytes: 67_108_864,
   socrataAppToken: undefined,
 } as const;
 

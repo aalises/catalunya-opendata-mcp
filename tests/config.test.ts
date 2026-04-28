@@ -13,6 +13,8 @@ describe("loadConfig", () => {
       responseMaxBytes: 262_144,
       idescatUpstreamReadBytes: 8_388_608,
       bcnUpstreamReadBytes: 2_097_152,
+      bcnGeoScanMaxRows: 50_000,
+      bcnGeoScanBytes: 67_108_864,
       socrataAppToken: undefined,
     });
   });
@@ -27,6 +29,8 @@ describe("loadConfig", () => {
         CATALUNYA_MCP_RESPONSE_MAX_BYTES: "65536",
         CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES: "1048576",
         CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES: "65536",
+        CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS: "5000",
+        CATALUNYA_MCP_BCN_GEO_SCAN_BYTES: "2097152",
         SOCRATA_APP_TOKEN: " token ",
       }),
     ).toEqual({
@@ -38,6 +42,8 @@ describe("loadConfig", () => {
       responseMaxBytes: 65_536,
       idescatUpstreamReadBytes: 1_048_576,
       bcnUpstreamReadBytes: 65_536,
+      bcnGeoScanMaxRows: 5_000,
+      bcnGeoScanBytes: 2_097_152,
       socrataAppToken: "token",
     });
   });
@@ -67,6 +73,18 @@ describe("loadConfig", () => {
     );
     expect(() => loadConfig({ CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES: "33554432" })).toThrow(
       /Invalid configuration: CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS: "999" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS: "100001" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_BCN_GEO_SCAN_BYTES: "1048576" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_BCN_GEO_SCAN_BYTES/,
+    );
+    expect(() => loadConfig({ CATALUNYA_MCP_BCN_GEO_SCAN_BYTES: "268435456" })).toThrow(
+      /Invalid configuration: CATALUNYA_MCP_BCN_GEO_SCAN_BYTES/,
     );
   });
 });
