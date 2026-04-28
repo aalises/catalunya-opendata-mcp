@@ -15,6 +15,7 @@ const testConfig: AppConfig = {
   requestTimeoutMs: 5_000,
   responseMaxBytes: 262_144,
   idescatUpstreamReadBytes: 8_388_608,
+  bcnUpstreamReadBytes: 2_097_152,
   socrataAppToken: undefined,
 };
 
@@ -110,6 +111,185 @@ describe("createMcpServer", () => {
           mimeType: "application/json",
         }),
       );
+    } finally {
+      await close();
+    }
+  });
+
+  it("registers the BCN tools, prompts, and resource templates", async () => {
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const tools = await client.listTools();
+      expect(tools.tools.map((tool) => tool.name)).toEqual(
+        expect.arrayContaining([
+          "bcn_search_packages",
+          "bcn_get_package",
+          "bcn_get_resource_info",
+          "bcn_query_resource",
+          "bcn_preview_resource",
+        ]),
+      );
+
+      const descriptions = Object.fromEntries(
+        tools.tools
+          .filter((tool) => tool.name.startsWith("bcn_"))
+          .map((tool) => [tool.name, tool.description ?? ""]),
+      );
+      expect(descriptions.bcn_search_packages).toContain("Open Data BCN");
+      expect(descriptions.bcn_query_resource).toContain("bcn_get_resource_info");
+      expect(descriptions.bcn_query_resource).toContain("filters as a JSON object");
+      expect(descriptions.bcn_preview_resource).toContain("HTTPS BCN-hosted");
+
+      const prompts = await client.listPrompts();
+      expect(prompts.prompts.map((prompt) => prompt.name)).toEqual(
+        expect.arrayContaining(["bcn_query_workflow", "bcn_citation"]),
+      );
+
+      const templates = await client.listResourceTemplates();
+      expect(templates.resourceTemplates).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            name: "bcn_package",
+            uriTemplate: "bcn://packages/{package_id}",
+            mimeType: "application/json",
+          }),
+          expect.objectContaining({
+            name: "bcn_resource_schema",
+            uriTemplate: "bcn://resources/{resource_id}/schema",
+            mimeType: "application/json",
+          }),
+        ]),
+      );
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN search output with JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      bcnCkanSuccess({ count: 1, results: [bcnPackage()] }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_search_packages",
+        arguments: {
+          query: "arbrat",
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          query: "arbrat",
+          results: [
+            {
+              package_id: "package-1",
+              title: "Package title",
+            },
+          ],
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:package_search",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns BCN error envelopes with source_error through the MCP tool surface", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(bcnCkanFailure({ message: "Not found in datastore" }))
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            datastore_active: false,
+            package_id: null,
+          }),
+        ),
+      );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_query_resource",
+        arguments: {
+          resource_id: "resource-1",
+          limit: 2,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBe(true);
+      expect(result.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "bcn",
+          code: "invalid_input",
+          message: expect.stringContaining("not DataStore-active"),
+          retryable: false,
+          source_error: {
+            message: "Not found in datastore",
+          },
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("reads BCN package and resource schema templates as JSON artifacts", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(bcnCkanSuccess(bcnPackage()))
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            datastore_active: true,
+            package_id: null,
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(
+        bcnCkanSuccess({
+          fields: [{ id: "Nom", type: "text" }],
+        }),
+      );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const packageResult = await client.readResource({
+        uri: "bcn://packages/package-1",
+      });
+      const packageContent = packageResult.contents[0];
+      const packageData = JSON.parse("text" in packageContent ? packageContent.text : "{}");
+
+      expect(packageData).toMatchObject({
+        package_id: "package-1",
+        resources: [
+          {
+            resource_id: "resource-1",
+          },
+        ],
+      });
+      expect(packageData.data).toBeUndefined();
+      expect(packageData.error).toBeUndefined();
+
+      const schemaResult = await client.readResource({
+        uri: "bcn://resources/resource-1/schema",
+      });
+      const schemaContent = schemaResult.contents[0];
+      const schemaData = JSON.parse("text" in schemaContent ? schemaContent.text : "{}");
+
+      expect(schemaData).toMatchObject({
+        resource_id: "resource-1",
+        fields: [{ id: "Nom", type: "text" }],
+      });
     } finally {
       await close();
     }
@@ -1033,6 +1213,48 @@ interface ToolCallResult {
   }>;
   structuredContent?: Record<string, unknown>;
   isError?: boolean;
+}
+
+function bcnCkanSuccess(result: unknown): Response {
+  return new Response(JSON.stringify({ success: true, result }), {
+    headers: { "Content-Type": "application/json" },
+    status: 200,
+  });
+}
+
+function bcnCkanFailure(error: unknown): Response {
+  return new Response(JSON.stringify({ success: false, error }), {
+    headers: { "Content-Type": "application/json" },
+    status: 200,
+  });
+}
+
+function bcnPackage() {
+  return {
+    id: "package-1",
+    name: "package-name",
+    title: "Package title",
+    notes: "Package description",
+    license_title: "CC BY 4.0",
+    metadata_modified: "2024-01-02T00:00:00",
+    resources: [bcnResource({ package_id: "package-1" })],
+    tags: [{ display_name: "Trees" }],
+  };
+}
+
+function bcnResource(overrides: Record<string, unknown> = {}) {
+  return {
+    id: "resource-1",
+    name: "Resource 1",
+    description: "Resource description",
+    datastore_active: false,
+    format: "CSV",
+    last_modified: "2024-01-01T00:00:00",
+    mimetype: "text/csv",
+    package_id: null,
+    url: "https://opendata-ajuntament.barcelona.cat/download/resource-1.csv",
+    ...overrides,
+  };
 }
 
 function viewMetadata() {

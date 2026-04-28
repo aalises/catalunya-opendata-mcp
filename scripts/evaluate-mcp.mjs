@@ -11,11 +11,13 @@ const PROFILE_CASE_COUNTS = {
   canary: {
     mcp: 1,
     socrata: 4,
+    bcn: 4,
     idescat: 13,
   },
   stress: {
     mcp: 1,
     socrata: 53,
+    bcn: 4,
     idescat: 71,
   },
 };
@@ -161,6 +163,80 @@ async function runCanaryProfile(client) {
       status: 400,
       messageIncludes: "definitely_not_a_field",
     }),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.catalog.search.piezometres",
+    connector: "bcn",
+    category: "discovery",
+    tool: "bcn_search_packages",
+    args: { query: "piezometres equipaments", limit: 5 },
+    expect: ({ data }) =>
+      passIf(
+        data.results?.some(
+          (result) => result.package_id === "e7a90d92-abf6-41d4-9310-da8b82b55b49",
+        ),
+        "BCN package search finds the piezometers equipment package",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.query.piezometres_datastore",
+    connector: "bcn",
+    category: "query",
+    tool: "bcn_query_resource",
+    args: {
+      resource_id: "52696168-d8bc-4707-9a09-a21c6c2669f3",
+      fields: ["_id", "Districte", "Barri"],
+      limit: 2,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.request_method === "POST" &&
+          data.request_body?.limit === 2 &&
+          data.row_count === 2 &&
+          data.rows?.[0]?._id !== undefined,
+        "BCN active DataStore query returns bounded POST-backed rows",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.query.arbrat_viari_inactive_error",
+    connector: "bcn",
+    category: "error",
+    tool: "bcn_query_resource",
+    args: {
+      resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      limit: 2,
+    },
+    expect: expectToolError({
+      code: "invalid_input",
+      messageIncludes: "bcn_preview_resource",
+    }),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.preview.arbrat_viari_csv",
+    connector: "bcn",
+    category: "preview",
+    tool: "bcn_preview_resource",
+    args: {
+      resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      limit: 2,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.format === "csv" &&
+          data.request_method === "GET" &&
+          data.row_count > 0 &&
+          data.rows?.length <= 2 &&
+          data.columns?.length > 0,
+        "BCN inactive arbrat-viari CSV resource returns a bounded preview",
+      ),
   });
 
   await evaluateTool({
@@ -1415,6 +1491,7 @@ function getExpectedCounts(profile) {
   return {
     mcp: PROFILE_CASE_COUNTS.stress.mcp,
     socrata: PROFILE_CASE_COUNTS.stress.socrata,
+    bcn: PROFILE_CASE_COUNTS.stress.bcn,
     idescat: PROFILE_CASE_COUNTS.stress.idescat,
   };
 }

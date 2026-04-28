@@ -228,6 +228,82 @@ Use the recommended bounded data call:
 
 If the user only wants the absolute value, add `INDICATOR: "VALUE_EK"` after confirming that category in metadata. The server does not choose it automatically because it is not a neutral default.
 
+## Open Data BCN: Query Active City Equipment Data
+
+User prompt:
+
+> Show a small sample of Barcelona piezometers by district and neighborhood.
+
+Search Open Data BCN packages:
+
+```json
+{
+  "tool": "bcn_search_packages",
+  "arguments": {
+    "query": "piezometres equipaments",
+    "limit": 5
+  }
+}
+```
+
+Pick package `e7a90d92-abf6-41d4-9310-da8b82b55b49`, then inspect its resource:
+
+```json
+{
+  "tool": "bcn_get_resource_info",
+  "arguments": {
+    "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3"
+  }
+}
+```
+
+Because this resource is DataStore-active, query it with structured filters or selected fields:
+
+```json
+{
+  "tool": "bcn_query_resource",
+  "arguments": {
+    "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+    "fields": ["_id", "Districte", "Barri"],
+    "limit": 10
+  }
+}
+```
+
+Use field IDs from `bcn_get_resource_info.fields`. Do not pass raw SQL or URL fragments.
+
+## Open Data BCN: Preview Street Trees CSV
+
+User prompt:
+
+> Preview the Barcelona street trees CSV.
+
+Search:
+
+```json
+{
+  "tool": "bcn_search_packages",
+  "arguments": {
+    "query": "arbrat viari",
+    "limit": 5
+  }
+}
+```
+
+Pick package `27b3f8a7-e536-4eea-b025-ce094817b2bd`, then inspect resource `23124fd5-521f-40f8-85b8-efb1e71c2ec8`. If `datastore_active` is false, use a bounded preview:
+
+```json
+{
+  "tool": "bcn_preview_resource",
+  "arguments": {
+    "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+    "limit": 5
+  }
+}
+```
+
+Preview follows only allowlisted HTTPS Open Data BCN download URLs and returns sample rows, columns, parsing format, and truncation flags. Treat it as a sample, not a full export.
+
 ## IDESCAT: Recover When Geography Is Unavailable
 
 User prompt:
@@ -255,6 +331,13 @@ For IDESCAT answers, cite from `idescat_get_table_metadata` output or attach:
 
 ```text
 idescat://tables/pmh/1180/8078/com/metadata
+```
+
+For Open Data BCN answers, cite from `bcn_get_package`, `bcn_get_resource_info`, or attach:
+
+```text
+bcn://packages/27b3f8a7-e536-4eea-b025-ce094817b2bd
+bcn://resources/52696168-d8bc-4707-9a09-a21c6c2669f3/schema
 ```
 
 Search and list tools are discovery steps. Use metadata outputs or metadata resources for final citations.

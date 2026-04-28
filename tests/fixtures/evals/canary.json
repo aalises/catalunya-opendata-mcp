@@ -5,10 +5,10 @@
     "name": "catalunya-opendata-mcp",
     "version": "0.1.3"
   },
-  "recorded_at": "2026-04-28T06:58:47.956Z",
+  "recorded_at": "2026-04-28T12:06:33.455Z",
   "summary": {
-    "total_cases": 18,
-    "passed_cases": 18,
+    "total_cases": 22,
+    "passed_cases": 22,
     "failed_cases": 0,
     "score": 1,
     "by_connector": {
@@ -22,6 +22,11 @@
         "passed": 4,
         "failed": 0
       },
+      "bcn": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
       "idescat": {
         "total": 13,
         "passed": 13,
@@ -31,6 +36,7 @@
     "expected_counts": {
       "mcp": 1,
       "socrata": 4,
+      "bcn": 4,
       "idescat": 13
     },
     "count_failures": []
@@ -46,7 +52,7 @@
           "name": "Evaluator"
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.116Z",
+      "recorded_at": "2026-04-28T12:06:18.017Z",
       "result": {
         "content": [
           {
@@ -71,12 +77,12 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.353Z",
+      "recorded_at": "2026-04-28T12:06:18.249Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"habitatges iniciats acabats\",\"limit\":10,\"offset\":0,\"total\":3,\"results\":[{\"title\":\"Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat\",\"description\":\"Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.\",\"source_id\":\"v8i4-fa4q\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/v8i4-fa4q.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q\",\"updated_at\":\"2026-03-18T10:27:52.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q\",\"id\":\"v8i4-fa4q\",\"last_updated\":\"2026-03-18T10:27:52.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya trimestralment des de l’any 2000 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"j8h8-vxug\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j8h8-vxug.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j8h8-vxug\",\"updated_at\":\"2025-11-10T09:43:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j8h8-vxug\",\"id\":\"j8h8-vxug\",\"last_updated\":\"2025-11-10T09:43:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica anual 1990 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya des de l’any 1990 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"txkt-yjtq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/txkt-yjtq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"updated_at\":\"2026-04-08T06:36:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"id\":\"txkt-yjtq\",\"last_updated\":\"2026-04-08T06:36:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=habitatges+iniciats+acabats&limit=10&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"habitatges iniciats acabats\",\"limit\":10,\"offset\":0,\"total\":3,\"results\":[{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya trimestralment des de l’any 2000 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"j8h8-vxug\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j8h8-vxug.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j8h8-vxug\",\"updated_at\":\"2025-11-10T09:43:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j8h8-vxug\",\"id\":\"j8h8-vxug\",\"last_updated\":\"2025-11-10T09:43:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat\",\"description\":\"Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.\",\"source_id\":\"v8i4-fa4q\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/v8i4-fa4q.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q\",\"updated_at\":\"2026-03-18T10:27:52.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q\",\"id\":\"v8i4-fa4q\",\"last_updated\":\"2026-03-18T10:27:52.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica anual 1990 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya des de l’any 1990 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"txkt-yjtq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/txkt-yjtq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"updated_at\":\"2026-04-08T06:36:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"id\":\"txkt-yjtq\",\"last_updated\":\"2026-04-08T06:36:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=habitatges+iniciats+acabats&limit=10&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -86,23 +92,6 @@
             "offset": 0,
             "total": 3,
             "results": [
-              {
-                "title": "Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat",
-                "description": "Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.",
-                "source_id": "v8i4-fa4q",
-                "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/v8i4-fa4q.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
-                "updated_at": "2026-03-18T10:27:52.000Z",
-                "provenance": {
-                  "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
-                  "id": "v8i4-fa4q",
-                  "last_updated": "2026-03-18T10:27:52.000Z",
-                  "license_or_terms": "See Terms of Use",
-                  "language": "ca"
-                }
-              },
               {
                 "title": "Habitatges iniciats i acabats. Sèrie històrica trimestral 2000 – actualitat",
                 "description": "Habitatges construïts i acabats a Catalunya trimestralment des de l’any 2000 fins a l’actualitat.\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.",
@@ -116,6 +105,23 @@
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/j8h8-vxug",
                   "id": "j8h8-vxug",
                   "last_updated": "2025-11-10T09:43:54.000Z",
+                  "license_or_terms": "See Terms of Use",
+                  "language": "ca"
+                }
+              },
+              {
+                "title": "Habitatges amb protecció oficial iniciats i acabats. Sèrie històrica anual 2002 - actualitat",
+                "description": "Habitatges amb protecció oficial iniciats i acabats a Catalunya des de l’any 2002 fins a l’actualitat.\nNombre d’habitatges amb protecció oficial iniciats (amb qualificació provisional) i acabats (amb qualificació definitiva) en el marc dels Plans d’Habitatge. També s’inclouen els habitatges del programa de remodelació de barris, els habitatges sense qualificació provisional adquirits per tanteig i retracte i els habitatges preexistents.",
+                "source_id": "v8i4-fa4q",
+                "source_domain": "analisi.transparenciacatalunya.cat",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/v8i4-fa4q.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
+                "updated_at": "2026-03-18T10:27:52.000Z",
+                "provenance": {
+                  "source": "socrata",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/v8i4-fa4q",
+                  "id": "v8i4-fa4q",
+                  "last_updated": "2026-03-18T10:27:52.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -160,7 +166,7 @@
           "source_id": "j8h8-vxug"
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.557Z",
+      "recorded_at": "2026-04-28T12:06:18.475Z",
       "result": {
         "content": [
           {
@@ -375,7 +381,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.674Z",
+      "recorded_at": "2026-04-28T12:06:18.669Z",
       "result": {
         "content": [
           {
@@ -435,7 +441,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.755Z",
+      "recorded_at": "2026-04-28T12:06:18.771Z",
       "result": {
         "content": [
           {
@@ -478,6 +484,327 @@
       }
     },
     {
+      "key": "default:callTool:{\"arguments\":{\"limit\":5,\"query\":\"piezometres equipaments\"},\"name\":\"bcn_search_packages\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_search_packages",
+        "arguments": {
+          "query": "piezometres equipaments",
+          "limit": 5
+        }
+      },
+      "recorded_at": "2026-04-28T12:06:19.475Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"query\":\"piezometres equipaments\",\"limit\":5,\"offset\":0,\"total\":1,\"results\":[{\"package_id\":\"e7a90d92-abf6-41d4-9310-da8b82b55b49\",\"name\":\"piezometres_equipaments\",\"title\":\"List of piezometers and wells of the city of Bareclona \",\"description\":\"List of piezometers and wells in the city of Barcelona. The characteristics and location of each of them are detailed.\",\"license_or_terms\":\"Creative Commons Attribution 4.0\",\"metadata_modified\":\"2025-09-23T11:13:22.804661\",\"resource_count\":1,\"resources\":[{\"resource_id\":\"52696168-d8bc-4707-9a09-a21c6c2669f3\",\"name\":\"piezometres_equipaments.csv\",\"description\":null,\"datastore_active\":true,\"format\":\"CSV\",\"last_modified\":null,\"mimetype\":null,\"url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49/resource/52696168-d8bc-4707-9a09-a21c6c2669f3/download\"}],\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49\",\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49\",\"id\":\"e7a90d92-abf6-41d4-9310-da8b82b55b49\",\"last_updated\":\"2025-09-23T11:13:22.804661\",\"license_or_terms\":\"Creative Commons Attribution 4.0\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search?q=piezometres+equipaments&rows=5&start=0\",\"id\":\"opendata-ajuntament.barcelona.cat:package_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "query": "piezometres equipaments",
+            "limit": 5,
+            "offset": 0,
+            "total": 1,
+            "results": [
+              {
+                "package_id": "e7a90d92-abf6-41d4-9310-da8b82b55b49",
+                "name": "piezometres_equipaments",
+                "title": "List of piezometers and wells of the city of Bareclona ",
+                "description": "List of piezometers and wells in the city of Barcelona. The characteristics and location of each of them are detailed.",
+                "license_or_terms": "Creative Commons Attribution 4.0",
+                "metadata_modified": "2025-09-23T11:13:22.804661",
+                "resource_count": 1,
+                "resources": [
+                  {
+                    "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+                    "name": "piezometres_equipaments.csv",
+                    "description": null,
+                    "datastore_active": true,
+                    "format": "CSV",
+                    "last_modified": null,
+                    "mimetype": null,
+                    "url": "https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49/resource/52696168-d8bc-4707-9a09-a21c6c2669f3/download"
+                  }
+                ],
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49",
+                "provenance": {
+                  "source": "bcn",
+                  "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/e7a90d92-abf6-41d4-9310-da8b82b55b49",
+                  "id": "e7a90d92-abf6-41d4-9310-da8b82b55b49",
+                  "last_updated": "2025-09-23T11:13:22.804661",
+                  "license_or_terms": "Creative Commons Attribution 4.0",
+                  "language": "ca"
+                }
+              }
+            ]
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search?q=piezometres+equipaments&rows=5&start=0",
+            "id": "opendata-ajuntament.barcelona.cat:package_search",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"fields\":[\"_id\",\"Districte\",\"Barri\"],\"limit\":2,\"resource_id\":\"52696168-d8bc-4707-9a09-a21c6c2669f3\"},\"name\":\"bcn_query_resource\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_query_resource",
+        "arguments": {
+          "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+          "fields": [
+            "_id",
+            "Districte",
+            "Barri"
+          ],
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-28T12:06:21.078Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"resource_id\":\"52696168-d8bc-4707-9a09-a21c6c2669f3\",\"request_method\":\"POST\",\"request_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"request_body\":{\"resource_id\":\"52696168-d8bc-4707-9a09-a21c6c2669f3\",\"limit\":2,\"offset\":0,\"fields\":[\"_id\",\"Districte\",\"Barri\"]},\"limit\":2,\"offset\":0,\"total\":54,\"fields\":[{\"id\":\"_id\",\"type\":\"int4\"},{\"id\":\"Districte\",\"type\":\"text\"},{\"id\":\"Barri\",\"type\":\"text\"}],\"row_count\":2,\"truncated\":true,\"rows\":[{\"Barri\":\"Provençals del Poblenou\",\"_id\":1,\"Districte\":\"Sant Martí\"},{\"Barri\":\"Provençals del Poblenou\",\"_id\":2,\"Districte\":\"Sant Martí\"}],\"truncation_reason\":\"row_cap\",\"truncation_hint\":\"raise limit (within maxResults) or paginate with offset\"},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:datastore_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+            "request_method": "POST",
+            "request_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search",
+            "request_body": {
+              "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+              "limit": 2,
+              "offset": 0,
+              "fields": [
+                "_id",
+                "Districte",
+                "Barri"
+              ]
+            },
+            "limit": 2,
+            "offset": 0,
+            "total": 54,
+            "fields": [
+              {
+                "id": "_id",
+                "type": "int4"
+              },
+              {
+                "id": "Districte",
+                "type": "text"
+              },
+              {
+                "id": "Barri",
+                "type": "text"
+              }
+            ],
+            "row_count": 2,
+            "truncated": true,
+            "rows": [
+              {
+                "Barri": "Provençals del Poblenou",
+                "_id": 1,
+                "Districte": "Sant Martí"
+              },
+              {
+                "Barri": "Provençals del Poblenou",
+                "_id": 2,
+                "Districte": "Sant Martí"
+              }
+            ],
+            "truncation_reason": "row_cap",
+            "truncation_hint": "raise limit (within maxResults) or paginate with offset"
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search",
+            "id": "opendata-ajuntament.barcelona.cat:datastore_search",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"limit\":2,\"resource_id\":\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\"},\"name\":\"bcn_query_resource\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_query_resource",
+        "arguments": {
+          "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-28T12:06:27.393Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":null,\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search\",\"id\":\"opendata-ajuntament.barcelona.cat:datastore_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"},\"error\":{\"source\":\"bcn\",\"code\":\"invalid_input\",\"message\":\"Open Data BCN resource is not DataStore-active; use bcn_preview_resource for a bounded download preview. Next step: use package and resource IDs returned by BCN tools; inactive DataStore resources should use bcn_preview_resource.\",\"retryable\":false,\"source_error\":{\"help\":\"https://opendata-ajuntament.barcelona.cat/data/api/3/action/help_show?name=datastore_search\",\"success\":false,\"error\":{\"message\":\"Not found: Resource \\\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\\\" was not found.\",\"__type\":\"Not Found Error\"}}}}"
+          }
+        ],
+        "structuredContent": {
+          "data": null,
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search",
+            "id": "opendata-ajuntament.barcelona.cat:datastore_search",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          },
+          "error": {
+            "source": "bcn",
+            "code": "invalid_input",
+            "message": "Open Data BCN resource is not DataStore-active; use bcn_preview_resource for a bounded download preview. Next step: use package and resource IDs returned by BCN tools; inactive DataStore resources should use bcn_preview_resource.",
+            "retryable": false,
+            "source_error": {
+              "help": "https://opendata-ajuntament.barcelona.cat/data/api/3/action/help_show?name=datastore_search",
+              "success": false,
+              "error": {
+                "message": "Not found: Resource \"23124fd5-521f-40f8-85b8-efb1e71c2ec8\" was not found.",
+                "__type": "Not Found Error"
+              }
+            }
+          }
+        },
+        "isError": true
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"limit\":2,\"resource_id\":\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\"},\"name\":\"bcn_preview_resource\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_preview_resource",
+        "arguments": {
+          "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-28T12:06:32.219Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"resource_id\":\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\",\"resource_name\":\"OD_Arbrat_Viari_BCN.csv\",\"package_id\":\"27b3f8a7-e536-4eea-b025-ce094817b2bd\",\"request_method\":\"GET\",\"download_url\":\"https://opendata-ajuntament.barcelona.cat/resources/bcn/Arbrat/OD_Arbrat_Viari_BCN.csv\",\"media_type\":\"text/csv\",\"charset\":\"windows-1252\",\"format\":\"csv\",\"limit\":2,\"columns\":[\"codi\",\"x_etrs89\",\"y_etrs89\",\"latitud\",\"longitud\",\"tipus_element\",\"espai_verd\",\"adreca\",\"cat_especie_id\",\"cat_nom_cientific\",\"cat_nom_castella\",\"cat_nom_catala\",\"categoria_arbrat\",\"data_plantacio\",\"tipus_aigua\",\"tipus_reg\",\"geom\",\"catalogacio\",\"codi_barri\",\"nom_barri\",\"codi_districte\",\"nom_districte\"],\"delimiter\":\",\",\"row_count\":2,\"rows\":[{\"codi\":\"0000423AR\",\"x_etrs89\":\"430250.886\",\"y_etrs89\":\"4587703.209\",\"latitud\":\"41.4378722\",\"longitud\":\"2.1651098\",\"tipus_element\":\"ARBRE VIARI\",\"espai_verd\":\"Central de Nou Barris, Parc\",\"adreca\":\"Pg Fabra i Puig, 423\",\"cat_especie_id\":\"108\",\"cat_nom_cientific\":\"Pinus pinea\",\"cat_nom_castella\":\"Pino piÃ±onero\",\"cat_nom_catala\":\"Pi pinyoner; pi pinyer\",\"categoria_arbrat\":\"EXEMPLAR\",\"data_plantacio\":\"\",\"tipus_aigua\":\"\",\"tipus_reg\":\"GOTEIG AVARIAT\",\"geom\":\"POINT (430250.886125371 4587703.20870032)\",\"catalogacio\":\"\",\"codi_barri\":\"48\",\"nom_barri\":\"LA GUINEUETA\",\"codi_districte\":\"08\",\"nom_districte\":\"NOU BARRIS\"},{\"codi\":\"0000692AR\",\"x_etrs89\":\"430783.470\",\"y_etrs89\":\"4587491.937\",\"latitud\":\"41.4360154\",\"longitud\":\"2.1715084\",\"tipus_element\":\"PALMERA VIARI\",\"espai_verd\":\"Central de Nou Barris, Parc\",\"adreca\":\"C\\\\ Doctor Pi i Molist, 117\",\"cat_especie_id\":\"47\",\"cat_nom_cientific\":\"Phoenix canariensis\",\"cat_nom_castella\":\"Palmera canaria\",\"cat_nom_catala\":\"Palmera de Canaries; palmera de CanÃ ries\",\"categoria_arbrat\":\"TERCERA\",\"data_plantacio\":\"\",\"tipus_aigua\":\"\",\"tipus_reg\":\"ASPERSIÃ\",\"geom\":\"POINT (430783.470348079 4587491.93733177)\",\"catalogacio\":\"\",\"codi_barri\":\"48\",\"nom_barri\":\"LA GUINEUETA\",\"codi_districte\":\"08\",\"nom_districte\":\"NOU BARRIS\"}],\"truncated\":true,\"truncation_reason\":\"byte_cap\",\"truncation_hint\":\"download preview reached the byte cap; narrow to a DataStore query when available\"},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/resources/bcn/Arbrat/OD_Arbrat_Viari_BCN.csv\",\"id\":\"opendata-ajuntament.barcelona.cat:resource_preview\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+            "resource_name": "OD_Arbrat_Viari_BCN.csv",
+            "package_id": "27b3f8a7-e536-4eea-b025-ce094817b2bd",
+            "request_method": "GET",
+            "download_url": "https://opendata-ajuntament.barcelona.cat/resources/bcn/Arbrat/OD_Arbrat_Viari_BCN.csv",
+            "media_type": "text/csv",
+            "charset": "windows-1252",
+            "format": "csv",
+            "limit": 2,
+            "columns": [
+              "codi",
+              "x_etrs89",
+              "y_etrs89",
+              "latitud",
+              "longitud",
+              "tipus_element",
+              "espai_verd",
+              "adreca",
+              "cat_especie_id",
+              "cat_nom_cientific",
+              "cat_nom_castella",
+              "cat_nom_catala",
+              "categoria_arbrat",
+              "data_plantacio",
+              "tipus_aigua",
+              "tipus_reg",
+              "geom",
+              "catalogacio",
+              "codi_barri",
+              "nom_barri",
+              "codi_districte",
+              "nom_districte"
+            ],
+            "delimiter": ",",
+            "row_count": 2,
+            "rows": [
+              {
+                "codi": "0000423AR",
+                "x_etrs89": "430250.886",
+                "y_etrs89": "4587703.209",
+                "latitud": "41.4378722",
+                "longitud": "2.1651098",
+                "tipus_element": "ARBRE VIARI",
+                "espai_verd": "Central de Nou Barris, Parc",
+                "adreca": "Pg Fabra i Puig, 423",
+                "cat_especie_id": "108",
+                "cat_nom_cientific": "Pinus pinea",
+                "cat_nom_castella": "Pino piÃ±onero",
+                "cat_nom_catala": "Pi pinyoner; pi pinyer",
+                "categoria_arbrat": "EXEMPLAR",
+                "data_plantacio": "",
+                "tipus_aigua": "",
+                "tipus_reg": "GOTEIG AVARIAT",
+                "geom": "POINT (430250.886125371 4587703.20870032)",
+                "catalogacio": "",
+                "codi_barri": "48",
+                "nom_barri": "LA GUINEUETA",
+                "codi_districte": "08",
+                "nom_districte": "NOU BARRIS"
+              },
+              {
+                "codi": "0000692AR",
+                "x_etrs89": "430783.470",
+                "y_etrs89": "4587491.937",
+                "latitud": "41.4360154",
+                "longitud": "2.1715084",
+                "tipus_element": "PALMERA VIARI",
+                "espai_verd": "Central de Nou Barris, Parc",
+                "adreca": "C\\ Doctor Pi i Molist, 117",
+                "cat_especie_id": "47",
+                "cat_nom_cientific": "Phoenix canariensis",
+                "cat_nom_castella": "Palmera canaria",
+                "cat_nom_catala": "Palmera de Canaries; palmera de CanÃ ries",
+                "categoria_arbrat": "TERCERA",
+                "data_plantacio": "",
+                "tipus_aigua": "",
+                "tipus_reg": "ASPERSIÃ",
+                "geom": "POINT (430783.470348079 4587491.93733177)",
+                "catalogacio": "",
+                "codi_barri": "48",
+                "nom_barri": "LA GUINEUETA",
+                "codi_districte": "08",
+                "nom_districte": "NOU BARRIS"
+              }
+            ],
+            "truncated": true,
+            "truncation_reason": "byte_cap",
+            "truncation_hint": "download preview reached the byte cap; narrow to a DataStore query when available"
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/resources/bcn/Arbrat/OD_Arbrat_Viari_BCN.csv",
+            "id": "opendata-ajuntament.barcelona.cat:resource_preview",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
       "key": "default:callTool:{\"arguments\":{\"lang\":\"ca\",\"limit\":5,\"query\":\"poblacio sexe edat\"},\"name\":\"idescat_search_tables\"}",
       "scope": "default",
       "method": "callTool",
@@ -489,7 +816,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.813Z",
+      "recorded_at": "2026-04-28T12:06:32.272Z",
       "result": {
         "content": [
           {
@@ -639,7 +966,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.910Z",
+      "recorded_at": "2026-04-28T12:06:32.372Z",
       "result": {
         "content": [
           {
@@ -743,7 +1070,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.953Z",
+      "recorded_at": "2026-04-28T12:06:32.416Z",
       "result": {
         "content": [
           {
@@ -1562,7 +1889,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:44.987Z",
+      "recorded_at": "2026-04-28T12:06:32.451Z",
       "result": {
         "content": [
           {
@@ -1667,7 +1994,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-28T06:58:45.039Z",
+      "recorded_at": "2026-04-28T12:06:32.515Z",
       "result": {
         "content": [
           {
@@ -7472,7 +7799,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.675Z",
+      "recorded_at": "2026-04-28T12:06:33.162Z",
       "result": {
         "content": [
           {
@@ -7878,7 +8205,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.741Z",
+      "recorded_at": "2026-04-28T12:06:33.231Z",
       "result": {
         "content": [
           {
@@ -8038,7 +8365,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.774Z",
+      "recorded_at": "2026-04-28T12:06:33.266Z",
       "result": {
         "content": [
           {
@@ -8144,7 +8471,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.810Z",
+      "recorded_at": "2026-04-28T12:06:33.305Z",
       "result": {
         "content": [
           {
@@ -8289,7 +8616,7 @@
           "place_query": "Maresme"
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.842Z",
+      "recorded_at": "2026-04-28T12:06:33.341Z",
       "result": {
         "content": [
           {
@@ -8823,7 +9150,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.876Z",
+      "recorded_at": "2026-04-28T12:06:33.375Z",
       "result": {
         "content": [
           {
@@ -8981,7 +9308,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.924Z",
+      "recorded_at": "2026-04-28T12:06:33.413Z",
       "result": {
         "content": [
           {
@@ -9043,7 +9370,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-28T06:58:47.950Z",
+      "recorded_at": "2026-04-28T12:06:33.443Z",
       "result": {
         "content": [
           {

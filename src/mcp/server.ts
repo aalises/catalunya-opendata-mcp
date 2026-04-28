@@ -4,6 +4,7 @@ import { z } from "zod";
 import type { AppConfig } from "../config.js";
 import { createLogger } from "../logger.js";
 import { packageVersion } from "../package-info.js";
+import { registerBcnTools } from "./tools/bcn.js";
 import { registerIdescatTools } from "./tools/idescat.js";
 import { registerSocrataTools } from "./tools/socrata.js";
 
@@ -70,7 +71,7 @@ export function createMcpServer(config: AppConfig): McpServer {
             "",
             "MCP server for discovering, describing, and querying Catalunya open data.",
             "",
-            "Current support covers Socrata catalog search, dataset metadata, row queries, and IDESCAT Tables v2 search, metadata, and bounded data extracts. Next steps will add Barcelona Open Data and geospatial helpers.",
+            "Current support covers Socrata catalog search, dataset metadata, row queries, IDESCAT Tables v2 search, metadata, and bounded data extracts, and Open Data BCN package/resource discovery, DataStore queries, and safe CSV/JSON previews. Next steps will add geospatial helpers.",
           ].join("\n"),
         },
       ],
@@ -79,6 +80,7 @@ export function createMcpServer(config: AppConfig): McpServer {
 
   registerSocrataTools(server, config, logger.child({ source: "socrata" }));
   registerIdescatTools(server, config, logger.child({ source: "idescat" }));
+  registerBcnTools(server, config, logger.child({ source: "bcn" }));
 
   return server;
 }

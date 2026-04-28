@@ -41,6 +41,10 @@ const envSchema = z
       emptyStringAsUndefined,
       z.coerce.number().int().min(65_536).max(33_554_432).default(8_388_608),
     ),
+    CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES: z.preprocess(
+      emptyStringAsUndefined,
+      z.coerce.number().int().min(65_536).max(16_777_216).default(2_097_152),
+    ),
     SOCRATA_APP_TOKEN: optionalSecretSchema,
   })
   .transform((env) => ({
@@ -51,6 +55,7 @@ const envSchema = z
     requestTimeoutMs: env.CATALUNYA_MCP_REQUEST_TIMEOUT_MS,
     responseMaxBytes: env.CATALUNYA_MCP_RESPONSE_MAX_BYTES,
     idescatUpstreamReadBytes: env.CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES,
+    bcnUpstreamReadBytes: env.CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES,
     socrataAppToken: env.SOCRATA_APP_TOKEN,
   }));
 

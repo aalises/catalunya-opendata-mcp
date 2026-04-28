@@ -65,9 +65,25 @@ try {
       throw new Error(`Expected ${toolName} tool to be registered.`);
     }
   }
+  for (const toolName of [
+    "bcn_search_packages",
+    "bcn_get_package",
+    "bcn_get_resource_info",
+    "bcn_query_resource",
+    "bcn_preview_resource",
+  ]) {
+    if (!tools.tools.some((tool) => tool.name === toolName)) {
+      throw new Error(`Expected ${toolName} tool to be registered.`);
+    }
+  }
 
   const prompts = await client.listPrompts();
-  for (const promptName of ["idescat_query_workflow", "idescat_citation"]) {
+  for (const promptName of [
+    "idescat_query_workflow",
+    "idescat_citation",
+    "bcn_query_workflow",
+    "bcn_citation",
+  ]) {
     if (!prompts.prompts.some((prompt) => prompt.name === promptName)) {
       throw new Error(`Expected ${promptName} prompt to be registered.`);
     }
@@ -76,6 +92,11 @@ try {
   const templates = await client.listResourceTemplates();
   if (!templates.resourceTemplates.some((template) => template.name === "idescat_table_metadata")) {
     throw new Error("Expected idescat_table_metadata resource template to be registered.");
+  }
+  for (const templateName of ["bcn_package", "bcn_resource_schema"]) {
+    if (!templates.resourceTemplates.some((template) => template.name === templateName)) {
+      throw new Error(`Expected ${templateName} resource template to be registered.`);
+    }
   }
 
   const result = await client.callTool({

@@ -2,7 +2,7 @@
 
 A read-only Model Context Protocol server for discovering, describing, and querying public datasets from Catalunya.
 
-The server currently supports the Generalitat de Catalunya open data portal powered by Socrata and IDESCAT Tables v2. It exposes small, reliable workflows: search or browse the catalog, inspect schemas or dimensions, query bounded extracts, and keep enough provenance to cite the source cleanly.
+The server currently supports the Generalitat de Catalunya open data portal powered by Socrata, IDESCAT Tables v2, and Open Data BCN. It exposes small, reliable workflows: search or browse catalogs, inspect schemas or dimensions, query bounded extracts, preview safe CSV/JSON downloads, and keep enough provenance to cite the source cleanly.
 
 ## Why This Exists
 
@@ -11,6 +11,7 @@ Open data portals are rich, but they are not always pleasant to explore from a c
 - "Find datasets about housing starts and completions."
 - "Which fields can I query in this dataset?"
 - "Show the latest rows for Girona, using valid API field names."
+- "Preview Barcelona street-tree data or query DataStore-active city equipment."
 - "Create a citation for the dataset and include the source URL."
 
 Every data-returning tool includes provenance, response caps, and structured errors so the model can recover from bad filters instead of guessing.
@@ -79,6 +80,11 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `idescat_list_table_geos` | List territorial divisions available for an IDESCAT table. |
 | `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, filter guidance, sources, links, and provenance. |
 | `idescat_get_table_data` | Fetch a bounded flattened data extract using IDESCAT dimension/category filters and `_LAST_`. |
+| `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
+| `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
+| `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
+| `bcn_query_resource` | Query an active Open Data BCN CKAN DataStore resource with structured filters and bounded POST responses. |
+| `bcn_preview_resource` | Fetch a safe bounded CSV/JSON preview for non-DataStore Open Data BCN resources. |
 
 ### Prompts
 
@@ -88,6 +94,8 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `socrata_citation` | Builds a concise citation from described dataset metadata or the metadata resource. |
 | `idescat_query_workflow` | Guides an IDESCAT search/browse -> geos -> metadata -> bounded data flow. |
 | `idescat_citation` | Builds a concise citation from IDESCAT table metadata. |
+| `bcn_query_workflow` | Guides an Open Data BCN package -> resource -> query/preview flow. |
+| `bcn_citation` | Builds a concise citation from Open Data BCN package or resource metadata. |
 
 ### Resources
 
@@ -96,6 +104,8 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `catalunya-opendata://about` | Short server metadata. |
 | `socrata://datasets/{source_id}/metadata` | Dataset schema and provenance metadata, matching `socrata_describe_dataset.data`. |
 | `idescat://tables/{statistics_id}/{node_id}/{table_id}/{geo_id}/metadata` | IDESCAT table metadata artifact, matching `idescat_get_table_metadata.data`. |
+| `bcn://packages/{package_id}` | Open Data BCN package metadata, matching `bcn_get_package.data`. |
+| `bcn://resources/{resource_id}/schema` | Open Data BCN resource metadata and DataStore fields, matching `bcn_get_resource_info.data`. |
 
 ## Socrata Workflow
 
@@ -231,6 +241,71 @@ IDESCAT data tools are for bounded extracts, not exhaustive table export. If the
 
 To manually verify the live IDESCAT journey, run `npm run canary:idescat`. It builds the server, then checks search -> geos -> metadata -> bounded data against a known PMH table using the public MCP tool surface.
 
+## Open Data BCN Workflow
+
+Use Open Data BCN for Barcelona city datasets such as street trees, equipment, mobility, facilities, and municipal services. Start with packages, then choose either DataStore query or download preview based on the resource metadata.
+
+### 1. Search Packages
+
+```json
+{
+  "query": "arbrat viari",
+  "limit": 5
+}
+```
+
+Keep the returned `package_id`, then call `bcn_get_package`:
+
+```json
+{
+  "package_id": "27b3f8a7-e536-4eea-b025-ce094817b2bd"
+}
+```
+
+Each resource includes `resource_id`, format, URL, and `datastore_active`.
+
+### 2. Inspect A Resource
+
+Call `bcn_get_resource_info` before querying:
+
+```json
+{
+  "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3"
+}
+```
+
+If `datastore_active` is true, the response includes queryable `fields`.
+
+### 3. Query Active DataStore Resources
+
+`bcn_query_resource` always uses POST JSON. Filters are structured CKAN DataStore filters, not SQL text or URL fragments:
+
+```json
+{
+  "resource_id": "52696168-d8bc-4707-9a09-a21c6c2669f3",
+  "fields": ["_id", "Districte", "Barri"],
+  "filters": {
+    "Districte": "Sant Martí"
+  },
+  "limit": 10
+}
+```
+
+The response includes `request_body` with the logical replayable request, row counts, truncation flags, and provenance.
+
+### 4. Preview Inactive CSV/JSON Resources
+
+If `datastore_active` is false, use `bcn_preview_resource` for a bounded sample:
+
+```json
+{
+  "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+  "limit": 5
+}
+```
+
+Preview is intentionally not an export tool. It only follows HTTPS URLs hosted by `opendata-ajuntament.barcelona.cat`, validates every redirect, reads at most `CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES + 1`, and parses CSV/JSON into capped rows.
+
 ## Query Safety
 
 The server is deliberately defensive:
@@ -242,6 +317,7 @@ The server is deliberately defensive:
 - It applies request timeouts with `CATALUNYA_MCP_REQUEST_TIMEOUT_MS`.
 - It preserves upstream error details when they help the model fix a query.
 - It maps IDESCAT cell-limit errors to `narrow_filters` with the original JSON-stat error in `source_error`.
+- It restricts Open Data BCN previews to allowlisted HTTPS BCN download hosts and caps upstream preview bytes.
 
 If Socrata rejects a query, inspect `error.message`. For example, `query.soql.no-such-column` means the query used an invalid field. Return to `socrata_describe_dataset`, choose a valid `field_name`, and retry with a corrected clause.
 
@@ -258,6 +334,7 @@ The server reads configuration from environment variables supplied by the shell 
 | `CATALUNYA_MCP_REQUEST_TIMEOUT_MS` | `30000` | Upstream request timeout. Allowed range: `100` to `120000`. |
 | `CATALUNYA_MCP_RESPONSE_MAX_BYTES` | `262144` | Maximum upstream response body size. Allowed range: `65536` to `1048576`. |
 | `CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES` | `8388608` | Maximum IDESCAT upstream success body to read before flattening/capping. Allowed range: `65536` to `33554432`. |
+| `CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES` | `2097152` | Maximum Open Data BCN download preview body to read before parsing/capping. Allowed range: `65536` to `16777216`. |
 | `SOCRATA_APP_TOKEN` | unset | Optional Socrata app token for better rate-limit stability. |
 
 Example client configuration with environment overrides:
@@ -287,7 +364,7 @@ Example client configuration with environment overrides:
 | `npm start` | Runs the built server. |
 | `npm run typecheck` | Type-checks source and tests. |
 | `npm test` | Runs the Vitest suite. |
-| `npm run smoke` | Builds the server and calls `ping` over stdio. |
+| `npm run smoke` | Builds the server and checks core tool/prompt/resource registration over stdio, then calls `ping`. |
 | `npm run canary:socrata` | Builds the server and runs the live Socrata search -> describe -> query canary. |
 | `npm run canary:idescat` | Builds the server and runs the live IDESCAT search -> geos -> metadata -> data canary. |
 | `npm run eval:canary` | Builds the server and runs the live binary MCP evaluation canary. |
@@ -328,15 +405,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 125 live cases:
+The stress profile currently runs 129 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
+| Open Data BCN | 4 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 

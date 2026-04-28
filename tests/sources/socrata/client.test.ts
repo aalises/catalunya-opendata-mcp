@@ -14,6 +14,7 @@ const baseConfig: AppConfig = {
   requestTimeoutMs: 5_000,
   responseMaxBytes: 262_144,
   idescatUpstreamReadBytes: 8_388_608,
+  bcnUpstreamReadBytes: 2_097_152,
   socrataAppToken: undefined,
 };
 
