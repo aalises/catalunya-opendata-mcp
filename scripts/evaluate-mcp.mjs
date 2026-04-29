@@ -11,13 +11,13 @@ const PROFILE_CASE_COUNTS = {
   canary: {
     mcp: 1,
     socrata: 4,
-    bcn: 6,
+    bcn: 8,
     idescat: 13,
   },
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 15,
+    bcn: 19,
     idescat: 71,
   },
 };
@@ -288,6 +288,50 @@ async function runCanaryProfile(client) {
               typeof candidate.lon === "number",
           ),
         "BCN place resolver resolves street names through the address registry",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.recommend.trees_street",
+    connector: "bcn",
+    category: "recommend",
+    tool: "bcn_recommend_resources",
+    args: {
+      query: "tree species on Carrer Consell de Cent",
+      task: "group",
+      place_kind: "street",
+      limit: 2,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.recommendations?.[0]?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
+          data.recommendations?.[0]?.suggested_tool === "bcn_query_resource_geo" &&
+          data.recommendations?.[0]?.example_arguments?.contains?.adreca === "<street name>",
+        "BCN recommender suggests street-tree geo grouping for tree species street questions",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.district_gracia_area_ref",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Gracia",
+      kinds: ["district"],
+      limit: 1,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.candidates?.[0]?.kind === "district" &&
+          data.candidates?.[0]?.name === "Gràcia" &&
+          typeof data.candidates?.[0]?.area_ref?.row_id !== "undefined" &&
+          data.candidates?.[0]?.area_ref?.source_resource_id ===
+            "576bc645-9481-4bc4-b8bf-f5972c20df3f" &&
+          typeof data.candidates?.[0]?.bbox?.min_lat === "number",
+        "BCN place resolver returns reusable area_ref and bbox metadata for districts",
       ),
   });
 
@@ -633,6 +677,80 @@ async function runStressProfile(client) {
               group.sample_nearest?._geo?.distance_m === group.min_distance_m,
           ),
         "BCN geo near query uses SQL pushdown and returns nearest group samples",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.geo.facilities_within_gracia",
+    connector: "bcn",
+    category: "geo",
+    tool: "bcn_query_resource_geo",
+    args: async () => {
+      const resolved = await client.callTool({
+        name: "bcn_resolve_place",
+        arguments: {
+          query: "Gracia",
+          kinds: ["district"],
+          limit: 1,
+        },
+      });
+      const areaRef = resolved.structuredContent?.data?.candidates?.[0]?.area_ref;
+
+      if (!areaRef) {
+        throw new Error("bcn_resolve_place did not return a Gràcia area_ref");
+      }
+
+      return {
+        resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+        within_place: {
+          source_resource_id: areaRef.source_resource_id,
+          row_id: areaRef.row_id,
+          geometry_field: areaRef.geometry_field,
+        },
+        fields: [
+          "name",
+          "addresses_neighborhood_name",
+          "addresses_district_name",
+          "secondary_filters_name",
+        ],
+        group_by: "addresses_neighborhood_name",
+        group_limit: 5,
+        limit: 5,
+      };
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.strategy === "datastore" &&
+          data.datastore_mode === "sql" &&
+          data.area_filter?.source_resource_id === "576bc645-9481-4bc4-b8bf-f5972c20df3f" &&
+          data.row_count > 0 &&
+          data.rows?.every((row) => row.addresses_district_name === "Gràcia") &&
+          data.groups?.length > 0,
+        "BCN geo query filters facilities inside a resolved district polygon",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.recommend.facilities_area",
+    connector: "bcn",
+    category: "recommend",
+    tool: "bcn_recommend_resources",
+    args: {
+      query: "facilities in Gracia district",
+      task: "within",
+      place_kind: "district",
+      limit: 2,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.recommendations?.some(
+          (recommendation) =>
+            recommendation.resource_id === "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7" &&
+            recommendation.example_arguments?.within_place,
+        ),
+        "BCN recommender returns within_place-ready facility resources for area questions",
       ),
   });
 

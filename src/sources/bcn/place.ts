@@ -5,6 +5,12 @@ import { getJsonToolResultByteLength } from "../common/caps.js";
 import type { JsonValue } from "../common/json-safe.js";
 import { formatZodError } from "../common/zod.js";
 import {
+  BCN_AREA_ROW_ID_FIELD,
+  type BcnAreaRef,
+  type BcnWgs84Geometry,
+  parseBcnWgs84Geometry,
+} from "./area.js";
+import {
   type BcnOperationProvenance,
   createBcnOperationProvenance,
   normalizeLimit,
@@ -39,6 +45,8 @@ export interface BcnResolvePlaceInput {
 
 export interface BcnResolvedPlaceCandidate {
   address?: string;
+  area_ref?: BcnAreaRef;
+  bbox?: BcnGeoBboxInput;
   district?: string;
   kind: BcnPlaceKind;
   lat: number;
@@ -455,6 +463,7 @@ function getPlaceResourceFields(resource: BcnPlaceRegistryResource): string[] {
       ...fieldList(resource.neighborhoodFields),
       ...fieldList(resource.districtFields),
       ...fieldList(resource.categoryFields),
+      ...(resource.geometryField ? [BCN_AREA_ROW_ID_FIELD] : []),
       ...(resource.coordinateFields
         ? [resource.coordinateFields.lat, resource.coordinateFields.lon]
         : resource.geometryField
@@ -482,13 +491,13 @@ function createPlaceCandidate(
   coordinateFields: BcnCoordinateFields | undefined,
   input: NormalizedResolvePlaceInput,
 ): CandidateDraft | undefined {
-  const point = getPlaceCandidatePoint(resource, row, coordinateFields);
+  const location = getPlaceCandidateLocation(resource, row, coordinateFields);
 
-  if (!point) {
+  if (!location) {
     return undefined;
   }
 
-  if (input.bbox && !isInBbox(point, input.bbox)) {
+  if (input.bbox && !isInBbox(location.point, input.bbox)) {
     return undefined;
   }
 
@@ -515,13 +524,14 @@ function createPlaceCandidate(
   return {
     name,
     kind,
-    lat: point.lat,
-    lon: point.lon,
+    lat: location.point.lat,
+    lon: location.point.lon,
     score: scoring.score,
     matched_fields: scoring.matchedFields,
     ...optionalString("address", getAddress(row, resource)),
     ...optionalString("neighborhood", getFirstString(row, fieldList(resource.neighborhoodFields))),
     ...optionalString("district", getFirstString(row, fieldList(resource.districtFields))),
+    ...getAreaCandidateMetadata(resource, row, location.geometry),
     source_dataset_name: resource.sourceDatasetName,
     source_resource_id: resource.resourceId,
     source_package_id: resource.packageId,
@@ -548,57 +558,55 @@ function getPlaceCoordinateFields(
   }
 }
 
-function getPlaceCandidatePoint(
+function getPlaceCandidateLocation(
   resource: BcnPlaceRegistryResource,
   row: Record<string, JsonValue>,
   coordinateFields: BcnCoordinateFields | undefined,
-): { lat: number; lon: number } | undefined {
+): { geometry?: BcnWgs84Geometry; point: { lat: number; lon: number } } | undefined {
   if (coordinateFields) {
     const lat = toNumber(row[coordinateFields.lat]);
     const lon = toNumber(row[coordinateFields.lon]);
 
     if (lat !== undefined && lon !== undefined) {
-      return { lat, lon };
+      return { point: { lat, lon } };
     }
   }
 
-  return resource.geometryField ? getWgs84GeometryCenter(row[resource.geometryField]) : undefined;
-}
-
-function getWgs84GeometryCenter(
-  value: JsonValue | undefined,
-): { lat: number; lon: number } | undefined {
-  if (typeof value !== "string" || !value.trim()) {
+  if (!resource.geometryField) {
     return undefined;
   }
 
-  let minLat = Number.POSITIVE_INFINITY;
-  let minLon = Number.POSITIVE_INFINITY;
-  let maxLat = Number.NEGATIVE_INFINITY;
-  let maxLon = Number.NEGATIVE_INFINITY;
-  let count = 0;
+  const geometry = parseBcnWgs84Geometry(row[resource.geometryField]);
+  return { geometry, point: geometry.center };
+}
 
-  for (const match of value.matchAll(/(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)/gu)) {
-    const lon = Number(match[1]);
-    const lat = Number(match[2]);
-
-    if (
-      Number.isFinite(lat) &&
-      Number.isFinite(lon) &&
-      lat >= -90 &&
-      lat <= 90 &&
-      lon >= -180 &&
-      lon <= 180
-    ) {
-      minLat = Math.min(minLat, lat);
-      minLon = Math.min(minLon, lon);
-      maxLat = Math.max(maxLat, lat);
-      maxLon = Math.max(maxLon, lon);
-      count += 1;
-    }
+function getAreaCandidateMetadata(
+  resource: BcnPlaceRegistryResource,
+  row: Record<string, JsonValue>,
+  geometry: BcnWgs84Geometry | undefined,
+): Pick<BcnResolvedPlaceCandidate, "area_ref" | "bbox"> | Record<string, never> {
+  if (!geometry || !resource.geometryField) {
+    return {};
   }
 
-  return count > 0 ? { lat: (minLat + maxLat) / 2, lon: (minLon + maxLon) / 2 } : undefined;
+  const rowId = row[BCN_AREA_ROW_ID_FIELD];
+
+  if (typeof rowId !== "string" && typeof rowId !== "number") {
+    return {
+      bbox: geometry.bbox,
+    };
+  }
+
+  return {
+    bbox: geometry.bbox,
+    area_ref: {
+      source_resource_id: resource.resourceId,
+      source_package_id: resource.packageId,
+      row_id: rowId,
+      geometry_field: resource.geometryField,
+      geometry_type: geometry.geometry_type,
+    },
+  };
 }
 
 function scoreCandidate(

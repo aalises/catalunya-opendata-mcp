@@ -6,6 +6,13 @@ import { getJsonToolResultByteLength, getUtf8ByteLength } from "../common/caps.j
 import type { JsonValue } from "../common/json-safe.js";
 import { formatZodError } from "../common/zod.js";
 import {
+  type BcnAreaFilterData,
+  type BcnWgs84Geometry,
+  type BcnWithinPlaceInput,
+  fetchBcnAreaGeometry,
+  isPointInBcnWgs84Geometry,
+} from "./area.js";
+import {
   type BcnOperationProvenance,
   createBcnOperationProvenance,
   normalizeBcnId,
@@ -60,6 +67,7 @@ export interface BcnQueryResourceGeoInput {
   near?: BcnGeoNearInput;
   offset?: number;
   resource_id: string;
+  within_place?: BcnWithinPlaceInput;
 }
 
 export interface BcnGeoNearInput {
@@ -102,6 +110,7 @@ export interface BcnGeoGroup {
 }
 
 export interface BcnQueryResourceGeoData {
+  area_filter?: BcnAreaFilterData;
   bbox?: BcnGeoBboxInput;
   contains?: Record<string, string>;
   coordinate_fields: BcnCoordinateFields;
@@ -135,6 +144,8 @@ export interface BcnQueryResourceGeoResult {
 }
 
 interface NormalizedGeoInput {
+  areaFilter?: BcnAreaFilterData;
+  areaGeometry?: BcnWgs84Geometry;
   bbox?: BcnGeoBboxInput;
   contains?: Record<string, string>;
   fields?: string[];
@@ -147,6 +158,7 @@ interface NormalizedGeoInput {
   near?: Required<BcnGeoNearInput>;
   offset: number;
   resource_id: string;
+  within_place?: BcnWithinPlaceInput;
 }
 
 interface GeoScanResult {
@@ -188,7 +200,18 @@ export async function queryBcnResourceGeo(
   config: AppConfig,
   options: FetchBcnJsonOptions = {},
 ): Promise<BcnQueryResourceGeoResult> {
-  const normalized = normalizeGeoInput(input, config);
+  const normalizedInput = normalizeGeoInput(input, config);
+  const areaContext = normalizedInput.within_place
+    ? await fetchBcnAreaGeometry(normalizedInput.within_place, config, options)
+    : undefined;
+  const normalized: NormalizedGeoInput = areaContext
+    ? {
+        ...normalizedInput,
+        areaFilter: areaContext.areaFilter,
+        areaGeometry: areaContext.geometry,
+        bbox: areaContext.areaFilter.bbox,
+      }
+    : normalizedInput;
   const metadata = await fetchBcnResourceMetadata(normalized.resource_id, config, options, {
     includePackageTitle: false,
   });
@@ -220,6 +243,7 @@ export async function queryBcnResourceGeo(
         request_url: scan.requestUrl.toString(),
         ...(scan.logicalRequestBody ? { logical_request_body: scan.logicalRequestBody } : {}),
         coordinate_fields: scan.coordinateFields,
+        ...(normalized.areaFilter ? { area_filter: normalized.areaFilter } : {}),
         ...(normalized.near ? { near: normalized.near } : {}),
         ...(normalized.bbox ? { bbox: normalized.bbox } : {}),
         ...(normalized.filters ? { filters: normalized.filters } : {}),
@@ -488,9 +512,10 @@ async function queryDatastoreResourceSql(
   }
 
   upstreamTotal ??= parsed.data.records.length === 0 ? 0 : null;
-  const matchedRowCount = input.contains
-    ? matchedRows.length
-    : (upstreamTotal ?? matchedRows.length);
+  const matchedRowCount =
+    input.contains || input.areaGeometry
+      ? matchedRows.length
+      : (upstreamTotal ?? matchedRows.length);
   const scanCapped =
     sqlPlan.localPostFilterMode &&
     (parsed.data.records.length > config.bcnGeoScanMaxRows ||
@@ -588,6 +613,8 @@ function normalizeGeoInput(input: BcnQueryResourceGeoInput, config: AppConfig): 
   const contains = input.contains === undefined ? undefined : normalizeContains(input.contains);
   const near = input.near === undefined ? undefined : normalizeNear(input.near);
   const bbox = input.bbox === undefined ? undefined : normalizeBbox(input.bbox);
+  const withinPlace =
+    input.within_place === undefined ? undefined : normalizeWithinPlace(input.within_place);
   const fields =
     input.fields && input.fields.length > 0 ? normalizeFields(input.fields, "fields") : undefined;
   const groupBy = input.group_by?.trim()
@@ -598,10 +625,14 @@ function normalizeGeoInput(input: BcnQueryResourceGeoInput, config: AppConfig): 
     throw new BcnError("invalid_input", "Pass either near or bbox, not both.");
   }
 
-  if (!near && !bbox && !contains && !filters) {
+  if (withinPlace && (near || bbox)) {
+    throw new BcnError("invalid_input", "Pass within_place without near or bbox.");
+  }
+
+  if (!near && !bbox && !withinPlace && !contains && !filters) {
     throw new BcnError(
       "invalid_input",
-      "bcn_query_resource_geo requires at least one narrowing condition: near, bbox, contains, or filters.",
+      "bcn_query_resource_geo requires at least one narrowing condition: near, bbox, within_place, contains, or filters.",
     );
   }
 
@@ -609,6 +640,7 @@ function normalizeGeoInput(input: BcnQueryResourceGeoInput, config: AppConfig): 
     resource_id: normalizeBcnId("resource_id", input.resource_id),
     ...(near ? { near } : {}),
     ...(bbox ? { bbox } : {}),
+    ...(withinPlace ? { within_place: withinPlace } : {}),
     ...(filters ? { filters } : {}),
     ...(contains ? { contains } : {}),
     ...(fields ? { fields } : {}),
@@ -623,6 +655,41 @@ function normalizeGeoInput(input: BcnQueryResourceGeoInput, config: AppConfig): 
     offset: normalizeOffset(input.offset),
     group_limit: normalizeLimit(input.group_limit, config.maxResults, 20),
   };
+}
+
+function normalizeWithinPlace(input: BcnWithinPlaceInput): BcnWithinPlaceInput {
+  return {
+    source_resource_id: normalizeBcnId("within_place.source_resource_id", input.source_resource_id),
+    row_id: normalizeWithinPlaceRowId(input.row_id),
+    ...(input.geometry_field?.trim()
+      ? { geometry_field: normalizeFieldName(input.geometry_field, "within_place.geometry_field") }
+      : {}),
+  };
+}
+
+function normalizeWithinPlaceRowId(rowId: string | number): string | number {
+  if (typeof rowId === "number") {
+    if (!Number.isSafeInteger(rowId) || rowId < 0) {
+      throw new BcnError(
+        "invalid_input",
+        "within_place.row_id must be a safe non-negative integer.",
+      );
+    }
+
+    return rowId;
+  }
+
+  if (typeof rowId !== "string") {
+    throw new BcnError("invalid_input", "within_place.row_id must be a string or number.");
+  }
+
+  const normalized = rowId.trim();
+
+  if (!normalized || normalized.length > 128 || /[\r\n]/u.test(normalized)) {
+    throw new BcnError("invalid_input", "within_place.row_id contains an invalid row id.");
+  }
+
+  return /^\d+$/u.test(normalized) ? Number(normalized) : normalized;
 }
 
 function normalizeNear(input: BcnGeoNearInput): Required<BcnGeoNearInput> {
@@ -849,7 +916,7 @@ function buildDatastoreSqlPlan(
     : fieldIds.includes("_id")
       ? ' ORDER BY "_id" ASC'
       : "";
-  const localPostFilterMode = Boolean(input.group_by || input.contains);
+  const localPostFilterMode = Boolean(input.group_by || input.contains || input.areaGeometry);
   const actualLimit = localPostFilterMode ? config.bcnGeoScanMaxRows + 1 : input.limit + 1;
   const actualOffset = localPostFilterMode ? 0 : input.offset;
   const actualSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, true);
@@ -1186,6 +1253,10 @@ function toMatchedGeoRow(
   }
 
   if (input.bbox && !isInBbox({ lat, lon }, input.bbox)) {
+    return undefined;
+  }
+
+  if (input.areaGeometry && !isPointInBcnWgs84Geometry({ lat, lon }, input.areaGeometry)) {
     return undefined;
   }
 

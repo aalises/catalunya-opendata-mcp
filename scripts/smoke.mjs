@@ -71,6 +71,7 @@ try {
     "bcn_get_resource_info",
     "bcn_query_resource",
     "bcn_resolve_place",
+    "bcn_recommend_resources",
     "bcn_query_resource_geo",
     "bcn_preview_resource",
   ]) {

@@ -45,7 +45,7 @@ The canary profile is the release-readiness smoke layer. It verifies:
 
 - MCP server health through `ping`.
 - Socrata catalog search, metadata, selected-field query, and upstream query error handling.
-- Open Data BCN package search, DataStore query, place resolution for landmarks, streets, neighborhoods, and districts, inactive-resource error recovery, and CSV preview.
+- Open Data BCN package search, resource recommendation, DataStore query, place resolution for landmarks, streets, neighborhoods, and districts, inactive-resource error recovery, and CSV preview.
 - IDESCAT search, geos, metadata, bounded data, place guidance, multilingual search, and the long-filter GET regression.
 
 ### Stress
@@ -54,11 +54,11 @@ The stress profile is the adapter-health suite. It currently targets the same co
 
 - `MCP: 1`
 - `Socrata: 53`
-- `Open Data BCN: 15`
+- `Open Data BCN: 19`
 - `IDESCAT: 71`
-- `Total: 140`
+- `Total: 144`
 
-It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN place resolution across landmark, street, neighborhood, and district resources, BCN geospatial queries with DataStore SQL pushdown and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
+It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN resource recommendations, BCN place resolution across landmark, street, neighborhood, and district resources, BCN geospatial queries with DataStore SQL pushdown, area polygon filtering, and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
 
 ## Scoring
 

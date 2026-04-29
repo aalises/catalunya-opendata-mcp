@@ -133,6 +133,7 @@ describe("createMcpServer", () => {
           "bcn_get_resource_info",
           "bcn_query_resource",
           "bcn_resolve_place",
+          "bcn_recommend_resources",
           "bcn_query_resource_geo",
           "bcn_preview_resource",
         ]),
@@ -147,8 +148,10 @@ describe("createMcpServer", () => {
       expect(descriptions.bcn_query_resource).toContain("bcn_get_resource_info");
       expect(descriptions.bcn_query_resource).toContain("filters as a JSON object");
       expect(descriptions.bcn_resolve_place).toContain("named place");
+      expect(descriptions.bcn_recommend_resources).toContain("Recommend");
       expect(descriptions.bcn_query_resource_geo).toContain("geospatial query");
       expect(descriptions.bcn_query_resource_geo).toContain("group_by");
+      expect(descriptions.bcn_query_resource_geo).toContain("within_place");
       expect(descriptions.bcn_preview_resource).toContain("HTTPS BCN-hosted");
 
       const prompts = await client.listPrompts();
@@ -281,6 +284,56 @@ describe("createMcpServer", () => {
         },
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN resource recommendations with JSON text fallback", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_recommend_resources",
+        arguments: {
+          query: "tree species on Carrer Consell de Cent",
+          task: "group",
+          place_kind: "street",
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          query: "tree species on Carrer Consell de Cent",
+          task: "group",
+          place_kind: "street",
+          recommendation_count: 1,
+          recommendations: [
+            {
+              title: "Street trees (Arbrat viari)",
+              resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+              suggested_tool: "bcn_query_resource_geo",
+              example_arguments: {
+                contains: {
+                  adreca: "<street name>",
+                },
+                group_by: "cat_nom_catala",
+              },
+            },
+          ],
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:resource_recommend",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+      expect(fetchMock).not.toHaveBeenCalled();
     } finally {
       await close();
     }

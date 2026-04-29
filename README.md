@@ -81,12 +81,13 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `idescat_list_table_geos` | List territorial divisions available for an IDESCAT table. |
 | `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, filter guidance, sources, links, and provenance. |
 | `idescat_get_table_data` | Fetch a bounded flattened data extract using IDESCAT dimension/category filters and `_LAST_`. |
+| `bcn_recommend_resources` | Recommend high-value Open Data BCN resources for natural-language city questions such as trees on a street, facilities near a place, or district/neighborhood area queries. |
 | `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
 | `bcn_query_resource` | Query an active Open Data BCN CKAN DataStore resource with structured filters and bounded POST responses. |
-| `bcn_resolve_place` | Resolve Barcelona place names to source-bounded WGS84 coordinate candidates for follow-up geo queries. |
-| `bcn_query_resource_geo` | Query BCN resources with latitude/longitude columns using `near`, `bbox`, street/name `contains`, and optional `group_by` counts. |
+| `bcn_resolve_place` | Resolve Barcelona place names to source-bounded WGS84 coordinate candidates and district/neighborhood `area_ref` metadata for follow-up geo queries. |
+| `bcn_query_resource_geo` | Query BCN resources with latitude/longitude columns using `near`, `bbox`, `within_place`, street/name `contains`, and optional `group_by` counts. |
 | `bcn_preview_resource` | Fetch a safe bounded CSV/JSON preview for non-DataStore Open Data BCN resources. |
 
 ### Prompts
@@ -246,9 +247,20 @@ To manually verify the live IDESCAT journey, run `npm run canary:idescat`. It bu
 
 ## Open Data BCN Workflow
 
-Use Open Data BCN for Barcelona city datasets such as street trees, equipment, mobility, facilities, and municipal services. Start with packages, then choose DataStore query, geospatial query, or download preview based on the resource metadata and the user's question.
+Use Open Data BCN for Barcelona city datasets such as street trees, equipment, mobility, facilities, and municipal services. For common city questions, start with `bcn_recommend_resources`; it returns likely resources, suggested tools, and example arguments. Use package search when the recommender is too narrow or the topic is not covered, then choose DataStore query, geospatial query, or download preview based on the resource metadata and the user's question.
 
-### 1. Search Packages
+### 1. Recommend Or Search
+
+```json
+{
+  "query": "facilities in Gracia district",
+  "task": "within",
+  "place_kind": "district",
+  "limit": 3
+}
+```
+
+For open-ended discovery, search packages directly:
 
 ```json
 {
@@ -298,7 +310,7 @@ The response includes `request_body` with the logical replayable request, row co
 
 ### 4. Resolve Named Places
 
-Use `bcn_resolve_place` when the user gives a place name instead of coordinates. The resolver is source-bounded: it queries an explicit Open Data BCN DataStore registry, ranks matching rows locally, and returns candidate WGS84 points with matched fields and source provenance. The registry covers building-address street points, administrative district and neighborhood boundaries, municipal facilities, and parks/gardens.
+Use `bcn_resolve_place` when the user gives a place name instead of coordinates. The resolver is source-bounded: it queries an explicit Open Data BCN DataStore registry, ranks matching rows locally, and returns candidate WGS84 points with matched fields and source provenance. The registry covers building-address street points, administrative district and neighborhood boundaries, municipal facilities, and parks/gardens. District and neighborhood candidates include `bbox` plus `area_ref` when BCN exposes WGS84 boundary geometry; pass `area_ref` to `bcn_query_resource_geo.within_place` for "in this district/neighborhood" questions.
 
 ```json
 {
@@ -326,11 +338,11 @@ Street and area names use the same tool:
 }
 ```
 
-Use the best candidate's `lat` and `lon` in `bcn_query_resource_geo.near`. Optional `bbox` and `kinds` filters can narrow ambiguous names.
+Use the best point candidate's `lat` and `lon` in `bcn_query_resource_geo.near`. For district and neighborhood candidates, prefer `within_place` when `area_ref` is present. Optional resolver `bbox` and `kinds` filters can narrow ambiguous names.
 
 ### 5. Query Resources Geospatially
 
-Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. DataStore resources with `near` or `bbox` use generated `datastore_search_sql` internally so spatial narrowing happens upstream; callers still provide only structured inputs, never raw SQL. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
+Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. DataStore resources with `near`, `bbox`, or `within_place` use generated `datastore_search_sql` internally so spatial narrowing happens upstream; callers still provide only structured inputs, never raw SQL. `within_place` first applies the resolved area's bbox upstream, then validates exact polygon containment locally. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
 
 Street or name matching uses `contains`:
 
@@ -361,9 +373,25 @@ Nearby queries use explicit coordinates:
 }
 ```
 
+Area queries use `area_ref` from `bcn_resolve_place`:
+
+```json
+{
+  "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+  "within_place": {
+    "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+    "row_id": 6,
+    "geometry_field": "geometria_wgs84"
+  },
+  "fields": ["name", "addresses_neighborhood_name", "addresses_district_name"],
+  "group_by": "addresses_neighborhood_name",
+  "limit": 10
+}
+```
+
 The response includes `strategy`, `datastore_mode` (`sql` or `scan`) for DataStore resources, `coordinate_fields`, `_geo` coordinates with optional `distance_m`, scan counts, match counts, truncation flags, `upstream_total` for DataStore resources when CKAN returns it, and `groups` when `group_by` is provided. Group rows include `count`, `sample`, and for `near` queries `min_distance_m` plus `sample_nearest`.
 
-Geo helpers remain bounded. DataStore `near` and `bbox` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
+Geo helpers remain bounded. DataStore `near`, `bbox`, and `within_place` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
 
 ### 6. Preview Inactive CSV/JSON Resources
 
@@ -480,16 +508,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 133 live cases:
+The stress profile currently runs 144 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 15 |
+| Open Data BCN | 19 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 

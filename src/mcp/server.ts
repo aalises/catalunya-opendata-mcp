@@ -71,7 +71,7 @@ export function createMcpServer(config: AppConfig): McpServer {
             "",
             "MCP server for discovering, describing, and querying Catalunya open data.",
             "",
-            "Current support covers Socrata catalog search, dataset metadata, row queries, IDESCAT Tables v2 search, metadata, and bounded data extracts, and Open Data BCN package/resource discovery, DataStore queries, geospatial helpers, and safe CSV/JSON previews.",
+            "Current support covers Socrata catalog search, dataset metadata, row queries, IDESCAT Tables v2 search, metadata, and bounded data extracts, and Open Data BCN resource recommendations, package/resource discovery, DataStore queries, area-aware geospatial helpers, place resolution, and safe CSV/JSON previews.",
           ].join("\n"),
         },
       ],

@@ -5,10 +5,10 @@
     "name": "catalunya-opendata-mcp",
     "version": "0.1.3"
   },
-  "recorded_at": "2026-04-29T08:51:07.568Z",
+  "recorded_at": "2026-04-29T09:32:47.740Z",
   "summary": {
-    "total_cases": 140,
-    "passed_cases": 140,
+    "total_cases": 144,
+    "passed_cases": 144,
     "failed_cases": 0,
     "score": 1,
     "by_connector": {
@@ -23,8 +23,8 @@
         "failed": 0
       },
       "bcn": {
-        "total": 15,
-        "passed": 15,
+        "total": 19,
+        "passed": 19,
         "failed": 0
       },
       "idescat": {
@@ -36,7 +36,7 @@
     "expected_counts": {
       "mcp": 1,
       "socrata": 53,
-      "bcn": 15,
+      "bcn": 19,
       "idescat": 71
     },
     "count_failures": []
@@ -52,7 +52,7 @@
           "name": "Evaluator"
         }
       },
-      "recorded_at": "2026-04-29T08:47:46.183Z",
+      "recorded_at": "2026-04-29T09:29:07.348Z",
       "result": {
         "content": [
           {
@@ -77,7 +77,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:47:46.440Z",
+      "recorded_at": "2026-04-29T09:29:07.593Z",
       "result": {
         "content": [
           {
@@ -166,7 +166,7 @@
           "source_id": "j8h8-vxug"
         }
       },
-      "recorded_at": "2026-04-29T08:47:46.689Z",
+      "recorded_at": "2026-04-29T09:29:07.797Z",
       "result": {
         "content": [
           {
@@ -381,7 +381,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:47:46.835Z",
+      "recorded_at": "2026-04-29T09:29:07.958Z",
       "result": {
         "content": [
           {
@@ -441,7 +441,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:47:46.952Z",
+      "recorded_at": "2026-04-29T09:29:08.057Z",
       "result": {
         "content": [
           {
@@ -494,7 +494,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:47:48.039Z",
+      "recorded_at": "2026-04-29T09:29:08.768Z",
       "result": {
         "content": [
           {
@@ -568,7 +568,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:47:49.148Z",
+      "recorded_at": "2026-04-29T09:29:10.258Z",
       "result": {
         "content": [
           {
@@ -647,7 +647,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:47:55.585Z",
+      "recorded_at": "2026-04-29T09:29:16.642Z",
       "result": {
         "content": [
           {
@@ -694,7 +694,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:48:00.614Z",
+      "recorded_at": "2026-04-29T09:29:21.460Z",
       "result": {
         "content": [
           {
@@ -815,7 +815,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:21.162Z",
+      "recorded_at": "2026-04-29T09:29:42.273Z",
       "result": {
         "content": [
           {
@@ -916,7 +916,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.157Z",
+      "recorded_at": "2026-04-29T09:30:04.337Z",
       "result": {
         "content": [
           {
@@ -971,6 +971,224 @@
       }
     },
     {
+      "key": "default:callTool:{\"arguments\":{\"limit\":2,\"place_kind\":\"street\",\"query\":\"tree species on Carrer Consell de Cent\",\"task\":\"group\"},\"name\":\"bcn_recommend_resources\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_recommend_resources",
+        "arguments": {
+          "query": "tree species on Carrer Consell de Cent",
+          "task": "group",
+          "place_kind": "street",
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-29T09:30:04.340Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"query\":\"tree species on Carrer Consell de Cent\",\"normalized_query\":\"tree species on consell de cent\",\"task\":\"group\",\"place_kind\":\"street\",\"limit\":2,\"recommendation_count\":2,\"recommendations\":[{\"title\":\"Street trees (Arbrat viari)\",\"theme\":\"street_trees\",\"description\":\"Street tree inventory with WGS84 coordinates, street address, and species fields.\",\"package_id\":\"27b3f8a7-e536-4eea-b025-ce094817b2bd\",\"resource_id\":\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/27b3f8a7-e536-4eea-b025-ce094817b2bd/resource/23124fd5-521f-40f8-85b8-efb1e71c2ec8\",\"datastore_active\":false,\"format\":\"CSV\",\"geo_capable\":true,\"suggested_tool\":\"bcn_query_resource_geo\",\"suggested_fields\":[\"adreca\",\"cat_nom_catala\",\"latitud\",\"longitud\"],\"suggested_contains_fields\":[\"adreca\"],\"suggested_group_by\":[\"cat_nom_catala\"],\"example_arguments\":{\"resource_id\":\"23124fd5-521f-40f8-85b8-efb1e71c2ec8\",\"contains\":{\"adreca\":\"<street name>\"},\"fields\":[\"adreca\",\"cat_nom_catala\",\"latitud\",\"longitud\"],\"group_by\":\"cat_nom_catala\",\"limit\":20},\"confidence\":0.99,\"matched_terms\":[\"tree\",\"species\",\"consell de cent\"],\"caveats\":[\"Not DataStore-active; geospatial queries use safe bounded CSV download scans.\"]},{\"title\":\"Municipal facilities and equipment\",\"theme\":\"facilities\",\"description\":\"Municipal facilities with names, categories, addresses, districts, neighborhoods, and WGS84 coordinates.\",\"package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"datastore_active\":true,\"format\":\"DataStore\",\"geo_capable\":true,\"suggested_tool\":\"bcn_query_resource_geo\",\"suggested_fields\":[\"name\",\"secondary_filters_name\",\"addresses_road_name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"geo_epgs_4326_lat\",\"geo_epgs_4326_lon\"],\"suggested_contains_fields\":[\"name\",\"addresses_road_name\",\"addresses_neighborhood_name\"],\"suggested_group_by\":[\"secondary_filters_name\",\"addresses_neighborhood_name\",\"addresses_district_name\"],\"example_arguments\":{\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"contains\":{\"name\":\"<street name>\"},\"fields\":[\"name\",\"secondary_filters_name\",\"addresses_road_name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"geo_epgs_4326_lat\"],\"group_by\":\"secondary_filters_name\",\"limit\":20},\"confidence\":0.63,\"matched_terms\":[],\"caveats\":[]}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search\",\"id\":\"opendata-ajuntament.barcelona.cat:resource_recommend\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "query": "tree species on Carrer Consell de Cent",
+            "normalized_query": "tree species on consell de cent",
+            "task": "group",
+            "place_kind": "street",
+            "limit": 2,
+            "recommendation_count": 2,
+            "recommendations": [
+              {
+                "title": "Street trees (Arbrat viari)",
+                "theme": "street_trees",
+                "description": "Street tree inventory with WGS84 coordinates, street address, and species fields.",
+                "package_id": "27b3f8a7-e536-4eea-b025-ce094817b2bd",
+                "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/27b3f8a7-e536-4eea-b025-ce094817b2bd/resource/23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+                "datastore_active": false,
+                "format": "CSV",
+                "geo_capable": true,
+                "suggested_tool": "bcn_query_resource_geo",
+                "suggested_fields": [
+                  "adreca",
+                  "cat_nom_catala",
+                  "latitud",
+                  "longitud"
+                ],
+                "suggested_contains_fields": [
+                  "adreca"
+                ],
+                "suggested_group_by": [
+                  "cat_nom_catala"
+                ],
+                "example_arguments": {
+                  "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+                  "contains": {
+                    "adreca": "<street name>"
+                  },
+                  "fields": [
+                    "adreca",
+                    "cat_nom_catala",
+                    "latitud",
+                    "longitud"
+                  ],
+                  "group_by": "cat_nom_catala",
+                  "limit": 20
+                },
+                "confidence": 0.99,
+                "matched_terms": [
+                  "tree",
+                  "species",
+                  "consell de cent"
+                ],
+                "caveats": [
+                  "Not DataStore-active; geospatial queries use safe bounded CSV download scans."
+                ]
+              },
+              {
+                "title": "Municipal facilities and equipment",
+                "theme": "facilities",
+                "description": "Municipal facilities with names, categories, addresses, districts, neighborhoods, and WGS84 coordinates.",
+                "package_id": "fcef8a36-64df-4231-9145-a4a3ef757f02",
+                "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                "datastore_active": true,
+                "format": "DataStore",
+                "geo_capable": true,
+                "suggested_tool": "bcn_query_resource_geo",
+                "suggested_fields": [
+                  "name",
+                  "secondary_filters_name",
+                  "addresses_road_name",
+                  "addresses_neighborhood_name",
+                  "addresses_district_name",
+                  "geo_epgs_4326_lat",
+                  "geo_epgs_4326_lon"
+                ],
+                "suggested_contains_fields": [
+                  "name",
+                  "addresses_road_name",
+                  "addresses_neighborhood_name"
+                ],
+                "suggested_group_by": [
+                  "secondary_filters_name",
+                  "addresses_neighborhood_name",
+                  "addresses_district_name"
+                ],
+                "example_arguments": {
+                  "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                  "contains": {
+                    "name": "<street name>"
+                  },
+                  "fields": [
+                    "name",
+                    "secondary_filters_name",
+                    "addresses_road_name",
+                    "addresses_neighborhood_name",
+                    "addresses_district_name",
+                    "geo_epgs_4326_lat"
+                  ],
+                  "group_by": "secondary_filters_name",
+                  "limit": 20
+                },
+                "confidence": 0.63,
+                "matched_terms": [],
+                "caveats": []
+              }
+            ],
+            "truncated": true
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search",
+            "id": "opendata-ajuntament.barcelona.cat:resource_recommend",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"kinds\":[\"district\"],\"limit\":1,\"query\":\"Gracia\"},\"name\":\"bcn_resolve_place\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_resolve_place",
+        "arguments": {
+          "query": "Gracia",
+          "kinds": [
+            "district"
+          ],
+          "limit": 1
+        }
+      },
+      "recorded_at": "2026-04-29T09:30:14.265Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"query\":\"Gracia\",\"query_variants\":[\"Gracia\"],\"kinds\":[\"district\"],\"strategy\":\"datastore\",\"limit\":1,\"candidate_count\":1,\"candidates\":[{\"name\":\"Gràcia\",\"kind\":\"district\",\"lat\":41.41022530542335,\"lon\":2.15068008454636,\"score\":104,\"matched_fields\":[\"nom_districte\"],\"district\":\"Gràcia\",\"bbox\":{\"min_lat\":41.3955709367329,\"min_lon\":2.1293172321932,\"max_lat\":41.4248796741138,\"max_lon\":2.17204293689952},\"area_ref\":{\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"row_id\":6,\"geometry_field\":\"geometria_wgs84\",\"geometry_type\":\"polygon\"},\"source_dataset_name\":\"Open Data BCN administrative districts\",\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f\"}],\"truncated\":false},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "query": "Gracia",
+            "query_variants": [
+              "Gracia"
+            ],
+            "kinds": [
+              "district"
+            ],
+            "strategy": "datastore",
+            "limit": 1,
+            "candidate_count": 1,
+            "candidates": [
+              {
+                "name": "Gràcia",
+                "kind": "district",
+                "lat": 41.41022530542335,
+                "lon": 2.15068008454636,
+                "score": 104,
+                "matched_fields": [
+                  "nom_districte"
+                ],
+                "district": "Gràcia",
+                "bbox": {
+                  "min_lat": 41.3955709367329,
+                  "min_lon": 2.1293172321932,
+                  "max_lat": 41.4248796741138,
+                  "max_lon": 2.17204293689952
+                },
+                "area_ref": {
+                  "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                  "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+                  "row_id": 6,
+                  "geometry_field": "geometria_wgs84",
+                  "geometry_type": "polygon"
+                },
+                "source_dataset_name": "Open Data BCN administrative districts",
+                "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f"
+              }
+            ],
+            "truncated": false
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search",
+            "id": "opendata-ajuntament.barcelona.cat:place_resolve",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
       "key": "default:callTool:{\"arguments\":{\"lang\":\"ca\",\"limit\":5,\"query\":\"poblacio sexe edat\"},\"name\":\"idescat_search_tables\"}",
       "scope": "default",
       "method": "callTool",
@@ -982,7 +1200,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.255Z",
+      "recorded_at": "2026-04-29T09:30:14.330Z",
       "result": {
         "content": [
           {
@@ -1132,7 +1350,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.417Z",
+      "recorded_at": "2026-04-29T09:30:14.787Z",
       "result": {
         "content": [
           {
@@ -1236,7 +1454,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.477Z",
+      "recorded_at": "2026-04-29T09:30:14.830Z",
       "result": {
         "content": [
           {
@@ -2055,7 +2273,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.534Z",
+      "recorded_at": "2026-04-29T09:30:14.869Z",
       "result": {
         "content": [
           {
@@ -2160,7 +2378,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-29T08:48:43.624Z",
+      "recorded_at": "2026-04-29T09:30:14.932Z",
       "result": {
         "content": [
           {
@@ -7965,7 +8183,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.106Z",
+      "recorded_at": "2026-04-29T09:30:15.297Z",
       "result": {
         "content": [
           {
@@ -8371,7 +8589,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.157Z",
+      "recorded_at": "2026-04-29T09:30:15.344Z",
       "result": {
         "content": [
           {
@@ -8531,7 +8749,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.194Z",
+      "recorded_at": "2026-04-29T09:30:15.384Z",
       "result": {
         "content": [
           {
@@ -8637,7 +8855,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.228Z",
+      "recorded_at": "2026-04-29T09:30:15.419Z",
       "result": {
         "content": [
           {
@@ -8782,7 +9000,7 @@
           "place_query": "Maresme"
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.266Z",
+      "recorded_at": "2026-04-29T09:30:15.462Z",
       "result": {
         "content": [
           {
@@ -9316,7 +9534,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.303Z",
+      "recorded_at": "2026-04-29T09:30:15.498Z",
       "result": {
         "content": [
           {
@@ -9474,7 +9692,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.345Z",
+      "recorded_at": "2026-04-29T09:30:15.540Z",
       "result": {
         "content": [
           {
@@ -9536,7 +9754,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:48:44.383Z",
+      "recorded_at": "2026-04-29T09:30:15.574Z",
       "result": {
         "content": [
           {
@@ -9647,7 +9865,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:48:50.693Z",
+      "recorded_at": "2026-04-29T09:30:21.510Z",
       "result": {
         "content": [
           {
@@ -9980,7 +10198,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:49:10.849Z",
+      "recorded_at": "2026-04-29T09:30:41.623Z",
       "result": {
         "content": [
           {
@@ -10058,7 +10276,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:49:18.886Z",
+      "recorded_at": "2026-04-29T09:30:49.670Z",
       "result": {
         "content": [
           {
@@ -10293,6 +10511,344 @@
       }
     },
     {
+      "key": "default:callTool:{\"arguments\":{\"fields\":[\"name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"secondary_filters_name\"],\"group_by\":\"addresses_neighborhood_name\",\"group_limit\":5,\"limit\":5,\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"within_place\":{\"geometry_field\":\"geometria_wgs84\",\"row_id\":6,\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\"}},\"name\":\"bcn_query_resource_geo\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_query_resource_geo",
+        "arguments": {
+          "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+          "within_place": {
+            "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+            "row_id": 6,
+            "geometry_field": "geometria_wgs84"
+          },
+          "fields": [
+            "name",
+            "addresses_neighborhood_name",
+            "addresses_district_name",
+            "secondary_filters_name"
+          ],
+          "group_by": "addresses_neighborhood_name",
+          "group_limit": 5,
+          "limit": 5
+        }
+      },
+      "recorded_at": "2026-04-29T09:30:59.670Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"strategy\":\"datastore\",\"datastore_mode\":\"sql\",\"request_method\":\"POST\",\"request_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search_sql\",\"logical_request_body\":{\"sql\":\"SELECT \\\"name\\\", \\\"addresses_neighborhood_name\\\", \\\"addresses_district_name\\\", \\\"secondary_filters_name\\\", \\\"geo_epgs_4326_lat\\\", \\\"geo_epgs_4326_lon\\\" FROM \\\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\\\" WHERE (CASE WHEN NULLIF(TRIM(REPLACE(\\\"geo_epgs_4326_lat\\\"::text, ',', '.')), '') ~ '^-?[0-9]+(\\\\.[0-9]+)?$' THEN NULLIF(TRIM(REPLACE(\\\"geo_epgs_4326_lat\\\"::text, ',', '.')), '')::double precision ELSE NULL END) BETWEEN 41.3955709367329 AND 41.4248796741138 AND (CASE WHEN NULLIF(TRIM(REPLACE(\\\"geo_epgs_4326_lon\\\"::text, ',', '.')), '') ~ '^-?[0-9]+(\\\\.[0-9]+)?$' THEN NULLIF(TRIM(REPLACE(\\\"geo_epgs_4326_lon\\\"::text, ',', '.')), '')::double precision ELSE NULL END) BETWEEN 2.1293172321932 AND 2.17204293689952 ORDER BY \\\"_id\\\" ASC LIMIT 5 OFFSET 0\"},\"coordinate_fields\":{\"lat\":\"geo_epgs_4326_lat\",\"lon\":\"geo_epgs_4326_lon\"},\"area_filter\":{\"mode\":\"polygon\",\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"row_id\":6,\"geometry_field\":\"geometria_wgs84\",\"geometry_type\":\"polygon\",\"bbox\":{\"min_lat\":41.3955709367329,\"min_lon\":2.1293172321932,\"max_lat\":41.4248796741138,\"max_lon\":2.17204293689952}},\"bbox\":{\"min_lat\":41.3955709367329,\"min_lon\":2.1293172321932,\"max_lat\":41.4248796741138,\"max_lon\":2.17204293689952},\"fields\":[\"name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"secondary_filters_name\"],\"group_by\":\"addresses_neighborhood_name\",\"group_limit\":5,\"limit\":5,\"offset\":0,\"scanned_row_count\":53,\"matched_row_count\":19,\"row_count\":5,\"rows\":[{\"_geo\":{\"lat\":41.41481232125404,\"lon\":2.1550643342300395},\"name\":\"Casa Museu Gaudí\",\"addresses_neighborhood_name\":\"la Salut\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Museus\"},{\"_geo\":{\"lat\":41.40473418484712,\"lon\":2.1564231919641506},\"name\":\"Biblioteca\",\"addresses_neighborhood_name\":\"la Vila de Gràcia\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Biblioteques\"},{\"_geo\":{\"lat\":41.4035372452986,\"lon\":2.1505869815611334},\"name\":\"Casa Vicens\",\"addresses_neighborhood_name\":\"la Vila de Gràcia\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Museus\"},{\"_geo\":{\"lat\":41.396364745700076,\"lon\":2.1577672124443046},\"name\":\"Biblioteca\",\"addresses_neighborhood_name\":\"la Vila de Gràcia\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Biblioteques\"},{\"_geo\":{\"lat\":41.409286670795964,\"lon\":2.1642961429898806},\"name\":\"Biblioteca\",\"addresses_neighborhood_name\":\"el Camp d'en Grassot i Gràcia Nova\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Biblioteques\"}],\"groups\":[{\"key\":\"Vallcarca i els Penitents\",\"count\":9,\"sample\":{\"_geo\":{\"lat\":41.407280058881874,\"lon\":2.149450370514001},\"name\":\"Arxiu Municipal del Districte de Gràcia\",\"addresses_neighborhood_name\":\"Vallcarca i els Penitents\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Arxius municipals\"}},{\"key\":\"la Vila de Gràcia\",\"count\":7,\"sample\":{\"_geo\":{\"lat\":41.40473418484712,\"lon\":2.1564231919641506},\"name\":\"Biblioteca\",\"addresses_neighborhood_name\":\"la Vila de Gràcia\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Biblioteques\"}},{\"key\":\"la Salut\",\"count\":2,\"sample\":{\"_geo\":{\"lat\":41.41481232125404,\"lon\":2.1550643342300395},\"name\":\"Casa Museu Gaudí\",\"addresses_neighborhood_name\":\"la Salut\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Museus\"}},{\"key\":\"el Camp d'en Grassot i Gràcia Nova\",\"count\":1,\"sample\":{\"_geo\":{\"lat\":41.409286670795964,\"lon\":2.1642961429898806},\"name\":\"Biblioteca\",\"addresses_neighborhood_name\":\"el Camp d'en Grassot i Gràcia Nova\",\"addresses_district_name\":\"Gràcia\",\"secondary_filters_name\":\"Biblioteques\"}}],\"truncated\":true,\"upstream_total\":53,\"truncation_reason\":\"row_cap\",\"truncation_hint\":\"raise limit within maxResults or use offset to page through matched rows\"},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search_sql\",\"id\":\"opendata-ajuntament.barcelona.cat:resource_geo_query\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+            "strategy": "datastore",
+            "datastore_mode": "sql",
+            "request_method": "POST",
+            "request_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search_sql",
+            "logical_request_body": {
+              "sql": "SELECT \"name\", \"addresses_neighborhood_name\", \"addresses_district_name\", \"secondary_filters_name\", \"geo_epgs_4326_lat\", \"geo_epgs_4326_lon\" FROM \"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\" WHERE (CASE WHEN NULLIF(TRIM(REPLACE(\"geo_epgs_4326_lat\"::text, ',', '.')), '') ~ '^-?[0-9]+(\\.[0-9]+)?$' THEN NULLIF(TRIM(REPLACE(\"geo_epgs_4326_lat\"::text, ',', '.')), '')::double precision ELSE NULL END) BETWEEN 41.3955709367329 AND 41.4248796741138 AND (CASE WHEN NULLIF(TRIM(REPLACE(\"geo_epgs_4326_lon\"::text, ',', '.')), '') ~ '^-?[0-9]+(\\.[0-9]+)?$' THEN NULLIF(TRIM(REPLACE(\"geo_epgs_4326_lon\"::text, ',', '.')), '')::double precision ELSE NULL END) BETWEEN 2.1293172321932 AND 2.17204293689952 ORDER BY \"_id\" ASC LIMIT 5 OFFSET 0"
+            },
+            "coordinate_fields": {
+              "lat": "geo_epgs_4326_lat",
+              "lon": "geo_epgs_4326_lon"
+            },
+            "area_filter": {
+              "mode": "polygon",
+              "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+              "row_id": 6,
+              "geometry_field": "geometria_wgs84",
+              "geometry_type": "polygon",
+              "bbox": {
+                "min_lat": 41.3955709367329,
+                "min_lon": 2.1293172321932,
+                "max_lat": 41.4248796741138,
+                "max_lon": 2.17204293689952
+              }
+            },
+            "bbox": {
+              "min_lat": 41.3955709367329,
+              "min_lon": 2.1293172321932,
+              "max_lat": 41.4248796741138,
+              "max_lon": 2.17204293689952
+            },
+            "fields": [
+              "name",
+              "addresses_neighborhood_name",
+              "addresses_district_name",
+              "secondary_filters_name"
+            ],
+            "group_by": "addresses_neighborhood_name",
+            "group_limit": 5,
+            "limit": 5,
+            "offset": 0,
+            "scanned_row_count": 53,
+            "matched_row_count": 19,
+            "row_count": 5,
+            "rows": [
+              {
+                "_geo": {
+                  "lat": 41.41481232125404,
+                  "lon": 2.1550643342300395
+                },
+                "name": "Casa Museu Gaudí",
+                "addresses_neighborhood_name": "la Salut",
+                "addresses_district_name": "Gràcia",
+                "secondary_filters_name": "Museus"
+              },
+              {
+                "_geo": {
+                  "lat": 41.40473418484712,
+                  "lon": 2.1564231919641506
+                },
+                "name": "Biblioteca",
+                "addresses_neighborhood_name": "la Vila de Gràcia",
+                "addresses_district_name": "Gràcia",
+                "secondary_filters_name": "Biblioteques"
+              },
+              {
+                "_geo": {
+                  "lat": 41.4035372452986,
+                  "lon": 2.1505869815611334
+                },
+                "name": "Casa Vicens",
+                "addresses_neighborhood_name": "la Vila de Gràcia",
+                "addresses_district_name": "Gràcia",
+                "secondary_filters_name": "Museus"
+              },
+              {
+                "_geo": {
+                  "lat": 41.396364745700076,
+                  "lon": 2.1577672124443046
+                },
+                "name": "Biblioteca",
+                "addresses_neighborhood_name": "la Vila de Gràcia",
+                "addresses_district_name": "Gràcia",
+                "secondary_filters_name": "Biblioteques"
+              },
+              {
+                "_geo": {
+                  "lat": 41.409286670795964,
+                  "lon": 2.1642961429898806
+                },
+                "name": "Biblioteca",
+                "addresses_neighborhood_name": "el Camp d'en Grassot i Gràcia Nova",
+                "addresses_district_name": "Gràcia",
+                "secondary_filters_name": "Biblioteques"
+              }
+            ],
+            "groups": [
+              {
+                "key": "Vallcarca i els Penitents",
+                "count": 9,
+                "sample": {
+                  "_geo": {
+                    "lat": 41.407280058881874,
+                    "lon": 2.149450370514001
+                  },
+                  "name": "Arxiu Municipal del Districte de Gràcia",
+                  "addresses_neighborhood_name": "Vallcarca i els Penitents",
+                  "addresses_district_name": "Gràcia",
+                  "secondary_filters_name": "Arxius municipals"
+                }
+              },
+              {
+                "key": "la Vila de Gràcia",
+                "count": 7,
+                "sample": {
+                  "_geo": {
+                    "lat": 41.40473418484712,
+                    "lon": 2.1564231919641506
+                  },
+                  "name": "Biblioteca",
+                  "addresses_neighborhood_name": "la Vila de Gràcia",
+                  "addresses_district_name": "Gràcia",
+                  "secondary_filters_name": "Biblioteques"
+                }
+              },
+              {
+                "key": "la Salut",
+                "count": 2,
+                "sample": {
+                  "_geo": {
+                    "lat": 41.41481232125404,
+                    "lon": 2.1550643342300395
+                  },
+                  "name": "Casa Museu Gaudí",
+                  "addresses_neighborhood_name": "la Salut",
+                  "addresses_district_name": "Gràcia",
+                  "secondary_filters_name": "Museus"
+                }
+              },
+              {
+                "key": "el Camp d'en Grassot i Gràcia Nova",
+                "count": 1,
+                "sample": {
+                  "_geo": {
+                    "lat": 41.409286670795964,
+                    "lon": 2.1642961429898806
+                  },
+                  "name": "Biblioteca",
+                  "addresses_neighborhood_name": "el Camp d'en Grassot i Gràcia Nova",
+                  "addresses_district_name": "Gràcia",
+                  "secondary_filters_name": "Biblioteques"
+                }
+              }
+            ],
+            "truncated": true,
+            "upstream_total": 53,
+            "truncation_reason": "row_cap",
+            "truncation_hint": "raise limit within maxResults or use offset to page through matched rows"
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search_sql",
+            "id": "opendata-ajuntament.barcelona.cat:resource_geo_query",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"limit\":2,\"place_kind\":\"district\",\"query\":\"facilities in Gracia district\",\"task\":\"within\"},\"name\":\"bcn_recommend_resources\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_recommend_resources",
+        "arguments": {
+          "query": "facilities in Gracia district",
+          "task": "within",
+          "place_kind": "district",
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-29T09:30:59.673Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"query\":\"facilities in Gracia district\",\"normalized_query\":\"facilities in gracia district\",\"task\":\"within\",\"place_kind\":\"district\",\"limit\":2,\"recommendation_count\":2,\"recommendations\":[{\"title\":\"Municipal facilities and equipment\",\"theme\":\"facilities\",\"description\":\"Municipal facilities with names, categories, addresses, districts, neighborhoods, and WGS84 coordinates.\",\"package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"datastore_active\":true,\"format\":\"DataStore\",\"geo_capable\":true,\"suggested_tool\":\"bcn_query_resource_geo\",\"suggested_fields\":[\"name\",\"secondary_filters_name\",\"addresses_road_name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"geo_epgs_4326_lat\",\"geo_epgs_4326_lon\"],\"suggested_contains_fields\":[\"name\",\"addresses_road_name\",\"addresses_neighborhood_name\"],\"suggested_group_by\":[\"secondary_filters_name\",\"addresses_neighborhood_name\",\"addresses_district_name\"],\"example_arguments\":{\"resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"within_place\":{\"source_resource_id\":\"<area_ref.source_resource_id from bcn_resolve_place>\",\"row_id\":\"<area_ref.row_id from bcn_resolve_place>\",\"geometry_field\":\"<area_ref.geometry_field from bcn_resolve_place>\"},\"fields\":[\"name\",\"secondary_filters_name\",\"addresses_road_name\",\"addresses_neighborhood_name\",\"addresses_district_name\",\"geo_epgs_4326_lat\"],\"limit\":20},\"confidence\":0.85,\"matched_terms\":[\"facilities\"],\"caveats\":[]},{\"title\":\"Administrative districts\",\"theme\":\"district_boundaries\",\"description\":\"District boundary polygons for area resolution and within-district queries.\",\"package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"datastore_active\":true,\"format\":\"DataStore\",\"geo_capable\":true,\"suggested_tool\":\"bcn_query_resource_geo\",\"suggested_fields\":[\"nom_districte\",\"geometria_wgs84\"],\"suggested_contains_fields\":[\"nom_districte\"],\"example_arguments\":{\"resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"within_place\":{\"source_resource_id\":\"<area_ref.source_resource_id from bcn_resolve_place>\",\"row_id\":\"<area_ref.row_id from bcn_resolve_place>\",\"geometry_field\":\"<area_ref.geometry_field from bcn_resolve_place>\"},\"fields\":[\"nom_districte\",\"geometria_wgs84\"],\"limit\":20},\"confidence\":0.7,\"matched_terms\":[\"district\"],\"caveats\":[]}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search\",\"id\":\"opendata-ajuntament.barcelona.cat:resource_recommend\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "query": "facilities in Gracia district",
+            "normalized_query": "facilities in gracia district",
+            "task": "within",
+            "place_kind": "district",
+            "limit": 2,
+            "recommendation_count": 2,
+            "recommendations": [
+              {
+                "title": "Municipal facilities and equipment",
+                "theme": "facilities",
+                "description": "Municipal facilities with names, categories, addresses, districts, neighborhoods, and WGS84 coordinates.",
+                "package_id": "fcef8a36-64df-4231-9145-a4a3ef757f02",
+                "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                "datastore_active": true,
+                "format": "DataStore",
+                "geo_capable": true,
+                "suggested_tool": "bcn_query_resource_geo",
+                "suggested_fields": [
+                  "name",
+                  "secondary_filters_name",
+                  "addresses_road_name",
+                  "addresses_neighborhood_name",
+                  "addresses_district_name",
+                  "geo_epgs_4326_lat",
+                  "geo_epgs_4326_lon"
+                ],
+                "suggested_contains_fields": [
+                  "name",
+                  "addresses_road_name",
+                  "addresses_neighborhood_name"
+                ],
+                "suggested_group_by": [
+                  "secondary_filters_name",
+                  "addresses_neighborhood_name",
+                  "addresses_district_name"
+                ],
+                "example_arguments": {
+                  "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+                  "within_place": {
+                    "source_resource_id": "<area_ref.source_resource_id from bcn_resolve_place>",
+                    "row_id": "<area_ref.row_id from bcn_resolve_place>",
+                    "geometry_field": "<area_ref.geometry_field from bcn_resolve_place>"
+                  },
+                  "fields": [
+                    "name",
+                    "secondary_filters_name",
+                    "addresses_road_name",
+                    "addresses_neighborhood_name",
+                    "addresses_district_name",
+                    "geo_epgs_4326_lat"
+                  ],
+                  "limit": 20
+                },
+                "confidence": 0.85,
+                "matched_terms": [
+                  "facilities"
+                ],
+                "caveats": []
+              },
+              {
+                "title": "Administrative districts",
+                "theme": "district_boundaries",
+                "description": "District boundary polygons for area resolution and within-district queries.",
+                "package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+                "resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                "datastore_active": true,
+                "format": "DataStore",
+                "geo_capable": true,
+                "suggested_tool": "bcn_query_resource_geo",
+                "suggested_fields": [
+                  "nom_districte",
+                  "geometria_wgs84"
+                ],
+                "suggested_contains_fields": [
+                  "nom_districte"
+                ],
+                "example_arguments": {
+                  "resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                  "within_place": {
+                    "source_resource_id": "<area_ref.source_resource_id from bcn_resolve_place>",
+                    "row_id": "<area_ref.row_id from bcn_resolve_place>",
+                    "geometry_field": "<area_ref.geometry_field from bcn_resolve_place>"
+                  },
+                  "fields": [
+                    "nom_districte",
+                    "geometria_wgs84"
+                  ],
+                  "limit": 20
+                },
+                "confidence": 0.7,
+                "matched_terms": [
+                  "district"
+                ],
+                "caveats": []
+              }
+            ],
+            "truncated": true
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/3/action/package_search",
+            "id": "opendata-ajuntament.barcelona.cat:resource_recommend",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
       "key": "default:callTool:{\"arguments\":{\"kinds\":[\"landmark\"],\"limit\":3,\"query\":\"Park Guell\"},\"name\":\"bcn_resolve_place\"}",
       "scope": "default",
       "method": "callTool",
@@ -10306,7 +10862,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:49:40.847Z",
+      "recorded_at": "2026-04-29T09:31:21.656Z",
       "result": {
         "content": [
           {
@@ -10391,7 +10947,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:50:02.860Z",
+      "recorded_at": "2026-04-29T09:31:43.632Z",
       "result": {
         "content": [
           {
@@ -10476,12 +11032,12 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:50:12.861Z",
+      "recorded_at": "2026-04-29T09:31:53.639Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"Gracia\",\"query_variants\":[\"Gracia\"],\"kinds\":[\"district\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":1,\"candidates\":[{\"name\":\"Gràcia\",\"kind\":\"district\",\"lat\":41.41022530542335,\"lon\":2.15068008454636,\"score\":104,\"matched_fields\":[\"nom_districte\"],\"district\":\"Gràcia\",\"source_dataset_name\":\"Open Data BCN administrative districts\",\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f\"}],\"truncated\":false},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"Gracia\",\"query_variants\":[\"Gracia\"],\"kinds\":[\"district\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":1,\"candidates\":[{\"name\":\"Gràcia\",\"kind\":\"district\",\"lat\":41.41022530542335,\"lon\":2.15068008454636,\"score\":104,\"matched_fields\":[\"nom_districte\"],\"district\":\"Gràcia\",\"bbox\":{\"min_lat\":41.3955709367329,\"min_lon\":2.1293172321932,\"max_lat\":41.4248796741138,\"max_lon\":2.17204293689952},\"area_ref\":{\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"row_id\":6,\"geometry_field\":\"geometria_wgs84\",\"geometry_type\":\"polygon\"},\"source_dataset_name\":\"Open Data BCN administrative districts\",\"source_resource_id\":\"576bc645-9481-4bc4-b8bf-f5972c20df3f\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f\"}],\"truncated\":false},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -10507,6 +11063,19 @@
                   "nom_districte"
                 ],
                 "district": "Gràcia",
+                "bbox": {
+                  "min_lat": 41.3955709367329,
+                  "min_lon": 2.1293172321932,
+                  "max_lat": 41.4248796741138,
+                  "max_lon": 2.17204293689952
+                },
+                "area_ref": {
+                  "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+                  "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+                  "row_id": 6,
+                  "geometry_field": "geometria_wgs84",
+                  "geometry_type": "polygon"
+                },
                 "source_dataset_name": "Open Data BCN administrative districts",
                 "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
                 "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
@@ -10540,12 +11109,12 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:50:34.867Z",
+      "recorded_at": "2026-04-29T09:32:15.648Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"Sagrada Familia\",\"query_variants\":[\"Sagrada Familia\",\"sagrada\",\"familia\"],\"kinds\":[\"neighborhood\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":1,\"candidates\":[{\"name\":\"la Sagrada Família\",\"kind\":\"neighborhood\",\"lat\":41.4060086542934,\"lon\":2.177164308036815,\"score\":83.8,\"matched_fields\":[\"nom_barri\"],\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_dataset_name\":\"Open Data BCN neighborhoods\",\"source_resource_id\":\"b21fa550-56ea-4f4c-9adc-b8009381896e\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e\"}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"Sagrada Familia\",\"query_variants\":[\"Sagrada Familia\",\"sagrada\",\"familia\"],\"kinds\":[\"neighborhood\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":1,\"candidates\":[{\"name\":\"la Sagrada Família\",\"kind\":\"neighborhood\",\"lat\":41.4060086542934,\"lon\":2.177164308036815,\"score\":83.8,\"matched_fields\":[\"nom_barri\"],\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"bbox\":{\"min_lat\":41.3999808719166,\"min_lon\":2.16865930584209,\"max_lat\":41.4120364366702,\"max_lon\":2.18566931023154},\"area_ref\":{\"source_resource_id\":\"b21fa550-56ea-4f4c-9adc-b8009381896e\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"row_id\":6,\"geometry_field\":\"geometria_wgs84\",\"geometry_type\":\"polygon\"},\"source_dataset_name\":\"Open Data BCN neighborhoods\",\"source_resource_id\":\"b21fa550-56ea-4f4c-9adc-b8009381896e\",\"source_package_id\":\"808daafa-d9ce-48c0-925a-fa5afdb1ed41\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e\"}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -10574,6 +11143,19 @@
                 ],
                 "neighborhood": "la Sagrada Família",
                 "district": "Eixample",
+                "bbox": {
+                  "min_lat": 41.3999808719166,
+                  "min_lon": 2.16865930584209,
+                  "max_lat": 41.4120364366702,
+                  "max_lon": 2.18566931023154
+                },
+                "area_ref": {
+                  "source_resource_id": "b21fa550-56ea-4f4c-9adc-b8009381896e",
+                  "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+                  "row_id": 6,
+                  "geometry_field": "geometria_wgs84",
+                  "geometry_type": "polygon"
+                },
                 "source_dataset_name": "Open Data BCN neighborhoods",
                 "source_resource_id": "b21fa550-56ea-4f4c-9adc-b8009381896e",
                 "source_package_id": "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
@@ -10604,7 +11186,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:50:44.865Z",
+      "recorded_at": "2026-04-29T09:32:25.656Z",
       "result": {
         "content": [
           {
@@ -10654,7 +11236,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:50:50.866Z",
+      "recorded_at": "2026-04-29T09:32:31.656Z",
       "result": {
         "content": [
           {
@@ -10720,7 +11302,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:50:58.799Z",
+      "recorded_at": "2026-04-29T09:32:39.308Z",
       "result": {
         "content": [
           {
@@ -10783,7 +11365,7 @@
       "params": {
         "uri": "socrata://datasets/j8h8-vxug/metadata"
       },
-      "recorded_at": "2026-04-29T08:50:59.079Z",
+      "recorded_at": "2026-04-29T09:32:39.601Z",
       "result": {
         "contents": [
           {
@@ -10801,7 +11383,7 @@
       "params": {
         "name": "socrata_query_workflow"
       },
-      "recorded_at": "2026-04-29T08:50:59.080Z",
+      "recorded_at": "2026-04-29T09:32:39.603Z",
       "result": {
         "description": "Socrata search, describe, and query workflow guidance.",
         "messages": [
@@ -10826,7 +11408,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.319Z",
+      "recorded_at": "2026-04-29T09:32:39.897Z",
       "result": {
         "content": [
           {
@@ -10950,7 +11532,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.393Z",
+      "recorded_at": "2026-04-29T09:32:39.986Z",
       "result": {
         "content": [
           {
@@ -11057,7 +11639,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.474Z",
+      "recorded_at": "2026-04-29T09:32:40.093Z",
       "result": {
         "content": [
           {
@@ -11147,7 +11729,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.562Z",
+      "recorded_at": "2026-04-29T09:32:40.174Z",
       "result": {
         "content": [
           {
@@ -11271,7 +11853,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.642Z",
+      "recorded_at": "2026-04-29T09:32:40.253Z",
       "result": {
         "content": [
           {
@@ -11378,7 +11960,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.726Z",
+      "recorded_at": "2026-04-29T09:32:40.367Z",
       "result": {
         "content": [
           {
@@ -11502,12 +12084,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.814Z",
+      "recorded_at": "2026-04-29T09:32:40.447Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"ajuts subvencions\",\"limit\":5,\"offset\":0,\"total\":14,\"results\":[{\"title\":\"Concessions del RAISC (Registre de subvencions i ajuts de Catalunya)\",\"description\":\"El RAISC és el registre únic que engloba la totalitat de les subvencions i ajuts atorgats per les administracions públiques de l’àmbit territorial de Catalunya (Administració de la Generalitat de Catalunya i les entitats públiques en què participi de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a la Generalitat de Catalunya; entitats que integren l’Administració local i les entitats públiques en què participen de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a l’Administració local; Administració pròpia d’Aran i entitats creades per llei del Parlament que no depenen de la Generalitat de Catalunya ni hi estan vinculades, quan exerceixen potestats administratives).\\n\\nEl RAISC subministra informació sobre els beneficiaris i les concessions, derivats de les convocatòries de subvencions o ajuts amb concurrència, així com els derivats d’altres subvencions i ajuts atorgats sense concurrència.\",\"source_id\":\"s9xt-n979\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/s9xt-n979.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/s9xt-n979\",\"updated_at\":\"2026-04-28T19:05:27.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/s9xt-n979\",\"id\":\"s9xt-n979\",\"last_updated\":\"2026-04-28T19:05:27.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Convocatòries del RAISC (Registre de subvencions i ajuts de Catalunya)\",\"description\":\"El RAISC és el registre únic que engloba la totalitat de les subvencions i ajuts atorgats per les administracions públiques de l’àmbit territorial de Catalunya (Administració de la Generalitat de Catalunya i les entitats públiques en què participi de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a la Generalitat de Catalunya; entitats que integren l’Administració local i les entitats públiques en què participen de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a l’Administració local; Administració pròpia d’Aran i entitats creades per llei del Parlament que no depenen de la Generalitat de Catalunya ni hi estan vinculades, quan exerceixen potestats administratives).\\n\\nEl RAISC subministra informació sobre la normativa reguladora de la subvenció o ajut, les bases reguladores i la resolució que aprova la convocatòria i les seves modificacions, si escau, així com la informació relativa a altres subvencions i ajuts atorgats sense concurrència.\",\"source_id\":\"khxn-nv6a\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/khxn-nv6a.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/khxn-nv6a\",\"updated_at\":\"2026-04-29T04:02:47.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/khxn-nv6a\",\"id\":\"khxn-nv6a\",\"last_updated\":\"2026-04-29T04:02:47.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Convocatòries de subvencions\",\"description\":\"Relació de les convocatòries de les subvencions i els ajuts públics que estiguin previstes durant l’exercici pressupostari, amb indicació de l’objecte o la finalitat i les condicions per ser-ne beneficiari.\\n\\nDades obtingudes del “Cercador d'Informació i Documentació Oficials (CIDO). Diputació de Barcelona”.\",\"source_id\":\"3gku-b36y\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3gku-b36y.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3gku-b36y\",\"updated_at\":\"2026-04-29T04:30:33.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3gku-b36y\",\"id\":\"3gku-b36y\",\"last_updated\":\"2026-04-29T04:30:33.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Concessions de convocatòries de subvencions finançades pel Mecanisme de Recuperació i Resiliència\",\"description\":\"Totes les entitats beneficiàries de les resolucions d’atorgament definitives de convocatòries de subvencions de l’Administració de la Generalitat de Catalunya i de l’Administració General de l’Estat en relació als fons europeus provinents del Mecanisme de Recuperació i Resiliència\",\"source_id\":\"5ecc-5xv6\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/5ecc-5xv6.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/5ecc-5xv6\",\"updated_at\":\"2026-02-09T15:45:01.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/5ecc-5xv6\",\"id\":\"5ecc-5xv6\",\"last_updated\":\"2026-02-09T15:45:01.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Llistat de beneficiaris de les subvencions en espècie per a la contractació d’espectacles professionals inclosos en el catàleg d'espectacles Programa.cat\",\"description\":\"Programa.cat és un sistema d’ajuts que permet que el Departament de Cultura i les diputacions catalanes (cadascuna per als municipis de la seva demarcació) donin suport a les programacions estables d’arts escèniques i música municipals finançant una part de la contractació.  \\n\\nS’adreça a:\\n\\n•\\tMunicipis integrats o que hagin presentat la sol·licitud d’integració a l’SPEEM com a equipaments escènics i musicals bàsics (E2) o com a altres espais escènics i musicals (E1) de l’SPEEM.\\n\\n•\\tEn el cas de la demarcació de Barcelona, municipis que estiguin adherits al Protocol del Circuit de la Xarxa d’Espais Escènics Municipals de la Diputació de Barcelona.\\n\\n\\n•\\tMunicipis de menys de 5.000 habitants que no disposen d’equipaments escènics i musicals (no integrables a l’SPEEM).\",\"source_id\":\"2xiz-255m\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/2xiz-255m.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/2xiz-255m\",\"updated_at\":\"2026-03-02T07:52:04.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/2xiz-255m\",\"id\":\"2xiz-255m\",\"last_updated\":\"2026-03-02T07:52:04.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=ajuts+subvencions&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"ajuts subvencions\",\"limit\":5,\"offset\":0,\"total\":14,\"results\":[{\"title\":\"Concessions del RAISC (Registre de subvencions i ajuts de Catalunya)\",\"description\":\"El RAISC és el registre únic que engloba la totalitat de les subvencions i ajuts atorgats per les administracions públiques de l’àmbit territorial de Catalunya (Administració de la Generalitat de Catalunya i les entitats públiques en què participi de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a la Generalitat de Catalunya; entitats que integren l’Administració local i les entitats públiques en què participen de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a l’Administració local; Administració pròpia d’Aran i entitats creades per llei del Parlament que no depenen de la Generalitat de Catalunya ni hi estan vinculades, quan exerceixen potestats administratives).\\n\\nEl RAISC subministra informació sobre els beneficiaris i les concessions, derivats de les convocatòries de subvencions o ajuts amb concurrència, així com els derivats d’altres subvencions i ajuts atorgats sense concurrència.\",\"source_id\":\"s9xt-n979\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/s9xt-n979.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/s9xt-n979\",\"updated_at\":\"2026-04-28T19:05:27.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/s9xt-n979\",\"id\":\"s9xt-n979\",\"last_updated\":\"2026-04-28T19:05:27.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Convocatòries del RAISC (Registre de subvencions i ajuts de Catalunya)\",\"description\":\"El RAISC és el registre únic que engloba la totalitat de les subvencions i ajuts atorgats per les administracions públiques de l’àmbit territorial de Catalunya (Administració de la Generalitat de Catalunya i les entitats públiques en què participi de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a la Generalitat de Catalunya; entitats que integren l’Administració local i les entitats públiques en què participen de manera majoritària, directament o indirectament; consorcis i fundacions adscrits a l’Administració local; Administració pròpia d’Aran i entitats creades per llei del Parlament que no depenen de la Generalitat de Catalunya ni hi estan vinculades, quan exerceixen potestats administratives).\\n\\nEl RAISC subministra informació sobre la normativa reguladora de la subvenció o ajut, les bases reguladores i la resolució que aprova la convocatòria i les seves modificacions, si escau, així com la informació relativa a altres subvencions i ajuts atorgats sense concurrència.\",\"source_id\":\"khxn-nv6a\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/khxn-nv6a.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/khxn-nv6a\",\"updated_at\":\"2026-04-29T04:02:47.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/khxn-nv6a\",\"id\":\"khxn-nv6a\",\"last_updated\":\"2026-04-29T04:02:47.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Convocatòries de subvencions\",\"description\":\"Relació de les convocatòries de les subvencions i els ajuts públics que estiguin previstes durant l’exercici pressupostari, amb indicació de l’objecte o la finalitat i les condicions per ser-ne beneficiari.\\n\\nDades obtingudes del “Cercador d'Informació i Documentació Oficials (CIDO). Diputació de Barcelona”.\",\"source_id\":\"3gku-b36y\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3gku-b36y.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3gku-b36y\",\"updated_at\":\"2026-04-29T04:30:33.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3gku-b36y\",\"id\":\"3gku-b36y\",\"last_updated\":\"2026-04-29T04:30:33.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Concessions de convocatòries de subvencions finançades pel Mecanisme de Recuperació i Resiliència\",\"description\":\"Totes les entitats beneficiàries de les resolucions d’atorgament definitives de convocatòries de subvencions de l’Administració de la Generalitat de Catalunya i de l’Administració General de l’Estat en relació als fons europeus provinents del Mecanisme de Recuperació i Resiliència\",\"source_id\":\"5ecc-5xv6\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/5ecc-5xv6.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/5ecc-5xv6\",\"updated_at\":\"2026-02-09T15:45:01.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/5ecc-5xv6\",\"id\":\"5ecc-5xv6\",\"last_updated\":\"2026-02-09T15:45:01.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Estadístiques sobre convocatòries públiques en matèria d'R+D+I\",\"description\":\"Indicadors sobre les convocatòries públiques de beques i ajuts a la recerca finançades per la Generalitat de Catalunya i destinades a recursos humans des de l'any 2004.\\nLa informació està classificada per tipus d'entitat beneficiària i subdividida en tres categories, segons l'objectiu de la convocatòria: formació, incorporació i mobilitat. Les convocatòries de formació inclouen els ajuts pre-doctorals i post-doctorals.\\nLes convocatòries d'incorporació fan referència als ajuts i beques destinats a incorporar al sistema català d'R+D personal investigador d'arreu del món.\\nFinalment, les convocatòries de mobilitat apleguen aquelles actuacions destinades a promoure la formació i intercanvi de personal investigador a grups universitaris i de recerca de fora de Catalunya.\\nPer a cada categoria, es mostra el nombre de dones i homes receptors dels ajuts, així com l'import total (en milers d'euros) que s'hi ha destinat. Les convocatòries que s'han tingut en consideració són les següents:\\na) Formació: DI, ARMIF, FI, FIE, FI-IQUC, FI-ICIP, INEFC, PDJ, PRJ, TDCAT, PERIS (Formació) i FI-SDUR \\nb) Incorporació: BP, PERIS (Incorporació de científics i tecnòlegs), PIV, C-RED, ICREA Sènior i ICREA Acadèmia.\\nc) Mobilitat: IEA, BBC, BBD, BBI, BCC, BE, BFUL, PBR, CTP-AIRE, DEBEQ, ERTC-QUEBEC, NANOTEC, DELEGACIONS, TECNIOSPRING, PERIS (Intensificació de professionals d'infermeria), MOB-MIF i beques per a la recerca d'arts visuals, dels nous sectors creatius, de les arts escèniques, de la música i del pensament\",\"source_id\":\"rsgi-8ymj\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/rsgi-8ymj.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/rsgi-8ymj\",\"updated_at\":\"2025-10-10T08:54:06.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/rsgi-8ymj\",\"id\":\"rsgi-8ymj\",\"last_updated\":\"2025-10-10T08:54:06.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=ajuts+subvencions&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -11586,18 +12168,18 @@
                 }
               },
               {
-                "title": "Llistat de beneficiaris de les subvencions en espècie per a la contractació d’espectacles professionals inclosos en el catàleg d'espectacles Programa.cat",
-                "description": "Programa.cat és un sistema d’ajuts que permet que el Departament de Cultura i les diputacions catalanes (cadascuna per als municipis de la seva demarcació) donin suport a les programacions estables d’arts escèniques i música municipals finançant una part de la contractació.  \n\nS’adreça a:\n\n•\tMunicipis integrats o que hagin presentat la sol·licitud d’integració a l’SPEEM com a equipaments escènics i musicals bàsics (E2) o com a altres espais escènics i musicals (E1) de l’SPEEM.\n\n•\tEn el cas de la demarcació de Barcelona, municipis que estiguin adherits al Protocol del Circuit de la Xarxa d’Espais Escènics Municipals de la Diputació de Barcelona.\n\n\n•\tMunicipis de menys de 5.000 habitants que no disposen d’equipaments escènics i musicals (no integrables a l’SPEEM).",
-                "source_id": "2xiz-255m",
+                "title": "Estadístiques sobre convocatòries públiques en matèria d'R+D+I",
+                "description": "Indicadors sobre les convocatòries públiques de beques i ajuts a la recerca finançades per la Generalitat de Catalunya i destinades a recursos humans des de l'any 2004.\nLa informació està classificada per tipus d'entitat beneficiària i subdividida en tres categories, segons l'objectiu de la convocatòria: formació, incorporació i mobilitat. Les convocatòries de formació inclouen els ajuts pre-doctorals i post-doctorals.\nLes convocatòries d'incorporació fan referència als ajuts i beques destinats a incorporar al sistema català d'R+D personal investigador d'arreu del món.\nFinalment, les convocatòries de mobilitat apleguen aquelles actuacions destinades a promoure la formació i intercanvi de personal investigador a grups universitaris i de recerca de fora de Catalunya.\nPer a cada categoria, es mostra el nombre de dones i homes receptors dels ajuts, així com l'import total (en milers d'euros) que s'hi ha destinat. Les convocatòries que s'han tingut en consideració són les següents:\na) Formació: DI, ARMIF, FI, FIE, FI-IQUC, FI-ICIP, INEFC, PDJ, PRJ, TDCAT, PERIS (Formació) i FI-SDUR \nb) Incorporació: BP, PERIS (Incorporació de científics i tecnòlegs), PIV, C-RED, ICREA Sènior i ICREA Acadèmia.\nc) Mobilitat: IEA, BBC, BBD, BBI, BCC, BE, BFUL, PBR, CTP-AIRE, DEBEQ, ERTC-QUEBEC, NANOTEC, DELEGACIONS, TECNIOSPRING, PERIS (Intensificació de professionals d'infermeria), MOB-MIF i beques per a la recerca d'arts visuals, dels nous sectors creatius, de les arts escèniques, de la música i del pensament",
+                "source_id": "rsgi-8ymj",
                 "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/2xiz-255m.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/2xiz-255m",
-                "updated_at": "2026-03-02T07:52:04.000Z",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/rsgi-8ymj.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/rsgi-8ymj",
+                "updated_at": "2025-10-10T08:54:06.000Z",
                 "provenance": {
                   "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/2xiz-255m",
-                  "id": "2xiz-255m",
-                  "last_updated": "2026-03-02T07:52:04.000Z",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/rsgi-8ymj",
+                  "id": "rsgi-8ymj",
+                  "last_updated": "2025-10-10T08:54:06.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -11626,7 +12208,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.895Z",
+      "recorded_at": "2026-04-29T09:32:40.552Z",
       "result": {
         "content": [
           {
@@ -11750,12 +12332,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:50:59.968Z",
+      "recorded_at": "2026-04-29T09:32:40.629Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"meteorologia\",\"limit\":5,\"offset\":0,\"total\":6,\"results\":[{\"title\":\"Metadades variables meteorològiques\",\"description\":\"Taula amb les metadades associades a cadascuna de les variables de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), integrada a la Xarxa d’Equipaments Meteorològics de la Generalitat de Catalunya (Xemec), del Servei Meteorològic de Catalunya. Cada variable s’identifica amb un codi.\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"4fb2-n3yi\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/4fb2-n3yi.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\",\"updated_at\":\"2026-04-28T21:08:02.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\",\"id\":\"4fb2-n3yi\",\"last_updated\":\"2026-04-28T21:08:02.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades meteorològiques de la XEMA\",\"description\":\"Dades meteorològiques registrades a totes les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA) del Servei Meteorològic de Catalunya (METEOCAT). Aquest data base conté variables mesurades amb una freqüència inferior a la diària, generalment semi-horària.\\n\\nÉs possible trobar informació sobre les metadades d'estacions i variables a:\\n- Variables: https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\\n- Estacions: https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"nzvn-apee\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/nzvn-apee.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/nzvn-apee\",\"updated_at\":\"2026-04-29T08:46:15.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/nzvn-apee\",\"id\":\"nzvn-apee\",\"last_updated\":\"2026-04-29T08:46:15.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Metadades estacions meteorològiques automàtiques\",\"description\":\"Taula amb les metadades associades a cadascuna de les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), integrada a la Xarxa d’Equipaments Meteorològics de la Generalitat de Catalunya (Xemec), del Servei Meteorològic de Catalunya.  Cada estació s’identifica amb un codi.\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"yqwd-vj5e\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/yqwd-vj5e.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\",\"updated_at\":\"2026-04-28T20:44:07.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\",\"id\":\"yqwd-vj5e\",\"last_updated\":\"2026-04-28T20:44:07.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades de trucades operatives gestionades pel CAT112\",\"description\":\"Dades de trucades operatives gestionades pel CAT112 (entrada telèfon d’emergències 112 Catalunya), amb el detall d’àmbit geogràfic (província, comarca i municipi) i tipologia del incident.\\nEs consideren trucades operatives les trucades que són una emergència real i generen una activació dels cossos d’emergència.\\nEs detallen les trucades operatives d’incidents on l’àmbit de gestió és el territori de Catalunya.\",\"source_id\":\"mfqb-sbx4\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/mfqb-sbx4.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/mfqb-sbx4\",\"updated_at\":\"2026-04-10T08:02:20.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/mfqb-sbx4\",\"id\":\"mfqb-sbx4\",\"last_updated\":\"2026-04-10T08:02:20.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades meteorològiques diàries de la XEMA\",\"description\":\"Dades meteorològiques diàries de totes les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), del Servei Meteorològic de Catalunya, de l’inici de les mesures a l’actualitat.\",\"source_id\":\"7bvh-jvq2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/7bvh-jvq2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/7bvh-jvq2\",\"updated_at\":\"2026-04-29T05:16:13.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/7bvh-jvq2\",\"id\":\"7bvh-jvq2\",\"last_updated\":\"2026-04-29T05:16:13.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=meteorologia&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"meteorologia\",\"limit\":5,\"offset\":0,\"total\":6,\"results\":[{\"title\":\"Metadades variables meteorològiques\",\"description\":\"Taula amb les metadades associades a cadascuna de les variables de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), integrada a la Xarxa d’Equipaments Meteorològics de la Generalitat de Catalunya (Xemec), del Servei Meteorològic de Catalunya. Cada variable s’identifica amb un codi.\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"4fb2-n3yi\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/4fb2-n3yi.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\",\"updated_at\":\"2026-04-28T21:08:02.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\",\"id\":\"4fb2-n3yi\",\"last_updated\":\"2026-04-28T21:08:02.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades meteorològiques de la XEMA\",\"description\":\"Dades meteorològiques registrades a totes les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA) del Servei Meteorològic de Catalunya (METEOCAT). Aquest data base conté variables mesurades amb una freqüència inferior a la diària, generalment semi-horària.\\n\\nÉs possible trobar informació sobre les metadades d'estacions i variables a:\\n- Variables: https://analisi.transparenciacatalunya.cat/d/4fb2-n3yi\\n- Estacions: https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"nzvn-apee\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/nzvn-apee.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/nzvn-apee\",\"updated_at\":\"2026-04-29T09:16:17.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/nzvn-apee\",\"id\":\"nzvn-apee\",\"last_updated\":\"2026-04-29T09:16:17.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Metadades estacions meteorològiques automàtiques\",\"description\":\"Taula amb les metadades associades a cadascuna de les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), integrada a la Xarxa d’Equipaments Meteorològics de la Generalitat de Catalunya (Xemec), del Servei Meteorològic de Catalunya.  Cada estació s’identifica amb un codi.\\n\\nTipus de Llicència: Propietat intel·lectual i industrial de METEOCAT - http://www.meteo.cat/wpweb/avis-legal/\",\"source_id\":\"yqwd-vj5e\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/yqwd-vj5e.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\",\"updated_at\":\"2026-04-28T20:44:07.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/yqwd-vj5e\",\"id\":\"yqwd-vj5e\",\"last_updated\":\"2026-04-28T20:44:07.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades de trucades operatives gestionades pel CAT112\",\"description\":\"Dades de trucades operatives gestionades pel CAT112 (entrada telèfon d’emergències 112 Catalunya), amb el detall d’àmbit geogràfic (província, comarca i municipi) i tipologia del incident.\\nEs consideren trucades operatives les trucades que són una emergència real i generen una activació dels cossos d’emergència.\\nEs detallen les trucades operatives d’incidents on l’àmbit de gestió és el territori de Catalunya.\",\"source_id\":\"mfqb-sbx4\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/mfqb-sbx4.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/mfqb-sbx4\",\"updated_at\":\"2026-04-10T08:02:20.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/mfqb-sbx4\",\"id\":\"mfqb-sbx4\",\"last_updated\":\"2026-04-10T08:02:20.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades meteorològiques diàries de la XEMA\",\"description\":\"Dades meteorològiques diàries de totes les estacions de la Xarxa d’Estacions Meteorològiques Automàtiques (XEMA), del Servei Meteorològic de Catalunya, de l’inici de les mesures a l’actualitat.\",\"source_id\":\"7bvh-jvq2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/7bvh-jvq2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/7bvh-jvq2\",\"updated_at\":\"2026-04-29T05:16:13.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/7bvh-jvq2\",\"id\":\"7bvh-jvq2\",\"last_updated\":\"2026-04-29T05:16:13.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=meteorologia&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -11789,12 +12371,12 @@
                 "source_domain": "analisi.transparenciacatalunya.cat",
                 "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/nzvn-apee.json",
                 "web_url": "https://analisi.transparenciacatalunya.cat/d/nzvn-apee",
-                "updated_at": "2026-04-29T08:46:15.000Z",
+                "updated_at": "2026-04-29T09:16:17.000Z",
                 "provenance": {
                   "source": "socrata",
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/nzvn-apee",
                   "id": "nzvn-apee",
-                  "last_updated": "2026-04-29T08:46:15.000Z",
+                  "last_updated": "2026-04-29T09:16:17.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -11874,7 +12456,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.126Z",
+      "recorded_at": "2026-04-29T09:32:40.706Z",
       "result": {
         "content": [
           {
@@ -11998,12 +12580,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.205Z",
+      "recorded_at": "2026-04-29T09:32:40.794Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"energia\",\"limit\":5,\"offset\":0,\"total\":25,\"results\":[{\"title\":\"Certificats d’eficiència energètica d’edificis\",\"description\":\"L'edifici ha jugat i jugarà un paper cada vegada més important en el nou model energètic basat en el canvi del ciutadà passant d'element passiu consumidor a agent actiu productor i consumidor d'energia. Seria l'edifici on s'integrarà la producció d'energia distribuïda amb energies renovables, on es podrà fer efectiu l'autoconsum i on elements com el vehicle elèctric, amb la seva capacitat de càrrega, aportaran la flexibilitat per a intercanviar energia en funció de cada moment.\\n\\nPerò també l'edificació és el sector amb més potencial de millora energètica. El fet de que a Catalunya el 60% del nostre parc d'habitatges sigui anterior al 1980 i, per tant, anterior a l'inici del marc normatiu obligatori de l'aïllament tèrmic o que únicament un 5% dels nostres edificis i habitatges certificats energèticament pertanyin a les tres millors categories, ho demostra.\\n\\nÉs en aquest sentit que la Generalitat de Catalunya desenvolupa l'Estratègia Catalana de Renovació Energètica d'Edificis, per a potenciar la millora energètica del parc d'edificis de català.\\nTambé a la Unió Europea, l'eficiència energètica als edificis és una prioritat dins les polítiques energètiques de la UE, que ha impulsat un paquet de mesures legislatives per aconseguir els objectius sobre energia i canvi climàtic assumits per al 2020, 2030 i 2050. Així, són les Directives Europees d'Eficiència Energètica (2012/27/EU) i d'Eficiència Energètica en Edificis (2010/31/EU) les que estableixen que tots els edificis (existents o d'obra nova) objecte de transaccions immobiliàries han d'obtenir un certificat d'eficiència energètica, i que tots els estats membres han adoptar polítiques i plans per aconseguir que els edificis de nova construcció siguin de consum d'energia gairebé zero al final del 2020.\\n\\nSeguint aquestes Directives, a Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic. Al 2007 ja s'havia transposat la Directiva 2002/91/CE, amb el Reial Decret 47/2007, pel qual es va aprovar el procediment per a la certificació d'eficiència energètica d'edificis de nova construcció.\\n\\nPer tal de donar resposta a la disposició transitòria tercera del Reial Decret 235/2013, l’Institut Català d'Energia posa a disposició dels usuaris les dades corresponents a la informació pública dels certificats d’eficiència energètica dels edificis.\",\"source_id\":\"j6ii-t3w2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j6ii-t3w2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"updated_at\":\"2026-04-27T01:30:59.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"id\":\"j6ii-t3w2\",\"last_updated\":\"2026-04-27T01:30:59.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Demanda d’energia elèctrica horària a Catalunya per MWh\",\"description\":\"Conjunt de dades de la demanda d’energia elèctrica horària en barres de central (EBC), en MWh, de la xarxa de la principal distribuïdora elèctrica de Catalunya.\\n(Fins a setembre de 2021 la demanda d'energia elèctrica incloïa també l'energia elèctrica vehiculada cap a altres distribuïdores).\",\"source_id\":\"hx6q-ykhb\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hx6q-ykhb.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hx6q-ykhb\",\"updated_at\":\"2026-04-15T16:50:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hx6q-ykhb\",\"id\":\"hx6q-ykhb\",\"last_updated\":\"2026-04-15T16:50:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Instal·lacions de producció d’energia elèctrica. Dades individualitzades\",\"description\":\"Llistat individualitzat de les instal·lacions de producció d’energia elèctrica de Catalunya, indicant la potència instal·lada i la ubicació territorial.\",\"source_id\":\"arbg-m6sq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/arbg-m6sq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/arbg-m6sq\",\"updated_at\":\"2025-09-22T13:45:23.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/arbg-m6sq\",\"id\":\"arbg-m6sq\",\"last_updated\":\"2025-09-22T13:45:23.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Producció d’energia elèctrica. Dades agregades\",\"description\":\"Producció d’energia elèctrica agregada per municipis a Catalunya.\\nLes dades inclouen l'autoconsum elèctric de totes les tecnologies.\\nPer motius de secret estadístic no es mostren les dades d'energia si existeixen menys de tres instal·lacions o, en cas d'haver-ne tres o més, una d'elles representa més del 80% de la producció elèctrica.\",\"source_id\":\"nex3-7nnw\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/nex3-7nnw.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/nex3-7nnw\",\"updated_at\":\"2026-02-02T09:45:18.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/nex3-7nnw\",\"id\":\"nex3-7nnw\",\"last_updated\":\"2026-02-02T09:45:18.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Certificats d’eficiència energètica d’edificis: agrupacions segons la qualificació d’energia primària no renovable\",\"description\":\"Dades corresponents al nombre de certificats d’eficiència energètica dels edificis agrupats segons la qualificació d'energia primària no renovable.\\n\\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\\n\\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.\",\"source_id\":\"pdkr-gjik\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/pdkr-gjik.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/pdkr-gjik\",\"updated_at\":\"2026-04-26T15:05:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/pdkr-gjik\",\"id\":\"pdkr-gjik\",\"last_updated\":\"2026-04-26T15:05:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=energia&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"energia\",\"limit\":5,\"offset\":0,\"total\":25,\"results\":[{\"title\":\"Certificats d’eficiència energètica d’edificis\",\"description\":\"L'edifici ha jugat i jugarà un paper cada vegada més important en el nou model energètic basat en el canvi del ciutadà passant d'element passiu consumidor a agent actiu productor i consumidor d'energia. Seria l'edifici on s'integrarà la producció d'energia distribuïda amb energies renovables, on es podrà fer efectiu l'autoconsum i on elements com el vehicle elèctric, amb la seva capacitat de càrrega, aportaran la flexibilitat per a intercanviar energia en funció de cada moment.\\n\\nPerò també l'edificació és el sector amb més potencial de millora energètica. El fet de que a Catalunya el 60% del nostre parc d'habitatges sigui anterior al 1980 i, per tant, anterior a l'inici del marc normatiu obligatori de l'aïllament tèrmic o que únicament un 5% dels nostres edificis i habitatges certificats energèticament pertanyin a les tres millors categories, ho demostra.\\n\\nÉs en aquest sentit que la Generalitat de Catalunya desenvolupa l'Estratègia Catalana de Renovació Energètica d'Edificis, per a potenciar la millora energètica del parc d'edificis de català.\\nTambé a la Unió Europea, l'eficiència energètica als edificis és una prioritat dins les polítiques energètiques de la UE, que ha impulsat un paquet de mesures legislatives per aconseguir els objectius sobre energia i canvi climàtic assumits per al 2020, 2030 i 2050. Així, són les Directives Europees d'Eficiència Energètica (2012/27/EU) i d'Eficiència Energètica en Edificis (2010/31/EU) les que estableixen que tots els edificis (existents o d'obra nova) objecte de transaccions immobiliàries han d'obtenir un certificat d'eficiència energètica, i que tots els estats membres han adoptar polítiques i plans per aconseguir que els edificis de nova construcció siguin de consum d'energia gairebé zero al final del 2020.\\n\\nSeguint aquestes Directives, a Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic. Al 2007 ja s'havia transposat la Directiva 2002/91/CE, amb el Reial Decret 47/2007, pel qual es va aprovar el procediment per a la certificació d'eficiència energètica d'edificis de nova construcció.\\n\\nPer tal de donar resposta a la disposició transitòria tercera del Reial Decret 235/2013, l’Institut Català d'Energia posa a disposició dels usuaris les dades corresponents a la informació pública dels certificats d’eficiència energètica dels edificis.\",\"source_id\":\"j6ii-t3w2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j6ii-t3w2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"updated_at\":\"2026-04-27T01:30:59.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"id\":\"j6ii-t3w2\",\"last_updated\":\"2026-04-27T01:30:59.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Demanda d’energia elèctrica horària a Catalunya per MWh\",\"description\":\"Conjunt de dades de la demanda d’energia elèctrica horària en barres de central (EBC), en MWh, de la xarxa de la principal distribuïdora elèctrica de Catalunya.\\n(Fins a setembre de 2021 la demanda d'energia elèctrica incloïa també l'energia elèctrica vehiculada cap a altres distribuïdores).\",\"source_id\":\"hx6q-ykhb\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hx6q-ykhb.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hx6q-ykhb\",\"updated_at\":\"2026-04-15T16:50:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hx6q-ykhb\",\"id\":\"hx6q-ykhb\",\"last_updated\":\"2026-04-15T16:50:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Producció d’energia elèctrica. Dades agregades\",\"description\":\"Producció d’energia elèctrica agregada per municipis a Catalunya.\\nLes dades inclouen l'autoconsum elèctric de totes les tecnologies.\\nPer motius de secret estadístic no es mostren les dades d'energia si existeixen menys de tres instal·lacions o, en cas d'haver-ne tres o més, una d'elles representa més del 80% de la producció elèctrica.\",\"source_id\":\"nex3-7nnw\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/nex3-7nnw.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/nex3-7nnw\",\"updated_at\":\"2026-02-02T09:45:18.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/nex3-7nnw\",\"id\":\"nex3-7nnw\",\"last_updated\":\"2026-02-02T09:45:18.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Certificats d’eficiència energètica d’edificis: agrupacions segons la qualificació d’energia primària no renovable\",\"description\":\"Dades corresponents al nombre de certificats d’eficiència energètica dels edificis agrupats segons la qualificació d'energia primària no renovable.\\n\\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\\n\\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.\",\"source_id\":\"pdkr-gjik\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/pdkr-gjik.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/pdkr-gjik\",\"updated_at\":\"2026-04-26T15:05:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/pdkr-gjik\",\"id\":\"pdkr-gjik\",\"last_updated\":\"2026-04-26T15:05:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Certificats d’eficiència energètica d’edificis: transmitància mitjana de tancaments segons ubicació\",\"description\":\"Dades corresponents a la informació de la mitjana de la transmitància dels tancaments segons la categoria i la ubicació dels certificats d’eficiència energètica dels edificis d'acord amb el Reial Decret 390/2021.\\n\\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\\n\\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.\",\"source_id\":\"iusv-swgu\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/iusv-swgu.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/iusv-swgu\",\"updated_at\":\"2026-04-26T15:15:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/iusv-swgu\",\"id\":\"iusv-swgu\",\"last_updated\":\"2026-04-26T15:15:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=energia&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -12048,23 +12630,6 @@
                 }
               },
               {
-                "title": "Instal·lacions de producció d’energia elèctrica. Dades individualitzades",
-                "description": "Llistat individualitzat de les instal·lacions de producció d’energia elèctrica de Catalunya, indicant la potència instal·lada i la ubicació territorial.",
-                "source_id": "arbg-m6sq",
-                "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/arbg-m6sq.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/arbg-m6sq",
-                "updated_at": "2025-09-22T13:45:23.000Z",
-                "provenance": {
-                  "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/arbg-m6sq",
-                  "id": "arbg-m6sq",
-                  "last_updated": "2025-09-22T13:45:23.000Z",
-                  "license_or_terms": "See Terms of Use",
-                  "language": "ca"
-                }
-              },
-              {
                 "title": "Producció d’energia elèctrica. Dades agregades",
                 "description": "Producció d’energia elèctrica agregada per municipis a Catalunya.\nLes dades inclouen l'autoconsum elèctric de totes les tecnologies.\nPer motius de secret estadístic no es mostren les dades d'energia si existeixen menys de tres instal·lacions o, en cas d'haver-ne tres o més, una d'elles representa més del 80% de la producció elèctrica.",
                 "source_id": "nex3-7nnw",
@@ -12097,6 +12662,23 @@
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
+              },
+              {
+                "title": "Certificats d’eficiència energètica d’edificis: transmitància mitjana de tancaments segons ubicació",
+                "description": "Dades corresponents a la informació de la mitjana de la transmitància dels tancaments segons la categoria i la ubicació dels certificats d’eficiència energètica dels edificis d'acord amb el Reial Decret 390/2021.\n\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\n\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.",
+                "source_id": "iusv-swgu",
+                "source_domain": "analisi.transparenciacatalunya.cat",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/iusv-swgu.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/iusv-swgu",
+                "updated_at": "2026-04-26T15:15:08.000Z",
+                "provenance": {
+                  "source": "socrata",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/iusv-swgu",
+                  "id": "iusv-swgu",
+                  "last_updated": "2026-04-26T15:15:08.000Z",
+                  "license_or_terms": "See Terms of Use",
+                  "language": "ca"
+                }
               }
             ]
           },
@@ -12122,12 +12704,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.291Z",
+      "recorded_at": "2026-04-29T09:32:40.882Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"residus\",\"limit\":5,\"offset\":0,\"total\":7,\"results\":[{\"title\":\"Estadístiques de residus municipals\",\"description\":\"El dataset recull les estadístiques de residus municipals de Catalunya. Concretament, incorpora la quantitat de recollida selectiva per les diferents fraccions, els totals de recollida selectiva en termes absoluts i per càpita, i la quantitat de la fracció resta per destí, més els totals de la fracció resta també en termes absoluts i per càpita.\",\"source_id\":\"69zu-w48s\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/69zu-w48s.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/69zu-w48s\",\"updated_at\":\"2026-03-12T11:13:09.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/69zu-w48s\",\"id\":\"69zu-w48s\",\"last_updated\":\"2026-03-12T11:13:09.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Residus del Catàleg de Residus de Catalunya\",\"description\":\"Llistat de residus recollits en el Catàleg de Residus de Catalunya.\",\"source_id\":\"g4av-babz\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/g4av-babz.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/g4av-babz\",\"updated_at\":\"2025-09-22T09:55:56.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/g4av-babz\",\"id\":\"g4av-babz\",\"last_updated\":\"2025-09-22T09:55:56.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Llista de residus i la seva recollida selectiva\",\"description\":\"Per a cada residu s'indica on cal dipositar-lo per tal de fer la seva recollida selectiva, quin és el seu procediment de gestió un cop recollit i en què es transforma.\\r\\nEl fitxer, en XLS, conté els camps següents: identificador, nom del residu, on va, processos, en què es transforma i consells de prevenció.\",\"source_id\":\"2w5u-e2nn\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/2w5u-e2nn.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn\",\"updated_at\":\"2025-09-22T09:56:20.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn\",\"id\":\"2w5u-e2nn\",\"last_updated\":\"2025-09-22T09:56:20.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Vies de gestió de residus\",\"description\":\"Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.\",\"source_id\":\"k6it-vuah\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/k6it-vuah.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/k6it-vuah\",\"updated_at\":\"2025-09-22T09:49:05.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/k6it-vuah\",\"id\":\"k6it-vuah\",\"last_updated\":\"2025-09-22T09:49:05.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Relació dels residus amb les vies\",\"description\":\"Relació dels residus amb les seves vies i subvies de gestió permeses, segons el definit en el Catàleg de Residus de Catalunya.\",\"source_id\":\"brs8-gkwr\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/brs8-gkwr.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/brs8-gkwr\",\"updated_at\":\"2025-09-22T09:56:01.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/brs8-gkwr\",\"id\":\"brs8-gkwr\",\"last_updated\":\"2025-09-22T09:56:01.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=residus&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"residus\",\"limit\":5,\"offset\":0,\"total\":7,\"results\":[{\"title\":\"Estadístiques de residus municipals\",\"description\":\"El dataset recull les estadístiques de residus municipals de Catalunya. Concretament, incorpora la quantitat de recollida selectiva per les diferents fraccions, els totals de recollida selectiva en termes absoluts i per càpita, i la quantitat de la fracció resta per destí, més els totals de la fracció resta també en termes absoluts i per càpita.\",\"source_id\":\"69zu-w48s\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/69zu-w48s.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/69zu-w48s\",\"updated_at\":\"2026-03-12T11:13:09.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/69zu-w48s\",\"id\":\"69zu-w48s\",\"last_updated\":\"2026-03-12T11:13:09.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Residus del Catàleg de Residus de Catalunya\",\"description\":\"Llistat de residus recollits en el Catàleg de Residus de Catalunya.\",\"source_id\":\"g4av-babz\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/g4av-babz.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/g4av-babz\",\"updated_at\":\"2025-09-22T09:55:56.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/g4av-babz\",\"id\":\"g4av-babz\",\"last_updated\":\"2025-09-22T09:55:56.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Vies de gestió de residus\",\"description\":\"Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.\",\"source_id\":\"k6it-vuah\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/k6it-vuah.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/k6it-vuah\",\"updated_at\":\"2025-09-22T09:49:05.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/k6it-vuah\",\"id\":\"k6it-vuah\",\"last_updated\":\"2025-09-22T09:49:05.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Llista de residus i la seva recollida selectiva\",\"description\":\"Per a cada residu s'indica on cal dipositar-lo per tal de fer la seva recollida selectiva, quin és el seu procediment de gestió un cop recollit i en què es transforma.\\r\\nEl fitxer, en XLS, conté els camps següents: identificador, nom del residu, on va, processos, en què es transforma i consells de prevenció.\",\"source_id\":\"2w5u-e2nn\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/2w5u-e2nn.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn\",\"updated_at\":\"2025-09-22T09:56:20.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn\",\"id\":\"2w5u-e2nn\",\"last_updated\":\"2025-09-22T09:56:20.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Relació dels residus amb les vies\",\"description\":\"Relació dels residus amb les seves vies i subvies de gestió permeses, segons el definit en el Catàleg de Residus de Catalunya.\",\"source_id\":\"brs8-gkwr\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/brs8-gkwr.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/brs8-gkwr\",\"updated_at\":\"2025-09-22T09:56:01.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/brs8-gkwr\",\"id\":\"brs8-gkwr\",\"last_updated\":\"2025-09-22T09:56:01.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=residus&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -12172,23 +12754,6 @@
                 }
               },
               {
-                "title": "Llista de residus i la seva recollida selectiva",
-                "description": "Per a cada residu s'indica on cal dipositar-lo per tal de fer la seva recollida selectiva, quin és el seu procediment de gestió un cop recollit i en què es transforma.\r\nEl fitxer, en XLS, conté els camps següents: identificador, nom del residu, on va, processos, en què es transforma i consells de prevenció.",
-                "source_id": "2w5u-e2nn",
-                "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/2w5u-e2nn.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn",
-                "updated_at": "2025-09-22T09:56:20.000Z",
-                "provenance": {
-                  "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn",
-                  "id": "2w5u-e2nn",
-                  "last_updated": "2025-09-22T09:56:20.000Z",
-                  "license_or_terms": "See Terms of Use",
-                  "language": "ca"
-                }
-              },
-              {
                 "title": "Vies de gestió de residus",
                 "description": "Llistat de les diferents vies i subvies de gestió dels residus, recollides en el Catàleg de Residus de Catalunya.",
                 "source_id": "k6it-vuah",
@@ -12201,6 +12766,23 @@
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/k6it-vuah",
                   "id": "k6it-vuah",
                   "last_updated": "2025-09-22T09:49:05.000Z",
+                  "license_or_terms": "See Terms of Use",
+                  "language": "ca"
+                }
+              },
+              {
+                "title": "Llista de residus i la seva recollida selectiva",
+                "description": "Per a cada residu s'indica on cal dipositar-lo per tal de fer la seva recollida selectiva, quin és el seu procediment de gestió un cop recollit i en què es transforma.\r\nEl fitxer, en XLS, conté els camps següents: identificador, nom del residu, on va, processos, en què es transforma i consells de prevenció.",
+                "source_id": "2w5u-e2nn",
+                "source_domain": "analisi.transparenciacatalunya.cat",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/2w5u-e2nn.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn",
+                "updated_at": "2025-09-22T09:56:20.000Z",
+                "provenance": {
+                  "source": "socrata",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/2w5u-e2nn",
+                  "id": "2w5u-e2nn",
+                  "last_updated": "2025-09-22T09:56:20.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -12246,12 +12828,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.364Z",
+      "recorded_at": "2026-04-29T09:32:40.967Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"aigua\",\"limit\":5,\"offset\":0,\"total\":17,\"results\":[{\"title\":\"Aigua regenerada del Prat de Llobregat\",\"description\":\"Cabal de sortida de l’estació de regeneració d’aigua del Prat de Llobregat. S’indiquen dues sortides, una d'elles corresponent a la sortida d'aigua regenerada aportada al riu i l'altre al bombament de Can Solé.\",\"source_id\":\"3prd-nrah\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3prd-nrah.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3prd-nrah\",\"updated_at\":\"2026-04-29T07:04:07.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3prd-nrah\",\"id\":\"3prd-nrah\",\"last_updated\":\"2026-04-29T07:04:07.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Indicadors del departament de Territori i Sostenibilitat relacionats amb els efectes de la COVID-19\",\"description\":\"Informació sobre la variació a causa de la Covid-19 d’una sèrie d’indicadors de mobilitat, transport públic, logística, consum d’aigua i qualitat de l’aire vinculats al Departament de Territori i Sostenibilitat.\\nUs informem que s’ha actualitzat el dataset , ja que a partir del 15 de juny les dades passen a ser setmanals, amb la particularitat que alguns indicadors tenen una única dada setmanal i d’altres dues (una pels dies laborables i una altra pels caps de setmana). Aquesta actualització comporta també la introducció de nous indicadors que ja estaven inclosos al visor adjunt.\",\"source_id\":\"f4sy-7avq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/f4sy-7avq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/f4sy-7avq\",\"updated_at\":\"2025-06-03T14:30:32.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/f4sy-7avq\",\"id\":\"f4sy-7avq\",\"last_updated\":\"2025-06-03T14:30:32.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Estat de sequera per unitats d’explotació i municipis a les Conques Internes de Catalunya\",\"description\":\"Estat de sequera per unitats d’explotació i municipis a les Conques Internes de Catalunya indicant la data en què s’ha fet tant un canvi d’estat hidrològic com pluviomètric\",\"source_id\":\"i5n8-43cw\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/i5n8-43cw.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/i5n8-43cw\",\"updated_at\":\"2025-09-22T09:54:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/i5n8-43cw\",\"id\":\"i5n8-43cw\",\"last_updated\":\"2025-09-22T09:54:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Refugis climàtics dels municipis de Catalunya\",\"description\":\"Llista de refugis climàtics dels municipis catalans. S'entén per refugi climàtic un espai públic i obert a la ciutadania que proporciona confort tèrmic davant episodis meteorològics extrems com les onades de calor, però no són instal·lacions assistencials, i fora d'aquests episodis no tenen aquesta funció de refugi climàtic.\",\"source_id\":\"9gu7-iwci\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/9gu7-iwci.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/9gu7-iwci\",\"updated_at\":\"2025-09-22T09:57:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/9gu7-iwci\",\"id\":\"9gu7-iwci\",\"last_updated\":\"2025-09-22T09:57:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Resultats dels controls en aigua al tram baix de l’Ebre\",\"description\":\"Resultats de les anàlisis realitzades en mostres d’aigua, en diferents punts de control del riu Ebre aigües avall de l’embassament de Flix. Es visualitzen els resultats de tots els punts de control existents circumscrits en aquest àmbit territorial.\\n\\nEl nombre de punts de control, la freqüència de mostreig i el perfil analític de les mostres ha anat canviant lleugerament al llarg del temps en funció de les necessitats.\\n\\nA grans trets, els controls es van intensificar arrel de la detecció de valors anòmals de mercuri a l’Ebre l’any 2001, i posteriorment durant tot el procés de descontaminació de l’embassament de Flix fins a 2024. S’analitzaven compostos organoclorats, mercuri i altres metalls. A partir de 2025, donant per acabada la neteja, es manté un control de base.\\n\\nA banda, s’inclouen els resultats de la resta de punts de mostreig a la zona que donen resposta a les diferents xarxes de control de vigilància, operatiu i de zones protegides des de 2007, amb perfils analítics diferents.\",\"source_id\":\"3ttr-jgbu\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3ttr-jgbu.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu\",\"updated_at\":\"2026-04-28T11:56:03.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu\",\"id\":\"3ttr-jgbu\",\"last_updated\":\"2026-04-28T11:56:03.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=aigua&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"aigua\",\"limit\":5,\"offset\":0,\"total\":17,\"results\":[{\"title\":\"Aigua regenerada del Prat de Llobregat\",\"description\":\"Cabal de sortida de l’estació de regeneració d’aigua del Prat de Llobregat. S’indiquen dues sortides, una d'elles corresponent a la sortida d'aigua regenerada aportada al riu i l'altre al bombament de Can Solé.\",\"source_id\":\"3prd-nrah\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3prd-nrah.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3prd-nrah\",\"updated_at\":\"2026-04-29T07:04:07.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3prd-nrah\",\"id\":\"3prd-nrah\",\"last_updated\":\"2026-04-29T07:04:07.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Indicadors del departament de Territori i Sostenibilitat relacionats amb els efectes de la COVID-19\",\"description\":\"Informació sobre la variació a causa de la Covid-19 d’una sèrie d’indicadors de mobilitat, transport públic, logística, consum d’aigua i qualitat de l’aire vinculats al Departament de Territori i Sostenibilitat.\\nUs informem que s’ha actualitzat el dataset , ja que a partir del 15 de juny les dades passen a ser setmanals, amb la particularitat que alguns indicadors tenen una única dada setmanal i d’altres dues (una pels dies laborables i una altra pels caps de setmana). Aquesta actualització comporta també la introducció de nous indicadors que ja estaven inclosos al visor adjunt.\",\"source_id\":\"f4sy-7avq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/f4sy-7avq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/f4sy-7avq\",\"updated_at\":\"2025-06-03T14:30:32.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/f4sy-7avq\",\"id\":\"f4sy-7avq\",\"last_updated\":\"2025-06-03T14:30:32.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Estat de sequera per unitats d’explotació i municipis a les Conques Internes de Catalunya\",\"description\":\"Estat de sequera per unitats d’explotació i municipis a les Conques Internes de Catalunya indicant la data en què s’ha fet tant un canvi d’estat hidrològic com pluviomètric\",\"source_id\":\"i5n8-43cw\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/i5n8-43cw.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/i5n8-43cw\",\"updated_at\":\"2025-09-22T09:54:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/i5n8-43cw\",\"id\":\"i5n8-43cw\",\"last_updated\":\"2025-09-22T09:54:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Refugis climàtics dels municipis de Catalunya\",\"description\":\"Llista de refugis climàtics dels municipis catalans. S'entén per refugi climàtic un espai públic i obert a la ciutadania que proporciona confort tèrmic davant episodis meteorològics extrems com les onades de calor, però no són instal·lacions assistencials, i fora d'aquests episodis no tenen aquesta funció de refugi climàtic.\",\"source_id\":\"9gu7-iwci\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/9gu7-iwci.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/9gu7-iwci\",\"updated_at\":\"2025-09-22T09:57:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/9gu7-iwci\",\"id\":\"9gu7-iwci\",\"last_updated\":\"2025-09-22T09:57:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Resultats dels controls en aigua al tram baix de l’Ebre\",\"description\":\"Resultats de les anàlisis realitzades en mostres d’aigua, en diferents punts de control del riu Ebre aigües avall de l’embassament de Flix. Es visualitzen els resultats de tots els punts de control existents circumscrits en aquest àmbit territorial.\\n\\nEl nombre de punts de control, la freqüència de mostreig i el perfil analític de les mostres ha anat canviant lleugerament al llarg del temps en funció de les necessitats.\\n\\nA grans trets, els controls es van intensificar arrel de la detecció de valors anòmals de mercuri a l’Ebre l’any 2001, i posteriorment durant tot el procés de descontaminació de l’embassament de Flix fins a 2024. S’analitzaven compostos organoclorats, mercuri i altres metalls. A partir de 2025, donant per acabada la neteja, es manté un control de base.\\n\\nA banda, s’inclouen els resultats de la resta de punts de mostreig a la zona que donen resposta a les diferents xarxes de control de vigilància, operatiu i de zones protegides des de 2007, amb perfils analítics diferents.\",\"source_id\":\"3ttr-jgbu\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/3ttr-jgbu.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu\",\"updated_at\":\"2026-04-29T09:00:12.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu\",\"id\":\"3ttr-jgbu\",\"last_updated\":\"2026-04-29T09:00:12.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=aigua&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -12336,12 +12918,12 @@
                 "source_domain": "analisi.transparenciacatalunya.cat",
                 "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/3ttr-jgbu.json",
                 "web_url": "https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu",
-                "updated_at": "2026-04-28T11:56:03.000Z",
+                "updated_at": "2026-04-29T09:00:12.000Z",
                 "provenance": {
                   "source": "socrata",
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/3ttr-jgbu",
                   "id": "3ttr-jgbu",
-                  "last_updated": "2026-04-28T11:56:03.000Z",
+                  "last_updated": "2026-04-29T09:00:12.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -12370,7 +12952,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.441Z",
+      "recorded_at": "2026-04-29T09:32:41.061Z",
       "result": {
         "content": [
           {
@@ -12494,7 +13076,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.514Z",
+      "recorded_at": "2026-04-29T09:32:41.223Z",
       "result": {
         "content": [
           {
@@ -12618,7 +13200,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.590Z",
+      "recorded_at": "2026-04-29T09:32:41.317Z",
       "result": {
         "content": [
           {
@@ -12742,7 +13324,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.669Z",
+      "recorded_at": "2026-04-29T09:32:41.399Z",
       "result": {
         "content": [
           {
@@ -12866,7 +13448,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.742Z",
+      "recorded_at": "2026-04-29T09:32:41.486Z",
       "result": {
         "content": [
           {
@@ -12990,7 +13572,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.818Z",
+      "recorded_at": "2026-04-29T09:32:41.583Z",
       "result": {
         "content": [
           {
@@ -13114,7 +13696,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.889Z",
+      "recorded_at": "2026-04-29T09:32:41.670Z",
       "result": {
         "content": [
           {
@@ -13221,7 +13803,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:00.962Z",
+      "recorded_at": "2026-04-29T09:32:41.778Z",
       "result": {
         "content": [
           {
@@ -13345,7 +13927,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.034Z",
+      "recorded_at": "2026-04-29T09:32:41.880Z",
       "result": {
         "content": [
           {
@@ -13469,12 +14051,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.114Z",
+      "recorded_at": "2026-04-29T09:32:41.960Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"mapa\",\"limit\":5,\"offset\":0,\"total\":33,\"results\":[{\"title\":\"Canvis en el mapa local\",\"description\":\"L’objectiu del dataset és recollir tots els canvis legislatius que han afectat a la creació i alteració de municipis i comarques, entitats municipals descentralitzades i els canvis d’adscripció comarcal des de la I legislatura. \\n\\nEn aquest dataset es presenten les dades de creació i alteració de municipis i comarques, de les entitats municipals descentralitzades, així com dels canvis d’adscripció comarcal per al període 1981 – fins a l'actualitat.\",\"source_id\":\"pc3x-yzfc\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/pc3x-yzfc.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc\",\"updated_at\":\"2025-09-25T07:44:04.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc\",\"id\":\"pc3x-yzfc\",\"last_updated\":\"2025-09-25T07:44:04.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Mapa d’explotacions agrícoles (DUN) de Catalunya\",\"description\":\"El mapa d'explotacions és una capa gràfica oberta a la ciutadania que geolocalitza les explotacions agrícoles de Catalunya a partir de les dades declarades a la declaració agrària unificada (DUN) i en mostra les seves característiques principals de forma pseudonimitzada.\\n\\nEl mapa d'explotacions conté les dades, tant la informació gràfica com alfanumèrica, a partir de l'any 2019.\\n\\nLa informació gràfica comprèn la delimitació geogràfica referenciada de cada explotació amb sistema de referència cartogràfic ETRS89.\",\"source_id\":\"iqpi-zasj\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/iqpi-zasj.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/iqpi-zasj\",\"updated_at\":\"2025-11-12T10:40:53.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/iqpi-zasj\",\"id\":\"iqpi-zasj\",\"last_updated\":\"2025-11-12T10:40:53.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Mapa del Comerç Català 2022\",\"description\":\"Dades de 2022 d'establiments i de locals comercials tancats o buits de les ciutats catalanes de més de 20mil habitants i de les capitals de comarca.\",\"source_id\":\"4w2r-uffk\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/4w2r-uffk.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/4w2r-uffk\",\"updated_at\":\"2025-09-22T09:54:42.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/4w2r-uffk\",\"id\":\"4w2r-uffk\",\"last_updated\":\"2025-09-22T09:54:42.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades del mapa urbanístic de Catalunya\",\"description\":\"Dades de superfície i percentatge de les classificacions del sòl i qualificacions del sòl urbà consolidat agrupades pels municipis de Catalunya.\",\"source_id\":\"epsm-zskb\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/epsm-zskb.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/epsm-zskb\",\"updated_at\":\"2025-09-22T09:49:13.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/epsm-zskb\",\"id\":\"epsm-zskb\",\"last_updated\":\"2025-09-22T09:49:13.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Mapa d’innovació pedagògica\",\"description\":\"El mapa de la innovació pedagògica de Catalunya és un instrument que situa en el territori i dona visibilitat a totes les iniciatives vinculades a la innovació i a la recerca educativa que es desenvolupa en els centres educatius i que han estat reconegudes pel Departament d’Educació des del 2015, d’acord amb el Marc de la Innovació Pedagògica de Catalunya.\",\"source_id\":\"yrwq-ftxx\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/yrwq-ftxx.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/yrwq-ftxx\",\"updated_at\":\"2026-04-14T11:36:11.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/yrwq-ftxx\",\"id\":\"yrwq-ftxx\",\"last_updated\":\"2026-04-14T11:36:11.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=mapa&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"mapa\",\"limit\":5,\"offset\":0,\"total\":33,\"results\":[{\"title\":\"Mapa d’explotacions agrícoles (DUN) de Catalunya\",\"description\":\"El mapa d'explotacions és una capa gràfica oberta a la ciutadania que geolocalitza les explotacions agrícoles de Catalunya a partir de les dades declarades a la declaració agrària unificada (DUN) i en mostra les seves característiques principals de forma pseudonimitzada.\\n\\nEl mapa d'explotacions conté les dades, tant la informació gràfica com alfanumèrica, a partir de l'any 2019.\\n\\nLa informació gràfica comprèn la delimitació geogràfica referenciada de cada explotació amb sistema de referència cartogràfic ETRS89.\",\"source_id\":\"iqpi-zasj\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/iqpi-zasj.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/iqpi-zasj\",\"updated_at\":\"2025-11-12T10:40:53.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/iqpi-zasj\",\"id\":\"iqpi-zasj\",\"last_updated\":\"2025-11-12T10:40:53.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Canvis en el mapa local\",\"description\":\"L’objectiu del dataset és recollir tots els canvis legislatius que han afectat a la creació i alteració de municipis i comarques, entitats municipals descentralitzades i els canvis d’adscripció comarcal des de la I legislatura. \\n\\nEn aquest dataset es presenten les dades de creació i alteració de municipis i comarques, de les entitats municipals descentralitzades, així com dels canvis d’adscripció comarcal per al període 1981 – fins a l'actualitat.\",\"source_id\":\"pc3x-yzfc\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/pc3x-yzfc.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc\",\"updated_at\":\"2025-09-25T07:44:04.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc\",\"id\":\"pc3x-yzfc\",\"last_updated\":\"2025-09-25T07:44:04.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Mapa del Comerç Català 2022\",\"description\":\"Dades de 2022 d'establiments i de locals comercials tancats o buits de les ciutats catalanes de més de 20mil habitants i de les capitals de comarca.\",\"source_id\":\"4w2r-uffk\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/4w2r-uffk.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/4w2r-uffk\",\"updated_at\":\"2025-09-22T09:54:42.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/4w2r-uffk\",\"id\":\"4w2r-uffk\",\"last_updated\":\"2025-09-22T09:54:42.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Dades del mapa urbanístic de Catalunya\",\"description\":\"Dades de superfície i percentatge de les classificacions del sòl i qualificacions del sòl urbà consolidat agrupades pels municipis de Catalunya.\",\"source_id\":\"epsm-zskb\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/epsm-zskb.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/epsm-zskb\",\"updated_at\":\"2025-09-22T09:49:13.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/epsm-zskb\",\"id\":\"epsm-zskb\",\"last_updated\":\"2025-09-22T09:49:13.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Mapa d’innovació pedagògica\",\"description\":\"El mapa de la innovació pedagògica de Catalunya és un instrument que situa en el territori i dona visibilitat a totes les iniciatives vinculades a la innovació i a la recerca educativa que es desenvolupa en els centres educatius i que han estat reconegudes pel Departament d’Educació des del 2015, d’acord amb el Marc de la Innovació Pedagògica de Catalunya.\",\"source_id\":\"yrwq-ftxx\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/yrwq-ftxx.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/yrwq-ftxx\",\"updated_at\":\"2026-04-14T11:36:11.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/yrwq-ftxx\",\"id\":\"yrwq-ftxx\",\"last_updated\":\"2026-04-14T11:36:11.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=mapa&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -13484,23 +14066,6 @@
             "offset": 0,
             "total": 33,
             "results": [
-              {
-                "title": "Canvis en el mapa local",
-                "description": "L’objectiu del dataset és recollir tots els canvis legislatius que han afectat a la creació i alteració de municipis i comarques, entitats municipals descentralitzades i els canvis d’adscripció comarcal des de la I legislatura. \n\nEn aquest dataset es presenten les dades de creació i alteració de municipis i comarques, de les entitats municipals descentralitzades, així com dels canvis d’adscripció comarcal per al període 1981 – fins a l'actualitat.",
-                "source_id": "pc3x-yzfc",
-                "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/pc3x-yzfc.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc",
-                "updated_at": "2025-09-25T07:44:04.000Z",
-                "provenance": {
-                  "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc",
-                  "id": "pc3x-yzfc",
-                  "last_updated": "2025-09-25T07:44:04.000Z",
-                  "license_or_terms": "See Terms of Use",
-                  "language": "ca"
-                }
-              },
               {
                 "title": "Mapa d’explotacions agrícoles (DUN) de Catalunya",
                 "description": "El mapa d'explotacions és una capa gràfica oberta a la ciutadania que geolocalitza les explotacions agrícoles de Catalunya a partir de les dades declarades a la declaració agrària unificada (DUN) i en mostra les seves característiques principals de forma pseudonimitzada.\n\nEl mapa d'explotacions conté les dades, tant la informació gràfica com alfanumèrica, a partir de l'any 2019.\n\nLa informació gràfica comprèn la delimitació geogràfica referenciada de cada explotació amb sistema de referència cartogràfic ETRS89.",
@@ -13514,6 +14079,23 @@
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/iqpi-zasj",
                   "id": "iqpi-zasj",
                   "last_updated": "2025-11-12T10:40:53.000Z",
+                  "license_or_terms": "See Terms of Use",
+                  "language": "ca"
+                }
+              },
+              {
+                "title": "Canvis en el mapa local",
+                "description": "L’objectiu del dataset és recollir tots els canvis legislatius que han afectat a la creació i alteració de municipis i comarques, entitats municipals descentralitzades i els canvis d’adscripció comarcal des de la I legislatura. \n\nEn aquest dataset es presenten les dades de creació i alteració de municipis i comarques, de les entitats municipals descentralitzades, així com dels canvis d’adscripció comarcal per al període 1981 – fins a l'actualitat.",
+                "source_id": "pc3x-yzfc",
+                "source_domain": "analisi.transparenciacatalunya.cat",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/pc3x-yzfc.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc",
+                "updated_at": "2025-09-25T07:44:04.000Z",
+                "provenance": {
+                  "source": "socrata",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/pc3x-yzfc",
+                  "id": "pc3x-yzfc",
+                  "last_updated": "2025-09-25T07:44:04.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -13593,12 +14175,12 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.249Z",
+      "recorded_at": "2026-04-29T09:32:42.041Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"poblacio\",\"limit\":5,\"offset\":0,\"total\":102,\"results\":[{\"title\":\"Certificats d’eficiència energètica d’edificis\",\"description\":\"L'edifici ha jugat i jugarà un paper cada vegada més important en el nou model energètic basat en el canvi del ciutadà passant d'element passiu consumidor a agent actiu productor i consumidor d'energia. Seria l'edifici on s'integrarà la producció d'energia distribuïda amb energies renovables, on es podrà fer efectiu l'autoconsum i on elements com el vehicle elèctric, amb la seva capacitat de càrrega, aportaran la flexibilitat per a intercanviar energia en funció de cada moment.\\n\\nPerò també l'edificació és el sector amb més potencial de millora energètica. El fet de que a Catalunya el 60% del nostre parc d'habitatges sigui anterior al 1980 i, per tant, anterior a l'inici del marc normatiu obligatori de l'aïllament tèrmic o que únicament un 5% dels nostres edificis i habitatges certificats energèticament pertanyin a les tres millors categories, ho demostra.\\n\\nÉs en aquest sentit que la Generalitat de Catalunya desenvolupa l'Estratègia Catalana de Renovació Energètica d'Edificis, per a potenciar la millora energètica del parc d'edificis de català.\\nTambé a la Unió Europea, l'eficiència energètica als edificis és una prioritat dins les polítiques energètiques de la UE, que ha impulsat un paquet de mesures legislatives per aconseguir els objectius sobre energia i canvi climàtic assumits per al 2020, 2030 i 2050. Així, són les Directives Europees d'Eficiència Energètica (2012/27/EU) i d'Eficiència Energètica en Edificis (2010/31/EU) les que estableixen que tots els edificis (existents o d'obra nova) objecte de transaccions immobiliàries han d'obtenir un certificat d'eficiència energètica, i que tots els estats membres han adoptar polítiques i plans per aconseguir que els edificis de nova construcció siguin de consum d'energia gairebé zero al final del 2020.\\n\\nSeguint aquestes Directives, a Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic. Al 2007 ja s'havia transposat la Directiva 2002/91/CE, amb el Reial Decret 47/2007, pel qual es va aprovar el procediment per a la certificació d'eficiència energètica d'edificis de nova construcció.\\n\\nPer tal de donar resposta a la disposició transitòria tercera del Reial Decret 235/2013, l’Institut Català d'Energia posa a disposició dels usuaris les dades corresponents a la informació pública dels certificats d’eficiència energètica dels edificis.\",\"source_id\":\"j6ii-t3w2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j6ii-t3w2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"updated_at\":\"2026-04-27T01:30:59.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"id\":\"j6ii-t3w2\",\"last_updated\":\"2026-04-27T01:30:59.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Equipaments de Catalunya\",\"description\":\"La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.\",\"source_id\":\"8gmd-gz7i\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/8gmd-gz7i.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i\",\"updated_at\":\"2026-04-29T02:12:14.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i\",\"id\":\"8gmd-gz7i\",\"last_updated\":\"2026-04-29T02:12:14.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Universitats amb estudis catalans\",\"description\":\"Llistat amb adreces i contactes on s’imparteixen estudis catalans fora del domini lingüístic.\",\"source_id\":\"qbuu-mvuj\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/qbuu-mvuj.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/qbuu-mvuj\",\"updated_at\":\"2025-04-07T10:25:38.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/qbuu-mvuj\",\"id\":\"qbuu-mvuj\",\"last_updated\":\"2025-04-07T10:25:38.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"COVID-19: Persones hospitalitzades\",\"description\":\"Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\\n\\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\\n\\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia.  El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.\",\"source_id\":\"hzw2-sfyd\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hzw2-sfyd.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hzw2-sfyd\",\"updated_at\":\"2026-04-28T09:01:32.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hzw2-sfyd\",\"id\":\"hzw2-sfyd\",\"last_updated\":\"2026-04-28T09:01:32.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Persones vacunades enfront la grip i la COVID-19\",\"description\":\"Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\\n\\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\\n\\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia. El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.\",\"source_id\":\"hxw8-ertk\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hxw8-ertk.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hxw8-ertk\",\"updated_at\":\"2026-04-27T10:09:02.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hxw8-ertk\",\"id\":\"hxw8-ertk\",\"last_updated\":\"2026-04-27T10:09:02.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=poblacio&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"poblacio\",\"limit\":5,\"offset\":0,\"total\":102,\"results\":[{\"title\":\"Certificats d’eficiència energètica d’edificis\",\"description\":\"L'edifici ha jugat i jugarà un paper cada vegada més important en el nou model energètic basat en el canvi del ciutadà passant d'element passiu consumidor a agent actiu productor i consumidor d'energia. Seria l'edifici on s'integrarà la producció d'energia distribuïda amb energies renovables, on es podrà fer efectiu l'autoconsum i on elements com el vehicle elèctric, amb la seva capacitat de càrrega, aportaran la flexibilitat per a intercanviar energia en funció de cada moment.\\n\\nPerò també l'edificació és el sector amb més potencial de millora energètica. El fet de que a Catalunya el 60% del nostre parc d'habitatges sigui anterior al 1980 i, per tant, anterior a l'inici del marc normatiu obligatori de l'aïllament tèrmic o que únicament un 5% dels nostres edificis i habitatges certificats energèticament pertanyin a les tres millors categories, ho demostra.\\n\\nÉs en aquest sentit que la Generalitat de Catalunya desenvolupa l'Estratègia Catalana de Renovació Energètica d'Edificis, per a potenciar la millora energètica del parc d'edificis de català.\\nTambé a la Unió Europea, l'eficiència energètica als edificis és una prioritat dins les polítiques energètiques de la UE, que ha impulsat un paquet de mesures legislatives per aconseguir els objectius sobre energia i canvi climàtic assumits per al 2020, 2030 i 2050. Així, són les Directives Europees d'Eficiència Energètica (2012/27/EU) i d'Eficiència Energètica en Edificis (2010/31/EU) les que estableixen que tots els edificis (existents o d'obra nova) objecte de transaccions immobiliàries han d'obtenir un certificat d'eficiència energètica, i que tots els estats membres han adoptar polítiques i plans per aconseguir que els edificis de nova construcció siguin de consum d'energia gairebé zero al final del 2020.\\n\\nSeguint aquestes Directives, a Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic. Al 2007 ja s'havia transposat la Directiva 2002/91/CE, amb el Reial Decret 47/2007, pel qual es va aprovar el procediment per a la certificació d'eficiència energètica d'edificis de nova construcció.\\n\\nPer tal de donar resposta a la disposició transitòria tercera del Reial Decret 235/2013, l’Institut Català d'Energia posa a disposició dels usuaris les dades corresponents a la informació pública dels certificats d’eficiència energètica dels edificis.\",\"source_id\":\"j6ii-t3w2\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/j6ii-t3w2.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"updated_at\":\"2026-04-27T01:30:59.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/j6ii-t3w2\",\"id\":\"j6ii-t3w2\",\"last_updated\":\"2026-04-27T01:30:59.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Equipaments de Catalunya\",\"description\":\"La base de dades d'equipaments integra, en una única font, les dades descriptives d'equipaments de Catalunya, tant de titularitat pública com privada: seus dels ajuntaments, centres educatius, sociosanitaris, culturals, instal·lacions esportives, de transport, ...\\nLa solució consolida en una estructura comuna i normalitzada les dades que es troben en diferents bases de dades i que són  gestionades pels diferents departaments i organismes de la Generalitat de Catalunya.\",\"source_id\":\"8gmd-gz7i\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/8gmd-gz7i.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i\",\"updated_at\":\"2026-04-29T02:12:14.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/8gmd-gz7i\",\"id\":\"8gmd-gz7i\",\"last_updated\":\"2026-04-29T02:12:14.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Universitats amb estudis catalans\",\"description\":\"Llistat amb adreces i contactes on s’imparteixen estudis catalans fora del domini lingüístic.\",\"source_id\":\"qbuu-mvuj\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/qbuu-mvuj.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/qbuu-mvuj\",\"updated_at\":\"2025-04-07T10:25:38.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/qbuu-mvuj\",\"id\":\"qbuu-mvuj\",\"last_updated\":\"2025-04-07T10:25:38.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Certificats d’eficiència energètica d’edificis: transmitància mitjana de tancaments segons ubicació\",\"description\":\"Dades corresponents a la informació de la mitjana de la transmitància dels tancaments segons la categoria i la ubicació dels certificats d’eficiència energètica dels edificis d'acord amb el Reial Decret 390/2021.\\n\\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\\n\\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.\",\"source_id\":\"iusv-swgu\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/iusv-swgu.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/iusv-swgu\",\"updated_at\":\"2026-04-26T15:15:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/iusv-swgu\",\"id\":\"iusv-swgu\",\"last_updated\":\"2026-04-26T15:15:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"COVID-19: Persones hospitalitzades\",\"description\":\"Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\\n\\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\\n\\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia.  El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.\",\"source_id\":\"hzw2-sfyd\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hzw2-sfyd.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hzw2-sfyd\",\"updated_at\":\"2026-04-28T09:01:32.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hzw2-sfyd\",\"id\":\"hzw2-sfyd\",\"last_updated\":\"2026-04-28T09:01:32.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=poblacio&limit=5&offset=0\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -13660,6 +14242,23 @@
                 }
               },
               {
+                "title": "Certificats d’eficiència energètica d’edificis: transmitància mitjana de tancaments segons ubicació",
+                "description": "Dades corresponents a la informació de la mitjana de la transmitància dels tancaments segons la categoria i la ubicació dels certificats d’eficiència energètica dels edificis d'acord amb el Reial Decret 390/2021.\n\nA Catalunya des de l'1 de juny de 2013 és obligatori disposar del certificat energètic per als edificis i habitatges ja existents que es lloguin o es venguin, i per als edificis o parts d'edificis que una autoritat pública ocupi més de 250 m2 i siguin freqüentats habitualment pel públic.\n\nDes del 3 de juny de 2021 també és obligatori per edificis que s’amplien o reformin i per edificis terciaris de superfície útil superior a 500m2 d’usos com administratiu, sanitat, comercial, residencial públic, docent, cultural, restauració, transport, esportiu o llocs de culte.",
+                "source_id": "iusv-swgu",
+                "source_domain": "analisi.transparenciacatalunya.cat",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/iusv-swgu.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/iusv-swgu",
+                "updated_at": "2026-04-26T15:15:08.000Z",
+                "provenance": {
+                  "source": "socrata",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/iusv-swgu",
+                  "id": "iusv-swgu",
+                  "last_updated": "2026-04-26T15:15:08.000Z",
+                  "license_or_terms": "See Terms of Use",
+                  "language": "ca"
+                }
+              },
+              {
                 "title": "COVID-19: Persones hospitalitzades",
                 "description": "Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\n\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\n\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia.  El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.",
                 "source_id": "hzw2-sfyd",
@@ -13672,23 +14271,6 @@
                   "source_url": "https://analisi.transparenciacatalunya.cat/d/hzw2-sfyd",
                   "id": "hzw2-sfyd",
                   "last_updated": "2026-04-28T09:01:32.000Z",
-                  "license_or_terms": "See Terms of Use",
-                  "language": "ca"
-                }
-              },
-              {
-                "title": "Persones vacunades enfront la grip i la COVID-19",
-                "description": "Les dades publicades en aquest conjunt provenen del nou Sistema de Vigilància d’Infeccions de Catalunya (SIVIC), del Departament de Salut, que integra les funcions de vigilància epidemiològica de la grip, de la COVID-19 i d’altres virus respiratoris, amb l'objectiu de monitorar aquests virus, recollir els canvis de tendència i millorar la caracterització microbiològica dels virus circulants.\n\nAquesta publicació s'actualitzarà setmanalment i és complementària de la presentació que de les mateixes dades es fa en el nou portal SIVIC (https://sivic.salut.gencat.cat/).\n\nCatalunya va ser pionera a implantar un sistema de vigilància de la grip a la temporada 1988-89 i, posteriorment, va evolucionar cap al Pla d’informació de les infeccions respiratòries agudes a Catalunya (PIDIRAC), que va iniciar el seu funcionament durant la temporada 1999-2000 i que ha seguit en marxa fins a dia d’avui. DadesCovid.cat (https://dadescovid.cat/) també ha estat un portal capdavanter en transparentar l'evolució de la pandèmia. El nou web de SIVIC l'acabarà substuint ja que hi integrarà la informació adequada per a aquest moment actual.",
-                "source_id": "hxw8-ertk",
-                "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/hxw8-ertk.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/hxw8-ertk",
-                "updated_at": "2026-04-27T10:09:02.000Z",
-                "provenance": {
-                  "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/hxw8-ertk",
-                  "id": "hxw8-ertk",
-                  "last_updated": "2026-04-27T10:09:02.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -13717,7 +14299,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.376Z",
+      "recorded_at": "2026-04-29T09:32:42.130Z",
       "result": {
         "content": [
           {
@@ -13755,7 +14337,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.579Z",
+      "recorded_at": "2026-04-29T09:32:42.198Z",
       "result": {
         "content": [
           {
@@ -13793,7 +14375,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:01.725Z",
+      "recorded_at": "2026-04-29T09:32:42.269Z",
       "result": {
         "content": [
           {
@@ -13832,12 +14414,12 @@
           "offset": 3
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.072Z",
+      "recorded_at": "2026-04-29T09:32:42.549Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"habitatges\",\"limit\":3,\"offset\":3,\"total\":109,\"results\":[{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica anual 1990 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya des de l’any 1990 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"txkt-yjtq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/txkt-yjtq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"updated_at\":\"2026-04-08T06:36:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"id\":\"txkt-yjtq\",\"last_updated\":\"2026-04-08T06:36:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Preu mitjà del lloguer d’habitatges per municipi\",\"description\":\"Explotació estadística del registre de les fiances de lloguer d’habitatges dipositades a l’Incasòl. Podem considerar que aquesta estadística té un caràcter censal ja que es basa en el recompte de tots els contractes de lloguer que han dipositat la fiança a l’Incasòl en el període considerat.\",\"source_id\":\"qww9-bvhh\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/qww9-bvhh.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/qww9-bvhh\",\"updated_at\":\"2026-04-20T09:10:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/qww9-bvhh\",\"id\":\"qww9-bvhh\",\"last_updated\":\"2026-04-20T09:10:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Preu mitjà del lloguer d’habitatges per àmbits supramunicipals\",\"description\":\"Explotació estadística del registre de les fiances de lloguer d’habitatges dipositades a l’Incasòl. Podem considerar que aquesta estadística té un caràcter censal ja que es basa en el recompte de tots els contractes de lloguer que han dipositat la fiança a l’Incasòl en el període considerat.\",\"source_id\":\"hepw-33ik\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/hepw-33ik.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/hepw-33ik\",\"updated_at\":\"2026-04-20T09:08:02.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/hepw-33ik\",\"id\":\"hepw-33ik\",\"last_updated\":\"2026-04-20T09:08:02.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=habitatges&limit=3&offset=3\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"habitatges\",\"limit\":3,\"offset\":3,\"total\":109,\"results\":[{\"title\":\"Habitatges iniciats i acabats. Sèrie històrica anual 1990 – actualitat\",\"description\":\"Habitatges construïts i acabats a Catalunya des de l’any 1990 fins a l’actualitat.\\nLa informació ha estat elaborada a partir dels visats i certificats finals d’obra dels Col·legis d'Aparelladors, Arquitectes Tècnics i Enginyers de l'Edificació. Informació visible per demarcacions territorials, i per àmbits territorials i per municipis.\",\"source_id\":\"txkt-yjtq\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/txkt-yjtq.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"updated_at\":\"2026-04-08T06:36:54.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/txkt-yjtq\",\"id\":\"txkt-yjtq\",\"last_updated\":\"2026-04-08T06:36:54.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Preu mitjà del lloguer d’habitatges per municipi\",\"description\":\"Explotació estadística del registre de les fiances de lloguer d’habitatges dipositades a l’Incasòl. Podem considerar que aquesta estadística té un caràcter censal ja que es basa en el recompte de tots els contractes de lloguer que han dipositat la fiança a l’Incasòl en el període considerat.\",\"source_id\":\"qww9-bvhh\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/qww9-bvhh.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/qww9-bvhh\",\"updated_at\":\"2026-04-20T09:10:08.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/qww9-bvhh\",\"id\":\"qww9-bvhh\",\"last_updated\":\"2026-04-20T09:10:08.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}},{\"title\":\"Indicadors de dades bàsiques territorials, segons el cens de població i habitatge\",\"description\":\"Conjunt de dades calculades que permeten descriure, fer un seguiment i una avaluació de les dinàmiques territorials i urbanístiques del territori català. Aquestes, permeten comparar la situació entre diferents unitats territorials (municipis, àmbits funcionals, Catalunya...).\\n\\nApunts metodològics:\\n\\n-\\tMunicipi de la Canonja: les dades de l’any 2001 tenen valors nuls, ja que aquest municipi no recupera la seva municipalitat fins l’any 2010 (Llei 8/2010, de 22 d’abril, de creació del municipi de la Canonja). \\n\\n-\\tIndicadors d’habitatges per intensitat d’ús: L’INE i l’IDESCAT publiquen les dades per municipis a partir de 1.000 habitants. És per això que hi ha municipis amb valors nuls.\\n\\n-\\tIndicador “evolució POR/LTL”: l’IDESCAT publica el valor de l’indicador a escala comarcal. És per això que els municipis d’una mateixa comarca tenen el mateix resultat.\",\"source_id\":\"375x-2wzk\",\"source_domain\":\"analisi.transparenciacatalunya.cat\",\"api_endpoint\":\"https://analisi.transparenciacatalunya.cat/resource/375x-2wzk.json\",\"web_url\":\"https://analisi.transparenciacatalunya.cat/d/375x-2wzk\",\"updated_at\":\"2025-09-22T09:55:21.000Z\",\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://analisi.transparenciacatalunya.cat/d/375x-2wzk\",\"id\":\"375x-2wzk\",\"last_updated\":\"2025-09-22T09:55:21.000Z\",\"license_or_terms\":\"See Terms of Use\",\"language\":\"ca\"}}]},\"provenance\":{\"source\":\"socrata\",\"source_url\":\"https://api.eu.socrata.com/api/catalog/v1?domains=analisi.transparenciacatalunya.cat&only=dataset&q=habitatges&limit=3&offset=3\",\"id\":\"analisi.transparenciacatalunya.cat:catalog_search\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -13882,18 +14464,18 @@
                 }
               },
               {
-                "title": "Preu mitjà del lloguer d’habitatges per àmbits supramunicipals",
-                "description": "Explotació estadística del registre de les fiances de lloguer d’habitatges dipositades a l’Incasòl. Podem considerar que aquesta estadística té un caràcter censal ja que es basa en el recompte de tots els contractes de lloguer que han dipositat la fiança a l’Incasòl en el període considerat.",
-                "source_id": "hepw-33ik",
+                "title": "Indicadors de dades bàsiques territorials, segons el cens de població i habitatge",
+                "description": "Conjunt de dades calculades que permeten descriure, fer un seguiment i una avaluació de les dinàmiques territorials i urbanístiques del territori català. Aquestes, permeten comparar la situació entre diferents unitats territorials (municipis, àmbits funcionals, Catalunya...).\n\nApunts metodològics:\n\n-\tMunicipi de la Canonja: les dades de l’any 2001 tenen valors nuls, ja que aquest municipi no recupera la seva municipalitat fins l’any 2010 (Llei 8/2010, de 22 d’abril, de creació del municipi de la Canonja). \n\n-\tIndicadors d’habitatges per intensitat d’ús: L’INE i l’IDESCAT publiquen les dades per municipis a partir de 1.000 habitants. És per això que hi ha municipis amb valors nuls.\n\n-\tIndicador “evolució POR/LTL”: l’IDESCAT publica el valor de l’indicador a escala comarcal. És per això que els municipis d’una mateixa comarca tenen el mateix resultat.",
+                "source_id": "375x-2wzk",
                 "source_domain": "analisi.transparenciacatalunya.cat",
-                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/hepw-33ik.json",
-                "web_url": "https://analisi.transparenciacatalunya.cat/d/hepw-33ik",
-                "updated_at": "2026-04-20T09:08:02.000Z",
+                "api_endpoint": "https://analisi.transparenciacatalunya.cat/resource/375x-2wzk.json",
+                "web_url": "https://analisi.transparenciacatalunya.cat/d/375x-2wzk",
+                "updated_at": "2025-09-22T09:55:21.000Z",
                 "provenance": {
                   "source": "socrata",
-                  "source_url": "https://analisi.transparenciacatalunya.cat/d/hepw-33ik",
-                  "id": "hepw-33ik",
-                  "last_updated": "2026-04-20T09:08:02.000Z",
+                  "source_url": "https://analisi.transparenciacatalunya.cat/d/375x-2wzk",
+                  "id": "375x-2wzk",
+                  "last_updated": "2025-09-22T09:55:21.000Z",
                   "license_or_terms": "See Terms of Use",
                   "language": "ca"
                 }
@@ -13922,7 +14504,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.073Z",
+      "recorded_at": "2026-04-29T09:32:42.551Z",
       "result": {
         "content": [
           {
@@ -13944,7 +14526,7 @@
           "limit": 1001
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.073Z",
+      "recorded_at": "2026-04-29T09:32:42.553Z",
       "result": {
         "content": [
           {
@@ -13965,7 +14547,7 @@
           "source_id": " j8h8-vxug "
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.434Z",
+      "recorded_at": "2026-04-29T09:32:42.676Z",
       "result": {
         "content": [
           {
@@ -14178,7 +14760,7 @@
           "source_id": "v8i4-fa4q"
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.545Z",
+      "recorded_at": "2026-04-29T09:32:42.762Z",
       "result": {
         "content": [
           {
@@ -14325,7 +14907,7 @@
           "source_id": "bad/id"
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.545Z",
+      "recorded_at": "2026-04-29T09:32:42.765Z",
       "result": {
         "content": [
           {
@@ -14363,7 +14945,7 @@
           "source_id": "xxxx-yyyy"
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.644Z",
+      "recorded_at": "2026-04-29T09:32:42.827Z",
       "result": {
         "content": [
           {
@@ -14414,7 +14996,7 @@
           "offset": 2
         }
       },
-      "recorded_at": "2026-04-29T08:51:02.800Z",
+      "recorded_at": "2026-04-29T09:32:42.959Z",
       "result": {
         "content": [
           {
@@ -14475,7 +15057,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.014Z",
+      "recorded_at": "2026-04-29T09:32:43.162Z",
       "result": {
         "content": [
           {
@@ -14530,7 +15112,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.197Z",
+      "recorded_at": "2026-04-29T09:32:43.315Z",
       "result": {
         "content": [
           {
@@ -14585,7 +15167,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.370Z",
+      "recorded_at": "2026-04-29T09:32:43.418Z",
       "result": {
         "content": [
           {
@@ -14640,7 +15222,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.571Z",
+      "recorded_at": "2026-04-29T09:32:43.569Z",
       "result": {
         "content": [
           {
@@ -14711,7 +15293,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.746Z",
+      "recorded_at": "2026-04-29T09:32:43.699Z",
       "result": {
         "content": [
           {
@@ -14761,7 +15343,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:03.894Z",
+      "recorded_at": "2026-04-29T09:32:43.825Z",
       "result": {
         "content": [
           {
@@ -14811,7 +15393,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.000Z",
+      "recorded_at": "2026-04-29T09:32:43.950Z",
       "result": {
         "content": [
           {
@@ -14861,7 +15443,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.000Z",
+      "recorded_at": "2026-04-29T09:32:43.950Z",
       "result": {
         "content": [
           {
@@ -14900,7 +15482,7 @@
           "limit": 101
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.001Z",
+      "recorded_at": "2026-04-29T09:32:43.951Z",
       "result": {
         "content": [
           {
@@ -14940,7 +15522,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.001Z",
+      "recorded_at": "2026-04-29T09:32:43.952Z",
       "result": {
         "content": [
           {
@@ -14981,7 +15563,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.002Z",
+      "recorded_at": "2026-04-29T09:32:43.954Z",
       "result": {
         "content": [
           {
@@ -15021,7 +15603,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.048Z",
+      "recorded_at": "2026-04-29T09:32:44.004Z",
       "result": {
         "content": [
           {
@@ -15151,7 +15733,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.083Z",
+      "recorded_at": "2026-04-29T09:32:44.037Z",
       "result": {
         "content": [
           {
@@ -15229,7 +15811,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.113Z",
+      "recorded_at": "2026-04-29T09:32:44.070Z",
       "result": {
         "content": [
           {
@@ -15274,7 +15856,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.143Z",
+      "recorded_at": "2026-04-29T09:32:44.099Z",
       "result": {
         "content": [
           {
@@ -15319,7 +15901,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.174Z",
+      "recorded_at": "2026-04-29T09:32:44.127Z",
       "result": {
         "content": [
           {
@@ -15445,7 +16027,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.204Z",
+      "recorded_at": "2026-04-29T09:32:44.156Z",
       "result": {
         "content": [
           {
@@ -15490,7 +16072,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.234Z",
+      "recorded_at": "2026-04-29T09:32:44.183Z",
       "result": {
         "content": [
           {
@@ -15535,7 +16117,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.265Z",
+      "recorded_at": "2026-04-29T09:32:44.210Z",
       "result": {
         "content": [
           {
@@ -15580,7 +16162,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.294Z",
+      "recorded_at": "2026-04-29T09:32:44.238Z",
       "result": {
         "content": [
           {
@@ -15664,7 +16246,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.323Z",
+      "recorded_at": "2026-04-29T09:32:44.266Z",
       "result": {
         "content": [
           {
@@ -15795,7 +16377,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.355Z",
+      "recorded_at": "2026-04-29T09:32:44.296Z",
       "result": {
         "content": [
           {
@@ -15857,7 +16439,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.389Z",
+      "recorded_at": "2026-04-29T09:32:44.349Z",
       "result": {
         "content": [
           {
@@ -16003,7 +16585,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.444Z",
+      "recorded_at": "2026-04-29T09:32:44.427Z",
       "result": {
         "content": [
           {
@@ -16145,7 +16727,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.478Z",
+      "recorded_at": "2026-04-29T09:32:44.461Z",
       "result": {
         "content": [
           {
@@ -16293,7 +16875,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.498Z",
+      "recorded_at": "2026-04-29T09:32:44.477Z",
       "result": {
         "content": [
           {
@@ -16355,7 +16937,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.511Z",
+      "recorded_at": "2026-04-29T09:32:44.489Z",
       "result": {
         "content": [
           {
@@ -16487,7 +17069,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.529Z",
+      "recorded_at": "2026-04-29T09:32:44.507Z",
       "result": {
         "content": [
           {
@@ -16637,7 +17219,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.542Z",
+      "recorded_at": "2026-04-29T09:32:44.520Z",
       "result": {
         "content": [
           {
@@ -16779,7 +17361,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.572Z",
+      "recorded_at": "2026-04-29T09:32:44.551Z",
       "result": {
         "content": [
           {
@@ -16824,7 +17406,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.601Z",
+      "recorded_at": "2026-04-29T09:32:44.581Z",
       "result": {
         "content": [
           {
@@ -16869,7 +17451,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.602Z",
+      "recorded_at": "2026-04-29T09:32:44.581Z",
       "result": {
         "content": [
           {
@@ -16892,7 +17474,7 @@
           "limit": 101
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.602Z",
+      "recorded_at": "2026-04-29T09:32:44.582Z",
       "result": {
         "content": [
           {
@@ -16931,7 +17513,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.703Z",
+      "recorded_at": "2026-04-29T09:32:44.689Z",
       "result": {
         "content": [
           {
@@ -17028,7 +17610,7 @@
           "offset": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.739Z",
+      "recorded_at": "2026-04-29T09:32:44.729Z",
       "result": {
         "content": [
           {
@@ -17099,7 +17681,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.777Z",
+      "recorded_at": "2026-04-29T09:32:44.765Z",
       "result": {
         "content": [
           {
@@ -17170,7 +17752,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.814Z",
+      "recorded_at": "2026-04-29T09:32:44.803Z",
       "result": {
         "content": [
           {
@@ -17242,7 +17824,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.853Z",
+      "recorded_at": "2026-04-29T09:32:44.843Z",
       "result": {
         "content": [
           {
@@ -17349,7 +17931,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.889Z",
+      "recorded_at": "2026-04-29T09:32:44.883Z",
       "result": {
         "content": [
           {
@@ -17419,7 +18001,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.926Z",
+      "recorded_at": "2026-04-29T09:32:44.923Z",
       "result": {
         "content": [
           {
@@ -17513,7 +18095,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:04.965Z",
+      "recorded_at": "2026-04-29T09:32:44.965Z",
       "result": {
         "content": [
           {
@@ -17621,7 +18203,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.003Z",
+      "recorded_at": "2026-04-29T09:32:45.004Z",
       "result": {
         "content": [
           {
@@ -17682,7 +18264,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.042Z",
+      "recorded_at": "2026-04-29T09:32:45.039Z",
       "result": {
         "content": [
           {
@@ -17737,7 +18319,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.079Z",
+      "recorded_at": "2026-04-29T09:32:45.075Z",
       "result": {
         "content": [
           {
@@ -17810,7 +18392,7 @@
       "params": {
         "uri": "idescat://tables/pmh/1180/8078/cat/metadata"
       },
-      "recorded_at": "2026-04-29T08:51:05.121Z",
+      "recorded_at": "2026-04-29T09:32:45.117Z",
       "result": {
         "contents": [
           {
@@ -17828,7 +18410,7 @@
       "params": {
         "name": "idescat_query_workflow"
       },
-      "recorded_at": "2026-04-29T08:51:05.121Z",
+      "recorded_at": "2026-04-29T09:32:45.118Z",
       "result": {
         "description": "IDESCAT table search, metadata, and bounded data workflow guidance.",
         "messages": [
@@ -17849,7 +18431,7 @@
       "params": {
         "name": "idescat_citation"
       },
-      "recorded_at": "2026-04-29T08:51:05.122Z",
+      "recorded_at": "2026-04-29T09:32:45.119Z",
       "result": {
         "description": "Fill-in citation template for IDESCAT table metadata.",
         "messages": [
@@ -17877,7 +18459,7 @@
           "offset": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.159Z",
+      "recorded_at": "2026-04-29T09:32:45.155Z",
       "result": {
         "content": [
           {
@@ -17933,7 +18515,7 @@
           "place_query": "NotARealCatalunyaPlace"
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.203Z",
+      "recorded_at": "2026-04-29T09:32:45.197Z",
       "result": {
         "content": [
           {
@@ -18767,7 +19349,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.387Z",
+      "recorded_at": "2026-04-29T09:32:45.825Z",
       "result": {
         "content": [
           {
@@ -18969,7 +19551,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.711Z",
+      "recorded_at": "2026-04-29T09:32:46.015Z",
       "result": {
         "content": [
           {
@@ -19261,7 +19843,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:51:05.995Z",
+      "recorded_at": "2026-04-29T09:32:46.254Z",
       "result": {
         "content": [
           {
@@ -19703,7 +20285,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.325Z",
+      "recorded_at": "2026-04-29T09:32:46.526Z",
       "result": {
         "content": [
           {
@@ -20019,7 +20601,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.366Z",
+      "recorded_at": "2026-04-29T09:32:46.565Z",
       "result": {
         "content": [
           {
@@ -20160,7 +20742,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.402Z",
+      "recorded_at": "2026-04-29T09:32:46.602Z",
       "result": {
         "content": [
           {
@@ -20301,7 +20883,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.437Z",
+      "recorded_at": "2026-04-29T09:32:46.643Z",
       "result": {
         "content": [
           {
@@ -20414,7 +20996,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.472Z",
+      "recorded_at": "2026-04-29T09:32:46.680Z",
       "result": {
         "content": [
           {
@@ -20524,7 +21106,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.509Z",
+      "recorded_at": "2026-04-29T09:32:46.723Z",
       "result": {
         "content": [
           {
@@ -20730,7 +21312,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.780Z",
+      "recorded_at": "2026-04-29T09:32:46.901Z",
       "result": {
         "content": [
           {
@@ -20780,7 +21362,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.780Z",
+      "recorded_at": "2026-04-29T09:32:46.904Z",
       "result": {
         "content": [
           {
@@ -20826,7 +21408,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.781Z",
+      "recorded_at": "2026-04-29T09:32:46.905Z",
       "result": {
         "content": [
           {
@@ -20870,7 +21452,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.781Z",
+      "recorded_at": "2026-04-29T09:32:46.906Z",
       "result": {
         "content": [
           {
@@ -20913,7 +21495,7 @@
           "limit": 101
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.781Z",
+      "recorded_at": "2026-04-29T09:32:46.906Z",
       "result": {
         "content": [
           {
@@ -20991,7 +21573,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.782Z",
+      "recorded_at": "2026-04-29T09:32:46.907Z",
       "result": {
         "content": [
           {
@@ -21042,7 +21624,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.782Z",
+      "recorded_at": "2026-04-29T09:32:46.907Z",
       "result": {
         "content": [
           {
@@ -21112,7 +21694,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.783Z",
+      "recorded_at": "2026-04-29T09:32:46.908Z",
       "result": {
         "content": [
           {
@@ -21179,7 +21761,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:51:06.783Z",
+      "recorded_at": "2026-04-29T09:32:46.909Z",
       "result": {
         "content": [
           {
@@ -21227,7 +21809,7 @@
           "place_query": "Girona"
         }
       },
-      "recorded_at": "2026-04-29T08:51:07.191Z",
+      "recorded_at": "2026-04-29T09:32:47.334Z",
       "result": {
         "content": [
           {
@@ -22048,7 +22630,7 @@
           "limit": 100
         }
       },
-      "recorded_at": "2026-04-29T08:51:07.560Z",
+      "recorded_at": "2026-04-29T09:32:47.733Z",
       "result": {
         "content": [
           {

@@ -14,6 +14,7 @@ import { queryBcnResourceGeo } from "../../sources/bcn/geo.js";
 import { resolveBcnPlace } from "../../sources/bcn/place.js";
 import { previewBcnResource } from "../../sources/bcn/preview.js";
 import { queryBcnResource } from "../../sources/bcn/query.js";
+import { recommendBcnResources } from "../../sources/bcn/recommend.js";
 import { getBcnResourceInfo } from "../../sources/bcn/resource.js";
 import { createJsonTextContent } from "../../sources/common/caps.js";
 import { toJsonSafeValue } from "../../sources/common/json-safe.js";
@@ -121,13 +122,29 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
   );
 
   server.registerTool(
+    "bcn_recommend_resources",
+    {
+      title: "bcn.recommend_resources",
+      description: [
+        "Recommend high-value Open Data BCN resources for a natural-language city question.",
+        "Use this before package search when the user asks broad questions such as trees on a street, facilities near a place, parks in an area, or district/neighborhood boundaries.",
+        "The recommender is deterministic and source-bounded; follow up with bcn_get_resource_info, bcn_resolve_place, or bcn_query_resource_geo.",
+      ].join(" "),
+      inputSchema: schemas.inputs.recommendResources,
+      outputSchema: schemas.outputs.recommendResources,
+    },
+    async (input) =>
+      wrapBcnTool("resource_recommend", async () => recommendBcnResources(input, config)),
+  );
+
+  server.registerTool(
     "bcn_query_resource_geo",
     {
       title: "bcn.query_resource_geo",
       description: [
         "Run a bounded geospatial query over an Open Data BCN resource with WGS84 latitude/longitude columns.",
         "Works for DataStore-active resources and safe BCN-hosted CSV/JSON downloads; active near/bbox calls use generated CKAN SQL internally.",
-        "Use near for distance queries, bbox for rectangular areas, contains for street/name text filters, and group_by for counts such as species by street.",
+        "Use near for distance queries, bbox for rectangular areas, within_place for district/neighborhood polygons returned by bcn_resolve_place.area_ref, contains for street/name text filters, and group_by for counts such as species by street.",
         "Coordinate fields are inferred from common BCN names such as latitud/longitud, geo_epgs_4326_lat/geo_epgs_4326_lon, and geo_epgs_4326_y/geo_epgs_4326_x; pass lat_field/lon_field when ambiguous.",
       ].join(" "),
       inputSchema: schemas.inputs.queryResourceGeo,
@@ -176,11 +193,11 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
             text: [
               "Use this workflow for Barcelona city Open Data BCN questions.",
               "",
-              "1. Discover candidate packages with `bcn_search_packages`. Choose the package whose title, description, tags, and resource formats match the user's request.",
+              "1. For broad city questions, start with `bcn_recommend_resources` to pick likely resources and example arguments. Use `bcn_search_packages` when the recommender is too narrow or the topic is not covered.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
-              "4. When the user gives a named place rather than coordinates, call `bcn_resolve_place` and choose the best candidate before using `bcn_query_resource_geo.near`.",
-              "5. For place-aware questions with known coordinates, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist; active DataStore `near`/`bbox` calls use generated CKAN SQL internally, and grouped `near` results include nearest samples.",
+              "4. When the user gives a named place rather than coordinates, call `bcn_resolve_place`. Point candidates feed `bcn_query_resource_geo.near`; district/neighborhood candidates can also return `area_ref` and `bbox` for `bcn_query_resource_geo.within_place`.",
+              "5. For place-aware questions, use `bcn_query_resource_geo` with `near`, `bbox`, `within_place`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist; active DataStore `near`/`bbox` calls use generated CKAN SQL internally, and grouped `near` results include nearest samples.",
               "6. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
               "7. For inactive DataStore resources when only a sample is needed, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
               "8. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
@@ -390,7 +407,36 @@ function createBcnSchemas(config: AppConfig) {
     max_lat: z.number().min(-90).max(90),
     max_lon: z.number().min(-180).max(180),
   });
+  const areaGeometryTypeSchema = z.enum(["polygon", "multipolygon"]);
+  const areaRefSchema = z.object({
+    source_resource_id: z.string(),
+    source_package_id: z.string().optional(),
+    row_id: z.union([z.string(), z.number()]),
+    geometry_field: z.string(),
+    geometry_type: areaGeometryTypeSchema,
+  });
+  const withinPlaceSchema = z.object({
+    source_resource_id: z.string(),
+    row_id: z.union([z.string(), z.number()]),
+    geometry_field: z.string().trim().min(1).optional(),
+  });
+  const areaFilterSchema = z.object({
+    mode: z.literal("polygon"),
+    source_resource_id: z.string(),
+    row_id: z.union([z.string(), z.number()]),
+    geometry_field: z.string(),
+    geometry_type: areaGeometryTypeSchema,
+    bbox: geoBboxSchema,
+  });
   const placeKindSchema = z.enum(["facility", "landmark", "street", "neighborhood", "district"]);
+  const recommendationTaskSchema = z.enum(["near", "within", "count", "group", "preview", "query"]);
+  const recommendationPlaceKindSchema = z.enum(["point", "street", "neighborhood", "district"]);
+  const recommendedToolSchema = z.enum([
+    "bcn_get_resource_info",
+    "bcn_preview_resource",
+    "bcn_query_resource",
+    "bcn_query_resource_geo",
+  ]);
   const placeCandidateSchema = z.object({
     name: z.string(),
     lat: z.number(),
@@ -398,7 +444,9 @@ function createBcnSchemas(config: AppConfig) {
     kind: placeKindSchema,
     score: z.number(),
     matched_fields: z.array(z.string()),
+    area_ref: areaRefSchema.optional(),
     address: z.string().optional(),
+    bbox: geoBboxSchema.optional(),
     district: z.string().optional(),
     neighborhood: z.string().optional(),
     source_dataset_name: z.string().optional(),
@@ -415,6 +463,35 @@ function createBcnSchemas(config: AppConfig) {
     limit: z.number().int().min(1),
     candidate_count: z.number().int().nonnegative(),
     candidates: z.array(placeCandidateSchema),
+    truncated: z.boolean(),
+  });
+  const recommendationSchema = z.object({
+    title: z.string(),
+    theme: z.string(),
+    description: z.string(),
+    package_id: z.string(),
+    resource_id: z.string(),
+    source_url: z.string().url(),
+    datastore_active: z.boolean(),
+    format: z.string(),
+    geo_capable: z.boolean(),
+    suggested_tool: recommendedToolSchema,
+    suggested_fields: z.array(z.string()),
+    suggested_contains_fields: z.array(z.string()).optional(),
+    suggested_group_by: z.array(z.string()).optional(),
+    example_arguments: z.record(jsonValueSchema),
+    confidence: z.number().min(0).max(1),
+    matched_terms: z.array(z.string()),
+    caveats: z.array(z.string()),
+  });
+  const recommendResourcesDataSchema = z.object({
+    query: z.string(),
+    normalized_query: z.string(),
+    task: recommendationTaskSchema.optional(),
+    place_kind: recommendationPlaceKindSchema.optional(),
+    limit: z.number().int().min(1),
+    recommendation_count: z.number().int().nonnegative(),
+    recommendations: z.array(recommendationSchema),
     truncated: z.boolean(),
   });
   const geoRowSchema = z.record(jsonValueSchema).and(
@@ -440,6 +517,7 @@ function createBcnSchemas(config: AppConfig) {
       lat: z.string(),
       lon: z.string(),
     }),
+    area_filter: areaFilterSchema.optional(),
     near: geoNearSchema.optional(),
     bbox: geoBboxSchema.optional(),
     filters: z.record(jsonValueSchema).optional(),
@@ -502,10 +580,17 @@ function createBcnSchemas(config: AppConfig) {
         bbox: geoBboxSchema.optional(),
         limit: positiveLimitSchema,
       },
+      recommendResources: {
+        query: z.string().trim().min(1),
+        task: recommendationTaskSchema.optional(),
+        place_kind: recommendationPlaceKindSchema.optional(),
+        limit: positiveLimitSchema,
+      },
       queryResourceGeo: {
         resource_id: z.string(),
         near: geoNearSchema.partial({ radius_m: true }).optional(),
         bbox: geoBboxSchema.optional(),
+        within_place: withinPlaceSchema.optional(),
         lat_field: z.string().trim().min(1).optional(),
         lon_field: z.string().trim().min(1).optional(),
         filters: z.record(jsonValueSchema).optional(),
@@ -535,6 +620,7 @@ function createBcnSchemas(config: AppConfig) {
       getResourceInfo: toolResultSchema(resourceInfoSchema),
       queryResource: toolResultSchema(queryDataSchema),
       resolvePlace: toolResultSchema(placeDataSchema),
+      recommendResources: toolResultSchema(recommendResourcesDataSchema),
       queryResourceGeo: toolResultSchema(geoDataSchema),
       previewResource: toolResultSchema(previewDataSchema),
     },

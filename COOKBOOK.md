@@ -272,6 +272,28 @@ Because this resource is DataStore-active, query it with structured filters or s
 
 Use field IDs from `bcn_get_resource_info.fields`. Do not pass raw SQL or URL fragments.
 
+## Open Data BCN: Recommend A City Resource
+
+User prompt:
+
+> Which BCN dataset should I use for facilities in Gràcia?
+
+Start with the deterministic recommender when the request is broad but common:
+
+```json
+{
+  "tool": "bcn_recommend_resources",
+  "arguments": {
+    "query": "facilities in Gracia district",
+    "task": "within",
+    "place_kind": "district",
+    "limit": 3
+  }
+}
+```
+
+Use the top recommendation's `resource_id`, `suggested_tool`, and `example_arguments` as a starting point, then call `bcn_get_resource_info` when you need exact fields. If the topic is not covered by the curated recommender, fall back to `bcn_search_packages`.
+
 ## Open Data BCN: Preview Street Trees CSV
 
 User prompt:
@@ -394,7 +416,47 @@ Street and area prompts can start with the same source-bounded resolver:
 }
 ```
 
-Use the returned `source_dataset_name`, `matched_fields`, and `kind` to choose the right candidate. For street-wide analyses such as trees on a street, prefer `bcn_query_resource_geo.contains`; for nearby facilities, pass the resolved `lat` and `lon` into `near`.
+Use the returned `source_dataset_name`, `matched_fields`, and `kind` to choose the right candidate. For street-wide analyses such as trees on a street, prefer `bcn_query_resource_geo.contains`; for nearby facilities, pass the resolved `lat` and `lon` into `near`. District and neighborhood candidates include `area_ref` when BCN exposes boundary geometry.
+
+## Open Data BCN: Facilities In A District Or Neighborhood
+
+User prompt:
+
+> Count facilities in the Gràcia district by neighborhood.
+
+Resolve the district first:
+
+```json
+{
+  "tool": "bcn_resolve_place",
+  "arguments": {
+    "query": "Gracia",
+    "kinds": ["district"],
+    "limit": 1
+  }
+}
+```
+
+Then pass the candidate's `area_ref` into `within_place`:
+
+```json
+{
+  "tool": "bcn_query_resource_geo",
+  "arguments": {
+    "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+    "within_place": {
+      "source_resource_id": "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+      "row_id": 6,
+      "geometry_field": "geometria_wgs84"
+    },
+    "fields": ["name", "addresses_neighborhood_name", "addresses_district_name"],
+    "group_by": "addresses_neighborhood_name",
+    "limit": 10
+  }
+}
+```
+
+The tool uses the area's bbox for upstream SQL pushdown and then verifies exact polygon containment locally. Use `groups` for the neighborhood counts and `rows` as examples.
 
 ## IDESCAT: Recover When Geography Is Unavailable
 

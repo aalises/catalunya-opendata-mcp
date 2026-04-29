@@ -203,6 +203,109 @@ describe("BCN geo helpers", () => {
     expect(result.data.rows[0]?._geo).not.toHaveProperty("distance_m");
   });
 
+  it("filters DataStore-active resources inside resolved BCN area polygons", async () => {
+    const fetchMock = mockFetchResponses(
+      ckanSuccess({
+        records: [
+          {
+            _id: 2,
+            geometria_wgs84: "POLYGON ((2.10 41.40, 2.20 41.40, 2.10 41.50, 2.10 41.40))",
+          },
+        ],
+      }),
+      ckanSuccess(
+        bcnResource({
+          datastore_active: true,
+        }),
+      ),
+      ckanSuccess({
+        fields: [
+          { id: "_id", type: "int" },
+          { id: "name", type: "text" },
+          { id: "latitud", type: "numeric" },
+          { id: "longitud", type: "numeric" },
+        ],
+      }),
+      ckanSuccess({
+        records: [
+          {
+            _bcn_matched_total: 2,
+            _id: 1,
+            name: "Inside polygon",
+            latitud: 41.42,
+            longitud: 2.12,
+          },
+          {
+            _bcn_matched_total: 2,
+            _id: 2,
+            name: "Inside bbox outside polygon",
+            latitud: 41.49,
+            longitud: 2.19,
+          },
+        ],
+      }),
+    );
+
+    const result = await queryBcnResourceGeo(
+      {
+        resource_id: "resource-1",
+        within_place: {
+          source_resource_id: "district-resource",
+          row_id: "2",
+        },
+        fields: ["_id", "name"],
+        limit: 10,
+      },
+      baseConfig,
+    );
+
+    const areaBody = JSON.parse(String((fetchMock.mock.calls[0] as [URL, RequestInit])[1].body));
+    expect(areaBody).toEqual({
+      resource_id: "district-resource",
+      filters: { _id: 2 },
+      fields: ["_id", "geometria_wgs84"],
+      limit: 1,
+    });
+    const sqlBody = JSON.parse(String((fetchMock.mock.calls[3] as [URL, RequestInit])[1].body)) as {
+      sql: string;
+    };
+    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
+    expect(sqlBody.sql).toContain("BETWEEN 41.4 AND 41.5");
+    expect(sqlBody.sql).toContain("BETWEEN 2.1 AND 2.2");
+    expect(result.data).toMatchObject({
+      strategy: "datastore",
+      datastore_mode: "sql",
+      area_filter: {
+        mode: "polygon",
+        source_resource_id: "district-resource",
+        row_id: 2,
+        geometry_field: "geometria_wgs84",
+        geometry_type: "polygon",
+      },
+      bbox: {
+        min_lat: 41.4,
+        min_lon: 2.1,
+        max_lat: 41.5,
+        max_lon: 2.2,
+      },
+      scanned_row_count: 2,
+      matched_row_count: 1,
+      row_count: 1,
+      truncated: false,
+      rows: [
+        {
+          _id: 1,
+          name: "Inside polygon",
+          _geo: {
+            lat: 41.42,
+            lon: 2.12,
+          },
+        },
+      ],
+      upstream_total: 2,
+    });
+  });
+
   it("applies DataStore SQL contains filters before local pagination", async () => {
     const fetchMock = mockFetchResponses(
       ckanSuccess(
@@ -337,6 +440,69 @@ describe("BCN geo helpers", () => {
         lat: 41.39,
         lon: 2.16,
       },
+    });
+  });
+
+  it("filters safe CSV downloads inside resolved BCN area polygons", async () => {
+    mockFetchResponses(
+      ckanSuccess({
+        records: [
+          {
+            _id: 31,
+            geometria_wgs84: "POLYGON ((2.10 41.40, 2.20 41.40, 2.10 41.50, 2.10 41.40))",
+          },
+        ],
+      }),
+      ckanSuccess(
+        bcnResource({
+          datastore_active: false,
+          url: "https://opendata-ajuntament.barcelona.cat/download/points.csv",
+        }),
+      ),
+      new Response(
+        [
+          "name;latitud;longitud",
+          "Inside polygon;41.42;2.12",
+          "Inside bbox outside polygon;41.49;2.19",
+        ].join("\n"),
+        {
+          headers: { "Content-Type": "text/csv; charset=utf-8" },
+          status: 200,
+        },
+      ),
+    );
+
+    const result = await queryBcnResourceGeo(
+      {
+        resource_id: "resource-1",
+        within_place: {
+          source_resource_id: "neighborhood-resource",
+          row_id: 31,
+        },
+        fields: ["name"],
+        limit: 10,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      strategy: "download_stream",
+      area_filter: {
+        source_resource_id: "neighborhood-resource",
+        row_id: 31,
+      },
+      scanned_row_count: 2,
+      matched_row_count: 1,
+      row_count: 1,
+      rows: [
+        {
+          name: "Inside polygon",
+          _geo: {
+            lat: 41.42,
+            lon: 2.12,
+          },
+        },
+      ],
     });
   });
 
@@ -497,6 +663,19 @@ describe("BCN geo helpers", () => {
     ).rejects.toMatchObject({
       code: "invalid_input",
       message: expect.stringContaining("either near or bbox"),
+    });
+    await expect(
+      queryBcnResourceGeo(
+        {
+          resource_id: "resource-1",
+          within_place: { source_resource_id: "district-resource", row_id: 1 },
+          bbox: { min_lat: 41.3, min_lon: 2.1, max_lat: 41.5, max_lon: 2.2 },
+        },
+        baseConfig,
+      ),
+    ).rejects.toMatchObject({
+      code: "invalid_input",
+      message: expect.stringContaining("within_place"),
     });
     expect(fetchMock).not.toHaveBeenCalled();
   });

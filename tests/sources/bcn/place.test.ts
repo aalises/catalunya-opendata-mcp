@@ -319,6 +319,7 @@ describe("resolveBcnPlace", () => {
         ],
         [
           {
+            _id: 2,
             nom_districte: "Gràcia",
             geometria_wgs84:
               "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))",
@@ -333,6 +334,7 @@ describe("resolveBcnPlace", () => {
         ],
         [
           {
+            _id: 31,
             nom_barri: "la Vila de Gràcia",
             nom_districte: "Gràcia",
             geometria_wgs84:
@@ -360,12 +362,35 @@ describe("resolveBcnPlace", () => {
       name: "Gràcia",
       lat: 41.45,
       lon: 2.1500000000000004,
+      bbox: {
+        min_lat: 41.4,
+        min_lon: 2.1,
+        max_lat: 41.5,
+        max_lon: 2.2,
+      },
+      area_ref: {
+        source_resource_id: "district-resource",
+        source_package_id: "boundary-package",
+        row_id: 2,
+        geometry_field: "geometria_wgs84",
+        geometry_type: "polygon",
+      },
     });
     expect(result.data.candidates[1]).toMatchObject({
       name: "la Vila de Gràcia",
       neighborhood: "la Vila de Gràcia",
       district: "Gràcia",
       lat: 41.4,
+      bbox: {
+        min_lat: 41.39,
+        min_lon: 2.14,
+        max_lat: 41.41,
+        max_lon: 2.16,
+      },
+      area_ref: {
+        source_resource_id: "neighborhood-resource",
+        row_id: 31,
+      },
     });
     expect(result.data.candidates[1]?.lon).toBeCloseTo(2.15);
   });
