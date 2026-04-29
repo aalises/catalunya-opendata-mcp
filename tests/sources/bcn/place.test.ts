@@ -1,14 +1,26 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { BCN_PLACE_QUERY_MAX_CHARS, resolveBcnPlace } from "../../../src/sources/bcn/place.js";
-import { baseConfig, ckanSuccess, mockFetchResponses } from "./helpers.js";
+import {
+  BCN_PLACE_QUERY_MAX_CHARS,
+  BCN_PLACE_REGISTRY,
+  type BcnPlaceRegistryResource,
+  resolveBcnPlace,
+} from "../../../src/sources/bcn/place.js";
+import { baseConfig, ckanFailure, ckanSuccess, mockFetchResponses } from "./helpers.js";
+
+const ORIGINAL_PLACE_REGISTRY = [...BCN_PLACE_REGISTRY];
+const FACILITY_PLACE_RESOURCE = ORIGINAL_PLACE_REGISTRY.find(
+  (resource) => resource.resourceId === "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+);
 
 describe("resolveBcnPlace", () => {
   afterEach(() => {
+    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...ORIGINAL_PLACE_REGISTRY);
     vi.restoreAllMocks();
   });
 
   it("queries the BCN place registry with bounded DataStore q requests", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     const fetchMock = mockFetchResponses(
       placeResponse([
         {
@@ -64,6 +76,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("ranks exact name matches above substring matches", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -92,6 +105,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("falls back to significant query tokens for accent-insensitive user input", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     const fetchMock = mockFetchResponses(
       placeResponse([]),
       placeResponse([
@@ -118,6 +132,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("applies bbox and kind filters", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -156,6 +171,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("deduplicates repeated rows by normalized name and coordinates", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -182,6 +198,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("marks the response truncated when matching candidates exceed the requested limit", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -206,7 +223,181 @@ describe("resolveBcnPlace", () => {
     expect(result.data.candidates).toHaveLength(1);
   });
 
+  it("resolves street candidates from the address registry and deduplicates by street name", async () => {
+    usePlaceRegistry([
+      {
+        resourceId: "street-resource",
+        packageId: "street-package",
+        sourceDatasetName: "Address registry",
+        sourceUrl:
+          "https://opendata-ajuntament.barcelona.cat/data/dataset/street-package/resource/street-resource",
+        defaultKind: "street",
+        priority: 35,
+        dedupeBy: "name",
+        nameFields: ["nom_carrer"],
+        addressFields: ["nom_carrer"],
+        neighborhoodFields: ["nom_barri"],
+        districtFields: ["nom_districte"],
+        coordinateFields: { lat: "latitud_wgs84", lon: "longitud_wgs84" },
+      },
+    ]);
+    const fetchMock = mockFetchResponses(
+      datastoreResponse(
+        [
+          { id: "nom_carrer", type: "text" },
+          { id: "nom_barri", type: "text" },
+          { id: "nom_districte", type: "text" },
+          { id: "latitud_wgs84", type: "numeric" },
+          { id: "longitud_wgs84", type: "numeric" },
+        ],
+        [
+          {
+            nom_carrer: "Consell de Cent",
+            nom_barri: "el Fort Pienc",
+            nom_districte: "Eixample",
+            latitud_wgs84: "41.4005354",
+            longitud_wgs84: "2.1781029",
+          },
+          {
+            nom_carrer: "Consell de Cent",
+            nom_barri: "Hostafrancs",
+            nom_districte: "Sants-Montjuïc",
+            latitud_wgs84: "41.3760669",
+            longitud_wgs84: "2.1445120",
+          },
+        ],
+      ),
+      datastoreResponse([{ id: "nom_carrer", type: "text" }], []),
+      datastoreResponse([{ id: "nom_carrer", type: "text" }], []),
+    );
+
+    const result = await resolveBcnPlace(
+      { query: "Carrer Consell de Cent", kinds: ["street"], limit: 5 },
+      baseConfig,
+    );
+
+    const [, init] = fetchMock.mock.calls[0] as [URL, RequestInit];
+    expect(JSON.parse(String(init.body))).toMatchObject({
+      resource_id: "street-resource",
+      q: "Carrer Consell de Cent",
+      fields: expect.arrayContaining(["nom_carrer", "latitud_wgs84", "longitud_wgs84"]),
+    });
+    expect(result.data.candidates).toHaveLength(1);
+    expect(result.data.candidates[0]).toMatchObject({
+      name: "Carrer Consell de Cent",
+      kind: "street",
+      address: "Consell de Cent",
+      district: "Eixample",
+      neighborhood: "el Fort Pienc",
+      lat: 41.4005354,
+      lon: 2.1781029,
+      source_dataset_name: "Address registry",
+    });
+  });
+
+  it("resolves neighborhoods and districts from full-scan WKT geometries", async () => {
+    usePlaceRegistry([
+      boundaryPlaceResource({
+        resourceId: "district-resource",
+        defaultKind: "district",
+        nameFields: ["nom_districte"],
+        districtFields: ["nom_districte"],
+      }),
+      boundaryPlaceResource({
+        resourceId: "neighborhood-resource",
+        defaultKind: "neighborhood",
+        nameFields: ["nom_barri"],
+        neighborhoodFields: ["nom_barri"],
+        districtFields: ["nom_districte"],
+      }),
+    ]);
+    const fetchMock = mockFetchResponses(
+      datastoreResponse(
+        [
+          { id: "nom_districte", type: "text" },
+          { id: "geometria_wgs84", type: "text" },
+        ],
+        [
+          {
+            nom_districte: "Gràcia",
+            geometria_wgs84:
+              "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))",
+          },
+        ],
+      ),
+      datastoreResponse(
+        [
+          { id: "nom_barri", type: "text" },
+          { id: "nom_districte", type: "text" },
+          { id: "geometria_wgs84", type: "text" },
+        ],
+        [
+          {
+            nom_barri: "la Vila de Gràcia",
+            nom_districte: "Gràcia",
+            geometria_wgs84:
+              "POLYGON ((2.14 41.39, 2.16 41.39, 2.16 41.41, 2.14 41.41, 2.14 41.39))",
+          },
+        ],
+      ),
+    );
+
+    const result = await resolveBcnPlace(
+      { query: "Gracia", kinds: ["district", "neighborhood"], limit: 5 },
+      baseConfig,
+    );
+
+    const requestBodies = fetchMock.mock.calls.map(([, init]) => JSON.parse(String(init?.body)));
+    expect(requestBodies).toEqual([
+      expect.not.objectContaining({ q: expect.anything() }),
+      expect.not.objectContaining({ q: expect.anything() }),
+    ]);
+    expect(result.data.candidates.map((candidate) => candidate.kind)).toEqual([
+      "district",
+      "neighborhood",
+    ]);
+    expect(result.data.candidates[0]).toMatchObject({
+      name: "Gràcia",
+      lat: 41.45,
+      lon: 2.1500000000000004,
+    });
+    expect(result.data.candidates[1]).toMatchObject({
+      name: "la Vila de Gràcia",
+      neighborhood: "la Vila de Gràcia",
+      district: "Gràcia",
+      lat: 41.4,
+    });
+    expect(result.data.candidates[1]?.lon).toBeCloseTo(2.15);
+  });
+
+  it("isolates per-resource fetch failures when another place registry resource succeeds", async () => {
+    usePlaceRegistry([
+      { ...facilityPlaceResource(), resourceId: "failing-resource" },
+      facilityPlaceResource(),
+    ]);
+    mockFetchResponses(
+      ckanFailure({ message: "temporary CKAN failure" }),
+      placeResponse([
+        {
+          name: "Park Güell. Museu d'Història de Barcelona",
+          secondary_filters_name: "Museus",
+          geo_epgs_4326_lat: 41.4135,
+          geo_epgs_4326_lon: 2.1531,
+        },
+      ]),
+    );
+
+    const result = await resolveBcnPlace({ query: "Park", kinds: ["landmark"] }, baseConfig);
+
+    expect(result.data.candidates).toHaveLength(1);
+    expect(result.data.candidates[0]).toMatchObject({
+      name: "Park Güell. Museu d'Història de Barcelona",
+      kind: "landmark",
+    });
+  });
+
   it("skips registry resources without inferable coordinate fields", async () => {
+    usePlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       ckanSuccess({
         fields: [{ id: "name", type: "text" }],
@@ -245,9 +436,41 @@ describe("resolveBcnPlace", () => {
   });
 });
 
+function usePlaceRegistry(resources: BcnPlaceRegistryResource[]): void {
+  BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...resources);
+}
+
+function facilityPlaceResource(): BcnPlaceRegistryResource {
+  if (!FACILITY_PLACE_RESOURCE) {
+    throw new Error("Expected BCN facility place registry resource to exist.");
+  }
+
+  return FACILITY_PLACE_RESOURCE;
+}
+
+function boundaryPlaceResource(
+  overrides: Partial<BcnPlaceRegistryResource>,
+): BcnPlaceRegistryResource {
+  return {
+    resourceId: "boundary-resource",
+    packageId: "boundary-package",
+    sourceDatasetName: "Boundary registry",
+    sourceUrl:
+      "https://opendata-ajuntament.barcelona.cat/data/dataset/boundary-package/resource/boundary-resource",
+    defaultKind: "district",
+    priority: 40,
+    dedupeBy: "name",
+    searchMode: "full_scan",
+    rowLimit: 100,
+    nameFields: ["nom_districte"],
+    geometryField: "geometria_wgs84",
+    ...overrides,
+  };
+}
+
 function placeResponse(records: Array<Record<string, unknown>>, total = records.length): Response {
-  return ckanSuccess({
-    fields: [
+  return datastoreResponse(
+    [
       { id: "name", type: "text" },
       { id: "institution_name", type: "text" },
       { id: "addresses_road_name", type: "text" },
@@ -258,6 +481,18 @@ function placeResponse(records: Array<Record<string, unknown>>, total = records.
       { id: "geo_epgs_4326_lon", type: "numeric" },
       { id: "rank", type: "float4" },
     ],
+    records,
+    total,
+  );
+}
+
+function datastoreResponse(
+  fields: Array<{ id: string; type: string }>,
+  records: Array<Record<string, unknown>>,
+  total = records.length,
+): Response {
+  return ckanSuccess({
+    fields,
     records,
     total,
   });

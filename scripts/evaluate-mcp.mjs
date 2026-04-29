@@ -11,13 +11,13 @@ const PROFILE_CASE_COUNTS = {
   canary: {
     mcp: 1,
     socrata: 4,
-    bcn: 5,
+    bcn: 6,
     idescat: 13,
   },
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 11,
+    bcn: 15,
     idescat: 71,
   },
 };
@@ -262,6 +262,32 @@ async function runCanaryProfile(client) {
               ),
           ),
         "BCN place resolver finds Sagrada Familia candidates without external geocoding",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.street_consell_de_cent",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Consell de Cent",
+      kinds: ["street"],
+      limit: 2,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.query_variants?.includes("consell") &&
+          data.candidates?.some(
+            (candidate) =>
+              candidate.kind === "street" &&
+              candidate.name?.toLowerCase().includes("consell") &&
+              candidate.source_resource_id === "661fe190-67c8-423a-b8eb-8140f547fde2" &&
+              typeof candidate.lat === "number" &&
+              typeof candidate.lon === "number",
+          ),
+        "BCN place resolver resolves street names through the address registry",
       ),
   });
 
@@ -631,6 +657,71 @@ async function runStressProfile(client) {
             typeof candidate.lon === "number",
         ),
         "BCN place resolver handles accent-insensitive Park Güell lookup",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.placa_catalunya_street",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Plaça Catalunya",
+      kinds: ["street"],
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.query_variants?.includes("catalunya") &&
+          data.candidates?.[0]?.kind === "street" &&
+          data.candidates?.[0]?.name === "Plaça Catalunya" &&
+          data.candidates?.[0]?.source_dataset_name === "Open Data BCN building addresses",
+        "BCN place resolver resolves Plaça Catalunya through the address registry",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.district_gracia",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Gracia",
+      kinds: ["district"],
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.candidates?.[0]?.kind === "district" &&
+          data.candidates?.[0]?.name === "Gràcia" &&
+          data.candidates?.[0]?.matched_fields?.includes("nom_districte") &&
+          typeof data.candidates?.[0]?.lat === "number" &&
+          typeof data.candidates?.[0]?.lon === "number",
+        "BCN place resolver resolves accentless district names from administrative boundaries",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.neighborhood_sagrada_familia",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Sagrada Familia",
+      kinds: ["neighborhood"],
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.candidates?.[0]?.kind === "neighborhood" &&
+          data.candidates?.[0]?.name === "la Sagrada Família" &&
+          data.candidates?.[0]?.district === "Eixample" &&
+          typeof data.candidates?.[0]?.lat === "number" &&
+          typeof data.candidates?.[0]?.lon === "number",
+        "BCN place resolver resolves neighborhoods from administrative boundaries",
       ),
   });
 

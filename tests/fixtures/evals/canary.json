@@ -5,10 +5,10 @@
     "name": "catalunya-opendata-mcp",
     "version": "0.1.3"
   },
-  "recorded_at": "2026-04-29T08:07:09.589Z",
+  "recorded_at": "2026-04-29T08:43:58.461Z",
   "summary": {
-    "total_cases": 23,
-    "passed_cases": 23,
+    "total_cases": 24,
+    "passed_cases": 24,
     "failed_cases": 0,
     "score": 1,
     "by_connector": {
@@ -23,8 +23,8 @@
         "failed": 0
       },
       "bcn": {
-        "total": 5,
-        "passed": 5,
+        "total": 6,
+        "passed": 6,
         "failed": 0
       },
       "idescat": {
@@ -36,7 +36,7 @@
     "expected_counts": {
       "mcp": 1,
       "socrata": 4,
-      "bcn": 5,
+      "bcn": 6,
       "idescat": 13
     },
     "count_failures": []
@@ -52,7 +52,7 @@
           "name": "Evaluator"
         }
       },
-      "recorded_at": "2026-04-29T08:06:49.422Z",
+      "recorded_at": "2026-04-29T08:42:58.254Z",
       "result": {
         "content": [
           {
@@ -77,7 +77,7 @@
           "limit": 10
         }
       },
-      "recorded_at": "2026-04-29T08:06:49.662Z",
+      "recorded_at": "2026-04-29T08:42:58.540Z",
       "result": {
         "content": [
           {
@@ -166,7 +166,7 @@
           "source_id": "j8h8-vxug"
         }
       },
-      "recorded_at": "2026-04-29T08:06:49.885Z",
+      "recorded_at": "2026-04-29T08:42:58.812Z",
       "result": {
         "content": [
           {
@@ -381,7 +381,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:06:49.994Z",
+      "recorded_at": "2026-04-29T08:42:58.913Z",
       "result": {
         "content": [
           {
@@ -441,7 +441,7 @@
           "limit": 1
         }
       },
-      "recorded_at": "2026-04-29T08:06:50.096Z",
+      "recorded_at": "2026-04-29T08:42:59.043Z",
       "result": {
         "content": [
           {
@@ -494,7 +494,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:06:50.854Z",
+      "recorded_at": "2026-04-29T08:42:59.707Z",
       "result": {
         "content": [
           {
@@ -568,7 +568,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:06:52.411Z",
+      "recorded_at": "2026-04-29T08:43:01.258Z",
       "result": {
         "content": [
           {
@@ -647,7 +647,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:06:58.761Z",
+      "recorded_at": "2026-04-29T08:43:07.656Z",
       "result": {
         "content": [
           {
@@ -694,7 +694,7 @@
           "limit": 2
         }
       },
-      "recorded_at": "2026-04-29T08:07:03.910Z",
+      "recorded_at": "2026-04-29T08:43:12.933Z",
       "result": {
         "content": [
           {
@@ -815,12 +815,12 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.400Z",
+      "recorded_at": "2026-04-29T08:43:33.255Z",
       "result": {
         "content": [
           {
             "type": "text",
-            "text": "{\"data\":{\"query\":\"Sagrada Familia\",\"query_variants\":[\"Sagrada Familia\",\"sagrada\",\"familia\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":2,\"candidates\":[{\"name\":\"Biblioteca Sagrada Família - Josep M. Ainaud de Lasarte\",\"kind\":\"facility\",\"lat\":41.40541560676076,\"lon\":2.1767746457391186,\"score\":90.3,\"matched_fields\":[\"addresses_neighborhood_name\",\"name\"],\"address\":\"Carrer de Provença\",\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\"},{\"name\":\"Museu Temple Expiatori\",\"kind\":\"landmark\",\"lat\":41.40322025744941,\"lon\":2.174844103362019,\"score\":90.3,\"matched_fields\":[\"addresses_neighborhood_name\",\"institution_name\"],\"address\":\"C Mallorca\",\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\"}],\"truncated\":false},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+            "text": "{\"data\":{\"query\":\"Sagrada Familia\",\"query_variants\":[\"Sagrada Familia\",\"sagrada\",\"familia\"],\"strategy\":\"datastore\",\"limit\":3,\"candidate_count\":3,\"candidates\":[{\"name\":\"Biblioteca Sagrada Família - Josep M. Ainaud de Lasarte\",\"kind\":\"facility\",\"lat\":41.40541560676076,\"lon\":2.1767746457391186,\"score\":90.3,\"matched_fields\":[\"addresses_neighborhood_name\",\"name\"],\"address\":\"Carrer de Provença\",\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_dataset_name\":\"Open Data BCN municipal facilities\",\"source_resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\"},{\"name\":\"Museu Temple Expiatori\",\"kind\":\"landmark\",\"lat\":41.40322025744941,\"lon\":2.174844103362019,\"score\":90.3,\"matched_fields\":[\"addresses_neighborhood_name\",\"institution_name\"],\"address\":\"C Mallorca\",\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_dataset_name\":\"Open Data BCN municipal facilities\",\"source_resource_id\":\"d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\",\"source_package_id\":\"fcef8a36-64df-4231-9145-a4a3ef757f02\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7\"},{\"name\":\"Aragó\",\"kind\":\"street\",\"lat\":41.4028616,\"lon\":2.1794593,\"score\":87.9,\"matched_fields\":[\"nom_barri\"],\"address\":\"Aragó\",\"neighborhood\":\"la Sagrada Família\",\"district\":\"Eixample\",\"source_dataset_name\":\"Open Data BCN building addresses\",\"source_resource_id\":\"661fe190-67c8-423a-b8eb-8140f547fde2\",\"source_package_id\":\"25752522-3528-4c14-b68d-5f09a3e393bd\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/25752522-3528-4c14-b68d-5f09a3e393bd/resource/661fe190-67c8-423a-b8eb-8140f547fde2\"}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
           }
         ],
         "structuredContent": {
@@ -833,7 +833,7 @@
             ],
             "strategy": "datastore",
             "limit": 3,
-            "candidate_count": 2,
+            "candidate_count": 3,
             "candidates": [
               {
                 "name": "Biblioteca Sagrada Família - Josep M. Ainaud de Lasarte",
@@ -848,6 +848,7 @@
                 "address": "Carrer de Provença",
                 "neighborhood": "la Sagrada Família",
                 "district": "Eixample",
+                "source_dataset_name": "Open Data BCN municipal facilities",
                 "source_resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
                 "source_package_id": "fcef8a36-64df-4231-9145-a4a3ef757f02",
                 "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7"
@@ -865,12 +866,98 @@
                 "address": "C Mallorca",
                 "neighborhood": "la Sagrada Família",
                 "district": "Eixample",
+                "source_dataset_name": "Open Data BCN municipal facilities",
                 "source_resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
                 "source_package_id": "fcef8a36-64df-4231-9145-a4a3ef757f02",
                 "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7"
+              },
+              {
+                "name": "Aragó",
+                "kind": "street",
+                "lat": 41.4028616,
+                "lon": 2.1794593,
+                "score": 87.9,
+                "matched_fields": [
+                  "nom_barri"
+                ],
+                "address": "Aragó",
+                "neighborhood": "la Sagrada Família",
+                "district": "Eixample",
+                "source_dataset_name": "Open Data BCN building addresses",
+                "source_resource_id": "661fe190-67c8-423a-b8eb-8140f547fde2",
+                "source_package_id": "25752522-3528-4c14-b68d-5f09a3e393bd",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/25752522-3528-4c14-b68d-5f09a3e393bd/resource/661fe190-67c8-423a-b8eb-8140f547fde2"
               }
             ],
-            "truncated": false
+            "truncated": true
+          },
+          "provenance": {
+            "source": "bcn",
+            "source_url": "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search",
+            "id": "opendata-ajuntament.barcelona.cat:place_resolve",
+            "last_updated": null,
+            "license_or_terms": null,
+            "language": "ca"
+          }
+        }
+      }
+    },
+    {
+      "key": "default:callTool:{\"arguments\":{\"kinds\":[\"street\"],\"limit\":2,\"query\":\"Consell de Cent\"},\"name\":\"bcn_resolve_place\"}",
+      "scope": "default",
+      "method": "callTool",
+      "params": {
+        "name": "bcn_resolve_place",
+        "arguments": {
+          "query": "Consell de Cent",
+          "kinds": [
+            "street"
+          ],
+          "limit": 2
+        }
+      },
+      "recorded_at": "2026-04-29T08:43:55.283Z",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"data\":{\"query\":\"Consell de Cent\",\"query_variants\":[\"Consell de Cent\",\"consell\",\"cent\"],\"kinds\":[\"street\"],\"strategy\":\"datastore\",\"limit\":2,\"candidate_count\":1,\"candidates\":[{\"name\":\"Consell de Cent\",\"kind\":\"street\",\"lat\":41.3908578,\"lon\":2.1652052,\"score\":112.9,\"matched_fields\":[\"nom_carrer\"],\"address\":\"Consell de Cent\",\"neighborhood\":\"la Dreta de l'Eixample\",\"district\":\"Eixample\",\"source_dataset_name\":\"Open Data BCN building addresses\",\"source_resource_id\":\"661fe190-67c8-423a-b8eb-8140f547fde2\",\"source_package_id\":\"25752522-3528-4c14-b68d-5f09a3e393bd\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/dataset/25752522-3528-4c14-b68d-5f09a3e393bd/resource/661fe190-67c8-423a-b8eb-8140f547fde2\"}],\"truncated\":true},\"provenance\":{\"source\":\"bcn\",\"source_url\":\"https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search\",\"id\":\"opendata-ajuntament.barcelona.cat:place_resolve\",\"last_updated\":null,\"license_or_terms\":null,\"language\":\"ca\"}}"
+          }
+        ],
+        "structuredContent": {
+          "data": {
+            "query": "Consell de Cent",
+            "query_variants": [
+              "Consell de Cent",
+              "consell",
+              "cent"
+            ],
+            "kinds": [
+              "street"
+            ],
+            "strategy": "datastore",
+            "limit": 2,
+            "candidate_count": 1,
+            "candidates": [
+              {
+                "name": "Consell de Cent",
+                "kind": "street",
+                "lat": 41.3908578,
+                "lon": 2.1652052,
+                "score": 112.9,
+                "matched_fields": [
+                  "nom_carrer"
+                ],
+                "address": "Consell de Cent",
+                "neighborhood": "la Dreta de l'Eixample",
+                "district": "Eixample",
+                "source_dataset_name": "Open Data BCN building addresses",
+                "source_resource_id": "661fe190-67c8-423a-b8eb-8140f547fde2",
+                "source_package_id": "25752522-3528-4c14-b68d-5f09a3e393bd",
+                "source_url": "https://opendata-ajuntament.barcelona.cat/data/dataset/25752522-3528-4c14-b68d-5f09a3e393bd/resource/661fe190-67c8-423a-b8eb-8140f547fde2"
+              }
+            ],
+            "truncated": true
           },
           "provenance": {
             "source": "bcn",
@@ -895,7 +982,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.468Z",
+      "recorded_at": "2026-04-29T08:43:55.398Z",
       "result": {
         "content": [
           {
@@ -1045,7 +1132,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.614Z",
+      "recorded_at": "2026-04-29T08:43:55.503Z",
       "result": {
         "content": [
           {
@@ -1149,7 +1236,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.659Z",
+      "recorded_at": "2026-04-29T08:43:55.549Z",
       "result": {
         "content": [
           {
@@ -1968,7 +2055,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.697Z",
+      "recorded_at": "2026-04-29T08:43:55.587Z",
       "result": {
         "content": [
           {
@@ -2073,7 +2160,7 @@
           "lang": "ca"
         }
       },
-      "recorded_at": "2026-04-29T08:07:08.791Z",
+      "recorded_at": "2026-04-29T08:43:55.650Z",
       "result": {
         "content": [
           {
@@ -7878,7 +7965,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.258Z",
+      "recorded_at": "2026-04-29T08:43:58.178Z",
       "result": {
         "content": [
           {
@@ -8284,7 +8371,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.322Z",
+      "recorded_at": "2026-04-29T08:43:58.233Z",
       "result": {
         "content": [
           {
@@ -8444,7 +8531,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.361Z",
+      "recorded_at": "2026-04-29T08:43:58.268Z",
       "result": {
         "content": [
           {
@@ -8550,7 +8637,7 @@
           "limit": 5
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.396Z",
+      "recorded_at": "2026-04-29T08:43:58.303Z",
       "result": {
         "content": [
           {
@@ -8695,7 +8782,7 @@
           "place_query": "Maresme"
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.434Z",
+      "recorded_at": "2026-04-29T08:43:58.341Z",
       "result": {
         "content": [
           {
@@ -9229,7 +9316,7 @@
           "limit": 20
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.471Z",
+      "recorded_at": "2026-04-29T08:43:58.376Z",
       "result": {
         "content": [
           {
@@ -9387,7 +9474,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.510Z",
+      "recorded_at": "2026-04-29T08:43:58.416Z",
       "result": {
         "content": [
           {
@@ -9449,7 +9536,7 @@
           "limit": 3
         }
       },
-      "recorded_at": "2026-04-29T08:07:09.568Z",
+      "recorded_at": "2026-04-29T08:43:58.453Z",
       "result": {
         "content": [
           {

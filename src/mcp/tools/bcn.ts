@@ -401,6 +401,7 @@ function createBcnSchemas(config: AppConfig) {
     address: z.string().optional(),
     district: z.string().optional(),
     neighborhood: z.string().optional(),
+    source_dataset_name: z.string().optional(),
     source_resource_id: z.string(),
     source_package_id: z.string().optional(),
     source_url: z.string().url(),

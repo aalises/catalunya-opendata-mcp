@@ -368,6 +368,34 @@ Then pass the selected candidate's `lat` and `lon` into `near`:
 
 Rows are sorted by `_geo.distance_m` for `near` queries. DataStore resources with `near` or `bbox` use generated CKAN SQL internally, so large active resources avoid upstream-order scan misses while keeping the public input structured. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`; if `scan_cap` appears, treat the result as partial.
 
+## Open Data BCN: Resolve Streets And Areas
+
+Street and area prompts can start with the same source-bounded resolver:
+
+```json
+{
+  "tool": "bcn_resolve_place",
+  "arguments": {
+    "query": "Plaça Catalunya",
+    "kinds": ["street"],
+    "limit": 3
+  }
+}
+```
+
+```json
+{
+  "tool": "bcn_resolve_place",
+  "arguments": {
+    "query": "Gracia",
+    "kinds": ["district", "neighborhood"],
+    "limit": 5
+  }
+}
+```
+
+Use the returned `source_dataset_name`, `matched_fields`, and `kind` to choose the right candidate. For street-wide analyses such as trees on a street, prefer `bcn_query_resource_geo.contains`; for nearby facilities, pass the resolved `lat` and `lon` into `near`.
+
 ## IDESCAT: Recover When Geography Is Unavailable
 
 User prompt:

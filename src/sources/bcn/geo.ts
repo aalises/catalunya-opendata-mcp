@@ -753,6 +753,7 @@ function getCoordinateFieldCandidates(columns: string[]): BcnCoordinateFields[] 
   const pairs = [
     ["geo_epgs_4326_lat", "geo_epgs_4326_lon"],
     ["geo_epgs_4326_y", "geo_epgs_4326_x"],
+    ["latitud_wgs84", "longitud_wgs84"],
     ["latitud", "longitud"],
     ["latitude", "longitude"],
     ["lat", "lon"],

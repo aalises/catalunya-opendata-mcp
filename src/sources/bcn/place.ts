@@ -16,6 +16,7 @@ import {
   fetchBcnActionResult,
 } from "./client.js";
 import {
+  type BcnCoordinateFields,
   type BcnGeoBboxInput,
   type BcnGeoStrategy,
   inferBcnCoordinateFields,
@@ -46,6 +47,7 @@ export interface BcnResolvedPlaceCandidate {
   name: string;
   neighborhood?: string;
   score: number;
+  source_dataset_name?: string;
   source_package_id?: string;
   source_resource_id: string;
   source_url: string;
@@ -76,20 +78,27 @@ interface NormalizedResolvePlaceInput {
   queryVariants: string[];
 }
 
-interface BcnPlaceRegistryResource {
-  addressFields: string[];
-  categoryFields: string[];
+export interface BcnPlaceRegistryResource {
+  addressFields?: string[];
+  categoryFields?: string[];
+  coordinateFields?: BcnCoordinateFields;
+  dedupeBy?: "name" | "name_and_coordinate";
   defaultKind: BcnPlaceKind;
-  districtFields: string[];
+  districtFields?: string[];
+  geometryField?: string;
   nameFields: string[];
-  neighborhoodFields: string[];
+  neighborhoodFields?: string[];
   packageId: string;
   priority: number;
+  rowLimit?: number;
+  searchMode?: "full_scan" | "q";
+  sourceDatasetName: string;
   resourceId: string;
   sourceUrl: string;
 }
 
 interface CandidateDraft extends BcnResolvedPlaceCandidate {
+  dedupeBy: "name" | "name_and_coordinate";
   priority: number;
 }
 
@@ -101,17 +110,78 @@ const PLACE_KIND_VALUES = new Set<BcnPlaceKind>([
   "district",
 ]);
 
-// Keep this registry explicit and source-bounded. It starts with the broad
-// municipal facilities resource; add more BCN DataStore resources here as new
-// place kinds need first-class coverage.
+// Keep this registry explicit and source-bounded. Every entry is an Open Data
+// BCN DataStore resource with known place fields; no external geocoder is used.
 export const BCN_PLACE_REGISTRY: BcnPlaceRegistryResource[] = [
+  {
+    resourceId: "661fe190-67c8-423a-b8eb-8140f547fde2",
+    packageId: "25752522-3528-4c14-b68d-5f09a3e393bd",
+    sourceDatasetName: "Open Data BCN building addresses",
+    sourceUrl:
+      "https://opendata-ajuntament.barcelona.cat/data/dataset/25752522-3528-4c14-b68d-5f09a3e393bd/resource/661fe190-67c8-423a-b8eb-8140f547fde2",
+    defaultKind: "street",
+    priority: 35,
+    dedupeBy: "name",
+    nameFields: ["nom_carrer"],
+    addressFields: ["nom_carrer"],
+    neighborhoodFields: ["nom_barri"],
+    districtFields: ["nom_districte"],
+    coordinateFields: { lat: "latitud_wgs84", lon: "longitud_wgs84" },
+  },
+  {
+    resourceId: "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+    packageId: "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+    sourceDatasetName: "Open Data BCN administrative districts",
+    sourceUrl:
+      "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f",
+    defaultKind: "district",
+    priority: 40,
+    dedupeBy: "name",
+    searchMode: "full_scan",
+    rowLimit: 20,
+    nameFields: ["nom_districte"],
+    districtFields: ["nom_districte"],
+    geometryField: "geometria_wgs84",
+  },
+  {
+    resourceId: "b21fa550-56ea-4f4c-9adc-b8009381896e",
+    packageId: "808daafa-d9ce-48c0-925a-fa5afdb1ed41",
+    sourceDatasetName: "Open Data BCN neighborhoods",
+    sourceUrl:
+      "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e",
+    defaultKind: "neighborhood",
+    priority: 38,
+    dedupeBy: "name",
+    searchMode: "full_scan",
+    rowLimit: 100,
+    nameFields: ["nom_barri"],
+    neighborhoodFields: ["nom_barri"],
+    districtFields: ["nom_districte"],
+    geometryField: "geometria_wgs84",
+  },
   {
     resourceId: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
     packageId: "fcef8a36-64df-4231-9145-a4a3ef757f02",
+    sourceDatasetName: "Open Data BCN municipal facilities",
     sourceUrl:
       "https://opendata-ajuntament.barcelona.cat/data/dataset/fcef8a36-64df-4231-9145-a4a3ef757f02/resource/d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
     defaultKind: "facility",
     priority: 10,
+    nameFields: ["name", "institution_name"],
+    addressFields: ["addresses_road_name"],
+    neighborhoodFields: ["addresses_neighborhood_name"],
+    districtFields: ["addresses_district_name"],
+    categoryFields: ["secondary_filters_name"],
+  },
+  {
+    resourceId: "b64d32a8-aea5-47a8-9826-479b211f5d46",
+    packageId: "5d43ed16-f93a-442f-8853-4bf2191b2d39",
+    sourceDatasetName: "Open Data BCN parks and gardens",
+    sourceUrl:
+      "https://opendata-ajuntament.barcelona.cat/data/dataset/5d43ed16-f93a-442f-8853-4bf2191b2d39/resource/b64d32a8-aea5-47a8-9826-479b211f5d46",
+    defaultKind: "landmark",
+    priority: 20,
+    dedupeBy: "name",
     nameFields: ["name", "institution_name"],
     addressFields: ["addresses_road_name"],
     neighborhoodFields: ["addresses_neighborhood_name"],
@@ -145,24 +215,40 @@ export async function resolveBcnPlace(
   const normalized = normalizeResolvePlaceInput(input, config);
   const url = buildBcnDatastoreUrl("datastore_search");
   const drafts: CandidateDraft[] = [];
+  let firstResourceError: unknown;
+  let successfulResources = 0;
   let upstreamTruncated = false;
 
   for (const resource of BCN_PLACE_REGISTRY) {
-    const resourceResult = await resolvePlaceFromResource(
-      resource,
-      normalized,
-      url,
-      config,
-      options,
-    );
-    drafts.push(...resourceResult.candidates);
-    upstreamTruncated ||= resourceResult.truncated;
+    try {
+      const resourceResult = await resolvePlaceFromResource(
+        resource,
+        normalized,
+        url,
+        config,
+        options,
+      );
+      successfulResources += 1;
+      drafts.push(...resourceResult.candidates);
+      upstreamTruncated ||= resourceResult.truncated;
+    } catch (error) {
+      firstResourceError ??= error;
+      options.logger?.debug("place_registry_resource_skipped", {
+        resource_id: resource.resourceId,
+        source_dataset_name: resource.sourceDatasetName,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  if (successfulResources === 0 && firstResourceError) {
+    throw firstResourceError;
   }
 
   const sortedCandidates = dedupeAndSortCandidates(drafts);
   const candidates = sortedCandidates
     .slice(0, normalized.limit)
-    .map(({ priority: _priority, ...candidate }) => candidate);
+    .map(({ dedupeBy: _dedupeBy, priority: _priority, ...candidate }) => candidate);
   const truncated = upstreamTruncated || sortedCandidates.length > candidates.length;
   const provenance = createBcnOperationProvenance("place_resolve", url);
   const data = capPlaceData(
@@ -192,19 +278,21 @@ async function resolvePlaceFromResource(
   options: FetchBcnJsonOptions,
 ): Promise<{ candidates: CandidateDraft[]; total: number; truncated: boolean }> {
   const candidates: CandidateDraft[] = [];
+  const fields = getPlaceResourceFields(resource);
+  const queries = resource.searchMode === "full_scan" ? [undefined] : input.queryVariants;
   let total = 0;
   let truncated = false;
 
-  for (const query of input.queryVariants) {
+  for (const query of queries) {
     const raw = await fetchBcnActionResult(
       {
         method: "POST",
         url,
         body: {
           resource_id: resource.resourceId,
-          q: query,
-          limit: Math.min(Math.max(input.limit * 4, 10), BCN_PLACE_RESOURCE_ROW_LIMIT),
-          fields: getPlaceResourceFields(resource),
+          ...(query ? { q: query } : {}),
+          limit: getPlaceResourceLimit(input, resource),
+          fields,
         },
       },
       config,
@@ -225,12 +313,12 @@ async function resolvePlaceFromResource(
     total += queryTotal;
     truncated ||= queryTotal > parsed.data.records.length;
 
-    let coordinateFields: { lat: string; lon: string };
-    try {
-      coordinateFields = inferBcnCoordinateFields(
-        parsed.data.fields.map((field) => field.id),
-      ).coordinate_fields;
-    } catch {
+    const coordinateFields = getPlaceCoordinateFields(
+      resource,
+      parsed.data.fields.map((field) => field.id),
+    );
+
+    if (!coordinateFields && !resource.geometryField) {
       continue;
     }
 
@@ -322,18 +410,26 @@ function normalizePlaceBbox(bbox: BcnGeoBboxInput): BcnGeoBboxInput {
 
 function getQueryVariants(query: string): string[] {
   const variants = [query];
+  const rawTokens = query
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[\\/_.,;:-]+/gu, " ")
+    .split(" ")
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 4);
   const normalizedQuery = normalizeBcnGeoText(query);
   const tokens = normalizedQuery
     .split(" ")
     .map((token) => token.trim())
     .filter((token) => token.length >= 4);
 
-  for (const token of tokens) {
+  for (const token of [...rawTokens, ...tokens]) {
     if (variants.length >= BCN_PLACE_QUERY_VARIANT_LIMIT) {
       break;
     }
 
-    if (!variants.some((variant) => normalizeBcnGeoText(variant) === token)) {
+    if (!variants.some((variant) => normalizeBcnPlaceQueryVariant(variant) === token)) {
       variants.push(token);
     }
   }
@@ -341,34 +437,58 @@ function getQueryVariants(query: string): string[] {
   return variants;
 }
 
+function normalizeBcnPlaceQueryVariant(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[\\/_.,;:-]+/gu, " ")
+    .replace(/\s+/gu, " ")
+    .trim();
+}
+
 function getPlaceResourceFields(resource: BcnPlaceRegistryResource): string[] {
   return [
     ...new Set([
       ...resource.nameFields,
-      ...resource.addressFields,
-      ...resource.neighborhoodFields,
-      ...resource.districtFields,
-      ...resource.categoryFields,
-      "geo_epgs_4326_lat",
-      "geo_epgs_4326_lon",
+      ...fieldList(resource.addressFields),
+      ...fieldList(resource.neighborhoodFields),
+      ...fieldList(resource.districtFields),
+      ...fieldList(resource.categoryFields),
+      ...(resource.coordinateFields
+        ? [resource.coordinateFields.lat, resource.coordinateFields.lon]
+        : resource.geometryField
+          ? []
+          : ["geo_epgs_4326_lat", "geo_epgs_4326_lon"]),
+      ...(resource.geometryField ? [resource.geometryField] : []),
     ]),
   ];
+}
+
+function getPlaceResourceLimit(
+  input: NormalizedResolvePlaceInput,
+  resource: BcnPlaceRegistryResource,
+): number {
+  if (resource.searchMode === "full_scan") {
+    return resource.rowLimit ?? BCN_PLACE_RESOURCE_ROW_LIMIT;
+  }
+
+  return Math.min(Math.max(input.limit * 4, 10), resource.rowLimit ?? BCN_PLACE_RESOURCE_ROW_LIMIT);
 }
 
 function createPlaceCandidate(
   resource: BcnPlaceRegistryResource,
   row: Record<string, JsonValue>,
-  coordinateFields: { lat: string; lon: string },
+  coordinateFields: BcnCoordinateFields | undefined,
   input: NormalizedResolvePlaceInput,
 ): CandidateDraft | undefined {
-  const lat = toNumber(row[coordinateFields.lat]);
-  const lon = toNumber(row[coordinateFields.lon]);
+  const point = getPlaceCandidatePoint(resource, row, coordinateFields);
 
-  if (lat === undefined || lon === undefined) {
+  if (!point) {
     return undefined;
   }
 
-  if (input.bbox && !isInBbox({ lat, lon }, input.bbox)) {
+  if (input.bbox && !isInBbox(point, input.bbox)) {
     return undefined;
   }
 
@@ -384,27 +504,101 @@ function createPlaceCandidate(
     return undefined;
   }
 
-  const name = getFirstString(row, resource.nameFields);
+  const rawName = getFirstString(row, resource.nameFields);
 
-  if (!name) {
+  if (!rawName) {
     return undefined;
   }
+
+  const name = formatCandidateName(rawName, kind, input.query);
 
   return {
     name,
     kind,
-    lat,
-    lon,
+    lat: point.lat,
+    lon: point.lon,
     score: scoring.score,
     matched_fields: scoring.matchedFields,
     ...optionalString("address", getAddress(row, resource)),
-    ...optionalString("neighborhood", getFirstString(row, resource.neighborhoodFields)),
-    ...optionalString("district", getFirstString(row, resource.districtFields)),
+    ...optionalString("neighborhood", getFirstString(row, fieldList(resource.neighborhoodFields))),
+    ...optionalString("district", getFirstString(row, fieldList(resource.districtFields))),
+    source_dataset_name: resource.sourceDatasetName,
     source_resource_id: resource.resourceId,
     source_package_id: resource.packageId,
     source_url: resource.sourceUrl,
+    dedupeBy: resource.dedupeBy ?? "name_and_coordinate",
     priority: resource.priority,
   };
+}
+
+function getPlaceCoordinateFields(
+  resource: BcnPlaceRegistryResource,
+  columns: string[],
+): BcnCoordinateFields | undefined {
+  if (resource.coordinateFields) {
+    const lat = findColumn(columns, resource.coordinateFields.lat);
+    const lon = findColumn(columns, resource.coordinateFields.lon);
+    return lat && lon ? { lat, lon } : undefined;
+  }
+
+  try {
+    return inferBcnCoordinateFields(columns).coordinate_fields;
+  } catch {
+    return undefined;
+  }
+}
+
+function getPlaceCandidatePoint(
+  resource: BcnPlaceRegistryResource,
+  row: Record<string, JsonValue>,
+  coordinateFields: BcnCoordinateFields | undefined,
+): { lat: number; lon: number } | undefined {
+  if (coordinateFields) {
+    const lat = toNumber(row[coordinateFields.lat]);
+    const lon = toNumber(row[coordinateFields.lon]);
+
+    if (lat !== undefined && lon !== undefined) {
+      return { lat, lon };
+    }
+  }
+
+  return resource.geometryField ? getWgs84GeometryCenter(row[resource.geometryField]) : undefined;
+}
+
+function getWgs84GeometryCenter(
+  value: JsonValue | undefined,
+): { lat: number; lon: number } | undefined {
+  if (typeof value !== "string" || !value.trim()) {
+    return undefined;
+  }
+
+  let minLat = Number.POSITIVE_INFINITY;
+  let minLon = Number.POSITIVE_INFINITY;
+  let maxLat = Number.NEGATIVE_INFINITY;
+  let maxLon = Number.NEGATIVE_INFINITY;
+  let count = 0;
+
+  for (const match of value.matchAll(/(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)/gu)) {
+    const lon = Number(match[1]);
+    const lat = Number(match[2]);
+
+    if (
+      Number.isFinite(lat) &&
+      Number.isFinite(lon) &&
+      lat >= -90 &&
+      lat <= 90 &&
+      lon >= -180 &&
+      lon <= 180
+    ) {
+      minLat = Math.min(minLat, lat);
+      minLon = Math.min(minLon, lon);
+      maxLat = Math.max(maxLat, lat);
+      maxLon = Math.max(maxLon, lon);
+      count += 1;
+    }
+  }
+
+  return count > 0 ? { lat: (minLat + maxLat) / 2, lon: (minLon + maxLon) / 2 } : undefined;
 }
 
 function scoreCandidate(
@@ -423,7 +617,7 @@ function scoreCandidate(
     }
   }
 
-  for (const field of resource.neighborhoodFields) {
+  for (const field of fieldList(resource.neighborhoodFields)) {
     const fieldScore = scoreField(row[field], normalizedQuery, 85, 80, 75);
     score = Math.max(score, fieldScore);
     if (fieldScore > 0) {
@@ -431,7 +625,7 @@ function scoreCandidate(
     }
   }
 
-  for (const field of resource.addressFields) {
+  for (const field of fieldList(resource.addressFields)) {
     const fieldScore = scoreField(row[field], normalizedQuery, 75, 70, 65);
     score = Math.max(score, fieldScore);
     if (fieldScore > 0) {
@@ -439,7 +633,7 @@ function scoreCandidate(
     }
   }
 
-  for (const field of resource.districtFields) {
+  for (const field of fieldList(resource.districtFields)) {
     const fieldScore = scoreField(row[field], normalizedQuery, 55, 50, 45);
     score = Math.max(score, fieldScore);
     if (fieldScore > 0) {
@@ -447,7 +641,7 @@ function scoreCandidate(
     }
   }
 
-  for (const field of resource.categoryFields) {
+  for (const field of fieldList(resource.categoryFields)) {
     const fieldScore = scoreField(row[field], normalizedQuery, 35, 30, 25);
     score = Math.max(score, fieldScore);
     if (fieldScore > 0) {
@@ -457,10 +651,11 @@ function scoreCandidate(
 
   const rank = toNumber(row.rank);
   const rankBoost = rank === undefined ? 0 : Math.max(0, 10 - Math.min(rank * 10, 10));
+  const finalScore = score <= 0 ? 0 : score + rankBoost + resource.priority / 10;
 
   return {
     matchedFields: [...matchedFields].sort(),
-    score: Math.round((score + rankBoost + resource.priority / 10) * 10) / 10,
+    score: Math.round(finalScore * 10) / 10,
   };
 }
 
@@ -500,7 +695,9 @@ function getCandidateKind(
   resource: BcnPlaceRegistryResource,
   row: Record<string, JsonValue>,
 ): BcnPlaceKind {
-  const category = normalizeBcnGeoText(getFirstString(row, resource.categoryFields) ?? "");
+  const category = normalizeBcnGeoText(
+    getFirstString(row, fieldList(resource.categoryFields)) ?? "",
+  );
 
   if (category.includes("museu") || category.includes("monument")) {
     return "landmark";
@@ -548,7 +745,13 @@ function compareCandidates(a: CandidateDraft, b: CandidateDraft): number {
   );
 }
 
-function getCandidateDedupeKey(candidate: BcnResolvedPlaceCandidate): string {
+function getCandidateDedupeKey(candidate: CandidateDraft): string {
+  if (candidate.dedupeBy === "name") {
+    return [candidate.kind, normalizeBcnGeoText(candidate.name), candidate.source_resource_id].join(
+      "|",
+    );
+  }
+
   return [
     normalizeBcnGeoText(candidate.name),
     Math.round(candidate.lat * 100_000),
@@ -576,7 +779,45 @@ function getAddress(
   row: Record<string, JsonValue>,
   resource: BcnPlaceRegistryResource,
 ): string | undefined {
-  return getFirstString(row, resource.addressFields);
+  return getFirstString(row, fieldList(resource.addressFields));
+}
+
+function formatCandidateName(name: string, kind: BcnPlaceKind, query: string): string {
+  if (kind !== "street") {
+    return name;
+  }
+
+  const normalizedName = normalizeBcnGeoText(name);
+  const normalizedQuery = normalizeBcnGeoText(query);
+
+  if (!normalizedName || !normalizedQuery.includes(normalizedName)) {
+    return name;
+  }
+
+  if (/^pla[çc]a\b/iu.test(query) && !/^pla[çc]a\b/iu.test(name)) {
+    return `Plaça ${name}`;
+  }
+
+  if (/^carrer\b/iu.test(query) && !/^carrer\b/iu.test(name)) {
+    return `Carrer ${name}`;
+  }
+
+  if (/^avinguda\b/iu.test(query) && !/^avinguda\b/iu.test(name)) {
+    return `Avinguda ${name}`;
+  }
+
+  return name;
+}
+
+function fieldList(fields: string[] | undefined): string[] {
+  return fields ?? [];
+}
+
+function findColumn(columns: string[], field: string): string | undefined {
+  return (
+    columns.find((column) => column === field) ??
+    columns.find((column) => column.toLowerCase() === field.toLowerCase())
+  );
 }
 
 function getFirstString(row: Record<string, JsonValue>, fields: string[]): string | undefined {

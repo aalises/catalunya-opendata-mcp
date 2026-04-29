@@ -5,6 +5,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { AppConfig } from "../../src/config.js";
 import { createMcpServer, createPingMessage, serverName } from "../../src/mcp/server.js";
 import { packageVersion } from "../../src/package-info.js";
+import { BCN_PLACE_REGISTRY } from "../../src/sources/bcn/place.js";
 import { IDESCAT_LOGICAL_URL_MAX_BYTES } from "../../src/sources/idescat/request.js";
 
 const testConfig: AppConfig = {
@@ -20,6 +21,7 @@ const testConfig: AppConfig = {
   bcnGeoScanBytes: 67_108_864,
   socrataAppToken: undefined,
 };
+const ORIGINAL_BCN_PLACE_REGISTRY = [...BCN_PLACE_REGISTRY];
 
 describe("createPingMessage", () => {
   it("returns the default health message", () => {
@@ -33,6 +35,7 @@ describe("createPingMessage", () => {
 
 describe("createMcpServer", () => {
   afterEach(() => {
+    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...ORIGINAL_BCN_PLACE_REGISTRY);
     vi.restoreAllMocks();
   });
 
@@ -211,6 +214,15 @@ describe("createMcpServer", () => {
   });
 
   it("returns structured BCN place resolver output with JSON text fallback", async () => {
+    const facilityPlaceResource = ORIGINAL_BCN_PLACE_REGISTRY.find(
+      (resource) => resource.resourceId === "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+    );
+
+    if (!facilityPlaceResource) {
+      throw new Error("Expected BCN facility place registry resource to exist.");
+    }
+
+    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, facilityPlaceResource);
     vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
       bcnCkanSuccess({
         fields: [

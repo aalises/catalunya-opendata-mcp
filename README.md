@@ -298,13 +298,31 @@ The response includes `request_body` with the logical replayable request, row co
 
 ### 4. Resolve Named Places
 
-Use `bcn_resolve_place` when the user gives a place name instead of coordinates. The resolver is source-bounded: it queries an explicit Open Data BCN DataStore registry, ranks matching rows locally, and returns candidate WGS84 points with matched fields and source provenance. The registry intentionally starts with the broad municipal facilities dataset; additional DataStore resources can be added over time for stronger street, neighborhood, and district coverage.
+Use `bcn_resolve_place` when the user gives a place name instead of coordinates. The resolver is source-bounded: it queries an explicit Open Data BCN DataStore registry, ranks matching rows locally, and returns candidate WGS84 points with matched fields and source provenance. The registry covers building-address street points, administrative district and neighborhood boundaries, municipal facilities, and parks/gardens.
 
 ```json
 {
   "query": "Sagrada Familia",
   "kinds": ["landmark"],
   "limit": 3
+}
+```
+
+Street and area names use the same tool:
+
+```json
+{
+  "query": "Plaça Catalunya",
+  "kinds": ["street"],
+  "limit": 3
+}
+```
+
+```json
+{
+  "query": "Gracia",
+  "kinds": ["district", "neighborhood"],
+  "limit": 5
 }
 ```
 
@@ -468,10 +486,10 @@ The stress profile currently runs 133 live cases:
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 11 |
+| Open Data BCN | 15 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN place resolution, BCN geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 
