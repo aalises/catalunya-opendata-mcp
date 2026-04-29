@@ -36,6 +36,9 @@ export const BCN_GEO_RADIUS_MAX_METERS = 5_000;
 export const BCN_GEO_FILTER_TOTAL_MAX_BYTES = 16_384;
 export const BCN_GEO_CONTAINS_TOTAL_MAX_BYTES = 16_384;
 export const BCN_GEO_DATASTORE_PAGE_SIZE = 1_000;
+export const BCN_GEO_JSON_MAX_BYTES = 2_097_152;
+export const BCN_SQL_MATCHED_TOTAL_FIELD = "_bcn_matched_total";
+export const BCN_SQL_DISTANCE_FIELD = "_bcn_distance_m";
 export const BCN_GEO_TRUNCATION_HINTS = {
   byte_cap:
     "download scan reached the byte cap; raise CATALUNYA_MCP_BCN_GEO_SCAN_BYTES, narrow the resource, or use a DataStore-active resource",
@@ -73,6 +76,7 @@ export interface BcnGeoBboxInput {
 }
 
 export type BcnGeoStrategy = "datastore" | "download_stream";
+export type BcnGeoDatastoreMode = "scan" | "sql";
 export type BcnGeoTruncationReason = "byte_cap" | "row_cap" | "scan_cap";
 
 export interface BcnCoordinateFields {
@@ -92,13 +96,16 @@ export interface BcnGeoRow extends Record<string, JsonValue> {
 export interface BcnGeoGroup {
   count: number;
   key: JsonValue;
+  min_distance_m?: number;
   sample?: Record<string, JsonValue>;
+  sample_nearest?: Record<string, JsonValue>;
 }
 
 export interface BcnQueryResourceGeoData {
   bbox?: BcnGeoBboxInput;
   contains?: Record<string, string>;
   coordinate_fields: BcnCoordinateFields;
+  datastore_mode?: BcnGeoDatastoreMode;
   fields?: string[];
   filters?: Record<string, JsonValue>;
   group_by?: string;
@@ -144,10 +151,14 @@ interface NormalizedGeoInput {
 
 interface GeoScanResult {
   coordinateFields: BcnCoordinateFields;
+  datastoreMode?: BcnGeoDatastoreMode;
   logicalRequestBody?: Record<string, JsonValue>;
+  matchedRowCount?: number;
   matchedRows: BcnGeoRow[];
   requestMethod: "GET" | "POST";
   requestUrl: URL;
+  rowsPrePaged?: boolean;
+  rowsSortedByDistance?: boolean;
   scannedRowCount: number;
   strategy: BcnGeoStrategy;
   truncationReason?: BcnGeoTruncationReason;
@@ -166,6 +177,12 @@ const datastoreResponseSchema = z
   })
   .passthrough();
 
+const datastoreSqlResponseSchema = z
+  .object({
+    records: z.array(z.record(z.unknown())).default([]),
+  })
+  .passthrough();
+
 export async function queryBcnResourceGeo(
   input: BcnQueryResourceGeoInput,
   config: AppConfig,
@@ -178,16 +195,19 @@ export async function queryBcnResourceGeo(
   const scan = metadata.datastore_active
     ? await scanDatastoreResource(normalized, config, options)
     : await scanDownloadResource(normalized, metadata, config, options);
-  const sortedRows = normalized.near
-    ? [...scan.matchedRows].sort(compareByDistance)
-    : scan.matchedRows;
-  const visibleRows = sortedRows
-    .slice(normalized.offset, normalized.offset + normalized.limit)
-    .map((row) => projectGeoRow(row, normalized.fields));
+  const sortedRows =
+    normalized.near && !scan.rowsSortedByDistance
+      ? [...scan.matchedRows].sort(compareByDistance)
+      : scan.matchedRows;
+  const matchedRowCount = scan.matchedRowCount ?? sortedRows.length;
+  const pageRows = scan.rowsPrePaged
+    ? sortedRows.slice(0, normalized.limit)
+    : sortedRows.slice(normalized.offset, normalized.offset + normalized.limit);
+  const visibleRows = pageRows.map((row) => projectGeoRow(row, normalized.fields));
   const groups = normalized.group_by
     ? createGroups(sortedRows, normalized.group_by, normalized.group_limit, normalized.fields)
     : undefined;
-  const rowCapped = sortedRows.length > normalized.offset + normalized.limit;
+  const rowCapped = matchedRowCount > normalized.offset + normalized.limit;
   const reason = scan.truncationReason ?? (rowCapped ? "row_cap" : undefined);
   const provenance = createBcnOperationProvenance("resource_geo_query", scan.requestUrl);
   const data = capGeoData(
@@ -195,6 +215,7 @@ export async function queryBcnResourceGeo(
       {
         resource_id: normalized.resource_id,
         strategy: scan.strategy,
+        ...(scan.datastoreMode ? { datastore_mode: scan.datastoreMode } : {}),
         request_method: scan.requestMethod,
         request_url: scan.requestUrl.toString(),
         ...(scan.logicalRequestBody ? { logical_request_body: scan.logicalRequestBody } : {}),
@@ -209,7 +230,7 @@ export async function queryBcnResourceGeo(
         limit: normalized.limit,
         offset: normalized.offset,
         scanned_row_count: scan.scannedRowCount,
-        matched_row_count: sortedRows.length,
+        matched_row_count: matchedRowCount,
         row_count: visibleRows.length,
         rows: visibleRows,
         ...(groups ? { groups } : {}),
@@ -322,6 +343,20 @@ async function scanDatastoreResource(
     fields.map((field) => field.id),
     input,
   ).coordinate_fields;
+
+  if (input.near || input.bbox) {
+    return queryDatastoreResourceSql(input, coordinateFields, fields, config, options);
+  }
+
+  return scanDatastoreResourcePages(input, coordinateFields, config, options);
+}
+
+async function scanDatastoreResourcePages(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+  config: AppConfig,
+  options: FetchBcnJsonOptions,
+): Promise<GeoScanResult> {
   const url = buildBcnDatastoreUrl("datastore_search");
   const requestFields = getDatastoreRequestFields(input, coordinateFields);
   const matchedRows: BcnGeoRow[] = [];
@@ -390,6 +425,7 @@ async function scanDatastoreResource(
 
   return {
     strategy: "datastore",
+    datastoreMode: "scan",
     requestMethod: "POST",
     requestUrl: url,
     logicalRequestBody: buildDatastoreGeoRequestBody(
@@ -403,6 +439,77 @@ async function scanDatastoreResource(
     matchedRows,
     ...(upstreamTotal === undefined ? {} : { upstreamTotal }),
     ...(scanCapped ? { truncationReason: "scan_cap" } : {}),
+  };
+}
+
+async function queryDatastoreResourceSql(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+  fields: Array<{ id: string; type: string }>,
+  config: AppConfig,
+  options: FetchBcnJsonOptions,
+): Promise<GeoScanResult> {
+  const sqlPlan = buildDatastoreSqlPlan(input, coordinateFields, fields, config);
+  const url = buildBcnDatastoreUrl("datastore_search_sql");
+  const raw = await fetchBcnActionResult(
+    {
+      method: "POST",
+      url,
+      body: { sql: sqlPlan.actualSql },
+    },
+    config,
+    options,
+  );
+  const parsed = datastoreSqlResponseSchema.safeParse(raw);
+
+  if (!parsed.success) {
+    throw new BcnError(
+      "invalid_response",
+      `Invalid Open Data BCN datastore_search_sql geo response: ${formatZodError(parsed.error)}`,
+      { cause: parsed.error },
+    );
+  }
+
+  const matchedRows: BcnGeoRow[] = [];
+  let upstreamTotal: number | null | undefined;
+  const rawRecords = sqlPlan.localPostFilterMode
+    ? parsed.data.records.slice(0, config.bcnGeoScanMaxRows)
+    : parsed.data.records;
+
+  for (const rawRow of rawRecords) {
+    const row = normalizeBcnJsonObject(rawRow, "records[]");
+    upstreamTotal ??= getSqlMatchedTotal(row);
+    const sourceRow = stripSqlHelperFields(row);
+    const geoRow = toMatchedGeoRow(sourceRow, coordinateFields, input);
+
+    if (geoRow) {
+      matchedRows.push(geoRow);
+    }
+  }
+
+  upstreamTotal ??= parsed.data.records.length === 0 ? 0 : null;
+  const matchedRowCount = input.contains
+    ? matchedRows.length
+    : (upstreamTotal ?? matchedRows.length);
+  const scanCapped =
+    sqlPlan.localPostFilterMode &&
+    (parsed.data.records.length > config.bcnGeoScanMaxRows ||
+      (typeof upstreamTotal === "number" && upstreamTotal > config.bcnGeoScanMaxRows));
+
+  return {
+    strategy: "datastore",
+    datastoreMode: "sql",
+    requestMethod: "POST",
+    requestUrl: url,
+    logicalRequestBody: { sql: sqlPlan.logicalSql },
+    coordinateFields,
+    rowsPrePaged: !sqlPlan.localPostFilterMode,
+    rowsSortedByDistance: input.near !== undefined,
+    scannedRowCount: rawRecords.length,
+    matchedRowCount,
+    matchedRows,
+    upstreamTotal,
+    ...(scanCapped ? { truncationReason: "scan_cap" as const } : {}),
   };
 }
 
@@ -423,6 +530,9 @@ async function scanDownloadResource(
     mimetype: metadata.mimetype,
     url: download.url,
   });
+  if (format === "json") {
+    assertGeoJsonWithinParseLimit(download.bytes, download.truncated);
+  }
   const decoded = decodePreviewBytes(download.bytes, download.contentType);
   const parsedRows =
     format === "csv"
@@ -453,6 +563,24 @@ async function scanDownloadResource(
         ? { truncationReason: "scan_cap" as const }
         : {}),
   };
+}
+
+function assertGeoJsonWithinParseLimit(bytes: Uint8Array, truncated: boolean): void {
+  if (!truncated && bytes.byteLength <= BCN_GEO_JSON_MAX_BYTES) {
+    return;
+  }
+
+  throw new BcnError(
+    "invalid_input",
+    "BCN geo JSON download scans are limited because JSON rows are not streamed; use a DataStore-active resource, a CSV resource, or a smaller JSON download.",
+    {
+      source_error: {
+        limit_bytes: BCN_GEO_JSON_MAX_BYTES,
+        received_bytes: bytes.byteLength,
+        byte_truncated: truncated,
+      },
+    },
+  );
 }
 
 function normalizeGeoInput(input: BcnQueryResourceGeoInput, config: AppConfig): NormalizedGeoInput {
@@ -674,20 +802,307 @@ function getDatastoreRequestFields(
   input: NormalizedGeoInput,
   coordinateFields: BcnCoordinateFields,
 ): string[] | undefined {
+  const collected = collectGeoRequestFieldNames(input, coordinateFields);
+  return collected ? [...new Set(collected)] : undefined;
+}
+
+function collectGeoRequestFieldNames(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+): string[] | undefined {
   if (!input.fields) {
     return undefined;
   }
 
   return [
-    ...new Set([
-      ...input.fields,
-      coordinateFields.lat,
-      coordinateFields.lon,
-      ...(input.group_by ? [input.group_by] : []),
-      ...Object.keys(input.filters ?? {}),
-      ...Object.keys(input.contains ?? {}),
-    ]),
+    ...input.fields,
+    coordinateFields.lat,
+    coordinateFields.lon,
+    ...(input.group_by ? [input.group_by] : []),
+    ...Object.keys(input.filters ?? {}),
+    ...Object.keys(input.contains ?? {}),
   ];
+}
+
+interface DatastoreSqlPlan {
+  actualSql: string;
+  localPostFilterMode: boolean;
+  logicalSql: string;
+}
+
+function buildDatastoreSqlPlan(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+  fields: Array<{ id: string; type: string }>,
+  config: AppConfig,
+): DatastoreSqlPlan {
+  const fieldIds = fields.map((field) => field.id);
+  const selectedFields = getSqlSelectedFields(input, coordinateFields, fieldIds);
+  const whereClauses = [
+    ...buildSpatialSqlWhere(input, coordinateFields),
+    ...buildFilterSqlWhere(input.filters, fieldIds),
+  ];
+  const whereSql = whereClauses.length > 0 ? ` WHERE ${whereClauses.join(" AND ")}` : "";
+  const orderSql = input.near
+    ? ` ORDER BY ${getSqlDistanceExpression(input.near, coordinateFields)} ASC`
+    : fieldIds.includes("_id")
+      ? ' ORDER BY "_id" ASC'
+      : "";
+  const localPostFilterMode = Boolean(input.group_by || input.contains);
+  const actualLimit = localPostFilterMode ? config.bcnGeoScanMaxRows + 1 : input.limit + 1;
+  const actualOffset = localPostFilterMode ? 0 : input.offset;
+  const actualSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, true);
+  const logicalSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, false);
+  const fromSql = ` FROM ${quoteSqlIdentifier(input.resource_id)}`;
+
+  return {
+    actualSql: `${actualSelect}${fromSql}${whereSql}${orderSql} LIMIT ${actualLimit} OFFSET ${actualOffset}`,
+    localPostFilterMode,
+    logicalSql: `${logicalSelect}${fromSql}${whereSql}${orderSql} LIMIT ${input.limit} OFFSET ${input.offset}`,
+  };
+}
+
+function getSqlSelectedFields(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+  fieldIds: string[],
+): string[] | undefined {
+  const requested = collectGeoRequestFieldNames(input, coordinateFields);
+
+  if (!requested) {
+    return undefined;
+  }
+
+  return [...new Set(requested.map((field) => requireSqlField(field, fieldIds)))];
+}
+
+function buildSqlSelectList(
+  selectedFields: string[] | undefined,
+  coordinateFields: BcnCoordinateFields,
+  near: Required<BcnGeoNearInput> | undefined,
+  includeMatchedTotal: boolean,
+): string {
+  const selectItems =
+    selectedFields === undefined ? ["*"] : selectedFields.map((field) => quoteSqlIdentifier(field));
+
+  if (selectedFields !== undefined) {
+    for (const field of [coordinateFields.lat, coordinateFields.lon]) {
+      const quoted = quoteSqlIdentifier(field);
+      if (!selectItems.includes(quoted)) {
+        selectItems.push(quoted);
+      }
+    }
+  }
+
+  if (near) {
+    selectItems.push(
+      `${getSqlDistanceExpression(near, coordinateFields)} AS ${quoteSqlIdentifier(BCN_SQL_DISTANCE_FIELD)}`,
+    );
+  }
+
+  if (includeMatchedTotal) {
+    selectItems.push(`COUNT(*) OVER() AS ${quoteSqlIdentifier(BCN_SQL_MATCHED_TOTAL_FIELD)}`);
+  }
+
+  return `SELECT ${selectItems.join(", ")}`;
+}
+
+function buildSpatialSqlWhere(
+  input: NormalizedGeoInput,
+  coordinateFields: BcnCoordinateFields,
+): string[] {
+  if (input.near) {
+    const bbox = getNearBbox(input.near);
+    return [
+      ...buildBboxSqlWhere(bbox, coordinateFields),
+      `${getSqlDistanceExpression(input.near, coordinateFields)} <= ${formatSqlNumber(input.near.radius_m)}`,
+    ];
+  }
+
+  return input.bbox ? buildBboxSqlWhere(input.bbox, coordinateFields) : [];
+}
+
+function buildBboxSqlWhere(bbox: BcnGeoBboxInput, coordinateFields: BcnCoordinateFields): string[] {
+  const latExpr = getSqlCoordinateExpression(coordinateFields.lat);
+  const lonExpr = getSqlCoordinateExpression(coordinateFields.lon);
+
+  return [
+    `${latExpr} BETWEEN ${formatSqlNumber(bbox.min_lat)} AND ${formatSqlNumber(bbox.max_lat)}`,
+    `${lonExpr} BETWEEN ${formatSqlNumber(bbox.min_lon)} AND ${formatSqlNumber(bbox.max_lon)}`,
+  ];
+}
+
+function buildFilterSqlWhere(
+  filters: Record<string, JsonValue> | undefined,
+  fieldIds: string[],
+): string[] {
+  if (!filters) {
+    return [];
+  }
+
+  return Object.entries(filters).map(([field, value]) =>
+    buildFilterSqlClause(requireSqlField(field, fieldIds), value),
+  );
+}
+
+function buildFilterSqlClause(field: string, value: JsonValue): string {
+  const identifier = quoteSqlIdentifier(field);
+
+  if (Array.isArray(value)) {
+    const nonNullValues = value.filter((item) => item !== null);
+    const clauses: string[] = [];
+
+    if (nonNullValues.some((item) => Array.isArray(item) || typeof item === "object")) {
+      throw new BcnError(
+        "invalid_input",
+        "SQL-backed BCN geo filters support scalar values or arrays of scalar values only.",
+        {
+          source_error: {
+            field,
+          },
+        },
+      );
+    }
+
+    if (nonNullValues.length > 0) {
+      clauses.push(`${identifier} IN (${nonNullValues.map(formatSqlLiteral).join(", ")})`);
+    }
+
+    if (nonNullValues.length !== value.length) {
+      clauses.push(`${identifier} IS NULL`);
+    }
+
+    if (clauses.length === 0) {
+      throw new BcnError("invalid_input", "SQL geo filters cannot use an empty array.");
+    }
+
+    return clauses.length === 1 ? clauses[0] : `(${clauses.join(" OR ")})`;
+  }
+
+  if (value === null) {
+    return `${identifier} IS NULL`;
+  }
+
+  if (typeof value === "object") {
+    throw new BcnError(
+      "invalid_input",
+      "SQL-backed BCN geo filters support scalar values or arrays of scalar values only.",
+      {
+        source_error: {
+          field,
+        },
+      },
+    );
+  }
+
+  return `${identifier} = ${formatSqlLiteral(value)}`;
+}
+
+function getSqlDistanceExpression(
+  near: Required<BcnGeoNearInput>,
+  coordinateFields: BcnCoordinateFields,
+): string {
+  const latExpr = getSqlCoordinateExpression(coordinateFields.lat);
+  const lonExpr = getSqlCoordinateExpression(coordinateFields.lon);
+  const nearLat = formatSqlNumber(near.lat);
+  const nearLon = formatSqlNumber(near.lon);
+
+  return [
+    "(6371000 * 2 * ASIN(SQRT(",
+    `POWER(SIN(RADIANS((${latExpr} - ${nearLat}) / 2)), 2)`,
+    ` + COS(RADIANS(${nearLat})) * COS(RADIANS(${latExpr})) * POWER(SIN(RADIANS((${lonExpr} - ${nearLon}) / 2)), 2)`,
+    ")))",
+  ].join("");
+}
+
+function getSqlCoordinateExpression(field: string): string {
+  const textValue = `NULLIF(TRIM(REPLACE(${quoteSqlIdentifier(field)}::text, ',', '.')), '')`;
+  return `(CASE WHEN ${textValue} ~ '^-?[0-9]+(\\.[0-9]+)?$' THEN ${textValue}::double precision ELSE NULL END)`;
+}
+
+function getNearBbox(near: Required<BcnGeoNearInput>): BcnGeoBboxInput {
+  const latDelta = near.radius_m / 111_320;
+  const cosLat = Math.max(Math.cos(toRadians(near.lat)), 0.01);
+  const lonDelta = near.radius_m / (111_320 * cosLat);
+
+  return {
+    min_lat: Math.max(-90, near.lat - latDelta),
+    max_lat: Math.min(90, near.lat + latDelta),
+    min_lon: Math.max(-180, near.lon - lonDelta),
+    max_lon: Math.min(180, near.lon + lonDelta),
+  };
+}
+
+function requireSqlField(field: string, fieldIds: string[]): string {
+  const resolved = findColumn(fieldIds, field);
+
+  if (!resolved) {
+    throw new BcnError(
+      "invalid_input",
+      `Field ${JSON.stringify(field)} is not in the DataStore schema.`,
+      {
+        source_error: {
+          field,
+          available_fields: fieldIds,
+        },
+      },
+    );
+  }
+
+  return resolved;
+}
+
+function quoteSqlIdentifier(value: string): string {
+  return `"${value.replace(/"/gu, '""')}"`;
+}
+
+function formatSqlLiteral(value: JsonValue): string {
+  if (value === null) {
+    return "NULL";
+  }
+
+  if (typeof value === "number") {
+    return formatSqlNumber(value);
+  }
+
+  if (typeof value === "boolean") {
+    return value ? "TRUE" : "FALSE";
+  }
+
+  if (Array.isArray(value) || typeof value === "object") {
+    throw new BcnError("invalid_input", "SQL geo filters do not support object values.");
+  }
+
+  return `'${value.replace(/'/gu, "''")}'`;
+}
+
+function formatSqlNumber(value: number): string {
+  if (!Number.isFinite(value)) {
+    throw new BcnError("invalid_input", "SQL geo numeric value must be finite.");
+  }
+
+  return String(value);
+}
+
+function getSqlMatchedTotal(row: Record<string, JsonValue>): number | null | undefined {
+  const total = row[BCN_SQL_MATCHED_TOTAL_FIELD];
+
+  if (typeof total === "number" && Number.isSafeInteger(total)) {
+    return total;
+  }
+
+  if (typeof total === "string" && /^\d+$/u.test(total)) {
+    return Number(total);
+  }
+
+  return undefined;
+}
+
+function stripSqlHelperFields(row: Record<string, JsonValue>): Record<string, JsonValue> {
+  const cleaned = { ...row };
+  delete cleaned[BCN_SQL_MATCHED_TOTAL_FIELD];
+  delete cleaned[BCN_SQL_DISTANCE_FIELD];
+  return cleaned;
 }
 
 function parseGeoCsvRows(text: string, byteTruncated: boolean, maxRows: number): ParsedGeoRows {
@@ -910,20 +1325,41 @@ function createGroups(
     const key = row[field] ?? null;
     const mapKey = JSON.stringify(key);
     const existing = groups.get(mapKey);
+    const distance = getGeoRowDistance(row);
 
     if (existing) {
       existing.count += 1;
+      if (
+        distance !== undefined &&
+        (existing.min_distance_m === undefined || distance < existing.min_distance_m)
+      ) {
+        existing.min_distance_m = distance;
+        existing.sample_nearest = projectGeoRow(row, projectedSampleFields);
+      }
       continue;
     }
 
+    const sample = projectGeoRow(row, projectedSampleFields);
     groups.set(mapKey, {
       key,
       count: 1,
-      sample: projectGeoRow(row, projectedSampleFields),
+      sample,
+      ...(distance === undefined
+        ? {}
+        : {
+            min_distance_m: distance,
+            sample_nearest: sample,
+          }),
     });
   }
 
   return [...groups.values()].sort((a, b) => b.count - a.count).slice(0, limit);
+}
+
+function getGeoRowDistance(row: BcnGeoRow): number | undefined {
+  const distance = row._geo.distance_m;
+
+  return typeof distance === "number" && Number.isFinite(distance) ? distance : undefined;
 }
 
 function withGeoTruncation(

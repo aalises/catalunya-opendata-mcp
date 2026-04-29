@@ -549,14 +549,22 @@ async function runStressProfile(client) {
         radius_m: 1_500,
       },
       fields: ["name", "addresses_road_name", "addresses_neighborhood_name"],
+      group_by: "addresses_neighborhood_name",
+      group_limit: 5,
       limit: 5,
     },
     expect: ({ data }) =>
       passIf(
         data.strategy === "datastore" &&
+          data.datastore_mode === "sql" &&
           data.row_count > 0 &&
-          typeof data.rows?.[0]?._geo?.distance_m === "number",
-        "BCN geo near query returns facilities sorted with distance metadata",
+          typeof data.rows?.[0]?._geo?.distance_m === "number" &&
+          data.groups?.some(
+            (group) =>
+              typeof group.min_distance_m === "number" &&
+              group.sample_nearest?._geo?.distance_m === group.min_distance_m,
+          ),
+        "BCN geo near query uses SQL pushdown and returns nearest group samples",
       ),
   });
 

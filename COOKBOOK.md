@@ -327,7 +327,7 @@ Use the general geo helper against a coordinate-bearing resource. This is not ha
 }
 ```
 
-Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. If `truncation_reason` is `scan_cap`, treat counts as partial and narrow the query or raise the local geo scan cap.
+Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. For `near` queries, groups also include `min_distance_m` and `sample_nearest`. If `truncation_reason` is `scan_cap`, treat counts as partial and narrow the query or raise the local geo scan cap.
 
 ## Open Data BCN: Facilities Near A Coordinate
 
@@ -353,7 +353,7 @@ The connector does not geocode place names. Provide coordinates from the caller 
 }
 ```
 
-Rows are sorted by `_geo.distance_m` for `near` queries. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`. If `scan_cap` appears on a large resource, farther pages may contain additional nearby rows.
+Rows are sorted by `_geo.distance_m` for `near` queries. DataStore resources with `near` or `bbox` use generated CKAN SQL internally, so large active resources avoid upstream-order scan misses while keeping the public input structured. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`; if `scan_cap` appears, treat the result as partial.
 
 ## IDESCAT: Recover When Geography Is Unavailable
 

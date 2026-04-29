@@ -231,6 +231,7 @@ describe("createMcpServer", () => {
         bcnCkanSuccess({
           records: [
             {
+              _bcn_matched_total: 1,
               _id: 1,
               name: "Point A",
               latitud: 41.4036,
@@ -258,6 +259,7 @@ describe("createMcpServer", () => {
         data: {
           resource_id: "resource-1",
           strategy: "datastore",
+          datastore_mode: "sql",
           coordinate_fields: {
             lat: "latitud",
             lon: "longitud",

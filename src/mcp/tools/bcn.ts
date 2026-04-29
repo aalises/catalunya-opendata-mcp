@@ -104,7 +104,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
       title: "bcn.query_resource_geo",
       description: [
         "Run a bounded geospatial query over an Open Data BCN resource with WGS84 latitude/longitude columns.",
-        "Works for DataStore-active resources and safe BCN-hosted CSV/JSON downloads.",
+        "Works for DataStore-active resources and safe BCN-hosted CSV/JSON downloads; active near/bbox calls use generated CKAN SQL internally.",
         "Use near for distance queries, bbox for rectangular areas, contains for street/name text filters, and group_by for counts such as species by street.",
         "Coordinate fields are inferred from common BCN names such as latitud/longitud, geo_epgs_4326_lat/geo_epgs_4326_lon, and geo_epgs_4326_y/geo_epgs_4326_x; pass lat_field/lon_field when ambiguous.",
       ].join(" "),
@@ -157,7 +157,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
               "1. Discover candidate packages with `bcn_search_packages`. Choose the package whose title, description, tags, and resource formats match the user's request.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
-              "4. For place-aware questions, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist.",
+              "4. For place-aware questions, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist; active DataStore `near`/`bbox` calls use generated CKAN SQL internally, and grouped `near` results include nearest samples.",
               "5. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
               "6. For inactive DataStore resources when only a sample is needed, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
               "7. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
@@ -375,11 +375,14 @@ function createBcnSchemas(config: AppConfig) {
   const geoGroupSchema = z.object({
     key: jsonValueSchema,
     count: z.number().int().nonnegative(),
+    min_distance_m: z.number().nonnegative().optional(),
     sample: z.record(jsonValueSchema).optional(),
+    sample_nearest: z.record(jsonValueSchema).optional(),
   });
   const geoDataSchema = z.object({
     resource_id: z.string(),
     strategy: z.enum(["datastore", "download_stream"]),
+    datastore_mode: z.enum(["scan", "sql"]).optional(),
     request_method: z.enum(["GET", "POST"]),
     request_url: z.string().url(),
     logical_request_body: z.record(jsonValueSchema).optional(),

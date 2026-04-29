@@ -57,7 +57,7 @@ The stress profile is the adapter-health suite. It currently targets the same co
 - `IDESCAT: 71`
 - `Total: 133`
 
-It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN geospatial queries, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
+It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN geospatial queries with DataStore SQL pushdown and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
 
 ## Scoring
 

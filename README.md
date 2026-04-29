@@ -297,7 +297,7 @@ The response includes `request_body` with the logical replayable request, row co
 
 ### 4. Query Resources Geospatially
 
-Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
+Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. DataStore resources with `near` or `bbox` use generated `datastore_search_sql` internally so spatial narrowing happens upstream; callers still provide only structured inputs, never raw SQL. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
 
 Street or name matching uses `contains`:
 
@@ -328,9 +328,9 @@ Nearby queries use explicit coordinates:
 }
 ```
 
-The response includes `strategy`, `coordinate_fields`, `_geo` coordinates with optional `distance_m`, scan counts, match counts, truncation flags, `upstream_total` for DataStore resources when CKAN returns it, and `groups` when `group_by` is provided.
+The response includes `strategy`, `datastore_mode` (`sql` or `scan`) for DataStore resources, `coordinate_fields`, `_geo` coordinates with optional `distance_m`, scan counts, match counts, truncation flags, `upstream_total` for DataStore resources when CKAN returns it, and `groups` when `group_by` is provided. Group rows include `count`, `sample`, and for `near` queries `min_distance_m` plus `sample_nearest`.
 
-Geo helpers are bounded scans, not a spatial index. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are parsed as complete byte-capped JSON documents, so very large JSON resources may need a CSV or DataStore resource instead.
+Geo helpers remain bounded. DataStore `near` and `bbox` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
 
 ### 5. Preview Inactive CSV/JSON Resources
 

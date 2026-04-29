@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import {
+  BCN_GEO_JSON_MAX_BYTES,
   getBcnDistanceMeters,
   inferBcnCoordinateFields,
   normalizeBcnGeoText,
@@ -63,6 +64,7 @@ describe("BCN geo helpers", () => {
       ckanSuccess({
         records: [
           {
+            _bcn_matched_total: 2,
             _id: 1,
             name: "Library A",
             addresses_road_name: "Carrer Mallorca",
@@ -71,6 +73,7 @@ describe("BCN geo helpers", () => {
             geo_epgs_4326_lon: 2.1744,
           },
           {
+            _bcn_matched_total: 2,
             _id: 2,
             name: "Library B",
             addresses_road_name: "Carrer Mallorca",
@@ -78,16 +81,7 @@ describe("BCN geo helpers", () => {
             geo_epgs_4326_lat: 41.404,
             geo_epgs_4326_lon: 2.175,
           },
-          {
-            _id: 3,
-            name: "Far",
-            addresses_road_name: "Carrer Mallorca",
-            secondary_filters_name: "School",
-            geo_epgs_4326_lat: 41.45,
-            geo_epgs_4326_lon: 2.2,
-          },
         ],
-        total: 3,
       }),
     );
 
@@ -109,22 +103,16 @@ describe("BCN geo helpers", () => {
       resource_id: "resource-1",
       limit: 0,
     });
-    const [, pageInit] = fetchMock.mock.calls[2] as [URL, RequestInit];
-    expect(JSON.parse(String(pageInit.body))).toEqual({
-      resource_id: "resource-1",
-      limit: 1000,
-      offset: 0,
-      fields: [
-        "_id",
-        "name",
-        "geo_epgs_4326_lat",
-        "geo_epgs_4326_lon",
-        "secondary_filters_name",
-        "addresses_road_name",
-      ],
-    });
+    const [sqlUrl, sqlInit] = fetchMock.mock.calls[2] as [URL, RequestInit];
+    expect(sqlUrl.toString()).toContain("datastore_search_sql");
+    const sqlBody = JSON.parse(String(sqlInit.body)) as { sql: string };
+    expect(sqlBody.sql).toContain('FROM "resource-1"');
+    expect(sqlBody.sql).toContain('"_bcn_matched_total"');
+    expect(sqlBody.sql).toContain('"addresses_road_name"');
+    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
     expect(result.data).toMatchObject({
       strategy: "datastore",
+      datastore_mode: "sql",
       coordinate_fields: {
         lat: "geo_epgs_4326_lat",
         lon: "geo_epgs_4326_lon",
@@ -148,13 +136,22 @@ describe("BCN geo helpers", () => {
         {
           key: "Library",
           count: 2,
+          min_distance_m: 0,
+          sample_nearest: {
+            _id: 1,
+            name: "Library A",
+            secondary_filters_name: "Library",
+            _geo: {
+              lat: 41.4036,
+              lon: 2.1744,
+              distance_m: 0,
+            },
+          },
         },
       ],
-      upstream_total: 3,
+      upstream_total: 2,
       logical_request_body: {
-        resource_id: "resource-1",
-        limit: 1,
-        offset: 0,
+        sql: expect.stringContaining("LIMIT 1 OFFSET 0"),
       },
     });
   });
@@ -174,11 +171,7 @@ describe("BCN geo helpers", () => {
         ],
       }),
       ckanSuccess({
-        records: [
-          { name: "Inside", latitud: 41.4, longitud: 2.17 },
-          { name: "Outside", latitud: 41.6, longitud: 2.4 },
-        ],
-        total: 2,
+        records: [{ _bcn_matched_total: 1, name: "Inside", latitud: 41.4, longitud: 2.17 }],
       }),
     );
 
@@ -193,9 +186,10 @@ describe("BCN geo helpers", () => {
 
     expect(result.data).toMatchObject({
       strategy: "datastore",
+      datastore_mode: "sql",
       row_count: 1,
       matched_row_count: 1,
-      upstream_total: 2,
+      upstream_total: 1,
       rows: [
         {
           name: "Inside",
@@ -207,6 +201,83 @@ describe("BCN geo helpers", () => {
       ],
     });
     expect(result.data.rows[0]?._geo).not.toHaveProperty("distance_m");
+  });
+
+  it("applies DataStore SQL contains filters before local pagination", async () => {
+    const fetchMock = mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          datastore_active: true,
+        }),
+      ),
+      ckanSuccess({
+        fields: [
+          { id: "_id", type: "int" },
+          { id: "name", type: "text" },
+          { id: "street", type: "text" },
+          { id: "latitud", type: "numeric" },
+          { id: "longitud", type: "numeric" },
+        ],
+      }),
+      ckanSuccess({
+        records: [
+          {
+            _bcn_matched_total: 3,
+            _id: 1,
+            name: "A",
+            street: "Carrer Mallorca",
+            latitud: 41.4036,
+            longitud: 2.1744,
+          },
+          {
+            _bcn_matched_total: 3,
+            _id: 2,
+            name: "B",
+            street: "Carrer Provença",
+            latitud: 41.4037,
+            longitud: 2.1745,
+          },
+          {
+            _bcn_matched_total: 3,
+            _id: 3,
+            name: "C",
+            street: "C\\ Mallorca",
+            latitud: 41.4038,
+            longitud: 2.1746,
+          },
+        ],
+      }),
+    );
+
+    const result = await queryBcnResourceGeo(
+      {
+        resource_id: "resource-1",
+        near: { lat: 41.4036, lon: 2.1744, radius_m: 500 },
+        contains: { street: "Carrer Mallorca" },
+        fields: ["_id", "street"],
+        limit: 1,
+      },
+      baseConfig,
+    );
+
+    const [, sqlInit] = fetchMock.mock.calls[2] as [URL, RequestInit];
+    const sqlBody = JSON.parse(String(sqlInit.body)) as { sql: string };
+    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
+    expect(result.data).toMatchObject({
+      datastore_mode: "sql",
+      scanned_row_count: 3,
+      matched_row_count: 2,
+      upstream_total: 3,
+      row_count: 1,
+      truncated: true,
+      truncation_reason: "row_cap",
+      rows: [
+        {
+          _id: 1,
+          street: "Carrer Mallorca",
+        },
+      ],
+    });
   });
 
   it("scans safe CSV downloads with text filters and group counts", async () => {
@@ -356,6 +427,40 @@ describe("BCN geo helpers", () => {
           },
         },
       ],
+    });
+  });
+
+  it("rejects large JSON geo downloads instead of parsing them whole", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          format: "JSON",
+          mimetype: "application/json",
+          url: "https://opendata-ajuntament.barcelona.cat/download/points.json",
+        }),
+      ),
+      new Response(`[${" ".repeat(BCN_GEO_JSON_MAX_BYTES + 1)}]`, {
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        status: 200,
+      }),
+    );
+
+    await expect(
+      queryBcnResourceGeo(
+        {
+          resource_id: "resource-1",
+          bbox: { min_lat: 41, min_lon: 2, max_lat: 42, max_lon: 3 },
+        },
+        baseConfig,
+      ),
+    ).rejects.toMatchObject({
+      code: "invalid_input",
+      message: expect.stringContaining("JSON download scans are limited"),
+      source_error: {
+        limit_bytes: BCN_GEO_JSON_MAX_BYTES,
+        received_bytes: expect.any(Number),
+        byte_truncated: false,
+      },
     });
   });
 
