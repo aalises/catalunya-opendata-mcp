@@ -129,6 +129,7 @@ describe("createMcpServer", () => {
           "bcn_get_package",
           "bcn_get_resource_info",
           "bcn_query_resource",
+          "bcn_resolve_place",
           "bcn_query_resource_geo",
           "bcn_preview_resource",
         ]),
@@ -142,6 +143,7 @@ describe("createMcpServer", () => {
       expect(descriptions.bcn_search_packages).toContain("Open Data BCN");
       expect(descriptions.bcn_query_resource).toContain("bcn_get_resource_info");
       expect(descriptions.bcn_query_resource).toContain("filters as a JSON object");
+      expect(descriptions.bcn_resolve_place).toContain("named place");
       expect(descriptions.bcn_query_resource_geo).toContain("geospatial query");
       expect(descriptions.bcn_query_resource_geo).toContain("group_by");
       expect(descriptions.bcn_preview_resource).toContain("HTTPS BCN-hosted");
@@ -200,6 +202,70 @@ describe("createMcpServer", () => {
         provenance: {
           source: "bcn",
           id: "opendata-ajuntament.barcelona.cat:package_search",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN place resolver output with JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
+      bcnCkanSuccess({
+        fields: [
+          { id: "name", type: "text" },
+          { id: "addresses_road_name", type: "text" },
+          { id: "addresses_neighborhood_name", type: "text" },
+          { id: "addresses_district_name", type: "text" },
+          { id: "secondary_filters_name", type: "text" },
+          { id: "geo_epgs_4326_lat", type: "numeric" },
+          { id: "geo_epgs_4326_lon", type: "numeric" },
+        ],
+        records: [
+          {
+            name: "Park Güell. Museu d'Història de Barcelona",
+            addresses_road_name: "C Olot",
+            addresses_neighborhood_name: "la Salut",
+            addresses_district_name: "Gràcia",
+            secondary_filters_name: "Museus",
+            geo_epgs_4326_lat: "41.41350925781701",
+            geo_epgs_4326_lon: "2.153127208234728",
+          },
+        ],
+        total: 1,
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_resolve_place",
+        arguments: {
+          query: "Park",
+          kinds: ["landmark"],
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          query: "Park",
+          strategy: "datastore",
+          candidate_count: 1,
+          candidates: [
+            {
+              name: "Park Güell. Museu d'Història de Barcelona",
+              kind: "landmark",
+              lat: 41.41350925781701,
+              lon: 2.153127208234728,
+            },
+          ],
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:place_resolve",
         },
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);

@@ -11,6 +11,7 @@ import {
 } from "../../sources/bcn/catalog.js";
 import { BcnError, isBcnError } from "../../sources/bcn/client.js";
 import { queryBcnResourceGeo } from "../../sources/bcn/geo.js";
+import { resolveBcnPlace } from "../../sources/bcn/place.js";
 import { previewBcnResource } from "../../sources/bcn/preview.js";
 import { queryBcnResource } from "../../sources/bcn/query.js";
 import { getBcnResourceInfo } from "../../sources/bcn/resource.js";
@@ -99,6 +100,27 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
   );
 
   server.registerTool(
+    "bcn_resolve_place",
+    {
+      title: "bcn.resolve_place",
+      description: [
+        "Resolve a Barcelona place name to candidate WGS84 coordinates using only source-bounded Open Data BCN DataStore resources.",
+        "Use this before bcn_query_resource_geo when the user gives a named place instead of lat/lon.",
+        "Supports optional bbox and kind filters for facilities, landmarks, streets, neighborhoods, and districts.",
+      ].join(" "),
+      inputSchema: schemas.inputs.resolvePlace,
+      outputSchema: schemas.outputs.resolvePlace,
+    },
+    async (input, extra) =>
+      wrapBcnTool("place_resolve", async () =>
+        resolveBcnPlace(input, config, {
+          logger: logger.child({ op: "place_resolve" }),
+          signal: extra.signal,
+        }),
+      ),
+  );
+
+  server.registerTool(
     "bcn_query_resource_geo",
     {
       title: "bcn.query_resource_geo",
@@ -157,10 +179,11 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
               "1. Discover candidate packages with `bcn_search_packages`. Choose the package whose title, description, tags, and resource formats match the user's request.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
-              "4. For place-aware questions, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist; active DataStore `near`/`bbox` calls use generated CKAN SQL internally, and grouped `near` results include nearest samples.",
-              "5. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
-              "6. For inactive DataStore resources when only a sample is needed, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
-              "7. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
+              "4. When the user gives a named place rather than coordinates, call `bcn_resolve_place` and choose the best candidate before using `bcn_query_resource_geo.near`.",
+              "5. For place-aware questions with known coordinates, use `bcn_query_resource_geo` with `near`, `bbox`, `contains`, and optional `group_by`. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads when WGS84 coordinate fields exist; active DataStore `near`/`bbox` calls use generated CKAN SQL internally, and grouped `near` results include nearest samples.",
+              "6. Query active DataStore resources with `bcn_query_resource`. Pass structured `filters` as a JSON object; do not pass raw CKAN SQL or URL fragments.",
+              "7. For inactive DataStore resources when only a sample is needed, call `bcn_preview_resource` for a bounded CSV/JSON preview. Treat it as a sample, not a full export.",
+              "8. Cite `bcn_get_package`, `bcn_get_resource_info`, or the `bcn://packages/{package_id}` / `bcn://resources/{resource_id}/schema` resources.",
             ].join("\n"),
           },
         },
@@ -367,6 +390,32 @@ function createBcnSchemas(config: AppConfig) {
     max_lat: z.number().min(-90).max(90),
     max_lon: z.number().min(-180).max(180),
   });
+  const placeKindSchema = z.enum(["facility", "landmark", "street", "neighborhood", "district"]);
+  const placeCandidateSchema = z.object({
+    name: z.string(),
+    lat: z.number(),
+    lon: z.number(),
+    kind: placeKindSchema,
+    score: z.number(),
+    matched_fields: z.array(z.string()),
+    address: z.string().optional(),
+    district: z.string().optional(),
+    neighborhood: z.string().optional(),
+    source_resource_id: z.string(),
+    source_package_id: z.string().optional(),
+    source_url: z.string().url(),
+  });
+  const placeDataSchema = z.object({
+    query: z.string(),
+    query_variants: z.array(z.string()),
+    kinds: z.array(placeKindSchema).optional(),
+    bbox: geoBboxSchema.optional(),
+    strategy: z.literal("datastore"),
+    limit: z.number().int().min(1),
+    candidate_count: z.number().int().nonnegative(),
+    candidates: z.array(placeCandidateSchema),
+    truncated: z.boolean(),
+  });
   const geoRowSchema = z.record(jsonValueSchema).and(
     z.object({
       _geo: z.record(jsonValueSchema),
@@ -446,6 +495,12 @@ function createBcnSchemas(config: AppConfig) {
         limit: positiveLimitSchema,
         offset: offsetSchema,
       },
+      resolvePlace: {
+        query: z.string().trim().min(1),
+        kinds: z.array(placeKindSchema).optional(),
+        bbox: geoBboxSchema.optional(),
+        limit: positiveLimitSchema,
+      },
       queryResourceGeo: {
         resource_id: z.string(),
         near: geoNearSchema.partial({ radius_m: true }).optional(),
@@ -478,6 +533,7 @@ function createBcnSchemas(config: AppConfig) {
       getPackage: toolResultSchema(packageDataSchema),
       getResourceInfo: toolResultSchema(resourceInfoSchema),
       queryResource: toolResultSchema(queryDataSchema),
+      resolvePlace: toolResultSchema(placeDataSchema),
       queryResourceGeo: toolResultSchema(geoDataSchema),
       previewResource: toolResultSchema(previewDataSchema),
     },

@@ -329,13 +329,26 @@ Use the general geo helper against a coordinate-bearing resource. This is not ha
 
 Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. For `near` queries, groups also include `min_distance_m` and `sample_nearest`. If `truncation_reason` is `scan_cap`, treat counts as partial and narrow the query or raise the local geo scan cap.
 
-## Open Data BCN: Facilities Near A Coordinate
+## Open Data BCN: Facilities Near A Place
 
 User prompt:
 
 > Show facilities near Sagrada Familia.
 
-The connector does not geocode place names. Provide coordinates from the caller or another trusted tool, then use `near`:
+First resolve the place name with BCN-bounded source data:
+
+```json
+{
+  "tool": "bcn_resolve_place",
+  "arguments": {
+    "query": "Sagrada Familia",
+    "kinds": ["landmark"],
+    "limit": 3
+  }
+}
+```
+
+Then pass the selected candidate's `lat` and `lon` into `near`:
 
 ```json
 {

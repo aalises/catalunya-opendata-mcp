@@ -11,13 +11,13 @@ const PROFILE_CASE_COUNTS = {
   canary: {
     mcp: 1,
     socrata: 4,
-    bcn: 4,
+    bcn: 5,
     idescat: 13,
   },
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 8,
+    bcn: 11,
     idescat: 71,
   },
 };
@@ -236,6 +236,32 @@ async function runCanaryProfile(client) {
           data.rows?.length <= 2 &&
           data.columns?.length > 0,
         "BCN inactive arbrat-viari CSV resource returns a bounded preview",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.sagrada_familia",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Sagrada Familia",
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.strategy === "datastore" &&
+          data.query_variants?.includes("sagrada") &&
+          data.candidates?.some(
+            (candidate) =>
+              typeof candidate.lat === "number" &&
+              typeof candidate.lon === "number" &&
+              candidate.matched_fields?.some((field) =>
+                ["name", "addresses_neighborhood_name"].includes(field),
+              ),
+          ),
+        "BCN place resolver finds Sagrada Familia candidates without external geocoding",
       ),
   });
 
@@ -541,17 +567,33 @@ async function runStressProfile(client) {
     connector: "bcn",
     category: "geo",
     tool: "bcn_query_resource_geo",
-    args: {
-      resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
-      near: {
-        lat: 41.4036,
-        lon: 2.1744,
-        radius_m: 1_500,
-      },
-      fields: ["name", "addresses_road_name", "addresses_neighborhood_name"],
-      group_by: "addresses_neighborhood_name",
-      group_limit: 5,
-      limit: 5,
+    args: async () => {
+      const resolved = await client.callTool({
+        name: "bcn_resolve_place",
+        arguments: {
+          query: "Sagrada Família",
+          kinds: ["landmark"],
+          limit: 1,
+        },
+      });
+      const candidate = resolved.structuredContent?.data?.candidates?.[0];
+
+      if (!candidate) {
+        throw new Error("bcn_resolve_place did not return a Sagrada Família candidate");
+      }
+
+      return {
+        resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+        near: {
+          lat: candidate.lat,
+          lon: candidate.lon,
+          radius_m: 1_500,
+        },
+        fields: ["name", "addresses_road_name", "addresses_neighborhood_name"],
+        group_by: "addresses_neighborhood_name",
+        group_limit: 5,
+        limit: 5,
+      };
     },
     expect: ({ data }) =>
       passIf(
@@ -565,6 +607,47 @@ async function runStressProfile(client) {
               group.sample_nearest?._geo?.distance_m === group.min_distance_m,
           ),
         "BCN geo near query uses SQL pushdown and returns nearest group samples",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.park_guell_landmark",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "Park Guell",
+      kinds: ["landmark"],
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.candidates?.some(
+          (candidate) =>
+            candidate.kind === "landmark" &&
+            candidate.name?.toLowerCase().includes("park") &&
+            typeof candidate.lat === "number" &&
+            typeof candidate.lon === "number",
+        ),
+        "BCN place resolver handles accent-insensitive Park Güell lookup",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.place.no_result",
+    connector: "bcn",
+    category: "place",
+    tool: "bcn_resolve_place",
+    args: {
+      query: "zzzxxy",
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.candidates?.length === 0 && data.truncated === false,
+        "BCN place resolver returns an empty candidate list for nonsense places",
       ),
   });
 
