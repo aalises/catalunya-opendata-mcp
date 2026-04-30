@@ -744,6 +744,10 @@ function inferSpatialMode(
     return "near";
   }
 
+  if (hasNamedStreetPhrase(normalizedQuery) || hasStreetLikeOnPhrase(normalizedQuery)) {
+    return "contains";
+  }
+
   if (
     /\b(inside|within|district|districts|neighborhood|neighbourhood|barri|barris|districte|districtes|barrio|barrios|distrito|distritos)\b/u.test(
       normalizedQuery,
@@ -753,10 +757,7 @@ function inferSpatialMode(
     return "within";
   }
 
-  if (
-    /\b(street|carrer|calle)\b/u.test(normalizedQuery) ||
-    hasStreetLikeOnPhrase(normalizedQuery)
-  ) {
+  if (/\b(street|carrer|calle)\b/u.test(normalizedQuery)) {
     return "contains";
   }
 
@@ -779,6 +780,10 @@ function hasPlaceLikeWithinPhrase(normalizedQuery: string): boolean {
       candidate,
     )
   );
+}
+
+function hasNamedStreetPhrase(normalizedQuery: string): boolean {
+  return /\b(?:carrer|calle|placa|plaza|avinguda|avenida)\s+\S/u.test(normalizedQuery);
 }
 
 function hasStreetLikeOnPhrase(normalizedQuery: string): boolean {
@@ -887,6 +892,13 @@ function cleanupPlaceQuery(value: string, spatialMode: BcnCitySpatialMode): stri
     .replace(/[?.!,;:]+$/u, "")
     .replace(/\s+/gu, " ")
     .trim();
+
+  if (spatialMode === "contains") {
+    cleaned = cleaned
+      .replace(/\s+\b(?:in|en)\s+(?:barcelona|bcn)\b$/iu, "")
+      .replace(/\s*,\s*(?:barcelona|bcn)$/iu, "")
+      .trim();
+  }
 
   if (spatialMode === "within") {
     cleaned = cleaned
