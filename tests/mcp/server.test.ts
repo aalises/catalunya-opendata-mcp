@@ -325,7 +325,7 @@ describe("createMcpServer", () => {
               suggested_tool: "bcn_query_resource_geo",
               example_arguments: {
                 contains: {
-                  adreca: "<street name>",
+                  espai_verd: "<street name>",
                 },
                 group_by: "cat_nom_catala",
               },
@@ -371,7 +371,7 @@ describe("createMcpServer", () => {
           final_tool: "bcn_query_resource_geo",
           final_arguments: {
             contains: {
-              adreca: "Carrer Consell de Cent",
+              espai_verd: "Carrer Consell de Cent",
             },
             group_by: "cat_nom_catala",
           },
@@ -404,8 +404,8 @@ describe("createMcpServer", () => {
       .mockResolvedValueOnce(
         new Response(
           [
-            "adreca;cat_nom_catala;latitud;longitud",
-            "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+            "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+            "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
           ].join("\n"),
           {
             headers: { "Content-Type": "text/csv; charset=utf-8" },
@@ -463,8 +463,8 @@ describe("createMcpServer", () => {
       .mockResolvedValueOnce(
         new Response(
           [
-            "adreca;cat_nom_catala;latitud;longitud",
-            "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+            "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+            "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
           ].join("\n"),
           {
             headers: { "Content-Type": "text/csv; charset=utf-8" },
@@ -490,7 +490,7 @@ describe("createMcpServer", () => {
           answer_markdown: expect.stringContaining("| Plataner | 1 |"),
           answer_text: expect.stringContaining("Plataner (1)"),
           execution_notes: expect.arrayContaining([
-            "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+            "Final query used a BCN-hosted download scan; optional configured byte and row caps apply when set.",
           ]),
           execution_status: "completed",
           selected_resource: {

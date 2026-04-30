@@ -370,10 +370,10 @@ Street or name matching uses `contains`:
 {
   "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
   "contains": {
-    "adreca": "Carrer Consell de Cent"
+    "espai_verd": "Carrer Consell de Cent"
   },
   "group_by": "cat_nom_catala",
-  "fields": ["adreca", "cat_nom_catala"],
+  "fields": ["espai_verd", "adreca", "cat_nom_catala"],
   "limit": 10
 }
 ```
@@ -411,7 +411,7 @@ Area queries use `area_ref` from `bcn_resolve_place`:
 
 The response includes `strategy`, `datastore_mode` (`sql` or `scan`) for DataStore resources, `coordinate_fields`, `_geo` coordinates with optional `distance_m`, scan counts, match counts, truncation flags, `upstream_total` for fully upstream-filtered DataStore resources, and `groups` when `group_by` is provided. When a DataStore SQL query still needs local `within_place` polygon filtering, `upstream_bbox_total` reports the bbox-matching upstream count before exact polygon containment. When local `contains` filtering is applied after SQL pushdown, `upstream_prefilter_total` reports the upstream count before the local text filter. When `within_place` and `contains` are combined, both fields are present and report the same pre-local-filter count (i.e., bbox-matching rows that also satisfy the SQL `WHERE` clause). The `logical_request_body.sql` in provenance reflects the caller's logical query (using their `limit`/`offset`); the runtime issues paginated upstream calls behind it whenever local post-filtering is needed, so replaying the logical SQL verbatim returns bbox-matching rows, not the post-filtered slice. Group rows include `count`, `sample`, and for `near` queries `min_distance_m` plus `sample_nearest`.
 
-Geo helpers remain bounded. DataStore `near`, `bbox`, and `within_place` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
+DataStore `near`, `bbox`, and `within_place` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. By default, BCN geo CSV scans read the full download so late rows are not missed. If `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` is set and `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or unset the cap for trusted local runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
 
 ### 7. Preview Inactive CSV/JSON Resources
 
@@ -438,7 +438,7 @@ The server is deliberately defensive:
 - It preserves upstream error details when they help the model fix a query.
 - It maps IDESCAT cell-limit errors to `narrow_filters` with the original JSON-stat error in `source_error`.
 - It restricts Open Data BCN previews to allowlisted HTTPS BCN download hosts and caps upstream preview bytes.
-- It reuses the same BCN download allowlist for geospatial CSV/JSON scans and caps scanned bytes and rows.
+- It reuses the same BCN download allowlist for geospatial CSV/JSON scans. Optional BCN geo scan byte/row caps can be set for constrained deployments.
 
 If Socrata rejects a query, inspect `error.message`. For example, `query.soql.no-such-column` means the query used an invalid field. Return to `socrata_describe_dataset`, choose a valid `field_name`, and retry with a corrected clause.
 
@@ -456,8 +456,8 @@ The server reads configuration from environment variables supplied by the shell 
 | `CATALUNYA_MCP_RESPONSE_MAX_BYTES` | `262144` | Maximum upstream response body size. Allowed range: `65536` to `1048576`. |
 | `CATALUNYA_MCP_IDESCAT_UPSTREAM_READ_BYTES` | `8388608` | Maximum IDESCAT upstream success body to read before flattening/capping. Allowed range: `65536` to `33554432`. |
 | `CATALUNYA_MCP_BCN_UPSTREAM_READ_BYTES` | `2097152` | Maximum Open Data BCN download preview body to read before parsing/capping. Allowed range: `65536` to `16777216`. |
-| `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` | `50000` | Maximum Open Data BCN rows to scan for geospatial helper calls. Allowed range: `1000` to `100000`. |
-| `CATALUNYA_MCP_BCN_GEO_SCAN_BYTES` | `67108864` | Maximum Open Data BCN CSV/JSON download body to read for one geospatial helper call. Allowed range: `2097152` to `134217728`. |
+| `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` | unset | Optional maximum Open Data BCN rows to scan for geospatial helper calls. Unset or `0` means unlimited. |
+| `CATALUNYA_MCP_BCN_GEO_SCAN_BYTES` | unset | Optional maximum Open Data BCN CSV/JSON download body to read for one geospatial helper call. Unset or `0` means unlimited. |
 | `SOCRATA_APP_TOKEN` | unset | Optional Socrata app token for better rate-limit stability. |
 
 Example client configuration with environment overrides:

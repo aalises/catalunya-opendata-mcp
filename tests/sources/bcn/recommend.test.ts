@@ -30,12 +30,12 @@ describe("recommendBcnResources", () => {
       resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
       area_source: false,
       suggested_tool: "bcn_query_resource_geo",
-      suggested_contains_fields: ["adreca"],
+      suggested_contains_fields: ["espai_verd", "adreca"],
       suggested_group_by: ["cat_nom_catala"],
       example_arguments: {
         resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
         contains: {
-          adreca: "<street name>",
+          espai_verd: "<street name>",
         },
         group_by: "cat_nom_catala",
         limit: 20,

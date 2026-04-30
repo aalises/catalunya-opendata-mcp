@@ -408,16 +408,16 @@ Use the general geo helper against a coordinate-bearing resource. This is not ha
   "arguments": {
     "resource_id": "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
     "contains": {
-      "adreca": "Carrer Consell de Cent"
+      "espai_verd": "Carrer Consell de Cent"
     },
     "group_by": "cat_nom_catala",
-    "fields": ["adreca", "cat_nom_catala"],
+    "fields": ["espai_verd", "adreca", "cat_nom_catala"],
     "limit": 10
   }
 }
 ```
 
-Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. For `near` queries, groups also include `min_distance_m` and `sample_nearest`. If `truncation_reason` is `scan_cap`, treat counts as partial and narrow the query or raise the local geo scan cap.
+Use `groups` for the species counts and `rows` as examples with `_geo.lat` / `_geo.lon`. For `near` queries, groups also include `min_distance_m` and `sample_nearest`. If you configure a local geo scan cap and see `truncation_reason: "scan_cap"`, treat counts as partial and narrow the query or unset the cap for trusted local scans.
 
 ## Open Data BCN: Facilities Near A Place
 
@@ -456,7 +456,7 @@ Then pass the selected candidate's `lat` and `lon` into `near`:
 }
 ```
 
-Rows are sorted by `_geo.distance_m` for `near` queries. DataStore resources with `near` or `bbox` use generated CKAN SQL internally, so large active resources avoid upstream-order scan misses while keeping the public input structured. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`; if `scan_cap` appears, treat the result as partial.
+Rows are sorted by `_geo.distance_m` for `near` queries. DataStore resources with `near` or `bbox` use generated CKAN SQL internally, so large active resources avoid upstream-order scan misses while keeping the public input structured. If coordinate inference reports multiple candidate field pairs, retry with explicit `lat_field` and `lon_field`; if a configured `scan_cap` appears, treat the result as partial.
 
 ## Open Data BCN: Resolve Streets And Areas
 

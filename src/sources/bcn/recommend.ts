@@ -149,10 +149,10 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
     ],
     placeKinds: ["point", "street", "neighborhood", "district"],
     preferredTasks: ["near", "within", "count", "group", "preview"],
-    suggestedFields: ["adreca", "cat_nom_catala", "latitud", "longitud"],
-    suggestedContainsFields: ["adreca"],
+    suggestedFields: ["espai_verd", "adreca", "cat_nom_catala", "latitud", "longitud"],
+    suggestedContainsFields: ["espai_verd", "adreca"],
     suggestedGroupBy: ["cat_nom_catala"],
-    caveats: ["Not DataStore-active; geospatial queries use safe bounded CSV download scans."],
+    caveats: ["Not DataStore-active; geospatial queries use BCN-hosted CSV download scans."],
   },
   {
     title: "Municipal facilities and equipment",

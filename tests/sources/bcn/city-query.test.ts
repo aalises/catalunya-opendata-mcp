@@ -42,10 +42,37 @@ describe("BCN city query planner", () => {
       final_arguments: {
         resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
         contains: {
-          adreca: "Carrer Consell de Cent",
+          espai_verd: "Carrer Consell de Cent",
         },
         group_by: "cat_nom_catala",
         limit: 10,
+      },
+    });
+    expect(result.data.steps.map((step) => step.tool)).toEqual([
+      "bcn_recommend_resources",
+      "bcn_query_resource_geo",
+    ]);
+  });
+
+  it("keeps the street as place query when a city qualifier follows it", async () => {
+    const result = await planBcnCityQuery(
+      { query: "tree species on Carrer Vilardell in Barcelona" },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "ready",
+      intent: {
+        task: "group",
+        spatial_mode: "contains",
+        place_kind: "street",
+        place_query: "Carrer Vilardell",
+      },
+      final_arguments: {
+        contains: {
+          espai_verd: "Carrer Vilardell",
+        },
+        group_by: "cat_nom_catala",
       },
     });
     expect(result.data.steps.map((step) => step.tool)).toEqual([
@@ -67,10 +94,10 @@ describe("BCN city query planner", () => {
       ),
       csvResponse(
         [
-          "adreca;cat_nom_catala;latitud;longitud",
-          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
-          "Carrer Consell de Cent 2;Lledoner;41.391;2.161",
-          "Carrer Mallorca 1;Om;41.40;2.17",
+          "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+          "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Consell de Cent, c.;Carrer Consell de Cent 2;Lledoner;41.391;2.161",
+          "Mallorca, c.;Carrer Mallorca 1;Om;41.40;2.17",
         ].join("\n"),
       ),
     );
@@ -658,11 +685,11 @@ describe("BCN city answer composer", () => {
       ),
       csvResponse(
         [
-          "adreca;cat_nom_catala;latitud;longitud",
-          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
-          "Carrer Consell de Cent 2;Plataner;41.391;2.161",
-          "Carrer Consell de Cent 3;Lledoner;41.392;2.162",
-          "Carrer Mallorca 1;Om;41.40;2.17",
+          "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+          "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Consell de Cent, c.;Carrer Consell de Cent 2;Plataner;41.391;2.161",
+          "Consell de Cent, c.;Carrer Consell de Cent 3;Lledoner;41.392;2.162",
+          "Mallorca, c.;Carrer Mallorca 1;Om;41.40;2.17",
         ].join("\n"),
       ),
     );
@@ -912,9 +939,9 @@ describe("BCN city answer composer", () => {
       ),
       csvResponse(
         [
-          "adreca;cat_nom_catala;latitud;longitud",
-          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
-          "Carrer Consell de Cent 2;Lledoner;41.391;2.161",
+          "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+          "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Consell de Cent, c.;Carrer Consell de Cent 2;Lledoner;41.391;2.161",
         ].join("\n"),
       ),
     );
@@ -931,12 +958,12 @@ describe("BCN city answer composer", () => {
       ]),
     );
     expect(result.data.caveats).not.toContain(
-      "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+      "Final query used a BCN-hosted download scan; optional configured byte and row caps apply when set.",
     );
     expect(result.data.execution_notes).toEqual(
       expect.arrayContaining([
-        "Not DataStore-active; geospatial queries use safe bounded CSV download scans.",
-        "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+        "Not DataStore-active; geospatial queries use BCN-hosted CSV download scans.",
+        "Final query used a BCN-hosted download scan; optional configured byte and row caps apply when set.",
       ]),
     );
   });
@@ -954,9 +981,9 @@ describe("BCN city answer composer", () => {
       ),
       csvResponse(
         [
-          "adreca;cat_nom_catala;latitud;longitud",
-          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
-          "Carrer Consell de Cent 2;Lledoner;41.391;2.161",
+          "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+          "Consell de Cent, c.;Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Consell de Cent, c.;Carrer Consell de Cent 2;Lledoner;41.391;2.161",
         ].join("\n"),
       ),
     );
@@ -969,7 +996,7 @@ describe("BCN city answer composer", () => {
     expect(result.data.answer_type).toBe("grouped_counts");
     expect(result.data.caveats).toEqual(
       expect.arrayContaining([
-        "Final result was truncated because of scan_cap: scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or raise CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS",
+        "Final result was truncated because of scan_cap: scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or unset CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS for unlimited trusted local scans",
       ]),
     );
     expect(result.data.final_result?.data).toMatchObject({
@@ -1124,7 +1151,10 @@ describe("BCN city answer composer", () => {
         }),
       ),
       csvResponse(
-        ["adreca;cat_nom_catala;latitud;longitud", "Carrer Mallorca 1;Om;41.40;2.17"].join("\n"),
+        [
+          "espai_verd;adreca;cat_nom_catala;latitud;longitud",
+          "Mallorca, c.;Carrer Mallorca 1;Om;41.40;2.17",
+        ].join("\n"),
       ),
     );
 
