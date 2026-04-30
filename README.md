@@ -84,7 +84,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `bcn_recommend_resources` | Recommend high-value Open Data BCN resources for natural-language city questions such as trees on a street, facilities near a place, or district/neighborhood area queries. |
 | `bcn_plan_query` | Plan a natural-language Barcelona city question into resource, place-resolution, geo-query, and citation steps without running the final data query. |
 | `bcn_execute_city_query` | Execute a ready BCN city-query plan end-to-end with the same bounded helper tools, blocking when a resource or place choice is ambiguous. |
-| `bcn_answer_city_query` | Execute a ready BCN city-query plan and return deterministic `answer_text`, `answer_markdown`, blocked-case `selection_options`, warning `caveats`, informational `execution_notes`, citation guidance, selected resource metadata, and the raw final result. |
+| `bcn_answer_city_query` | Execute a ready BCN city-query plan and return deterministic `answer_text`, `answer_markdown`, blocked-case `selection_options`, map-ready `summary.map_points`, warning `caveats`, informational `execution_notes`, citation guidance, selected resource metadata, and the raw final result. |
 | `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
@@ -297,7 +297,7 @@ The planner returns `status`, deterministic `intent`, recommended resources, opt
 
 Use `bcn_execute_city_query` for the same input when a one-call bounded raw result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
 
-Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_markdown`, `answer_type`, compact `summary`, deduped warning `caveats` such as bbox fallback or scan caps, informational `execution_notes` such as SQL pushdown mode or bounded download scans, selected resource metadata, citation guidance, and the raw `final_result`. Blocked answers include normalized `selection_options` with labels, provenance, confidence, and `resume_arguments`; row summaries include labels and selected fields for display plus `summary.rows[].source_row` for client drill-down without re-parsing `final_result`.
+Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_markdown`, `answer_type`, compact `summary`, deduped warning `caveats` such as bbox fallback or scan caps, informational `execution_notes` such as SQL pushdown mode or bounded download scans, selected resource metadata, citation guidance, and the raw `final_result`. Blocked answers include normalized `selection_options` with labels, provenance, confidence, and `resume_arguments`; row summaries include labels and selected fields for display plus `summary.rows[].source_row` for client drill-down without re-parsing `final_result`. Row and nearest summaries also include `summary.map_points[]` when coordinates are available, with `{label, lat, lon, distance_m?, source_row}` for map rendering.
 
 ### 3. Inspect A Resource
 
@@ -500,6 +500,7 @@ Example client configuration with environment overrides:
 | `npm run lint` | Runs Biome checks. |
 | `npm run format` | Formats the repository with Biome. |
 | `npm run check` | Runs typecheck, lint, tests, smoke, and package size checks. |
+| `npm run release:check` | Runs the local check gate, then replays the full stress MCP evaluation cassette. |
 
 ## Evaluations
 
@@ -528,16 +529,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 149 live cases:
+The stress profile currently runs 152 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 24 |
+| Open Data BCN | 27 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN city-query planning/execution/answering, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN city-query planning/execution/answering, BCN answer composition for grouped, nearest, blocked, and empty answers, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 
@@ -547,7 +548,9 @@ Live evals are intentionally separate from `npm run check` because they call Gen
 
 Before opening or merging routine changes, run `npm run check`. This stays local and does not include live upstream canaries.
 
-For release readiness or adapter changes, optionally run `npm run canary:socrata`, `npm run canary:idescat`, and `npm run eval:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
+For release readiness, run `npm run release:check`. This includes `npm run check` plus `npm run eval:replay:stress`, so it covers typecheck, lint, unit tests, smoke output, package size budget, and the committed protocol-level stress cassette.
+
+For adapter changes that may need fresh live evidence, optionally run `npm run canary:socrata`, `npm run canary:idescat`, `npm run canary:bcn-registry`, `npm run eval:stress`, and, when accepting upstream drift or intentional adapter changes, `npm run eval:record:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
 
 ## Project Notes
 

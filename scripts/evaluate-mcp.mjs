@@ -17,7 +17,7 @@ const PROFILE_CASE_COUNTS = {
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 24,
+    bcn: 27,
     idescat: 71,
   },
 };
@@ -821,6 +821,95 @@ async function runStressProfile(client) {
             resource.includes("23124fd5-521f-40f8-85b8-efb1e71c2ec8"),
           ),
         "BCN city answer composes grouped species counts with raw result and citation metadata",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_answer.facilities_near_sagrada",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_answer_city_query",
+    args: {
+      query: "facilities near Sagrada Família",
+      radius_m: 1_500,
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "completed" &&
+          data.answer_type === "nearest_rows" &&
+          data.final_tool === "bcn_query_resource_geo" &&
+          data.plan?.intent?.spatial_mode === "near" &&
+          data.final_result?.data?.strategy === "datastore" &&
+          data.summary?.rows?.some((row) => row.source_row) &&
+          data.summary?.map_points?.some(
+            (point) =>
+              typeof point.lat === "number" && typeof point.lon === "number" && point.source_row,
+          ) &&
+          data.execution_notes?.some((note) => note.includes("datastore_search_sql pushdown")),
+        "BCN city answer composes nearest rows with map points, source rows, and raw result",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_answer.blocked_place_selection",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_answer_city_query",
+    args: {
+      query: "facilities in Les Corts",
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "blocked" &&
+          data.answer_type === "blocked" &&
+          data.final_result === null &&
+          data.selection_options?.selection_type === "place" &&
+          data.selection_options?.options?.some(
+            (option) =>
+              option.kind === "district" &&
+              option.resume_arguments?.place_kind === "district" &&
+              option.provenance?.area_ref,
+          ) &&
+          data.selection_options?.options?.some(
+            (option) =>
+              option.kind === "neighborhood" &&
+              option.resume_arguments?.place_kind === "neighborhood" &&
+              option.provenance?.area_ref,
+          ),
+        "BCN city answer blocks ambiguous place selection with stable resume options",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_answer.empty_resource_query",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_answer_city_query",
+    args: {
+      query: "piezometers in a non-existent district",
+      resource_id: "52696168-d8bc-4707-9a09-a21c6c2669f3",
+      task: "query",
+      filters: {
+        Districte: "NoSuchDistrict",
+      },
+      fields: ["_id", "Districte", "Barri"],
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "completed" &&
+          data.answer_type === "empty_result" &&
+          data.final_tool === "bcn_query_resource" &&
+          data.summary?.row_count === 0 &&
+          data.summary?.rows?.length === 0 &&
+          data.final_result?.data?.row_count === 0 &&
+          data.final_result?.data?.request_body?.filters?.Districte === "NoSuchDistrict",
+        "BCN city answer reports empty results while preserving the raw final_result",
       ),
   });
 

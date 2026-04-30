@@ -68,6 +68,7 @@
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
     "check": "npm run typecheck && npm run lint && npm test && npm run smoke && npm run package:size",
+    "release:check": "npm run check && npm run eval:replay:stress",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json",
     "clean": "rm -rf dist"
   },

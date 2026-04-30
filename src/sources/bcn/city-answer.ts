@@ -393,6 +393,8 @@ function buildRowSummary(
   data: JsonRecord,
   rows: JsonRecord[],
 ): Record<string, JsonValue> {
+  const mapPoints = rows.slice(0, SUMMARY_ROW_LIMIT).map(toAnswerMapPoint).filter(isRecord);
+
   return {
     query: plan.intent.query,
     ...(getNumber(data.matched_row_count) !== undefined
@@ -401,6 +403,7 @@ function buildRowSummary(
     ...(getNumber(data.total) !== undefined ? { total: getNumber(data.total) } : {}),
     ...(getNumber(data.row_count) !== undefined ? { row_count: getNumber(data.row_count) } : {}),
     rows: rows.slice(0, SUMMARY_ROW_LIMIT).map(toAnswerRowSummary),
+    ...(mapPoints.length > 0 ? { map_points: mapPoints } : {}),
     ...(getPlaceContext(plan) ? { place: getPlaceContext(plan) } : {}),
   };
 }
@@ -743,6 +746,24 @@ function toAnswerRowSummary(row: JsonRecord): Record<string, JsonValue> {
   };
 }
 
+function toAnswerMapPoint(row: JsonRecord): Record<string, JsonValue> | undefined {
+  const coordinates = getRowCoordinates(row);
+
+  if (!coordinates) {
+    return undefined;
+  }
+
+  return {
+    label: getRowLabel(row),
+    lat: coordinates.lat,
+    lon: coordinates.lon,
+    ...(getRowDistance(row) === undefined
+      ? {}
+      : { distance_m: Math.round(getRowDistance(row) ?? 0) }),
+    source_row: row,
+  };
+}
+
 function formatNearestRow(row: JsonRecord): string {
   const distance = getRowDistance(row);
   const label = getRowLabel(row);
@@ -830,6 +851,38 @@ function getRowDistance(row: JsonRecord): number | undefined {
   return getNumber(geo.distance_m);
 }
 
+function getRowCoordinates(row: JsonRecord): { lat: number; lon: number } | undefined {
+  const geo = row._geo;
+
+  if (isRecord(geo)) {
+    const lat = getCoordinateNumber(geo.lat);
+    const lon = getCoordinateNumber(geo.lon);
+
+    if (lat !== undefined && lon !== undefined) {
+      return { lat, lon };
+    }
+  }
+
+  const coordinatePairs = [
+    ["geo_epgs_4326_lat", "geo_epgs_4326_lon"],
+    ["geo_epgs_4326_y", "geo_epgs_4326_x"],
+    ["latitud_wgs84", "longitud_wgs84"],
+    ["latitud", "longitud"],
+    ["latitude", "longitude"],
+  ] as const;
+
+  for (const [latField, lonField] of coordinatePairs) {
+    const lat = getCoordinateNumber(row[latField]);
+    const lon = getCoordinateNumber(row[lonField]);
+
+    if (lat !== undefined && lon !== undefined) {
+      return { lat, lon };
+    }
+  }
+
+  return undefined;
+}
+
 function getRecordArray(value: JsonValue | undefined): JsonRecord[] {
   return Array.isArray(value) ? value.filter(isRecord) : [];
 }
@@ -844,6 +897,19 @@ function getString(value: JsonValue | undefined): string | undefined {
 
 function getNumber(value: JsonValue | undefined): number | undefined {
   return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+}
+
+function getCoordinateNumber(value: JsonValue | undefined): number | undefined {
+  if (typeof value === "number") {
+    return Number.isFinite(value) ? value : undefined;
+  }
+
+  if (typeof value !== "string" || value.trim().length === 0) {
+    return undefined;
+  }
+
+  const parsed = Number(value.trim().replace(",", "."));
+  return Number.isFinite(parsed) ? parsed : undefined;
 }
 
 function formatJsonValue(value: JsonValue | undefined): string {

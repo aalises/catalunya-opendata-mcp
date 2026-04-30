@@ -85,6 +85,8 @@ try {
 
   const prompts = await client.listPrompts();
   for (const promptName of [
+    "socrata_query_workflow",
+    "socrata_citation",
     "idescat_query_workflow",
     "idescat_citation",
     "bcn_query_workflow",
@@ -96,13 +98,23 @@ try {
   }
 
   const templates = await client.listResourceTemplates();
-  if (!templates.resourceTemplates.some((template) => template.name === "idescat_table_metadata")) {
-    throw new Error("Expected idescat_table_metadata resource template to be registered.");
-  }
-  for (const templateName of ["bcn_package", "bcn_resource_schema"]) {
+  for (const templateName of [
+    "socrata_dataset_metadata",
+    "idescat_table_metadata",
+    "bcn_package",
+    "bcn_resource_schema",
+  ]) {
     if (!templates.resourceTemplates.some((template) => template.name === templateName)) {
       throw new Error(`Expected ${templateName} resource template to be registered.`);
     }
+  }
+
+  const about = await client.readResource({
+    uri: "catalunya-opendata://about",
+  });
+  const aboutText = about.contents[0]?.text;
+  if (typeof aboutText !== "string" || !aboutText.includes("Catalunya Open Data MCP")) {
+    throw new Error("Expected about resource to be readable.");
   }
 
   const result = await client.callTool({

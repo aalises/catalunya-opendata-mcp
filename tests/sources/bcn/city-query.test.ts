@@ -745,6 +745,22 @@ describe("BCN city answer composer", () => {
             source_row: { name: "Museum", addresses_road_name: "C Mallorca" },
           },
         ],
+        map_points: [
+          {
+            label: "Library",
+            lat: 41.40325,
+            lon: 2.17485,
+            distance_m: 7,
+            source_row: { name: "Library" },
+          },
+          {
+            label: "Museum",
+            lat: 41.4035,
+            lon: 2.175,
+            distance_m: 37,
+            source_row: { name: "Museum" },
+          },
+        ],
       },
     });
     expect(result.data.answer_text).toContain("Library (7 m)");
@@ -1037,6 +1053,14 @@ describe("BCN city answer composer", () => {
         rows: [
           {
             label: "42",
+          },
+        ],
+        map_points: [
+          {
+            label: "42",
+            lat: 41.4,
+            lon: 2.1,
+            source_row: { _id: 42 },
           },
         ],
       },

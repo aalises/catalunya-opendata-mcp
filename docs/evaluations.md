@@ -54,11 +54,11 @@ The stress profile is the adapter-health suite. It currently targets the same co
 
 - `MCP: 1`
 - `Socrata: 53`
-- `Open Data BCN: 24`
+- `Open Data BCN: 27`
 - `IDESCAT: 71`
-- `Total: 149`
+- `Total: 152`
 
-It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN resource recommendations, BCN place resolution across landmark, street, neighborhood, and district resources, BCN city-query planning, execution, and answer composition, BCN geospatial queries with DataStore SQL pushdown, area polygon filtering, and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
+It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN resource recommendations, BCN place resolution across landmark, street, neighborhood, and district resources, BCN city-query planning, execution, answer composition for grouped, nearest, blocked, and empty answers, BCN geospatial queries with DataStore SQL pushdown, area polygon filtering, and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
 
 ## Scoring
 
