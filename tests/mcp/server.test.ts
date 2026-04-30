@@ -520,6 +520,101 @@ describe("createMcpServer", () => {
     }
   });
 
+  it("surfaces BCN city answer bbox fallback caveats through the MCP tool surface", async () => {
+    const districtPlaceResource = ORIGINAL_BCN_PLACE_REGISTRY.find(
+      (resource) => resource.resourceId === "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+    );
+
+    if (!districtPlaceResource) {
+      throw new Error("Expected BCN district place registry resource to exist.");
+    }
+
+    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, districtPlaceResource);
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        bcnCkanSuccess({
+          fields: [
+            { id: "nom_districte", type: "text" },
+            { id: "geometria_wgs84", type: "text" },
+          ],
+          records: [
+            {
+              nom_districte: "Gràcia",
+              geometria_wgs84: smallPolygon(),
+            },
+          ],
+          total: 1,
+        }),
+      )
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+            datastore_active: true,
+            format: "DataStore",
+            mimetype: null,
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(
+        bcnCkanSuccess({
+          fields: [
+            { id: "name", type: "text" },
+            { id: "secondary_filters_name", type: "text" },
+            { id: "addresses_road_name", type: "text" },
+            { id: "addresses_neighborhood_name", type: "text" },
+            { id: "addresses_district_name", type: "text" },
+            { id: "geo_epgs_4326_lat", type: "numeric" },
+            { id: "geo_epgs_4326_lon", type: "numeric" },
+          ],
+        }),
+      )
+      .mockResolvedValueOnce(bcnCkanSuccess({ records: [] }));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_answer_city_query",
+        arguments: {
+          query: "facilities in Gracia",
+          place_kind: "district",
+          limit: 5,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          answer_type: "empty_result",
+          caveats: expect.arrayContaining([
+            "Area candidate did not expose an area_ref; using its bbox as an approximate rectangular fallback.",
+            "Area query used a bbox fallback, so results are based on a rectangular approximation.",
+          ]),
+          final_arguments: {
+            bbox: {
+              min_lat: 41.4,
+              min_lon: 2.1,
+              max_lat: 41.5,
+              max_lon: 2.2,
+            },
+          },
+          final_result: {
+            data: {
+              bbox: {
+                min_lat: 41.4,
+                min_lon: 2.1,
+                max_lat: 41.5,
+                max_lon: 2.2,
+              },
+            },
+          },
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
+
   it("returns structured BCN geo output with JSON text fallback", async () => {
     vi.spyOn(globalThis, "fetch")
       .mockResolvedValueOnce(
@@ -593,6 +688,98 @@ describe("createMcpServer", () => {
         },
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns retryable BCN upstream-unavailable errors through the MCP tool surface", async () => {
+    vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("socket closed"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_search_packages",
+        arguments: {
+          query: "arbrat",
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBe(true);
+      expect(result.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "bcn",
+          code: "network_error",
+          message: expect.stringContaining("retry the request"),
+          retryable: true,
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns invalid BCN upstream shapes as structured non-retryable errors", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      bcnCkanSuccess({
+        count: "not-a-number",
+        results: [],
+      }),
+    );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_search_packages",
+        arguments: {
+          query: "arbrat",
+          limit: 1,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBe(true);
+      expect(result.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "bcn",
+          code: "invalid_response",
+          message: expect.stringContaining("Invalid Open Data BCN package_search response"),
+          retryable: false,
+        },
+      });
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN city-query input errors without calling upstream", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_answer_city_query",
+        arguments: {
+          query: "facilities\nnear Sagrada Família",
+          limit: 5,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBe(true);
+      expect(result.structuredContent).toMatchObject({
+        data: null,
+        error: {
+          source: "bcn",
+          code: "invalid_input",
+          message: expect.stringContaining("query must be a single line"),
+          retryable: false,
+        },
+      });
+      expect(fetchMock).not.toHaveBeenCalled();
     } finally {
       await close();
     }
@@ -1741,4 +1928,8 @@ function idescatGuidanceMetadata() {
       },
     },
   };
+}
+
+function smallPolygon(): string {
+  return "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))";
 }

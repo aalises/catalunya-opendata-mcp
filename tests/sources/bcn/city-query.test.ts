@@ -610,6 +610,33 @@ describe("BCN city query planner", () => {
       steps: [],
     });
   });
+
+  it("blocks when matched resource recommendations are ambiguous", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+
+    const result = await planBcnCityQuery(
+      { query: "parks and facilities near Sagrada Família", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data.status).toBe("needs_resource_selection");
+    expect(result.data.recommendations).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          title: "Municipal facilities and equipment",
+          resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+        }),
+        expect.objectContaining({
+          title: "Parks and gardens",
+          resource_id: "b64d32a8-aea5-47a8-9826-479b211f5d46",
+        }),
+      ]),
+    );
+    expect(result.data.recommendation).toBeUndefined();
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
 });
 
 describe("BCN city answer composer", () => {
@@ -914,6 +941,43 @@ describe("BCN city answer composer", () => {
     );
   });
 
+  it("surfaces scan-cap truncation as an answer caveat", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          datastore_active: false,
+          format: "CSV",
+          mimetype: "text/csv",
+          url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+        }),
+      ),
+      csvResponse(
+        [
+          "adreca;cat_nom_catala;latitud;longitud",
+          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Carrer Consell de Cent 2;Lledoner;41.391;2.161",
+        ].join("\n"),
+      ),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "tree species on Carrer Consell de Cent", limit: 5 },
+      { ...baseConfig, bcnGeoScanMaxRows: 1 },
+    );
+
+    expect(result.data.answer_type).toBe("grouped_counts");
+    expect(result.data.caveats).toEqual(
+      expect.arrayContaining([
+        "Final result was truncated because of scan_cap: scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or raise CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS",
+      ]),
+    );
+    expect(result.data.final_result?.data).toMatchObject({
+      truncated: true,
+      truncation_reason: "scan_cap",
+    });
+  });
+
   it("returns blocked answers without fabricating final results", async () => {
     usePlaceRegistry([DISTRICT_PLACE_RESOURCE, NEIGHBORHOOD_PLACE_RESOURCE]);
     mockFetchResponses(
@@ -977,6 +1041,75 @@ describe("BCN city answer composer", () => {
     });
     expect(result.data.answer_text).toContain("select one Barcelona place candidate");
     expect(result.data.selection_options?.options[0]?.confidence).toBeGreaterThan(0);
+  });
+
+  it("returns resource selection options for ambiguous resource matches", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+
+    const result = await answerBcnCityQuery(
+      { query: "parks and facilities near Sagrada Família", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "blocked",
+      execution_status: "blocked",
+      final_result: null,
+      selection_options: {
+        selection_type: "resource",
+      },
+      summary: {
+        recommendation_count: 2,
+      },
+    });
+    expect(result.data.selection_options?.options).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          id: "resource:d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+          label: "Municipal facilities and equipment",
+          resume_arguments: expect.objectContaining({
+            query: "parks and facilities near Sagrada Família",
+            task: "near",
+            place_kind: "point",
+            place_query: "Sagrada Família",
+            resource_id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+            limit: 5,
+          }),
+        }),
+        expect.objectContaining({
+          id: "resource:b64d32a8-aea5-47a8-9826-479b211f5d46",
+          label: "Parks and gardens",
+          resume_arguments: expect.objectContaining({
+            resource_id: "b64d32a8-aea5-47a8-9826-479b211f5d46",
+          }),
+        }),
+      ]),
+    );
+    expect(result.data.answer_text).toContain("select one BCN resource");
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("returns unsupported city questions as blocked answers with caveats", async () => {
+    const result = await answerBcnCityQuery(
+      { query: "interplanetary ferry permits", limit: 3 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "blocked",
+      execution_status: "blocked",
+      final_result: null,
+      plan: {
+        status: "unsupported",
+        recommendations: [],
+      },
+      summary: {
+        status: "unsupported",
+      },
+    });
+    expect(result.data.answer_text).toContain("Cannot answer");
   });
 
   it("returns empty-result answers", async () => {

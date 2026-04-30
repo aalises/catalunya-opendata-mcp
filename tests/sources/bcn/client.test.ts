@@ -23,6 +23,20 @@ describe("Open Data BCN client", () => {
     });
   });
 
+  it("rejects successful upstream bodies that exceed the configured read cap", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(jsonResponse({ value: "x".repeat(128) }));
+
+    await expect(
+      fetchBcnJson({ url: buildBcnActionUrl("package_search") }, baseConfig, {
+        successBodyMaxBytes: 32,
+      }),
+    ).rejects.toMatchObject({
+      code: "invalid_response",
+      message: "Open Data BCN response body exceeded maximum size of 32 bytes.",
+      retryable: false,
+    });
+  });
+
   it("maps CKAN success:false envelopes to typed errors with retryability", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       ckanFailure({

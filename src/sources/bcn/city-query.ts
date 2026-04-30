@@ -431,12 +431,43 @@ async function resolvePlanResource(
     (candidate) => candidate.matched_terms.length > 0 || candidate.confidence >= 0.8,
   );
   const recommendations = matchingRecommendations.filter((candidate) => !candidate.area_source);
+  const ambiguousRecommendations = getAmbiguousResourceRecommendations(recommendations);
+
+  if (ambiguousRecommendations) {
+    return {
+      recommendations: ambiguousRecommendations,
+    };
+  }
+
   const recommendation = recommendations[0];
 
   return {
     recommendation,
     recommendations,
   };
+}
+
+function getAmbiguousResourceRecommendations(
+  recommendations: BcnResourceRecommendation[],
+): BcnResourceRecommendation[] | undefined {
+  const [first, second] = recommendations;
+
+  if (!first || !second) {
+    return undefined;
+  }
+
+  const highConfidenceTie =
+    first.confidence >= 0.6 &&
+    second.confidence >= 0.6 &&
+    Math.abs(first.confidence - second.confidence) <= 0.02;
+
+  if (!highConfidenceTie) {
+    return undefined;
+  }
+
+  return recommendations.filter(
+    (candidate) => Math.abs(first.confidence - candidate.confidence) <= 0.02,
+  );
 }
 
 async function maybeResolvePlanPlace(
