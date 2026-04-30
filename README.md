@@ -84,6 +84,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `bcn_recommend_resources` | Recommend high-value Open Data BCN resources for natural-language city questions such as trees on a street, facilities near a place, or district/neighborhood area queries. |
 | `bcn_plan_query` | Plan a natural-language Barcelona city question into resource, place-resolution, geo-query, and citation steps without running the final data query. |
 | `bcn_execute_city_query` | Execute a ready BCN city-query plan end-to-end with the same bounded helper tools, blocking when a resource or place choice is ambiguous. |
+| `bcn_answer_city_query` | Execute a ready BCN city-query plan and return deterministic `answer_text`, caveats, citation guidance, selected resource metadata, and the raw final result. |
 | `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
@@ -294,7 +295,9 @@ Use `bcn_plan_query` when the user asks a natural city question and you want an 
 
 The planner returns `status`, deterministic `intent`, recommended resources, optional place-resolution candidates, ordered `steps`, `final_tool`, `final_arguments`, and citation guidance. `place_kind: "point"` maps to resolver kinds `["landmark", "facility"]`; `street`, `neighborhood`, and `district` pass through. Grouped prompts choose `group_by` deterministically: explicit input first, then neighborhood grouping for within-area questions, then the first recommended grouping field.
 
-Use `bcn_execute_city_query` for the same input when a one-call bounded result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
+Use `bcn_execute_city_query` for the same input when a one-call bounded raw result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
+
+Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_type`, compact `summary`, deduped `caveats` such as bbox fallback, scan caps, or SQL pushdown mode, selected resource metadata, citation guidance, and the raw `final_result`.
 
 ### 3. Inspect A Resource
 
@@ -525,16 +528,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 148 live cases:
+The stress profile currently runs 149 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 23 |
+| Open Data BCN | 24 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN city-query planning/execution, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN city-query planning/execution/answering, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 

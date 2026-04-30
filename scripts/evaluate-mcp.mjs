@@ -17,7 +17,7 @@ const PROFILE_CASE_COUNTS = {
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 23,
+    bcn: 24,
     idescat: 71,
   },
 };
@@ -793,6 +793,31 @@ async function runStressProfile(client) {
           data.final_result?.data?.strategy === "datastore" &&
           data.final_result?.data?.row_count > 0,
         "BCN city executor resolves a named place and runs a bounded near query",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_answer.trees_consell_species",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_answer_city_query",
+    args: {
+      query: "tree species on Carrer Consell de Cent",
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "completed" &&
+          data.answer_type === "grouped_counts" &&
+          typeof data.answer_text === "string" &&
+          data.answer_text.includes("cat_nom_catala") &&
+          data.final_result?.data?.groups?.length > 0 &&
+          data.selected_resource?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
+          data.citation?.resources?.some((resource) =>
+            resource.includes("23124fd5-521f-40f8-85b8-efb1e71c2ec8"),
+          ),
+        "BCN city answer composes grouped species counts with raw result and citation metadata",
       ),
   });
 

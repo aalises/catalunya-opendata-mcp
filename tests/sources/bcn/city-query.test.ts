@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
+import { answerBcnCityQuery } from "../../../src/sources/bcn/city-answer.js";
 import { executeBcnCityQuery, planBcnCityQuery } from "../../../src/sources/bcn/city-query.js";
 import {
   BCN_PLACE_REGISTRY,
@@ -608,6 +609,373 @@ describe("BCN city query planner", () => {
       recommendations: [],
       steps: [],
     });
+  });
+});
+
+describe("BCN city answer composer", () => {
+  afterEach(() => {
+    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...ORIGINAL_PLACE_REGISTRY);
+    vi.restoreAllMocks();
+  });
+
+  it("summarizes street tree species groups", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          datastore_active: false,
+          format: "CSV",
+          mimetype: "text/csv",
+          url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+        }),
+      ),
+      csvResponse(
+        [
+          "adreca;cat_nom_catala;latitud;longitud",
+          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Carrer Consell de Cent 2;Plataner;41.391;2.161",
+          "Carrer Consell de Cent 3;Lledoner;41.392;2.162",
+          "Carrer Mallorca 1;Om;41.40;2.17",
+        ].join("\n"),
+      ),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "tree species on Carrer Consell de Cent", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "grouped_counts",
+      execution_status: "completed",
+      selected_resource: {
+        title: "Street trees (Arbrat viari)",
+        resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      },
+      summary: {
+        group_by: "cat_nom_catala",
+        matched_row_count: 3,
+        groups: [
+          { key: "Plataner", count: 2 },
+          { key: "Lledoner", count: 1 },
+        ],
+      },
+    });
+    expect(result.data.answer_text).toContain("Plataner (2)");
+    expect(result.data.answer_text).toContain("Lledoner (1)");
+    expect(result.data.final_result?.data).toMatchObject({
+      matched_row_count: 3,
+    });
+  });
+
+  it("summarizes nearest facilities ordered by distance", async () => {
+    usePlaceRegistry([FACILITY_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([
+        {
+          name: "Sagrada Família",
+          secondary_filters_name: "Monuments",
+          addresses_neighborhood_name: "la Sagrada Família",
+          geo_epgs_4326_lat: 41.4032,
+          geo_epgs_4326_lon: 2.1748,
+        },
+      ]),
+      placeResponse([]),
+      placeResponse([]),
+      ckanSuccess(
+        bcnResource({
+          id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse([
+        "name",
+        "secondary_filters_name",
+        "addresses_road_name",
+        "addresses_neighborhood_name",
+        "addresses_district_name",
+        "geo_epgs_4326_lat",
+        "geo_epgs_4326_lon",
+      ]),
+      ckanSuccess({
+        records: [
+          {
+            name: "Library",
+            addresses_road_name: "C Mallorca",
+            addresses_neighborhood_name: "la Sagrada Família",
+            geo_epgs_4326_lat: 41.40325,
+            geo_epgs_4326_lon: 2.17485,
+            _bcn_distance_m: 8,
+            _bcn_matched_total: 2,
+          },
+          {
+            name: "Museum",
+            addresses_road_name: "C Mallorca",
+            addresses_neighborhood_name: "la Sagrada Família",
+            geo_epgs_4326_lat: 41.4035,
+            geo_epgs_4326_lon: 2.175,
+            _bcn_distance_m: 42,
+            _bcn_matched_total: 2,
+          },
+        ],
+      }),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "facilities near Sagrada Família", limit: 2 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "nearest_rows",
+      summary: {
+        matched_row_count: 2,
+        rows: [
+          { label: "Library", distance_m: 7 },
+          { label: "Museum", distance_m: 37 },
+        ],
+      },
+    });
+    expect(result.data.answer_text).toContain("Library (7 m)");
+    expect(result.data.answer_text).toContain("Museum (37 m)");
+    expect(result.data.caveats).toContain(
+      "Spatial narrowing used generated CKAN datastore_search_sql pushdown.",
+    );
+  });
+
+  it("summarizes grouped facilities in an area with area provenance", async () => {
+    usePlaceRegistry([DISTRICT_PLACE_RESOURCE]);
+    const geometry = smallPolygon();
+    mockFetchResponses(
+      placeResponse([{ _id: 6, nom_districte: "Gràcia", geometria_wgs84: geometry }]),
+      placeResponse([{ _id: 6, geometria_wgs84: geometry }]),
+      ckanSuccess(
+        bcnResource({
+          id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse([
+        "name",
+        "secondary_filters_name",
+        "addresses_road_name",
+        "addresses_neighborhood_name",
+        "addresses_district_name",
+        "geo_epgs_4326_lat",
+        "geo_epgs_4326_lon",
+      ]),
+      ckanSuccess({
+        records: [
+          {
+            name: "Facility 1",
+            addresses_neighborhood_name: "Vila de Gràcia",
+            addresses_district_name: "Gràcia",
+            geo_epgs_4326_lat: 41.45,
+            geo_epgs_4326_lon: 2.15,
+            _bcn_matched_total: 1,
+          },
+        ],
+      }),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "count facilities in Gràcia by neighborhood", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data.answer_type).toBe("grouped_counts");
+    expect(result.data.answer_text).toContain("Vila de Gràcia (1)");
+    expect(result.data.answer_text).toContain(
+      "Area provenance: district Gràcia from Open Data BCN administrative districts row 6.",
+    );
+    expect(result.data.summary).toMatchObject({
+      place: {
+        name: "Gràcia",
+        kind: "district",
+      },
+    });
+  });
+
+  it("includes bbox fallback caveats", async () => {
+    usePlaceRegistry([DISTRICT_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([{ nom_districte: "Gràcia", geometria_wgs84: smallPolygon() }]),
+      ckanSuccess(
+        bcnResource({
+          id: "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse([
+        "name",
+        "secondary_filters_name",
+        "addresses_road_name",
+        "addresses_neighborhood_name",
+        "addresses_district_name",
+        "geo_epgs_4326_lat",
+        "geo_epgs_4326_lon",
+      ]),
+      ckanSuccess({
+        records: [],
+      }),
+    );
+
+    const result = await answerBcnCityQuery(
+      {
+        query: "facilities in Gracia",
+        place_kind: "district",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data.answer_type).toBe("empty_result");
+    expect(result.data.caveats).toEqual(
+      expect.arrayContaining([
+        "Area candidate did not expose an area_ref; using its bbox as an approximate rectangular fallback.",
+        "Area query used a bbox fallback, so results are based on a rectangular approximation.",
+      ]),
+    );
+  });
+
+  it("includes truncation and scan caveats", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          datastore_active: false,
+          format: "CSV",
+          mimetype: "text/csv",
+          url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+        }),
+      ),
+      csvResponse(
+        [
+          "adreca;cat_nom_catala;latitud;longitud",
+          "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          "Carrer Consell de Cent 2;Lledoner;41.391;2.161",
+        ].join("\n"),
+      ),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "tree species on Carrer Consell de Cent", limit: 1 },
+      baseConfig,
+    );
+
+    expect(result.data.answer_type).toBe("grouped_counts");
+    expect(result.data.caveats).toEqual(
+      expect.arrayContaining([
+        "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+        "Final result was truncated because of row_cap: raise limit within maxResults or use offset to page through matched rows",
+      ]),
+    );
+  });
+
+  it("returns blocked answers without fabricating final results", async () => {
+    usePlaceRegistry([DISTRICT_PLACE_RESOURCE, NEIGHBORHOOD_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([{ _id: 6, nom_districte: "Gràcia", geometria_wgs84: smallPolygon() }]),
+      placeResponse([{ _id: 31, nom_barri: "Gràcia", geometria_wgs84: smallPolygon() }]),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "facilities in Gracia", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "blocked",
+      execution_status: "blocked",
+      final_result: null,
+      summary: {
+        place_candidate_count: 2,
+      },
+    });
+    expect(result.data.answer_text).toContain("select one Barcelona place candidate");
+  });
+
+  it("returns empty-result answers", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+          datastore_active: false,
+          format: "CSV",
+          mimetype: "text/csv",
+          url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+        }),
+      ),
+      csvResponse(
+        ["adreca;cat_nom_catala;latitud;longitud", "Carrer Mallorca 1;Om;41.40;2.17"].join("\n"),
+      ),
+    );
+
+    const result = await answerBcnCityQuery(
+      { query: "tree species on Carrer Consell de Cent", limit: 5 },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "empty_result",
+      summary: {
+        matched_row_count: 0,
+        row_count: 0,
+      },
+    });
+    expect(result.data.answer_text).toContain("No rows matched");
+    expect(result.data.final_result?.data).toMatchObject({
+      groups: [],
+      matched_row_count: 0,
+    });
+  });
+
+  it("uses _id as the stable row label fallback and avoids non-partial scan caveats", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "resource-1",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse(["_id", "geo_epgs_4326_lat", "geo_epgs_4326_lon"]),
+      ckanSuccess({
+        fields: [
+          { id: "_id", type: "int" },
+          { id: "geo_epgs_4326_lat", type: "numeric" },
+          { id: "geo_epgs_4326_lon", type: "numeric" },
+        ],
+        records: [{ _id: 42, geo_epgs_4326_lat: 41.4, geo_epgs_4326_lon: 2.1 }],
+        total: 1,
+      }),
+    );
+
+    const result = await answerBcnCityQuery(
+      {
+        query: "facilities",
+        resource_id: "resource-1",
+        task: "query",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      answer_type: "row_sample",
+      answer_text: expect.stringContaining("42"),
+      summary: {
+        rows: [
+          {
+            label: "42",
+          },
+        ],
+      },
+    });
+    expect(result.data.caveats).not.toContain("Final query used bounded DataStore scan mode.");
   });
 });
 

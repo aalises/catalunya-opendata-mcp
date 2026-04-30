@@ -136,6 +136,7 @@ describe("createMcpServer", () => {
           "bcn_recommend_resources",
           "bcn_plan_query",
           "bcn_execute_city_query",
+          "bcn_answer_city_query",
           "bcn_query_resource_geo",
           "bcn_preview_resource",
         ]),
@@ -153,6 +154,7 @@ describe("createMcpServer", () => {
       expect(descriptions.bcn_recommend_resources).toContain("Recommend");
       expect(descriptions.bcn_plan_query).toContain("Plan");
       expect(descriptions.bcn_execute_city_query).toContain("Execute");
+      expect(descriptions.bcn_answer_city_query).toContain("answer_text");
       expect(descriptions.bcn_query_resource_geo).toContain("geospatial query");
       expect(descriptions.bcn_query_resource_geo).toContain("group_by");
       expect(descriptions.bcn_query_resource_geo).toContain("within_place");
@@ -438,6 +440,74 @@ describe("createMcpServer", () => {
         provenance: {
           source: "bcn",
           id: "opendata-ajuntament.barcelona.cat:city_query_execute",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN city answer output with JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+            datastore_active: false,
+            format: "CSV",
+            mimetype: "text/csv",
+            url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(
+        new Response(
+          [
+            "adreca;cat_nom_catala;latitud;longitud",
+            "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          ].join("\n"),
+          {
+            headers: { "Content-Type": "text/csv; charset=utf-8" },
+            status: 200,
+          },
+        ),
+      );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_answer_city_query",
+        arguments: {
+          query: "tree species on Carrer Consell de Cent",
+          limit: 5,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          answer_type: "grouped_counts",
+          answer_text: expect.stringContaining("Plataner (1)"),
+          execution_status: "completed",
+          selected_resource: {
+            title: "Street trees (Arbrat viari)",
+          },
+          final_result: {
+            data: {
+              strategy: "download_stream",
+              matched_row_count: 1,
+            },
+          },
+          citation: {
+            resources: expect.arrayContaining([
+              "bcn://resources/23124fd5-521f-40f8-85b8-efb1e71c2ec8/schema",
+            ]),
+          },
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:city_query_answer",
         },
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);

@@ -45,7 +45,7 @@ The canary profile is the release-readiness smoke layer. It verifies:
 
 - MCP server health through `ping`.
 - Socrata catalog search, metadata, selected-field query, and upstream query error handling.
-- Open Data BCN package search, resource recommendation, DataStore query, place resolution for landmarks, streets, neighborhoods, and districts, inactive-resource error recovery, city-query planning/execution, and CSV preview.
+- Open Data BCN package search, resource recommendation, DataStore query, place resolution for landmarks, streets, neighborhoods, and districts, inactive-resource error recovery, city-query planning/execution/answering, and CSV preview.
 - IDESCAT search, geos, metadata, bounded data, place guidance, multilingual search, and the long-filter GET regression.
 
 ### Stress
@@ -54,11 +54,11 @@ The stress profile is the adapter-health suite. It currently targets the same co
 
 - `MCP: 1`
 - `Socrata: 53`
-- `Open Data BCN: 23`
+- `Open Data BCN: 24`
 - `IDESCAT: 71`
-- `Total: 148`
+- `Total: 149`
 
-It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN resource recommendations, BCN place resolution across landmark, street, neighborhood, and district resources, BCN city-query planning and execution, BCN geospatial queries with DataStore SQL pushdown, area polygon filtering, and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
+It includes broad Socrata catalog searches, no-result searches, pagination, schema validation errors, dataset describes, SODA query shapes, upstream errors, prompt checks, resource reads, BCN resource recommendations, BCN place resolution across landmark, street, neighborhood, and district resources, BCN city-query planning, execution, and answer composition, BCN geospatial queries with DataStore SQL pushdown, area polygon filtering, and nearest group samples, IDESCAT table search, browse APIs, metadata, resource reads, long multi-value data filters, local validation caps, upstream `narrow_filters`, and low response-cap degradation behavior.
 
 ## Scoring
 

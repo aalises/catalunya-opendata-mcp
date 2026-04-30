@@ -325,7 +325,42 @@ For a one-call bounded result, use the executor:
 }
 ```
 
-The executor embeds the full plan and runs only when `status` is `ready`; otherwise it returns `execution_status: "blocked"`. `place_kind: "point"` resolves only point-like BCN sources (`landmark` and `facility`), while street/area kinds pass through. Area candidates populate `within_place` from `selected_candidate.area_ref`.
+For a caller-ready deterministic answer, use the answer composer:
+
+```json
+{
+  "tool": "bcn_answer_city_query",
+  "arguments": {
+    "query": "tree species on Carrer Consell de Cent",
+    "limit": 10
+  }
+}
+```
+
+The executor embeds the full plan and runs only when `status` is `ready`; otherwise it returns `execution_status: "blocked"`. `bcn_answer_city_query` uses that same executor, then adds `answer_text`, `answer_type`, compact grouped/nearest-row summaries, caveats, selected resource metadata, citation guidance, and the raw `final_result`. `place_kind: "point"` resolves only point-like BCN sources (`landmark` and `facility`), while street/area kinds pass through. Area candidates populate `within_place` from `selected_candidate.area_ref`.
+
+Example answer-composer calls:
+
+```json
+{
+  "tool": "bcn_answer_city_query",
+  "arguments": {
+    "query": "facilities near Sagrada Família",
+    "radius_m": 1500,
+    "limit": 5
+  }
+}
+```
+
+```json
+{
+  "tool": "bcn_answer_city_query",
+  "arguments": {
+    "query": "count facilities in Gràcia by neighborhood",
+    "limit": 5
+  }
+}
+```
 
 ## Open Data BCN: Preview Street Trees CSV
 

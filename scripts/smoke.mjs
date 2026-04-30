@@ -74,6 +74,7 @@ try {
     "bcn_recommend_resources",
     "bcn_plan_query",
     "bcn_execute_city_query",
+    "bcn_answer_city_query",
     "bcn_query_resource_geo",
     "bcn_preview_resource",
   ]) {

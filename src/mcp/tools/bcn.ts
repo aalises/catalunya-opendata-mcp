@@ -9,6 +9,7 @@ import {
   normalizeBcnId,
   searchBcnPackages,
 } from "../../sources/bcn/catalog.js";
+import { answerBcnCityQuery } from "../../sources/bcn/city-answer.js";
 import { executeBcnCityQuery, planBcnCityQuery } from "../../sources/bcn/city-query.js";
 import { BcnError, isBcnError } from "../../sources/bcn/client.js";
 import { queryBcnResourceGeo } from "../../sources/bcn/geo.js";
@@ -201,6 +202,26 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
   );
 
   server.registerTool(
+    "bcn_answer_city_query",
+    {
+      title: "bcn.answer_city_query",
+      description: [
+        "Execute a safe bounded Open Data BCN city-question plan and compose a deterministic caller-ready answer.",
+        "Returns answer_text, caveats, selected resource metadata, citation guidance, and the raw final_result.",
+      ].join(" "),
+      inputSchema: schemas.inputs.cityQuery,
+      outputSchema: schemas.outputs.answerCityQuery,
+    },
+    async (input, extra) =>
+      wrapBcnTool("city_query_answer", async () =>
+        answerBcnCityQuery(input, config, {
+          logger: logger.child({ op: "city_query_answer" }),
+          signal: extra.signal,
+        }),
+      ),
+  );
+
+  server.registerTool(
     "bcn_preview_resource",
     {
       title: "bcn.preview_resource",
@@ -235,7 +256,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
               "Use this workflow for Barcelona city Open Data BCN questions.",
               "",
               "1. For broad city questions, start with `bcn_recommend_resources` to pick likely resources and example arguments. Use `bcn_search_packages` when the recommender is too narrow or the topic is not covered.",
-              "1a. For natural city questions where you want the server to stitch the workflow together, call `bcn_plan_query` first or `bcn_execute_city_query` when a one-call bounded answer is acceptable. The executor blocks instead of guessing when a resource or place choice is ambiguous.",
+              "1a. For natural city questions where you want the server to stitch the workflow together, call `bcn_plan_query` for an inspectable workflow, `bcn_execute_city_query` for raw bounded execution, or `bcn_answer_city_query` for deterministic answer_text plus raw final_result. These tools block instead of guessing when a resource or place choice is ambiguous.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
               "4. When the user gives a named place rather than coordinates, call `bcn_resolve_place`. Point candidates feed `bcn_query_resource_geo.near`; district/neighborhood candidates can also return `area_ref` and `bbox` for `bcn_query_resource_geo.within_place`.",
@@ -481,6 +502,14 @@ function createBcnSchemas(config: AppConfig) {
     "unsupported",
   ]);
   const cityExecutionStatusSchema = z.enum(["blocked", "completed"]);
+  const cityAnswerTypeSchema = z.enum([
+    "blocked",
+    "empty_result",
+    "grouped_counts",
+    "nearest_rows",
+    "preview_sample",
+    "row_sample",
+  ]);
   const cityFinalToolSchema = z.enum([
     "bcn_preview_resource",
     "bcn_query_resource",
@@ -675,6 +704,28 @@ function createBcnSchemas(config: AppConfig) {
     final_arguments: z.record(jsonValueSchema).optional(),
     final_result: z.record(jsonValueSchema).nullable().optional(),
   });
+  const cityAnswerSelectedResourceSchema = z.object({
+    resource_id: z.string(),
+    package_id: z.string().nullable(),
+    source_url: z.string().url(),
+    datastore_active: z.boolean(),
+    format: z.string().nullable(),
+    title: z.string(),
+    theme: z.string().optional(),
+  });
+  const answerCityQueryDataSchema = z.object({
+    answer_text: z.string(),
+    answer_type: cityAnswerTypeSchema,
+    summary: z.record(jsonValueSchema),
+    caveats: z.array(z.string()),
+    selected_resource: cityAnswerSelectedResourceSchema.optional(),
+    citation: cityCitationSchema,
+    execution_status: cityExecutionStatusSchema,
+    final_tool: cityFinalToolSchema.optional(),
+    final_arguments: z.record(jsonValueSchema).optional(),
+    final_result: z.record(jsonValueSchema).nullable(),
+    plan: cityPlanDataSchema,
+  });
 
   return {
     inputs: {
@@ -762,6 +813,7 @@ function createBcnSchemas(config: AppConfig) {
       recommendResources: toolResultSchema(recommendResourcesDataSchema),
       planQuery: toolResultSchema(cityPlanDataSchema),
       executeCityQuery: toolResultSchema(executeCityQueryDataSchema),
+      answerCityQuery: toolResultSchema(answerCityQueryDataSchema),
       queryResourceGeo: toolResultSchema(geoDataSchema),
       previewResource: toolResultSchema(previewDataSchema),
     },
