@@ -9,6 +9,7 @@ import {
   normalizeBcnId,
   searchBcnPackages,
 } from "../../sources/bcn/catalog.js";
+import { executeBcnCityQuery, planBcnCityQuery } from "../../sources/bcn/city-query.js";
 import { BcnError, isBcnError } from "../../sources/bcn/client.js";
 import { queryBcnResourceGeo } from "../../sources/bcn/geo.js";
 import { resolveBcnPlace } from "../../sources/bcn/place.js";
@@ -160,6 +161,46 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
   );
 
   server.registerTool(
+    "bcn_plan_query",
+    {
+      title: "bcn.plan_query",
+      description: [
+        "Plan a natural-language Barcelona city question into an explainable Open Data BCN workflow.",
+        "Returns recommended resources, optional source-bounded place resolution, final tool arguments, and citation guidance without running the final data query.",
+      ].join(" "),
+      inputSchema: schemas.inputs.cityQuery,
+      outputSchema: schemas.outputs.planQuery,
+    },
+    async (input, extra) =>
+      wrapBcnTool("city_query_plan", async () =>
+        planBcnCityQuery(input, config, {
+          logger: logger.child({ op: "city_query_plan" }),
+          signal: extra.signal,
+        }),
+      ),
+  );
+
+  server.registerTool(
+    "bcn_execute_city_query",
+    {
+      title: "bcn.execute_city_query",
+      description: [
+        "Execute a safe bounded Open Data BCN city-question plan end-to-end.",
+        "Blocks instead of guessing when the planner needs a resource or place selection.",
+      ].join(" "),
+      inputSchema: schemas.inputs.cityQuery,
+      outputSchema: schemas.outputs.executeCityQuery,
+    },
+    async (input, extra) =>
+      wrapBcnTool("city_query_execute", async () =>
+        executeBcnCityQuery(input, config, {
+          logger: logger.child({ op: "city_query_execute" }),
+          signal: extra.signal,
+        }),
+      ),
+  );
+
+  server.registerTool(
     "bcn_preview_resource",
     {
       title: "bcn.preview_resource",
@@ -194,6 +235,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
               "Use this workflow for Barcelona city Open Data BCN questions.",
               "",
               "1. For broad city questions, start with `bcn_recommend_resources` to pick likely resources and example arguments. Use `bcn_search_packages` when the recommender is too narrow or the topic is not covered.",
+              "1a. For natural city questions where you want the server to stitch the workflow together, call `bcn_plan_query` first or `bcn_execute_city_query` when a one-call bounded answer is acceptable. The executor blocks instead of guessing when a resource or place choice is ambiguous.",
               "2. Fetch the chosen package with `bcn_get_package`, then choose a resource. Prefer DataStore-active resources when the user needs filters, fields, pagination, or analysis.",
               "3. Inspect the resource with `bcn_get_resource_info`. Use returned field IDs exactly in `bcn_query_resource` filters, fields, and sort.",
               "4. When the user gives a named place rather than coordinates, call `bcn_resolve_place`. Point candidates feed `bcn_query_resource_geo.near`; district/neighborhood candidates can also return `area_ref` and `bbox` for `bcn_query_resource_geo.within_place`.",
@@ -431,6 +473,19 @@ function createBcnSchemas(config: AppConfig) {
   const placeKindSchema = z.enum(["facility", "landmark", "street", "neighborhood", "district"]);
   const recommendationTaskSchema = z.enum(["near", "within", "count", "group", "preview", "query"]);
   const recommendationPlaceKindSchema = z.enum(["point", "street", "neighborhood", "district"]);
+  const citySpatialModeSchema = z.enum(["contains", "near", "none", "preview", "query", "within"]);
+  const cityStatusSchema = z.enum([
+    "needs_place_selection",
+    "needs_resource_selection",
+    "ready",
+    "unsupported",
+  ]);
+  const cityExecutionStatusSchema = z.enum(["blocked", "completed"]);
+  const cityFinalToolSchema = z.enum([
+    "bcn_preview_resource",
+    "bcn_query_resource",
+    "bcn_query_resource_geo",
+  ]);
   const recommendedToolSchema = z.enum([
     "bcn_get_resource_info",
     "bcn_preview_resource",
@@ -497,6 +552,63 @@ function createBcnSchemas(config: AppConfig) {
     recommendations: z.array(recommendationSchema),
     truncated: z.boolean(),
   });
+  const cityIntentSchema = z.object({
+    query: z.string(),
+    normalized_query: z.string(),
+    task: recommendationTaskSchema,
+    spatial_mode: citySpatialModeSchema,
+    place_kind: recommendationPlaceKindSchema.optional(),
+    place_query: z.string().optional(),
+    confidence: z.enum(["high", "medium", "low"]),
+    caveats: z.array(z.string()),
+  });
+  const cityPlanStepSchema = z.object({
+    order: z.number().int().min(1),
+    tool: z.enum([
+      "bcn_get_resource_info",
+      "bcn_preview_resource",
+      "bcn_query_resource",
+      "bcn_query_resource_geo",
+      "bcn_recommend_resources",
+      "bcn_resolve_place",
+    ]),
+    arguments: z.record(jsonValueSchema),
+    depends_on: z.array(z.string()).optional(),
+    reason: z.string(),
+    status: z.enum(["blocked", "completed", "planned"]),
+  });
+  const cityResourceOverrideSchema = z.object({
+    resource_id: z.string(),
+    name: z.string(),
+    package_id: z.string().nullable(),
+    source_url: z.string().url(),
+    datastore_active: z.boolean(),
+    format: z.string().nullable(),
+  });
+  const cityCitationSchema = z.object({
+    resources: z.array(z.string()),
+    prompts: z.array(z.string()),
+    guidance: z.string(),
+  });
+  const cityPlaceResolutionSchema = z.object({
+    query: z.string(),
+    candidate_count: z.number().int().nonnegative(),
+    candidates: z.array(placeCandidateSchema),
+    selected_candidate: placeCandidateSchema.optional(),
+    truncated: z.boolean(),
+  });
+  const cityPlanDataSchema = z.object({
+    status: cityStatusSchema,
+    intent: cityIntentSchema,
+    recommendation: recommendationSchema.optional(),
+    recommendations: z.array(recommendationSchema).optional(),
+    resource_override: cityResourceOverrideSchema.optional(),
+    place_resolution: cityPlaceResolutionSchema.optional(),
+    steps: z.array(cityPlanStepSchema),
+    final_tool: cityFinalToolSchema.optional(),
+    final_arguments: z.record(jsonValueSchema).optional(),
+    citation: cityCitationSchema,
+  });
   const geoRowSchema = z.record(jsonValueSchema).and(
     z.object({
       _geo: z.record(jsonValueSchema),
@@ -556,6 +668,13 @@ function createBcnSchemas(config: AppConfig) {
       provenance: operationProvenanceSchema,
       error: errorSchema.optional(),
     });
+  const executeCityQueryDataSchema = z.object({
+    plan: cityPlanDataSchema,
+    execution_status: cityExecutionStatusSchema,
+    final_tool: cityFinalToolSchema.optional(),
+    final_arguments: z.record(jsonValueSchema).optional(),
+    final_result: z.record(jsonValueSchema).optional(),
+  });
 
   return {
     inputs: {
@@ -590,6 +709,18 @@ function createBcnSchemas(config: AppConfig) {
         task: recommendationTaskSchema.optional(),
         place_kind: recommendationPlaceKindSchema.optional(),
         limit: positiveLimitSchema,
+      },
+      cityQuery: {
+        query: z.string().trim().min(1),
+        task: recommendationTaskSchema.optional(),
+        place_kind: recommendationPlaceKindSchema.optional(),
+        place_query: z.string().trim().min(1).optional(),
+        resource_id: z.string().trim().min(1).optional(),
+        fields: z.array(z.string()).optional(),
+        filters: z.record(jsonValueSchema).optional(),
+        group_by: z.string().trim().min(1).optional(),
+        limit: positiveLimitSchema,
+        radius_m: z.number().positive().max(5_000).optional(),
       },
       queryResourceGeo: {
         resource_id: z.string(),
@@ -626,6 +757,8 @@ function createBcnSchemas(config: AppConfig) {
       queryResource: toolResultSchema(queryDataSchema),
       resolvePlace: toolResultSchema(placeDataSchema),
       recommendResources: toolResultSchema(recommendResourcesDataSchema),
+      planQuery: toolResultSchema(cityPlanDataSchema),
+      executeCityQuery: toolResultSchema(executeCityQueryDataSchema),
       queryResourceGeo: toolResultSchema(geoDataSchema),
       previewResource: toolResultSchema(previewDataSchema),
     },

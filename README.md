@@ -82,6 +82,8 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `idescat_get_table_metadata` | Fetch IDESCAT JSON-stat metadata: dimensions, category IDs, filter guidance, sources, links, and provenance. |
 | `idescat_get_table_data` | Fetch a bounded flattened data extract using IDESCAT dimension/category filters and `_LAST_`. |
 | `bcn_recommend_resources` | Recommend high-value Open Data BCN resources for natural-language city questions such as trees on a street, facilities near a place, or district/neighborhood area queries. |
+| `bcn_plan_query` | Plan a natural-language Barcelona city question into resource, place-resolution, geo-query, and citation steps without running the final data query. |
+| `bcn_execute_city_query` | Execute a ready BCN city-query plan end-to-end with the same bounded helper tools, blocking when a resource or place choice is ambiguous. |
 | `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
@@ -279,7 +281,22 @@ Keep the returned `package_id`, then call `bcn_get_package`:
 
 Each resource includes `resource_id`, format, URL, and `datastore_active`.
 
-### 2. Inspect A Resource
+### 2. Plan Or Execute A City Question
+
+Use `bcn_plan_query` when the user asks a natural city question and you want an inspectable workflow:
+
+```json
+{
+  "query": "tree species on Carrer Consell de Cent",
+  "limit": 10
+}
+```
+
+The planner returns `status`, deterministic `intent`, recommended resources, optional place-resolution candidates, ordered `steps`, `final_tool`, `final_arguments`, and citation guidance. `place_kind: "point"` maps to resolver kinds `["landmark", "facility"]`; `street`, `neighborhood`, and `district` pass through. Grouped prompts choose `group_by` deterministically: explicit input first, then neighborhood grouping for within-area questions, then the first recommended grouping field.
+
+Use `bcn_execute_city_query` for the same input when a one-call bounded result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
+
+### 3. Inspect A Resource
 
 Call `bcn_get_resource_info` before querying:
 
@@ -291,7 +308,7 @@ Call `bcn_get_resource_info` before querying:
 
 If `datastore_active` is true, the response includes queryable `fields`.
 
-### 3. Query Active DataStore Resources
+### 4. Query Active DataStore Resources
 
 `bcn_query_resource` always uses POST JSON. Filters are structured CKAN DataStore filters, not SQL text or URL fragments:
 
@@ -308,7 +325,7 @@ If `datastore_active` is true, the response includes queryable `fields`.
 
 The response includes `request_body` with the logical replayable request, row counts, truncation flags, and provenance.
 
-### 4. Resolve Named Places
+### 5. Resolve Named Places
 
 Use `bcn_resolve_place` when the user gives a place name instead of coordinates. The resolver is source-bounded: it queries an explicit Open Data BCN DataStore registry, ranks matching rows locally, and returns candidate WGS84 points with matched fields and source provenance. The registry covers building-address street points, administrative district and neighborhood boundaries, municipal facilities, and parks/gardens. District and neighborhood candidates include `bbox` plus `area_ref` when BCN exposes WGS84 boundary geometry; pass `area_ref` to `bcn_query_resource_geo.within_place` for "in this district/neighborhood" questions.
 
@@ -340,7 +357,7 @@ Street and area names use the same tool:
 
 Use the best point candidate's `lat` and `lon` in `bcn_query_resource_geo.near`. For district and neighborhood candidates, prefer `within_place` when `area_ref` is present. Optional resolver `bbox` and `kinds` filters can narrow ambiguous names.
 
-### 5. Query Resources Geospatially
+### 6. Query Resources Geospatially
 
 Use `bcn_query_resource_geo` when the resource has WGS84 coordinate fields. It works across DataStore-active resources and safe BCN-hosted CSV/JSON downloads. DataStore resources with `near`, `bbox`, or `within_place` use generated `datastore_search_sql` internally so spatial narrowing happens upstream; callers still provide only structured inputs, never raw SQL. `within_place` first applies the resolved area's bbox upstream, then validates exact polygon containment locally. The tool infers common latitude/longitude pairs such as `latitud` / `longitud`, `geo_epgs_4326_lat` / `geo_epgs_4326_lon`, and `geo_epgs_4326_y` / `geo_epgs_4326_x`; if multiple pairs exist, pass `lat_field` and `lon_field`. It does not convert ETRS89 `x/y` fields.
 
@@ -393,7 +410,7 @@ The response includes `strategy`, `datastore_mode` (`sql` or `scan`) for DataSto
 
 Geo helpers remain bounded. DataStore `near`, `bbox`, and `within_place` queries push spatial predicates into CKAN SQL, while DataStore calls without spatial inputs and download resources still scan locally. When `truncation_reason` is `scan_cap`, additional matches may exist beyond the scanned rows; narrow `bbox`, `contains`, or `filters`, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for local trusted runs. Download JSON resources are accepted only when small enough to parse as complete documents; larger JSON resources should use a DataStore or CSV sibling.
 
-### 6. Preview Inactive CSV/JSON Resources
+### 7. Preview Inactive CSV/JSON Resources
 
 If `datastore_active` is false, use `bcn_preview_resource` for a bounded sample:
 

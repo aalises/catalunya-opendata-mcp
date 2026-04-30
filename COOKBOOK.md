@@ -294,6 +294,39 @@ Start with the deterministic recommender when the request is broad but common:
 
 Use the top recommendation's `resource_id`, `suggested_tool`, and `example_arguments` as a starting point, then call `bcn_get_resource_info` when you need exact fields. If the topic is not covered by the curated recommender, fall back to `bcn_search_packages`.
 
+## Open Data BCN: Plan Or Execute A City Question
+
+User prompt:
+
+> What tree species are on Carrer Consell de Cent?
+
+Use the planner when you want the server to assemble the workflow without running the final query:
+
+```json
+{
+  "tool": "bcn_plan_query",
+  "arguments": {
+    "query": "tree species on Carrer Consell de Cent",
+    "limit": 10
+  }
+}
+```
+
+For a one-call bounded result, use the executor:
+
+```json
+{
+  "tool": "bcn_execute_city_query",
+  "arguments": {
+    "query": "facilities near Sagrada Família",
+    "radius_m": 1500,
+    "limit": 10
+  }
+}
+```
+
+The executor embeds the full plan and runs only when `status` is `ready`; otherwise it returns `execution_status: "blocked"`. `place_kind: "point"` resolves only point-like BCN sources (`landmark` and `facility`), while street/area kinds pass through. Area candidates populate `within_place` from `selected_candidate.area_ref`.
+
 ## Open Data BCN: Preview Street Trees CSV
 
 User prompt:

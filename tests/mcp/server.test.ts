@@ -134,6 +134,8 @@ describe("createMcpServer", () => {
           "bcn_query_resource",
           "bcn_resolve_place",
           "bcn_recommend_resources",
+          "bcn_plan_query",
+          "bcn_execute_city_query",
           "bcn_query_resource_geo",
           "bcn_preview_resource",
         ]),
@@ -149,6 +151,8 @@ describe("createMcpServer", () => {
       expect(descriptions.bcn_query_resource).toContain("filters as a JSON object");
       expect(descriptions.bcn_resolve_place).toContain("named place");
       expect(descriptions.bcn_recommend_resources).toContain("Recommend");
+      expect(descriptions.bcn_plan_query).toContain("Plan");
+      expect(descriptions.bcn_execute_city_query).toContain("Execute");
       expect(descriptions.bcn_query_resource_geo).toContain("geospatial query");
       expect(descriptions.bcn_query_resource_geo).toContain("group_by");
       expect(descriptions.bcn_query_resource_geo).toContain("within_place");
@@ -334,6 +338,109 @@ describe("createMcpServer", () => {
       });
       expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
       expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN city query plans with JSON text fallback", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch should not be called"));
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_plan_query",
+        arguments: {
+          query: "tree species on Carrer Consell de Cent",
+          limit: 5,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          status: "ready",
+          intent: {
+            task: "group",
+            spatial_mode: "contains",
+            place_query: "Carrer Consell de Cent",
+          },
+          final_tool: "bcn_query_resource_geo",
+          final_arguments: {
+            contains: {
+              adreca: "Carrer Consell de Cent",
+            },
+            group_by: "cat_nom_catala",
+          },
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:city_query_plan",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await close();
+    }
+  });
+
+  it("returns structured BCN city query execution output with JSON text fallback", async () => {
+    vi.spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        bcnCkanSuccess(
+          bcnResource({
+            id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+            datastore_active: false,
+            format: "CSV",
+            mimetype: "text/csv",
+            url: "https://opendata-ajuntament.barcelona.cat/download/arbrat.csv",
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(
+        new Response(
+          [
+            "adreca;cat_nom_catala;latitud;longitud",
+            "Carrer Consell de Cent 1;Plataner;41.39;2.16",
+          ].join("\n"),
+          {
+            headers: { "Content-Type": "text/csv; charset=utf-8" },
+            status: 200,
+          },
+        ),
+      );
+    const { client, close } = await connectInMemoryServer();
+
+    try {
+      const result = (await client.callTool({
+        name: "bcn_execute_city_query",
+        arguments: {
+          query: "tree species on Carrer Consell de Cent",
+          limit: 5,
+        },
+      })) as ToolCallResult;
+
+      expect(result.isError).toBeUndefined();
+      expect(result.structuredContent).toMatchObject({
+        data: {
+          execution_status: "completed",
+          final_tool: "bcn_query_resource_geo",
+          final_result: {
+            data: {
+              strategy: "download_stream",
+              matched_row_count: 1,
+            },
+          },
+        },
+        provenance: {
+          source: "bcn",
+          id: "opendata-ajuntament.barcelona.cat:city_query_execute",
+        },
+      });
+      expect(JSON.parse(result.content[0]?.text ?? "{}")).toEqual(result.structuredContent);
     } finally {
       await close();
     }

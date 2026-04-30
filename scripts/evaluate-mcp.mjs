@@ -17,7 +17,7 @@ const PROFILE_CASE_COUNTS = {
   stress: {
     mcp: 1,
     socrata: 53,
-    bcn: 19,
+    bcn: 23,
     idescat: 71,
   },
 };
@@ -751,6 +751,87 @@ async function runStressProfile(client) {
             recommendation.example_arguments?.within_place,
         ),
         "BCN recommender returns within_place-ready facility resources for area questions",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_plan.trees_consell_species",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_plan_query",
+    args: {
+      query: "tree species on Carrer Consell de Cent",
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.status === "ready" &&
+          data.final_tool === "bcn_query_resource_geo" &&
+          data.final_arguments?.contains?.adreca === "Carrer Consell de Cent" &&
+          data.final_arguments?.group_by === "cat_nom_catala",
+        "BCN city planner produces a street-tree species grouping plan",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_execute.facilities_near_sagrada",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_execute_city_query",
+    args: {
+      query: "facilities near Sagrada Família",
+      radius_m: 1_500,
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "completed" &&
+          data.final_tool === "bcn_query_resource_geo" &&
+          data.plan?.intent?.spatial_mode === "near" &&
+          data.final_result?.data?.strategy === "datastore" &&
+          data.final_result?.data?.row_count > 0,
+        "BCN city executor resolves a named place and runs a bounded near query",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_execute.facilities_within_gracia_grouped",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_execute_city_query",
+    args: {
+      query: "count facilities in Gràcia by neighborhood",
+      limit: 5,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.execution_status === "completed" &&
+          data.final_tool === "bcn_query_resource_geo" &&
+          data.plan?.intent?.spatial_mode === "within" &&
+          data.final_arguments?.within_place?.source_resource_id ===
+            "576bc645-9481-4bc4-b8bf-f5972c20df3f" &&
+          data.final_result?.data?.groups?.length > 0,
+        "BCN city executor resolves a district and runs a grouped within-place query",
+      ),
+  });
+
+  await evaluateTool({
+    client,
+    id: "bcn.city_plan.unsupported_question",
+    connector: "bcn",
+    category: "city_query",
+    tool: "bcn_plan_query",
+    args: {
+      query: "interplanetary ferry permits",
+      limit: 3,
+    },
+    expect: ({ data }) =>
+      passIf(
+        data.status === "unsupported" && data.recommendations?.length === 0,
+        "BCN city planner does not force unrelated questions into a low-confidence resource",
       ),
   });
 
