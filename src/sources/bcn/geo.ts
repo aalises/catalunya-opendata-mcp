@@ -51,7 +51,7 @@ export const BCN_GEO_TRUNCATION_HINTS = {
     "download scan reached the byte cap; raise CATALUNYA_MCP_BCN_GEO_SCAN_BYTES, narrow the resource, or use a DataStore-active resource",
   row_cap: "raise limit within maxResults or use offset to page through matched rows",
   scan_cap:
-    "scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or raise CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS",
+    "scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or unset CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS for unlimited trusted local scans",
 } as const satisfies Record<BcnGeoTruncationReason, string>;
 
 export interface BcnQueryResourceGeoInput {
@@ -399,11 +399,14 @@ async function scanDatastoreResourcePages(
   let upstreamTotal: number | null | undefined;
   let scanCapped = false;
 
-  while (scannedRowCount < config.bcnGeoScanMaxRows) {
-    const pageSize = Math.min(
-      BCN_GEO_DATASTORE_PAGE_SIZE,
-      config.bcnGeoScanMaxRows - scannedRowCount,
-    );
+  while (!isGeoScanRowLimitReached(config.bcnGeoScanMaxRows, scannedRowCount)) {
+    const pageSize = getGeoScanPageSize(config.bcnGeoScanMaxRows, scannedRowCount);
+
+    if (pageSize <= 0) {
+      scanCapped = true;
+      break;
+    }
+
     const requestBody = buildDatastoreGeoRequestBody(
       input,
       pageSize,
@@ -453,7 +456,7 @@ async function scanDatastoreResourcePages(
     upstreamOffset += parsed.data.records.length;
   }
 
-  if (scannedRowCount >= config.bcnGeoScanMaxRows) {
+  if (isGeoScanRowLimitReached(config.bcnGeoScanMaxRows, scannedRowCount)) {
     scanCapped = true;
   }
 
@@ -495,7 +498,7 @@ async function queryDatastoreResourceSql(
 
   while (true) {
     const pageLimit = sqlPlan.localPostFilterMode
-      ? Math.min(BCN_GEO_DATASTORE_PAGE_SIZE, config.bcnGeoScanMaxRows + 1 - scannedRowCount)
+      ? getGeoScanPageSize(config.bcnGeoScanMaxRows, scannedRowCount, { includeOverflow: true })
       : input.limit + 1;
 
     if (pageLimit <= 0) {
@@ -518,7 +521,10 @@ async function queryDatastoreResourceSql(
     for (const rawRow of records) {
       upstreamTotal ??= getSqlMatchedTotal(normalizeBcnJsonObject(rawRow, "records[]"));
 
-      if (sqlPlan.localPostFilterMode && scannedRowCount >= config.bcnGeoScanMaxRows) {
+      if (
+        sqlPlan.localPostFilterMode &&
+        isGeoScanRowLimitReached(config.bcnGeoScanMaxRows, scannedRowCount)
+      ) {
         scanCapped = true;
         break;
       }
@@ -546,6 +552,7 @@ async function queryDatastoreResourceSql(
 
   if (
     sqlPlan.localPostFilterMode &&
+    config.bcnGeoScanMaxRows !== undefined &&
     needsFullLocalScan &&
     typeof upstreamTotal === "number" &&
     upstreamTotal > scannedRowCount
@@ -615,7 +622,12 @@ async function scanDownloadResource(
     throw new BcnError("invalid_input", "Open Data BCN resource does not expose a download URL.");
   }
 
-  const download = await fetchBcnDownload(metadata.url, config, options, config.bcnGeoScanBytes);
+  const download = await fetchBcnDownload(
+    metadata.url,
+    config,
+    options,
+    config.bcnGeoScanBytes ?? null,
+  );
   const format = detectPreviewFormat({
     contentType: download.contentType,
     format: metadata.format,
@@ -1244,7 +1256,30 @@ function stripSqlHelperFields(row: Record<string, JsonValue>): Record<string, Js
   return cleaned;
 }
 
-function parseGeoCsvRows(text: string, byteTruncated: boolean, maxRows: number): ParsedGeoRows {
+function getGeoScanPageSize(
+  maxRows: number | undefined,
+  scannedRowCount: number,
+  options: { includeOverflow?: boolean } = {},
+): number {
+  if (maxRows === undefined) {
+    return BCN_GEO_DATASTORE_PAGE_SIZE;
+  }
+
+  const overflowAllowance = options.includeOverflow ? 1 : 0;
+  const remainingRows = maxRows + overflowAllowance - scannedRowCount;
+
+  return Math.min(BCN_GEO_DATASTORE_PAGE_SIZE, Math.max(remainingRows, 0));
+}
+
+function isGeoScanRowLimitReached(maxRows: number | undefined, scannedRowCount: number): boolean {
+  return maxRows !== undefined && scannedRowCount >= maxRows;
+}
+
+function parseGeoCsvRows(
+  text: string,
+  byteTruncated: boolean,
+  maxRows: number | undefined,
+): ParsedGeoRows {
   const parseText = byteTruncated ? trimToLastCompleteLine(text) : text;
   const delimiter = detectCsvDelimiter(parseText);
   let parsed: Array<Record<string, unknown>>;
@@ -1256,7 +1291,7 @@ function parseGeoCsvRows(text: string, byteTruncated: boolean, maxRows: number):
       delimiter,
       relax_column_count: true,
       skip_empty_lines: true,
-      to: maxRows + 1,
+      ...(maxRows === undefined ? {} : { to: maxRows + 1 }),
     }) as Array<Record<string, unknown>>;
   } catch (error) {
     throw new BcnError(
@@ -1266,15 +1301,20 @@ function parseGeoCsvRows(text: string, byteTruncated: boolean, maxRows: number):
     );
   }
 
-  const scanCapped = parsed.length > maxRows;
+  const scanCapped = maxRows !== undefined && parsed.length > maxRows;
+  const rows = maxRows === undefined ? parsed : parsed.slice(0, maxRows);
 
   return {
-    rows: parsed.slice(0, maxRows).map((row) => normalizeBcnJsonObject(row, "csv records[]")),
+    rows: rows.map((row) => normalizeBcnJsonObject(row, "csv records[]")),
     scanCapped,
   };
 }
 
-function parseGeoJsonRows(text: string, byteTruncated: boolean, maxRows: number): ParsedGeoRows {
+function parseGeoJsonRows(
+  text: string,
+  byteTruncated: boolean,
+  maxRows: number | undefined,
+): ParsedGeoRows {
   if (byteTruncated) {
     throw new BcnError(
       "invalid_response",
@@ -1298,11 +1338,12 @@ function parseGeoJsonRows(text: string, byteTruncated: boolean, maxRows: number)
   }
 
   const rawRows = Array.isArray(parsed) ? parsed : [parsed];
-  const scanRows = rawRows.slice(0, maxRows + 1);
-  const scanCapped = scanRows.length > maxRows;
+  const scanRows = maxRows === undefined ? rawRows : rawRows.slice(0, maxRows + 1);
+  const scanCapped = maxRows !== undefined && scanRows.length > maxRows;
+  const rows = maxRows === undefined ? scanRows : scanRows.slice(0, maxRows);
 
   return {
-    rows: scanRows.slice(0, maxRows).map((row) => normalizeBcnJsonObject(row, "json records[]")),
+    rows: rows.map((row) => normalizeBcnJsonObject(row, "json records[]")),
     scanCapped,
   };
 }

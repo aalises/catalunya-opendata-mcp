@@ -57,9 +57,9 @@ Common caveats:
 - `bbox` fallback: area results used a rectangular approximation because a district/neighborhood boundary did not expose `area_ref`.
 - `row_cap`: more rows are available; increase `limit` within `CATALUNYA_MCP_MAX_RESULTS` or page with `offset`.
 - `byte_cap`: narrow filters, reduce selected fields, or lower `limit`.
-- `scan_cap`: narrow `bbox`, `contains`, or filters, or raise `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for trusted local runs.
+- `scan_cap`: narrow `bbox`, `contains`, or filters, or unset `CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS` for unlimited trusted local scans.
 
-Treat `execution_notes` as operational context. They explain how a result was produced, such as CKAN SQL pushdown or bounded BCN-hosted download scans.
+Treat `execution_notes` as operational context. They explain how a result was produced, such as CKAN SQL pushdown or BCN-hosted download scans.
 
 ## Release Owner Checklist
 

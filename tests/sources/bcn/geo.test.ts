@@ -702,4 +702,64 @@ describe("BCN geo helpers", () => {
     expect(result.data.truncation_reason).toBe("scan_cap");
     expect(result.data.scanned_row_count).toBe(1_000);
   });
+
+  it("scans all downloaded CSV rows when the geo row cap is unset", async () => {
+    const rows = Array.from(
+      { length: 1_001 },
+      (_, index) => `A ${index};41.${String(index % 10).padStart(2, "0")};2.1`,
+    );
+
+    mockFetchResponses(
+      ckanSuccess(bcnResource()),
+      new Response(["name;latitud;longitud", ...rows].join("\n"), {
+        headers: { "Content-Type": "text/csv" },
+        status: 200,
+      }),
+    );
+
+    const result = await queryBcnResourceGeo(
+      {
+        resource_id: "resource-1",
+        bbox: { min_lat: 41, min_lon: 2, max_lat: 42, max_lon: 3 },
+        contains: { name: "A" },
+        limit: 10,
+      },
+      { ...baseConfig, bcnGeoScanMaxRows: undefined },
+    );
+
+    expect(result.data.scanned_row_count).toBe(1_001);
+    expect(result.data.matched_row_count).toBe(1_001);
+    expect(result.data.truncation_reason).toBe("row_cap");
+  });
+
+  it("does not fall back to preview byte caps when the geo byte cap is unset", async () => {
+    mockFetchResponses(
+      ckanSuccess(bcnResource()),
+      new Response(
+        [
+          "name;latitud;longitud",
+          "A with enough text to exceed a tiny preview cap;41.40;2.10",
+          "B with enough text to exceed a tiny preview cap;41.41;2.11",
+        ].join("\n"),
+        {
+          headers: { "Content-Type": "text/csv" },
+          status: 200,
+        },
+      ),
+    );
+
+    const result = await queryBcnResourceGeo(
+      {
+        resource_id: "resource-1",
+        bbox: { min_lat: 41, min_lon: 2, max_lat: 42, max_lon: 3 },
+        contains: { name: "enough text" },
+        limit: 10,
+      },
+      { ...baseConfig, bcnGeoScanBytes: undefined, bcnUpstreamReadBytes: 20 },
+    );
+
+    expect(result.data.scanned_row_count).toBe(2);
+    expect(result.data.matched_row_count).toBe(2);
+    expect(result.data.truncation_reason).toBeUndefined();
+  });
 });

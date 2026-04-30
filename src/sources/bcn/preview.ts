@@ -127,7 +127,7 @@ export async function fetchBcnDownload(
   rawUrl: string,
   config: AppConfig,
   options: FetchBcnJsonOptions,
-  maxBytes = config.bcnUpstreamReadBytes,
+  maxBytes: number | null = config.bcnUpstreamReadBytes,
 ): Promise<BcnDownloadResult> {
   let url = parseAllowedDownloadUrl(rawUrl);
 
@@ -226,7 +226,7 @@ function parseAllowedDownloadUrl(value: string): URL {
 
 async function readPreviewBodyBytes(
   response: Response,
-  maxBytes: number,
+  maxBytes: number | null,
 ): Promise<{ bytes: Uint8Array; truncated: boolean }> {
   if (!response.body) {
     return { bytes: new Uint8Array(), truncated: false };
@@ -234,11 +234,11 @@ async function readPreviewBodyBytes(
 
   const reader = response.body.getReader();
   const chunks: Uint8Array[] = [];
-  const maxBufferedBytes = maxBytes + 1;
+  const maxBufferedBytes = maxBytes === null ? undefined : maxBytes + 1;
   let byteLength = 0;
 
   try {
-    while (byteLength <= maxBytes) {
+    while (maxBytes === null || byteLength <= maxBytes) {
       const { done, value } = await reader.read();
 
       if (done) {
@@ -246,6 +246,12 @@ async function readPreviewBodyBytes(
       }
 
       if (!value) {
+        continue;
+      }
+
+      if (maxBufferedBytes === undefined) {
+        chunks.push(value);
+        byteLength += value.byteLength;
         continue;
       }
 
@@ -261,14 +267,14 @@ async function readPreviewBodyBytes(
       byteLength += value.byteLength;
     }
 
-    const truncated = byteLength > maxBytes;
+    const truncated = maxBytes !== null && byteLength > maxBytes;
 
     if (truncated) {
       await reader.cancel().catch(() => undefined);
     }
 
     return {
-      bytes: concatChunks(chunks, truncated ? maxBytes : byteLength),
+      bytes: concatChunks(chunks, truncated && maxBytes !== null ? maxBytes : byteLength),
       truncated,
     };
   } catch (error) {

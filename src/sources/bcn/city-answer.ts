@@ -614,7 +614,7 @@ function collectAnswerNotes(
   if (finalData.strategy === "download_stream") {
     addCaveat(
       executionNotes,
-      "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+      "Final query used a BCN-hosted download scan; optional configured byte and row caps apply when set.",
     );
   }
 

@@ -55,11 +55,11 @@ Expected answer contract:
   },
   "caveats": [
     "Place query was inferred deterministically from the question text.",
-    "Final result was truncated because of scan_cap: scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or raise CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS"
+    "Final result was truncated because of scan_cap: scan reached the configured BCN geo row cap; narrow bbox, contains, or filters, or unset CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS for unlimited trusted local scans"
   ],
   "execution_notes": [
-    "Not DataStore-active; geospatial queries use safe bounded CSV download scans.",
-    "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply."
+    "Not DataStore-active; geospatial queries use BCN-hosted CSV download scans.",
+    "Final query used a BCN-hosted download scan; optional configured byte and row caps apply when set."
   ]
 }
 ```

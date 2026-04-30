@@ -13,10 +13,17 @@ function emptyStringAsUndefined(value: unknown): unknown {
   return trimmed === "" ? undefined : trimmed;
 }
 
+function emptyStringOrZeroAsUndefined(value: unknown): unknown {
+  const normalized = emptyStringAsUndefined(value);
+  return normalized === "0" || normalized === 0 ? undefined : normalized;
+}
+
 const optionalSecretSchema = z.preprocess(
   emptyStringAsUndefined,
   z.string().trim().min(1).optional(),
 );
+
+const optionalPositiveIntegerSchema = z.coerce.number().int().positive().optional();
 
 const envSchema = z
   .object({
@@ -46,12 +53,12 @@ const envSchema = z
       z.coerce.number().int().min(65_536).max(16_777_216).default(2_097_152),
     ),
     CATALUNYA_MCP_BCN_GEO_SCAN_MAX_ROWS: z.preprocess(
-      emptyStringAsUndefined,
-      z.coerce.number().int().min(1_000).max(100_000).default(50_000),
+      emptyStringOrZeroAsUndefined,
+      optionalPositiveIntegerSchema,
     ),
     CATALUNYA_MCP_BCN_GEO_SCAN_BYTES: z.preprocess(
-      emptyStringAsUndefined,
-      z.coerce.number().int().min(2_097_152).max(134_217_728).default(67_108_864),
+      emptyStringOrZeroAsUndefined,
+      optionalPositiveIntegerSchema,
     ),
     SOCRATA_APP_TOKEN: optionalSecretSchema,
   })
