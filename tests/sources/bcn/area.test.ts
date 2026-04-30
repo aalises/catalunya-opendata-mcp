@@ -44,6 +44,17 @@ describe("BCN area helpers", () => {
     expect(isPointInBcnWgs84Geometry({ lat: 41.55, lon: 2.25 }, geometry)).toBe(false);
   });
 
+  it("keeps polygon holes scoped to their polygon parts", () => {
+    const geometry = parseBcnWgs84Geometry(
+      "MULTIPOLYGON (((2.00 41.00, 2.30 41.00, 2.30 41.30, 2.00 41.30, 2.00 41.00), (2.10 41.10, 2.20 41.10, 2.20 41.20, 2.10 41.20, 2.10 41.10)), ((2.40 41.40, 2.50 41.40, 2.50 41.50, 2.40 41.50, 2.40 41.40)))",
+    );
+
+    expect(geometry.polygons).toHaveLength(2);
+    expect(isPointInBcnWgs84Geometry({ lat: 41.05, lon: 2.05 }, geometry)).toBe(true);
+    expect(isPointInBcnWgs84Geometry({ lat: 41.15, lon: 2.15 }, geometry)).toBe(false);
+    expect(isPointInBcnWgs84Geometry({ lat: 41.45, lon: 2.45 }, geometry)).toBe(true);
+  });
+
   it("fetches one area geometry row from BCN DataStore", async () => {
     const fetchMock = mockFetchResponses(
       ckanSuccess({

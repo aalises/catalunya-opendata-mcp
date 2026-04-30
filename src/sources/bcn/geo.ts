@@ -135,6 +135,8 @@ export interface BcnQueryResourceGeoData {
   truncated: boolean;
   truncation_hint?: string;
   truncation_reason?: BcnGeoTruncationReason;
+  upstream_bbox_total?: number | null;
+  upstream_prefilter_total?: number | null;
   upstream_total?: number | null;
 }
 
@@ -174,6 +176,8 @@ interface GeoScanResult {
   scannedRowCount: number;
   strategy: BcnGeoStrategy;
   truncationReason?: BcnGeoTruncationReason;
+  upstreamBboxTotal?: number | null;
+  upstreamPrefilterTotal?: number | null;
   upstreamTotal?: number | null;
 }
 
@@ -245,7 +249,7 @@ export async function queryBcnResourceGeo(
         coordinate_fields: scan.coordinateFields,
         ...(normalized.areaFilter ? { area_filter: normalized.areaFilter } : {}),
         ...(normalized.near ? { near: normalized.near } : {}),
-        ...(normalized.bbox ? { bbox: normalized.bbox } : {}),
+        ...(normalized.bbox && !normalized.areaFilter ? { bbox: normalized.bbox } : {}),
         ...(normalized.filters ? { filters: normalized.filters } : {}),
         ...(normalized.contains ? { contains: normalized.contains } : {}),
         ...(normalized.fields ? { fields: normalized.fields } : {}),
@@ -260,6 +264,12 @@ export async function queryBcnResourceGeo(
         ...(groups ? { groups } : {}),
         truncated: false,
         ...(scan.upstreamTotal === undefined ? {} : { upstream_total: scan.upstreamTotal }),
+        ...(scan.upstreamBboxTotal === undefined
+          ? {}
+          : { upstream_bbox_total: scan.upstreamBboxTotal }),
+        ...(scan.upstreamPrefilterTotal === undefined
+          ? {}
+          : { upstream_prefilter_total: scan.upstreamPrefilterTotal }),
       },
       reason,
     ),
@@ -473,13 +483,111 @@ async function queryDatastoreResourceSql(
   config: AppConfig,
   options: FetchBcnJsonOptions,
 ): Promise<GeoScanResult> {
-  const sqlPlan = buildDatastoreSqlPlan(input, coordinateFields, fields, config);
+  const sqlPlan = buildDatastoreSqlPlan(input, coordinateFields, fields);
   const url = buildBcnDatastoreUrl("datastore_search_sql");
+  const matchedRows: BcnGeoRow[] = [];
+  let upstreamTotal: number | null | undefined;
+  let scannedRowCount = 0;
+  let upstreamOffset = sqlPlan.localPostFilterMode ? 0 : input.offset;
+  let scanCapped = false;
+  const needsFullLocalScan = Boolean(input.group_by);
+  const neededMatches = input.offset + input.limit + 1;
+
+  while (true) {
+    const pageLimit = sqlPlan.localPostFilterMode
+      ? Math.min(BCN_GEO_DATASTORE_PAGE_SIZE, config.bcnGeoScanMaxRows + 1 - scannedRowCount)
+      : input.limit + 1;
+
+    if (pageLimit <= 0) {
+      scanCapped = true;
+      break;
+    }
+
+    const records = await fetchDatastoreSqlRecords(
+      url,
+      sqlPlan.actualSql(pageLimit, upstreamOffset),
+      config,
+      options,
+    );
+
+    if (records.length === 0) {
+      upstreamTotal ??= 0;
+      break;
+    }
+
+    for (const rawRow of records) {
+      upstreamTotal ??= getSqlMatchedTotal(normalizeBcnJsonObject(rawRow, "records[]"));
+
+      if (sqlPlan.localPostFilterMode && scannedRowCount >= config.bcnGeoScanMaxRows) {
+        scanCapped = true;
+        break;
+      }
+
+      scannedRowCount += 1;
+      const row = normalizeBcnJsonObject(rawRow, "records[]");
+      const sourceRow = stripSqlHelperFields(row);
+      const geoRow = toMatchedGeoRow(sourceRow, coordinateFields, input);
+
+      if (geoRow) {
+        matchedRows.push(geoRow);
+      }
+    }
+
+    if (scanCapped || records.length < pageLimit || !sqlPlan.localPostFilterMode) {
+      break;
+    }
+
+    upstreamOffset += records.length;
+
+    if (!needsFullLocalScan && matchedRows.length >= neededMatches) {
+      break;
+    }
+  }
+
+  if (
+    sqlPlan.localPostFilterMode &&
+    needsFullLocalScan &&
+    typeof upstreamTotal === "number" &&
+    upstreamTotal > scannedRowCount
+  ) {
+    scanCapped = true;
+  }
+
+  const hasLocalRowFilter = Boolean(input.contains || input.areaGeometry);
+  const matchedRowCount = hasLocalRowFilter
+    ? matchedRows.length
+    : (upstreamTotal ?? matchedRows.length);
+
+  return {
+    strategy: "datastore",
+    datastoreMode: "sql",
+    requestMethod: "POST",
+    requestUrl: url,
+    logicalRequestBody: { sql: sqlPlan.logicalSql },
+    coordinateFields,
+    rowsPrePaged: !sqlPlan.localPostFilterMode,
+    rowsSortedByDistance: input.near !== undefined,
+    scannedRowCount,
+    matchedRowCount,
+    matchedRows,
+    ...(!hasLocalRowFilter ? { upstreamTotal } : {}),
+    ...(input.areaGeometry ? { upstreamBboxTotal: upstreamTotal } : {}),
+    ...(input.contains ? { upstreamPrefilterTotal: upstreamTotal } : {}),
+    ...(scanCapped ? { truncationReason: "scan_cap" as const } : {}),
+  };
+}
+
+async function fetchDatastoreSqlRecords(
+  url: URL,
+  sql: string,
+  config: AppConfig,
+  options: FetchBcnJsonOptions,
+): Promise<Array<Record<string, unknown>>> {
   const raw = await fetchBcnActionResult(
     {
       method: "POST",
       url,
-      body: { sql: sqlPlan.actualSql },
+      body: { sql },
     },
     config,
     options,
@@ -494,48 +602,7 @@ async function queryDatastoreResourceSql(
     );
   }
 
-  const matchedRows: BcnGeoRow[] = [];
-  let upstreamTotal: number | null | undefined;
-  const rawRecords = sqlPlan.localPostFilterMode
-    ? parsed.data.records.slice(0, config.bcnGeoScanMaxRows)
-    : parsed.data.records;
-
-  for (const rawRow of rawRecords) {
-    const row = normalizeBcnJsonObject(rawRow, "records[]");
-    upstreamTotal ??= getSqlMatchedTotal(row);
-    const sourceRow = stripSqlHelperFields(row);
-    const geoRow = toMatchedGeoRow(sourceRow, coordinateFields, input);
-
-    if (geoRow) {
-      matchedRows.push(geoRow);
-    }
-  }
-
-  upstreamTotal ??= parsed.data.records.length === 0 ? 0 : null;
-  const matchedRowCount =
-    input.contains || input.areaGeometry
-      ? matchedRows.length
-      : (upstreamTotal ?? matchedRows.length);
-  const scanCapped =
-    sqlPlan.localPostFilterMode &&
-    (parsed.data.records.length > config.bcnGeoScanMaxRows ||
-      (typeof upstreamTotal === "number" && upstreamTotal > config.bcnGeoScanMaxRows));
-
-  return {
-    strategy: "datastore",
-    datastoreMode: "sql",
-    requestMethod: "POST",
-    requestUrl: url,
-    logicalRequestBody: { sql: sqlPlan.logicalSql },
-    coordinateFields,
-    rowsPrePaged: !sqlPlan.localPostFilterMode,
-    rowsSortedByDistance: input.near !== undefined,
-    scannedRowCount: rawRecords.length,
-    matchedRowCount,
-    matchedRows,
-    upstreamTotal,
-    ...(scanCapped ? { truncationReason: "scan_cap" as const } : {}),
-  };
+  return parsed.data.records;
 }
 
 async function scanDownloadResource(
@@ -893,7 +960,7 @@ function collectGeoRequestFieldNames(
 }
 
 interface DatastoreSqlPlan {
-  actualSql: string;
+  actualSql: (limit: number, offset: number) => string;
   localPostFilterMode: boolean;
   logicalSql: string;
 }
@@ -902,7 +969,6 @@ function buildDatastoreSqlPlan(
   input: NormalizedGeoInput,
   coordinateFields: BcnCoordinateFields,
   fields: Array<{ id: string; type: string }>,
-  config: AppConfig,
 ): DatastoreSqlPlan {
   const fieldIds = fields.map((field) => field.id);
   const selectedFields = getSqlSelectedFields(input, coordinateFields, fieldIds);
@@ -917,14 +983,13 @@ function buildDatastoreSqlPlan(
       ? ' ORDER BY "_id" ASC'
       : "";
   const localPostFilterMode = Boolean(input.group_by || input.contains || input.areaGeometry);
-  const actualLimit = localPostFilterMode ? config.bcnGeoScanMaxRows + 1 : input.limit + 1;
-  const actualOffset = localPostFilterMode ? 0 : input.offset;
   const actualSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, true);
   const logicalSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, false);
   const fromSql = ` FROM ${quoteSqlIdentifier(input.resource_id)}`;
 
   return {
-    actualSql: `${actualSelect}${fromSql}${whereSql}${orderSql} LIMIT ${actualLimit} OFFSET ${actualOffset}`,
+    actualSql: (limit, offset) =>
+      `${actualSelect}${fromSql}${whereSql}${orderSql} LIMIT ${limit} OFFSET ${offset}`,
     localPostFilterMode,
     logicalSql: `${logicalSelect}${fromSql}${whereSql}${orderSql} LIMIT ${input.limit} OFFSET ${input.offset}`,
   };

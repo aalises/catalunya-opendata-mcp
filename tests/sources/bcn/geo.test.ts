@@ -109,7 +109,7 @@ describe("BCN geo helpers", () => {
     expect(sqlBody.sql).toContain('FROM "resource-1"');
     expect(sqlBody.sql).toContain('"_bcn_matched_total"');
     expect(sqlBody.sql).toContain('"addresses_road_name"');
-    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
+    expect(sqlBody.sql).toContain("LIMIT 1000 OFFSET 0");
     expect(result.data).toMatchObject({
       strategy: "datastore",
       datastore_mode: "sql",
@@ -149,7 +149,7 @@ describe("BCN geo helpers", () => {
           },
         },
       ],
-      upstream_total: 2,
+      upstream_prefilter_total: 2,
       logical_request_body: {
         sql: expect.stringContaining("LIMIT 1 OFFSET 0"),
       },
@@ -269,7 +269,7 @@ describe("BCN geo helpers", () => {
     const sqlBody = JSON.parse(String((fetchMock.mock.calls[3] as [URL, RequestInit])[1].body)) as {
       sql: string;
     };
-    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
+    expect(sqlBody.sql).toContain("LIMIT 1000 OFFSET 0");
     expect(sqlBody.sql).toContain("BETWEEN 41.4 AND 41.5");
     expect(sqlBody.sql).toContain("BETWEEN 2.1 AND 2.2");
     expect(result.data).toMatchObject({
@@ -281,12 +281,6 @@ describe("BCN geo helpers", () => {
         row_id: 2,
         geometry_field: "geometria_wgs84",
         geometry_type: "polygon",
-      },
-      bbox: {
-        min_lat: 41.4,
-        min_lon: 2.1,
-        max_lat: 41.5,
-        max_lon: 2.2,
       },
       scanned_row_count: 2,
       matched_row_count: 1,
@@ -302,7 +296,7 @@ describe("BCN geo helpers", () => {
           },
         },
       ],
-      upstream_total: 2,
+      upstream_bbox_total: 2,
     });
   });
 
@@ -365,12 +359,12 @@ describe("BCN geo helpers", () => {
 
     const [, sqlInit] = fetchMock.mock.calls[2] as [URL, RequestInit];
     const sqlBody = JSON.parse(String(sqlInit.body)) as { sql: string };
-    expect(sqlBody.sql).toContain("LIMIT 10001 OFFSET 0");
+    expect(sqlBody.sql).toContain("LIMIT 1000 OFFSET 0");
     expect(result.data).toMatchObject({
       datastore_mode: "sql",
       scanned_row_count: 3,
       matched_row_count: 2,
-      upstream_total: 3,
+      upstream_prefilter_total: 3,
       row_count: 1,
       truncated: true,
       truncation_reason: "row_cap",

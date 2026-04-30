@@ -23,7 +23,8 @@ export type BcnRecommendedTool =
   | "bcn_get_resource_info"
   | "bcn_preview_resource"
   | "bcn_query_resource"
-  | "bcn_query_resource_geo";
+  | "bcn_query_resource_geo"
+  | "bcn_resolve_place";
 
 export interface BcnRecommendResourcesInput {
   limit?: number;
@@ -33,6 +34,7 @@ export interface BcnRecommendResourcesInput {
 }
 
 export interface BcnResourceRecommendation {
+  area_source: boolean;
   caveats: string[];
   confidence: number;
   datastore_active: boolean;
@@ -77,6 +79,7 @@ interface NormalizedRecommendResourcesInput {
 }
 
 interface RegistryRecommendation {
+  areaSource?: boolean;
   caveats?: string[];
   datastoreActive: boolean;
   description: string;
@@ -139,7 +142,7 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
       "trees",
       "species",
       "especies",
-      "especies",
+      "espècies",
       "viari",
       "street trees",
       "consell de cent",
@@ -265,7 +268,8 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
       "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/576bc645-9481-4bc4-b8bf-f5972c20df3f",
     datastoreActive: true,
     format: "DataStore",
-    geoCapable: true,
+    geoCapable: false,
+    areaSource: true,
     keywords: [
       "district",
       "districts",
@@ -279,6 +283,9 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
     preferredTasks: ["within", "query"],
     suggestedFields: ["nom_districte", "geometria_wgs84"],
     suggestedContainsFields: ["nom_districte"],
+    caveats: [
+      "Boundary resource for bcn_resolve_place area_ref generation; do not use it as a bcn_query_resource_geo target resource.",
+    ],
   },
   {
     title: "Neighborhood boundaries",
@@ -291,7 +298,8 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
       "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e",
     datastoreActive: true,
     format: "DataStore",
-    geoCapable: true,
+    geoCapable: false,
+    areaSource: true,
     keywords: [
       "neighborhood",
       "neighborhoods",
@@ -305,6 +313,9 @@ export const BCN_RESOURCE_RECOMMENDATION_REGISTRY: RegistryRecommendation[] = [
     preferredTasks: ["within", "query"],
     suggestedFields: ["nom_barri", "nom_districte", "geometria_wgs84"],
     suggestedContainsFields: ["nom_barri", "nom_districte"],
+    caveats: [
+      "Boundary resource for bcn_resolve_place area_ref generation; do not use it as a bcn_query_resource_geo target resource.",
+    ],
   },
   {
     title: "Drinking fountains",
@@ -452,12 +463,12 @@ function scoreRecommendation(
     score += 10;
   }
 
-  if (input.normalizedQuery.includes(normalizeBcnGeoText(recommendation.theme))) {
-    score += 15;
+  if (input.task === "within" && recommendation.areaSource) {
+    score += 10;
   }
 
-  if (score === 0 && recommendation.theme === "facilities") {
-    score = 5;
+  if (input.normalizedQuery.includes(normalizeBcnGeoText(recommendation.theme))) {
+    score += 15;
   }
 
   return { recommendation, score, matchedTerms };
@@ -519,6 +530,7 @@ function toPublicRecommendation(
     package_id: recommendation.packageId,
     resource_id: recommendation.resourceId,
     source_url: recommendation.sourceUrl,
+    area_source: recommendation.areaSource ?? false,
     datastore_active: recommendation.datastoreActive,
     format: recommendation.format,
     geo_capable: recommendation.geoCapable,
@@ -533,7 +545,12 @@ function toPublicRecommendation(
     example_arguments: buildExampleArguments(recommendation, input),
     confidence: Math.min(0.99, Number((item.score / 100).toFixed(2))),
     matched_terms: item.matchedTerms,
-    caveats: recommendation.caveats ?? [],
+    caveats: [
+      ...(recommendation.caveats ?? []),
+      ...(item.matchedTerms.length === 0
+        ? ["No direct keyword match; verify this curated suggestion with bcn_get_resource_info."]
+        : []),
+    ],
   };
 }
 
@@ -541,6 +558,14 @@ function getSuggestedTool(
   recommendation: RegistryRecommendation,
   input: NormalizedRecommendResourcesInput,
 ): BcnRecommendedTool {
+  if (input.task === "preview") {
+    return recommendation.datastoreActive ? "bcn_query_resource" : "bcn_preview_resource";
+  }
+
+  if (recommendation.areaSource) {
+    return "bcn_resolve_place";
+  }
+
   if (
     recommendation.geoCapable &&
     (input.task === "near" || input.task === "within" || input.place_kind)
@@ -564,8 +589,17 @@ function buildExampleArguments(
   input: NormalizedRecommendResourcesInput,
 ): Record<string, JsonValue> {
   const fields = recommendation.suggestedFields.slice(0, 6);
+  const suggestedTool = getSuggestedTool(recommendation, input);
 
-  if (getSuggestedTool(recommendation, input) === "bcn_query_resource_geo") {
+  if (suggestedTool === "bcn_resolve_place") {
+    return {
+      query: `<${input.place_kind ?? recommendation.placeKinds[0] ?? "place"} name>`,
+      kinds: recommendation.placeKinds,
+      limit: 3,
+    };
+  }
+
+  if (suggestedTool === "bcn_query_resource_geo") {
     return {
       resource_id: recommendation.resourceId,
       ...getExampleGeoNarrowing(recommendation, input),

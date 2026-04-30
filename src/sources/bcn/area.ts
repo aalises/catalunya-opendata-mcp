@@ -48,6 +48,7 @@ export interface BcnWgs84Geometry {
     lon: number;
   };
   geometry_type: BcnAreaGeometryType;
+  polygons: Array<Array<Array<{ lat: number; lon: number }>>>;
   rings: Array<Array<{ lat: number; lon: number }>>;
 }
 
@@ -132,7 +133,8 @@ export function parseBcnWgs84Geometry(value: JsonValue | undefined): BcnWgs84Geo
 
   const normalized = value.trim();
   const geometryType = getBcnAreaGeometryType(normalized);
-  const rings = parseWktRings(normalized);
+  const polygons = parseWktPolygons(normalized, geometryType);
+  const rings = polygons.flat();
 
   if (rings.length === 0) {
     throw new BcnError("invalid_response", "BCN area geometry did not contain WGS84 rings.");
@@ -142,6 +144,7 @@ export function parseBcnWgs84Geometry(value: JsonValue | undefined): BcnWgs84Geo
 
   return {
     geometry_type: geometryType,
+    polygons,
     rings,
     bbox,
     center: {
@@ -159,15 +162,7 @@ export function isPointInBcnWgs84Geometry(
     return false;
   }
 
-  let inside = false;
-
-  for (const ring of geometry.rings) {
-    if (isPointInRing(point, ring)) {
-      inside = !inside;
-    }
-  }
-
-  return inside;
+  return geometry.polygons.some((polygon) => isPointInPolygon(point, polygon));
 }
 
 export function isPointInBbox(point: { lat: number; lon: number }, bbox: BcnGeoBboxInput): boolean {
@@ -206,18 +201,75 @@ function getBcnAreaGeometryType(wkt: string): BcnAreaGeometryType {
   );
 }
 
-function parseWktRings(wkt: string): Array<Array<{ lat: number; lon: number }>> {
-  const rings: Array<Array<{ lat: number; lon: number }>> = [];
+function parseWktPolygons(
+  wkt: string,
+  geometryType: BcnAreaGeometryType,
+): Array<Array<Array<{ lat: number; lon: number }>>> {
+  const body = getWktBody(wkt);
 
-  for (const match of wkt.matchAll(/\(([^()]+)\)/gu)) {
-    const ring = parseWktRing(match[1]);
+  if (geometryType === "polygon") {
+    return [parseWktPolygonBody(body)];
+  }
 
-    if (ring.length >= 4) {
-      rings.push(ring);
+  return extractTopLevelParenthesizedGroups(body)
+    .map(parseWktPolygonBody)
+    .filter((polygon) => polygon.length > 0);
+}
+
+function parseWktPolygonBody(value: string): Array<Array<{ lat: number; lon: number }>> {
+  return extractTopLevelParenthesizedGroups(value)
+    .map(parseWktRing)
+    .filter((ring) => ring.length >= 4);
+}
+
+function getWktBody(wkt: string): string {
+  const start = wkt.indexOf("(");
+  const end = wkt.lastIndexOf(")");
+
+  if (start < 0 || end <= start) {
+    throw new BcnError("invalid_response", "BCN area geometry has invalid WKT parentheses.");
+  }
+
+  return wkt.slice(start + 1, end).trim();
+}
+
+function extractTopLevelParenthesizedGroups(value: string): string[] {
+  const groups: string[] = [];
+  let depth = 0;
+  let start = -1;
+
+  for (let index = 0; index < value.length; index += 1) {
+    const char = value[index];
+
+    if (char === "(") {
+      if (depth === 0) {
+        start = index + 1;
+      }
+      depth += 1;
+      continue;
+    }
+
+    if (char !== ")") {
+      continue;
+    }
+
+    depth -= 1;
+
+    if (depth < 0) {
+      throw new BcnError("invalid_response", "BCN area geometry has unbalanced WKT parentheses.");
+    }
+
+    if (depth === 0 && start >= 0) {
+      groups.push(value.slice(start, index).trim());
+      start = -1;
     }
   }
 
-  return rings;
+  if (depth !== 0) {
+    throw new BcnError("invalid_response", "BCN area geometry has unbalanced WKT parentheses.");
+  }
+
+  return groups;
 }
 
 function parseWktRing(value: string): Array<{ lat: number; lon: number }> {
@@ -288,6 +340,19 @@ function isPointInRing(
   }
 
   return inside;
+}
+
+function isPointInPolygon(
+  point: { lat: number; lon: number },
+  polygon: Array<Array<{ lat: number; lon: number }>>,
+): boolean {
+  const [outerRing, ...holes] = polygon;
+
+  if (!outerRing || !isPointInRing(point, outerRing)) {
+    return false;
+  }
+
+  return !holes.some((hole) => isPointInRing(point, hole));
 }
 
 function normalizeAreaRowId(rowId: string | number): string | number {

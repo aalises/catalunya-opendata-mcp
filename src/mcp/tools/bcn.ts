@@ -436,6 +436,7 @@ function createBcnSchemas(config: AppConfig) {
     "bcn_preview_resource",
     "bcn_query_resource",
     "bcn_query_resource_geo",
+    "bcn_resolve_place",
   ]);
   const placeCandidateSchema = z.object({
     name: z.string(),
@@ -445,6 +446,7 @@ function createBcnSchemas(config: AppConfig) {
     score: z.number(),
     matched_fields: z.array(z.string()),
     area_ref: areaRefSchema.optional(),
+    area_ref_unavailable_reason: z.string().optional(),
     address: z.string().optional(),
     bbox: geoBboxSchema.optional(),
     district: z.string().optional(),
@@ -472,6 +474,7 @@ function createBcnSchemas(config: AppConfig) {
     package_id: z.string(),
     resource_id: z.string(),
     source_url: z.string().url(),
+    area_source: z.boolean(),
     datastore_active: z.boolean(),
     format: z.string(),
     geo_capable: z.boolean(),
@@ -535,6 +538,8 @@ function createBcnSchemas(config: AppConfig) {
     truncated: z.boolean(),
     truncation_reason: z.enum(["byte_cap", "row_cap", "scan_cap"]).optional(),
     truncation_hint: z.string().optional(),
+    upstream_bbox_total: z.number().int().nonnegative().nullable().optional(),
+    upstream_prefilter_total: z.number().int().nonnegative().nullable().optional(),
     upstream_total: z.number().int().nonnegative().nullable().optional(),
   });
   const errorSchema = z.object({

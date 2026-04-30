@@ -46,6 +46,7 @@ export interface BcnResolvePlaceInput {
 export interface BcnResolvedPlaceCandidate {
   address?: string;
   area_ref?: BcnAreaRef;
+  area_ref_unavailable_reason?: string;
   bbox?: BcnGeoBboxInput;
   district?: string;
   kind: BcnPlaceKind;
@@ -584,7 +585,9 @@ function getAreaCandidateMetadata(
   resource: BcnPlaceRegistryResource,
   row: Record<string, JsonValue>,
   geometry: BcnWgs84Geometry | undefined,
-): Pick<BcnResolvedPlaceCandidate, "area_ref" | "bbox"> | Record<string, never> {
+):
+  | Pick<BcnResolvedPlaceCandidate, "area_ref" | "area_ref_unavailable_reason" | "bbox">
+  | Record<string, never> {
   if (!geometry || !resource.geometryField) {
     return {};
   }
@@ -593,6 +596,8 @@ function getAreaCandidateMetadata(
 
   if (typeof rowId !== "string" && typeof rowId !== "number") {
     return {
+      area_ref_unavailable_reason:
+        "Boundary row did not include _id; use bbox for rough narrowing or inspect the source resource.",
       bbox: geometry.bbox,
     };
   }

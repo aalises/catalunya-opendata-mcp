@@ -28,6 +28,7 @@ describe("recommendBcnResources", () => {
     expect(result.data.recommendations[0]).toMatchObject({
       title: "Street trees (Arbrat viari)",
       resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+      area_source: false,
       suggested_tool: "bcn_query_resource_geo",
       suggested_contains_fields: ["adreca"],
       suggested_group_by: ["cat_nom_catala"],
@@ -96,11 +97,53 @@ describe("recommendBcnResources", () => {
     expect(district.data.recommendations[0]).toMatchObject({
       title: "Administrative districts",
       resource_id: "576bc645-9481-4bc4-b8bf-f5972c20df3f",
-      suggested_tool: "bcn_query_resource_geo",
+      area_source: true,
+      geo_capable: false,
+      suggested_tool: "bcn_resolve_place",
+      example_arguments: {
+        query: "<district name>",
+        kinds: ["district"],
+        limit: 3,
+      },
     });
     expect(neighborhood.data.recommendations[0]).toMatchObject({
       title: "Neighborhood boundaries",
       resource_id: "b21fa550-56ea-4f4c-9adc-b8009381896e",
+      area_source: true,
+      geo_capable: false,
+      suggested_tool: "bcn_resolve_place",
+    });
+  });
+
+  it("honors preview tasks and avoids unrelated fallback suggestions", () => {
+    const preview = recommendBcnResources(
+      {
+        query: "tree csv preview",
+        task: "preview",
+        limit: 1,
+      },
+      baseConfig,
+    );
+    const unrelated = recommendBcnResources(
+      {
+        query: "interplanetary ferry permits",
+        limit: 3,
+      },
+      baseConfig,
+    );
+
+    expect(preview.data.recommendations[0]).toMatchObject({
+      title: "Street trees (Arbrat viari)",
+      suggested_tool: "bcn_preview_resource",
+      example_arguments: {
+        resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
+        limit: 20,
+      },
+    });
+    expect(unrelated.data).toMatchObject({
+      recommendation_count: 0,
+      recommendations: [],
+      truncated: false,
     });
   });
 

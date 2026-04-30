@@ -395,6 +395,46 @@ describe("resolveBcnPlace", () => {
     expect(result.data.candidates[1]?.lon).toBeCloseTo(2.15);
   });
 
+  it("surfaces why area_ref is unavailable when a boundary row lacks _id", async () => {
+    usePlaceRegistry([
+      boundaryPlaceResource({
+        resourceId: "district-resource",
+        defaultKind: "district",
+        nameFields: ["nom_districte"],
+        districtFields: ["nom_districte"],
+      }),
+    ]);
+    mockFetchResponses(
+      datastoreResponse(
+        [
+          { id: "nom_districte", type: "text" },
+          { id: "geometria_wgs84", type: "text" },
+        ],
+        [
+          {
+            nom_districte: "Gràcia",
+            geometria_wgs84:
+              "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))",
+          },
+        ],
+      ),
+    );
+
+    const result = await resolveBcnPlace({ query: "Gracia", kinds: ["district"] }, baseConfig);
+
+    expect(result.data.candidates[0]).toMatchObject({
+      name: "Gràcia",
+      bbox: {
+        min_lat: 41.4,
+        min_lon: 2.1,
+        max_lat: 41.5,
+        max_lon: 2.2,
+      },
+      area_ref_unavailable_reason: expect.stringContaining("_id"),
+    });
+    expect(result.data.candidates[0]).not.toHaveProperty("area_ref");
+  });
+
   it("isolates per-resource fetch failures when another place registry resource succeeds", async () => {
     usePlaceRegistry([
       { ...facilityPlaceResource(), resourceId: "failing-resource" },
