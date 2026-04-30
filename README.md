@@ -297,7 +297,7 @@ The planner returns `status`, deterministic `intent`, recommended resources, opt
 
 Use `bcn_execute_city_query` for the same input when a one-call bounded raw result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
 
-Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_markdown`, `answer_type`, compact `summary`, deduped warning `caveats` such as bbox fallback or scan caps, informational `execution_notes` such as SQL pushdown mode or bounded download scans, selected resource metadata, citation guidance, and the raw `final_result`.
+Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_markdown`, `answer_type`, compact `summary`, deduped warning `caveats` such as bbox fallback or scan caps, informational `execution_notes` such as SQL pushdown mode or bounded download scans, selected resource metadata, citation guidance, and the raw `final_result`. Row summaries include labels and selected fields for display plus `summary.rows[].source_row` for client drill-down without re-parsing `final_result`.
 
 ### 3. Inspect A Resource
 

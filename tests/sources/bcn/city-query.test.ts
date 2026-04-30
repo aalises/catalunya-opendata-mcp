@@ -734,8 +734,16 @@ describe("BCN city answer composer", () => {
       summary: {
         matched_row_count: 2,
         rows: [
-          { label: "Library", distance_m: 7 },
-          { label: "Museum", distance_m: 37 },
+          {
+            label: "Library",
+            distance_m: 7,
+            source_row: { name: "Library", addresses_road_name: "C Mallorca" },
+          },
+          {
+            label: "Museum",
+            distance_m: 37,
+            source_row: { name: "Museum", addresses_road_name: "C Mallorca" },
+          },
         ],
       },
     });

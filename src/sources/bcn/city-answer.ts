@@ -540,6 +540,7 @@ function toAnswerRowSummary(row: JsonRecord): Record<string, JsonValue> {
       ? {}
       : { distance_m: Math.round(getRowDistance(row) ?? 0) }),
     fields: pickSummaryFields(row),
+    source_row: row,
   };
 }
 
