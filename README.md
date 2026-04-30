@@ -84,7 +84,7 @@ The built `node dist/index.js` path is the most predictable setup for day-to-day
 | `bcn_recommend_resources` | Recommend high-value Open Data BCN resources for natural-language city questions such as trees on a street, facilities near a place, or district/neighborhood area queries. |
 | `bcn_plan_query` | Plan a natural-language Barcelona city question into resource, place-resolution, geo-query, and citation steps without running the final data query. |
 | `bcn_execute_city_query` | Execute a ready BCN city-query plan end-to-end with the same bounded helper tools, blocking when a resource or place choice is ambiguous. |
-| `bcn_answer_city_query` | Execute a ready BCN city-query plan and return deterministic `answer_text`, caveats, citation guidance, selected resource metadata, and the raw final result. |
+| `bcn_answer_city_query` | Execute a ready BCN city-query plan and return deterministic `answer_text`, warning `caveats`, informational `execution_notes`, citation guidance, selected resource metadata, and the raw final result. |
 | `bcn_search_packages` | Search Open Data BCN CKAN packages for Barcelona city datasets such as street trees, facilities, equipment, mobility, and services. |
 | `bcn_get_package` | Fetch one Open Data BCN package with resource IDs, formats, DataStore activity, package license, and provenance. |
 | `bcn_get_resource_info` | Inspect one Open Data BCN resource. Active DataStore resources include queryable fields. |
@@ -297,7 +297,7 @@ The planner returns `status`, deterministic `intent`, recommended resources, opt
 
 Use `bcn_execute_city_query` for the same input when a one-call bounded raw result is acceptable. It executes only when the plan is `ready`; otherwise it returns `execution_status: "blocked"` with the plan. For area plans, it copies `selected_candidate.area_ref` into `within_place.{source_resource_id,row_id,geometry_field}`. If no `area_ref` is available but a resolver `bbox` is available, it uses `bbox` with a caveat; if neither exists, the plan is blocked/unsupported.
 
-Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_type`, compact `summary`, deduped `caveats` such as bbox fallback, scan caps, or SQL pushdown mode, selected resource metadata, citation guidance, and the raw `final_result`.
+Use `bcn_answer_city_query` when callers need a ready-to-display deterministic answer. It runs the same executor, then returns `answer_text`, `answer_type`, compact `summary`, deduped warning `caveats` such as bbox fallback or scan caps, informational `execution_notes` such as SQL pushdown mode or bounded download scans, selected resource metadata, citation guidance, and the raw `final_result`.
 
 ### 3. Inspect A Resource
 

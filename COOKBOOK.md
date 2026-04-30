@@ -337,7 +337,7 @@ For a caller-ready deterministic answer, use the answer composer:
 }
 ```
 
-The executor embeds the full plan and runs only when `status` is `ready`; otherwise it returns `execution_status: "blocked"`. `bcn_answer_city_query` uses that same executor, then adds `answer_text`, `answer_type`, compact grouped/nearest-row summaries, caveats, selected resource metadata, citation guidance, and the raw `final_result`. `place_kind: "point"` resolves only point-like BCN sources (`landmark` and `facility`), while street/area kinds pass through. Area candidates populate `within_place` from `selected_candidate.area_ref`.
+The executor embeds the full plan and runs only when `status` is `ready`; otherwise it returns `execution_status: "blocked"`. `bcn_answer_city_query` uses that same executor, then adds `answer_text`, `answer_type`, compact grouped/nearest-row summaries, warning `caveats`, informational `execution_notes`, selected resource metadata, citation guidance, and the raw `final_result`. `place_kind: "point"` resolves only point-like BCN sources (`landmark` and `facility`), while street/area kinds pass through. Area candidates populate `within_place` from `selected_candidate.area_ref`.
 
 Example answer-composer calls:
 

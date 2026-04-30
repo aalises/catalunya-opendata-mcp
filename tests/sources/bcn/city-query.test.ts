@@ -739,7 +739,10 @@ describe("BCN city answer composer", () => {
     });
     expect(result.data.answer_text).toContain("Library (7 m)");
     expect(result.data.answer_text).toContain("Museum (37 m)");
-    expect(result.data.caveats).toContain(
+    expect(result.data.caveats).not.toContain(
+      "Spatial narrowing used generated CKAN datastore_search_sql pushdown.",
+    );
+    expect(result.data.execution_notes).toContain(
       "Spatial narrowing used generated CKAN datastore_search_sql pushdown.",
     );
   });
@@ -841,7 +844,7 @@ describe("BCN city answer composer", () => {
     );
   });
 
-  it("includes truncation and scan caveats", async () => {
+  it("splits truncation caveats from scan execution notes", async () => {
     mockFetchResponses(
       ckanSuccess(
         bcnResource({
@@ -869,8 +872,16 @@ describe("BCN city answer composer", () => {
     expect(result.data.answer_type).toBe("grouped_counts");
     expect(result.data.caveats).toEqual(
       expect.arrayContaining([
-        "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
         "Final result was truncated because of row_cap: raise limit within maxResults or use offset to page through matched rows",
+      ]),
+    );
+    expect(result.data.caveats).not.toContain(
+      "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+    );
+    expect(result.data.execution_notes).toEqual(
+      expect.arrayContaining([
+        "Not DataStore-active; geospatial queries use safe bounded CSV download scans.",
+        "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
       ]),
     );
   });

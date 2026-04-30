@@ -814,6 +814,7 @@ async function runStressProfile(client) {
           data.answer_text.includes("cat_nom_catala") &&
           data.final_result?.data?.groups?.length > 0 &&
           data.selected_resource?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
+          data.execution_notes?.some((note) => note.includes("bounded BCN-hosted download scan")) &&
           data.citation?.resources?.some((resource) =>
             resource.includes("23124fd5-521f-40f8-85b8-efb1e71c2ec8"),
           ),

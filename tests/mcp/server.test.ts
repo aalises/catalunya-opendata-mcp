@@ -489,6 +489,9 @@ describe("createMcpServer", () => {
         data: {
           answer_type: "grouped_counts",
           answer_text: expect.stringContaining("Plataner (1)"),
+          execution_notes: expect.arrayContaining([
+            "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
+          ]),
           execution_status: "completed",
           selected_resource: {
             title: "Street trees (Arbrat viari)",

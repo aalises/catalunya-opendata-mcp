@@ -35,6 +35,7 @@ export interface BcnCityAnswerData {
   answer_type: BcnCityAnswerType;
   caveats: string[];
   citation: BcnCityCitationGuidance;
+  execution_notes: string[];
   execution_status: BcnCityQueryExecutionStatus;
   final_arguments?: Record<string, JsonValue>;
   final_result: Record<string, JsonValue> | null;
@@ -84,15 +85,19 @@ export async function answerBcnCityQuery(
 function composeCityAnswer(
   execution: BcnCityExecuteQueryData,
   finalResult: Record<string, JsonValue> | null,
-): Pick<BcnCityAnswerData, "answer_text" | "answer_type" | "caveats" | "summary"> {
+): Pick<
+  BcnCityAnswerData,
+  "answer_text" | "answer_type" | "caveats" | "execution_notes" | "summary"
+> {
   const finalData = getFinalData(finalResult);
-  const caveats = collectCaveats(execution, finalData);
+  const notes = collectAnswerNotes(execution, finalData);
 
   if (execution.execution_status === "blocked" || !finalData) {
     return {
       answer_text: buildBlockedAnswer(execution.plan),
       answer_type: "blocked",
-      caveats,
+      caveats: notes.caveats,
+      execution_notes: notes.execution_notes,
       summary: buildBlockedSummary(execution.plan),
     };
   }
@@ -104,7 +109,8 @@ function composeCityAnswer(
     return {
       answer_text: buildGroupedAnswer(execution.plan, finalData, groups),
       answer_type: "grouped_counts",
-      caveats,
+      caveats: notes.caveats,
+      execution_notes: notes.execution_notes,
       summary: buildGroupedSummary(execution.plan, finalData, groups),
     };
   }
@@ -113,7 +119,8 @@ function composeCityAnswer(
     return {
       answer_text: buildEmptyAnswer(execution.plan),
       answer_type: "empty_result",
-      caveats,
+      caveats: notes.caveats,
+      execution_notes: notes.execution_notes,
       summary: buildRowSummary(execution.plan, finalData, []),
     };
   }
@@ -122,7 +129,8 @@ function composeCityAnswer(
     return {
       answer_text: buildNearestAnswer(execution.plan, finalData, rows),
       answer_type: "nearest_rows",
-      caveats,
+      caveats: notes.caveats,
+      execution_notes: notes.execution_notes,
       summary: buildRowSummary(execution.plan, finalData, rows),
     };
   }
@@ -133,7 +141,8 @@ function composeCityAnswer(
   return {
     answer_text: buildRowSampleAnswer(execution.plan, finalData, rows, answerType),
     answer_type: answerType,
-    caveats,
+    caveats: notes.caveats,
+    execution_notes: notes.execution_notes,
     summary: buildRowSummary(execution.plan, finalData, rows),
   };
 }
@@ -261,14 +270,15 @@ function buildRowSummary(
   };
 }
 
-function collectCaveats(
+function collectAnswerNotes(
   execution: BcnCityExecuteQueryData,
   finalData: JsonRecord | undefined,
-): string[] {
+): { caveats: string[]; execution_notes: string[] } {
   const caveats: string[] = [];
+  const executionNotes: string[] = [];
 
   addCaveats(caveats, execution.plan.intent.caveats);
-  addCaveats(caveats, execution.plan.recommendation?.caveats);
+  addRecommendationNotes(execution.plan.recommendation?.caveats, caveats, executionNotes);
 
   if (execution.plan.place_resolution?.truncated) {
     addCaveat(
@@ -278,7 +288,7 @@ function collectCaveats(
   }
 
   if (!finalData) {
-    return caveats;
+    return { caveats, execution_notes: executionNotes };
   }
 
   const truncationReason = getString(finalData.truncation_reason);
@@ -295,13 +305,16 @@ function collectCaveats(
 
   if (finalData.strategy === "download_stream") {
     addCaveat(
-      caveats,
+      executionNotes,
       "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",
     );
   }
 
   if (finalData.datastore_mode === "sql") {
-    addCaveat(caveats, "Spatial narrowing used generated CKAN datastore_search_sql pushdown.");
+    addCaveat(
+      executionNotes,
+      "Spatial narrowing used generated CKAN datastore_search_sql pushdown.",
+    );
   }
 
   if (
@@ -315,7 +328,7 @@ function collectCaveats(
     );
   }
 
-  return caveats;
+  return { caveats, execution_notes: executionNotes };
 }
 
 function getFinalData(finalResult: Record<string, JsonValue> | null): JsonRecord | undefined {
@@ -545,6 +558,20 @@ function formatCount(count: number, noun: string): string {
 
 function compactSentences(sentences: Array<string | undefined>): string {
   return sentences.filter((sentence): sentence is string => Boolean(sentence)).join(" ");
+}
+
+function addRecommendationNotes(
+  recommendationCaveats: string[] | undefined,
+  caveats: string[],
+  executionNotes: string[],
+): void {
+  for (const caveat of recommendationCaveats ?? []) {
+    addCaveat(isExecutionNote(caveat) ? executionNotes : caveats, caveat);
+  }
+}
+
+function isExecutionNote(value: string): boolean {
+  return /^Not DataStore-active;/u.test(value);
 }
 
 function addCaveats(target: string[], caveats: string[] | undefined): void {
