@@ -53,6 +53,7 @@
     "canary:socrata": "npm run build && node scripts/socrata-live-canary.mjs",
     "canary:idescat": "npm run build && node scripts/idescat-live-canary.mjs",
     "canary:bcn-registry": "npm run build && node scripts/bcn-registry-canary.mjs",
+    "canary:live": "npm run build && node scripts/socrata-live-canary.mjs && node scripts/idescat-live-canary.mjs && node scripts/bcn-registry-canary.mjs && node scripts/evaluate-mcp.mjs --profile=canary --quiet",
     "eval:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary",
     "eval:stress": "npm run build && node scripts/evaluate-mcp.mjs --profile=stress",
     "eval:record:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary --mode=record",
@@ -62,6 +63,7 @@
     "package:size": "node scripts/package-size.mjs",
     "refresh:idescat": "tsx scripts/refresh-idescat.ts",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
+    "doctor": "npm run build && node scripts/doctor.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "biome check .",
@@ -69,6 +71,7 @@
     "format": "biome format --write .",
     "check": "npm run typecheck && npm run lint && npm test && npm run smoke && npm run package:size",
     "release:check": "npm run check && npm run eval:replay:stress",
+    "release:verify": "npm run release:check && node scripts/release-verify.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json",
     "clean": "rm -rf dist"
   },

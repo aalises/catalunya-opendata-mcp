@@ -488,8 +488,11 @@ Example client configuration with environment overrides:
 | `npm run typecheck` | Type-checks source and tests. |
 | `npm test` | Runs the Vitest suite. |
 | `npm run smoke` | Builds the server and checks core tool/prompt/resource registration over stdio, then calls `ping`. |
+| `npm run doctor` | Builds the server and checks runtime/configuration, build output, package budget, stdio smoke, and upstream reachability. |
 | `npm run canary:socrata` | Builds the server and runs the live Socrata search -> describe -> query canary. |
 | `npm run canary:idescat` | Builds the server and runs the live IDESCAT search -> geos -> metadata -> data canary. |
+| `npm run canary:bcn-registry` | Builds the server and checks curated BCN resource recommendations against live package/resource metadata. |
+| `npm run canary:live` | Builds once, runs all dedicated live connector canaries, then runs the live MCP canary evaluation. |
 | `npm run eval:canary` | Builds the server and runs the live binary MCP evaluation canary. |
 | `npm run eval:stress` | Builds the server and runs the full live binary MCP evaluation suite. |
 | `npm run eval:replay:canary` | Replays the canary evaluation from the committed MCP cassette. |
@@ -501,6 +504,7 @@ Example client configuration with environment overrides:
 | `npm run format` | Formats the repository with Biome. |
 | `npm run check` | Runs typecheck, lint, tests, smoke, and package size checks. |
 | `npm run release:check` | Runs the local check gate, then replays the full stress MCP evaluation cassette. |
+| `npm run release:verify` | Runs `release:check`, then verifies clean/synced git state, version notes, packed files, tag-to-HEAD alignment, green CI, and npm publish posture. |
 
 ## Evaluations
 
@@ -518,9 +522,12 @@ Replay mode reads committed cassettes from `tests/fixtures/evals/`. It exercises
 Use live mode while checking current upstream behavior:
 
 ```bash
+npm run canary:live
 npm run eval:canary
 npm run eval:stress
 ```
+
+The GitHub Actions **Live Canary** workflow is manual-only. It installs dependencies, builds once, optionally runs the dedicated Socrata, IDESCAT, and BCN connector canaries, then runs the selected `canary` or `stress` MCP evaluation profile and uploads the JSON report artifact.
 
 Refresh cassettes after intentionally changing adapter behavior or accepting upstream drift:
 
@@ -550,9 +557,11 @@ Before opening or merging routine changes, run `npm run check`. This stays local
 
 For release readiness, run `npm run release:check`. This includes `npm run check` plus `npm run eval:replay:stress`, so it covers typecheck, lint, unit tests, smoke output, package size budget, and the committed protocol-level stress cassette.
 
+Before publishing a GitHub release, run `npm run release:verify` from the commit being released after its `v<package.version>` tag has been pushed. It re-runs the release gate, then checks that the worktree is clean, the branch is synced, `package.json`, `package-lock.json`, and `docs/release-notes.md` agree on the version, the packed package only contains `dist/`, `README.md`, `LICENSE`, and `package.json`, local and remote tags point at HEAD, GitHub Actions CI is green for HEAD, and the package's private/public npm posture is explicit. Use `node scripts/release-verify.mjs --require-release` after creating the GitHub release when you want a post-release confirmation.
+
 Before publishing a package, run `npm pack --dry-run`, confirm the tarball includes only `dist/`, `README.md`, `LICENSE`, and `package.json`, and confirm `dist/index.js` is executable with `test -x dist/index.js`. The package budget remains enforced by `npm run package:size`; current limits are 512 KiB packed, 8 MiB unpacked, 5 MiB source IDESCAT index, and 7 MiB built IDESCAT index.
 
-For adapter changes that may need fresh live evidence, optionally run `npm run canary:socrata`, `npm run canary:idescat`, `npm run canary:bcn-registry`, `npm run eval:stress`, and, when accepting upstream drift or intentional adapter changes, `npm run eval:record:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
+For adapter changes that may need fresh live evidence, optionally run `npm run canary:live`, `npm run eval:stress`, and, when accepting upstream drift or intentional adapter changes, `npm run eval:record:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The GitHub Actions **Live Canary** workflow can also be started manually with either the `canary` or `stress` evaluation profile. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
 
 Operational release and upstream-incident guidance lives in [`docs/operations.md`](./docs/operations.md). Install-from-tarball smoke guidance lives in [`docs/install-smoke.md`](./docs/install-smoke.md).
 

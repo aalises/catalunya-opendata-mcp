@@ -10,16 +10,23 @@ When Socrata, IDESCAT, or Open Data BCN is unavailable:
 2. Check whether deterministic local gates still pass:
 
 ```bash
+npm run doctor -- --skip-upstream
 npm run check
 npm run eval:replay:stress -- --quiet
 ```
 
-3. If replay passes and only live commands fail, treat the release as blocked on upstream evidence, not as a local regression.
-4. Inspect the structured error:
+3. Run the full diagnostic command when you need current upstream reachability too:
+
+```bash
+npm run doctor
+```
+
+4. If replay passes and only live commands fail, treat the release as blocked on upstream evidence, not as a local regression.
+5. Inspect the structured error:
    - `network_error`, `timeout`, retryable `http_error`: retry later or lower concurrency.
    - non-retryable `http_error`: verify IDs, fields, filters, or upstream API shape.
    - `invalid_response`: upstream shape drift or unexpected content; add a focused fixture/test before changing adapter behavior.
-5. Do not refresh cassettes from a failing live run.
+6. Do not refresh cassettes from a failing live run.
 
 ## Cassettes
 
@@ -65,7 +72,7 @@ npm run check
 For release readiness:
 
 ```bash
-npm run release:check
+npm run release:verify
 npm pack --dry-run
 test -x dist/index.js
 ```
@@ -73,9 +80,7 @@ test -x dist/index.js
 For adapter changes or releases that need fresh upstream evidence:
 
 ```bash
-npm run canary:socrata
-npm run canary:idescat
-npm run canary:bcn-registry
+npm run canary:live
 npm run eval:stress -- --quiet
 ```
 
@@ -87,3 +92,5 @@ Before publishing or tagging:
 - Confirm package size budgets pass.
 - Confirm release notes include notable API shape changes, caveats, eval counts, and migration guidance.
 - Confirm no live evidence requires cassette refresh.
+
+When you want remote evidence without running live checks locally, start the **Live Canary** GitHub Actions workflow manually. Use the `canary` profile for a fast current-upstream check and the `stress` profile before accepting broad upstream drift.

@@ -1,0 +1,74 @@
+name: Live Canary
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: MCP evaluation profile to run after connector canaries.
+        required: true
+        default: canary
+        type: choice
+        options:
+          - canary
+          - stress
+      run_connector_canaries:
+        description: Run the dedicated Socrata, IDESCAT, and BCN live canary scripts first.
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-canary-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  live-canary:
+    name: Manual live canary
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LOG_LEVEL: silent
+      CATALUNYA_MCP_REQUEST_TIMEOUT_MS: "60000"
+      SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Socrata live canary
+        if: inputs.run_connector_canaries
+        run: node scripts/socrata-live-canary.mjs
+
+      - name: IDESCAT live canary
+        if: inputs.run_connector_canaries
+        run: node scripts/idescat-live-canary.mjs
+
+      - name: BCN registry live canary
+        if: inputs.run_connector_canaries
+        run: node scripts/bcn-registry-canary.mjs
+
+      - name: MCP live evaluation
+        run: node scripts/evaluate-mcp.mjs --profile=${{ inputs.profile }} --quiet
+
+      - name: Upload evaluation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-canary-${{ inputs.profile }}-reports
+          path: tmp/mcp-eval-*.json
+          if-no-files-found: ignore

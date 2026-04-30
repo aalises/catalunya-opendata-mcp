@@ -10,6 +10,7 @@ The live evals intentionally test the server the way an MCP client sees it. They
 ## Commands
 
 ```bash
+npm run canary:live
 npm run eval:replay:canary
 npm run eval:replay:stress
 npm run eval:canary
@@ -17,6 +18,8 @@ npm run eval:stress
 ```
 
 All commands build first. Reports are written to `tmp/mcp-eval-<profile>-<timestamp>.json`.
+
+The GitHub Actions **Live Canary** workflow is manual-only. It installs dependencies, builds once, optionally runs the dedicated Socrata, IDESCAT, and BCN connector canaries, then runs `scripts/evaluate-mcp.mjs` with the selected `canary` or `stress` profile and uploads the generated JSON report artifact.
 
 Use an explicit report path when comparing runs:
 
