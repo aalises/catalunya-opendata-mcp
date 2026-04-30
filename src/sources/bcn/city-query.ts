@@ -379,10 +379,12 @@ function normalizeCityQueryInput(
 
 function inferCityQueryIntent(input: NormalizedCityQueryInput): BcnCityQueryIntent {
   const normalizedQuery = normalizeBcnGeoText(input.query);
+  const normalizedIntentQuery = normalizeBcnCityIntentText(input.query);
   const explicitTask = input.task;
-  const spatialMode = inferSpatialMode(input, normalizedQuery);
+  const spatialMode = inferSpatialMode(input, normalizedQuery, normalizedIntentQuery);
   const task = explicitTask ?? inferTask(normalizedQuery, spatialMode);
-  const placeKind = input.place_kind ?? inferPlaceKind(normalizedQuery, spatialMode);
+  const placeKind =
+    input.place_kind ?? inferPlaceKind(normalizedQuery, normalizedIntentQuery, spatialMode);
   const placeQuery = input.place_query ?? inferPlaceQuery(input.query, spatialMode);
   const caveats: string[] = [];
 
@@ -707,6 +709,7 @@ function buildQueryArguments(
 function inferSpatialMode(
   input: NormalizedCityQueryInput,
   normalizedQuery: string,
+  normalizedIntentQuery: string,
 ): BcnCitySpatialMode {
   if (input.task === "preview") {
     return "preview";
@@ -744,7 +747,7 @@ function inferSpatialMode(
     return "near";
   }
 
-  if (hasNamedStreetPhrase(normalizedQuery) || hasStreetLikeOnPhrase(normalizedQuery)) {
+  if (hasNamedStreetPhrase(normalizedIntentQuery) || hasStreetLikeOnPhrase(normalizedQuery)) {
     return "contains";
   }
 
@@ -757,11 +760,21 @@ function inferSpatialMode(
     return "within";
   }
 
-  if (/\b(street|carrer|calle)\b/u.test(normalizedQuery)) {
+  if (hasStreetPrefixToken(normalizedIntentQuery)) {
     return "contains";
   }
 
   return "query";
+}
+
+function normalizeBcnCityIntentText(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[\\/_.,;:-]+/gu, " ")
+    .replace(/\s+/gu, " ")
+    .trim();
 }
 
 function hasPlaceLikeWithinPhrase(normalizedQuery: string): boolean {
@@ -783,7 +796,7 @@ function hasPlaceLikeWithinPhrase(normalizedQuery: string): boolean {
 }
 
 function hasNamedStreetPhrase(normalizedQuery: string): boolean {
-  return /\b(?:carrer|calle|placa|plaza|avinguda|avenida)\s+\S/u.test(normalizedQuery);
+  return STREET_PLACE_PREFIX_REGEX.test(normalizedQuery);
 }
 
 function hasStreetLikeOnPhrase(normalizedQuery: string): boolean {
@@ -794,7 +807,7 @@ function hasStreetLikeOnPhrase(normalizedQuery: string): boolean {
     return false;
   }
 
-  return /\b(tree|trees|arbre|arbres|arbrat|facility|facilities|equipament|equipaments|address|addresses)\b/u.test(
+  return /\b(species|tree|trees|arbre|arbres|arbrat|facility|facilities|equipament|equipaments|address|addresses)\b/u.test(
     normalizedQuery,
   );
 }
@@ -826,6 +839,7 @@ function inferTask(
 
 function inferPlaceKind(
   normalizedQuery: string,
+  normalizedIntentQuery: string,
   spatialMode: BcnCitySpatialMode,
 ): BcnResourceRecommendationPlaceKind | undefined {
   if (/\bby (neighborhood|neighbourhood|barri|barrio)\b/u.test(normalizedQuery)) {
@@ -844,7 +858,11 @@ function inferPlaceKind(
     return "neighborhood";
   }
 
-  if (spatialMode === "contains" || /\b(street|carrer|calle)\b/u.test(normalizedQuery)) {
+  if (
+    spatialMode === "contains" ||
+    hasNamedStreetPhrase(normalizedIntentQuery) ||
+    hasStreetPrefixToken(normalizedIntentQuery)
+  ) {
     return "street";
   }
 
@@ -863,8 +881,8 @@ function inferPlaceQuery(query: string, spatialMode: BcnCitySpatialMode): string
         ? [/\b(?:inside|within)\s+(.+)$/iu, /\b(?:in|en)\s+(.+)$/iu]
         : spatialMode === "contains"
           ? [
-              /\bon\s+(?=(?:carrer|calle|street|placa|plaza|avinguda|avenida)\b)(.+)$/iu,
-              /\b(?:street|carrer|calle)\s+(.+)$/iu,
+              new RegExp(`\\bon\\s+(?=(?:${STREET_PLACE_PREFIX_PATTERN})\\b)(.+)$`, "iu"),
+              new RegExp(`\\b((?:${STREET_PLACE_PREFIX_PATTERN})\\s+.+)$`, "iu"),
             ]
           : [];
 
@@ -877,7 +895,9 @@ function inferPlaceQuery(query: string, spatialMode: BcnCitySpatialMode): string
   }
 
   if (spatialMode === "contains") {
-    const carrerMatch = /\b(carrer\s+.+)$/iu.exec(query);
+    const carrerMatch = new RegExp(`\\b((?:${STREET_PLACE_PREFIX_PATTERN})\\s+.+)$`, "iu").exec(
+      query,
+    );
 
     if (carrerMatch?.[1]) {
       return cleanupPlaceQuery(carrerMatch[1], spatialMode);
@@ -885,6 +905,14 @@ function inferPlaceQuery(query: string, spatialMode: BcnCitySpatialMode): string
   }
 
   return undefined;
+}
+
+const STREET_PLACE_PREFIX_PATTERN =
+  "carrer|calle|street|placa|plaça|plaza|pl|avinguda|avenida|av|avda|passeig|pg|passatge|ronda|travessia|travesia|travessera|travesera|carretera|ctra|gran via|via|cami|camí";
+const STREET_PLACE_PREFIX_REGEX = new RegExp(`\\b(?:${STREET_PLACE_PREFIX_PATTERN})\\s+\\S`, "u");
+
+function hasStreetPrefixToken(normalizedQuery: string): boolean {
+  return new RegExp(`\\b(?:${STREET_PLACE_PREFIX_PATTERN})\\b`, "u").test(normalizedQuery);
 }
 
 function cleanupPlaceQuery(value: string, spatialMode: BcnCitySpatialMode): string {

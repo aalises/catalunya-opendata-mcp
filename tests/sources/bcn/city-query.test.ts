@@ -81,6 +81,33 @@ describe("BCN city query planner", () => {
     ]);
   });
 
+  it("preserves non-Catalan avenue prefixes for street intent detection", async () => {
+    const result = await planBcnCityQuery(
+      { query: "species on Avenida Meridiana, Barcelona" },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "ready",
+      intent: {
+        task: "group",
+        spatial_mode: "contains",
+        place_kind: "street",
+        place_query: "Avenida Meridiana",
+      },
+      final_arguments: {
+        contains: {
+          espai_verd: "Avenida Meridiana",
+        },
+        group_by: "cat_nom_catala",
+      },
+    });
+    expect(result.data.steps.map((step) => step.tool)).toEqual([
+      "bcn_recommend_resources",
+      "bcn_query_resource_geo",
+    ]);
+  });
+
   it("executes ready street grouping plans with one bounded geo query", async () => {
     mockFetchResponses(
       ckanSuccess(
