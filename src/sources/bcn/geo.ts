@@ -987,6 +987,12 @@ function buildDatastoreSqlPlan(
   const logicalSelect = buildSqlSelectList(selectedFields, coordinateFields, input.near, false);
   const fromSql = ` FROM ${quoteSqlIdentifier(input.resource_id)}`;
 
+  // logicalSql is the conceptual SQL the caller is logically expressing — it omits
+  // the internal _bcn_matched_total window column and uses input.limit/offset.
+  // When localPostFilterMode is true the runtime issues paginated upstream calls
+  // (LIMIT BCN_GEO_DATASTORE_PAGE_SIZE per page) and applies polygon / contains
+  // filters locally, so re-running this SQL verbatim against CKAN will yield only
+  // bbox-matching rows, not the post-filtered slice surfaced by the tool.
   return {
     actualSql: (limit, offset) =>
       `${actualSelect}${fromSql}${whereSql}${orderSql} LIMIT ${limit} OFFSET ${offset}`,

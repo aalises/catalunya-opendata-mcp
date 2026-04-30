@@ -52,6 +52,7 @@
     "smoke": "npm run build && node scripts/smoke.mjs",
     "canary:socrata": "npm run build && node scripts/socrata-live-canary.mjs",
     "canary:idescat": "npm run build && node scripts/idescat-live-canary.mjs",
+    "canary:bcn-registry": "npm run build && node scripts/bcn-registry-canary.mjs",
     "eval:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary",
     "eval:stress": "npm run build && node scripts/evaluate-mcp.mjs --profile=stress",
     "eval:record:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary --mode=record",

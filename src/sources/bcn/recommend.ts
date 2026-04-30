@@ -478,6 +478,11 @@ function getMatchedTerms(
   recommendation: RegistryRecommendation,
   normalizedQuery: string,
 ): string[] {
+  // Both the query and registry keywords pass through normalizeBcnGeoText, which
+  // strips Catalan/Spanish street prefixes ("carrer", "carrer de", "plaça",
+  // "avinguda", etc.). Registry keywords made up of just those prefixes will
+  // normalize to empty strings and never match — keep keyword entries to the
+  // distinguishing tokens (e.g. "consell de cent", not "carrer").
   const queryTokens = new Set(
     normalizedQuery
       .split(" ")
