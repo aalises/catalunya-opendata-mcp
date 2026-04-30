@@ -13,6 +13,7 @@ The live evals intentionally test the server the way an MCP client sees it. They
 npm run canary:live
 npm run eval:replay:canary
 npm run eval:replay:stress
+npm run eval:queries
 npm run eval:canary
 npm run eval:stress
 ```
@@ -39,6 +40,29 @@ Useful flags:
 | `--cassette=path` | Override the default cassette path. |
 | `--quiet` | Print only failures and the final JSON summary. |
 | `--fail-fast` | Stop at the first failed eval case. |
+
+## Query Dataset
+
+`npm run eval:queries` runs a separate live, dataset-driven acceptance suite over
+[`tests/fixtures/query-datasets/catalunya-opendata-queries.json`](../tests/fixtures/query-datasets/catalunya-opendata-queries.json).
+It starts the built MCP server over stdio and calls the tools exactly as a client would.
+
+This dataset is intentionally broader and more natural-language oriented than the cassette-backed
+canary/stress profiles. It covers many ordinary BCN city-query phrasings, including street-tree
+queries with trailing city qualifiers, late-row CSV scans such as Carrer Vilardell, place-resolution
+questions, plus representative Socrata and IDESCAT discovery/query flows. Reports are written to
+`tmp/query-eval-<timestamp>.json`.
+
+Useful flags:
+
+| Flag | Purpose |
+| --- | --- |
+| `--dataset=path` | Run a different query dataset JSON file. |
+| `--filter=text` | Run cases whose id contains the text, or whose connector/category equals it. |
+| `--limit=N` | Run only the first N selected cases. |
+| `--quiet` | Print only failures and the final JSON summary. |
+| `--fail-fast` | Stop at the first failed query case. |
+| `--timeout-ms=N` | Per-tool MCP client and server request timeout. Defaults to 90000. |
 
 ## Profiles
 
@@ -125,6 +149,7 @@ Last checked: 2026-04-30.
 | `npm run canary:socrata` | Passed. Search -> describe -> query flow returned `j8h8-vxug`; invalid-field recovery returned a structured non-retryable 400. |
 | `npm run canary:idescat` | Passed. Search -> geos -> metadata -> data flow returned the PMH population table; long municipality filters used GET and truncated by row cap as expected. |
 | `npm run canary:bcn-registry` | Passed. Checked 7 curated BCN resources with no failures; package IDs and DataStore activity matched the live registry. |
+| `npm run eval:queries -- --quiet` | Passed 56/56 live natural-language query cases: Open Data BCN 47/47, Socrata 4/4, IDESCAT 5/5. |
 | `npm run eval:stress -- --quiet` | Passed 152/152 live cases: MCP 1/1, Socrata 53/53, Open Data BCN 27/27, IDESCAT 71/71. |
 
 No cassette refresh was needed for this pass.

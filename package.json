@@ -60,6 +60,7 @@
     "eval:replay:canary": "npm run build && node scripts/evaluate-mcp.mjs --profile=canary --mode=replay",
     "eval:record:stress": "npm run build && node scripts/evaluate-mcp.mjs --profile=stress --mode=record",
     "eval:replay:stress": "npm run build && node scripts/evaluate-mcp.mjs --profile=stress --mode=replay",
+    "eval:queries": "npm run build && node scripts/evaluate-query-dataset.mjs",
     "package:size": "node scripts/package-size.mjs",
     "refresh:idescat": "tsx scripts/refresh-idescat.ts",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",

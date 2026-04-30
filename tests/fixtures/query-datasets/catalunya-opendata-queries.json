@@ -1,0 +1,887 @@
+{
+  "version": 1,
+  "description": "Live acceptance dataset for ordinary Catalunya Open Data MCP user queries. These cases favor broad natural-language coverage and structural correctness over exact row snapshots.",
+  "cases": [
+    {
+      "id": "bcn.plan.street_trees_vilardell_city_suffix",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "what tree species are on Carrer Vilardell in Barcelona", "limit": 10 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "contains" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "street" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer Vilardell" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Vilardell"
+        },
+        { "path": "data.final_arguments.group_by", "op": "equals", "value": "cat_nom_catala" }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_vilardell_no_city",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Carrer Vilardell", "limit": 10 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer Vilardell" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Vilardell"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_consell",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Carrer Consell de Cent", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.final_tool", "op": "equals", "value": "bcn_query_resource_geo" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Consell de Cent"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_mallorca_city_suffix",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "count tree species on Carrer Mallorca in Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer Mallorca" },
+        { "path": "data.intent.task", "op": "equals", "value": "group" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Mallorca"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_calle_mallorca",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "what trees are on Calle Mallorca in Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Calle Mallorca" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Calle Mallorca"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_avinguda_diagonal",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "list tree species on Avinguda Diagonal in Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Avinguda Diagonal" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Avinguda Diagonal"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_avenida_meridiana",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "species on Avenida Meridiana, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Avenida Meridiana" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Avenida Meridiana"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_carrer_sants",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "how many tree species are on Carrer de Sants in Barcelona?", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer de Sants" },
+        { "path": "data.final_arguments.group_by", "op": "equals", "value": "cat_nom_catala" }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_carrer_marina_comma",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Carrer de la Marina, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer de la Marina" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer de la Marina"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_carrer_arago",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Carrer Aragó in Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer Aragó" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Aragó"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_passeig_gracia",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Passeig de Gràcia", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Passeig de Gràcia" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Passeig de Gràcia"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_pg_gracia",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Pg de Gràcia", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Pg de Gràcia" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Pg de Gràcia"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_av_diagonal_abbrev",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Av Diagonal", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Av Diagonal" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Av Diagonal"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_avda_meridiana",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Avda Meridiana in Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Avda Meridiana" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Avda Meridiana"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_gran_via",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Gran Via de les Corts Catalanes, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        {
+          "path": "data.intent.place_query",
+          "op": "equals",
+          "value": "Gran Via de les Corts Catalanes"
+        },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Gran Via de les Corts Catalanes"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_ronda_sant_pau",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "trees on Ronda de Sant Pau, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Ronda de Sant Pau" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Ronda de Sant Pau"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_travessera_gracia",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Travessera de Gràcia, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Travessera de Gràcia" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Travessera de Gràcia"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_carretera_sants",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Carretera de Sants", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carretera de Sants" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carretera de Sants"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_passatge_permanyer",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Passatge de Permanyer", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Passatge de Permanyer" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Passatge de Permanyer"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_placa_catalunya",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "tree species on Plaça de Catalunya", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Plaça de Catalunya" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Plaça de Catalunya"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_calle_balmes",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "which species grow on Calle de Balmes, Barcelona", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Calle de Balmes" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Calle de Balmes"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.street_trees_in_carrer_vilardell",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "which tree species grow in Carrer Vilardell", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Carrer Vilardell" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Vilardell"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.facilities_near_sagrada",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "facilities near Sagrada Família", "radius_m": 1500, "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "near" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Sagrada Família" },
+        { "path": "data.final_arguments.near.radius_m", "op": "equals", "value": 1500 }
+      ]
+    },
+    {
+      "id": "bcn.plan_facilities_near_park_guell",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "show facilities near Park Güell", "radius_m": 1000, "limit": 5 },
+      "assertions": [
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "near" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Park Güell" },
+        { "path": "data.status", "op": "oneOf", "values": ["ready", "needs_place_selection"] }
+      ]
+    },
+    {
+      "id": "bcn.plan.facilities_near_camp_nou",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "public facilities near Camp Nou", "radius_m": 1000, "limit": 5 },
+      "assertions": [
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "near" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Camp Nou" },
+        { "path": "data.status", "op": "equals", "value": "needs_place_selection" },
+        { "path": "data.place_resolution.candidate_count", "op": "equals", "value": 0 },
+        { "path": "data.final_tool", "op": "notExists" }
+      ]
+    },
+    {
+      "id": "bcn.plan.museums_near_sagrada_plain_ascii",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "museums near Sagrada Familia", "radius_m": 1200, "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "near" },
+        { "path": "data.intent.place_query", "op": "equals", "value": "Sagrada Familia" },
+        { "path": "data.final_arguments.near.radius_m", "op": "equals", "value": 1200 }
+      ]
+    },
+    {
+      "id": "bcn.plan.libraries_eixample_district",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "libraries in Eixample district", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "within" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "district" },
+        { "path": "data.final_tool", "op": "equals", "value": "bcn_query_resource_geo" }
+      ]
+    },
+    {
+      "id": "bcn.plan.parks_gracia_district",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "parks in Gracia district", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "within" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "district" },
+        {
+          "path": "data.final_arguments.within_place.source_resource_id",
+          "op": "equals",
+          "value": "576bc645-9481-4bc4-b8bf-f5972c20df3f"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.facilities_gracia_by_neighborhood",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "count facilities in Gràcia by neighborhood", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "within" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "district" },
+        {
+          "path": "data.final_arguments.within_place.source_resource_id",
+          "op": "equals",
+          "value": "576bc645-9481-4bc4-b8bf-f5972c20df3f"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.facilities_eixample_by_neighborhood",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "count facilities in Eixample by neighborhood", "limit": 5 },
+      "assertions": [
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "within" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "district" },
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        {
+          "path": "data.final_arguments.group_by",
+          "op": "equals",
+          "value": "addresses_neighborhood_name"
+        }
+      ]
+    },
+    {
+      "id": "bcn.plan.facilities_sants_montjuic",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "facilities in Sants-Montjuïc district", "limit": 5 },
+      "assertions": [
+        { "path": "data.intent.spatial_mode", "op": "equals", "value": "within" },
+        { "path": "data.intent.place_kind", "op": "equals", "value": "district" },
+        { "path": "data.status", "op": "equals", "value": "ready" }
+      ]
+    },
+    {
+      "id": "bcn.plan.ambiguous_les_corts",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "facilities in Les Corts", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "needs_place_selection" },
+        { "path": "data.place_resolution.candidates", "op": "lengthGte", "value": 2 }
+      ]
+    },
+    {
+      "id": "bcn.plan.preview_street_trees",
+      "connector": "bcn",
+      "category": "city_plan",
+      "tool": "bcn_plan_query",
+      "args": { "query": "preview Barcelona street trees CSV", "task": "preview", "limit": 5 },
+      "assertions": [
+        { "path": "data.status", "op": "equals", "value": "ready" },
+        { "path": "data.final_tool", "op": "equals", "value": "bcn_preview_resource" },
+        {
+          "path": "data.final_arguments.resource_id",
+          "op": "equals",
+          "value": "23124fd5-521f-40f8-85b8-efb1e71c2ec8"
+        }
+      ]
+    },
+    {
+      "id": "bcn.answer.street_trees_vilardell_full",
+      "connector": "bcn",
+      "category": "city_answer",
+      "tool": "bcn_answer_city_query",
+      "args": { "query": "what tree species are on Carrer Vilardell in Barcelona", "limit": 10 },
+      "assertions": [
+        { "path": "data.execution_status", "op": "equals", "value": "completed" },
+        { "path": "data.answer_type", "op": "equals", "value": "grouped_counts" },
+        { "path": "data.plan.intent.place_query", "op": "equals", "value": "Carrer Vilardell" },
+        { "path": "data.final_result.data.scanned_row_count", "op": "gte", "value": 140000 },
+        { "path": "data.final_result.data.matched_row_count", "op": "equals", "value": 47 },
+        {
+          "path": "data.summary.groups",
+          "op": "some",
+          "where": { "key": "Xicranda", "count": 19 }
+        },
+        { "path": "data.summary.groups", "op": "some", "where": { "key": "Plàtan", "count": 16 } }
+      ]
+    },
+    {
+      "id": "bcn.answer.street_trees_consell",
+      "connector": "bcn",
+      "category": "city_answer",
+      "tool": "bcn_answer_city_query",
+      "args": { "query": "tree species on Carrer Consell de Cent", "limit": 5 },
+      "assertions": [
+        { "path": "data.execution_status", "op": "equals", "value": "completed" },
+        { "path": "data.answer_type", "op": "equals", "value": "grouped_counts" },
+        {
+          "path": "data.final_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "Carrer Consell de Cent"
+        },
+        { "path": "data.final_result.data.matched_row_count", "op": "gt", "value": 0 },
+        { "path": "data.summary.groups", "op": "lengthGte", "value": 1 }
+      ]
+    },
+    {
+      "id": "bcn.answer.facilities_near_sagrada",
+      "connector": "bcn",
+      "category": "city_answer",
+      "tool": "bcn_answer_city_query",
+      "args": { "query": "facilities near Sagrada Família", "radius_m": 1500, "limit": 5 },
+      "assertions": [
+        { "path": "data.execution_status", "op": "equals", "value": "completed" },
+        { "path": "data.answer_type", "op": "equals", "value": "nearest_rows" },
+        { "path": "data.final_result.data.strategy", "op": "equals", "value": "datastore" },
+        { "path": "data.summary.rows", "op": "lengthGte", "value": 1 },
+        { "path": "data.summary.map_points", "op": "lengthGte", "value": 1 }
+      ]
+    },
+    {
+      "id": "bcn.answer.facilities_gracia_grouped",
+      "connector": "bcn",
+      "category": "city_answer",
+      "tool": "bcn_answer_city_query",
+      "args": { "query": "count facilities in Gràcia by neighborhood", "limit": 5 },
+      "assertions": [
+        { "path": "data.execution_status", "op": "equals", "value": "completed" },
+        { "path": "data.answer_type", "op": "equals", "value": "grouped_counts" },
+        {
+          "path": "data.final_arguments.within_place.source_resource_id",
+          "op": "equals",
+          "value": "576bc645-9481-4bc4-b8bf-f5972c20df3f"
+        },
+        { "path": "data.summary.groups", "op": "lengthGte", "value": 1 }
+      ]
+    },
+    {
+      "id": "bcn.answer.blocked_les_corts",
+      "connector": "bcn",
+      "category": "city_answer",
+      "tool": "bcn_answer_city_query",
+      "args": { "query": "facilities in Les Corts", "limit": 5 },
+      "assertions": [
+        { "path": "data.execution_status", "op": "equals", "value": "blocked" },
+        { "path": "data.answer_type", "op": "equals", "value": "blocked" },
+        { "path": "data.selection_options.selection_type", "op": "equals", "value": "place" },
+        { "path": "data.selection_options.options", "op": "lengthGte", "value": 2 }
+      ]
+    },
+    {
+      "id": "bcn.place.sagrada",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Sagrada Familia", "limit": 3 },
+      "assertions": [
+        { "path": "data.candidates", "op": "some", "where": { "kind": "facility" } },
+        {
+          "path": "data.candidates",
+          "op": "somePathIncludes",
+          "itemPath": "neighborhood",
+          "value": "Sagrada"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.street_vilardell",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Carrer Vilardell", "kinds": ["street"], "limit": 5 },
+      "assertions": [
+        { "path": "data.candidates", "op": "some", "where": { "kind": "street" } },
+        {
+          "path": "data.candidates",
+          "op": "somePathIncludes",
+          "itemPath": "name",
+          "value": "Vilardell"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.street_passeig_gracia",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Passeig de Gracia", "kinds": ["street"], "limit": 5 },
+      "assertions": [
+        { "path": "data.candidates", "op": "some", "where": { "kind": "street" } },
+        {
+          "path": "data.candidates",
+          "op": "somePathIncludes",
+          "itemPath": "name",
+          "value": "Gràcia"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.street_diagonal",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Avinguda Diagonal", "kinds": ["street"], "limit": 5 },
+      "assertions": [
+        { "path": "data.candidates", "op": "some", "where": { "kind": "street" } },
+        {
+          "path": "data.candidates",
+          "op": "somePathIncludes",
+          "itemPath": "name",
+          "value": "Diagonal"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.neighborhood_sagrada",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Sagrada Familia", "kinds": ["neighborhood"], "limit": 5 },
+      "assertions": [
+        { "path": "data.candidates", "op": "some", "where": { "kind": "neighborhood" } },
+        {
+          "path": "data.candidates",
+          "op": "somePathIncludes",
+          "itemPath": "name",
+          "value": "Sagrada"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.district_gracia",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Gracia", "kinds": ["district"], "limit": 2 },
+      "assertions": [
+        {
+          "path": "data.candidates",
+          "op": "some",
+          "where": { "kind": "district", "name": "Gràcia" }
+        },
+        {
+          "path": "data.candidates.0.area_ref.source_resource_id",
+          "op": "equals",
+          "value": "576bc645-9481-4bc4-b8bf-f5972c20df3f"
+        }
+      ]
+    },
+    {
+      "id": "bcn.place.district_eixample",
+      "connector": "bcn",
+      "category": "place",
+      "tool": "bcn_resolve_place",
+      "args": { "query": "Eixample", "kinds": ["district"], "limit": 2 },
+      "assertions": [
+        {
+          "path": "data.candidates",
+          "op": "some",
+          "where": { "kind": "district", "name": "Eixample" }
+        },
+        {
+          "path": "data.candidates.0.area_ref.source_resource_id",
+          "op": "equals",
+          "value": "576bc645-9481-4bc4-b8bf-f5972c20df3f"
+        }
+      ]
+    },
+    {
+      "id": "bcn.recommend.street_trees",
+      "connector": "bcn",
+      "category": "recommend",
+      "tool": "bcn_recommend_resources",
+      "args": {
+        "query": "tree species on Carrer Consell de Cent",
+        "task": "group",
+        "place_kind": "street",
+        "limit": 2
+      },
+      "assertions": [
+        {
+          "path": "data.recommendations.0.resource_id",
+          "op": "equals",
+          "value": "23124fd5-521f-40f8-85b8-efb1e71c2ec8"
+        },
+        {
+          "path": "data.recommendations.0.example_arguments.contains.espai_verd",
+          "op": "equals",
+          "value": "<street name>"
+        }
+      ]
+    },
+    {
+      "id": "bcn.recommend.facilities_area",
+      "connector": "bcn",
+      "category": "recommend",
+      "tool": "bcn_recommend_resources",
+      "args": {
+        "query": "facilities in Gracia district",
+        "task": "within",
+        "place_kind": "district",
+        "limit": 2
+      },
+      "assertions": [
+        {
+          "path": "data.recommendations",
+          "op": "some",
+          "where": { "resource_id": "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7" }
+        },
+        {
+          "path": "data.recommendations.0.example_arguments.within_place.source_resource_id",
+          "op": "exists"
+        }
+      ]
+    },
+    {
+      "id": "socrata.search.housing",
+      "connector": "socrata",
+      "category": "discovery",
+      "tool": "socrata_search_datasets",
+      "args": { "query": "habitatges iniciats acabats", "limit": 5 },
+      "assertions": [
+        { "path": "data.results", "op": "some", "where": { "source_id": "j8h8-vxug" } }
+      ]
+    },
+    {
+      "id": "socrata.describe.housing",
+      "connector": "socrata",
+      "category": "metadata",
+      "tool": "socrata_describe_dataset",
+      "args": { "source_id": "j8h8-vxug" },
+      "assertions": [
+        { "path": "data.columns", "op": "some", "where": { "field_name": "municipi" } },
+        { "path": "data.columns", "op": "some", "where": { "field_name": "any" } }
+      ]
+    },
+    {
+      "id": "socrata.query.housing_girona",
+      "connector": "socrata",
+      "category": "query",
+      "tool": "socrata_query_dataset",
+      "args": {
+        "source_id": "j8h8-vxug",
+        "select": "municipi, comarca_2023, any",
+        "where": "municipi = 'Girona'",
+        "order": "any desc",
+        "limit": 5
+      },
+      "assertions": [
+        { "path": "data.row_count", "op": "gte", "value": 1 },
+        { "path": "data.rows", "op": "some", "where": { "municipi": "Girona" } }
+      ]
+    },
+    {
+      "id": "socrata.query.housing_by_comarca",
+      "connector": "socrata",
+      "category": "query",
+      "tool": "socrata_query_dataset",
+      "args": {
+        "source_id": "j8h8-vxug",
+        "select": "comarca_2023, count(*) as total",
+        "group": "comarca_2023",
+        "order": "total desc",
+        "limit": 5
+      },
+      "assertions": [
+        { "path": "data.row_count", "op": "gte", "value": 1 },
+        { "path": "data.rows.0.total", "op": "exists" }
+      ]
+    },
+    {
+      "id": "idescat.search.population_barc",
+      "connector": "idescat",
+      "category": "discovery",
+      "tool": "idescat_search_tables",
+      "args": { "query": "poblacio Barcelones", "lang": "ca", "limit": 5 },
+      "assertions": [
+        { "path": "data.results.0.statistics_id", "op": "equals", "value": "pmh" },
+        { "path": "data.results.0.geo_candidates", "op": "includes", "value": "com" }
+      ]
+    },
+    {
+      "id": "idescat.metadata.population_barc_guidance",
+      "connector": "idescat",
+      "category": "metadata",
+      "tool": "idescat_get_table_metadata",
+      "args": {
+        "statistics_id": "pmh",
+        "node_id": "1180",
+        "table_id": "8078",
+        "geo_id": "com",
+        "lang": "ca",
+        "place_query": "Barcelones"
+      },
+      "assertions": [
+        { "path": "data.filter_guidance.recommended_data_call.filters.COM", "op": "exists" },
+        { "path": "data.dimensions", "op": "some", "where": { "id": "COM" } }
+      ]
+    },
+    {
+      "id": "idescat.data.population_barc_latest",
+      "connector": "idescat",
+      "category": "query",
+      "tool": "idescat_get_table_data",
+      "args": {
+        "statistics_id": "pmh",
+        "node_id": "1180",
+        "table_id": "8078",
+        "geo_id": "com",
+        "lang": "ca",
+        "filters": { "COM": "13", "AGE": "TOTAL", "SEX": "TOTAL", "CONCEPT": "POP" },
+        "last": 1,
+        "limit": 5
+      },
+      "assertions": [
+        { "path": "data.row_count", "op": "equals", "value": 1 },
+        { "path": "data.rows.0.dimensions.COM.label", "op": "equals", "value": "Barcelonès" }
+      ]
+    },
+    {
+      "id": "idescat.search.income_maresme",
+      "connector": "idescat",
+      "category": "discovery",
+      "tool": "idescat_search_tables",
+      "args": { "query": "renda per capita Maresme", "lang": "ca", "limit": 5 },
+      "assertions": [
+        { "path": "data.results", "op": "some", "where": { "statistics_id": "rfdbc" } },
+        { "path": "data.results.0.geo_candidates", "op": "includes", "value": "com" }
+      ]
+    },
+    {
+      "id": "idescat.search.unemployment",
+      "connector": "idescat",
+      "category": "discovery",
+      "tool": "idescat_search_tables",
+      "args": { "query": "taxa atur comarca", "lang": "ca", "limit": 5 },
+      "assertions": [{ "path": "data.results.0.statistics_id", "op": "equals", "value": "e03" }]
+    }
+  ]
+}
