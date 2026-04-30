@@ -207,7 +207,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
       title: "bcn.answer_city_query",
       description: [
         "Execute a safe bounded Open Data BCN city-question plan and compose a deterministic caller-ready answer.",
-        "Returns answer_text, answer_markdown, caveats, execution_notes, selected resource metadata, citation guidance, and the raw final_result.",
+        "Returns answer_text, answer_markdown, blocked selection_options, caveats, execution_notes, selected resource metadata, citation guidance, and the raw final_result.",
       ].join(" "),
       inputSchema: schemas.inputs.cityQuery,
       outputSchema: schemas.outputs.answerCityQuery,
@@ -713,6 +713,19 @@ function createBcnSchemas(config: AppConfig) {
     title: z.string(),
     theme: z.string().optional(),
   });
+  const cityAnswerSelectionOptionSchema = z.object({
+    id: z.string(),
+    label: z.string(),
+    kind: z.string().optional(),
+    theme: z.string().optional(),
+    confidence: z.number(),
+    provenance: z.record(jsonValueSchema),
+    resume_arguments: z.record(jsonValueSchema),
+  });
+  const cityAnswerSelectionOptionsSchema = z.object({
+    selection_type: z.enum(["place", "resource"]),
+    options: z.array(cityAnswerSelectionOptionSchema),
+  });
   const answerCityQueryDataSchema = z.object({
     answer_markdown: z.string(),
     answer_text: z.string(),
@@ -721,6 +734,7 @@ function createBcnSchemas(config: AppConfig) {
     caveats: z.array(z.string()),
     execution_notes: z.array(z.string()),
     selected_resource: cityAnswerSelectedResourceSchema.optional(),
+    selection_options: cityAnswerSelectionOptionsSchema.optional(),
     citation: cityCitationSchema,
     execution_status: cityExecutionStatusSchema,
     final_tool: cityFinalToolSchema.optional(),

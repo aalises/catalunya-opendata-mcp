@@ -1,5 +1,5 @@
 import type { AppConfig } from "../../config.js";
-import type { JsonValue } from "../common/json-safe.js";
+import { type JsonValue, toJsonSafeValue } from "../common/json-safe.js";
 import { type BcnOperationProvenance, createBcnOperationProvenance } from "./catalog.js";
 import {
   type BcnCityCitationGuidance,
@@ -11,6 +11,8 @@ import {
   executeBcnCityQuery,
 } from "./city-query.js";
 import type { FetchBcnJsonOptions } from "./client.js";
+import type { BcnResolvedPlaceCandidate } from "./place.js";
+import type { BcnResourceRecommendation } from "./recommend.js";
 
 export type BcnCityAnswerType =
   | "blocked"
@@ -30,6 +32,23 @@ export interface BcnCityAnswerSelectedResource {
   title: string;
 }
 
+export type BcnCityAnswerSelectionType = "place" | "resource";
+
+export interface BcnCityAnswerSelectionOption {
+  confidence: number;
+  id: string;
+  kind?: string;
+  label: string;
+  provenance: Record<string, JsonValue>;
+  resume_arguments: Record<string, JsonValue>;
+  theme?: string;
+}
+
+export interface BcnCityAnswerSelectionOptions {
+  options: BcnCityAnswerSelectionOption[];
+  selection_type: BcnCityAnswerSelectionType;
+}
+
 export interface BcnCityAnswerData {
   answer_markdown: string;
   answer_text: string;
@@ -43,6 +62,7 @@ export interface BcnCityAnswerData {
   final_tool?: BcnCityFinalTool;
   plan: BcnCityPlanData;
   selected_resource?: BcnCityAnswerSelectedResource;
+  selection_options?: BcnCityAnswerSelectionOptions;
   summary: Record<string, JsonValue>;
 }
 
@@ -62,7 +82,7 @@ export async function answerBcnCityQuery(
 ): Promise<BcnCityAnswerQueryResult> {
   const execution = await executeBcnCityQuery(input, config, options);
   const finalResult = execution.data.final_result ?? null;
-  const composed = composeCityAnswer(execution.data, finalResult);
+  const composed = composeCityAnswer(input, execution.data, finalResult);
 
   return {
     data: {
@@ -84,23 +104,32 @@ export async function answerBcnCityQuery(
 }
 
 function composeCityAnswer(
+  input: BcnCityQueryInput,
   execution: BcnCityExecuteQueryData,
   finalResult: Record<string, JsonValue> | null,
 ): Pick<
   BcnCityAnswerData,
-  "answer_markdown" | "answer_text" | "answer_type" | "caveats" | "execution_notes" | "summary"
+  | "answer_markdown"
+  | "answer_text"
+  | "answer_type"
+  | "caveats"
+  | "execution_notes"
+  | "selection_options"
+  | "summary"
 > {
   const finalData = getFinalData(finalResult);
   const notes = collectAnswerNotes(execution, finalData);
 
   if (execution.execution_status === "blocked" || !finalData) {
     const answerText = buildBlockedAnswer(execution.plan);
+    const selectionOptions = buildSelectionOptions(input, execution.plan);
     return {
       answer_markdown: buildBlockedMarkdown(execution.plan, answerText),
       answer_text: answerText,
       answer_type: "blocked",
       caveats: notes.caveats,
       execution_notes: notes.execution_notes,
+      ...(selectionOptions ? { selection_options: selectionOptions } : {}),
       summary: buildBlockedSummary(execution.plan),
     };
   }
@@ -374,6 +403,176 @@ function buildRowSummary(
     rows: rows.slice(0, SUMMARY_ROW_LIMIT).map(toAnswerRowSummary),
     ...(getPlaceContext(plan) ? { place: getPlaceContext(plan) } : {}),
   };
+}
+
+function buildSelectionOptions(
+  input: BcnCityQueryInput,
+  plan: BcnCityPlanData,
+): BcnCityAnswerSelectionOptions | undefined {
+  if (plan.status === "needs_place_selection" && plan.place_resolution) {
+    const options = plan.place_resolution.candidates.map((candidate) =>
+      buildPlaceSelectionOption(input, plan, candidate),
+    );
+
+    return options.length > 0 ? { selection_type: "place", options } : undefined;
+  }
+
+  if (plan.status === "needs_resource_selection" && plan.recommendations) {
+    const options = plan.recommendations.map((recommendation) =>
+      buildResourceSelectionOption(input, plan, recommendation),
+    );
+
+    return options.length > 0 ? { selection_type: "resource", options } : undefined;
+  }
+
+  return undefined;
+}
+
+function buildPlaceSelectionOption(
+  input: BcnCityQueryInput,
+  plan: BcnCityPlanData,
+  candidate: BcnResolvedPlaceCandidate,
+): BcnCityAnswerSelectionOption {
+  return {
+    confidence: normalizeConfidence(candidate.score / 100),
+    id: getPlaceSelectionId(candidate),
+    kind: candidate.kind,
+    label: getPlaceSelectionLabel(candidate),
+    provenance: {
+      source_resource_id: candidate.source_resource_id,
+      source_url: candidate.source_url,
+      ...(candidate.source_package_id ? { source_package_id: candidate.source_package_id } : {}),
+      ...(candidate.source_dataset_name
+        ? { source_dataset_name: candidate.source_dataset_name }
+        : {}),
+      ...(candidate.area_ref
+        ? {
+            area_ref: {
+              geometry_field: candidate.area_ref.geometry_field,
+              geometry_type: candidate.area_ref.geometry_type,
+              row_id: candidate.area_ref.row_id,
+              source_resource_id: candidate.area_ref.source_resource_id,
+              ...(candidate.area_ref.source_package_id
+                ? { source_package_id: candidate.area_ref.source_package_id }
+                : {}),
+            },
+          }
+        : {}),
+    },
+    resume_arguments: {
+      ...buildBaseResumeArguments(input, plan, plan.recommendation),
+      place_kind: toCityResumePlaceKind(candidate.kind),
+      place_query: candidate.name,
+    },
+  };
+}
+
+function buildResourceSelectionOption(
+  input: BcnCityQueryInput,
+  plan: BcnCityPlanData,
+  recommendation: BcnResourceRecommendation,
+): BcnCityAnswerSelectionOption {
+  return {
+    confidence: normalizeConfidence(recommendation.confidence),
+    id: `resource:${recommendation.resource_id}`,
+    label: recommendation.title,
+    provenance: {
+      datastore_active: recommendation.datastore_active,
+      format: recommendation.format,
+      geo_capable: recommendation.geo_capable,
+      package_id: recommendation.package_id,
+      resource_id: recommendation.resource_id,
+      source_url: recommendation.source_url,
+      title: recommendation.title,
+    },
+    resume_arguments: {
+      ...buildBaseResumeArguments(input, plan, recommendation),
+      resource_id: recommendation.resource_id,
+    },
+    theme: recommendation.theme,
+  };
+}
+
+function buildBaseResumeArguments(
+  input: BcnCityQueryInput,
+  plan: BcnCityPlanData,
+  recommendation: BcnResourceRecommendation | undefined,
+): Record<string, JsonValue> {
+  const args: Record<string, JsonValue> = {};
+
+  addJsonArgument(args, "query", input.query || plan.intent.query);
+  addJsonArgument(args, "task", input.task ?? plan.intent.task);
+  addJsonArgument(args, "place_kind", input.place_kind ?? plan.intent.place_kind);
+  addJsonArgument(args, "place_query", input.place_query ?? plan.intent.place_query);
+  addJsonArgument(args, "resource_id", input.resource_id);
+  addJsonArgument(args, "fields", input.fields ?? recommendation?.suggested_fields?.slice(0, 6));
+  addJsonArgument(args, "filters", input.filters);
+  addJsonArgument(args, "group_by", input.group_by ?? getResumeGroupBy(plan, recommendation));
+  addJsonArgument(args, "limit", input.limit);
+  addJsonArgument(args, "offset", input.offset);
+  addJsonArgument(args, "q", input.q);
+  addJsonArgument(args, "radius_m", input.radius_m);
+  addJsonArgument(args, "sort", input.sort);
+
+  return args;
+}
+
+function getResumeGroupBy(
+  plan: BcnCityPlanData,
+  recommendation: BcnResourceRecommendation | undefined,
+): string | undefined {
+  if (plan.intent.task !== "group" && plan.intent.task !== "count") {
+    return undefined;
+  }
+
+  if (plan.intent.spatial_mode === "within") {
+    return (
+      recommendation?.suggested_group_by?.find((field) => /neighborhood|barri/iu.test(field)) ??
+      recommendation?.suggested_group_by?.[0]
+    );
+  }
+
+  return recommendation?.suggested_group_by?.[0];
+}
+
+function getPlaceSelectionId(candidate: BcnResolvedPlaceCandidate): string {
+  if (candidate.area_ref) {
+    return `place:${candidate.kind}:${candidate.area_ref.source_resource_id}:${candidate.area_ref.row_id}`;
+  }
+
+  return [
+    "place",
+    candidate.kind,
+    candidate.source_resource_id,
+    candidate.name,
+    candidate.lat.toFixed(6),
+    candidate.lon.toFixed(6),
+  ].join(":");
+}
+
+function getPlaceSelectionLabel(candidate: BcnResolvedPlaceCandidate): string {
+  const context =
+    candidate.kind === "neighborhood" && candidate.district
+      ? `${candidate.kind}, ${candidate.district}`
+      : candidate.kind;
+
+  return `${candidate.name} (${context})`;
+}
+
+function toCityResumePlaceKind(kind: BcnResolvedPlaceCandidate["kind"]): string {
+  return kind === "facility" || kind === "landmark" ? "point" : kind;
+}
+
+function addJsonArgument(target: Record<string, JsonValue>, key: string, value: unknown): void {
+  const safeValue = toJsonSafeValue(value);
+
+  if (safeValue !== undefined) {
+    target[key] = safeValue;
+  }
+}
+
+function normalizeConfidence(value: number): number {
+  return Math.round(Math.max(0, Math.min(1, value)) * 1000) / 1000;
 }
 
 function collectAnswerNotes(

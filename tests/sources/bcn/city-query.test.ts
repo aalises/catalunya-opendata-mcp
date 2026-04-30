@@ -914,11 +914,53 @@ describe("BCN city answer composer", () => {
       answer_type: "blocked",
       execution_status: "blocked",
       final_result: null,
+      selection_options: {
+        selection_type: "place",
+        options: [
+          {
+            id: "place:district:576bc645-9481-4bc4-b8bf-f5972c20df3f:6",
+            label: "Gràcia (district)",
+            kind: "district",
+            provenance: {
+              source_resource_id: "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+              area_ref: {
+                row_id: 6,
+              },
+            },
+            resume_arguments: {
+              query: "facilities in Gracia",
+              task: "within",
+              place_kind: "district",
+              place_query: "Gràcia",
+              limit: 5,
+            },
+          },
+          {
+            id: "place:neighborhood:b21fa550-56ea-4f4c-9adc-b8009381896e:31",
+            label: "Gràcia (neighborhood)",
+            kind: "neighborhood",
+            provenance: {
+              source_resource_id: "b21fa550-56ea-4f4c-9adc-b8009381896e",
+              area_ref: {
+                row_id: 31,
+              },
+            },
+            resume_arguments: {
+              query: "facilities in Gracia",
+              task: "within",
+              place_kind: "neighborhood",
+              place_query: "Gràcia",
+              limit: 5,
+            },
+          },
+        ],
+      },
       summary: {
         place_candidate_count: 2,
       },
     });
     expect(result.data.answer_text).toContain("select one Barcelona place candidate");
+    expect(result.data.selection_options?.options[0]?.confidence).toBeGreaterThan(0);
   });
 
   it("returns empty-result answers", async () => {
