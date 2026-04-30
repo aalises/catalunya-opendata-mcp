@@ -673,7 +673,7 @@ function createBcnSchemas(config: AppConfig) {
     execution_status: cityExecutionStatusSchema,
     final_tool: cityFinalToolSchema.optional(),
     final_arguments: z.record(jsonValueSchema).optional(),
-    final_result: z.record(jsonValueSchema).optional(),
+    final_result: z.record(jsonValueSchema).nullable().optional(),
   });
 
   return {
@@ -718,9 +718,12 @@ function createBcnSchemas(config: AppConfig) {
         resource_id: z.string().trim().min(1).optional(),
         fields: z.array(z.string()).optional(),
         filters: z.record(jsonValueSchema).optional(),
+        q: z.string().trim().min(1).optional(),
         group_by: z.string().trim().min(1).optional(),
         limit: positiveLimitSchema,
+        offset: offsetSchema,
         radius_m: z.number().positive().max(5_000).optional(),
+        sort: z.string().trim().min(1).optional(),
       },
       queryResourceGeo: {
         resource_id: z.string(),

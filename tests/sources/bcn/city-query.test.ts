@@ -289,6 +289,94 @@ describe("BCN city query planner", () => {
     });
   });
 
+  it("lets explicit point place_kind beat within wording", async () => {
+    usePlaceRegistry([FACILITY_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([
+        {
+          name: "Sagrada Família",
+          secondary_filters_name: "Monuments",
+          addresses_neighborhood_name: "la Sagrada Família",
+          geo_epgs_4326_lat: 41.4032,
+          geo_epgs_4326_lon: 2.1748,
+        },
+      ]),
+      placeResponse([]),
+      placeResponse([]),
+    );
+
+    const result = await planBcnCityQuery(
+      {
+        query: "facilities in Sagrada Família",
+        place_kind: "point",
+        place_query: "Sagrada Família",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "ready",
+      intent: {
+        spatial_mode: "near",
+        place_kind: "point",
+      },
+      place_resolution: {
+        selected_candidate: {
+          kind: "landmark",
+          name: "Sagrada Família",
+        },
+      },
+      final_arguments: {
+        near: {
+          lat: 41.4032,
+          lon: 2.1748,
+        },
+      },
+    });
+  });
+
+  it("uses explicit place_query even when the text has no spatial keyword", async () => {
+    usePlaceRegistry([FACILITY_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([
+        {
+          name: "Sagrada Família",
+          secondary_filters_name: "Monuments",
+          geo_epgs_4326_lat: 41.4032,
+          geo_epgs_4326_lon: 2.1748,
+        },
+      ]),
+      placeResponse([]),
+      placeResponse([]),
+    );
+
+    const result = await planBcnCityQuery(
+      {
+        query: "facilities",
+        place_kind: "point",
+        place_query: "Sagrada Família",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "ready",
+      intent: {
+        spatial_mode: "near",
+        place_query: "Sagrada Família",
+      },
+      final_tool: "bcn_query_resource_geo",
+      final_arguments: {
+        near: {
+          lat: 41.4032,
+          lon: 2.1748,
+        },
+      },
+    });
+  });
+
   it("maps explicit street place_kind through to the place resolver for near plans", async () => {
     usePlaceRegistry([ADDRESS_PLACE_RESOURCE]);
     mockFetchResponses(
@@ -362,6 +450,150 @@ describe("BCN city query planner", () => {
         },
         group_by: "cat_nom_catala",
       },
+    });
+  });
+
+  it("adds a caveat when area plans fall back to bbox", async () => {
+    usePlaceRegistry([DISTRICT_PLACE_RESOURCE]);
+    mockFetchResponses(
+      placeResponse([
+        {
+          nom_districte: "Gràcia",
+          geometria_wgs84: smallPolygon(),
+        },
+      ]),
+    );
+
+    const result = await planBcnCityQuery(
+      {
+        query: "facilities in Gracia",
+        place_kind: "district",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "ready",
+      final_arguments: {
+        bbox: {
+          min_lat: 41.4,
+          min_lon: 2.1,
+          max_lat: 41.5,
+          max_lon: 2.2,
+        },
+      },
+    });
+    expect(result.data.intent.caveats).toContain(
+      "Area candidate did not expose an area_ref; using its bbox as an approximate rectangular fallback.",
+    );
+  });
+
+  it("blocks resource overrides that cannot support geo querying", async () => {
+    mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "resource-1",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse(["name", "description"]),
+    );
+
+    const result = await planBcnCityQuery(
+      {
+        query: "facilities near Sagrada Família",
+        resource_id: "resource-1",
+        task: "near",
+        place_query: "Sagrada Família",
+        place_kind: "point",
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "unsupported",
+      resource_override: {
+        resource_id: "resource-1",
+        datastore_active: true,
+      },
+    });
+    expect(result.data.intent.caveats).toContain(
+      "The caller-provided DataStore resource does not expose an inferable WGS84 latitude/longitude field pair for geo querying.",
+    );
+    expect(globalThis.fetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("passes q, sort, and offset through executor query plans", async () => {
+    const fetchMock = mockFetchResponses(
+      ckanSuccess(
+        bcnResource({
+          id: "resource-1",
+          datastore_active: true,
+          format: "DataStore",
+        }),
+      ),
+      datastoreFieldsResponse(["name", "geo_epgs_4326_lat", "geo_epgs_4326_lon"]),
+      ckanSuccess({
+        fields: [{ id: "name", type: "text" }],
+        records: [],
+        total: 0,
+      }),
+    );
+
+    const result = await executeBcnCityQuery(
+      {
+        query: "facilities",
+        resource_id: "resource-1",
+        task: "query",
+        q: "library",
+        sort: "name asc",
+        offset: 25,
+        limit: 5,
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      execution_status: "completed",
+      final_tool: "bcn_query_resource",
+      final_arguments: {
+        q: "library",
+        sort: "name asc",
+        offset: 25,
+      },
+    });
+    expect(JSON.parse(String(fetchMock.mock.calls[2]?.[1]?.body))).toMatchObject({
+      q: "library",
+      sort: "name asc",
+      offset: 25,
+    });
+  });
+
+  it("does not treat generic in/on date phrases as spatial intent", async () => {
+    const dataIn2024 = await planBcnCityQuery({ query: "facility data in 2024" }, baseConfig);
+    const rentedOnDate = await planBcnCityQuery({ query: "facilities rented on 2024" }, baseConfig);
+
+    expect(dataIn2024.data.intent.spatial_mode).toBe("query");
+    expect(rentedOnDate.data.intent.spatial_mode).toBe("query");
+  });
+
+  it("does not return area-source-only recommendations as target resources", async () => {
+    const result = await planBcnCityQuery(
+      {
+        query: "district boundary",
+        task: "within",
+        place_kind: "district",
+      },
+      baseConfig,
+    );
+
+    expect(result.data).toMatchObject({
+      status: "unsupported",
+      recommendations: [],
+      steps: [],
     });
   });
 

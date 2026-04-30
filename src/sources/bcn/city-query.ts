@@ -4,12 +4,14 @@ import {
   type BcnOperationProvenance,
   createBcnOperationProvenance,
   normalizeLimit,
+  normalizeOffset,
 } from "./catalog.js";
 import { BcnError, type FetchBcnJsonOptions } from "./client.js";
 import {
   BCN_GEO_RADIUS_DEFAULT_METERS,
   type BcnQueryResourceGeoInput,
   type BcnQueryResourceGeoResult,
+  inferBcnCoordinateFields,
   normalizeBcnGeoText,
   queryBcnResourceGeo,
 } from "./geo.js";
@@ -53,11 +55,14 @@ export interface BcnCityQueryInput {
   filters?: Record<string, unknown>;
   group_by?: string;
   limit?: number;
+  offset?: number;
   place_kind?: string;
   place_query?: string;
+  q?: string;
   query: string;
   radius_m?: number;
   resource_id?: string;
+  sort?: string;
   task?: string;
 }
 
@@ -125,7 +130,7 @@ export interface BcnCityPlanQueryResult {
 export interface BcnCityExecuteQueryData {
   execution_status: BcnCityQueryExecutionStatus;
   final_arguments?: Record<string, JsonValue>;
-  final_result?: Record<string, JsonValue>;
+  final_result?: Record<string, JsonValue> | null;
   final_tool?: BcnCityFinalTool;
   plan: BcnCityPlanData;
 }
@@ -140,11 +145,14 @@ interface NormalizedCityQueryInput {
   filters?: Record<string, JsonValue>;
   group_by?: string;
   limit: number;
+  offset?: number;
   place_kind?: BcnResourceRecommendationPlaceKind;
   place_query?: string;
+  q?: string;
   query: string;
   radius_m?: number;
   resource_id?: string;
+  sort?: string;
   task?: BcnResourceRecommendationTask;
 }
 
@@ -152,6 +160,7 @@ interface ResolvedPlanResource {
   recommendation?: BcnResourceRecommendation;
   recommendations?: BcnResourceRecommendation[];
   resourceOverride?: BcnCityResourceOverride;
+  resourceOverrideFields?: string[];
 }
 
 export async function planBcnCityQuery(
@@ -183,6 +192,24 @@ export async function planBcnCityQuery(
   }
 
   addResourceStep(steps, normalized, intent, resource);
+
+  if (isGeoIntent(intent) && !isGeoCapablePlanResource(resource)) {
+    return {
+      data: {
+        citation: createCitationGuidance(resource),
+        intent: {
+          ...intent,
+          caveats: [...intent.caveats, ...getUnsupportedFinalQueryCaveats(resource)],
+        },
+        ...(resource.recommendation ? { recommendation: resource.recommendation } : {}),
+        ...(resource.recommendations ? { recommendations: resource.recommendations } : {}),
+        ...(resource.resourceOverride ? { resource_override: resource.resourceOverride } : {}),
+        status: "unsupported",
+        steps,
+      },
+      provenance: createBcnOperationProvenance("city_query_plan"),
+    };
+  }
 
   const placeResolution = await maybeResolvePlanPlace(normalized, intent, config, options);
   if (placeResolution) {
@@ -237,6 +264,7 @@ export async function planBcnCityQuery(
           ...intent,
           caveats: [
             ...intent.caveats,
+            ...getUnsupportedFinalQueryCaveats(resource),
             "The planner could not derive safe final arguments for this city question.",
           ],
         },
@@ -259,13 +287,14 @@ export async function planBcnCityQuery(
     reason: final.reason,
     status: "planned",
   });
+  const finalIntent = appendIntentCaveats(intent, final.caveats);
 
   return {
     data: {
       citation: createCitationGuidance(resource),
       final_arguments: final.arguments,
       final_tool: final.tool,
-      intent,
+      intent: finalIntent,
       ...(placeResolution ? { place_resolution: placeResolution } : {}),
       ...(resource.recommendation ? { recommendation: resource.recommendation } : {}),
       ...(resource.recommendations ? { recommendations: resource.recommendations } : {}),
@@ -301,12 +330,16 @@ export async function executeBcnCityQuery(
     config,
     options,
   );
+  const safeFinalResult = toJsonSafeValue(finalResult);
 
   return {
     data: {
       execution_status: "completed",
       final_arguments: plan.data.final_arguments,
-      final_result: (toJsonSafeValue(finalResult) ?? null) as Record<string, JsonValue>,
+      final_result:
+        safeFinalResult && typeof safeFinalResult === "object" && !Array.isArray(safeFinalResult)
+          ? safeFinalResult
+          : null,
       final_tool: plan.data.final_tool,
       plan: plan.data,
     },
@@ -336,7 +369,10 @@ function normalizeCityQueryInput(
     ...(input.fields && input.fields.length > 0 ? { fields: normalizeFields(input.fields) } : {}),
     ...(input.filters === undefined ? {} : { filters: normalizeJsonRecord(input.filters) }),
     ...(input.group_by?.trim() ? { group_by: input.group_by.trim() } : {}),
+    ...(input.offset === undefined ? {} : { offset: normalizeOffset(input.offset) }),
     ...(input.radius_m === undefined ? {} : { radius_m: normalizeRadius(input.radius_m) }),
+    ...(input.q?.trim() ? { q: input.q.trim() } : {}),
+    ...(input.sort?.trim() ? { sort: input.sort.trim() } : {}),
     limit: normalizeLimit(input.limit, config.maxResults, BCN_CITY_RESULT_LIMIT_DEFAULT),
   };
 }
@@ -374,7 +410,12 @@ async function resolvePlanResource(
 ): Promise<ResolvedPlanResource> {
   if (input.resource_id) {
     const info = await getBcnResourceInfo({ resource_id: input.resource_id }, config, options);
-    return { resourceOverride: toResourceOverride(info.data) };
+    return {
+      resourceOverride: toResourceOverride(info.data),
+      ...(info.data.fields
+        ? { resourceOverrideFields: info.data.fields.map((field) => field.id) }
+        : {}),
+    };
   }
 
   const recommendationResult = recommendBcnResources(
@@ -386,10 +427,11 @@ async function resolvePlanResource(
     },
     config,
   );
-  const recommendations = recommendationResult.data.recommendations.filter(
-    (candidate) => candidate.matched_terms.length > 0 || candidate.confidence >= 0.5,
+  const matchingRecommendations = recommendationResult.data.recommendations.filter(
+    (candidate) => candidate.matched_terms.length > 0 || candidate.confidence >= 0.8,
   );
-  const recommendation = recommendations.find((candidate) => !candidate.area_source);
+  const recommendations = matchingRecommendations.filter((candidate) => !candidate.area_source);
+  const recommendation = recommendations[0];
 
   return {
     recommendation,
@@ -432,7 +474,14 @@ function buildFinalQuery(
   intent: BcnCityQueryIntent,
   resource: ResolvedPlanResource,
   place?: BcnResolvedPlaceCandidate,
-): { arguments: Record<string, JsonValue>; reason: string; tool: BcnCityFinalTool } | undefined {
+):
+  | {
+      arguments: Record<string, JsonValue>;
+      caveats?: string[];
+      reason: string;
+      tool: BcnCityFinalTool;
+    }
+  | undefined {
   const resourceId = resource.recommendation?.resource_id ?? resource.resourceOverride?.resource_id;
 
   if (!resourceId) {
@@ -465,6 +514,10 @@ function buildFinalQuery(
     };
   }
 
+  if (!isGeoCapablePlanResource(resource)) {
+    return undefined;
+  }
+
   const geoArguments = buildGeoArguments(resourceId, input, intent, resource.recommendation, place);
 
   if (!geoArguments) {
@@ -472,7 +525,8 @@ function buildFinalQuery(
   }
 
   return {
-    arguments: geoArguments,
+    arguments: geoArguments.arguments,
+    ...(geoArguments.caveats ? { caveats: geoArguments.caveats } : {}),
     reason: "The final step runs one bounded geospatial query with structured arguments.",
     tool: "bcn_query_resource_geo",
   };
@@ -499,6 +553,9 @@ async function executeFinalTool(
         fields: getStringArrayArg(args.fields),
         filters: getRecordArg(args.filters),
         limit: getNumberArg(args.limit),
+        offset: getNumberArg(args.offset),
+        q: getStringArg(args.q),
+        sort: getStringArg(args.sort),
       },
       config,
       options,
@@ -514,7 +571,7 @@ function buildGeoArguments(
   intent: BcnCityQueryIntent,
   recommendation: BcnResourceRecommendation | undefined,
   place: BcnResolvedPlaceCandidate | undefined,
-): Record<string, JsonValue> | undefined {
+): { arguments: Record<string, JsonValue>; caveats?: string[] } | undefined {
   const fields = input.fields ?? recommendation?.suggested_fields?.slice(0, 6);
   const groupBy = input.group_by ?? getDefaultGroupBy(input, intent, recommendation);
   const base = {
@@ -523,6 +580,7 @@ function buildGeoArguments(
     ...(input.filters ? { filters: input.filters } : {}),
     ...(groupBy ? { group_by: groupBy } : {}),
     limit: input.limit,
+    ...(input.offset === undefined ? {} : { offset: input.offset }),
   } satisfies Record<string, JsonValue>;
 
   if (intent.spatial_mode === "contains") {
@@ -533,9 +591,11 @@ function buildGeoArguments(
     }
 
     return {
-      ...base,
-      contains: {
-        [field]: intent.place_query,
+      arguments: {
+        ...base,
+        contains: {
+          [field]: intent.place_query,
+        },
       },
     };
   }
@@ -546,11 +606,13 @@ function buildGeoArguments(
     }
 
     return {
-      ...base,
-      near: {
-        lat: place.lat,
-        lon: place.lon,
-        radius_m: input.radius_m ?? BCN_GEO_RADIUS_DEFAULT_METERS,
+      arguments: {
+        ...base,
+        near: {
+          lat: place.lat,
+          lon: place.lon,
+          radius_m: input.radius_m ?? BCN_GEO_RADIUS_DEFAULT_METERS,
+        },
       },
     };
   }
@@ -562,11 +624,13 @@ function buildGeoArguments(
 
     if (place.area_ref) {
       return {
-        ...base,
-        within_place: {
-          source_resource_id: place.area_ref.source_resource_id,
-          row_id: place.area_ref.row_id,
-          geometry_field: place.area_ref.geometry_field,
+        arguments: {
+          ...base,
+          within_place: {
+            source_resource_id: place.area_ref.source_resource_id,
+            row_id: place.area_ref.row_id,
+            geometry_field: place.area_ref.geometry_field,
+          },
         },
       };
     }
@@ -575,13 +639,18 @@ function buildGeoArguments(
       const bbox = place.bbox;
 
       return {
-        ...base,
-        bbox: {
-          max_lat: bbox.max_lat,
-          max_lon: bbox.max_lon,
-          min_lat: bbox.min_lat,
-          min_lon: bbox.min_lon,
+        arguments: {
+          ...base,
+          bbox: {
+            max_lat: bbox.max_lat,
+            max_lon: bbox.max_lon,
+            min_lat: bbox.min_lat,
+            min_lon: bbox.min_lon,
+          },
         },
+        caveats: [
+          "Area candidate did not expose an area_ref; using its bbox as an approximate rectangular fallback.",
+        ],
       };
     }
   }
@@ -598,6 +667,9 @@ function buildQueryArguments(
     ...(input.fields ? { fields: input.fields } : {}),
     ...(input.filters ? { filters: input.filters } : {}),
     limit: input.limit,
+    ...(input.offset === undefined ? {} : { offset: input.offset }),
+    ...(input.q ? { q: input.q } : {}),
+    ...(input.sort ? { sort: input.sort } : {}),
   };
 }
 
@@ -609,27 +681,86 @@ function inferSpatialMode(
     return "preview";
   }
 
-  if (/\b(near|around|close to|prop de|a prop de|cerca de)\b/u.test(normalizedQuery)) {
+  if (input.task === "near") {
     return "near";
   }
 
-  if (
-    /\b(in|inside|within|district|districts|neighborhood|neighbourhood|barri|barris|districte|districtes|barrio|barrios|distrito|distritos)\b/u.test(
-      normalizedQuery,
-    )
-  ) {
+  if (input.task === "within") {
     return "within";
-  }
-
-  if (/\b(on|street|carrer|calle)\b/u.test(normalizedQuery)) {
-    return "contains";
   }
 
   if (input.task === "query") {
     return "query";
   }
 
+  if (input.place_kind === "point") {
+    return "near";
+  }
+
+  if (input.place_query) {
+    if (input.place_kind === "street") {
+      return "contains";
+    }
+
+    if (input.place_kind === "district" || input.place_kind === "neighborhood") {
+      return "within";
+    }
+
+    return "near";
+  }
+
+  if (/\b(near|around|close to|prop de|a prop de|cerca de)\b/u.test(normalizedQuery)) {
+    return "near";
+  }
+
+  if (
+    /\b(inside|within|district|districts|neighborhood|neighbourhood|barri|barris|districte|districtes|barrio|barrios|distrito|distritos)\b/u.test(
+      normalizedQuery,
+    ) ||
+    hasPlaceLikeWithinPhrase(normalizedQuery)
+  ) {
+    return "within";
+  }
+
+  if (
+    /\b(street|carrer|calle)\b/u.test(normalizedQuery) ||
+    hasStreetLikeOnPhrase(normalizedQuery)
+  ) {
+    return "contains";
+  }
+
   return "query";
+}
+
+function hasPlaceLikeWithinPhrase(normalizedQuery: string): boolean {
+  const match = /\b(?:in|en)\s+(.+)$/u.exec(normalizedQuery);
+  const candidate = match?.[1]?.trim();
+
+  if (!candidate || candidate.length < 3 || /\b\d{4}\b/u.test(candidate)) {
+    return false;
+  }
+
+  return (
+    /\b(facilities|facility|equipaments|equipament|trees|tree|arbres|arbrat|parks|park|libraries|library|museums|museum|schools|school)\b/u.test(
+      normalizedQuery,
+    ) ||
+    /\b(gracia|eixample|ciutat vella|sants|montjuic|les corts|sarria|sant gervasi|horta|guinardo|nou barris|sant andreu|sant marti)\b/u.test(
+      candidate,
+    )
+  );
+}
+
+function hasStreetLikeOnPhrase(normalizedQuery: string): boolean {
+  const match = /\bon\s+(.+)$/u.exec(normalizedQuery);
+  const candidate = match?.[1]?.trim();
+
+  if (!candidate || /\b\d{4}\b/u.test(candidate)) {
+    return false;
+  }
+
+  return /\b(tree|trees|arbre|arbres|arbrat|facility|facilities|equipament|equipaments|address|addresses)\b/u.test(
+    normalizedQuery,
+  );
 }
 
 function inferTask(
@@ -693,9 +824,12 @@ function inferPlaceQuery(query: string, spatialMode: BcnCitySpatialMode): string
     spatialMode === "near"
       ? [/\b(?:near|around|close to|prop de|a prop de|cerca de)\s+(.+)$/iu]
       : spatialMode === "within"
-        ? [/\b(?:in|inside|within|en)\s+(.+)$/iu]
+        ? [/\b(?:inside|within)\s+(.+)$/iu, /\b(?:in|en)\s+(.+)$/iu]
         : spatialMode === "contains"
-          ? [/\b(?:on|street|carrer|calle)\s+(.+)$/iu]
+          ? [
+              /\bon\s+(?=(?:carrer|calle|street|placa|plaza|avinguda|avenida)\b)(.+)$/iu,
+              /\b(?:street|carrer|calle)\s+(.+)$/iu,
+            ]
           : [];
 
   for (const pattern of patterns) {
@@ -738,6 +872,10 @@ function cleanupPlaceQuery(value: string, spatialMode: BcnCitySpatialMode): stri
 }
 
 function getResolvePlaceKindsArgument(intent: BcnCityQueryIntent): { kinds?: BcnPlaceKind[] } {
+  if (intent.place_kind === "point") {
+    return { kinds: ["landmark", "facility"] };
+  }
+
   if (intent.place_kind === "district") {
     return { kinds: ["district"] };
   }
@@ -774,13 +912,14 @@ function selectPlaceCandidate(
 
   if (!hasExplicitPlaceKind) {
     const [first, second] = data.candidates;
+    const crossKindAmbiguityScoreDelta = 5;
 
     if (
       first &&
       second &&
       first.kind !== second.kind &&
       intent.spatial_mode === "within" &&
-      Math.abs(first.score - second.score) < 5
+      Math.abs(first.score - second.score) < crossKindAmbiguityScoreDelta
     ) {
       return undefined;
     }
@@ -946,6 +1085,63 @@ function getRecordArg(value: JsonValue | undefined): Record<string, unknown> | u
   return value && typeof value === "object" && !Array.isArray(value)
     ? (value as Record<string, unknown>)
     : undefined;
+}
+
+function getStringArg(value: JsonValue | undefined): string | undefined {
+  return typeof value === "string" ? value : undefined;
+}
+
+function isGeoCapablePlanResource(resource: ResolvedPlanResource): boolean {
+  if (resource.recommendation) {
+    return resource.recommendation.geo_capable;
+  }
+
+  if (!resource.resourceOverride?.datastore_active || !resource.resourceOverrideFields) {
+    return true;
+  }
+
+  try {
+    inferBcnCoordinateFields(resource.resourceOverrideFields);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function isGeoIntent(intent: BcnCityQueryIntent): boolean {
+  return (
+    intent.spatial_mode === "contains" ||
+    intent.spatial_mode === "near" ||
+    intent.spatial_mode === "within"
+  );
+}
+
+function getUnsupportedFinalQueryCaveats(resource: ResolvedPlanResource): string[] {
+  if (
+    resource.resourceOverride?.datastore_active &&
+    resource.resourceOverrideFields &&
+    !isGeoCapablePlanResource(resource)
+  ) {
+    return [
+      "The caller-provided DataStore resource does not expose an inferable WGS84 latitude/longitude field pair for geo querying.",
+    ];
+  }
+
+  return [];
+}
+
+function appendIntentCaveats(
+  intent: BcnCityQueryIntent,
+  caveats: string[] | undefined,
+): BcnCityQueryIntent {
+  if (!caveats || caveats.length === 0) {
+    return intent;
+  }
+
+  return {
+    ...intent,
+    caveats: [...intent.caveats, ...caveats],
+  };
 }
 
 function getIntentConfidence(
