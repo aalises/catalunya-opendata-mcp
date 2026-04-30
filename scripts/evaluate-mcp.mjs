@@ -307,7 +307,7 @@ async function runCanaryProfile(client) {
       passIf(
         data.recommendations?.[0]?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
           data.recommendations?.[0]?.suggested_tool === "bcn_query_resource_geo" &&
-          data.recommendations?.[0]?.example_arguments?.contains?.adreca === "<street name>",
+          data.recommendations?.[0]?.example_arguments?.contains?.espai_verd === "<street name>",
         "BCN recommender suggests street-tree geo grouping for tree species street questions",
       ),
   });
@@ -614,10 +614,10 @@ async function runStressProfile(client) {
     args: {
       resource_id: "23124fd5-521f-40f8-85b8-efb1e71c2ec8",
       contains: {
-        adreca: "Carrer Consell de Cent",
+        espai_verd: "Carrer Consell de Cent",
       },
       group_by: "cat_nom_catala",
-      fields: ["adreca", "cat_nom_catala"],
+      fields: ["espai_verd", "adreca", "cat_nom_catala"],
       limit: 5,
     },
     expect: ({ data }) =>
@@ -768,7 +768,7 @@ async function runStressProfile(client) {
       passIf(
         data.status === "ready" &&
           data.final_tool === "bcn_query_resource_geo" &&
-          data.final_arguments?.contains?.adreca === "Carrer Consell de Cent" &&
+          data.final_arguments?.contains?.espai_verd === "Carrer Consell de Cent" &&
           data.final_arguments?.group_by === "cat_nom_catala",
         "BCN city planner produces a street-tree species grouping plan",
       ),
@@ -816,7 +816,7 @@ async function runStressProfile(client) {
           data.answer_markdown.includes("| cat\\_nom\\_catala | Count |") &&
           data.final_result?.data?.groups?.length > 0 &&
           data.selected_resource?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
-          data.execution_notes?.some((note) => note.includes("bounded BCN-hosted download scan")) &&
+          data.execution_notes?.some((note) => note.includes("BCN-hosted download scan")) &&
           data.citation?.resources?.some((resource) =>
             resource.includes("23124fd5-521f-40f8-85b8-efb1e71c2ec8"),
           ),
@@ -1084,7 +1084,7 @@ async function runStressProfile(client) {
 
   await evaluateTool({
     client,
-    id: "bcn.geo.arbrat_bbox_scan_cap",
+    id: "bcn.geo.arbrat_bbox_full_scan",
     connector: "bcn",
     category: "geo",
     tool: "bcn_query_resource_geo",
@@ -1102,9 +1102,10 @@ async function runStressProfile(client) {
     expect: ({ data }) =>
       passIf(
         data.strategy === "download_stream" &&
+          data.scanned_row_count > 100_000 &&
           data.truncated === true &&
-          data.truncation_reason === "scan_cap",
-        "BCN broad geo scan reports the configured scan cap",
+          data.truncation_reason === "row_cap",
+        "BCN broad geo scan reaches the full CSV when no scan cap is configured",
       ),
   });
 
@@ -1939,18 +1940,28 @@ async function evaluateTool(caseDef) {
   const structuredContent = result?.structuredContent;
   const data = isRecord(structuredContent) ? structuredContent.data : undefined;
   const error = isRecord(structuredContent) ? structuredContent.error : undefined;
-  const expectation = normalizeExpectation(
-    caseDef.expect({
-      args,
-      data,
-      error,
-      prompt,
-      resource,
-      result,
-      structuredContent,
-      thrown,
-    }),
-  );
+  let expectation;
+  try {
+    expectation = normalizeExpectation(
+      caseDef.expect({
+        args,
+        data,
+        error,
+        prompt,
+        resource,
+        result,
+        structuredContent,
+        thrown,
+      }),
+    );
+  } catch (expectationError) {
+    expectation = assertAll("expectation threw before returning a result", [
+      assertThat("expectation did not throw", false, {
+        actual: formatCaughtError(expectationError),
+        expected: "no thrown expectation error",
+      }),
+    ]);
+  }
   const passed = expectation.score === 1;
   const entry = {
     sequence,
@@ -2266,6 +2277,10 @@ function sortJsonValue(value) {
 
 function cloneJson(value) {
   return value === undefined ? undefined : JSON.parse(JSON.stringify(value));
+}
+
+function formatCaughtError(error) {
+  return serializeRecordedError(error);
 }
 
 function serializeRecordedError(error) {
