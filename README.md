@@ -554,6 +554,8 @@ Before publishing a package, run `npm pack --dry-run`, confirm the tarball inclu
 
 For adapter changes that may need fresh live evidence, optionally run `npm run canary:socrata`, `npm run canary:idescat`, `npm run canary:bcn-registry`, `npm run eval:stress`, and, when accepting upstream drift or intentional adapter changes, `npm run eval:record:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
 
+Operational release and upstream-incident guidance lives in [`docs/operations.md`](./docs/operations.md). Install-from-tarball smoke guidance lives in [`docs/install-smoke.md`](./docs/install-smoke.md).
+
 ## Project Notes
 
 The current implementation is intentionally small: one transport and three source adapters (Socrata catalog/query, IDESCAT Tables v2 browse/metadata/data, and Open Data BCN catalog/query/place/geo workflows). The IDESCAT search index ships as committed generated source; refresh it manually with `npm run refresh:idescat` when the upstream catalog changes. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
