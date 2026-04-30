@@ -113,6 +113,19 @@ Cassettes are captured at the MCP protocol boundary. They store the method (`cal
 
 Use replay when you want to know whether local code still satisfies the known-good MCP contract. Use live or record mode when you want to know whether the current upstream services still satisfy that contract.
 
+## Latest Live Release Evidence
+
+Last checked: 2026-04-30.
+
+| Command | Result |
+| --- | --- |
+| `npm run canary:socrata` | Passed. Search -> describe -> query flow returned `j8h8-vxug`; invalid-field recovery returned a structured non-retryable 400. |
+| `npm run canary:idescat` | Passed. Search -> geos -> metadata -> data flow returned the PMH population table; long municipality filters used GET and truncated by row cap as expected. |
+| `npm run canary:bcn-registry` | Passed. Checked 7 curated BCN resources with no failures; package IDs and DataStore activity matched the live registry. |
+| `npm run eval:stress -- --quiet` | Passed 152/152 live cases: MCP 1/1, Socrata 53/53, Open Data BCN 27/27, IDESCAT 71/71. |
+
+No cassette refresh was needed for this pass.
+
 ## Report Shape
 
 Each report contains:
