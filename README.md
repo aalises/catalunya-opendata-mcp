@@ -525,16 +525,16 @@ npm run eval:record:canary
 npm run eval:record:stress
 ```
 
-The stress profile currently runs 144 live cases:
+The stress profile currently runs 148 live cases:
 
 | Connector | Cases |
 | --- | ---: |
 | MCP surface | 1 |
 | Socrata | 53 |
-| Open Data BCN | 19 |
+| Open Data BCN | 23 |
 | IDESCAT | 71 |
 
-The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
+The cases cover discovery, metadata, bounded data queries, safe BCN CSV preview, BCN resource recommendations, BCN place resolution for landmarks, streets, neighborhoods, and districts, BCN city-query planning/execution, BCN area-aware geospatial queries, prompts, metadata resources, pagination, invalid inputs, upstream errors, local cap behavior, low-response-cap degradation, and the IDESCAT long-filter regression. In particular, the IDESCAT regression verifies long multi-value filters stay in a canonical GET URL, return `request_method: "GET"`, omit request body params, and preserve the expected selected cell count.
 
 Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/mcp-eval-stress-<timestamp>.json`. The report includes each case id, inputs, binary score, failure reason, sub-assertions with expected and actual values, duration, compact result summary, connector totals, and expected-count checks. A run fails if any case fails or if the expected MCP/Socrata/IDESCAT case counts drift.
 
@@ -544,11 +544,11 @@ Live evals are intentionally separate from `npm run check` because they call Gen
 
 Before opening or merging routine changes, run `npm run check`. This stays local and does not include live upstream canaries.
 
-For release readiness or adapter changes, optionally run `npm run canary:socrata`, `npm run canary:idescat`, and `npm run eval:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md).
+For release readiness or adapter changes, optionally run `npm run canary:socrata`, `npm run canary:idescat`, and `npm run eval:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
 
 ## Project Notes
 
-The current implementation is intentionally small: one transport and two source adapters (Socrata catalog/query and IDESCAT Tables v2 browse/metadata/data). The IDESCAT search index ships as committed generated source; refresh it manually with `npm run refresh:idescat` when the upstream catalog changes. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
+The current implementation is intentionally small: one transport and three source adapters (Socrata catalog/query, IDESCAT Tables v2 browse/metadata/data, and Open Data BCN catalog/query/place/geo workflows). The IDESCAT search index ships as committed generated source; refresh it manually with `npm run refresh:idescat` when the upstream catalog changes. Broader architecture notes live in [`specs.md`](./specs.md), but the README documents what the repository does today.
 
 ## License
 
