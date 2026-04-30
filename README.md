@@ -550,6 +550,8 @@ Before opening or merging routine changes, run `npm run check`. This stays local
 
 For release readiness, run `npm run release:check`. This includes `npm run check` plus `npm run eval:replay:stress`, so it covers typecheck, lint, unit tests, smoke output, package size budget, and the committed protocol-level stress cassette.
 
+Before publishing a package, run `npm pack --dry-run`, confirm the tarball includes only `dist/`, `README.md`, `LICENSE`, and `package.json`, and confirm `dist/index.js` is executable with `test -x dist/index.js`. The package budget remains enforced by `npm run package:size`; current limits are 512 KiB packed, 8 MiB unpacked, 5 MiB source IDESCAT index, and 7 MiB built IDESCAT index.
+
 For adapter changes that may need fresh live evidence, optionally run `npm run canary:socrata`, `npm run canary:idescat`, `npm run canary:bcn-registry`, `npm run eval:stress`, and, when accepting upstream drift or intentional adapter changes, `npm run eval:record:stress`. These commands exercise the public MCP surface against live Generalitat/IDESCAT/Open Data BCN services, so they are intentionally manual and may fail when an upstream service is unavailable. The evaluation harness writes a JSON report with binary case scores and connector-level summaries; see [`docs/evaluations.md`](./docs/evaluations.md). User-facing release notes live in [`docs/release-notes.md`](./docs/release-notes.md).
 
 ## Project Notes
