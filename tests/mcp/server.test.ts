@@ -488,6 +488,7 @@ describe("createMcpServer", () => {
       expect(result.structuredContent).toMatchObject({
         data: {
           answer_type: "grouped_counts",
+          answer_markdown: expect.stringContaining("| Plataner | 1 |"),
           answer_text: expect.stringContaining("Plataner (1)"),
           execution_notes: expect.arrayContaining([
             "Final query used a bounded BCN-hosted download scan; configured byte and row caps apply.",

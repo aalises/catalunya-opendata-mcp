@@ -663,6 +663,8 @@ describe("BCN city answer composer", () => {
     });
     expect(result.data.answer_text).toContain("Plataner (2)");
     expect(result.data.answer_text).toContain("Lledoner (1)");
+    expect(result.data.answer_markdown).toContain("| cat\\_nom\\_catala | Count |");
+    expect(result.data.answer_markdown).toContain("| Plataner | 2 |");
     expect(result.data.final_result?.data).toMatchObject({
       matched_row_count: 3,
     });
@@ -739,6 +741,8 @@ describe("BCN city answer composer", () => {
     });
     expect(result.data.answer_text).toContain("Library (7 m)");
     expect(result.data.answer_text).toContain("Museum (37 m)");
+    expect(result.data.answer_markdown).toContain("| Result | Distance (m) |");
+    expect(result.data.answer_markdown).toContain("| Library | 7 |");
     expect(result.data.caveats).not.toContain(
       "Spatial narrowing used generated CKAN datastore_search_sql pushdown.",
     );
@@ -938,6 +942,7 @@ describe("BCN city answer composer", () => {
       },
     });
     expect(result.data.answer_text).toContain("No rows matched");
+    expect(result.data.answer_markdown).toContain("No rows matched");
     expect(result.data.final_result?.data).toMatchObject({
       groups: [],
       matched_row_count: 0,

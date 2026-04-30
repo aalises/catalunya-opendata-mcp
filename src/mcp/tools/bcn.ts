@@ -207,7 +207,7 @@ export function registerBcnTools(server: McpServer, config: AppConfig, logger: L
       title: "bcn.answer_city_query",
       description: [
         "Execute a safe bounded Open Data BCN city-question plan and compose a deterministic caller-ready answer.",
-        "Returns answer_text, caveats, execution_notes, selected resource metadata, citation guidance, and the raw final_result.",
+        "Returns answer_text, answer_markdown, caveats, execution_notes, selected resource metadata, citation guidance, and the raw final_result.",
       ].join(" "),
       inputSchema: schemas.inputs.cityQuery,
       outputSchema: schemas.outputs.answerCityQuery,
@@ -714,6 +714,7 @@ function createBcnSchemas(config: AppConfig) {
     theme: z.string().optional(),
   });
   const answerCityQueryDataSchema = z.object({
+    answer_markdown: z.string(),
     answer_text: z.string(),
     answer_type: cityAnswerTypeSchema,
     summary: z.record(jsonValueSchema),

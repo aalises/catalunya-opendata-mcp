@@ -811,7 +811,9 @@ async function runStressProfile(client) {
         data.execution_status === "completed" &&
           data.answer_type === "grouped_counts" &&
           typeof data.answer_text === "string" &&
+          typeof data.answer_markdown === "string" &&
           data.answer_text.includes("cat_nom_catala") &&
+          data.answer_markdown.includes("| cat\\_nom\\_catala | Count |") &&
           data.final_result?.data?.groups?.length > 0 &&
           data.selected_resource?.resource_id === "23124fd5-521f-40f8-85b8-efb1e71c2ec8" &&
           data.execution_notes?.some((note) => note.includes("bounded BCN-hosted download scan")) &&

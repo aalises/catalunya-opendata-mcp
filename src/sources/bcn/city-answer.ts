@@ -31,6 +31,7 @@ export interface BcnCityAnswerSelectedResource {
 }
 
 export interface BcnCityAnswerData {
+  answer_markdown: string;
   answer_text: string;
   answer_type: BcnCityAnswerType;
   caveats: string[];
@@ -87,14 +88,16 @@ function composeCityAnswer(
   finalResult: Record<string, JsonValue> | null,
 ): Pick<
   BcnCityAnswerData,
-  "answer_text" | "answer_type" | "caveats" | "execution_notes" | "summary"
+  "answer_markdown" | "answer_text" | "answer_type" | "caveats" | "execution_notes" | "summary"
 > {
   const finalData = getFinalData(finalResult);
   const notes = collectAnswerNotes(execution, finalData);
 
   if (execution.execution_status === "blocked" || !finalData) {
+    const answerText = buildBlockedAnswer(execution.plan);
     return {
-      answer_text: buildBlockedAnswer(execution.plan),
+      answer_markdown: buildBlockedMarkdown(execution.plan, answerText),
+      answer_text: answerText,
       answer_type: "blocked",
       caveats: notes.caveats,
       execution_notes: notes.execution_notes,
@@ -106,8 +109,10 @@ function composeCityAnswer(
   const rows = getRecordArray(finalData.rows);
 
   if (groups.length > 0) {
+    const answerText = buildGroupedAnswer(execution.plan, finalData, groups);
     return {
-      answer_text: buildGroupedAnswer(execution.plan, finalData, groups),
+      answer_markdown: buildGroupedMarkdown(execution.plan, finalData, groups),
+      answer_text: answerText,
       answer_type: "grouped_counts",
       caveats: notes.caveats,
       execution_notes: notes.execution_notes,
@@ -116,8 +121,10 @@ function composeCityAnswer(
   }
 
   if (isEmptyFinalData(finalData)) {
+    const answerText = buildEmptyAnswer(execution.plan);
     return {
-      answer_text: buildEmptyAnswer(execution.plan),
+      answer_markdown: buildEmptyMarkdown(execution.plan, answerText),
+      answer_text: answerText,
       answer_type: "empty_result",
       caveats: notes.caveats,
       execution_notes: notes.execution_notes,
@@ -126,8 +133,10 @@ function composeCityAnswer(
   }
 
   if (isRecord(finalData.near)) {
+    const answerText = buildNearestAnswer(execution.plan, finalData, rows);
     return {
-      answer_text: buildNearestAnswer(execution.plan, finalData, rows),
+      answer_markdown: buildNearestMarkdown(execution.plan, finalData, rows),
+      answer_text: answerText,
       answer_type: "nearest_rows",
       caveats: notes.caveats,
       execution_notes: notes.execution_notes,
@@ -137,9 +146,11 @@ function composeCityAnswer(
 
   const answerType =
     execution.final_tool === "bcn_preview_resource" ? "preview_sample" : "row_sample";
+  const answerText = buildRowSampleAnswer(execution.plan, finalData, rows, answerType);
 
   return {
-    answer_text: buildRowSampleAnswer(execution.plan, finalData, rows, answerType),
+    answer_markdown: buildRowSampleMarkdown(execution.plan, finalData, rows, answerType),
+    answer_text: answerText,
     answer_type: answerType,
     caveats: notes.caveats,
     execution_notes: notes.execution_notes,
@@ -161,6 +172,20 @@ function buildBlockedAnswer(plan: BcnCityPlanData): string {
   return `Cannot answer "${plan.intent.query}" deterministically with the current BCN city-query planner.`;
 }
 
+function buildBlockedMarkdown(plan: BcnCityPlanData, answerText: string): string {
+  return [
+    `**${escapeMarkdown(answerText)}**`,
+    "",
+    `- Status: \`${plan.status}\``,
+    ...(plan.place_resolution
+      ? [
+          `- Place query: ${escapeMarkdown(plan.place_resolution.query)}`,
+          `- Place candidates: ${plan.place_resolution.candidate_count}`,
+        ]
+      : []),
+  ].join("\n");
+}
+
 function buildGroupedAnswer(plan: BcnCityPlanData, data: JsonRecord, groups: JsonRecord[]): string {
   const groupBy = getString(data.group_by) ?? "group";
   const groupText = groups
@@ -177,6 +202,33 @@ function buildGroupedAnswer(plan: BcnCityPlanData, data: JsonRecord, groups: Jso
   ]);
 }
 
+function buildGroupedMarkdown(
+  plan: BcnCityPlanData,
+  data: JsonRecord,
+  groups: JsonRecord[],
+): string {
+  const groupBy = getString(data.group_by) ?? "group";
+  const rows = groups
+    .slice(0, SUMMARY_ROW_LIMIT)
+    .map(
+      (group) =>
+        `| ${escapeMarkdown(formatJsonValue(group.key))} | ${getNumber(group.count) ?? 0} |`,
+    );
+  const details = compactMarkdownBullets([
+    getMatchedText(data),
+    getAreaProvenanceSentence(plan, data),
+  ]);
+
+  return [
+    `**${escapeMarkdown(plan.intent.query)}**`,
+    "",
+    `| ${escapeMarkdown(groupBy)} | Count |`,
+    "| --- | ---: |",
+    ...rows,
+    ...(details.length > 0 ? ["", ...details] : []),
+  ].join("\n");
+}
+
 function buildNearestAnswer(plan: BcnCityPlanData, data: JsonRecord, rows: JsonRecord[]): string {
   const rowText = rows.slice(0, SUMMARY_ROW_LIMIT).map(formatNearestRow).join(", ");
   const near = isRecord(data.near) ? data.near : undefined;
@@ -188,6 +240,29 @@ function buildNearestAnswer(plan: BcnCityPlanData, data: JsonRecord, rows: JsonR
     `Closest results for "${plan.intent.query}" are ${rowText}.`,
     matchedText,
   ]);
+}
+
+function buildNearestMarkdown(plan: BcnCityPlanData, data: JsonRecord, rows: JsonRecord[]): string {
+  const tableRows = rows.slice(0, SUMMARY_ROW_LIMIT).map((row) => {
+    const distance = getRowDistance(row);
+    return `| ${escapeMarkdown(getRowLabel(row))} | ${distance === undefined ? "" : Math.round(distance)} |`;
+  });
+  const near = isRecord(data.near) ? data.near : undefined;
+  const radius = near ? getNumber(near.radius_m) : undefined;
+  const matchedText = getMatchedText(
+    data,
+    radius === undefined ? undefined : `within ${Math.round(radius)} m`,
+  );
+  const details = compactMarkdownBullets([matchedText]);
+
+  return [
+    `**${escapeMarkdown(plan.intent.query)}**`,
+    "",
+    "| Result | Distance (m) |",
+    "| --- | ---: |",
+    ...tableRows,
+    ...(details.length > 0 ? ["", ...details] : []),
+  ].join("\n");
 }
 
 function buildRowSampleAnswer(
@@ -211,8 +286,39 @@ function buildRowSampleAnswer(
   ]);
 }
 
+function buildRowSampleMarkdown(
+  plan: BcnCityPlanData,
+  data: JsonRecord,
+  rows: JsonRecord[],
+  answerType: "preview_sample" | "row_sample",
+): string {
+  const title = answerType === "preview_sample" ? "Preview sample" : "Rows";
+  const labels = rows
+    .slice(0, SUMMARY_ROW_LIMIT)
+    .map((row) => `- ${escapeMarkdown(getRowLabel(row))}`);
+  const details = compactMarkdownBullets([
+    getMatchedText(data),
+    getAreaProvenanceSentence(plan, data),
+  ]);
+
+  return [
+    `**${escapeMarkdown(title)} for ${escapeMarkdown(plan.intent.query)}**`,
+    "",
+    ...labels,
+    ...(details.length > 0 ? ["", ...details] : []),
+  ].join("\n");
+}
+
 function buildEmptyAnswer(plan: BcnCityPlanData): string {
   return `No rows matched "${plan.intent.query}" in the selected Open Data BCN resource.`;
+}
+
+function buildEmptyMarkdown(plan: BcnCityPlanData, answerText: string): string {
+  return [
+    `**${escapeMarkdown(answerText)}**`,
+    "",
+    `- Query: ${escapeMarkdown(plan.intent.query)}`,
+  ].join("\n");
 }
 
 function buildBlockedSummary(plan: BcnCityPlanData): Record<string, JsonValue> {
@@ -558,6 +664,16 @@ function formatCount(count: number, noun: string): string {
 
 function compactSentences(sentences: Array<string | undefined>): string {
   return sentences.filter((sentence): sentence is string => Boolean(sentence)).join(" ");
+}
+
+function compactMarkdownBullets(sentences: Array<string | undefined>): string[] {
+  return sentences
+    .filter((sentence): sentence is string => Boolean(sentence))
+    .map((sentence) => `- ${escapeMarkdown(sentence)}`);
+}
+
+function escapeMarkdown(value: string): string {
+  return value.replace(/([\\`|*_{}[\]()#+\-.!])/gu, "\\$1");
 }
 
 function addRecommendationNotes(
