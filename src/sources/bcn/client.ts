@@ -9,6 +9,8 @@ export const BCN_DATASTORE_BASE_URL = "https://opendata-ajuntament.barcelona.cat
 export const BCN_DOWNLOAD_HOST = "opendata-ajuntament.barcelona.cat";
 export const BCN_ERROR_BODY_MAX_BYTES = 4_096;
 export const BCN_ERROR_BODY_MAX_CHARS = 2_000;
+export const BCN_HTTP_RETRY_ATTEMPTS = 3;
+export const BCN_HTTP_RETRY_BASE_DELAY_MS = 250;
 export const BCN_SUCCESS_BODY_MAX_BYTES = 1_048_576;
 export const BCN_USER_AGENT = `catalunya-opendata-mcp/${packageVersion}`;
 
@@ -84,55 +86,70 @@ export async function fetchBcnJson(
   options: FetchBcnJsonOptions = {},
 ): Promise<unknown> {
   const logger = options.logger ?? createLogger(config).child({ source: "bcn" });
-  const startedAt = performance.now();
-  let response: Response;
 
-  try {
-    response = await fetchBcnUrl(request, config, options);
-  } catch (error) {
-    logBcnFetchFailure(logger, request.url, startedAt, error);
-    throw error;
-  }
+  for (let attempt = 1; attempt <= BCN_HTTP_RETRY_ATTEMPTS; attempt += 1) {
+    const startedAt = performance.now();
+    let response: Response;
 
-  if (!response.ok) {
-    const error = await createHttpError(response);
-    logger.warn("upstream_request", {
-      url: request.url.toString(),
-      status: response.status,
-      durationMs: getDurationMs(startedAt),
-      code: error.code,
-      retryable: error.retryable,
+    try {
+      response = await fetchBcnUrl(request, config, options);
+    } catch (error) {
+      logBcnFetchFailure(logger, request.url, startedAt, error);
+      throw error;
+    }
+
+    if (!response.ok) {
+      const error = await createHttpError(response);
+      logger.warn("upstream_request", {
+        url: request.url.toString(),
+        status: response.status,
+        durationMs: getDurationMs(startedAt),
+        code: error.code,
+        retryable: error.retryable,
+        attempt,
+      });
+
+      if (shouldRetryBcnHttpError(error, attempt)) {
+        await sleep(getBcnRetryDelayMs(attempt));
+        continue;
+      }
+
+      throw error;
+    }
+
+    const bodyText = await readBodyText(
+      response,
+      options.successBodyMaxBytes ?? getBcnSuccessBodyMaxBytes(config),
+      "throw",
+    ).catch((error: unknown) => {
+      logBcnFetchFailure(logger, request.url, startedAt, error);
+      throw error;
     });
-    throw error;
+
+    try {
+      const parsed = JSON.parse(bodyText);
+
+      logger.debug("upstream_request", {
+        url: request.url.toString(),
+        status: response.status,
+        durationMs: getDurationMs(startedAt),
+        retryable: false,
+        attempt,
+      });
+
+      return parsed;
+    } catch (error) {
+      const bcnError = new BcnError("invalid_response", "Open Data BCN returned invalid JSON.", {
+        cause: error,
+      });
+      logBcnFetchFailure(logger, request.url, startedAt, bcnError);
+      throw bcnError;
+    }
   }
 
-  const bodyText = await readBodyText(
-    response,
-    options.successBodyMaxBytes ?? getBcnSuccessBodyMaxBytes(config),
-    "throw",
-  ).catch((error: unknown) => {
-    logBcnFetchFailure(logger, request.url, startedAt, error);
-    throw error;
+  throw new BcnError("http_error", "Open Data BCN request failed after retry attempts.", {
+    retryable: true,
   });
-
-  try {
-    const parsed = JSON.parse(bodyText);
-
-    logger.debug("upstream_request", {
-      url: request.url.toString(),
-      status: response.status,
-      durationMs: getDurationMs(startedAt),
-      retryable: false,
-    });
-
-    return parsed;
-  } catch (error) {
-    const bcnError = new BcnError("invalid_response", "Open Data BCN returned invalid JSON.", {
-      cause: error,
-    });
-    logBcnFetchFailure(logger, request.url, startedAt, bcnError);
-    throw bcnError;
-  }
 }
 
 function buildBcnApiUrl(baseUrl: string, action: string, params: Record<string, string> = {}): URL {
@@ -194,6 +211,18 @@ async function createHttpError(response: Response): Promise<BcnError> {
       status: response.status,
     },
   );
+}
+
+function shouldRetryBcnHttpError(error: BcnError, attempt: number): boolean {
+  return error.retryable && attempt < BCN_HTTP_RETRY_ATTEMPTS;
+}
+
+function getBcnRetryDelayMs(attempt: number): number {
+  return BCN_HTTP_RETRY_BASE_DELAY_MS * attempt;
+}
+
+async function sleep(ms: number): Promise<void> {
+  await new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 interface ErrorBodyDetails {

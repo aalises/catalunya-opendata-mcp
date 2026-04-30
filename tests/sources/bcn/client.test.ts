@@ -112,6 +112,25 @@ describe("Open Data BCN client", () => {
     });
   });
 
+  it("retries retryable HTTP responses before returning JSON", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(
+        new Response("temporary", {
+          status: 503,
+          statusText: "Service Temporarily Unavailable",
+        }),
+      )
+      .mockResolvedValueOnce(jsonResponse({ ok: true }));
+
+    await expect(
+      fetchBcnJson({ url: buildBcnActionUrl("package_search") }, baseConfig),
+    ).resolves.toEqual({
+      ok: true,
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
   it("maps network and timeout failures to retryable errors", async () => {
     vi.spyOn(globalThis, "fetch").mockRejectedValueOnce(new Error("socket closed"));
 
