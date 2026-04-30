@@ -1,6 +1,14 @@
 import { vi } from "vitest";
 
 import type { AppConfig } from "../../../src/config.js";
+import {
+  BCN_PLACE_REGISTRY,
+  type BcnPlaceRegistryResource,
+} from "../../../src/sources/bcn/place.js";
+
+export const BCN_PLACE_REGISTRY_SNAPSHOT: readonly BcnPlaceRegistryResource[] = [
+  ...BCN_PLACE_REGISTRY,
+];
 
 export const baseConfig: AppConfig = {
   nodeEnv: "test",
@@ -71,4 +79,28 @@ export function bcnPackage(overrides: Record<string, unknown> = {}) {
     tags: [{ display_name: "Trees" }],
     ...overrides,
   };
+}
+
+export function setBcnPlaceRegistry(resources: BcnPlaceRegistryResource[]): void {
+  BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...resources);
+}
+
+export function resetBcnPlaceRegistry(): void {
+  BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...BCN_PLACE_REGISTRY_SNAPSHOT);
+}
+
+export function mustFindBcnPlaceRegistryResource(resourceId: string): BcnPlaceRegistryResource {
+  const resource = BCN_PLACE_REGISTRY_SNAPSHOT.find(
+    (candidate) => candidate.resourceId === resourceId,
+  );
+
+  if (resource === undefined) {
+    throw new Error(`Missing BCN place registry resource ${resourceId}.`);
+  }
+
+  return resource;
+}
+
+export function smallPolygon(): string {
+  return "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))";
 }

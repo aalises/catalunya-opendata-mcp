@@ -5,8 +5,13 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { AppConfig } from "../../src/config.js";
 import { createMcpServer, createPingMessage, serverName } from "../../src/mcp/server.js";
 import { packageVersion } from "../../src/package-info.js";
-import { BCN_PLACE_REGISTRY } from "../../src/sources/bcn/place.js";
 import { IDESCAT_LOGICAL_URL_MAX_BYTES } from "../../src/sources/idescat/request.js";
+import {
+  mustFindBcnPlaceRegistryResource,
+  resetBcnPlaceRegistry,
+  setBcnPlaceRegistry,
+  smallPolygon,
+} from "../sources/bcn/helpers.js";
 
 const testConfig: AppConfig = {
   nodeEnv: "test",
@@ -21,8 +26,6 @@ const testConfig: AppConfig = {
   bcnGeoScanBytes: 67_108_864,
   socrataAppToken: undefined,
 };
-const ORIGINAL_BCN_PLACE_REGISTRY = [...BCN_PLACE_REGISTRY];
-
 describe("createPingMessage", () => {
   it("returns the default health message", () => {
     expect(createPingMessage()).toBe(`Hola. ${serverName} is running.`);
@@ -35,7 +38,7 @@ describe("createPingMessage", () => {
 
 describe("createMcpServer", () => {
   afterEach(() => {
-    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...ORIGINAL_BCN_PLACE_REGISTRY);
+    resetBcnPlaceRegistry();
     vi.restoreAllMocks();
   });
 
@@ -223,15 +226,11 @@ describe("createMcpServer", () => {
   });
 
   it("returns structured BCN place resolver output with JSON text fallback", async () => {
-    const facilityPlaceResource = ORIGINAL_BCN_PLACE_REGISTRY.find(
-      (resource) => resource.resourceId === "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
+    const facilityPlaceResource = mustFindBcnPlaceRegistryResource(
+      "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
     );
 
-    if (!facilityPlaceResource) {
-      throw new Error("Expected BCN facility place registry resource to exist.");
-    }
-
-    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, facilityPlaceResource);
+    setBcnPlaceRegistry([facilityPlaceResource]);
     vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
       bcnCkanSuccess({
         fields: [
@@ -521,15 +520,11 @@ describe("createMcpServer", () => {
   });
 
   it("surfaces BCN city answer bbox fallback caveats through the MCP tool surface", async () => {
-    const districtPlaceResource = ORIGINAL_BCN_PLACE_REGISTRY.find(
-      (resource) => resource.resourceId === "576bc645-9481-4bc4-b8bf-f5972c20df3f",
+    const districtPlaceResource = mustFindBcnPlaceRegistryResource(
+      "576bc645-9481-4bc4-b8bf-f5972c20df3f",
     );
 
-    if (!districtPlaceResource) {
-      throw new Error("Expected BCN district place registry resource to exist.");
-    }
-
-    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, districtPlaceResource);
+    setBcnPlaceRegistry([districtPlaceResource]);
     vi.spyOn(globalThis, "fetch")
       .mockResolvedValueOnce(
         bcnCkanSuccess({
@@ -1928,8 +1923,4 @@ function idescatGuidanceMetadata() {
       },
     },
   };
-}
-
-function smallPolygon(): string {
-  return "POLYGON ((2.10 41.40, 2.20 41.40, 2.20 41.50, 2.10 41.50, 2.10 41.40))";
 }

@@ -551,6 +551,8 @@ Every run writes a machine-readable JSON report under `tmp/`, for example `tmp/m
 
 Live evals are intentionally separate from `npm run check` because they call Generalitat and IDESCAT services. If an upstream service is down or rate-limited, a live eval can fail even when local unit tests and replay evals are healthy. For more detail on the evaluation design, cassette modes, and report format, see [`docs/evaluations.md`](./docs/evaluations.md).
 
+Client-facing golden answer examples for grouped, nearest, blocked, empty, and caveat-bearing BCN answers live in [`docs/golden-answers.md`](./docs/golden-answers.md). The machine-readable answer contract lives in [`docs/contracts/bcn-answer-city-query.schema.json`](./docs/contracts/bcn-answer-city-query.schema.json).
+
 ## Release Checklist
 
 Before opening or merging routine changes, run `npm run check`. This stays local and does not include live upstream canaries.

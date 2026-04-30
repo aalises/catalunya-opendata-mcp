@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aalises/catalunya-opendata-mcp/docs/contracts/bcn-answer-city-query.schema.json",
+  "title": "bcn_answer_city_query client contract",
+  "description": "Stable client-facing response shape for bcn_answer_city_query data payloads. The schema intentionally permits additional fields so the server can add detail without breaking clients.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "answer_markdown",
+    "answer_text",
+    "answer_type",
+    "caveats",
+    "citation",
+    "execution_notes",
+    "execution_status",
+    "final_result",
+    "plan",
+    "summary"
+  ],
+  "properties": {
+    "answer_markdown": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer_type": {
+      "enum": [
+        "blocked",
+        "empty_result",
+        "grouped_counts",
+        "nearest_rows",
+        "preview_sample",
+        "row_sample"
+      ]
+    },
+    "caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "citation": {
+      "$ref": "#/$defs/citation"
+    },
+    "execution_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "execution_status": {
+      "enum": ["blocked", "completed"]
+    },
+    "final_arguments": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "final_result": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": true
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "final_tool": {
+      "enum": ["bcn_preview_resource", "bcn_query_resource", "bcn_query_resource_geo"]
+    },
+    "plan": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "selected_resource": {
+      "$ref": "#/$defs/selected_resource"
+    },
+    "selection_options": {
+      "$ref": "#/$defs/selection_options"
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "answer_type": {
+            "const": "blocked"
+          }
+        },
+        "required": ["answer_type"]
+      },
+      "then": {
+        "properties": {
+          "execution_status": {
+            "const": "blocked"
+          },
+          "final_result": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "answer_type": {
+            "const": "grouped_counts"
+          }
+        },
+        "required": ["answer_type"]
+      },
+      "then": {
+        "properties": {
+          "execution_status": {
+            "const": "completed"
+          },
+          "summary": {
+            "required": ["groups"]
+          },
+          "final_result": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "answer_type": {
+            "const": "nearest_rows"
+          }
+        },
+        "required": ["answer_type"]
+      },
+      "then": {
+        "properties": {
+          "execution_status": {
+            "const": "completed"
+          },
+          "summary": {
+            "required": ["rows", "map_points"]
+          },
+          "final_result": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "answer_type": {
+            "const": "empty_result"
+          }
+        },
+        "required": ["answer_type"]
+      },
+      "then": {
+        "properties": {
+          "execution_status": {
+            "const": "completed"
+          },
+          "summary": {
+            "required": ["rows"]
+          },
+          "final_result": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "citation": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["guidance", "prompts", "resources"],
+      "properties": {
+        "guidance": {
+          "type": "string"
+        },
+        "prompts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "selected_resource": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "datastore_active",
+        "format",
+        "package_id",
+        "resource_id",
+        "source_url",
+        "title"
+      ],
+      "properties": {
+        "datastore_active": {
+          "type": "boolean"
+        },
+        "format": {
+          "type": ["string", "null"]
+        },
+        "package_id": {
+          "type": ["string", "null"]
+        },
+        "resource_id": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "selection_options": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["options", "selection_type"],
+      "properties": {
+        "selection_type": {
+          "enum": ["place", "resource"]
+        },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/selection_option"
+          }
+        }
+      }
+    },
+    "selection_option": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["confidence", "id", "label", "provenance", "resume_arguments"],
+      "properties": {
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "resume_arguments": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "theme": {
+          "type": "string"
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/summary_group"
+          }
+        },
+        "map_points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/map_point"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/summary_row"
+          }
+        }
+      }
+    },
+    "summary_group": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["count", "key"],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "key": {},
+        "min_distance_m": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "summary_row": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["fields", "label", "source_row"],
+      "properties": {
+        "distance_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "label": {
+          "type": "string"
+        },
+        "source_row": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "map_point": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["label", "lat", "lon", "source_row"],
+      "properties": {
+        "distance_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "label": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lon": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "source_row": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

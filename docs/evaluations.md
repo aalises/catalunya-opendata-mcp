@@ -141,6 +141,10 @@ Each report contains:
 
 The report is meant to be machine-readable for CI, release checklists, and trend dashboards.
 
+For human-readable client contracts built from the answer-composer cases, see
+[`docs/golden-answers.md`](./golden-answers.md). The machine-readable JSON Schema contract lives in
+[`docs/contracts/bcn-answer-city-query.schema.json`](./contracts/bcn-answer-city-query.schema.json).
+
 ## Evaluation Design
 
 The suite uses deterministic validators instead of model graders. That is the gold standard for this MCP layer because the server is a typed adapter to public APIs, not an open-ended text generation task.

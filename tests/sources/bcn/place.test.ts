@@ -2,25 +2,27 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 
 import {
   BCN_PLACE_QUERY_MAX_CHARS,
-  BCN_PLACE_REGISTRY,
   type BcnPlaceRegistryResource,
   resolveBcnPlace,
 } from "../../../src/sources/bcn/place.js";
-import { baseConfig, ckanFailure, ckanSuccess, mockFetchResponses } from "./helpers.js";
-
-const ORIGINAL_PLACE_REGISTRY = [...BCN_PLACE_REGISTRY];
-const FACILITY_PLACE_RESOURCE = ORIGINAL_PLACE_REGISTRY.find(
-  (resource) => resource.resourceId === "d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7",
-);
+import {
+  baseConfig,
+  ckanFailure,
+  ckanSuccess,
+  mockFetchResponses,
+  mustFindBcnPlaceRegistryResource,
+  resetBcnPlaceRegistry,
+  setBcnPlaceRegistry,
+} from "./helpers.js";
 
 describe("resolveBcnPlace", () => {
   afterEach(() => {
-    BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...ORIGINAL_PLACE_REGISTRY);
+    resetBcnPlaceRegistry();
     vi.restoreAllMocks();
   });
 
   it("queries the BCN place registry with bounded DataStore q requests", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     const fetchMock = mockFetchResponses(
       placeResponse([
         {
@@ -76,7 +78,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("ranks exact name matches above substring matches", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -105,7 +107,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("falls back to significant query tokens for accent-insensitive user input", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     const fetchMock = mockFetchResponses(
       placeResponse([]),
       placeResponse([
@@ -132,7 +134,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("applies bbox and kind filters", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -171,7 +173,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("deduplicates repeated rows by normalized name and coordinates", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -198,7 +200,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("marks the response truncated when matching candidates exceed the requested limit", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       placeResponse([
         {
@@ -224,7 +226,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("resolves street candidates from the address registry and deduplicates by street name", async () => {
-    usePlaceRegistry([
+    setBcnPlaceRegistry([
       {
         resourceId: "street-resource",
         packageId: "street-package",
@@ -296,7 +298,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("resolves neighborhoods and districts from full-scan WKT geometries", async () => {
-    usePlaceRegistry([
+    setBcnPlaceRegistry([
       boundaryPlaceResource({
         resourceId: "district-resource",
         defaultKind: "district",
@@ -396,7 +398,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("surfaces why area_ref is unavailable when a boundary row lacks _id", async () => {
-    usePlaceRegistry([
+    setBcnPlaceRegistry([
       boundaryPlaceResource({
         resourceId: "district-resource",
         defaultKind: "district",
@@ -436,7 +438,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("isolates per-resource fetch failures when another place registry resource succeeds", async () => {
-    usePlaceRegistry([
+    setBcnPlaceRegistry([
       { ...facilityPlaceResource(), resourceId: "failing-resource" },
       facilityPlaceResource(),
     ]);
@@ -462,7 +464,7 @@ describe("resolveBcnPlace", () => {
   });
 
   it("skips registry resources without inferable coordinate fields", async () => {
-    usePlaceRegistry([facilityPlaceResource()]);
+    setBcnPlaceRegistry([facilityPlaceResource()]);
     mockFetchResponses(
       ckanSuccess({
         fields: [{ id: "name", type: "text" }],
@@ -501,16 +503,8 @@ describe("resolveBcnPlace", () => {
   });
 });
 
-function usePlaceRegistry(resources: BcnPlaceRegistryResource[]): void {
-  BCN_PLACE_REGISTRY.splice(0, BCN_PLACE_REGISTRY.length, ...resources);
-}
-
 function facilityPlaceResource(): BcnPlaceRegistryResource {
-  if (!FACILITY_PLACE_RESOURCE) {
-    throw new Error("Expected BCN facility place registry resource to exist.");
-  }
-
-  return FACILITY_PLACE_RESOURCE;
+  return mustFindBcnPlaceRegistryResource("d4803f9b-5f01-48d5-aeef-4ebbd76c5fd7");
 }
 
 function boundaryPlaceResource(
