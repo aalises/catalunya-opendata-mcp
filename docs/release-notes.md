@@ -1,6 +1,8 @@
 # Release Notes
 
-## BCN City Questions
+## 0.1.4 - 2026-04-30
+
+### BCN City Questions
 
 Open Data BCN now has a city-question layer on top of the lower-level CKAN/DataStore tools:
 

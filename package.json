@@ -1,6 +1,6 @@
 {
   "name": "catalunya-opendata-mcp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Read-only MCP server for searching, describing, querying, and previewing Catalunya open data (Socrata, IDESCAT, and Open Data BCN).",
   "keywords": [
     "mcp",
